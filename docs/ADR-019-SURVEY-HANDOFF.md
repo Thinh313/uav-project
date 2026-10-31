@@ -1,0 +1,5 @@
+# ADR-019 · results linked without rewriting flight evidence
+
+Accepted locally in explicit owner scope 2026-10-12. Record schema v3 stays unchanged; build v1.4.0-HANDOFF09. Publish content-addressed blobs then immutable association revisions; shared exclusive archive queue and budget prevent parallel writers or silent eviction. Orphan blobs consume budget and are retained; no association acknowledged before revision publication. Startup validates complete chains and bytes and fails loudly on damage.
+
+A bounded JSON/base64 package carries exact record, raw spool (including unverified tail), full revision history, bytes and review notes. Browser validates closed-record semantics, retained prefix, associations and derived inventory before displaying. Unsigned manifests cannot authenticate a sender. Preserve declaration and show capture linkage unverified for all imported media, while test fixtures remain synthetic. Camera command counts are planned simulator commands; execution journal currently does not collect camera capture telemetry. No assumed EXIF matching, physical camera observation or quality/coverage verdict.

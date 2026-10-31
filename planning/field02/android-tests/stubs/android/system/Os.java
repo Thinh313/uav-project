@@ -1,0 +1,1 @@
+package android.system;import java.io.FileDescriptor;/** Test mock: no durability claim. */public final class Os{public static FileDescriptor open(String p,int f,int mode){return new FileDescriptor();}public static void fsync(FileDescriptor f){}public static void close(FileDescriptor f){}}

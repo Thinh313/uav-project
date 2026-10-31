@@ -1,0 +1,23 @@
+import {chromium} from '/Users/os/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright/index.mjs';
+import {writeFile,mkdir} from 'node:fs/promises';
+import {DEFAULT_SURVEY,surveyPackage} from '../app/core/survey.mjs';
+const dir='evidence/flight01';await mkdir(dir,{recursive:true});const browser=await chromium.launch({headless:true});const context=await browser.newContext({viewport:{width:1280,height:800},acceptDownloads:true});const page=await context.newPage(),errors=[],external=[],checks=[];
+page.on('pageerror',e=>errors.push(e.message));page.on('request',r=>{if(!r.url().startsWith('http://127.0.0.1:8788/')&&!r.url().startsWith('data:'))external.push(r.url());});
+function check(name,pass,detail={}){checks.push({name,pass,...detail});if(!pass)throw Error(name);}
+try{
+ await page.goto('http://127.0.0.1:8788/sitl.html?milestone=flight01');await page.waitForTimeout(800);check('disconnected-empty-no-fabrication',(await page.locator('#lab-alt').innerText())==='—'&&await page.locator('#lab-upload').isDisabled());
+ await page.locator('#lab-connect').click();await page.waitForFunction(()=>document.querySelectorAll('#lab-checks li[data-pass=true]').length===9,{},{timeout:30000});check('actual-sitl-preflight-ready',await page.locator('#lab-upload').isEnabled());await page.screenshot({path:`${dir}/sitl-ready-1280x800.png`,fullPage:true});
+ check('auto-before-readback-disabled',await page.locator('[data-command=auto]').isDisabled());
+ await page.locator('#lab-upload').click();await page.waitForFunction(()=>document.querySelector('#lab-mission-state').textContent==='Readback khớp');check('ui-upload-readback-matches',true);
+ await page.locator('[data-command=guided]').click();await page.waitForFunction(()=>document.querySelector('#lab-mode').textContent==='GUIDED');await page.waitForFunction(()=>!document.querySelector('[data-command=arm]').disabled);
+ await page.locator('[data-command=arm]').click();await page.waitForFunction(()=>document.querySelector('#lab-armed').textContent.startsWith('ARMED'));await page.waitForFunction(()=>!document.querySelector('[data-command=auto]').disabled);check('ui-command-observed-before-auto',true);
+ await page.locator('[data-command=auto]').click();await page.waitForFunction(()=>document.querySelector('#lab-mode').textContent==='AUTO');await page.waitForFunction(()=>parseFloat(document.querySelector('#lab-alt').textContent)>10,{},{timeout:30000});await page.screenshot({path:`${dir}/sitl-auto-1280x800.png`,fullPage:true});check('ui-live-altitude-from-autopilot',true,{altitude:await page.locator('#lab-alt').innerText()});
+ await page.waitForFunction(()=>document.querySelector('#lab-armed').textContent.startsWith('DISARMED'),{},{timeout:90000});await page.waitForFunction(()=>document.querySelector('#lab-mission-state').textContent.startsWith('Đã hoàn tất'));check('ui-observes-final-disarm',true);
+ const download=page.waitForEvent('download');await page.locator('#lab-export').click();await(await download).saveAs(`${dir}/browser-sitl-journal.json`);check('journal-export-local',true);
+ await page.locator('#lab-file').setInputFiles({name:'terrain.json',mimeType:'application/json',buffer:Buffer.from(JSON.stringify(surveyPackage({...DEFAULT_SURVEY,altitudeFrame:'terrain'})))});await page.waitForFunction(()=>document.querySelector('#lab-notice').textContent.includes('DEM/datum'));check('unresolved-altitude-cannot-upload',await page.locator('#lab-upload').isDisabled());
+ await page.locator('#lab-disconnect').click();await page.waitForFunction(()=>document.querySelector('#lab-mode').textContent==='—');check('disconnect-clears-live-numbers',(await page.locator('#lab-alt').innerText())==='—');
+ for(const viewport of [{width:1440,height:900},{width:1280,height:720},{width:390,height:844}]){await page.setViewportSize(viewport);await page.screenshot({path:`${dir}/sitl-${viewport.width}x${viewport.height}.png`,fullPage:true});const overflow=await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth+1);check(`layout-${viewport.width}x${viewport.height}`,!overflow);}
+ await page.goto('http://127.0.0.1:8788/');check('independent-lab-entry-visible',await page.locator('a[href="/sitl.html"]').isVisible());
+ check('no-runtime-errors',errors.length===0,{errors});check('no-external-ui-requests',external.length===0,{external});
+}catch(e){checks.push({name:'qa-error',pass:false,message:e.message});process.exitCode=1;}finally{await writeFile(`${dir}/browser-qa.json`,JSON.stringify({checks,errors,external,scope:'Actual simulator UI; no physical vehicle'},null,2)+'\n');await browser.close();}
+console.log(JSON.stringify(checks,null,2));

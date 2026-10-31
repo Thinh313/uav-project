@@ -1,0 +1,13 @@
+# NATIVE33 — durable offline native journey
+
+Separate development module, package `vn.rtr.aeris.journey33`, minAPI26/target33. Survey → compile → explicit mock Home/datum preflight → stepped Fly mock → review. Exact pinned NATIVE30 survey/compiler assets; no SDK, radio, flight output, video feed, real media, release signature or candidate integration. Existing dedicated NATIVE31 development identity only.
+
+Workspace binds editable draft and current/prior session reports in one immutable Java journal, with expected-head token and fsync/atomic head publication. Every accepted mock action commits before the UI acknowledges it. Storage errors/unknown replies block transitions until explicit reload. Restart appends an interruption to unfinished sessions; completed reports are retained unchanged. No operational gates or controls restore. Unsaved typing is not implicitly saved.
+
+`journey.mjs` performs semantic event replay in addition to hash checks. Exact mission form/compiler lineage, epochs, monotonic clocks, preflight order/freshness, waypoint cursor and landing are checked. ACK does not progress. Media are empty and execution/physical-media/authority claims false. Four prior sessions,256 events/session,512 revisions,64MiB journal and262144-byte workspace bounds refuse without automatic cleanup. Limits are engineering preparation limits, not production capacity.
+
+Prepared background only revokes volatile gates, avoiding a needless writer competing with restart. Active-run background is checkpointed; admission already in flight drains before interruption. A process death during a real write can leave pending/unknown evidence and require explicit recovery; there is no automatic mutation retry or lock deletion. `fsync` host success/SIGKILL tests do not prove survival of OS crash or physical power loss.
+
+`build.py` produces an engineering development APK and host journal jar using installed read-only SDK/JDK tools; every output attempt has a separate receipt. It removes its small `.build` scratch in finally. `editor.test.mjs`/`journey.test.mjs` check core and mock behavior; `browser-qa.mjs` uses host Chromium with real Java persistence and `crash-qa.mjs` kills only owned host JVMs. Tests use new attempt IDs and retain failures. None is installed Android acceptance.
+
+Android runtime/image/AVD were removed previously. Reinstallation is NOT_ADMITTED below28GiB free; actual floor20GiB always remains mandatory. See `ANDROID-RUNBOOK.md`. Do not run old builders, old runtime QA, update signed candidate/trust/SOT, restart ENDURE or connect actual devices. Latest verification and completion identify the chosen APK and all NOT_CHECKED gates.

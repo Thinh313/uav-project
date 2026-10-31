@@ -1,0 +1,9 @@
+# ADR068 · AERIS57 fixed simulator adapter and unified presentation
+
+Accepted for engineering implementation15/10/2026 under user's explicit simulator rollout request. Reuse existing SIM53 lifecycle/control and VISUAL56 renderer without editing either. An isolated localhost8809 adapter targets only8807 and lets the original attested backend manage target42/1. Private upstream token, new browser token/origin, one created session/boot ownership and explicit actions preserve authority boundaries. Adapter is not production auth and cannot certify underlying flight behavior.
+
+Planning/QGC validation are separate services in the same workspace, using immutable mapping51/mission55 libraries. Their output is not wired to runtime upload or AUTO. UI shows planning vs observed flight, original evidence vs live telemetry, simulated commands vs actual images. Replay is explicitly selected, never an automatic substitute for failed live data. A capability inventory links retained evidence without converting documentation into tested acceptance.
+
+Reason: replaces scattered presentation with a coherent operator journey while avoiding changes to frozen candidate, old proofs or control core. Rewriting physics or routing commands through arbitrary vehicle endpoints is outside this scope. Current G1 pacing is unaccepted; integration measurements remain engineering qualification and cannot advertise full council/Hera/field readiness.
+
+Failure handling: no POST retry, ownership established only from a successful typed start reply. Unknown start outcome locks new mutations pending read-only/manual reconciliation; source8807 remains available for that backend's existing managed runbook. Shutdown does not terminate another server/controller. New journal is bounded/fsynced/hash-chained, old evidence append-only. New sessions remain120sim/150host seconds and original resource gates apply. Future AUTO/camera/SDK additions need their own gates and ADR change.

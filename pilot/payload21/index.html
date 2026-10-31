@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="vi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>AERIS / Fly & Payload</title><link rel="stylesheet" href="console.css"><script type="module" src="console.mjs"></script></head>
+<body>
+<header><a class="brand" href="/">RtR <span>AERIS</span></a><nav aria-label="Khu vực"><button id="fly-tab" aria-current="page">Fly / Payload</button><button id="matrix-tab">Đối chiếu RAGAS</button></nav><span class="scope">Mô phỏng · PAYLOAD21</span></header>
+<main id="fly-view">
+<section class="aircraft-bar" aria-label="Trạng thái máy bay"><strong>SIM-HERA</strong><span id="aircraft-mode">—</span><span>Độ cao <b id="altitude">—</b> / Home mô phỏng</span><span id="session">—</span><button id="aircraft-toggle">Ngắt liên kết mô phỏng</button></section>
+<div class="workspace">
+<section class="visuals" aria-label="Quan sát payload">
+<div class="feed-header"><h1 id="active-label">Payload</h1><span id="feed-status">—</span><span id="route-label">—</span></div>
+<div class="feed" id="main-feed"><canvas id="scene" aria-label="Sơ đồ camera tổng hợp; không phải video thật"></canvas><div class="crosshair" aria-hidden="true"></div><div class="feed-caption">Cảnh tổng hợp để thử thao tác · Không có video/ảnh thật</div><div id="feed-warning" class="feed-warning" hidden>Luồng mất tín hiệu</div></div>
+<div id="payload-selector" class="payload-selector" aria-label="Chọn payload"></div>
+<div class="map-strip"><svg viewBox="0 0 700 82" role="img" aria-label="Đường khảo sát minh họa"><path class="boundary" d="M20 16H665V65H20Z"/><path class="route" d="M40 28H640V40H40V52H640"/><circle cx="250" cy="28" r="6"/></svg><span>Đường khảo sát minh họa<br>Không phát lệnh bay</span></div>
+</section>
+<aside class="control" aria-label="Điều khiển payload">
+<div class="control-title"><h2>Điều khiển payload</h2><span id="authority-status">Chưa nhận quyền</span></div>
+<button id="acquire" class="primary">Nhận quyền điều khiển mô phỏng</button>
+<div class="control-block"><label for="stream-select">Luồng quan sát</label><select id="stream-select"></select><button id="capture" class="capture-button">Chụp mô phỏng</button><p id="capture-count">Chưa có capture receipt</p></div>
+<div class="control-block"><label for="zoom">Zoom <output id="zoom-value">—</output></label><input id="zoom" type="range" min="1" max="8" step="1"><button id="set-zoom">Đặt zoom</button><div class="pair"><button id="focus">Focus tự động</button><button id="release">Trả quyền</button></div></div>
+<div class="control-block"><h3>Gimbal <span id="gimbal-state">—</span></h3><div class="pair"><label for="pitch">Pitch °<input id="pitch" type="number" min="-90" max="30" value="-45"></label><label for="yaw">Yaw °<input id="yaw" type="number" min="-120" max="120" value="0"></label></div><div class="pair"><button id="set-gimbal">Đặt góc</button><button id="nadir">Nhìn thẳng xuống</button></div><p id="angles">Góc phản hồi —</p></div>
+<div class="command-state" id="command-state" aria-live="polite">Chọn payload, nhận quyền để thử thao tác.</div><p id="message" role="status"></p>
+</aside></div>
+<section class="review-panel"><div class="review-heading"><h2>Dấu vết thao tác</h2><span>ACK và phản hồi quan sát được ghi riêng</span><button id="export">Xuất review mô phỏng</button></div><ol id="journal"></ol><p class="session-note">Dữ liệu phiên nằm trong bộ nhớ của tab. Tải lại sẽ tạo phiên mới; xuất review trước khi rời trang. Review này không phải hồ sơ bay hay gói nghiệm thu khảo sát.</p></section>
+<details class="fault-panel"><summary>Thử tình huống lỗi mô phỏng</summary><div class="fault-controls"><button id="video-fault">Mất / khôi phục luồng đang chọn</button><button id="gimbal-fault">Lỗi / khôi phục gimbal</button><button id="payload-loss">Mất liên kết payload</button><button id="rediscover">Khám phá lại payload</button><button id="mission-authority">Chuyển quyền cho mission</button><label for="reply-mode">Phản hồi lệnh<select id="reply-mode"><option value="none">ACK + quan sát</option><option value="ack-only">Chỉ ACK</option><option value="denied">Từ chối</option><option value="silent">Không phản hồi</option></select></label></div></details>
+</main>
+<main id="matrix-view" hidden><div class="matrix-intro"><h1>Đối chiếu năng lực với RAGAS</h1><p>Tài liệu công bố và bằng chứng thử nghiệm có phạm vi khác nhau. Chưa có phiên A/B với cùng thiết bị và người vận hành; chưa kết luận ngang bằng hoặc vượt trội.</p></div><div class="table-wrap"><table><thead><tr><th>Workflow</th><th>RAGAS công bố</th><th>AERIS đã có bằng chứng</th><th>Cổng còn thiếu</th></tr></thead><tbody id="matrix-rows"></tbody></table></div><p id="matrix-sources"></p></main>
+<footer>RtR / Independent GCS development <span>Hera thật · SDK · HIL · A/B: chưa kiểm</span></footer>
+</body></html>

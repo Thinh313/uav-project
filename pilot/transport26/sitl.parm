@@ -1,0 +1,5 @@
+# Dedicated host-only TRANSPORT26; no ARM/flight commands or SDK.
+MAV_SYSID 42
+SERIAL0_PROTOCOL 2
+LOG_DISARMED 0
+SIM_GPS_NUMSATS 12

@@ -1,0 +1,1618 @@
+{
+  "format": "aeris-geo14-corpus",
+  "version": 1,
+  "parent": {
+    "format": "aeris-e2e-corpus",
+    "version": 1,
+    "id": "survey-acceptance13",
+    "simulation": true,
+    "parentSuiteSha256": "092ff57d7d10f96d5c8333d0c27b8beed26b8cf6b7123aa568194d6079a0d409",
+    "world": {
+      "id": "aeris-flat-world-v1",
+      "simulation": true,
+      "home": {
+        "lat": 10.854,
+        "lon": 106.807,
+        "amsl": 10
+      },
+      "ground": "flat-at-home",
+      "maxRadiusM": 500
+    },
+    "profile": {
+      "id": "aeris-copter471-loopback",
+      "version": "1.0.0",
+      "sha256": "c4f28187ea445df1e5779b099dd90a3c324e38b8710a990c75c314f86125306a"
+    },
+    "cases": [
+      {
+        "id": "narrow",
+        "title": "Dải hẹp / một tuyến",
+        "provenance": {
+          "kind": "synthetic",
+          "source": "BENCH06 generated local ENU polygon; not QGC export or physical site",
+          "originalSha256": null,
+          "derivation": null
+        },
+        "request": {
+          "format": "aeris-survey",
+          "version": 2,
+          "operational": false,
+          "model": "wgs84-enu-polygon-flat-v2",
+          "coordinateSystem": "WGS84",
+          "settings": {
+            "name": "Dải hẹp · một tuyến",
+            "polygon": [
+              {
+                "lat": 10.854135607090518,
+                "lon": 106.80713718558027
+              },
+              {
+                "lat": 10.85413560703617,
+                "lon": 106.80722864263379
+              },
+              {
+                "lat": 10.854461064121919,
+                "lon": 106.8072286428812
+              },
+              {
+                "lat": 10.85446106417627,
+                "lon": 106.80713718572873
+              }
+            ],
+            "altitude": 15,
+            "altitudeFrame": "flat-reference",
+            "speed": 6,
+            "heading": 0,
+            "sideOverlap": 30,
+            "frontOverlap": 30,
+            "targetGsdCm": null,
+            "camera": {
+              "name": "Camera mẫu · chưa hiệu chuẩn",
+              "provenance": "demo",
+              "sensorWidth": 13.2,
+              "sensorHeight": 8.8,
+              "focalLength": 8.8,
+              "imageWidth": 5472,
+              "minInterval": 1
+            }
+          }
+        },
+        "expected": {
+          "accepted": true,
+          "sourceSha256": "5b93c6bd371de86a359315b83239b50c3b098cf69524ed9c17be42821ffd4d62",
+          "compiledSha256": "bfec04829a8126195a3a46d78cd9d348f477b39bf612c66734584f4b114bec04",
+          "items": 8,
+          "transects": 1,
+          "error": null
+        }
+      },
+      {
+        "id": "rotated",
+        "title": "Tuyến xoay 35°",
+        "provenance": {
+          "kind": "synthetic",
+          "source": "BENCH06 generated local ENU polygon; not QGC export or physical site",
+          "originalSha256": null,
+          "derivation": null
+        },
+        "request": {
+          "format": "aeris-survey",
+          "version": 2,
+          "operational": false,
+          "model": "wgs84-enu-polygon-flat-v2",
+          "coordinateSystem": "WGS84",
+          "settings": {
+            "name": "Khảo sát tuyến xoay 35°",
+            "polygon": [
+              {
+                "lat": 10.854135607090518,
+                "lon": 106.80713718558027
+              },
+              {
+                "lat": 10.854135606739431,
+                "lon": 106.80748472238363
+              },
+              {
+                "lat": 10.854352578130692,
+                "lon": 106.8074847227333
+              },
+              {
+                "lat": 10.854352578481782,
+                "lon": 106.80713718567924
+              }
+            ],
+            "altitude": 15,
+            "altitudeFrame": "flat-reference",
+            "speed": 6,
+            "heading": 35,
+            "sideOverlap": 30,
+            "frontOverlap": 30,
+            "targetGsdCm": null,
+            "camera": {
+              "name": "Camera mẫu · chưa hiệu chuẩn",
+              "provenance": "demo",
+              "sensorWidth": 13.2,
+              "sensorHeight": 8.8,
+              "focalLength": 8.8,
+              "imageWidth": 5472,
+              "minInterval": 1
+            }
+          }
+        },
+        "expected": {
+          "accepted": true,
+          "sourceSha256": "a44cd0067434a691eb8732e9cbb59c326c46f1bf7f479fdab3edfafb37b8d8d4",
+          "compiledSha256": "8a66d96f0a5cb71017dac335215dab9876eecb229ead69c1419f1097dd4e8b81",
+          "items": 16,
+          "transects": 3,
+          "error": null
+        }
+      },
+      {
+        "id": "qgc-relative",
+        "title": "QGC / độ cao tương đối",
+        "provenance": {
+          "kind": "qgc-derived",
+          "source": "app/fixtures/qgc/roundtrip03/simple-relative-qgc-saved.plan",
+          "originalSha256": "fe244563ad5c75965219b28e6d8c0c29d2c7fa1161231494cff3f62805937772",
+          "derivation": {
+            "format": "aeris-qgc-derived-review",
+            "version": 1,
+            "simulation": true,
+            "sourceSha256": "fe244563ad5c75965219b28e6d8c0c29d2c7fa1161231494cff3f62805937772",
+            "derivedSha256": "5669a3cf398ada221d799233763f58ebb824f54443ff01f247d877fff9185206",
+            "sourceRaw": "{\n    \"fileType\": \"Plan\",\n    \"geoFence\": {\n        \"circles\": [\n        ],\n        \"polygons\": [\n        ],\n        \"version\": 2\n    },\n    \"groundStation\": \"QGroundControl\",\n    \"mission\": {\n        \"cruiseSpeed\": 15,\n        \"firmwareType\": 3,\n        \"globalPlanAltitudeMode\": 1,\n        \"hoverSpeed\": 5,\n        \"items\": [\n            {\n                \"AMSLAltAboveTerrain\": null,\n                \"Altitude\": 15,\n                \"AltitudeMode\": 1,\n                \"autoContinue\": true,\n                \"command\": 22,\n                \"doJumpId\": 1,\n                \"frame\": 3,\n                \"params\": [\n                    0,\n                    0,\n                    0,\n                    null,\n                    10.854,\n                    106.807,\n                    15\n                ],\n                \"type\": \"SimpleItem\"\n            },\n            {\n                \"autoContinue\": true,\n                \"command\": 178,\n                \"doJumpId\": 2,\n                \"frame\": 2,\n                \"params\": [\n                    1,\n                    6,\n                    -1,\n                    0,\n                    0,\n                    0,\n                    0\n                ],\n                \"type\": \"SimpleItem\"\n            },\n            {\n                \"AMSLAltAboveTerrain\": null,\n                \"Altitude\": 15,\n                \"AltitudeMode\": 1,\n                \"autoContinue\": true,\n                \"command\": 16,\n                \"doJumpId\": 3,\n                \"frame\": 3,\n                \"params\": [\n                    0,\n                    0,\n                    0,\n                    null,\n                    10.854,\n                    106.8071029,\n                    15\n                ],\n                \"type\": \"SimpleItem\"\n            },\n            {\n                \"autoContinue\": true,\n                \"command\": 206,\n                \"doJumpId\": 4,\n                \"frame\": 2,\n                \"params\": [\n                    10.5,\n                    0,\n                    1,\n                    0,\n                    0,\n                    0,\n                    0\n                ],\n                \"type\": \"SimpleItem\"\n            },\n            {\n                \"AMSLAltAboveTerrain\": null,\n                \"Altitude\": 15,\n                \"AltitudeMode\": 1,\n                \"autoContinue\": true,\n                \"command\": 16,\n                \"doJumpId\": 5,\n                \"frame\": 3,\n                \"params\": [\n                    0,\n                    0,\n                    0,\n                    null,\n                    10.8544068,\n                    106.8071029,\n                    15\n                ],\n                \"type\": \"SimpleItem\"\n            },\n            {\n                \"autoContinue\": true,\n                \"command\": 206,\n                \"doJumpId\": 6,\n                \"frame\": 2,\n                \"params\": [\n                    0,\n                    0,\n                    0,\n                    0,\n                    0,\n                    0,\n                    0\n                ],\n                \"type\": \"SimpleItem\"\n            },\n            {\n                \"autoContinue\": true,\n                \"command\": 2001,\n                \"doJumpId\": 7,\n                \"frame\": 2,\n                \"params\": [\n                    0,\n                    null,\n                    null,\n                    null,\n                    null,\n                    null,\n                    null\n                ],\n                \"type\": \"SimpleItem\"\n            },\n            {\n                \"AMSLAltAboveTerrain\": null,\n                \"Altitude\": 15,\n                \"AltitudeMode\": 1,\n                \"autoContinue\": true,\n                \"command\": 16,\n                \"doJumpId\": 7,\n                \"frame\": 3,\n                \"params\": [\n                    0,\n                    0,\n                    0,\n                    null,\n                    10.8544068,\n                    106.8072058,\n                    15\n                ],\n                \"type\": \"SimpleItem\"\n            },\n            {\n                \"autoContinue\": true,\n                \"command\": 206,\n                \"doJumpId\": 8,\n                \"frame\": 2,\n                \"params\": [\n                    10.5,\n                    0,\n                    1,\n                    0,\n                    0,\n                    0,\n                    0\n                ],\n                \"type\": \"SimpleItem\"\n            },\n            {\n                \"AMSLAltAboveTerrain\": null,\n                \"Altitude\": 15,\n                \"AltitudeMode\": 1,\n                \"autoContinue\": true,\n                \"command\": 16,\n                \"doJumpId\": 9,\n                \"frame\": 3,\n                \"params\": [\n                    0,\n                    0,\n                    0,\n                    null,\n                    10.854,\n                    106.8072058,\n                    15\n                ],\n                \"type\": \"SimpleItem\"\n            },\n            {\n                \"autoContinue\": true,\n                \"command\": 206,\n                \"doJumpId\": 10,\n                \"frame\": 2,\n                \"params\": [\n                    0,\n                    0,\n                    0,\n                    0,\n                    0,\n                    0,\n                    0\n                ],\n                \"type\": \"SimpleItem\"\n            },\n            {\n                \"autoContinue\": true,\n                \"command\": 2001,\n                \"doJumpId\": 11,\n                \"frame\": 2,\n                \"params\": [\n                    0,\n                    null,\n                    null,\n                    null,\n                    null,\n                    null,\n                    null\n                ],\n                \"type\": \"SimpleItem\"\n            },\n            {\n                \"AMSLAltAboveTerrain\": null,\n                \"Altitude\": 15,\n                \"AltitudeMode\": 1,\n                \"autoContinue\": true,\n                \"command\": 16,\n                \"doJumpId\": 11,\n                \"frame\": 3,\n                \"params\": [\n                    0,\n                    0,\n                    0,\n                    null,\n                    10.854,\n                    106.8073087,\n                    15\n                ],\n                \"type\": \"SimpleItem\"\n            },\n            {\n                \"autoContinue\": true,\n                \"command\": 206,\n                \"doJumpId\": 12,\n                \"frame\": 2,\n                \"params\": [\n                    10.5,\n                    0,\n                    1,\n                    0,\n                    0,\n                    0,\n                    0\n                ],\n                \"type\": \"SimpleItem\"\n            },\n            {\n                \"AMSLAltAboveTerrain\": null,\n                \"Altitude\": 15,\n                \"AltitudeMode\": 1,\n                \"autoContinue\": true,\n                \"command\": 16,\n                \"doJumpId\": 13,\n                \"frame\": 3,\n                \"params\": [\n                    0,\n                    0,\n                    0,\n                    null,\n                    10.8544068,\n                    106.8073087,\n                    15\n                ],\n                \"type\": \"SimpleItem\"\n            },\n            {\n                \"autoContinue\": true,\n                \"command\": 206,\n                \"doJumpId\": 14,\n                \"frame\": 2,\n                \"params\": [\n                    0,\n                    0,\n                    0,\n                    0,\n                    0,\n                    0,\n                    0\n                ],\n                \"type\": \"SimpleItem\"\n            },\n            {\n                \"autoContinue\": true,\n                \"command\": 2001,\n                \"doJumpId\": 15,\n                \"frame\": 2,\n                \"params\": [\n                    0,\n                    null,\n                    null,\n                    null,\n                    null,\n                    null,\n                    null\n                ],\n                \"type\": \"SimpleItem\"\n            },\n            {\n                \"autoContinue\": true,\n                \"command\": 20,\n                \"doJumpId\": 15,\n                \"frame\": 2,\n                \"params\": [\n                    0,\n                    0,\n                    0,\n                    0,\n                    0,\n                    0,\n                    0\n                ],\n                \"type\": \"SimpleItem\"\n            }\n        ],\n        \"plannedHomePosition\": [\n            10.854,\n            106.807,\n            7\n        ],\n        \"vehicleType\": 2,\n        \"version\": 2\n    },\n    \"rallyPoints\": {\n        \"points\": [\n        ],\n        \"version\": 2\n    },\n    \"version\": 1\n}\n",
+            "options": {
+              "confirmHome": true,
+              "confirmSnapshot": false,
+              "altitudePolicy": "preserve-relative",
+              "cameraPolicy": "preserve"
+            },
+            "homeBefore": [
+              10.854,
+              106.807,
+              7
+            ],
+            "homeAfter": [
+              10.854,
+              106.807,
+              10
+            ],
+            "heightChanges": [
+              {
+                "sourceSeq": 1,
+                "relativeBefore": 15,
+                "relativeAfter": 15,
+                "impliedAmslBefore": 22,
+                "impliedAmslAfter": 25
+              },
+              {
+                "sourceSeq": 3,
+                "relativeBefore": 15,
+                "relativeAfter": 15,
+                "impliedAmslBefore": 22,
+                "impliedAmslAfter": 25
+              },
+              {
+                "sourceSeq": 5,
+                "relativeBefore": 15,
+                "relativeAfter": 15,
+                "impliedAmslBefore": 22,
+                "impliedAmslAfter": 25
+              },
+              {
+                "sourceSeq": 8,
+                "relativeBefore": 15,
+                "relativeAfter": 15,
+                "impliedAmslBefore": 22,
+                "impliedAmslAfter": 25
+              },
+              {
+                "sourceSeq": 10,
+                "relativeBefore": 15,
+                "relativeAfter": 15,
+                "impliedAmslBefore": 22,
+                "impliedAmslAfter": 25
+              },
+              {
+                "sourceSeq": 13,
+                "relativeBefore": 15,
+                "relativeAfter": 15,
+                "impliedAmslBefore": 22,
+                "impliedAmslAfter": 25
+              },
+              {
+                "sourceSeq": 15,
+                "relativeBefore": 15,
+                "relativeAfter": 15,
+                "impliedAmslBefore": 22,
+                "impliedAmslAfter": 25
+              }
+            ],
+            "cameraChanges": [],
+            "sequenceLabelChanges": [
+              {
+                "sourceSeq": 8,
+                "from": 7,
+                "to": 8
+              },
+              {
+                "sourceSeq": 9,
+                "from": 8,
+                "to": 9
+              },
+              {
+                "sourceSeq": 10,
+                "from": 9,
+                "to": 10
+              },
+              {
+                "sourceSeq": 11,
+                "from": 10,
+                "to": 11
+              },
+              {
+                "sourceSeq": 12,
+                "from": 11,
+                "to": 12
+              },
+              {
+                "sourceSeq": 13,
+                "from": 11,
+                "to": 13
+              },
+              {
+                "sourceSeq": 14,
+                "from": 12,
+                "to": 14
+              },
+              {
+                "sourceSeq": 15,
+                "from": 13,
+                "to": 15
+              },
+              {
+                "sourceSeq": 16,
+                "from": 14,
+                "to": 16
+              },
+              {
+                "sourceSeq": 17,
+                "from": 15,
+                "to": 17
+              },
+              {
+                "sourceSeq": 18,
+                "from": 15,
+                "to": 18
+              }
+            ],
+            "insertions": [],
+            "flattenedComplex": 0,
+            "normalizations": [
+              {
+                "seq": 1,
+                "field": "param4",
+                "from": null,
+                "to": 0,
+                "reason": "Copter-4.7.1 AP_Mission ignores NAV yaw; original null retained"
+              },
+              {
+                "seq": 3,
+                "field": "param4",
+                "from": null,
+                "to": 0,
+                "reason": "Copter-4.7.1 AP_Mission ignores NAV yaw; original null retained"
+              },
+              {
+                "seq": 5,
+                "field": "param4",
+                "from": null,
+                "to": 0,
+                "reason": "Copter-4.7.1 AP_Mission ignores NAV yaw; original null retained"
+              },
+              {
+                "seq": 7,
+                "field": "param2",
+                "from": null,
+                "to": 0,
+                "reason": "Copter-4.7.1 IMAGE_STOP_CAPTURE stores only camera ID; reserved null retained in original"
+              },
+              {
+                "seq": 7,
+                "field": "param3",
+                "from": null,
+                "to": 0,
+                "reason": "Copter-4.7.1 IMAGE_STOP_CAPTURE stores only camera ID; reserved null retained in original"
+              },
+              {
+                "seq": 7,
+                "field": "param4",
+                "from": null,
+                "to": 0,
+                "reason": "Copter-4.7.1 IMAGE_STOP_CAPTURE stores only camera ID; reserved null retained in original"
+              },
+              {
+                "seq": 7,
+                "field": "param5",
+                "from": null,
+                "to": 0,
+                "reason": "Copter-4.7.1 IMAGE_STOP_CAPTURE stores only camera ID; reserved null retained in original"
+              },
+              {
+                "seq": 7,
+                "field": "param6",
+                "from": null,
+                "to": 0,
+                "reason": "Copter-4.7.1 IMAGE_STOP_CAPTURE stores only camera ID; reserved null retained in original"
+              },
+              {
+                "seq": 7,
+                "field": "param7",
+                "from": null,
+                "to": 0,
+                "reason": "Copter-4.7.1 IMAGE_STOP_CAPTURE stores only camera ID; reserved null retained in original"
+              },
+              {
+                "seq": 8,
+                "field": "param4",
+                "from": null,
+                "to": 0,
+                "reason": "Copter-4.7.1 AP_Mission ignores NAV yaw; original null retained"
+              },
+              {
+                "seq": 10,
+                "field": "param4",
+                "from": null,
+                "to": 0,
+                "reason": "Copter-4.7.1 AP_Mission ignores NAV yaw; original null retained"
+              },
+              {
+                "seq": 12,
+                "field": "param2",
+                "from": null,
+                "to": 0,
+                "reason": "Copter-4.7.1 IMAGE_STOP_CAPTURE stores only camera ID; reserved null retained in original"
+              },
+              {
+                "seq": 12,
+                "field": "param3",
+                "from": null,
+                "to": 0,
+                "reason": "Copter-4.7.1 IMAGE_STOP_CAPTURE stores only camera ID; reserved null retained in original"
+              },
+              {
+                "seq": 12,
+                "field": "param4",
+                "from": null,
+                "to": 0,
+                "reason": "Copter-4.7.1 IMAGE_STOP_CAPTURE stores only camera ID; reserved null retained in original"
+              },
+              {
+                "seq": 12,
+                "field": "param5",
+                "from": null,
+                "to": 0,
+                "reason": "Copter-4.7.1 IMAGE_STOP_CAPTURE stores only camera ID; reserved null retained in original"
+              },
+              {
+                "seq": 12,
+                "field": "param6",
+                "from": null,
+                "to": 0,
+                "reason": "Copter-4.7.1 IMAGE_STOP_CAPTURE stores only camera ID; reserved null retained in original"
+              },
+              {
+                "seq": 12,
+                "field": "param7",
+                "from": null,
+                "to": 0,
+                "reason": "Copter-4.7.1 IMAGE_STOP_CAPTURE stores only camera ID; reserved null retained in original"
+              },
+              {
+                "seq": 13,
+                "field": "param4",
+                "from": null,
+                "to": 0,
+                "reason": "Copter-4.7.1 AP_Mission ignores NAV yaw; original null retained"
+              },
+              {
+                "seq": 15,
+                "field": "param4",
+                "from": null,
+                "to": 0,
+                "reason": "Copter-4.7.1 AP_Mission ignores NAV yaw; original null retained"
+              },
+              {
+                "seq": 17,
+                "field": "param2",
+                "from": null,
+                "to": 0,
+                "reason": "Copter-4.7.1 IMAGE_STOP_CAPTURE stores only camera ID; reserved null retained in original"
+              },
+              {
+                "seq": 17,
+                "field": "param3",
+                "from": null,
+                "to": 0,
+                "reason": "Copter-4.7.1 IMAGE_STOP_CAPTURE stores only camera ID; reserved null retained in original"
+              },
+              {
+                "seq": 17,
+                "field": "param4",
+                "from": null,
+                "to": 0,
+                "reason": "Copter-4.7.1 IMAGE_STOP_CAPTURE stores only camera ID; reserved null retained in original"
+              },
+              {
+                "seq": 17,
+                "field": "param5",
+                "from": null,
+                "to": 0,
+                "reason": "Copter-4.7.1 IMAGE_STOP_CAPTURE stores only camera ID; reserved null retained in original"
+              },
+              {
+                "seq": 17,
+                "field": "param6",
+                "from": null,
+                "to": 0,
+                "reason": "Copter-4.7.1 IMAGE_STOP_CAPTURE stores only camera ID; reserved null retained in original"
+              },
+              {
+                "seq": 17,
+                "field": "param7",
+                "from": null,
+                "to": 0,
+                "reason": "Copter-4.7.1 IMAGE_STOP_CAPTURE stores only camera ID; reserved null retained in original"
+              }
+            ],
+            "diff": {
+              "format": "aeris-qgc-semantic-diff",
+              "version": 1,
+              "equal": false,
+              "changes": [
+                {
+                  "path": "mission.plannedHomePosition",
+                  "before": [
+                    10.854,
+                    106.807,
+                    7
+                  ],
+                  "after": [
+                    10.854,
+                    106.807,
+                    10
+                  ]
+                }
+              ],
+              "before": {
+                "items": 18,
+                "visualItems": 18,
+                "complex": 0,
+                "home": [
+                  10.854,
+                  106.807,
+                  7
+                ],
+                "firmwareType": 3,
+                "vehicleType": 2,
+                "cameraCommands": 6
+              },
+              "after": {
+                "items": 18,
+                "visualItems": 18,
+                "complex": 0,
+                "home": [
+                  10.854,
+                  106.807,
+                  10
+                ],
+                "firmwareType": 3,
+                "vehicleType": 2,
+                "cameraCommands": 6
+              },
+              "scope": "Strict semantic comparison; formatting/key order/doJumpId/groundStation ignored. Null yaw, camera flags, Home and generated coordinates remain visible. Comparison sends no flight command."
+            },
+            "scope": "Explicit SITL-only derivative; sequential label repair without DO_JUMP support; no lateral relocation, terrain/AGL assertion, polygon regeneration or physical camera claim. Review/adoption sends no command."
+          }
+        },
+        "request": {
+          "format": "aeris-qgc-run",
+          "version": 1,
+          "simulation": true,
+          "worldId": "aeris-flat-world-v1",
+          "profile": "copter-4.7.1-stored-snapshot-v1",
+          "rawPlan": "{\n  \"fileType\": \"Plan\",\n  \"version\": 1,\n  \"groundStation\": \"AERIS\",\n  \"geoFence\": {\n    \"version\": 2,\n    \"circles\": [],\n    \"polygons\": []\n  },\n  \"rallyPoints\": {\n    \"version\": 2,\n    \"points\": []\n  },\n  \"mission\": {\n    \"version\": 2,\n    \"firmwareType\": 3,\n    \"vehicleType\": 2,\n    \"cruiseSpeed\": 15,\n    \"hoverSpeed\": 5,\n    \"globalPlanAltitudeMode\": 1,\n    \"plannedHomePosition\": [\n      10.854,\n      106.807,\n      10\n    ],\n    \"items\": [\n      {\n        \"type\": \"SimpleItem\",\n        \"frame\": 3,\n        \"command\": 22,\n        \"autoContinue\": true,\n        \"doJumpId\": 1,\n        \"params\": [\n          0,\n          0,\n          0,\n          null,\n          10.854,\n          106.807,\n          15\n        ],\n        \"AltitudeMode\": 1,\n        \"Altitude\": 15,\n        \"AMSLAltAboveTerrain\": null\n      },\n      {\n        \"type\": \"SimpleItem\",\n        \"frame\": 2,\n        \"command\": 178,\n        \"autoContinue\": true,\n        \"doJumpId\": 2,\n        \"params\": [\n          1,\n          6,\n          -1,\n          0,\n          0,\n          0,\n          0\n        ]\n      },\n      {\n        \"type\": \"SimpleItem\",\n        \"frame\": 3,\n        \"command\": 16,\n        \"autoContinue\": true,\n        \"doJumpId\": 3,\n        \"params\": [\n          0,\n          0,\n          0,\n          null,\n          10.854,\n          106.8071029,\n          15\n        ],\n        \"AltitudeMode\": 1,\n        \"Altitude\": 15,\n        \"AMSLAltAboveTerrain\": null\n      },\n      {\n        \"type\": \"SimpleItem\",\n        \"frame\": 2,\n        \"command\": 206,\n        \"autoContinue\": true,\n        \"doJumpId\": 4,\n        \"params\": [\n          10.5,\n          0,\n          1,\n          0,\n          0,\n          0,\n          0\n        ]\n      },\n      {\n        \"type\": \"SimpleItem\",\n        \"frame\": 3,\n        \"command\": 16,\n        \"autoContinue\": true,\n        \"doJumpId\": 5,\n        \"params\": [\n          0,\n          0,\n          0,\n          null,\n          10.8544068,\n          106.8071029,\n          15\n        ],\n        \"AltitudeMode\": 1,\n        \"Altitude\": 15,\n        \"AMSLAltAboveTerrain\": null\n      },\n      {\n        \"type\": \"SimpleItem\",\n        \"frame\": 2,\n        \"command\": 206,\n        \"autoContinue\": true,\n        \"doJumpId\": 6,\n        \"params\": [\n          0,\n          0,\n          0,\n          0,\n          0,\n          0,\n          0\n        ]\n      },\n      {\n        \"type\": \"SimpleItem\",\n        \"frame\": 2,\n        \"command\": 2001,\n        \"autoContinue\": true,\n        \"doJumpId\": 7,\n        \"params\": [\n          0,\n          null,\n          null,\n          null,\n          null,\n          null,\n          null\n        ]\n      },\n      {\n        \"type\": \"SimpleItem\",\n        \"frame\": 3,\n        \"command\": 16,\n        \"autoContinue\": true,\n        \"doJumpId\": 8,\n        \"params\": [\n          0,\n          0,\n          0,\n          null,\n          10.8544068,\n          106.8072058,\n          15\n        ],\n        \"AltitudeMode\": 1,\n        \"Altitude\": 15,\n        \"AMSLAltAboveTerrain\": null\n      },\n      {\n        \"type\": \"SimpleItem\",\n        \"frame\": 2,\n        \"command\": 206,\n        \"autoContinue\": true,\n        \"doJumpId\": 9,\n        \"params\": [\n          10.5,\n          0,\n          1,\n          0,\n          0,\n          0,\n          0\n        ]\n      },\n      {\n        \"type\": \"SimpleItem\",\n        \"frame\": 3,\n        \"command\": 16,\n        \"autoContinue\": true,\n        \"doJumpId\": 10,\n        \"params\": [\n          0,\n          0,\n          0,\n          null,\n          10.854,\n          106.8072058,\n          15\n        ],\n        \"AltitudeMode\": 1,\n        \"Altitude\": 15,\n        \"AMSLAltAboveTerrain\": null\n      },\n      {\n        \"type\": \"SimpleItem\",\n        \"frame\": 2,\n        \"command\": 206,\n        \"autoContinue\": true,\n        \"doJumpId\": 11,\n        \"params\": [\n          0,\n          0,\n          0,\n          0,\n          0,\n          0,\n          0\n        ]\n      },\n      {\n        \"type\": \"SimpleItem\",\n        \"frame\": 2,\n        \"command\": 2001,\n        \"autoContinue\": true,\n        \"doJumpId\": 12,\n        \"params\": [\n          0,\n          null,\n          null,\n          null,\n          null,\n          null,\n          null\n        ]\n      },\n      {\n        \"type\": \"SimpleItem\",\n        \"frame\": 3,\n        \"command\": 16,\n        \"autoContinue\": true,\n        \"doJumpId\": 13,\n        \"params\": [\n          0,\n          0,\n          0,\n          null,\n          10.854,\n          106.8073087,\n          15\n        ],\n        \"AltitudeMode\": 1,\n        \"Altitude\": 15,\n        \"AMSLAltAboveTerrain\": null\n      },\n      {\n        \"type\": \"SimpleItem\",\n        \"frame\": 2,\n        \"command\": 206,\n        \"autoContinue\": true,\n        \"doJumpId\": 14,\n        \"params\": [\n          10.5,\n          0,\n          1,\n          0,\n          0,\n          0,\n          0\n        ]\n      },\n      {\n        \"type\": \"SimpleItem\",\n        \"frame\": 3,\n        \"command\": 16,\n        \"autoContinue\": true,\n        \"doJumpId\": 15,\n        \"params\": [\n          0,\n          0,\n          0,\n          null,\n          10.8544068,\n          106.8073087,\n          15\n        ],\n        \"AltitudeMode\": 1,\n        \"Altitude\": 15,\n        \"AMSLAltAboveTerrain\": null\n      },\n      {\n        \"type\": \"SimpleItem\",\n        \"frame\": 2,\n        \"command\": 206,\n        \"autoContinue\": true,\n        \"doJumpId\": 16,\n        \"params\": [\n          0,\n          0,\n          0,\n          0,\n          0,\n          0,\n          0\n        ]\n      },\n      {\n        \"type\": \"SimpleItem\",\n        \"frame\": 2,\n        \"command\": 2001,\n        \"autoContinue\": true,\n        \"doJumpId\": 17,\n        \"params\": [\n          0,\n          null,\n          null,\n          null,\n          null,\n          null,\n          null\n        ]\n      },\n      {\n        \"type\": \"SimpleItem\",\n        \"frame\": 2,\n        \"command\": 20,\n        \"autoContinue\": true,\n        \"doJumpId\": 18,\n        \"params\": [\n          0,\n          0,\n          0,\n          0,\n          0,\n          0,\n          0\n        ]\n      }\n    ]\n  }\n}\n"
+        },
+        "expected": {
+          "accepted": true,
+          "sourceSha256": "e09925ad35b3e744a59243447dfcf9586e7941c556f44cb9c1914c6792dd87f8",
+          "compiledSha256": "491fc0825c35872bf22e1f20c3cf1c48b7ed668e996fb7c463e26c4b860c02fb",
+          "items": 19,
+          "transects": null,
+          "error": null
+        }
+      },
+      {
+        "id": "concave-connector",
+        "title": "Vùng lõm / đoạn nối ngoài ranh",
+        "provenance": {
+          "kind": "synthetic",
+          "source": "BENCH06 generated local ENU polygon; not QGC export or physical site",
+          "originalSha256": null,
+          "derivation": null
+        },
+        "request": {
+          "format": "aeris-survey",
+          "version": 2,
+          "operational": false,
+          "model": "wgs84-enu-polygon-flat-v2",
+          "coordinateSystem": "WGS84",
+          "settings": {
+            "name": "U-shaped negative",
+            "polygon": [
+              {
+                "lat": 10.854135607090518,
+                "lon": 106.80713718558027
+              },
+              {
+                "lat": 10.85413560667965,
+                "lon": 106.80752130520504
+              },
+              {
+                "lat": 10.854515306612354,
+                "lon": 106.80752130586318
+              },
+              {
+                "lat": 10.854515306802572,
+                "lon": 106.8073932658266
+              },
+              {
+                "lat": 10.854262173515137,
+                "lon": 106.8073932654956
+              },
+              {
+                "lat": 10.854262173652096,
+                "lon": 106.80726522556681
+              },
+              {
+                "lat": 10.854515306939529,
+                "lon": 106.80726522579003
+              },
+              {
+                "lat": 10.854515307023227,
+                "lon": 106.80713718575348
+              }
+            ],
+            "altitude": 15,
+            "altitudeFrame": "flat-reference",
+            "speed": 6,
+            "heading": 90,
+            "sideOverlap": 30,
+            "frontOverlap": 30,
+            "targetGsdCm": null,
+            "camera": {
+              "name": "Camera mẫu · chưa hiệu chuẩn",
+              "provenance": "demo",
+              "sensorWidth": 13.2,
+              "sensorHeight": 8.8,
+              "focalLength": 8.8,
+              "imageWidth": 5472,
+              "minInterval": 1
+            }
+          }
+        },
+        "expected": {
+          "accepted": false,
+          "sourceSha256": "bb073b6911d6b6dfddf02f7022e0ad59334509d472bb61afd8aad04ac24e494e",
+          "compiledSha256": null,
+          "items": null,
+          "transects": null,
+          "error": "Kế hoạch chưa hợp lệ."
+        }
+      },
+      {
+        "id": "unresolved-datum",
+        "title": "Chưa có tham chiếu độ cao",
+        "provenance": {
+          "kind": "synthetic",
+          "source": "BENCH06 generated local ENU polygon; not QGC export or physical site",
+          "originalSha256": null,
+          "derivation": null
+        },
+        "request": {
+          "format": "aeris-survey",
+          "version": 2,
+          "operational": false,
+          "model": "wgs84-enu-polygon-flat-v2",
+          "coordinateSystem": "WGS84",
+          "settings": {
+            "name": "Dải hẹp · một tuyến",
+            "polygon": [
+              {
+                "lat": 10.854135607090518,
+                "lon": 106.80713718558027
+              },
+              {
+                "lat": 10.85413560703617,
+                "lon": 106.80722864263379
+              },
+              {
+                "lat": 10.854461064121919,
+                "lon": 106.8072286428812
+              },
+              {
+                "lat": 10.85446106417627,
+                "lon": 106.80713718572873
+              }
+            ],
+            "altitude": 15,
+            "altitudeFrame": "relative-launch",
+            "speed": 6,
+            "heading": 0,
+            "sideOverlap": 30,
+            "frontOverlap": 30,
+            "targetGsdCm": null,
+            "camera": {
+              "name": "Camera mẫu · chưa hiệu chuẩn",
+              "provenance": "demo",
+              "sensorWidth": 13.2,
+              "sensorHeight": 8.8,
+              "focalLength": 8.8,
+              "imageWidth": 5472,
+              "minInterval": 1
+            }
+          }
+        },
+        "expected": {
+          "accepted": false,
+          "sourceSha256": "cfab55ef9c8465314aa19a2a2cca21b9ba6536835f838b7a95e7294fba709b87",
+          "compiledSha256": null,
+          "items": null,
+          "transects": null,
+          "error": "Chưa có DEM/datum cho frame này; không được chuyển ngầm độ cao."
+        }
+      },
+      {
+        "id": "outside-world",
+        "title": "Vượt vùng thử 500 m",
+        "provenance": {
+          "kind": "synthetic",
+          "source": "BENCH06 generated local ENU polygon; not QGC export or physical site",
+          "originalSha256": null,
+          "derivation": null
+        },
+        "request": {
+          "format": "aeris-survey",
+          "version": 2,
+          "operational": false,
+          "model": "wgs84-enu-polygon-flat-v2",
+          "coordinateSystem": "WGS84",
+          "settings": {
+            "name": "Outside simulator",
+            "polygon": [
+              {
+                "lat": 10.854135566020533,
+                "lon": 106.81203013794895
+              },
+              {
+                "lat": 10.854135564512381,
+                "lon": 106.81212159500278
+              },
+              {
+                "lat": 10.854461021598086,
+                "lon": 106.81212160054496
+              },
+              {
+                "lat": 10.85446102310624,
+                "lon": 106.81203014339216
+              }
+            ],
+            "altitude": 15,
+            "altitudeFrame": "flat-reference",
+            "speed": 6,
+            "heading": 0,
+            "sideOverlap": 30,
+            "frontOverlap": 30,
+            "targetGsdCm": null,
+            "camera": {
+              "name": "Camera mẫu · chưa hiệu chuẩn",
+              "provenance": "demo",
+              "sensorWidth": 13.2,
+              "sensorHeight": 8.8,
+              "focalLength": 8.8,
+              "imageWidth": 5472,
+              "minInterval": 1
+            }
+          }
+        },
+        "expected": {
+          "accepted": false,
+          "sourceSha256": "8f24516bcd3de978a5000a6b1b4d094209412a33eb671bc1c0f0a84583b76c9a",
+          "compiledSha256": null,
+          "items": null,
+          "transects": null,
+          "error": "Polygon vượt khu thử SITL 500 m."
+        }
+      },
+      {
+        "id": "camera-rate",
+        "title": "Chu kỳ chụp không đáp ứng",
+        "provenance": {
+          "kind": "synthetic",
+          "source": "BENCH06 generated local ENU polygon; not QGC export or physical site",
+          "originalSha256": null,
+          "derivation": null
+        },
+        "request": {
+          "format": "aeris-survey",
+          "version": 2,
+          "operational": false,
+          "model": "wgs84-enu-polygon-flat-v2",
+          "coordinateSystem": "WGS84",
+          "settings": {
+            "name": "Dải hẹp · một tuyến",
+            "polygon": [
+              {
+                "lat": 10.854135607090518,
+                "lon": 106.80713718558027
+              },
+              {
+                "lat": 10.85413560703617,
+                "lon": 106.80722864263379
+              },
+              {
+                "lat": 10.854461064121919,
+                "lon": 106.8072286428812
+              },
+              {
+                "lat": 10.85446106417627,
+                "lon": 106.80713718572873
+              }
+            ],
+            "altitude": 15,
+            "altitudeFrame": "flat-reference",
+            "speed": 20,
+            "heading": 0,
+            "sideOverlap": 30,
+            "frontOverlap": 95,
+            "targetGsdCm": null,
+            "camera": {
+              "name": "Camera mẫu · chưa hiệu chuẩn",
+              "provenance": "demo",
+              "sensorWidth": 13.2,
+              "sensorHeight": 8.8,
+              "focalLength": 8.8,
+              "imageWidth": 5472,
+              "minInterval": 1
+            }
+          }
+        },
+        "expected": {
+          "accepted": false,
+          "sourceSha256": "963721577dcfa0acabcdd17f738ac591c14a622b2686e7dc3ab91ec5ad999edb",
+          "compiledSha256": null,
+          "items": null,
+          "transects": null,
+          "error": "Kế hoạch chưa hợp lệ."
+        }
+      },
+      {
+        "id": "triangle",
+        "title": "triangle",
+        "request": {
+          "format": "aeris-survey",
+          "version": 2,
+          "operational": false,
+          "model": "wgs84-enu-polygon-flat-v2",
+          "coordinateSystem": "WGS84",
+          "settings": {
+            "name": "ACCEPT13 triangle",
+            "polygon": [
+              {
+                "lat": 10.85416272850114,
+                "lon": 106.80716462271117
+              },
+              {
+                "lat": 10.854162727988639,
+                "lon": 106.80758532519528
+              },
+              {
+                "lat": 10.85458763062105,
+                "lon": 106.80737497448298
+              }
+            ],
+            "altitude": 15,
+            "altitudeFrame": "flat-reference",
+            "speed": 6,
+            "heading": 15,
+            "sideOverlap": 30,
+            "frontOverlap": 30,
+            "targetGsdCm": null,
+            "camera": {
+              "name": "Camera mẫu · chưa hiệu chuẩn",
+              "provenance": "demo",
+              "sensorWidth": 13.2,
+              "sensorHeight": 8.8,
+              "focalLength": 8.8,
+              "imageWidth": 5472,
+              "minInterval": 1
+            }
+          }
+        },
+        "expected": {
+          "accepted": true,
+          "sourceSha256": "b34f9f853ef6e6473345a1030b71d428b1fa49114db07e3c7c2172030dfeb396",
+          "compiledSha256": "0eb943824fcf20e7b66925987b950d6a979a576f7a2c31e02f3c9bf20e620384",
+          "items": 16,
+          "transects": 3,
+          "error": null
+        },
+        "provenance": {
+          "kind": "synthetic",
+          "source": "ACCEPT13 convex ENU geometry, flat simulator only; not QGC export/site",
+          "originalSha256": null,
+          "derivation": null
+        }
+      },
+      {
+        "id": "trapezoid",
+        "title": "trapezoid",
+        "request": {
+          "format": "aeris-survey",
+          "version": 2,
+          "operational": false,
+          "model": "wgs84-enu-polygon-flat-v2",
+          "coordinateSystem": "WGS84",
+          "settings": {
+            "name": "ACCEPT13 trapezoid",
+            "polygon": [
+              {
+                "lat": 10.85416272850114,
+                "lon": 106.80716462271117
+              },
+              {
+                "lat": 10.8541627278794,
+                "lon": 106.80764019943233
+              },
+              {
+                "lat": 10.854470104192211,
+                "lon": 106.80754874293139
+              },
+              {
+                "lat": 10.854470104574823,
+                "lon": 106.80725608003466
+              }
+            ],
+            "altitude": 15,
+            "altitudeFrame": "flat-reference",
+            "speed": 6,
+            "heading": 65,
+            "sideOverlap": 30,
+            "frontOverlap": 30,
+            "targetGsdCm": null,
+            "camera": {
+              "name": "Camera mẫu · chưa hiệu chuẩn",
+              "provenance": "demo",
+              "sensorWidth": 13.2,
+              "sensorHeight": 8.8,
+              "focalLength": 8.8,
+              "imageWidth": 5472,
+              "minInterval": 1
+            }
+          }
+        },
+        "expected": {
+          "accepted": true,
+          "sourceSha256": "64b8bb7dde54e89222ef410a8b2e67276cc5b0071da3477f48647ff08d3bb8d3",
+          "compiledSha256": "2b2718dd7a45f00752bcdbea3a3ccd68b308390d92f9918fbd97df62375298cc",
+          "items": 16,
+          "transects": 3,
+          "error": null
+        },
+        "provenance": {
+          "kind": "synthetic",
+          "source": "ACCEPT13 convex ENU geometry, flat simulator only; not QGC export/site",
+          "originalSha256": null,
+          "derivation": null
+        }
+      },
+      {
+        "id": "multi-strip",
+        "title": "multi-strip",
+        "request": {
+          "format": "aeris-survey",
+          "version": 2,
+          "operational": false,
+          "model": "wgs84-enu-polygon-flat-v2",
+          "coordinateSystem": "WGS84",
+          "settings": {
+            "name": "ACCEPT13 multi-strip",
+            "polygon": [
+              {
+                "lat": 10.85416272850114,
+                "lon": 106.80716462271117
+              },
+              {
+                "lat": 10.854162727840814,
+                "lon": 106.80765849084469
+              },
+              {
+                "lat": 10.854560508721766,
+                "lon": 106.80765849171561
+              },
+              {
+                "lat": 10.854560509382093,
+                "lon": 106.80716462292891
+              }
+            ],
+            "altitude": 15,
+            "altitudeFrame": "flat-reference",
+            "speed": 6,
+            "heading": 90,
+            "sideOverlap": 50,
+            "frontOverlap": 30,
+            "targetGsdCm": null,
+            "camera": {
+              "name": "Camera mẫu · chưa hiệu chuẩn",
+              "provenance": "demo",
+              "sensorWidth": 13.2,
+              "sensorHeight": 8.8,
+              "focalLength": 8.8,
+              "imageWidth": 5472,
+              "minInterval": 1
+            }
+          }
+        },
+        "expected": {
+          "accepted": true,
+          "sourceSha256": "226f2e82d4fff8727162f714c0c582efe63d5d99d87560ce4ab059b96ffc6982",
+          "compiledSha256": "1e50a23de011e182eee9b3ad3c58e8d03e65283d8824059bd2fa601fef49bea0",
+          "items": 16,
+          "transects": 3,
+          "error": null
+        },
+        "provenance": {
+          "kind": "synthetic",
+          "source": "ACCEPT13 convex ENU geometry, flat simulator only; not QGC export/site",
+          "originalSha256": null,
+          "derivation": null
+        }
+      }
+    ],
+    "sha256": "974519d33ea71f4ddc94bda4279f79857850720128e2c33afeaa30ad48a45a09"
+  },
+  "policy": {
+    "id": "geo14-engineering",
+    "version": "1.0.0",
+    "sha256": "ddebe2e7574b5fb348723a658b3dc44ba61f55884ac6e9cbdbb0eb6c74896e2b"
+  },
+  "cases": [
+    {
+      "id": "geo-flat",
+      "request": {
+        "format": "aeris-survey-run",
+        "version": 2,
+        "simulation": true,
+        "geoId": "rtr-aeris-home-20261012",
+        "geoHash": "eb64726cbf5cbf51e24dde2dc9bb46c1f0a0fd17bf42e817e3fbca07f49e31a2",
+        "verticalPolicy": "sim-flat",
+        "package": {
+          "format": "aeris-survey",
+          "version": 2,
+          "operational": false,
+          "model": "wgs84-enu-polygon-flat-v2",
+          "coordinateSystem": "WGS84",
+          "settings": {
+            "name": "Dải hẹp · một tuyến",
+            "polygon": [
+              {
+                "lat": 10.854135607090518,
+                "lon": 106.80713718558027
+              },
+              {
+                "lat": 10.85413560703617,
+                "lon": 106.80722864263379
+              },
+              {
+                "lat": 10.854461064121919,
+                "lon": 106.8072286428812
+              },
+              {
+                "lat": 10.85446106417627,
+                "lon": 106.80713718572873
+              }
+            ],
+            "altitude": 20,
+            "altitudeFrame": "flat-reference",
+            "speed": 3,
+            "heading": 0,
+            "sideOverlap": 60,
+            "frontOverlap": 70,
+            "targetGsdCm": null,
+            "camera": {
+              "name": "Camera mẫu · chưa hiệu chuẩn",
+              "provenance": "demo",
+              "sensorWidth": 13.2,
+              "sensorHeight": 8.8,
+              "focalLength": 8.8,
+              "imageWidth": 5472,
+              "minInterval": 1
+            }
+          }
+        },
+        "reviewPolicy": {
+          "id": "geo14-engineering",
+          "version": "1.0.0",
+          "sha256": "ddebe2e7574b5fb348723a658b3dc44ba61f55884ac6e9cbdbb0eb6c74896e2b"
+        }
+      },
+      "provenance": {
+        "kind": "synthetic",
+        "parentCaseId": "narrow",
+        "parentSourceSha256": "5b93c6bd371de86a359315b83239b50c3b098cf69524ed9c17be42821ffd4d62"
+      },
+      "sourceSha256": "84ccfd1d0c10e33fcc546623d0a0f90466a8101ec4ad5142495dbdd47bfaa79e",
+      "compiledSha256": "e1f044959bc7f8388928c3b8b4e20c29d4d61205abb2784f65774ef1489cde40",
+      "analysis": {
+        "policy": {
+          "id": "geo14-engineering",
+          "version": "1.0.0",
+          "sha256": "ddebe2e7574b5fb348723a658b3dc44ba61f55884ac6e9cbdbb0eb6c74896e2b"
+        },
+        "geoId": "rtr-aeris-home-20261012",
+        "geoHash": "eb64726cbf5cbf51e24dde2dc9bb46c1f0a0fd17bf42e817e3fbca07f49e31a2",
+        "verticalPolicy": "sim-flat",
+        "checks": [
+          {
+            "id": "source",
+            "pass": true
+          },
+          {
+            "id": "coverage",
+            "pass": true
+          },
+          {
+            "id": "model-clearance",
+            "pass": true
+          },
+          {
+            "id": "planned-gsd",
+            "pass": true
+          },
+          {
+            "id": "front-overlap",
+            "pass": true
+          },
+          {
+            "id": "side-overlap",
+            "pass": true
+          }
+        ],
+        "canReviewSITL": true,
+        "planned": {
+          "gsdCm": 0.5482456140350876,
+          "frontOverlapPct": 70,
+          "sideOverlapPct": 60,
+          "cameraProvenance": "demo",
+          "nominalPhotos": 7
+        },
+        "envelope": {
+          "homeSurfaceEgm2008M": 6.770304000006846,
+          "minClearanceLowerBoundM": 18.425104000006847,
+          "cellVisits": 8,
+          "legs": [
+            {
+              "leg": 1,
+              "lowerBoundClearanceM": 18.425104000006847,
+              "cells": 1
+            },
+            {
+              "leg": 2,
+              "lowerBoundClearanceM": 18.425104000006847,
+              "cells": 1
+            },
+            {
+              "leg": 3,
+              "lowerBoundClearanceM": 18.425104000006847,
+              "cells": 3
+            },
+            {
+              "leg": 4,
+              "lowerBoundClearanceM": 18.425104000006847,
+              "cells": 3
+            }
+          ],
+          "model": "Bilinear DSM cell maximum / linear WGS84 cruise leg and commanded relative-Home altitude",
+          "scope": "Conservative retained-grid bound only; actual terrain/trajectory, DSM error, obstacles, takeoff/landing NOT_CHECKED"
+        },
+        "fieldQuality": "NOT_CHECKED",
+        "operational": false
+      }
+    },
+    {
+      "id": "geo-offset",
+      "request": {
+        "format": "aeris-survey-run",
+        "version": 2,
+        "simulation": true,
+        "geoId": "rtr-aeris-home-20261012",
+        "geoHash": "eb64726cbf5cbf51e24dde2dc9bb46c1f0a0fd17bf42e817e3fbca07f49e31a2",
+        "verticalPolicy": "sim-dsm-offset",
+        "package": {
+          "format": "aeris-survey",
+          "version": 2,
+          "operational": false,
+          "model": "wgs84-enu-polygon-flat-v2",
+          "coordinateSystem": "WGS84",
+          "settings": {
+            "name": "Khảo sát tuyến xoay 35°",
+            "polygon": [
+              {
+                "lat": 10.854135607090518,
+                "lon": 106.80713718558027
+              },
+              {
+                "lat": 10.854135606739431,
+                "lon": 106.80748472238363
+              },
+              {
+                "lat": 10.854352578130692,
+                "lon": 106.8074847227333
+              },
+              {
+                "lat": 10.854352578481782,
+                "lon": 106.80713718567924
+              }
+            ],
+            "altitude": 20,
+            "altitudeFrame": "flat-reference",
+            "speed": 3,
+            "heading": 35,
+            "sideOverlap": 60,
+            "frontOverlap": 70,
+            "targetGsdCm": null,
+            "camera": {
+              "name": "Camera mẫu · chưa hiệu chuẩn",
+              "provenance": "demo",
+              "sensorWidth": 13.2,
+              "sensorHeight": 8.8,
+              "focalLength": 8.8,
+              "imageWidth": 5472,
+              "minInterval": 1
+            }
+          }
+        },
+        "reviewPolicy": {
+          "id": "geo14-engineering",
+          "version": "1.0.0",
+          "sha256": "ddebe2e7574b5fb348723a658b3dc44ba61f55884ac6e9cbdbb0eb6c74896e2b"
+        }
+      },
+      "provenance": {
+        "kind": "synthetic",
+        "parentCaseId": "rotated",
+        "parentSourceSha256": "a44cd0067434a691eb8732e9cbb59c326c46f1bf7f479fdab3edfafb37b8d8d4"
+      },
+      "sourceSha256": "d05bad7370963d043ff5bb9bf51f3754707c1a49934c58c7ebca89306639c78d",
+      "compiledSha256": "a6c524c4b97791a81acb88187cd85ca5a988c909e4f511c0ce7d26adf26eee9a",
+      "analysis": {
+        "policy": {
+          "id": "geo14-engineering",
+          "version": "1.0.0",
+          "sha256": "ddebe2e7574b5fb348723a658b3dc44ba61f55884ac6e9cbdbb0eb6c74896e2b"
+        },
+        "geoId": "rtr-aeris-home-20261012",
+        "geoHash": "eb64726cbf5cbf51e24dde2dc9bb46c1f0a0fd17bf42e817e3fbca07f49e31a2",
+        "verticalPolicy": "sim-dsm-offset",
+        "checks": [
+          {
+            "id": "source",
+            "pass": true
+          },
+          {
+            "id": "coverage",
+            "pass": true
+          },
+          {
+            "id": "model-clearance",
+            "pass": true
+          },
+          {
+            "id": "planned-gsd",
+            "pass": true
+          },
+          {
+            "id": "front-overlap",
+            "pass": true
+          },
+          {
+            "id": "side-overlap",
+            "pass": true
+          }
+        ],
+        "canReviewSITL": true,
+        "planned": {
+          "gsdCm": 0.5482456140350876,
+          "frontOverlapPct": 70,
+          "sideOverlapPct": 60,
+          "cameraProvenance": "demo",
+          "nominalPhotos": 18
+        },
+        "envelope": {
+          "homeSurfaceEgm2008M": 6.770304000006846,
+          "minClearanceLowerBoundM": 18.425104000006847,
+          "cellVisits": 14,
+          "legs": [
+            {
+              "leg": 1,
+              "lowerBoundClearanceM": 18.425104000006847,
+              "cells": 1
+            },
+            {
+              "leg": 2,
+              "lowerBoundClearanceM": 18.425104000006847,
+              "cells": 1
+            },
+            {
+              "leg": 3,
+              "lowerBoundClearanceM": 18.980473136567742,
+              "cells": 3
+            },
+            {
+              "leg": 4,
+              "lowerBoundClearanceM": 18.985259081183603,
+              "cells": 1
+            },
+            {
+              "leg": 5,
+              "lowerBoundClearanceM": 19.019461656867197,
+              "cells": 2
+            },
+            {
+              "leg": 6,
+              "lowerBoundClearanceM": 19.329390550910166,
+              "cells": 1
+            },
+            {
+              "leg": 7,
+              "lowerBoundClearanceM": 19.05366423255079,
+              "cells": 2
+            },
+            {
+              "leg": 8,
+              "lowerBoundClearanceM": 19.05366423255079,
+              "cells": 3
+            }
+          ],
+          "model": "Bilinear DSM cell maximum / linear WGS84 cruise leg and commanded relative-Home altitude",
+          "scope": "Conservative retained-grid bound only; actual terrain/trajectory, DSM error, obstacles, takeoff/landing NOT_CHECKED"
+        },
+        "fieldQuality": "NOT_CHECKED",
+        "operational": false
+      }
+    },
+    {
+      "id": "geo-triangle",
+      "request": {
+        "format": "aeris-survey-run",
+        "version": 2,
+        "simulation": true,
+        "geoId": "rtr-aeris-home-20261012",
+        "geoHash": "eb64726cbf5cbf51e24dde2dc9bb46c1f0a0fd17bf42e817e3fbca07f49e31a2",
+        "verticalPolicy": "sim-flat",
+        "package": {
+          "format": "aeris-survey",
+          "version": 2,
+          "operational": false,
+          "model": "wgs84-enu-polygon-flat-v2",
+          "coordinateSystem": "WGS84",
+          "settings": {
+            "name": "ACCEPT13 triangle",
+            "polygon": [
+              {
+                "lat": 10.85416272850114,
+                "lon": 106.80716462271117
+              },
+              {
+                "lat": 10.854162727988639,
+                "lon": 106.80758532519528
+              },
+              {
+                "lat": 10.85458763062105,
+                "lon": 106.80737497448298
+              }
+            ],
+            "altitude": 20,
+            "altitudeFrame": "flat-reference",
+            "speed": 3,
+            "heading": 15,
+            "sideOverlap": 60,
+            "frontOverlap": 70,
+            "targetGsdCm": null,
+            "camera": {
+              "name": "Camera mẫu · chưa hiệu chuẩn",
+              "provenance": "demo",
+              "sensorWidth": 13.2,
+              "sensorHeight": 8.8,
+              "focalLength": 8.8,
+              "imageWidth": 5472,
+              "minInterval": 1
+            }
+          }
+        },
+        "reviewPolicy": {
+          "id": "geo14-engineering",
+          "version": "1.0.0",
+          "sha256": "ddebe2e7574b5fb348723a658b3dc44ba61f55884ac6e9cbdbb0eb6c74896e2b"
+        }
+      },
+      "provenance": {
+        "kind": "synthetic",
+        "parentCaseId": "triangle",
+        "parentSourceSha256": "b34f9f853ef6e6473345a1030b71d428b1fa49114db07e3c7c2172030dfeb396"
+      },
+      "sourceSha256": "a9dbaaa6c6591ae1bc2eb2c58d82e88633e1cf31d36aaecf861005b257122474",
+      "compiledSha256": "d7c7e1e08944c548e14bd700de8ffc709e527fb7524fbc3eba89158d73d91a21",
+      "analysis": {
+        "policy": {
+          "id": "geo14-engineering",
+          "version": "1.0.0",
+          "sha256": "ddebe2e7574b5fb348723a658b3dc44ba61f55884ac6e9cbdbb0eb6c74896e2b"
+        },
+        "geoId": "rtr-aeris-home-20261012",
+        "geoHash": "eb64726cbf5cbf51e24dde2dc9bb46c1f0a0fd17bf42e817e3fbca07f49e31a2",
+        "verticalPolicy": "sim-flat",
+        "checks": [
+          {
+            "id": "source",
+            "pass": true
+          },
+          {
+            "id": "coverage",
+            "pass": true
+          },
+          {
+            "id": "model-clearance",
+            "pass": true
+          },
+          {
+            "id": "planned-gsd",
+            "pass": true
+          },
+          {
+            "id": "front-overlap",
+            "pass": true
+          },
+          {
+            "id": "side-overlap",
+            "pass": true
+          }
+        ],
+        "canReviewSITL": true,
+        "planned": {
+          "gsdCm": 0.5482456140350876,
+          "frontOverlapPct": 70,
+          "sideOverlapPct": 60,
+          "cameraProvenance": "demo",
+          "nominalPhotos": 20
+        },
+        "envelope": {
+          "homeSurfaceEgm2008M": 6.770304000006846,
+          "minClearanceLowerBoundM": 17.994504000006845,
+          "cellVisits": 16,
+          "legs": [
+            {
+              "leg": 1,
+              "lowerBoundClearanceM": 18.425104000006847,
+              "cells": 1
+            },
+            {
+              "leg": 2,
+              "lowerBoundClearanceM": 17.994504000006845,
+              "cells": 2
+            },
+            {
+              "leg": 3,
+              "lowerBoundClearanceM": 17.994504000006845,
+              "cells": 3
+            },
+            {
+              "leg": 4,
+              "lowerBoundClearanceM": 17.994504000006845,
+              "cells": 2
+            },
+            {
+              "leg": 5,
+              "lowerBoundClearanceM": 17.994504000006845,
+              "cells": 2
+            },
+            {
+              "leg": 6,
+              "lowerBoundClearanceM": 17.994504000006845,
+              "cells": 1
+            },
+            {
+              "leg": 7,
+              "lowerBoundClearanceM": 17.994504000006845,
+              "cells": 2
+            },
+            {
+              "leg": 8,
+              "lowerBoundClearanceM": 17.994504000006845,
+              "cells": 3
+            }
+          ],
+          "model": "Bilinear DSM cell maximum / linear WGS84 cruise leg and commanded relative-Home altitude",
+          "scope": "Conservative retained-grid bound only; actual terrain/trajectory, DSM error, obstacles, takeoff/landing NOT_CHECKED"
+        },
+        "fieldQuality": "NOT_CHECKED",
+        "operational": false
+      }
+    },
+    {
+      "id": "geo-multi",
+      "request": {
+        "format": "aeris-survey-run",
+        "version": 2,
+        "simulation": true,
+        "geoId": "rtr-aeris-home-20261012",
+        "geoHash": "eb64726cbf5cbf51e24dde2dc9bb46c1f0a0fd17bf42e817e3fbca07f49e31a2",
+        "verticalPolicy": "sim-dsm-offset",
+        "package": {
+          "format": "aeris-survey",
+          "version": 2,
+          "operational": false,
+          "model": "wgs84-enu-polygon-flat-v2",
+          "coordinateSystem": "WGS84",
+          "settings": {
+            "name": "ACCEPT13 multi-strip",
+            "polygon": [
+              {
+                "lat": 10.85416272850114,
+                "lon": 106.80716462271117
+              },
+              {
+                "lat": 10.854162727840814,
+                "lon": 106.80765849084469
+              },
+              {
+                "lat": 10.854560508721766,
+                "lon": 106.80765849171561
+              },
+              {
+                "lat": 10.854560509382093,
+                "lon": 106.80716462292891
+              }
+            ],
+            "altitude": 20,
+            "altitudeFrame": "flat-reference",
+            "speed": 3,
+            "heading": 90,
+            "sideOverlap": 60,
+            "frontOverlap": 70,
+            "targetGsdCm": null,
+            "camera": {
+              "name": "Camera mẫu · chưa hiệu chuẩn",
+              "provenance": "demo",
+              "sensorWidth": 13.2,
+              "sensorHeight": 8.8,
+              "focalLength": 8.8,
+              "imageWidth": 5472,
+              "minInterval": 1
+            }
+          }
+        },
+        "reviewPolicy": {
+          "id": "geo14-engineering",
+          "version": "1.0.0",
+          "sha256": "ddebe2e7574b5fb348723a658b3dc44ba61f55884ac6e9cbdbb0eb6c74896e2b"
+        }
+      },
+      "provenance": {
+        "kind": "synthetic",
+        "parentCaseId": "multi-strip",
+        "parentSourceSha256": "226f2e82d4fff8727162f714c0c582efe63d5d99d87560ce4ab059b96ffc6982"
+      },
+      "sourceSha256": "97b1203eb3741071cc410418ff28faeaa95b7c64b51db52b79fb42185847aa81",
+      "compiledSha256": "64e66bc3b57e306500a3bf11bddd95b693f9804e6d3619a5f8b2f64cb14c35fc",
+      "analysis": {
+        "policy": {
+          "id": "geo14-engineering",
+          "version": "1.0.0",
+          "sha256": "ddebe2e7574b5fb348723a658b3dc44ba61f55884ac6e9cbdbb0eb6c74896e2b"
+        },
+        "geoId": "rtr-aeris-home-20261012",
+        "geoHash": "eb64726cbf5cbf51e24dde2dc9bb46c1f0a0fd17bf42e817e3fbca07f49e31a2",
+        "verticalPolicy": "sim-dsm-offset",
+        "checks": [
+          {
+            "id": "source",
+            "pass": true
+          },
+          {
+            "id": "coverage",
+            "pass": true
+          },
+          {
+            "id": "model-clearance",
+            "pass": true
+          },
+          {
+            "id": "planned-gsd",
+            "pass": true
+          },
+          {
+            "id": "front-overlap",
+            "pass": true
+          },
+          {
+            "id": "side-overlap",
+            "pass": true
+          }
+        ],
+        "canReviewSITL": true,
+        "planned": {
+          "gsdCm": 0.5482456140350876,
+          "frontOverlapPct": 70,
+          "sideOverlapPct": 60,
+          "cameraProvenance": "demo",
+          "nominalPhotos": 30
+        },
+        "envelope": {
+          "homeSurfaceEgm2008M": 6.770304000006846,
+          "minClearanceLowerBoundM": 18.425104000006847,
+          "cellVisits": 18,
+          "legs": [
+            {
+              "leg": 1,
+              "lowerBoundClearanceM": 18.425104000006847,
+              "cells": 1
+            },
+            {
+              "leg": 2,
+              "lowerBoundClearanceM": 18.425104000006847,
+              "cells": 2
+            },
+            {
+              "leg": 3,
+              "lowerBoundClearanceM": 18.60978873834759,
+              "cells": 3
+            },
+            {
+              "leg": 4,
+              "lowerBoundClearanceM": 18.716977144538095,
+              "cells": 1
+            },
+            {
+              "leg": 5,
+              "lowerBoundClearanceM": 18.764157884916063,
+              "cells": 3
+            },
+            {
+              "leg": 6,
+              "lowerBoundClearanceM": 19.185655452643566,
+              "cells": 1
+            },
+            {
+              "leg": 7,
+              "lowerBoundClearanceM": 18.918525346662054,
+              "cells": 3
+            },
+            {
+              "leg": 8,
+              "lowerBoundClearanceM": 18.949173952399423,
+              "cells": 4
+            }
+          ],
+          "model": "Bilinear DSM cell maximum / linear WGS84 cruise leg and commanded relative-Home altitude",
+          "scope": "Conservative retained-grid bound only; actual terrain/trajectory, DSM error, obstacles, takeoff/landing NOT_CHECKED"
+        },
+        "fieldQuality": "NOT_CHECKED",
+        "operational": false
+      }
+    }
+  ],
+  "scope": "Four reviewed v2 simulator mission candidates + original 10-case ACCEPT13 corpus. DSM and plan criteria only; no physical quality.",
+  "sha256": "55321fc5db1f53f48a5e874f14e109be4459b5aefb8c1537a2654f565275d1df"
+}

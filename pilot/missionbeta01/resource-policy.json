@@ -1,0 +1,15 @@
+{
+  "version": 1,
+  "admissionBytes": 21474836480,
+  "hardFloorBytes": 10737418240,
+  "writeReserveBytes": 268435456,
+  "stabilitySamples": 31,
+  "stabilityDurationMs": 30000,
+  "maxDeclineBytes": 268435456,
+  "forecastSeconds": 15,
+  "pollMs": 250,
+  "runtimeSeconds": 2700,
+  "evidenceBudgetBytes": 2147483648,
+  "origin": "USER_EXPLICIT_CHANGE_2026-10-24_20_ENTRY_10_FLOOR",
+  "historicalPolicyUnchanged": true
+}

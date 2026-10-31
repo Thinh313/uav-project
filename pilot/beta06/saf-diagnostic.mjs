@@ -1,0 +1,5 @@
+/** QA-only, one volatile reference and one explicit negative dispatch. Never alters bytes. */
+export function createSafDiagnostic({origin}={}){if(origin!=='http://127.0.0.1:8872')throw Error('QA_FIXED_CONTROL_ORIGIN');let artifact=null,used=false;
+ function remember(q){const u=new URL(q.url,origin);if(u.origin!==origin||u.username||u.password||u.search||u.hash||!/^\/artifact\/[a-f0-9-]{36}\.tar$/.test(u.pathname)||!/^[-a-zA-Z0-9_.]{1,100}$/.test(q.name)||!/^[a-f0-9]{64}$/.test(q.sha256))throw Error('QA_ARTIFACT_REFERENCE');artifact=Object.freeze({url:u.href,name:q.name,sha256:q.sha256});}
+ function badSha({native=false,active=true,flightAuthority=true,payloadLeaseCount=1,busy=true}={}){if(!native||active||flightAuthority||payloadLeaseCount!==0||busy)throw Error('QA_GROUND_NO_AUTHORITY_ONLY');if(!artifact)throw Error('QA_VALID_ARTIFACT_REQUIRED');if(used)throw Error('QA_ONE_NEGATIVE_PER_DOCUMENT');used=true;const bad=(artifact.sha256[0]==='0'?'1':'0')+artifact.sha256.slice(1);return'aeris-field02://export-artifact?'+new URLSearchParams({...artifact,sha256:bad});}
+ return{remember,badSha,available:()=>!!artifact&&!used};}

@@ -1,0 +1,11 @@
+# ADR: isolate durable clock observation from frame IO
+
+Status: authorized isolated engineering experiment, not production or Hera acceptance.
+
+Observed baseline: prior actualcase completed1002585 frames and then refused the next durable INTENT before entering sensor callback. A source-backed inference from retained monotonic timestamps bounds the age of the last accepted bracket at at least340.4ms by the final guardcheck, beyond250ms (88359636987416−88359296559375ns). This is not a directly retained inner exception message or pre-send measurement. The287.2ms group gap did not measure individual syscall/scheduling cause; see evidence/betaintegrated01-cockpit05-actual01/FINAL-VERIFY.json and the retained actual-prefix QA. Retain the original UNKNOWN record and all old raw bytes.
+
+Decision: give clock reception its own single-writer durable stream. Main frameowner uses immutable post-fsync publications and records exact clock-event references at RX and pre-send. Separate clocks can progress while the main writer waits; no network callback can rely on an undurable or stale correlation. Cold verification must replay raw clock packets/registration/order and associate every frame boundary with its actual stream reference and publication time. This requires an explicitly versioned recording contract and extra512MiB of admitted capacity; physical profile, model, AP binary and native APK stay exact.
+
+Rejected shortcuts: raise250ms, weakenclockcheck, pollclock from inside mainjournal lock, publish beforefsync, forge fresh timestamps, skip frame/fsync or resends, or patch oldsealedreceipts. Threading is justified only by the independentIO outcome, not by a claim of general performance superiority. Common-filesystem or hostwide stall can still trigger a correct refusal.
+
+Falsification: any sensor callback using clock data not durable before publication, wrong context/source, age>250ms, duplicate model/frame, unexplained raw stream gaps, ignored owner failure or capacity overflow blocks actual30min. Mock interleavings and a separately admitted short Android–SITL case precede the long case. Performance/availability claims are scoped to the measured run; no durability across hard powerloss or certified real-aircraft behavior is implied.

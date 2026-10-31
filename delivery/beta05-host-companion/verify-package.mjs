@@ -1,0 +1,2 @@
+import fs from'node:fs';import{verifyPackage}from'../../pilot/betaworkbench05/package.mjs';
+const file=process.argv[2];if(!file)throw Error('Supply the SAF JSON package path');const st=fs.lstatSync(file);if(!st.isFile()||st.isSymbolicLink()||st.size>32*2**20)throw Error('REGULAR_FILE_32MIB_REQUIRED');const result=verifyPackage(fs.readFileSync(file));console.log(JSON.stringify({integrity:'PASS',...result,sourceAuthentication:'NOT_A_SOFTWARE_OR_ORIGIN_SIGNATURE',physicalHardwareQualified:false},null,2));

@@ -1,0 +1,7 @@
+"""Select the intended closed run visibly before requesting Android SAF. One export, no retry."""
+from ui01 import *
+owned();run=sys.argv[1];assert re.fullmatch('s[a-f0-9]{20}',run);assert events98(run,'CLOSED'),'CLOSED_RAW_REQUIRED';expect=E/'saf-declaration03.json';assert not expect.exists();workspace98();tap01('list-raw96');tap01('run-raw96');ns=nodes();options=[n['text'] for n in ns if str(n.get('text','')).startswith(run+' · ')];assert len(options)==1,'INTENDED_RUN_NOT_VISIBLY_OFFERED';tap_label(options[0]);capture('saf03-intended-selected-run')
+nonce='integration03_saf03_'+run[1:]
+for ident,value in [('receiver-raw96','rtr-evaluator'),('nonce-raw96',nonce)]:
+ c=control01(ident);adb('shell','input','tap',round((c['x']+c['right'])/2),round((c['y']+c['bottom'])/2));adb('shell','input','keyevent','KEYCODE_MOVE_END');adb('shell','input','keyevent',*(['KEYCODE_DEL']*128));adb('shell','input','text',value);adb('shell','input','keyevent','KEYCODE_BACK')
+tap01('confirm-raw96');capture('saf03-pre-export-context');q={'run':run,'receiver':'rtr-evaluator','nonce':nonce,'visibleSelectedOption':options[0],'hostMonoNs':str(time.monotonic_ns()),'source':'Explicit native WebView select via real Android popup, screenshot before export','automaticRetry':False};expect.open('x').write(json.dumps(q,indent=2)+'\n');tap01('export-raw96');print('SAF_DIALOG_REQUESTED_ONCE_VERIFY_FILENAME_BEFORE_SAVE')

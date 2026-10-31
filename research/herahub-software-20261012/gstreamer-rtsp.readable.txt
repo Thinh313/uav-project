@@ -1,0 +1,3298 @@
+
+
+
+
+
+
+
+
+rtspsrc
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Toggle navigation
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        API References
+
+
+
+
+GStreamer core
+
+
+
+GStreamer Libraries
+
+
+
+GStreamer Plugins
+
+
+
+
+
+Application manual
+
+
+
+Tutorials
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+rtspsrc
+
+Makes a connection to an RTSP server and read the data.
+rtspsrc strictly follows RFC 2326 and therefore does not (yet) support
+RealMedia/Quicktime/Microsoft extensions.
+
+RTSP supports transport over TCP or UDP in unicast or multicast mode. By
+default rtspsrc will negotiate a connection in the following order:
+UDP unicast/UDP multicast/TCP. The order cannot be changed but the allowed
+protocols can be controlled with the protocols property.
+
+rtspsrc currently understands SDP as the format of the session description.
+For each stream listed in the SDP a new rtp_stream%d pad will be created
+with caps derived from the SDP media description. This is a caps of mime type
+"application/x-rtp" that can be connected to any available RTP depayloader
+element.
+
+rtspsrc will internally instantiate an RTP session manager element
+that will handle the RTCP messages to and from the server, jitter removal,
+packet reordering along with providing a clock for the pipeline.
+This feature is implemented using the gstrtpbin element.
+
+rtspsrc acts like a live source and will therefore only generate data in the
+PLAYING state.
+
+If a RTP session times out then the rtspsrc will generate an element message
+named "GstRTSPSrcTimeout". Currently this is only supported for timeouts
+triggered by RTCP.
+
+The message's structure contains three fields:
+
+GstRTSPSrcTimeoutCause cause: the cause of the timeout.
+
+gint stream-number: an internal identifier of the stream that timed out.
+
+guint ssrc: the SSRC of the stream that timed out.
+
+Example launch line
+ gst-launch-1.0 rtspsrc location=rtsp://some.server/url ! fakesink
+
+
+Establish a connection to an RTSP server and send the raw RTP packets to a
+fakesink.
+
+NOTE: rtspsrc will send a PAUSE command to the server if you set the
+element to the PAUSED state, and will send a PLAY command if you set it to
+the PLAYING state.
+
+Unfortunately, going to the NULL state involves going through PAUSED, so
+rtspsrc does not know the difference and will send a PAUSE when you wanted
+a TEARDOWN. The workaround is to hook into the before-send signal and
+return FALSE in this case.
+
+Some servers (e.g. Axis cameras) expect the client to propose the encryption
+key(s) to be used for SRTP / SRTCP. This is required to allow re-keying so
+as to evade cryptanalysis. Note that the behaviour is not specified by the
+RFCs. By setting the 'client-managed-mikey-mode' property to 'true', rtspsrc
+acts as follows:
+
+
+For a secured profile (RTP/SAVP or RTP/SAVPF), any media in the SDP
+returned by the server for which MIKEY key management applies is
+elligible for client managed mode. The MIKEY from the server is then
+ignored.
+
+rtspsrc sends a SETUP with a MIKEY payload proposed by the user. The
+payload is formed by calling the 'request-rtp-key' signal for each
+elligible stream. During initialisation, 'request-rtcp-key' is also
+called as usual. The keys returned by both signals should be the same
+for a single stream, but the mechanism allows a different approach.
+
+The user can start re-keying of a stream by calling SET_PARAMETER.
+The convenience signal 'set-mikey-parameter' can be used to build a
+'KeyMgmt' parameter with a MIKEY payload.
+
+After the server accepts the new parameter, the user can call
+'invalidate-key' and prepare for the new key(s) to be served by signals
+'request-rtp-key' & 'request-rtcp-key'.
+
+The signals 'soft-limit' & 'hard-limit' are called when a key
+reaches the limits of its utilisation.
+
+
+
+
+Hierarchy
+
+
+
+GObject
+    ╰──GInitiallyUnowned
+        ╰──GstObject
+            ╰──GstElement
+                ╰──GstBin
+                    ╰──rtspsrc
+
+
+
+
+Implemented interfaces
+
+
+GstChildProxy
+GstURIHandler
+
+
+
+Factory details
+
+
+Authors: – Wim Taymans , Thijs Vermeir , Lutz Mueller 
+
+Classification: – Source/Network
+
+Rank – primary
+
+Plugin – rtsp
+
+Package – GStreamer Good Plug-ins
+
+
+
+Pad Templates
+
+
+stream_%u
+
+application/x-rtp:
+application/x-rdt:
+
+
+
+Presence – sometimes
+
+Direction – src
+
+Object type – GstPad
+
+
+
+
+
+Signals
+
+
+
+accept-certificate
+
+
+gboolean
+accept_certificate_callback (GstElement * rtspsrc,
+                             GTlsConnection * peer_cert,
+                             GTlsCertificate * errors,
+                             GTlsCertificateFlags * user_data,
+                             gpointer udata)
+
+def accept_certificate_callback (rtspsrc, peer_cert, errors, user_data, udata):
+    #python callback for the 'accept-certificate' signal
+
+function accept_certificate_callback(rtspsrc: GstElement * rtspsrc, peer_cert: GTlsConnection * peer_cert, errors: GTlsCertificate * errors, user_data: GTlsCertificateFlags * user_data, udata: gpointer udata): {
+    // javascript callback for the 'accept-certificate' signal
+}
+
+This will directly map to GTlsConnection 's "accept-certificate"
+signal and be performed after the default checks of GstRTSPConnection
+(checking against the GTlsDatabase with the given GTlsCertificateFlags)
+have failed. If no GTlsDatabase is set on this connection, only this
+signal will be emitted.
+
+
+Parameters:
+
+
+rtspsrc
+–
+
+
+a rtspsrc
+
+
+
+peer_cert
+–
+
+
+the peer's GTlsCertificate
+
+
+
+errors
+–
+
+
+the problems with peer_cert
+
+
+
+user_data
+–
+
+
+user data set when the signal handler was connected.
+
+
+
+udata
+–
+
+No description available
+
+
+
+
+
+Returns
+(gboolean)
+–
+			
+No description available
+
+
+
+
+Flags:
+Run Last
+
+
+
+Since			: 1.14
+		
+
+
+
+
+
+before-send
+
+
+gboolean
+before_send_callback (GstElement * rtspsrc,
+                      GstRTSPMessage * num,
+                      gpointer udata)
+
+def before_send_callback (rtspsrc, num, udata):
+    #python callback for the 'before-send' signal
+
+function before_send_callback(rtspsrc: GstElement * rtspsrc, num: GstRTSPMessage * num, udata: gpointer udata): {
+    // javascript callback for the 'before-send' signal
+}
+
+Emitted before each RTSP request is sent, in order to allow
+the application to modify send parameters or to skip the message entirely.
+This can be used, for example, to work with ONVIF Profile G servers,
+which need a different/additional range, rate-control, and intra/x
+parameters.
+
+
+Parameters:
+
+
+rtspsrc
+–
+
+
+a rtspsrc
+
+
+
+num
+–
+
+
+the stream number
+
+
+
+udata
+–
+
+No description available
+
+
+
+
+
+Returns
+(gboolean)
+–
+			
+
+TRUE when the command should be sent, FALSE when the
+command should be dropped.
+
+
+
+
+Flags:
+Run Last
+
+
+
+Since			: 1.14
+		
+
+
+
+
+
+handle-request
+
+
+handle_request_callback (GstElement * rtspsrc,
+                         GstRTSPMessage * request,
+                         GstRTSPMessage * response,
+                         gpointer udata)
+
+def handle_request_callback (rtspsrc, request, response, udata):
+    #python callback for the 'handle-request' signal
+
+function handle_request_callback(rtspsrc: GstElement * rtspsrc, request: GstRTSPMessage * request, response: GstRTSPMessage * response, udata: gpointer udata): {
+    // javascript callback for the 'handle-request' signal
+}
+
+Handle a server request in request and prepare response.
+
+This signal is called from the streaming thread, you should therefore not
+do any state changes on rtspsrc because this might deadlock. If you want
+to modify the state as a result of this signal, post a
+GST_MESSAGE_REQUEST_STATE message on the bus or signal the main thread
+in some other way.
+
+
+Parameters:
+
+
+rtspsrc
+–
+
+
+a rtspsrc
+
+
+
+request
+–
+
+
+a GstRTSPMessage
+
+
+
+response
+–
+
+
+a GstRTSPMessage
+
+
+
+udata
+–
+
+No description available
+
+
+
+
+Flags:
+
+
+
+Since			: 1.2
+		
+
+
+
+
+
+hard-limit
+
+
+hard_limit_callback (GstElement * rtspsrc,
+                     guint id,
+                     gpointer udata)
+
+def hard_limit_callback (rtspsrc, id, udata):
+    #python callback for the 'hard-limit' signal
+
+function hard_limit_callback(rtspsrc: GstElement * rtspsrc, id: guint id, udata: gpointer udata): {
+    // javascript callback for the 'hard-limit' signal
+}
+
+When the 'client-managed-mikey' mode is enabled, this signal
+is emitted when the stream with id has reached the
+hard limit of utilisation of it's master encryption key.
+User should start a re-keying procedure. Failure to do so,
+will lead to buffers of this stream being dropped.
+
+
+Parameters:
+
+
+rtspsrc
+–
+
+
+a rtspsrc
+
+
+
+id
+–
+
+
+The id of the stream
+
+
+
+udata
+–
+
+No description available
+
+
+
+
+Flags:
+Run Last
+
+
+
+Since			: 1.26
+		
+
+
+
+
+
+new-manager
+
+
+new_manager_callback (GstElement * rtspsrc,
+                      GstElement * manager,
+                      gpointer udata)
+
+def new_manager_callback (rtspsrc, manager, udata):
+    #python callback for the 'new-manager' signal
+
+function new_manager_callback(rtspsrc: GstElement * rtspsrc, manager: GstElement * manager, udata: gpointer udata): {
+    // javascript callback for the 'new-manager' signal
+}
+
+Emitted after a new manager (like rtpbin) was created and the default
+properties were configured.
+
+
+Parameters:
+
+
+rtspsrc
+–
+
+
+a rtspsrc
+
+
+
+manager
+–
+
+
+a GstElement
+
+
+
+udata
+–
+
+No description available
+
+
+
+
+Flags:
+Run First
+
+
+
+Since			: 1.4
+		
+
+
+
+
+
+on-sdp
+
+
+on_sdp_callback (GstElement * rtspsrc,
+                 GstSDPMessage * sdp,
+                 gpointer udata)
+
+def on_sdp_callback (rtspsrc, sdp, udata):
+    #python callback for the 'on-sdp' signal
+
+function on_sdp_callback(rtspsrc: GstElement * rtspsrc, sdp: GstSDPMessage * sdp, udata: gpointer udata): {
+    // javascript callback for the 'on-sdp' signal
+}
+
+Emitted when the client has retrieved the SDP and before it configures the
+streams in the SDP. sdp can be inspected and modified.
+
+This signal is called from the streaming thread, you should therefore not
+do any state changes on rtspsrc because this might deadlock. If you want
+to modify the state as a result of this signal, post a
+GST_MESSAGE_REQUEST_STATE message on the bus or signal the main thread
+in some other way.
+
+
+Parameters:
+
+
+rtspsrc
+–
+
+
+a rtspsrc
+
+
+
+sdp
+–
+
+
+a GstSDPMessage
+
+
+
+udata
+–
+
+No description available
+
+
+
+
+Flags:
+
+
+
+Since			: 1.2
+		
+
+
+
+
+
+request-rtcp-key
+
+
+GstCaps *
+request_rtcp_key_callback (GstElement * rtspsrc,
+                           guint num,
+                           gpointer udata)
+
+def request_rtcp_key_callback (rtspsrc, num, udata):
+    #python callback for the 'request-rtcp-key' signal
+
+function request_rtcp_key_callback(rtspsrc: GstElement * rtspsrc, num: guint num, udata: gpointer udata): {
+    // javascript callback for the 'request-rtcp-key' signal
+}
+
+Signal emitted to get the crypto parameters relevant to the RTCP
+stream. User should provide the key and the RTCP encryption ciphers
+and authentication, and return them wrapped in a GstCaps.
+
+
+Parameters:
+
+
+rtspsrc
+–
+
+
+a rtspsrc
+
+
+
+num
+–
+
+
+the stream number
+
+
+
+udata
+–
+
+No description available
+
+
+
+
+
+Returns
+(GstCaps *)
+–
+			
+No description available
+
+
+
+
+Flags:
+Run Last
+
+
+
+Since			: 1.4
+		
+
+
+
+
+
+request-rtp-key
+
+
+GstCaps *
+request_rtp_key_callback (GstElement * rtspsrc,
+                          guint num,
+                          gpointer udata)
+
+def request_rtp_key_callback (rtspsrc, num, udata):
+    #python callback for the 'request-rtp-key' signal
+
+function request_rtp_key_callback(rtspsrc: GstElement * rtspsrc, num: guint num, udata: gpointer udata): {
+    // javascript callback for the 'request-rtp-key' signal
+}
+
+Signal emitted to get the crypto parameters relevant to the RTP
+stream. User should provide the key and the RTP encryption ciphers
+and authentication, and return them wrapped in a GstCaps.
+
+Applications should connect to this signal when 'client-managed-mikey'
+mode is enabled. The crypto parameters are usually the same as those
+use by the 'request-rtcp-key' signal.
+
+
+Parameters:
+
+
+rtspsrc
+–
+
+
+a rtspsrc
+
+
+
+num
+–
+
+
+the stream number
+
+
+
+udata
+–
+
+No description available
+
+
+
+
+
+Returns
+(GstCaps *)
+–
+			
+No description available
+
+
+
+
+Flags:
+
+
+
+Since			: 1.26
+		
+
+
+
+
+
+select-stream
+
+
+gboolean
+select_stream_callback (GstElement * rtspsrc,
+                        guint num,
+                        GstCaps * caps,
+                        gpointer udata)
+
+def select_stream_callback (rtspsrc, num, caps, udata):
+    #python callback for the 'select-stream' signal
+
+function select_stream_callback(rtspsrc: GstElement * rtspsrc, num: guint num, caps: GstCaps * caps, udata: gpointer udata): {
+    // javascript callback for the 'select-stream' signal
+}
+
+Emitted before the client decides to configure the stream num with
+caps.
+
+
+Parameters:
+
+
+rtspsrc
+–
+
+
+a rtspsrc
+
+
+
+num
+–
+
+
+the stream number
+
+
+
+caps
+–
+
+
+the stream caps
+
+
+
+udata
+–
+
+No description available
+
+
+
+
+
+Returns
+(gboolean)
+–
+			
+
+TRUE when the stream should be selected, FALSE when the stream
+is to be ignored.
+
+
+
+
+Flags:
+Run Last
+
+
+
+Since			: 1.2
+		
+
+
+
+
+
+soft-limit
+
+
+soft_limit_callback (GstElement * rtspsrc,
+                     guint id,
+                     gpointer udata)
+
+def soft_limit_callback (rtspsrc, id, udata):
+    #python callback for the 'soft-limit' signal
+
+function soft_limit_callback(rtspsrc: GstElement * rtspsrc, id: guint id, udata: gpointer udata): {
+    // javascript callback for the 'soft-limit' signal
+}
+
+When the 'client-managed-mikey' mode is enabled, this signal
+is emitted when the stream with id has reached the
+soft limit of utilisation of it's master encryption key.
+User should start a re-keying procedure.
+
+
+Parameters:
+
+
+rtspsrc
+–
+
+
+a rtspsrc
+
+
+
+id
+–
+
+
+The id of the stream
+
+
+
+udata
+–
+
+No description available
+
+
+
+
+Flags:
+Run Last
+
+
+
+Since			: 1.26
+		
+
+
+
+Action Signals
+
+
+
+get-parameter
+
+
+g_signal_emit_by_name (rtspsrc, "get-parameter", parameter, arg1, arg2, &ret);
+
+ret = rtspsrc.emit ("get-parameter", parameter, arg1, arg2)
+
+let ret = rtspsrc.emit ("get-parameter", parameter, arg1, arg2);
+
+Handle the GET_PARAMETER signal.
+
+
+Parameters:
+
+
+rtspsrc
+(GstElement *)
+–
+
+
+a rtspsrc
+
+
+
+parameter
+(gchararray)
+–
+
+
+a pointer to GstPromise
+
+
+
+arg1
+(gchararray)
+–
+
+No description available
+
+
+
+arg2
+(GstPromise *)
+–
+
+No description available
+
+
+
+
+
+Returns
+(gboolean)
+–
+			
+
+TRUE when the command could be issued, FALSE otherwise
+
+
+
+
+Flags:
+Run Last
+			
+				/		
+				Action
+
+
+
+
+
+
+get-parameters
+
+
+g_signal_emit_by_name (rtspsrc, "get-parameters", parameter, arg1, arg2, &ret);
+
+ret = rtspsrc.emit ("get-parameters", parameter, arg1, arg2)
+
+let ret = rtspsrc.emit ("get-parameters", parameter, arg1, arg2);
+
+Handle the GET_PARAMETERS signal.
+
+
+Parameters:
+
+
+rtspsrc
+(GstElement *)
+–
+
+
+a rtspsrc
+
+
+
+parameter
+(GStrv *)
+–
+
+
+a pointer to GstPromise
+
+
+
+arg1
+(gchararray)
+–
+
+No description available
+
+
+
+arg2
+(GstPromise *)
+–
+
+No description available
+
+
+
+
+
+Returns
+(gboolean)
+–
+			
+
+TRUE when the command could be issued, FALSE otherwise
+
+
+
+
+Flags:
+Run Last
+			
+				/		
+				Action
+
+
+
+
+
+
+invalidate-key
+
+
+g_signal_emit_by_name (rtspsrc, "invalidate-key", parameter, &ret);
+
+ret = rtspsrc.emit ("invalidate-key", parameter)
+
+let ret = rtspsrc.emit ("invalidate-key", parameter);
+
+Invalidates the key for a specific stream.
+
+When the 'client-managed-mikey' mode is enabled, this can be used
+after informing the server of the new crypto params (see signal
+'set-mikey-parameter') to invalidate previous keys and force srtpdec
+to request new keys. When accepting the new keys the existing ROC
+value of the stream will be preserved.
+
+
+Parameters:
+
+
+rtspsrc
+(GstElement *)
+–
+
+
+a rtspsrc
+
+
+
+parameter
+(guint)
+–
+
+
+the id of the stream for which to invalidate the key.
+
+
+
+
+
+Returns
+(gboolean)
+–
+			
+
+TRUE when the command could be issued, FALSE otherwise
+
+
+
+
+Flags:
+Run Last
+			
+				/		
+				Action
+
+
+
+Since			: 1.30
+		
+
+
+
+
+
+push-backchannel-buffer
+
+
+g_signal_emit_by_name (rtspsrc, "push-backchannel-buffer", id, sample, &ret);
+
+ret = rtspsrc.emit ("push-backchannel-buffer", id, sample)
+
+let ret = rtspsrc.emit ("push-backchannel-buffer", id, sample);
+
+
+Parameters:
+
+
+rtspsrc
+(GstElement *)
+–
+
+
+a rtspsrc
+
+
+
+id
+(guint)
+–
+
+
+stream ID where the sample should be sent
+
+
+
+sample
+(GstSample *)
+–
+
+
+RTP sample to send back
+
+
+
+
+
+Returns
+(GstFlowReturn *)
+–
+			
+No description available
+
+
+
+
+Flags:
+Run Last
+			
+				/		
+				Action
+
+
+
+deprecated			: 
+
+1.22: Use action signal GstRTSPSrc::push-backchannel-sample instead.
+IMPORTANT: Please note that this signal decrements the reference count
+of sample internally! So it cannot be used from other
+language bindings in general.
+
+
+
+
+
+push-backchannel-sample
+
+
+g_signal_emit_by_name (rtspsrc, "push-backchannel-sample", id, sample, &ret);
+
+ret = rtspsrc.emit ("push-backchannel-sample", id, sample)
+
+let ret = rtspsrc.emit ("push-backchannel-sample", id, sample);
+
+
+Parameters:
+
+
+rtspsrc
+(GstElement *)
+–
+
+
+a rtspsrc
+
+
+
+id
+(guint)
+–
+
+
+stream ID where the sample should be sent
+
+
+
+sample
+(GstSample *)
+–
+
+
+RTP sample to send back
+
+
+
+
+
+Returns
+(GstFlowReturn *)
+–
+			
+No description available
+
+
+
+
+Flags:
+Run Last
+			
+				/		
+				Action
+
+
+
+Since			: 1.22
+		
+
+
+
+
+
+remove-key
+
+
+g_signal_emit_by_name (rtspsrc, "remove-key", parameter, &ret);
+
+ret = rtspsrc.emit ("remove-key", parameter)
+
+let ret = rtspsrc.emit ("remove-key", parameter);
+
+Removes the key for a specific stream.
+
+When the 'client-managed-mikey' mode is enabled, this can be used
+after informing the server of the new crypto params (see signal
+'set-mikey-parameter') to remove previous keys and force srtpdec
+to request new keys.
+
+
+Parameters:
+
+
+rtspsrc
+(GstElement *)
+–
+
+
+a rtspsrc
+
+
+
+parameter
+(guint)
+–
+
+
+the id of the stream for which to remove the key.
+
+
+
+
+
+Returns
+(gboolean)
+–
+			
+
+TRUE when the command could be issued, FALSE otherwise
+
+
+
+
+Flags:
+Run Last
+			
+				/		
+				Action
+
+
+
+Since			: 1.26
+		
+
+
+
+
+
+set-mikey-parameter
+
+
+g_signal_emit_by_name (rtspsrc, "set-mikey-parameter", parameter, arg1, arg2, &ret);
+
+ret = rtspsrc.emit ("set-mikey-parameter", parameter, arg1, arg2)
+
+let ret = rtspsrc.emit ("set-mikey-parameter", parameter, arg1, arg2);
+
+Sends a SET_PARAMETER to the server with a MIKEY payload.
+
+This will call SET_PARAMETER with parameter 'KeyMgmt' and a MIKEY
+payload formed from the provided stream's ssrc and MIKEY caps.
+
+The GstPromise reply consists in the following fields:
+
+
+'rtsp-result': set to 0 if the HTTP request could be processed.
+
+'rtsp-code': the HTTP status code returned by the server.
+
+'rtsp-reason': a human-readable version of the HTTP status code.
+
+
+
+Parameters:
+
+
+rtspsrc
+(GstElement *)
+–
+
+
+a rtspsrc
+
+
+
+parameter
+(guint)
+–
+
+
+a pointer to GstPromise
+
+
+
+arg1
+(GstCaps *)
+–
+
+No description available
+
+
+
+arg2
+(GstPromise *)
+–
+
+No description available
+
+
+
+
+
+Returns
+(gboolean)
+–
+			
+
+TRUE when the command could be issued, FALSE otherwise
+
+
+
+
+Flags:
+Run Last
+			
+				/		
+				Action
+
+
+
+Since			: 1.26
+		
+
+
+
+
+
+set-parameter
+
+
+g_signal_emit_by_name (rtspsrc, "set-parameter", parameter, arg1, arg2, arg3, &ret);
+
+ret = rtspsrc.emit ("set-parameter", parameter, arg1, arg2, arg3)
+
+let ret = rtspsrc.emit ("set-parameter", parameter, arg1, arg2, arg3);
+
+Handle the SET_PARAMETER signal.
+
+The GstPromise reply consists in the following fields:
+
+
+'rtsp-result': set to 0 if the HTTP request could be processed.
+
+'rtsp-code': the HTTP status code returned by the server.
+
+'rtsp-reason': a human-readable version of the HTTP status code.
+
+
+
+Parameters:
+
+
+rtspsrc
+(GstElement *)
+–
+
+
+a rtspsrc
+
+
+
+parameter
+(gchararray)
+–
+
+
+a pointer to GstPromise
+
+
+
+arg1
+(gchararray)
+–
+
+No description available
+
+
+
+arg2
+(gchararray)
+–
+
+No description available
+
+
+
+arg3
+(GstPromise *)
+–
+
+No description available
+
+
+
+
+
+Returns
+(gboolean)
+–
+			
+
+TRUE when the command could be issued, FALSE otherwise
+
+
+
+
+Flags:
+Run Last
+			
+				/		
+				Action
+
+
+
+
+Properties
+
+
+
+add-reference-timestamp-meta
+
+
+“add-reference-timestamp-meta” gboolean
+
+
+When syncing to a RFC7273 clock, add GstReferenceTimestampMeta
+to buffers with the original reconstructed reference clock timestamp.
+
+
+	Flags :	
+	
+		
+				Read
+			
+				/		
+				Write
+			
+
+
+
+	Default value :	false
+
+
+
+Since			: 1.22
+		
+
+
+
+
+
+backchannel
+
+
+“backchannel” Rtspbackchannel *
+
+
+Select a type of backchannel to setup with the RTSP server.
+Default value is "none". Allowed values are "none" and "onvif".
+
+
+	Flags :	
+	
+		
+				Read
+			
+				/		
+				Write
+			
+
+
+
+	Default value :	none (0)
+
+
+
+Since			: 1.14
+		
+
+
+
+
+
+backchannel-http-method
+
+
+“backchannel-http-method” GstRTSPBackchannelHttpMethod *
+
+
+Select how backchannel data is sent in HTTP tunnel mode.
+
+In HTTP tunnel mode, "post" sends backchannel interleaved RTP data
+base64-encoded via the POST connection as per the RTSP over HTTP
+specification. "get" sends it as raw binary on the GET connection,
+which is required for compatibility with some servers that only parse
+RTSP text commands from POST and cannot process interleaved RTP there.
+
+If the server closes the connection after backchannel data is sent,
+automatically reconnects using the other method.
+
+ONVIF Streaming Specification Section 5.1.1.5 requires POST data to
+be base64-encoded, but does not specify which connection should carry
+backchannel data in HTTP tunnel mode (Section 5.3).
+
+This property has no effect when not using HTTP tunneling.
+
+
+	Flags :	
+	
+		
+				Read
+			
+				/		
+				Write
+			
+
+
+
+	Default value :	post (0)
+
+
+
+Since			: 1.30
+		
+
+
+
+
+
+buffer-mode
+
+
+“buffer-mode” Rtspsrc-buffer-mode *
+
+
+Control the buffering and timestamping mode used by the jitterbuffer.
+
+
+	Flags :	
+	
+		
+				Read
+			
+				/		
+				Write
+			
+
+
+
+	Default value :	auto (3)
+
+
+
+
+
+
+client-managed-mikey
+
+
+“client-managed-mikey” gboolean
+
+
+Some servers (e.g. Axis Cameras) advertise a key-mgmt:mikey attribute in
+the SDP from the reply to DESCRIBE, but expect the client to provide the
+key for both the client (SRTCP/RR) and the server (SRTP/SRTCP SR).
+
+When this mode is enabled, for each eligible media, the server crypto
+policy is discarded. The crypto policy for this media is built from the
+key returned by the signals  'request-rtp-key' & 'request-rtcp-key'.
+
+A media is eligible for this mode if:
+
+
+No session level MIKEY key-mgmt are defined and the media level key-mgmt
+is MIKEY.
+
+A session level MIKEY key-mgmt is defined and no media level key-mgmts
+are defined.
+
+A session level MIKEY key-mgmt is defined and the media level key-mgmt is
+also MIKEY.
+
+
+
+	Flags :	
+	
+		
+				Read
+			
+				/		
+				Write
+			
+
+
+
+	Default value :	false
+
+
+
+Since			: 1.26
+		
+
+
+
+
+
+connection-speed
+
+
+“connection-speed” guint64
+
+
+Network connection speed in kbps (0 = unknown)
+
+
+	Flags :	
+	
+		
+				Read
+			
+				/		
+				Write
+			
+
+
+
+	Default value :	0
+
+
+
+
+
+
+debug
+
+
+“debug” gboolean
+
+
+Dump request and response messages to stdout(DEPRECATED: Printed all RTSP message to gstreamer log as 'log' level)
+
+
+	Flags :	
+	
+		
+				Read
+			
+				/		
+				Write
+			
+
+
+
+	Default value :	false
+
+
+
+
+
+
+default-rtsp-version
+
+
+“default-rtsp-version” GstRTSPVersion *
+
+
+The preferred RTSP version to use while negotiating the version with the server.
+
+
+	Flags :	
+	
+		
+				Read
+			
+				/		
+				Write
+			
+
+
+
+	Default value :	1-0 (16)
+
+
+
+Since			: 1.14
+		
+
+
+
+
+
+do-retransmission
+
+
+“do-retransmission” gboolean
+
+
+Ask the server to retransmit lost packets
+
+
+	Flags :	
+	
+		
+				Read
+			
+				/		
+				Write
+			
+
+
+
+	Default value :	true
+
+
+
+
+
+
+do-rtcp
+
+
+“do-rtcp” gboolean
+
+
+Enable RTCP support. Some old server don't like RTCP and then this property
+needs to be set to FALSE.
+
+
+	Flags :	
+	
+		
+				Read
+			
+				/		
+				Write
+			
+
+
+
+	Default value :	true
+
+
+
+
+
+
+do-rtsp-keep-alive
+
+
+“do-rtsp-keep-alive” gboolean
+
+
+Enable RTSP keep alive support. Some old server don't like RTSP
+keep alive and then this property needs to be set to FALSE.
+
+
+	Flags :	
+	
+		
+				Read
+			
+				/		
+				Write
+			
+
+
+
+	Default value :	true
+
+
+
+
+
+
+drop-on-latency
+
+
+“drop-on-latency” gboolean
+
+
+Tells the jitterbuffer to never exceed the given latency in size
+
+
+	Flags :	
+	
+		
+				Read
+			
+				/		
+				Write
+			
+
+
+
+	Default value :	false
+
+
+
+
+
+
+extra-http-request-headers
+
+
+“extra-http-request-headers” GstStructure *
+
+
+When in tunneled mode append provided headers to any HTTP requests
+made by rtspsrc.
+
+Only applicable for RTSP over HTTP.
+
+
+	Flags :	
+	
+		
+				Read
+			
+				/		
+				Write
+			
+
+
+
+	Default value :	
+extra-http-request-headers;
+
+
+Since			: 1.24
+		
+
+
+
+
+
+force-non-compliant-url
+
+
+“force-non-compliant-url” gboolean
+
+
+There are various non-compliant servers that don't require control URLs
+that are not resolved correctly but instead are just appended.
+
+As some of these servers will nevertheless reply OK to SETUP requests
+even if they didn't handle URIs correctly, this property can be set to
+revert to the old non-compliant method for constructing URLs.
+
+
+	Flags :	
+	
+		
+				Read
+			
+				/		
+				Write
+			
+
+
+
+	Default value :	false
+
+
+
+Since			: 1.24.7
+		
+
+
+
+
+
+ignore-x-server-reply
+
+
+“ignore-x-server-reply” gboolean
+
+
+When connecting to an RTSP server in tunneled mode (HTTP) the server
+usually replies with an x-server-ip-address header. This contains the
+address of the intended streaming server. However some servers return an
+"invalid" address. Here follows two examples when it might happen.
+
+
+
+
+A server uses Apache combined with a separate RTSP process to handle
+HTTPS requests on port 443. In this case Apache handles TLS and
+connects to the local RTSP server, which results in a local
+address 127.0.0.1 or ::1 in the header reply. This address is
+returned to the actual RTSP client in the header. The client will
+receive this address and try to connect to it and fail.
+
+
+
+
+The client uses an IPv6 link local address with a specified scope id
+fe80::aaaa:bbbb:cccc:dddd%eth0 and connects via HTTP on port 80.
+The RTSP server receives the connection and returns the address
+in the x-server-ip-address header. The client will receive this
+address and try to connect to it "as is" without the scope id and
+fail.
+
+
+
+In the case of streaming data from RTSP servers like 1 and 2, it's
+useful to have the option to simply ignore the x-server-ip-address
+header reply and continue using the original address.
+
+
+	Flags :	
+	
+		
+				Read
+			
+				/		
+				Write
+			
+
+
+
+	Default value :	false
+
+
+
+Since			: 1.20
+		
+
+
+
+
+
+is-live
+
+
+“is-live” gboolean
+
+
+Whether to act as a live source. This is useful in combination with
+onvif-rate-control set to FALSE and usage of the TCP
+protocol. In that situation, data delivery rate can be entirely
+controlled from the client side, enabling features such as frame
+stepping and instantaneous rate changes.
+
+
+	Flags :	
+	
+		
+				Read
+			
+				/		
+				Write
+			
+
+
+
+	Default value :	true
+
+
+
+Since			: 1.18
+		
+
+
+
+
+
+latency
+
+
+“latency” guint
+
+
+Amount of ms to buffer
+
+
+	Flags :	
+	
+		
+				Read
+			
+				/		
+				Write
+			
+
+
+
+	Default value :	2000
+
+
+
+
+
+
+location
+
+
+“location” gchararray
+
+
+Location of the RTSP url to read
+
+
+	Flags :	
+	
+		
+				Read
+			
+				/		
+				Write
+			
+
+
+
+	Default value :	NULL
+
+
+
+
+
+
+max-rtcp-rtp-time-diff
+
+
+“max-rtcp-rtp-time-diff” gint
+
+
+Maximum amount of time in ms that the RTP time in RTCP SRs is allowed to be ahead (-1 disabled)
+
+
+	Flags :	
+	
+		
+				Read
+			
+				/		
+				Write
+			
+
+
+
+	Default value :	-1
+
+
+
+
+
+
+max-ts-offset
+
+
+“max-ts-offset” gint64
+
+
+Used to set an upper limit of how large a time offset may be. This
+is used to protect against unrealistic values as a result of either
+client,server or clock issues.
+
+
+	Flags :	
+	
+		
+				Read
+			
+				/		
+				Write
+			
+
+
+
+	Default value :	3000000000
+
+
+
+
+
+
+max-ts-offset-adjustment
+
+
+“max-ts-offset-adjustment” guint64
+
+
+Syncing time stamps to NTP time adds a time offset. This parameter
+specifies the maximum number of nanoseconds per frame that this time offset
+may be adjusted with. This is used to avoid sudden large changes to time
+stamps.
+
+
+	Flags :	
+	
+		
+				Read
+			
+				/		
+				Write
+			
+
+
+
+	Default value :	0
+
+
+
+
+
+
+multicast-iface
+
+
+“multicast-iface” gchararray
+
+
+The network interface on which to join the multicast group
+
+
+	Flags :	
+	
+		
+				Read
+			
+				/		
+				Write
+			
+
+
+
+	Default value :	NULL
+
+
+
+
+
+
+nat-method
+
+
+“nat-method” Rtspnat-method *
+
+
+Method to use for traversing firewalls and NAT
+
+
+	Flags :	
+	
+		
+				Read
+			
+				/		
+				Write
+			
+
+
+
+	Default value :	dummy (1)
+
+
+
+
+
+
+ntp-sync
+
+
+“ntp-sync” gboolean
+
+
+Synchronize received streams to the NTP clock
+
+
+	Flags :	
+	
+		
+				Read
+			
+				/		
+				Write
+			
+
+
+
+	Default value :	false
+
+
+
+
+
+
+ntp-time-source
+
+
+“ntp-time-source” Rtspsrc-ntp-time-source *
+
+
+NTP time source for RTCP packets
+
+
+	Flags :	
+	
+		
+				Read
+			
+				/		
+				Write
+			
+
+
+
+	Default value :	ntp (0)
+
+
+
+
+
+
+onvif-mode
+
+
+“onvif-mode” gboolean
+
+
+Act as an ONVIF client. When set to TRUE:
+
+
+
+
+seeks will be interpreted as nanoseconds since prime epoch (1900-01-01)
+
+
+
+
+onvif-rate-control can be used to request that the server sends
+data as fast as it can
+
+
+
+
+TCP is picked as the transport protocol
+
+
+
+
+Trickmode flags in seek events are transformed into the appropriate ONVIF
+request headers
+
+
+
+
+	Flags :	
+	
+		
+				Read
+			
+				/		
+				Write
+			
+
+
+
+	Default value :	false
+
+
+
+Since			: 1.18
+		
+
+
+
+
+
+onvif-rate-control
+
+
+“onvif-rate-control” gboolean
+
+
+When in onvif-mode, whether to set Rate-Control to yes or no. When set
+to FALSE, the server will deliver data as fast as the client can consume
+it.
+
+
+	Flags :	
+	
+		
+				Read
+			
+				/		
+				Write
+			
+
+
+
+	Default value :	true
+
+
+
+Since			: 1.18
+		
+
+
+
+
+
+port-range
+
+
+“port-range” gchararray
+
+
+Configure the client port numbers that can be used to receive RTP and
+RTCP.
+
+
+	Flags :	
+	
+		
+				Read
+			
+				/		
+				Write
+			
+
+
+
+	Default value :	NULL
+
+
+
+
+
+
+probation
+
+
+“probation” guint
+
+
+Consecutive packet sequence numbers to accept the source
+
+
+	Flags :	
+	
+		
+				Read
+			
+				/		
+				Write
+			
+
+
+
+	Default value :	2
+
+
+
+
+
+
+protocols
+
+
+“protocols” GstRTSPLowerTrans *
+
+
+Allowed lower transport protocols
+
+
+	Flags :	
+	
+		
+				Read
+			
+				/		
+				Write
+			
+
+
+
+	Default value :	tcp+udp-mcast+udp
+
+
+
+
+
+
+proxy
+
+
+“proxy” gchararray
+
+
+Set the proxy parameters. This has to be a string of the format
+[http://][user:passwd@]host[:port].
+
+
+	Flags :	
+	
+		
+				Read
+			
+				/		
+				Write
+			
+
+
+
+	Default value :	NULL
+
+
+
+
+
+
+proxy-id
+
+
+“proxy-id” gchararray
+
+
+Sets the proxy URI user id for authentication. If the URI set via the
+"proxy" property contains a user-id already, that will take precedence.
+
+
+	Flags :	
+	
+		
+				Read
+			
+				/		
+				Write
+			
+
+
+
+	Default value :	NULL
+
+
+
+Since			: 1.2
+		
+
+
+
+
+
+proxy-pw
+
+
+“proxy-pw” gchararray
+
+
+Sets the proxy URI password for authentication. If the URI set via the
+"proxy" property contains a password already, that will take precedence.
+
+
+	Flags :	
+	
+		
+				Read
+			
+				/		
+				Write
+			
+
+
+
+	Default value :	NULL
+
+
+
+Since			: 1.2
+		
+
+
+
+
+
+retry
+
+
+“retry” guint
+
+
+Max number of retries when allocating RTP ports.
+
+
+	Flags :	
+	
+		
+				Read
+			
+				/		
+				Write
+			
+
+
+
+	Default value :	20
+
+
+
+
+
+
+rfc7273-sync
+
+
+“rfc7273-sync” gboolean
+
+
+Synchronize received streams to the RFC7273 clock (requires clock and offset to be provided)
+
+
+	Flags :	
+	
+		
+				Read
+			
+				/		
+				Write
+			
+
+
+
+	Default value :	false
+
+
+
+
+
+
+rtp-blocksize
+
+
+“rtp-blocksize” guint
+
+
+RTP package size to suggest to server.
+
+
+	Flags :	
+	
+		
+				Read
+			
+				/		
+				Write
+			
+
+
+
+	Default value :	0
+
+
+
+
+
+
+sdes
+
+
+“sdes” GstStructure *
+
+
+The SDES items of this session
+
+
+	Flags :	
+	
+		
+				Read
+			
+				/		
+				Write
+			
+
+
+
+
+
+
+short-header
+
+
+“short-header” gboolean
+
+
+Only send the basic RTSP headers for broken encoders.
+
+
+	Flags :	
+	
+		
+				Read
+			
+				/		
+				Write
+			
+
+
+
+	Default value :	false
+
+
+
+
+
+
+tcp-timeout
+
+
+“tcp-timeout” guint64
+
+
+Fail after timeout microseconds on TCP connections (0 = disabled)
+
+
+	Flags :	
+	
+		
+				Read
+			
+				/		
+				Write
+			
+
+
+
+	Default value :	20000000
+
+
+
+
+
+
+tcp-timestamp
+
+
+“tcp-timestamp” gboolean
+
+
+Timestamp all buffers with their receive time when receiving RTP packets
+over TCP or HTTP.
+
+When dealing with TCP based connections, setting timestamps for every
+packet is not done by default because a server typically bursts data, for
+which we don't want to compensate by speeding up the media. The other
+timestamps will be interpollated from this one using the RTP timestamps.
+
+This has the side effect that no drift compensation between the server
+and client is done, and over time the RTP timestamps will drift against
+the client's clock. This can lead to buffers (and observed end-to-end
+latency) to grow over time, or all packets arriving too late once a
+threshold is reached.
+
+Enabling this property will timestamp all RTP packets with their receive
+times, which gets around the drift problem but can cause other problems
+if the server is sending data not smoothly in real-time.
+
+Only applicable for RTSP over TCP or HTTP.
+
+
+	Flags :	
+	
+		
+				Read
+			
+				/		
+				Write
+			
+
+
+
+	Default value :	false
+
+
+
+Since			: 1.24.10
+		
+
+
+
+
+
+teardown-timeout
+
+
+“teardown-timeout” guint64
+
+
+When transitioning PAUSED-READY, allow up to timeout (in nanoseconds)
+delay in order to send teardown (0 = disabled)
+
+
+	Flags :	
+	
+		
+				Read
+			
+				/		
+				Write
+			
+
+
+
+	Default value :	100000000
+
+
+
+Since			: 1.14
+		
+
+
+
+
+
+timeout
+
+
+“timeout” guint64
+
+
+Retry TCP transport after UDP timeout microseconds (0 = disabled)
+
+
+	Flags :	
+	
+		
+				Read
+			
+				/		
+				Write
+			
+
+
+
+	Default value :	5000000
+
+
+
+
+
+
+tls-client-certificate
+
+
+“tls-client-certificate” gchararray
+
+
+Path to a PEM-encoded TLS client certificate file. When set together
+with tls-client-key, the certificate is presented
+during the TLS handshake for mutual authentication (mTLS).
+
+These file-based properties are a convenience alternative to setting
+the tls-interaction property from application code and
+can be used from gst-launch-1.0.
+
+If tls-interaction is also set it takes precedence.
+
+
+	Flags :	
+	
+		
+				Read
+			
+				/		
+				Write
+			
+
+
+
+	Default value :	NULL
+
+
+
+Since			: 1.30
+		
+
+
+
+
+
+tls-client-key
+
+
+“tls-client-key” gchararray
+
+
+Path to a PEM-encoded private key file corresponding to
+tls-client-certificate.
+
+
+	Flags :	
+	
+		
+				Read
+			
+				/		
+				Write
+			
+
+
+
+	Default value :	NULL
+
+
+
+Since			: 1.30
+		
+
+
+
+
+
+tls-database
+
+
+“tls-database” GTlsDatabase *
+
+
+TLS database with anchor certificate authorities used to validate the server certificate
+
+
+	Flags :	
+	
+		
+				Read
+			
+				/		
+				Write
+			
+
+
+
+
+
+
+tls-interaction
+
+
+“tls-interaction” GTlsInteraction *
+
+
+A GTlsInteraction object to prompt the user for password or certificate
+
+
+	Flags :	
+	
+		
+				Read
+			
+				/		
+				Write
+			
+
+
+
+
+
+
+tls-validation-flags
+
+
+“tls-validation-flags” GTlsCertificateFlags *
+
+
+TLS certificate validation flags used to validate the server certificate
+
+
+	Flags :	
+	
+		
+				Read
+			
+				/		
+				Write
+			
+
+
+
+	Default value :	validate-all
+
+
+
+
+
+
+udp-buffer-size
+
+
+“udp-buffer-size” gint
+
+
+Size of the kernel UDP receive buffer in bytes.
+
+
+	Flags :	
+	
+		
+				Read
+			
+				/		
+				Write
+			
+
+
+
+	Default value :	524288
+
+
+
+
+
+
+udp-reconnect
+
+
+“udp-reconnect” gboolean
+
+
+Reconnect to the server if RTSP connection is closed when doing UDP
+
+
+	Flags :	
+	
+		
+				Read
+			
+				/		
+				Write
+			
+
+
+
+	Default value :	true
+
+
+
+
+
+
+use-pipeline-clock
+
+
+“use-pipeline-clock” gboolean
+
+
+Use the pipeline running-time to set the NTP time in the RTCP SR messages(DEPRECATED: Use ntp-time-source property)
+
+
+	Flags :	
+	
+		
+				Read
+			
+				/		
+				Write
+			
+
+
+
+	Default value :	false
+
+
+
+
+
+
+user-agent
+
+
+“user-agent” gchararray
+
+
+The User-Agent string to send to the server
+
+
+	Flags :	
+	
+		
+				Read
+			
+				/		
+				Write
+			
+
+
+
+	Default value :	GStreamer/{VERSION}
+
+
+
+
+
+
+user-id
+
+
+“user-id” gchararray
+
+
+RTSP location URI user id for authentication
+
+
+	Flags :	
+	
+		
+				Read
+			
+				/		
+				Write
+			
+
+
+
+	Default value :	NULL
+
+
+
+
+
+
+user-pw
+
+
+“user-pw” gchararray
+
+
+RTSP location URI user password for authentication
+
+
+	Flags :	
+	
+		
+				Read
+			
+				/		
+				Write
+			
+
+
+
+	Default value :	NULL
+
+
+
+
+Named constants
+
+
+
+Rtspbackchannel
+
+
+
+Members
+
+none (0) – No backchannel
+        
+
+onvif (1) – ONVIF audio backchannel
+        
+
+
+
+
+
+
+Rtspnat-method
+
+
+Different methods for trying to traverse firewalls.
+
+
+Members
+
+none (0) – None
+        
+
+dummy (1) – Send Dummy packets
+        
+
+
+
+
+
+
+Rtspsrc-buffer-mode
+
+
+
+Members
+
+none (0) – Only use RTP timestamps
+        
+
+slave (1) – Slave receiver to sender clock
+        
+
+buffer (2) – Do low/high watermark buffering
+        
+
+auto (3) – Choose mode depending on stream live
+        
+
+synced (4) – Synchronized sender and receiver clocks
+        
+
+
+
+
+
+
+Rtspsrc-ntp-time-source
+
+
+
+Members
+
+ntp (0) – NTP time based on realtime clock
+        
+
+unix (1) – UNIX time based on realtime clock
+        
+
+running-time (2) – Running time based on pipeline clock
+        
+
+clock-time (3) – Pipeline clock time
+        
+
+
+
+
+
+
+The results of the search are
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

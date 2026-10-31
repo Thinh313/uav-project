@@ -1,0 +1,2 @@
+import {pathToFileURL} from 'node:url';import {readFile} from 'node:fs/promises';import path from 'node:path';import {verifyBootstrap} from './secure-bootstrap.mjs';
+const c=JSON.parse(await readFile(process.argv[2]));await verifyBootstrap(c.bootstrap.directory,c.bootstrap.descriptorSha256);const {commitUpdate}=await import(pathToFileURL(path.join(c.bootstrap.directory,'services/staged-update.mjs')));await commitUpdate(c.directory,c.expect,{fault:async p=>{if(p===c.point)process.kill(process.pid,'SIGKILL');}});

@@ -1,0 +1,18 @@
+/** Read-only exact immutable history implementation, optionally isolated in one worker. No cache. */
+import fs from'node:fs';import path from'node:path';import{createHash}from'node:crypto';import{Worker,isMainThread,parentPort,workerData}from'node:worker_threads';
+import{reviewHistory,assertWorkspaceOutcomes}from'../beta06g5r1/mode-index.mjs';
+const digest=x=>createHash('sha256').update(JSON.stringify(x)).digest('hex');
+function context(q){return{root:q.root,workspaceRoot:q.workspaceRoot,currentRun:q.currentRun,head:q.head,recordsSha256:digest(q.records)};}
+function exact(q){if(!path.isAbsolute(q.root)||!path.isAbsolute(q.workspaceRoot)||!Array.isArray(q.records)||q.records.length>2048||JSON.stringify(q.records).length>128*2**20||q.head!==(q.records.at(-1)?.hash??'0'.repeat(64)))throw Error('HISTORY_EXACT_RECORDS_ROOT_HEAD_REQUIRED');
+ const c=context(q);assertWorkspaceOutcomes(q.root,q.workspaceRoot,q.records,q.currentRun);return{context:c,history:reviewHistory(q.records,q.root)};
+}
+if(!isMainThread&&workerData?.heartbeatHistoryPrototype===true){parentPort.on('message',({id,q})=>{try{const result=exact(q);if(Buffer.byteLength(JSON.stringify(result))>1*2**20)throw Error('HISTORY_RESULT_QUOTA');parentPort.postMessage({id,result});}catch(e){parentPort.postMessage({id,error:String(e.message)});}});}
+export function createHistoryReader({maxPending=16,maxQueuedBytes=1*2**20}={}){
+ if(!isMainThread||!Number.isInteger(maxPending)||maxPending<1||maxPending>16||!Number.isSafeInteger(maxQueuedBytes)||maxQueuedBytes<1||maxQueuedBytes>1*2**20)throw Error('BOUNDED_HISTORY_READER');
+ let next=0,closed=false,fatal=null,active=null,queuedBytes=0,terminationCode=null;const queue=[],w=new Worker(new URL(import.meta.url),{workerData:{heartbeatHistoryPrototype:true}});
+ function poison(e){fatal??=String(e.message??e);if(active){active.reject(Error('HISTORY_WORKER_FAILED:'+fatal));queuedBytes-=active.bytes;active=null;}for(const t of queue.splice(0)){queuedBytes-=t.bytes;t.reject(Error('HISTORY_WORKER_FAILED:'+fatal));}}
+ function finish(message){if(closed)return;if(!active||message.id!==active.id){poison(Error('HISTORY_RESPONSE_CONTEXT'));return;}const t=active;active=null;queuedBytes-=t.bytes;try{if(message.error)throw Error(message.error);if(JSON.stringify(message.result.context)!==JSON.stringify(t.context))throw Error('HISTORY_WORKER_CONTEXT_MISMATCH');if(!t.isCurrent(t.context))throw Error('HISTORY_CONTEXT_SUPERSEDED');t.resolve(message.result.history);}catch(e){t.reject(e);}pump();}
+ function pump(){if(active||!queue.length||closed||fatal)return;active=queue.shift();w.postMessage({id:active.id,q:active.q});}
+ if(w){w.on('message',finish);w.on('error',poison);w.on('exit',code=>{if(Number.isInteger(code))terminationCode=code;if(!closed)poison(Error('WORKER_EXIT:'+code));});}
+ return{verify(q,{isCurrent=()=>false}={}){if(closed||fatal)return Promise.reject(Error('HISTORY_READER_CLOSED_OR_FAILED'));const c=context(q),bytes=Buffer.byteLength(JSON.stringify(q));if(queue.length+(active?1:0)>=maxPending||queuedBytes+bytes>maxQueuedBytes)return Promise.reject(Error('HISTORY_QUEUE_QUOTA'));return new Promise((resolve,reject)=>{queuedBytes+=bytes;queue.push({id:++next,q,context:c,bytes,isCurrent,resolve,reject});pump();});},async close(){if(closed)return terminationCode;closed=true;if(!fatal){const e=Error('HISTORY_READ_CANCELLED_CLOSED');if(active){active.reject(e);queuedBytes-=active.bytes;active=null;}for(const t of queue.splice(0)){queuedBytes-=t.bytes;t.reject(e);}}if(w){const code=await w.terminate();if(Number.isInteger(code))terminationCode=code;}return terminationCode;},diagnostics:()=>({pending:queue.length+(active?1:0),queuedBytes,closed,fatal,maxPending,maxQueuedBytes,terminationCode})};
+}

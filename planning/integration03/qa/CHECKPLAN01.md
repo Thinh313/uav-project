@@ -1,0 +1,35 @@
+# INTEGRATION03 independent QA checkplan
+
+Separate AI QA, not human/customer review. Frozen corpus is QA-authored before new production freeze. Exact numeric values and sequence remain undisclosed to Builder until source freeze. The checker selftest tests the checker, not the product.
+
+## Frozen inputs and mapping boundary
+
+`evidence/integration03-qa/heldout-corpus01.json` contains eight groups: H01 KML polygon/optics, H02 bent corridor, H03 typed QGC/camera/Home semantics, H04 unsupported QGC semantics, H05 aged/type/stale/over-span preflight, H06 native-pose/identity/age observer, H07 consent/post-WAL/ACK/boot scope safety, H08 wrong export-context/restart safety. GeographicLib WGS84 is the pinned independent geometry reference; optics is independently calculated from focal length, sensor dimensions, image dimensions, overlap and speed. Small AOI planar/ellipsoid approximation tolerances are explicit. Physical calibration/terrain/quality are not inferred.
+
+Before executing actual source, a new QA-only adapter will map production APIs to normalized observations. Mapping must disclose exact source functions, units, policy classifications, source SHA and fixtures. It may normalize representation and aliases, not change frozen expected values, timestamps, order, bounds or refusal semantics. Unknown is not zero. A refused positive is not silently remapped to a successful compile. New mapping versions retain earlier failure outputs. Exact raw source is retained separately from normalized compiled semantics.
+
+`check_offline01.py` verifies all required executed case IDs, typed fields and independent numeric tolerances. It requires matching source-freeze file pins, corpus SHA, adapter SHA and production-API execution provenance. An offline PASS never certifies actual mission, authentication, UI, SAF or restart. Actual methods and raw decoders remain mandatory.
+
+## TIP clarification recorded before implementation acceptance
+
+Root clarification: QGC simple survey is executable SimpleItems in a distinct QGC source, not regeneration of editable ComplexItems. ComplexItems, nonempty fence/rally and unknown executable metadata remain review-only or operationally refused with original bytes retained.
+
+Root observer engineering gate: foreground1280×800, pinned Visual56 high tier/GLB/HDR/shadows,30s sustained actual browser RAF p95≤33.4ms/p99≤100ms. Same run/plan/source and no zero fabricated pose. Native-source age≤1000ms nominal; stale badge at>1000; hide/pause flight presentation at>2000ms or retain only explicitly stale last pose. No indefinite extrapolation. These are CPU/RAF engineering thresholds, not GPU completion, calibrated acoustics or commercial/human certification. Synthetic estimated rotor audio is opt-in and has no physical SPL claim.
+
+## Actual acceptance matrix and independent tools
+
+1. I01: fixed history/workload baseline and repair stage trace; three actual successive fresh cohorts including one owned load. Native receipt/WAL/queue and JS consumer clocks need qualified brackets. Deliberate >3000ms, stale and wrong-type inputs still fail before AUTO. Full history, raw and fsync barrier stay intact. A getter benchmark alone cannot close I01.
+2. I02: H01–H04 actual pure APIs plus independent numeric/semantic oracle. QGC raw source, null/reserved camera semantics and unsupported data retain distinct source provenance. Home reference changes are differences and block implicit operational adoption.
+3. I03/I04: final nominal Android raw must prove preflight, exact upload and complete readback cycles, fresh explicit preflight, post-arm explicit Home confirmation, AUTO, all NAV, ground/disarm and accepted review bound to exact sealed raw. Require A device1 and B device2 explicit radians/NaN-rate/target wire; A-to-B exact proposal/consent followed by B front capture in that same accepted session. Zoom/focus or later reclaim capture does not substitute. Synthetic observations/ACK do not count as physical images.
+4. I05: actual B process partition with live grant and pending intent, native last-presence→revoke≤3250ms, A continues. Explicit new B boot/JOIN gives0 grants, denies preclaim operation and requires explicit reclaim. Separate actual A foreground-loss while B own heartbeat remains fresh: revoke all, common heartbeat stops, pending UNKNOWN, passive AP failsafe/ground. App UNKNOWN review remains unaccepted despite later independent observer ground. Native/Node/Python clocks are not directly subtracted across domains.
+5. I06/I09: actual browser plus Android interactions/screenshots, source/quality pins, pose/axis/quaternion against independently decoded raw, frame-age tests and expiry. Visual AI review is labeled separately from metric checks and human usability. No observer command route or actor authority.
+6. I07: declared immutable selected-run/receiver/nonce/snapshot before export; screenshot/actual selected text immediately before SAVE. Exact provider=stage ZIP, strict members/SHA/context/canonical raw/review and closed file operation. Wrong-run/receiver/corrupt bytes must reject. Separate external companion receipt binds public native cert/admin policy, crew audit, B-peer chain, source/APK pins and independent crew/mission results. ZIP itself is not self-contained authentication/nonrepudiation proof.
+7. I08/I10: private hashes before/after actual process restart and coldboot, closed raw/workspace/export journals intact, no restored grants/proposals/pending replay/automatic transport generation. Older app private baseline includes CREW02. Source159/dependency/APK and protected host paths are separate from device-private preservation. Point scans do not prove continuous presence. All owned runtime/PIDs/listeners/containers closed.
+
+Prior QA tools are immutable dependencies, not files to modify: P1 receiver04 raw primitives/generated upstream parser, CREW02 crew-raw05 / mission-raw03 and P1 saf-package04. New adapters will pin and extend them under this namespace with explicit workload distribution (nominal vs partition vs pilot-loss); no mandatory proof may be borrowed from a different operator/session by aliasing.
+
+## Resource and stop
+
+User floor20GiB. Phase forecast≤768MiB plus512MiB closure/external margin; guard21GiB is additional disclosed engineering margin. Existing SDK/AVD only, no default26GiB admission. Writes include simultaneous raw/WAL/private/ZIP staging/AVD growth. Check live free before each phase; reserve closure capacity before new work, preserve every failure. Sampled disk readings do not guarantee arbitrary external writers cannot consume space. An arbitrary quiescence cutoff is not the user floor.
+
+No runtime/ADB/build/probe launch by QA. Actual runs and device evidence are Root-owned; QA only receives closed artifacts. No whole-project copy or dependency installation. Full manual training, external-physics1×, collision/sensor-loss safety, Hera load/battery/acoustics calibration, physical PhaseOne/HeraHub, production signing and DJI/Ragas superiority remain outside this milestone and must stay visible as gaps.

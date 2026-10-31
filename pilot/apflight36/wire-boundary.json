@@ -1,0 +1,79 @@
+{
+  "at": "2026-10-14T08:12:33.172531+00:00",
+  "sourcePath": "reference/mavlink/common.xml",
+  "sourceSha256": "4d28a24ec264591318181fb3e275fa56c3fcc748af83cb9e16540ac5af1f8755",
+  "sourceKind": "LOCAL_PINNED_XML_SCHEMA_REFERENCE_ONLY",
+  "enums": {
+    "MAV_FRAME_GLOBAL_INT": "5",
+    "MAV_FRAME_GLOBAL_RELATIVE_ALT_INT": "6",
+    "MAV_CMD_NAV_FENCE_RETURN_POINT": "5000",
+    "MAV_CMD_NAV_FENCE_POLYGON_VERTEX_INCLUSION": "5001",
+    "MAV_CMD_NAV_FENCE_POLYGON_VERTEX_EXCLUSION": "5002",
+    "MAV_CMD_NAV_FENCE_CIRCLE_INCLUSION": "5003",
+    "MAV_CMD_NAV_FENCE_CIRCLE_EXCLUSION": "5004",
+    "MAV_MISSION_TYPE_FENCE": "1"
+  },
+  "messages": {
+    "MISSION_REQUEST_LIST": {
+      "id": "43",
+      "fields": [
+        "target_system",
+        "target_component",
+        "mission_type"
+      ]
+    },
+    "MISSION_COUNT": {
+      "id": "44",
+      "fields": [
+        "target_system",
+        "target_component",
+        "count",
+        "mission_type",
+        "opaque_id"
+      ]
+    },
+    "MISSION_ACK": {
+      "id": "47",
+      "fields": [
+        "target_system",
+        "target_component",
+        "type",
+        "mission_type",
+        "opaque_id"
+      ]
+    },
+    "MISSION_REQUEST_INT": {
+      "id": "51",
+      "fields": [
+        "target_system",
+        "target_component",
+        "seq",
+        "mission_type"
+      ]
+    },
+    "MISSION_ITEM_INT": {
+      "id": "73",
+      "fields": [
+        "target_system",
+        "target_component",
+        "seq",
+        "frame",
+        "command",
+        "current",
+        "autocontinue",
+        "param1",
+        "param2",
+        "param3",
+        "param4",
+        "x",
+        "y",
+        "z",
+        "mission_type"
+      ]
+    }
+  },
+  "mockTokenOnMAVLinkWire": false,
+  "MAVLinkEncoderDecoder": "NOT_IMPLEMENTED_APFLIGHT36",
+  "actualPinnedAPFirmwareCompatibility": "NOT_CHECKED",
+  "operationalAllowed": false
+}

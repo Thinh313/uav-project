@@ -1,0 +1,8 @@
+import {id,digest,fail,exact} from '../archive69/io.mjs';import {envelopeCheck} from './contracts.mjs';
+// Test-double lookup only. No signing/key generation/cryptographic authentication.
+export class MockAuthority {
+ constructor({records=[]}={}){this.mode='MOCK_ONLY';this.productionCapable=false;this.unavailable=false;this.records=new Map();if(!Array.isArray(records)||records.length>2048)fail('CA_FIXTURE_BOUND');for(const r of records){exact(r,['fixtureId','bodySha256','subject','keyId','role','epoch']);if(this.records.has(r.fixtureId)||!/^fixture-[a-f0-9]{32}$/.test(r.fixtureId)||!/^[a-f0-9]{64}$/.test(r.bodySha256)||!['ADMIN','POSSESSION','RECEIVER_READY'].includes(r.role))fail('CA_FIXTURE_SCHEMA');this.records.set(r.fixtureId,structuredClone(r));}}
+ issueFixture(body,{subject,keyId,role,epoch}){if(this.records.size>=2048)fail('CA_FIXTURE_BOUND');const fixtureId=id('fixture');this.records.set(fixtureId,{fixtureId,bodySha256:digest(body),subject,keyId,role,epoch});return {body:structuredClone(body),proof:{scheme:'MOCK_CA74_ORACLE',fixtureId}};}
+ verify(e,{subject,keyId,role,epoch,production=false,historical=false}){if(production||this.mode!=='MOCK_ONLY'||this.productionCapable!==false)fail('NO_PRODUCTION_CA');if(this.unavailable&&!historical)fail('CA_UNAVAILABLE');envelopeCheck(e);const r=this.records.get(e.proof.fixtureId);if(!r||r.bodySha256!==digest(e.body)||r.subject!==subject||r.keyId!==keyId||r.role!==role||r.epoch!==epoch)fail('CA_FIXTURE_MISMATCH');return {assurance:'MOCK_ONLY_NOT_AUTHENTICATED',productionAuthenticated:false};}
+ snapshot(){return {records:[...this.records.values()].map(r=>structuredClone(r))};}
+}

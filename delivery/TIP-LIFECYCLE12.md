@@ -1,0 +1,3 @@
+# TIP-LIFECYCLE12
+
+Implement current owner request: dataset/checkpoint lifecycle, controlled storage/cleanup, evidence protection and export reserve without SDK/device. Eight REQ/AC in docs/LIFECYCLE12-CONTRACT.md. Input: STREAM10/RESUME11 immutable storage and actual closed QGC/SITL record read-only. Outputs: versioned policy/journal, holds/sealing/abandon/released projection, proven-copy cleanup plans with explicit confirmation and crash recovery, capacity/export guards, UI and tests/evidence/SOT/report. All local reversible construction is authorized; actual cleanup verification uses disposable synthetic fixtures only. No deletion in real preview without operator's concrete plan confirmation. Single-agent phases; no independent audit claim.

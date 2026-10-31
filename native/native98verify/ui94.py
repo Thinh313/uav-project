@@ -1,0 +1,27 @@
+"""ADB/UIAutomator limited to owned emulator. Uses APK self-reported hit boxes; no JS/DOM injection."""
+from pathlib import Path
+import sys,json,time
+sys.path.insert(0,str(Path(__file__).parent));from android_qa import *
+def last():
+ before=float(adb('shell','cat','/proc/uptime').split()[0])*1000
+ adb('shell','input','tap',200,128);deadline=time.monotonic()+2.5
+ while time.monotonic()<deadline:
+  time.sleep(.12);current=adb('exec-out','cat','/data/user/0/'+P+'/files/ui96/CURRENT').decode().strip();assert __import__('re').fullmatch('[a-f0-9-]{36}',current);raw=adb('exec-out','cat','/data/user/0/'+P+'/files/ui96/'+current+'.jsonl')
+  if not raw.splitlines():continue
+  receipt=json.loads(raw.splitlines()[-1]);uptime=float(adb('shell','cat','/proc/uptime').split()[0])*1000
+  if receipt['nativeElapsedMs']>=before and 0<=uptime-receipt['nativeElapsedMs']<2000:return receipt['renderer']
+ raise AssertionError('UI_DIAGNOSTIC_NOT_NEW_OR_STALE_USE_FRESH_SCREENSHOT')
+def tap94(id):
+ rows=[x for x in last()['controls']if x['id']==id and not x['covered']and not x['disabled']]
+ assert len(rows)==1,(id,rows)
+ x=rows[0];adb('shell','input','tap',round((x['x']+x['right'])/2),round((x['y']+x['bottom'])/2));time.sleep(.35)
+def swipe94(direction='up'):
+ adb('shell','input','swipe',655,515 if direction=='up'else 350,655,290 if direction=='up'else 600,350);time.sleep(.35)
+def show():print(json.dumps({'status':last().get('sourceStatus'),'controls':[{k:x[k]for k in['id','x','y','disabled','covered']}for x in last()['controls']if x.get('inPanel')]},ensure_ascii=False))
+if __name__=='__main__':
+ owned()
+ if sys.argv[1]=='install':
+  raise AssertionError('USE_INSTALL03_WITH_APK_SHA_VERIFICATION')
+ elif sys.argv[1]=='tap':tap94(sys.argv[2]);show()
+ elif sys.argv[1]=='swipe':swipe94(sys.argv[2]if len(sys.argv)>2 else'up');show()
+ elif sys.argv[1]=='show':show()

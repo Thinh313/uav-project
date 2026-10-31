@@ -1,0 +1,5900 @@
+{
+  "aggregates": {
+    "cells_by_state": {
+      "null": 1129,
+      "sourced": 59
+    },
+    "coverage_pct": null,
+    "n_entities": 18,
+    "rollup": {},
+    "rollup_field": null,
+    "universe_estimate": null
+  },
+  "registry": {
+    "Android Media3 RTSP": {
+      "entity_type": null,
+      "fields": {
+        "abi": {
+          "state": "null",
+          "value": null
+        },
+        "aircraft-battery": {
+          "state": "null",
+          "value": null
+        },
+        "api-endpoints": {
+          "state": "null",
+          "value": null
+        },
+        "api-family": {
+          "state": "null",
+          "value": null
+        },
+        "background-start": {
+          "state": "null",
+          "value": null
+        },
+        "calibration": {
+          "state": "null",
+          "value": null
+        },
+        "camera-upload": {
+          "state": "null",
+          "value": null
+        },
+        "capability-ui": {
+          "state": "null",
+          "value": null
+        },
+        "capture-observation": {
+          "state": "null",
+          "value": null
+        },
+        "channel-feedback": {
+          "state": "null",
+          "value": null
+        },
+        "connection-example": {
+          "state": "null",
+          "value": null
+        },
+        "controller-battery-api": {
+          "state": "null",
+          "value": null
+        },
+        "controller-bsp-update": {
+          "state": "null",
+          "value": null
+        },
+        "cpu-topology": {
+          "state": "null",
+          "value": null
+        },
+        "current-channel-map": {
+          "state": "null",
+          "value": null
+        },
+        "decoder-limit": {
+          "state": "null",
+          "value": null
+        },
+        "device-sdk-url": {
+          "state": "null",
+          "value": null
+        },
+        "flight-authority": {
+          "state": "null",
+          "value": null
+        },
+        "forwarding": {
+          "state": "null",
+          "value": null
+        },
+        "gpu": {
+          "state": "null",
+          "value": null
+        },
+        "h265-depayload": {
+          "state": "null",
+          "value": null
+        },
+        "historical-name": {
+          "state": "null",
+          "value": null
+        },
+        "input-events": {
+          "state": "null",
+          "value": null
+        },
+        "installed-build": {
+          "state": "null",
+          "value": null
+        },
+        "installed-codec-limits": {
+          "state": "null",
+          "value": null
+        },
+        "installed-radio": {
+          "state": "null",
+          "value": null
+        },
+        "joystick-count": {
+          "state": "null",
+          "value": null
+        },
+        "legacy-control-example": {
+          "state": "null",
+          "value": null
+        },
+        "link-statistics": {
+          "state": "null",
+          "value": null
+        },
+        "live-video-codec": {
+          "state": "null",
+          "value": null
+        },
+        "low-latency": {
+          "state": "null",
+          "value": null
+        },
+        "manual-axis": {
+          "state": "null",
+          "value": null
+        },
+        "manual-version": {
+          "state": "null",
+          "value": null
+        },
+        "measured-latency": {
+          "state": "null",
+          "value": null
+        },
+        "mission-ownership": {
+          "state": "null",
+          "value": null
+        },
+        "mission-patterns": {
+          "state": "null",
+          "value": null
+        },
+        "offline-map": {
+          "state": "null",
+          "value": null
+        },
+        "os": {
+          "state": "null",
+          "value": null
+        },
+        "package-update": {
+          "state": "null",
+          "value": null
+        },
+        "packet-dedup": {
+          "state": "null",
+          "value": null
+        },
+        "payload-ota": {
+          "state": "null",
+          "value": null
+        },
+        "payload-ota-guards": {
+          "state": "null",
+          "value": null
+        },
+        "per-link-status": {
+          "state": "null",
+          "value": null
+        },
+        "permission-checks": {
+          "state": "null",
+          "value": null
+        },
+        "platform": {
+          "state": "null",
+          "value": null
+        },
+        "power": {
+          "state": "null",
+          "value": null
+        },
+        "production-signer": {
+          "state": "null",
+          "value": null
+        },
+        "rc-functions": {
+          "state": "null",
+          "value": null
+        },
+        "resume": {
+          "state": "null",
+          "value": null
+        },
+        "rtcm-carrier": {
+          "state": "null",
+          "value": null
+        },
+        "rtk-client": {
+          "state": "null",
+          "value": null
+        },
+        "rtsp-source": {
+          "state": "null",
+          "value": null
+        },
+        "save-upload": {
+          "state": "null",
+          "value": null
+        },
+        "signing": {
+          "state": "null",
+          "value": null
+        },
+        "soc": {
+          "state": "null",
+          "value": null
+        },
+        "storage": {
+          "state": "null",
+          "value": null
+        },
+        "storage-claim": {
+          "state": "null",
+          "value": null
+        },
+        "survey-figures": {
+          "state": "null",
+          "value": null
+        },
+        "survey-grid": {
+          "state": "null",
+          "value": null
+        },
+        "terrain": {
+          "state": "null",
+          "value": null
+        },
+        "terrain-export": {
+          "state": "null",
+          "value": null
+        },
+        "transport": {
+          "claims": [
+            {
+              "capture": {
+                "fetched_at": "2026-10-12T03:47:16.540675+00:00",
+                "origin_id": "android",
+                "sha256": "95a338eb7ec83b8eb565617ead0aedd6176d883e3bdeef1724f4be01d74bcba0",
+                "snapshot": "android-rtsp.html",
+                "source": "android-rtsp",
+                "url": "https://developer.android.com/media/media3/exoplayer/rtsp"
+              },
+              "evidence_span": "multicast is not supported",
+              "extraction": "normalized",
+              "source": "android-rtsp",
+              "tier": "A",
+              "value": "UDP unicast and interleaved TCP; multicast unsupported"
+            }
+          ],
+          "state": "sourced",
+          "value": "UDP unicast and interleaved TCP; multicast unsupported"
+        },
+        "version": {
+          "state": "null",
+          "value": null
+        },
+        "video-codec": {
+          "claims": [
+            {
+              "capture": {
+                "fetched_at": "2026-10-12T03:47:16.540675+00:00",
+                "origin_id": "android",
+                "sha256": "95a338eb7ec83b8eb565617ead0aedd6176d883e3bdeef1724f4be01d74bcba0",
+                "snapshot": "android-rtsp.html",
+                "source": "android-rtsp",
+                "url": "https://developer.android.com/media/media3/exoplayer/rtsp"
+              },
+              "evidence_span": "H264",
+              "extraction": "normalized",
+              "source": "android-rtsp",
+              "tier": "A",
+              "value": "H264 listed; SDP requires SPS/PPS; H265 not listed in this captured support table"
+            }
+          ],
+          "state": "sourced",
+          "value": "H264 listed; SDP requires SPS/PPS; H265 not listed in this captured support table"
+        },
+        "video-count": {
+          "state": "null",
+          "value": null
+        },
+        "vio": {
+          "state": "null",
+          "value": null
+        }
+      }
+    },
+    "Android codec capabilities": {
+      "entity_type": null,
+      "fields": {
+        "abi": {
+          "state": "null",
+          "value": null
+        },
+        "aircraft-battery": {
+          "state": "null",
+          "value": null
+        },
+        "api-endpoints": {
+          "state": "null",
+          "value": null
+        },
+        "api-family": {
+          "state": "null",
+          "value": null
+        },
+        "background-start": {
+          "state": "null",
+          "value": null
+        },
+        "calibration": {
+          "state": "null",
+          "value": null
+        },
+        "camera-upload": {
+          "state": "null",
+          "value": null
+        },
+        "capability-ui": {
+          "state": "null",
+          "value": null
+        },
+        "capture-observation": {
+          "state": "null",
+          "value": null
+        },
+        "channel-feedback": {
+          "state": "null",
+          "value": null
+        },
+        "connection-example": {
+          "state": "null",
+          "value": null
+        },
+        "controller-battery-api": {
+          "state": "null",
+          "value": null
+        },
+        "controller-bsp-update": {
+          "state": "null",
+          "value": null
+        },
+        "cpu-topology": {
+          "state": "null",
+          "value": null
+        },
+        "current-channel-map": {
+          "state": "null",
+          "value": null
+        },
+        "decoder-limit": {
+          "claims": [
+            {
+              "capture": {
+                "fetched_at": "2026-10-12T03:47:17.939613+00:00",
+                "origin_id": "android",
+                "sha256": "20669f31ee9cb7ac8fffaaead5847be3fa88aadb28d2f13558cd982a675018bd",
+                "snapshot": "android-codec-capabilities.html",
+                "source": "android-codec-capabilities",
+                "url": "https://developer.android.com/reference/android/media/MediaCodecInfo.CodecCapabilities"
+              },
+              "evidence_span": "upper bound",
+              "extraction": "normalized",
+              "source": "android-codec-capabilities",
+              "tier": "A",
+              "value": "getMaxSupportedInstances is an upper-bound hint, not a concurrency guarantee"
+            }
+          ],
+          "state": "sourced",
+          "value": "getMaxSupportedInstances is an upper-bound hint, not a concurrency guarantee"
+        },
+        "device-sdk-url": {
+          "state": "null",
+          "value": null
+        },
+        "flight-authority": {
+          "state": "null",
+          "value": null
+        },
+        "forwarding": {
+          "state": "null",
+          "value": null
+        },
+        "gpu": {
+          "state": "null",
+          "value": null
+        },
+        "h265-depayload": {
+          "state": "null",
+          "value": null
+        },
+        "historical-name": {
+          "state": "null",
+          "value": null
+        },
+        "input-events": {
+          "state": "null",
+          "value": null
+        },
+        "installed-build": {
+          "state": "null",
+          "value": null
+        },
+        "installed-codec-limits": {
+          "state": "null",
+          "value": null
+        },
+        "installed-radio": {
+          "state": "null",
+          "value": null
+        },
+        "joystick-count": {
+          "state": "null",
+          "value": null
+        },
+        "legacy-control-example": {
+          "state": "null",
+          "value": null
+        },
+        "link-statistics": {
+          "state": "null",
+          "value": null
+        },
+        "live-video-codec": {
+          "state": "null",
+          "value": null
+        },
+        "low-latency": {
+          "claims": [
+            {
+              "capture": {
+                "fetched_at": "2026-10-12T03:47:17.939613+00:00",
+                "origin_id": "android",
+                "sha256": "20669f31ee9cb7ac8fffaaead5847be3fa88aadb28d2f13558cd982a675018bd",
+                "snapshot": "android-codec-capabilities.html",
+                "source": "android-codec-capabilities",
+                "url": "https://developer.android.com/reference/android/media/MediaCodecInfo.CodecCapabilities"
+              },
+              "evidence_span": "FEATURE_LowLatency",
+              "extraction": "normalized",
+              "source": "android-codec-capabilities",
+              "tier": "A",
+              "value": "Low latency decoding is a queryable decoder feature"
+            }
+          ],
+          "state": "sourced",
+          "value": "Low latency decoding is a queryable decoder feature"
+        },
+        "manual-axis": {
+          "state": "null",
+          "value": null
+        },
+        "manual-version": {
+          "state": "null",
+          "value": null
+        },
+        "measured-latency": {
+          "state": "null",
+          "value": null
+        },
+        "mission-ownership": {
+          "state": "null",
+          "value": null
+        },
+        "mission-patterns": {
+          "state": "null",
+          "value": null
+        },
+        "offline-map": {
+          "state": "null",
+          "value": null
+        },
+        "os": {
+          "state": "null",
+          "value": null
+        },
+        "package-update": {
+          "state": "null",
+          "value": null
+        },
+        "packet-dedup": {
+          "state": "null",
+          "value": null
+        },
+        "payload-ota": {
+          "state": "null",
+          "value": null
+        },
+        "payload-ota-guards": {
+          "state": "null",
+          "value": null
+        },
+        "per-link-status": {
+          "state": "null",
+          "value": null
+        },
+        "permission-checks": {
+          "state": "null",
+          "value": null
+        },
+        "platform": {
+          "state": "null",
+          "value": null
+        },
+        "power": {
+          "state": "null",
+          "value": null
+        },
+        "production-signer": {
+          "state": "null",
+          "value": null
+        },
+        "rc-functions": {
+          "state": "null",
+          "value": null
+        },
+        "resume": {
+          "state": "null",
+          "value": null
+        },
+        "rtcm-carrier": {
+          "state": "null",
+          "value": null
+        },
+        "rtk-client": {
+          "state": "null",
+          "value": null
+        },
+        "rtsp-source": {
+          "state": "null",
+          "value": null
+        },
+        "save-upload": {
+          "state": "null",
+          "value": null
+        },
+        "signing": {
+          "state": "null",
+          "value": null
+        },
+        "soc": {
+          "state": "null",
+          "value": null
+        },
+        "storage": {
+          "state": "null",
+          "value": null
+        },
+        "storage-claim": {
+          "state": "null",
+          "value": null
+        },
+        "survey-figures": {
+          "state": "null",
+          "value": null
+        },
+        "survey-grid": {
+          "state": "null",
+          "value": null
+        },
+        "terrain": {
+          "state": "null",
+          "value": null
+        },
+        "terrain-export": {
+          "state": "null",
+          "value": null
+        },
+        "transport": {
+          "state": "null",
+          "value": null
+        },
+        "version": {
+          "state": "null",
+          "value": null
+        },
+        "video-codec": {
+          "state": "null",
+          "value": null
+        },
+        "video-count": {
+          "state": "null",
+          "value": null
+        },
+        "vio": {
+          "state": "null",
+          "value": null
+        }
+      }
+    },
+    "Android foreground service": {
+      "entity_type": null,
+      "fields": {
+        "abi": {
+          "state": "null",
+          "value": null
+        },
+        "aircraft-battery": {
+          "state": "null",
+          "value": null
+        },
+        "api-endpoints": {
+          "state": "null",
+          "value": null
+        },
+        "api-family": {
+          "state": "null",
+          "value": null
+        },
+        "background-start": {
+          "claims": [
+            {
+              "capture": {
+                "fetched_at": "2026-10-12T03:47:17.960827+00:00",
+                "origin_id": "android",
+                "sha256": "c017bdb983280dbe5d0f2bc98e71526aa99e3078015716d9ebb1faad8e40ec7c",
+                "snapshot": "android-background.html",
+                "source": "android-background",
+                "url": "https://developer.android.com/develop/background-work/services/fgs/restrictions-bg-start"
+              },
+              "evidence_span": "while the app is running in the background",
+              "extraction": "normalized",
+              "source": "android-background",
+              "tier": "A",
+              "value": "Background FGS starts restricted for apps targeting Android 12 or higher, with exceptions"
+            }
+          ],
+          "state": "sourced",
+          "value": "Background FGS starts restricted for apps targeting Android 12 or higher, with exceptions"
+        },
+        "calibration": {
+          "state": "null",
+          "value": null
+        },
+        "camera-upload": {
+          "state": "null",
+          "value": null
+        },
+        "capability-ui": {
+          "state": "null",
+          "value": null
+        },
+        "capture-observation": {
+          "state": "null",
+          "value": null
+        },
+        "channel-feedback": {
+          "state": "null",
+          "value": null
+        },
+        "connection-example": {
+          "state": "null",
+          "value": null
+        },
+        "controller-battery-api": {
+          "state": "null",
+          "value": null
+        },
+        "controller-bsp-update": {
+          "state": "null",
+          "value": null
+        },
+        "cpu-topology": {
+          "state": "null",
+          "value": null
+        },
+        "current-channel-map": {
+          "state": "null",
+          "value": null
+        },
+        "decoder-limit": {
+          "state": "null",
+          "value": null
+        },
+        "device-sdk-url": {
+          "state": "null",
+          "value": null
+        },
+        "flight-authority": {
+          "state": "null",
+          "value": null
+        },
+        "forwarding": {
+          "state": "null",
+          "value": null
+        },
+        "gpu": {
+          "state": "null",
+          "value": null
+        },
+        "h265-depayload": {
+          "state": "null",
+          "value": null
+        },
+        "historical-name": {
+          "state": "null",
+          "value": null
+        },
+        "input-events": {
+          "state": "null",
+          "value": null
+        },
+        "installed-build": {
+          "state": "null",
+          "value": null
+        },
+        "installed-codec-limits": {
+          "state": "null",
+          "value": null
+        },
+        "installed-radio": {
+          "state": "null",
+          "value": null
+        },
+        "joystick-count": {
+          "state": "null",
+          "value": null
+        },
+        "legacy-control-example": {
+          "state": "null",
+          "value": null
+        },
+        "link-statistics": {
+          "state": "null",
+          "value": null
+        },
+        "live-video-codec": {
+          "state": "null",
+          "value": null
+        },
+        "low-latency": {
+          "state": "null",
+          "value": null
+        },
+        "manual-axis": {
+          "state": "null",
+          "value": null
+        },
+        "manual-version": {
+          "state": "null",
+          "value": null
+        },
+        "measured-latency": {
+          "state": "null",
+          "value": null
+        },
+        "mission-ownership": {
+          "state": "null",
+          "value": null
+        },
+        "mission-patterns": {
+          "state": "null",
+          "value": null
+        },
+        "offline-map": {
+          "state": "null",
+          "value": null
+        },
+        "os": {
+          "state": "null",
+          "value": null
+        },
+        "package-update": {
+          "state": "null",
+          "value": null
+        },
+        "packet-dedup": {
+          "state": "null",
+          "value": null
+        },
+        "payload-ota": {
+          "state": "null",
+          "value": null
+        },
+        "payload-ota-guards": {
+          "state": "null",
+          "value": null
+        },
+        "per-link-status": {
+          "state": "null",
+          "value": null
+        },
+        "permission-checks": {
+          "state": "null",
+          "value": null
+        },
+        "platform": {
+          "state": "null",
+          "value": null
+        },
+        "power": {
+          "state": "null",
+          "value": null
+        },
+        "production-signer": {
+          "state": "null",
+          "value": null
+        },
+        "rc-functions": {
+          "state": "null",
+          "value": null
+        },
+        "resume": {
+          "state": "null",
+          "value": null
+        },
+        "rtcm-carrier": {
+          "state": "null",
+          "value": null
+        },
+        "rtk-client": {
+          "state": "null",
+          "value": null
+        },
+        "rtsp-source": {
+          "state": "null",
+          "value": null
+        },
+        "save-upload": {
+          "state": "null",
+          "value": null
+        },
+        "signing": {
+          "state": "null",
+          "value": null
+        },
+        "soc": {
+          "state": "null",
+          "value": null
+        },
+        "storage": {
+          "state": "null",
+          "value": null
+        },
+        "storage-claim": {
+          "state": "null",
+          "value": null
+        },
+        "survey-figures": {
+          "state": "null",
+          "value": null
+        },
+        "survey-grid": {
+          "state": "null",
+          "value": null
+        },
+        "terrain": {
+          "state": "null",
+          "value": null
+        },
+        "terrain-export": {
+          "state": "null",
+          "value": null
+        },
+        "transport": {
+          "state": "null",
+          "value": null
+        },
+        "version": {
+          "state": "null",
+          "value": null
+        },
+        "video-codec": {
+          "state": "null",
+          "value": null
+        },
+        "video-count": {
+          "state": "null",
+          "value": null
+        },
+        "vio": {
+          "state": "null",
+          "value": null
+        }
+      }
+    },
+    "Android standard input (conditional)": {
+      "entity_type": null,
+      "fields": {
+        "abi": {
+          "state": "null",
+          "value": null
+        },
+        "aircraft-battery": {
+          "state": "null",
+          "value": null
+        },
+        "api-endpoints": {
+          "state": "null",
+          "value": null
+        },
+        "api-family": {
+          "state": "null",
+          "value": null
+        },
+        "background-start": {
+          "state": "null",
+          "value": null
+        },
+        "calibration": {
+          "state": "null",
+          "value": null
+        },
+        "camera-upload": {
+          "state": "null",
+          "value": null
+        },
+        "capability-ui": {
+          "state": "null",
+          "value": null
+        },
+        "capture-observation": {
+          "state": "null",
+          "value": null
+        },
+        "channel-feedback": {
+          "state": "null",
+          "value": null
+        },
+        "connection-example": {
+          "state": "null",
+          "value": null
+        },
+        "controller-battery-api": {
+          "state": "null",
+          "value": null
+        },
+        "controller-bsp-update": {
+          "state": "null",
+          "value": null
+        },
+        "cpu-topology": {
+          "state": "null",
+          "value": null
+        },
+        "current-channel-map": {
+          "state": "null",
+          "value": null
+        },
+        "decoder-limit": {
+          "state": "null",
+          "value": null
+        },
+        "device-sdk-url": {
+          "state": "null",
+          "value": null
+        },
+        "flight-authority": {
+          "state": "null",
+          "value": null
+        },
+        "forwarding": {
+          "state": "null",
+          "value": null
+        },
+        "gpu": {
+          "state": "null",
+          "value": null
+        },
+        "h265-depayload": {
+          "state": "null",
+          "value": null
+        },
+        "historical-name": {
+          "state": "null",
+          "value": null
+        },
+        "input-events": {
+          "claims": [
+            {
+              "capture": {
+                "fetched_at": "2026-10-12T03:47:18.077093+00:00",
+                "origin_id": "android",
+                "sha256": "7941a5974e22911ff49e62437b5c6200fc57ab203fcb93e63618dfae05edded8",
+                "snapshot": "android-input.html",
+                "source": "android-input",
+                "url": "https://developer.android.com/games/sdk/game-controller/controller-input"
+              },
+              "evidence_span": "KeyEvent",
+              "extraction": "normalized",
+              "source": "android-input",
+              "tier": "A",
+              "value": "Binary KeyEvent and analog MotionEvent for compatible controllers"
+            }
+          ],
+          "state": "sourced",
+          "value": "Binary KeyEvent and analog MotionEvent for compatible controllers"
+        },
+        "installed-build": {
+          "state": "null",
+          "value": null
+        },
+        "installed-codec-limits": {
+          "state": "null",
+          "value": null
+        },
+        "installed-radio": {
+          "state": "null",
+          "value": null
+        },
+        "joystick-count": {
+          "state": "null",
+          "value": null
+        },
+        "legacy-control-example": {
+          "state": "null",
+          "value": null
+        },
+        "link-statistics": {
+          "state": "null",
+          "value": null
+        },
+        "live-video-codec": {
+          "state": "null",
+          "value": null
+        },
+        "low-latency": {
+          "state": "null",
+          "value": null
+        },
+        "manual-axis": {
+          "state": "null",
+          "value": null
+        },
+        "manual-version": {
+          "state": "null",
+          "value": null
+        },
+        "measured-latency": {
+          "state": "null",
+          "value": null
+        },
+        "mission-ownership": {
+          "state": "null",
+          "value": null
+        },
+        "mission-patterns": {
+          "state": "null",
+          "value": null
+        },
+        "offline-map": {
+          "state": "null",
+          "value": null
+        },
+        "os": {
+          "state": "null",
+          "value": null
+        },
+        "package-update": {
+          "state": "null",
+          "value": null
+        },
+        "packet-dedup": {
+          "state": "null",
+          "value": null
+        },
+        "payload-ota": {
+          "state": "null",
+          "value": null
+        },
+        "payload-ota-guards": {
+          "state": "null",
+          "value": null
+        },
+        "per-link-status": {
+          "state": "null",
+          "value": null
+        },
+        "permission-checks": {
+          "state": "null",
+          "value": null
+        },
+        "platform": {
+          "state": "null",
+          "value": null
+        },
+        "power": {
+          "state": "null",
+          "value": null
+        },
+        "production-signer": {
+          "state": "null",
+          "value": null
+        },
+        "rc-functions": {
+          "state": "null",
+          "value": null
+        },
+        "resume": {
+          "state": "null",
+          "value": null
+        },
+        "rtcm-carrier": {
+          "state": "null",
+          "value": null
+        },
+        "rtk-client": {
+          "state": "null",
+          "value": null
+        },
+        "rtsp-source": {
+          "state": "null",
+          "value": null
+        },
+        "save-upload": {
+          "state": "null",
+          "value": null
+        },
+        "signing": {
+          "state": "null",
+          "value": null
+        },
+        "soc": {
+          "state": "null",
+          "value": null
+        },
+        "storage": {
+          "state": "null",
+          "value": null
+        },
+        "storage-claim": {
+          "state": "null",
+          "value": null
+        },
+        "survey-figures": {
+          "state": "null",
+          "value": null
+        },
+        "survey-grid": {
+          "state": "null",
+          "value": null
+        },
+        "terrain": {
+          "state": "null",
+          "value": null
+        },
+        "terrain-export": {
+          "state": "null",
+          "value": null
+        },
+        "transport": {
+          "state": "null",
+          "value": null
+        },
+        "version": {
+          "state": "null",
+          "value": null
+        },
+        "video-codec": {
+          "state": "null",
+          "value": null
+        },
+        "video-count": {
+          "state": "null",
+          "value": null
+        },
+        "vio": {
+          "state": "null",
+          "value": null
+        }
+      }
+    },
+    "GStreamer candidate": {
+      "entity_type": null,
+      "fields": {
+        "abi": {
+          "state": "null",
+          "value": null
+        },
+        "aircraft-battery": {
+          "state": "null",
+          "value": null
+        },
+        "api-endpoints": {
+          "state": "null",
+          "value": null
+        },
+        "api-family": {
+          "state": "null",
+          "value": null
+        },
+        "background-start": {
+          "state": "null",
+          "value": null
+        },
+        "calibration": {
+          "state": "null",
+          "value": null
+        },
+        "camera-upload": {
+          "state": "null",
+          "value": null
+        },
+        "capability-ui": {
+          "state": "null",
+          "value": null
+        },
+        "capture-observation": {
+          "state": "null",
+          "value": null
+        },
+        "channel-feedback": {
+          "state": "null",
+          "value": null
+        },
+        "connection-example": {
+          "state": "null",
+          "value": null
+        },
+        "controller-battery-api": {
+          "state": "null",
+          "value": null
+        },
+        "controller-bsp-update": {
+          "state": "null",
+          "value": null
+        },
+        "cpu-topology": {
+          "state": "null",
+          "value": null
+        },
+        "current-channel-map": {
+          "state": "null",
+          "value": null
+        },
+        "decoder-limit": {
+          "state": "null",
+          "value": null
+        },
+        "device-sdk-url": {
+          "state": "null",
+          "value": null
+        },
+        "flight-authority": {
+          "state": "null",
+          "value": null
+        },
+        "forwarding": {
+          "state": "null",
+          "value": null
+        },
+        "gpu": {
+          "state": "null",
+          "value": null
+        },
+        "h265-depayload": {
+          "claims": [
+            {
+              "capture": {
+                "fetched_at": "2026-10-12T03:49:00.443551+00:00",
+                "origin_id": "gstreamer",
+                "sha256": "4590fb6e30fa4e0b538819b17e8665c0e81fb0ef78e42577b0a0ea08d239763e",
+                "snapshot": "gstreamer-h265.html",
+                "source": "gstreamer-h265",
+                "url": "https://gstreamer.freedesktop.org/documentation/rtp/rtph265depay.html"
+              },
+              "evidence_span": "Extracts H265",
+              "extraction": "normalized",
+              "source": "gstreamer-h265",
+              "tier": "A",
+              "value": "rtph265depay extracts H265 from RTP; does not itself decode video"
+            }
+          ],
+          "state": "sourced",
+          "value": "rtph265depay extracts H265 from RTP; does not itself decode video"
+        },
+        "historical-name": {
+          "state": "null",
+          "value": null
+        },
+        "input-events": {
+          "state": "null",
+          "value": null
+        },
+        "installed-build": {
+          "state": "null",
+          "value": null
+        },
+        "installed-codec-limits": {
+          "state": "null",
+          "value": null
+        },
+        "installed-radio": {
+          "state": "null",
+          "value": null
+        },
+        "joystick-count": {
+          "state": "null",
+          "value": null
+        },
+        "legacy-control-example": {
+          "state": "null",
+          "value": null
+        },
+        "link-statistics": {
+          "state": "null",
+          "value": null
+        },
+        "live-video-codec": {
+          "state": "null",
+          "value": null
+        },
+        "low-latency": {
+          "state": "null",
+          "value": null
+        },
+        "manual-axis": {
+          "state": "null",
+          "value": null
+        },
+        "manual-version": {
+          "state": "null",
+          "value": null
+        },
+        "measured-latency": {
+          "state": "null",
+          "value": null
+        },
+        "mission-ownership": {
+          "state": "null",
+          "value": null
+        },
+        "mission-patterns": {
+          "state": "null",
+          "value": null
+        },
+        "offline-map": {
+          "state": "null",
+          "value": null
+        },
+        "os": {
+          "state": "null",
+          "value": null
+        },
+        "package-update": {
+          "state": "null",
+          "value": null
+        },
+        "packet-dedup": {
+          "state": "null",
+          "value": null
+        },
+        "payload-ota": {
+          "state": "null",
+          "value": null
+        },
+        "payload-ota-guards": {
+          "state": "null",
+          "value": null
+        },
+        "per-link-status": {
+          "state": "null",
+          "value": null
+        },
+        "permission-checks": {
+          "state": "null",
+          "value": null
+        },
+        "platform": {
+          "state": "null",
+          "value": null
+        },
+        "power": {
+          "state": "null",
+          "value": null
+        },
+        "production-signer": {
+          "state": "null",
+          "value": null
+        },
+        "rc-functions": {
+          "state": "null",
+          "value": null
+        },
+        "resume": {
+          "state": "null",
+          "value": null
+        },
+        "rtcm-carrier": {
+          "state": "null",
+          "value": null
+        },
+        "rtk-client": {
+          "state": "null",
+          "value": null
+        },
+        "rtsp-source": {
+          "claims": [
+            {
+              "capture": {
+                "fetched_at": "2026-10-12T03:49:00.083575+00:00",
+                "origin_id": "gstreamer",
+                "sha256": "df9ab92c28aee6b6113c52dc0bcbaaf3a70ec55ffee49539e542f83993cb6ad5",
+                "snapshot": "gstreamer-rtsp.html",
+                "source": "gstreamer-rtsp",
+                "url": "https://gstreamer.freedesktop.org/documentation/rtsp/rtspsrc.html"
+              },
+              "evidence_span": "unicast or multicast mode",
+              "extraction": "normalized",
+              "source": "gstreamer-rtsp",
+              "tier": "A",
+              "value": "rtspsrc supports RTSP UDP/TCP unicast/multicast"
+            }
+          ],
+          "state": "sourced",
+          "value": "rtspsrc supports RTSP UDP/TCP unicast/multicast"
+        },
+        "save-upload": {
+          "state": "null",
+          "value": null
+        },
+        "signing": {
+          "state": "null",
+          "value": null
+        },
+        "soc": {
+          "state": "null",
+          "value": null
+        },
+        "storage": {
+          "state": "null",
+          "value": null
+        },
+        "storage-claim": {
+          "state": "null",
+          "value": null
+        },
+        "survey-figures": {
+          "state": "null",
+          "value": null
+        },
+        "survey-grid": {
+          "state": "null",
+          "value": null
+        },
+        "terrain": {
+          "state": "null",
+          "value": null
+        },
+        "terrain-export": {
+          "state": "null",
+          "value": null
+        },
+        "transport": {
+          "state": "null",
+          "value": null
+        },
+        "version": {
+          "state": "null",
+          "value": null
+        },
+        "video-codec": {
+          "state": "null",
+          "value": null
+        },
+        "video-count": {
+          "state": "null",
+          "value": null
+        },
+        "vio": {
+          "state": "null",
+          "value": null
+        }
+      }
+    },
+    "MAVLink common messages": {
+      "entity_type": null,
+      "fields": {
+        "abi": {
+          "state": "null",
+          "value": null
+        },
+        "aircraft-battery": {
+          "state": "null",
+          "value": null
+        },
+        "api-endpoints": {
+          "state": "null",
+          "value": null
+        },
+        "api-family": {
+          "state": "null",
+          "value": null
+        },
+        "background-start": {
+          "state": "null",
+          "value": null
+        },
+        "calibration": {
+          "state": "null",
+          "value": null
+        },
+        "camera-upload": {
+          "state": "null",
+          "value": null
+        },
+        "capability-ui": {
+          "state": "null",
+          "value": null
+        },
+        "capture-observation": {
+          "state": "null",
+          "value": null
+        },
+        "channel-feedback": {
+          "state": "null",
+          "value": null
+        },
+        "connection-example": {
+          "state": "null",
+          "value": null
+        },
+        "controller-battery-api": {
+          "state": "null",
+          "value": null
+        },
+        "controller-bsp-update": {
+          "state": "null",
+          "value": null
+        },
+        "cpu-topology": {
+          "state": "null",
+          "value": null
+        },
+        "current-channel-map": {
+          "state": "null",
+          "value": null
+        },
+        "decoder-limit": {
+          "state": "null",
+          "value": null
+        },
+        "device-sdk-url": {
+          "state": "null",
+          "value": null
+        },
+        "flight-authority": {
+          "state": "null",
+          "value": null
+        },
+        "forwarding": {
+          "state": "null",
+          "value": null
+        },
+        "gpu": {
+          "state": "null",
+          "value": null
+        },
+        "h265-depayload": {
+          "state": "null",
+          "value": null
+        },
+        "historical-name": {
+          "state": "null",
+          "value": null
+        },
+        "input-events": {
+          "state": "null",
+          "value": null
+        },
+        "installed-build": {
+          "state": "null",
+          "value": null
+        },
+        "installed-codec-limits": {
+          "state": "null",
+          "value": null
+        },
+        "installed-radio": {
+          "state": "null",
+          "value": null
+        },
+        "joystick-count": {
+          "state": "null",
+          "value": null
+        },
+        "legacy-control-example": {
+          "state": "null",
+          "value": null
+        },
+        "link-statistics": {
+          "state": "null",
+          "value": null
+        },
+        "live-video-codec": {
+          "state": "null",
+          "value": null
+        },
+        "low-latency": {
+          "state": "null",
+          "value": null
+        },
+        "manual-axis": {
+          "state": "null",
+          "value": null
+        },
+        "manual-version": {
+          "state": "null",
+          "value": null
+        },
+        "measured-latency": {
+          "state": "null",
+          "value": null
+        },
+        "mission-ownership": {
+          "state": "null",
+          "value": null
+        },
+        "mission-patterns": {
+          "state": "null",
+          "value": null
+        },
+        "offline-map": {
+          "state": "null",
+          "value": null
+        },
+        "os": {
+          "state": "null",
+          "value": null
+        },
+        "package-update": {
+          "state": "null",
+          "value": null
+        },
+        "packet-dedup": {
+          "state": "null",
+          "value": null
+        },
+        "payload-ota": {
+          "state": "null",
+          "value": null
+        },
+        "payload-ota-guards": {
+          "state": "null",
+          "value": null
+        },
+        "per-link-status": {
+          "state": "null",
+          "value": null
+        },
+        "permission-checks": {
+          "state": "null",
+          "value": null
+        },
+        "platform": {
+          "state": "null",
+          "value": null
+        },
+        "power": {
+          "state": "null",
+          "value": null
+        },
+        "production-signer": {
+          "state": "null",
+          "value": null
+        },
+        "rc-functions": {
+          "state": "null",
+          "value": null
+        },
+        "resume": {
+          "state": "null",
+          "value": null
+        },
+        "rtcm-carrier": {
+          "claims": [
+            {
+              "capture": {
+                "fetched_at": "2026-10-12T03:48:59.436194+00:00",
+                "origin_id": "mavlink",
+                "sha256": "446d72b995ad6252a5ec2dee7674087821cfb8d5f6ac3e02b61f63fb61a60341",
+                "snapshot": "mavlink-common.html",
+                "source": "mavlink-common",
+                "url": "https://mavlink.io/en/messages/common.html"
+              },
+              "evidence_span": "GPS_RTCM_DATA",
+              "extraction": "normalized",
+              "source": "mavlink-common",
+              "tier": "A",
+              "value": "GPS_RTCM_DATA carries RTCM correction data to GPS"
+            }
+          ],
+          "state": "sourced",
+          "value": "GPS_RTCM_DATA carries RTCM correction data to GPS"
+        },
+        "rtk-client": {
+          "state": "null",
+          "value": null
+        },
+        "rtsp-source": {
+          "state": "null",
+          "value": null
+        },
+        "save-upload": {
+          "state": "null",
+          "value": null
+        },
+        "signing": {
+          "state": "null",
+          "value": null
+        },
+        "soc": {
+          "state": "null",
+          "value": null
+        },
+        "storage": {
+          "state": "null",
+          "value": null
+        },
+        "storage-claim": {
+          "state": "null",
+          "value": null
+        },
+        "survey-figures": {
+          "state": "null",
+          "value": null
+        },
+        "survey-grid": {
+          "state": "null",
+          "value": null
+        },
+        "terrain": {
+          "state": "null",
+          "value": null
+        },
+        "terrain-export": {
+          "state": "null",
+          "value": null
+        },
+        "transport": {
+          "state": "null",
+          "value": null
+        },
+        "version": {
+          "state": "null",
+          "value": null
+        },
+        "video-codec": {
+          "state": "null",
+          "value": null
+        },
+        "video-count": {
+          "state": "null",
+          "value": null
+        },
+        "vio": {
+          "state": "null",
+          "value": null
+        }
+      }
+    },
+    "MAVLink manual control": {
+      "entity_type": null,
+      "fields": {
+        "abi": {
+          "state": "null",
+          "value": null
+        },
+        "aircraft-battery": {
+          "state": "null",
+          "value": null
+        },
+        "api-endpoints": {
+          "state": "null",
+          "value": null
+        },
+        "api-family": {
+          "state": "null",
+          "value": null
+        },
+        "background-start": {
+          "state": "null",
+          "value": null
+        },
+        "calibration": {
+          "state": "null",
+          "value": null
+        },
+        "camera-upload": {
+          "state": "null",
+          "value": null
+        },
+        "capability-ui": {
+          "state": "null",
+          "value": null
+        },
+        "capture-observation": {
+          "state": "null",
+          "value": null
+        },
+        "channel-feedback": {
+          "state": "null",
+          "value": null
+        },
+        "connection-example": {
+          "state": "null",
+          "value": null
+        },
+        "controller-battery-api": {
+          "state": "null",
+          "value": null
+        },
+        "controller-bsp-update": {
+          "state": "null",
+          "value": null
+        },
+        "cpu-topology": {
+          "state": "null",
+          "value": null
+        },
+        "current-channel-map": {
+          "state": "null",
+          "value": null
+        },
+        "decoder-limit": {
+          "state": "null",
+          "value": null
+        },
+        "device-sdk-url": {
+          "state": "null",
+          "value": null
+        },
+        "flight-authority": {
+          "state": "null",
+          "value": null
+        },
+        "forwarding": {
+          "state": "null",
+          "value": null
+        },
+        "gpu": {
+          "state": "null",
+          "value": null
+        },
+        "h265-depayload": {
+          "state": "null",
+          "value": null
+        },
+        "historical-name": {
+          "state": "null",
+          "value": null
+        },
+        "input-events": {
+          "state": "null",
+          "value": null
+        },
+        "installed-build": {
+          "state": "null",
+          "value": null
+        },
+        "installed-codec-limits": {
+          "state": "null",
+          "value": null
+        },
+        "installed-radio": {
+          "state": "null",
+          "value": null
+        },
+        "joystick-count": {
+          "state": "null",
+          "value": null
+        },
+        "legacy-control-example": {
+          "state": "null",
+          "value": null
+        },
+        "link-statistics": {
+          "state": "null",
+          "value": null
+        },
+        "live-video-codec": {
+          "state": "null",
+          "value": null
+        },
+        "low-latency": {
+          "state": "null",
+          "value": null
+        },
+        "manual-axis": {
+          "claims": [
+            {
+              "capture": {
+                "fetched_at": "2026-10-12T03:50:20.944989+00:00",
+                "origin_id": "mavlink",
+                "sha256": "ae2669beddcb70a5cc07ad5261d9697626b464849724c3af089cc4cdbe4b8b1a",
+                "snapshot": "mavlink-manual.html",
+                "source": "mavlink-manual",
+                "url": "https://mavlink.io/en/services/manual_control.html"
+              },
+              "evidence_span": "-1000 to 1000",
+              "extraction": "normalized",
+              "source": "mavlink-manual",
+              "tier": "A",
+              "value": "Vehicle-frame axes normalised to -1000 through 1000; not proof of Hera RC transport"
+            }
+          ],
+          "state": "sourced",
+          "value": "Vehicle-frame axes normalised to -1000 through 1000; not proof of Hera RC transport"
+        },
+        "manual-version": {
+          "state": "null",
+          "value": null
+        },
+        "measured-latency": {
+          "state": "null",
+          "value": null
+        },
+        "mission-ownership": {
+          "state": "null",
+          "value": null
+        },
+        "mission-patterns": {
+          "state": "null",
+          "value": null
+        },
+        "offline-map": {
+          "state": "null",
+          "value": null
+        },
+        "os": {
+          "state": "null",
+          "value": null
+        },
+        "package-update": {
+          "state": "null",
+          "value": null
+        },
+        "packet-dedup": {
+          "state": "null",
+          "value": null
+        },
+        "payload-ota": {
+          "state": "null",
+          "value": null
+        },
+        "payload-ota-guards": {
+          "state": "null",
+          "value": null
+        },
+        "per-link-status": {
+          "state": "null",
+          "value": null
+        },
+        "permission-checks": {
+          "state": "null",
+          "value": null
+        },
+        "platform": {
+          "state": "null",
+          "value": null
+        },
+        "power": {
+          "state": "null",
+          "value": null
+        },
+        "production-signer": {
+          "state": "null",
+          "value": null
+        },
+        "rc-functions": {
+          "state": "null",
+          "value": null
+        },
+        "resume": {
+          "state": "null",
+          "value": null
+        },
+        "rtcm-carrier": {
+          "state": "null",
+          "value": null
+        },
+        "rtk-client": {
+          "state": "null",
+          "value": null
+        },
+        "rtsp-source": {
+          "state": "null",
+          "value": null
+        },
+        "save-upload": {
+          "state": "null",
+          "value": null
+        },
+        "signing": {
+          "state": "null",
+          "value": null
+        },
+        "soc": {
+          "state": "null",
+          "value": null
+        },
+        "storage": {
+          "state": "null",
+          "value": null
+        },
+        "storage-claim": {
+          "state": "null",
+          "value": null
+        },
+        "survey-figures": {
+          "state": "null",
+          "value": null
+        },
+        "survey-grid": {
+          "state": "null",
+          "value": null
+        },
+        "terrain": {
+          "state": "null",
+          "value": null
+        },
+        "terrain-export": {
+          "state": "null",
+          "value": null
+        },
+        "transport": {
+          "state": "null",
+          "value": null
+        },
+        "version": {
+          "state": "null",
+          "value": null
+        },
+        "video-codec": {
+          "state": "null",
+          "value": null
+        },
+        "video-count": {
+          "state": "null",
+          "value": null
+        },
+        "vio": {
+          "state": "null",
+          "value": null
+        }
+      }
+    },
+    "MAVLink redundancy guidance": {
+      "entity_type": null,
+      "fields": {
+        "abi": {
+          "state": "null",
+          "value": null
+        },
+        "aircraft-battery": {
+          "state": "null",
+          "value": null
+        },
+        "api-endpoints": {
+          "state": "null",
+          "value": null
+        },
+        "api-family": {
+          "state": "null",
+          "value": null
+        },
+        "background-start": {
+          "state": "null",
+          "value": null
+        },
+        "calibration": {
+          "state": "null",
+          "value": null
+        },
+        "camera-upload": {
+          "state": "null",
+          "value": null
+        },
+        "capability-ui": {
+          "state": "null",
+          "value": null
+        },
+        "capture-observation": {
+          "state": "null",
+          "value": null
+        },
+        "channel-feedback": {
+          "state": "null",
+          "value": null
+        },
+        "connection-example": {
+          "state": "null",
+          "value": null
+        },
+        "controller-battery-api": {
+          "state": "null",
+          "value": null
+        },
+        "controller-bsp-update": {
+          "state": "null",
+          "value": null
+        },
+        "cpu-topology": {
+          "state": "null",
+          "value": null
+        },
+        "current-channel-map": {
+          "state": "null",
+          "value": null
+        },
+        "decoder-limit": {
+          "state": "null",
+          "value": null
+        },
+        "device-sdk-url": {
+          "state": "null",
+          "value": null
+        },
+        "flight-authority": {
+          "state": "null",
+          "value": null
+        },
+        "forwarding": {
+          "state": "null",
+          "value": null
+        },
+        "gpu": {
+          "state": "null",
+          "value": null
+        },
+        "h265-depayload": {
+          "state": "null",
+          "value": null
+        },
+        "historical-name": {
+          "state": "null",
+          "value": null
+        },
+        "input-events": {
+          "state": "null",
+          "value": null
+        },
+        "installed-build": {
+          "state": "null",
+          "value": null
+        },
+        "installed-codec-limits": {
+          "state": "null",
+          "value": null
+        },
+        "installed-radio": {
+          "state": "null",
+          "value": null
+        },
+        "joystick-count": {
+          "state": "null",
+          "value": null
+        },
+        "legacy-control-example": {
+          "state": "null",
+          "value": null
+        },
+        "link-statistics": {
+          "state": "null",
+          "value": null
+        },
+        "live-video-codec": {
+          "state": "null",
+          "value": null
+        },
+        "low-latency": {
+          "state": "null",
+          "value": null
+        },
+        "manual-axis": {
+          "state": "null",
+          "value": null
+        },
+        "manual-version": {
+          "state": "null",
+          "value": null
+        },
+        "measured-latency": {
+          "state": "null",
+          "value": null
+        },
+        "mission-ownership": {
+          "state": "null",
+          "value": null
+        },
+        "mission-patterns": {
+          "state": "null",
+          "value": null
+        },
+        "offline-map": {
+          "state": "null",
+          "value": null
+        },
+        "os": {
+          "state": "null",
+          "value": null
+        },
+        "package-update": {
+          "state": "null",
+          "value": null
+        },
+        "packet-dedup": {
+          "claims": [
+            {
+              "capture": {
+                "fetched_at": "2026-10-12T03:47:18.762334+00:00",
+                "origin_id": "mavlink",
+                "sha256": "e0785914a745488abd83e1fd5fcf172f1d2ff38911574079d5e27bd029f1c539",
+                "snapshot": "mavlink-redundancy.html",
+                "source": "mavlink-redundancy",
+                "url": "https://mavlink.io/en/guide/redundancy_deduplication.html"
+              },
+              "evidence_span": "each channel has its own sequence counter",
+              "extraction": "normalized",
+              "source": "mavlink-redundancy",
+              "tier": "A",
+              "value": "Per-channel packet sequence counters cannot deduplicate messages across links"
+            }
+          ],
+          "state": "sourced",
+          "value": "Per-channel packet sequence counters cannot deduplicate messages across links"
+        },
+        "payload-ota": {
+          "state": "null",
+          "value": null
+        },
+        "payload-ota-guards": {
+          "state": "null",
+          "value": null
+        },
+        "per-link-status": {
+          "state": "null",
+          "value": null
+        },
+        "permission-checks": {
+          "state": "null",
+          "value": null
+        },
+        "platform": {
+          "state": "null",
+          "value": null
+        },
+        "power": {
+          "state": "null",
+          "value": null
+        },
+        "production-signer": {
+          "state": "null",
+          "value": null
+        },
+        "rc-functions": {
+          "state": "null",
+          "value": null
+        },
+        "resume": {
+          "state": "null",
+          "value": null
+        },
+        "rtcm-carrier": {
+          "state": "null",
+          "value": null
+        },
+        "rtk-client": {
+          "state": "null",
+          "value": null
+        },
+        "rtsp-source": {
+          "state": "null",
+          "value": null
+        },
+        "save-upload": {
+          "state": "null",
+          "value": null
+        },
+        "signing": {
+          "state": "null",
+          "value": null
+        },
+        "soc": {
+          "state": "null",
+          "value": null
+        },
+        "storage": {
+          "state": "null",
+          "value": null
+        },
+        "storage-claim": {
+          "state": "null",
+          "value": null
+        },
+        "survey-figures": {
+          "state": "null",
+          "value": null
+        },
+        "survey-grid": {
+          "state": "null",
+          "value": null
+        },
+        "terrain": {
+          "state": "null",
+          "value": null
+        },
+        "terrain-export": {
+          "state": "null",
+          "value": null
+        },
+        "transport": {
+          "state": "null",
+          "value": null
+        },
+        "version": {
+          "state": "null",
+          "value": null
+        },
+        "video-codec": {
+          "state": "null",
+          "value": null
+        },
+        "video-count": {
+          "state": "null",
+          "value": null
+        },
+        "vio": {
+          "state": "null",
+          "value": null
+        }
+      }
+    },
+    "MAVLink signing guidance": {
+      "entity_type": null,
+      "fields": {
+        "abi": {
+          "state": "null",
+          "value": null
+        },
+        "aircraft-battery": {
+          "state": "null",
+          "value": null
+        },
+        "api-endpoints": {
+          "state": "null",
+          "value": null
+        },
+        "api-family": {
+          "state": "null",
+          "value": null
+        },
+        "background-start": {
+          "state": "null",
+          "value": null
+        },
+        "calibration": {
+          "state": "null",
+          "value": null
+        },
+        "camera-upload": {
+          "state": "null",
+          "value": null
+        },
+        "capability-ui": {
+          "state": "null",
+          "value": null
+        },
+        "capture-observation": {
+          "state": "null",
+          "value": null
+        },
+        "channel-feedback": {
+          "state": "null",
+          "value": null
+        },
+        "connection-example": {
+          "state": "null",
+          "value": null
+        },
+        "controller-battery-api": {
+          "state": "null",
+          "value": null
+        },
+        "controller-bsp-update": {
+          "state": "null",
+          "value": null
+        },
+        "cpu-topology": {
+          "state": "null",
+          "value": null
+        },
+        "current-channel-map": {
+          "state": "null",
+          "value": null
+        },
+        "decoder-limit": {
+          "state": "null",
+          "value": null
+        },
+        "device-sdk-url": {
+          "state": "null",
+          "value": null
+        },
+        "flight-authority": {
+          "state": "null",
+          "value": null
+        },
+        "forwarding": {
+          "state": "null",
+          "value": null
+        },
+        "gpu": {
+          "state": "null",
+          "value": null
+        },
+        "h265-depayload": {
+          "state": "null",
+          "value": null
+        },
+        "historical-name": {
+          "state": "null",
+          "value": null
+        },
+        "input-events": {
+          "state": "null",
+          "value": null
+        },
+        "installed-build": {
+          "state": "null",
+          "value": null
+        },
+        "installed-codec-limits": {
+          "state": "null",
+          "value": null
+        },
+        "installed-radio": {
+          "state": "null",
+          "value": null
+        },
+        "joystick-count": {
+          "state": "null",
+          "value": null
+        },
+        "legacy-control-example": {
+          "state": "null",
+          "value": null
+        },
+        "link-statistics": {
+          "state": "null",
+          "value": null
+        },
+        "live-video-codec": {
+          "state": "null",
+          "value": null
+        },
+        "low-latency": {
+          "state": "null",
+          "value": null
+        },
+        "manual-axis": {
+          "state": "null",
+          "value": null
+        },
+        "manual-version": {
+          "state": "null",
+          "value": null
+        },
+        "measured-latency": {
+          "state": "null",
+          "value": null
+        },
+        "mission-ownership": {
+          "state": "null",
+          "value": null
+        },
+        "mission-patterns": {
+          "state": "null",
+          "value": null
+        },
+        "offline-map": {
+          "state": "null",
+          "value": null
+        },
+        "os": {
+          "state": "null",
+          "value": null
+        },
+        "package-update": {
+          "state": "null",
+          "value": null
+        },
+        "packet-dedup": {
+          "state": "null",
+          "value": null
+        },
+        "payload-ota": {
+          "state": "null",
+          "value": null
+        },
+        "payload-ota-guards": {
+          "state": "null",
+          "value": null
+        },
+        "per-link-status": {
+          "state": "null",
+          "value": null
+        },
+        "permission-checks": {
+          "state": "null",
+          "value": null
+        },
+        "platform": {
+          "state": "null",
+          "value": null
+        },
+        "power": {
+          "state": "null",
+          "value": null
+        },
+        "production-signer": {
+          "state": "null",
+          "value": null
+        },
+        "rc-functions": {
+          "state": "null",
+          "value": null
+        },
+        "resume": {
+          "state": "null",
+          "value": null
+        },
+        "rtcm-carrier": {
+          "state": "null",
+          "value": null
+        },
+        "rtk-client": {
+          "state": "null",
+          "value": null
+        },
+        "rtsp-source": {
+          "state": "null",
+          "value": null
+        },
+        "save-upload": {
+          "state": "null",
+          "value": null
+        },
+        "signing": {
+          "claims": [
+            {
+              "capture": {
+                "fetched_at": "2026-10-12T03:50:20.945048+00:00",
+                "origin_id": "mavlink",
+                "sha256": "467045cba766a8907b1b66e7647d08be2a3513831e3fd610073f023975d34679",
+                "snapshot": "mavlink-signing.html",
+                "source": "mavlink-signing",
+                "url": "https://mavlink.io/en/guide/message_signing.html"
+              },
+              "evidence_span": "signature is valid",
+              "extraction": "normalized",
+              "source": "mavlink-signing",
+              "tier": "A",
+              "value": "MAVLink 2 signature validation and unsigned acceptance policies"
+            }
+          ],
+          "state": "sourced",
+          "value": "MAVLink 2 signature validation and unsigned acceptance policies"
+        },
+        "soc": {
+          "state": "null",
+          "value": null
+        },
+        "storage": {
+          "state": "null",
+          "value": null
+        },
+        "storage-claim": {
+          "state": "null",
+          "value": null
+        },
+        "survey-figures": {
+          "state": "null",
+          "value": null
+        },
+        "survey-grid": {
+          "state": "null",
+          "value": null
+        },
+        "terrain": {
+          "state": "null",
+          "value": null
+        },
+        "terrain-export": {
+          "state": "null",
+          "value": null
+        },
+        "transport": {
+          "state": "null",
+          "value": null
+        },
+        "version": {
+          "state": "null",
+          "value": null
+        },
+        "video-codec": {
+          "state": "null",
+          "value": null
+        },
+        "video-count": {
+          "state": "null",
+          "value": null
+        },
+        "vio": {
+          "state": "null",
+          "value": null
+        }
+      }
+    },
+    "QCS8550 (silicon vendor scope)": {
+      "entity_type": null,
+      "fields": {
+        "abi": {
+          "state": "null",
+          "value": null
+        },
+        "aircraft-battery": {
+          "state": "null",
+          "value": null
+        },
+        "api-endpoints": {
+          "state": "null",
+          "value": null
+        },
+        "api-family": {
+          "state": "null",
+          "value": null
+        },
+        "background-start": {
+          "state": "null",
+          "value": null
+        },
+        "calibration": {
+          "state": "null",
+          "value": null
+        },
+        "camera-upload": {
+          "state": "null",
+          "value": null
+        },
+        "capability-ui": {
+          "state": "null",
+          "value": null
+        },
+        "capture-observation": {
+          "state": "null",
+          "value": null
+        },
+        "channel-feedback": {
+          "state": "null",
+          "value": null
+        },
+        "connection-example": {
+          "state": "null",
+          "value": null
+        },
+        "controller-battery-api": {
+          "state": "null",
+          "value": null
+        },
+        "controller-bsp-update": {
+          "state": "null",
+          "value": null
+        },
+        "cpu-topology": {
+          "claims": [
+            {
+              "capture": {
+                "derived_from": {
+                  "sha256": "5ec82ad56f4a16a5dad41e6a876252f09ce73dddf7b163b40e7507655f86be45",
+                  "snapshot": "qualcomm-selector.pdf",
+                  "source": "qualcomm-selector"
+                },
+                "fetched_at": "2026-10-12T03:46:00.863090+00:00",
+                "origin_id": "qualcomm",
+                "sha256": "e00a46f435c2791c57baf07ad2bf5f3214b89c4b60b257da698088d96dcf64fb",
+                "snapshot": "qualcomm-selector.pdf.txt",
+                "source": "qualcomm-selector-text",
+                "url": "https://www.qualcomm.com/content/dam/qcomm-martech/dm-assets/documents/Qualcomm-Application-Processors-for-IoT-Selector-Guide.PDF"
+              },
+              "evidence_span": "Octa-Core",
+              "extraction": "normalized",
+              "source": "qualcomm-selector-text",
+              "tier": "A",
+              "value": "Octa-core"
+            }
+          ],
+          "state": "sourced",
+          "value": "Octa-core"
+        },
+        "current-channel-map": {
+          "state": "null",
+          "value": null
+        },
+        "decoder-limit": {
+          "state": "null",
+          "value": null
+        },
+        "device-sdk-url": {
+          "state": "null",
+          "value": null
+        },
+        "flight-authority": {
+          "state": "null",
+          "value": null
+        },
+        "forwarding": {
+          "state": "null",
+          "value": null
+        },
+        "gpu": {
+          "claims": [
+            {
+              "capture": {
+                "derived_from": {
+                  "sha256": "5ec82ad56f4a16a5dad41e6a876252f09ce73dddf7b163b40e7507655f86be45",
+                  "snapshot": "qualcomm-selector.pdf",
+                  "source": "qualcomm-selector"
+                },
+                "fetched_at": "2026-10-12T03:46:00.863090+00:00",
+                "origin_id": "qualcomm",
+                "sha256": "e00a46f435c2791c57baf07ad2bf5f3214b89c4b60b257da698088d96dcf64fb",
+                "snapshot": "qualcomm-selector.pdf.txt",
+                "source": "qualcomm-selector-text",
+                "url": "https://www.qualcomm.com/content/dam/qcomm-martech/dm-assets/documents/Qualcomm-Application-Processors-for-IoT-Selector-Guide.PDF"
+              },
+              "evidence_span": "Adreno™ 740",
+              "extraction": "normalized",
+              "source": "qualcomm-selector-text",
+              "tier": "A",
+              "value": "Adreno 740"
+            }
+          ],
+          "state": "sourced",
+          "value": "Adreno 740"
+        },
+        "h265-depayload": {
+          "state": "null",
+          "value": null
+        },
+        "historical-name": {
+          "state": "null",
+          "value": null
+        },
+        "input-events": {
+          "state": "null",
+          "value": null
+        },
+        "installed-build": {
+          "state": "null",
+          "value": null
+        },
+        "installed-codec-limits": {
+          "state": "null",
+          "value": null
+        },
+        "installed-radio": {
+          "state": "null",
+          "value": null
+        },
+        "joystick-count": {
+          "state": "null",
+          "value": null
+        },
+        "legacy-control-example": {
+          "state": "null",
+          "value": null
+        },
+        "link-statistics": {
+          "state": "null",
+          "value": null
+        },
+        "live-video-codec": {
+          "state": "null",
+          "value": null
+        },
+        "low-latency": {
+          "state": "null",
+          "value": null
+        },
+        "manual-axis": {
+          "state": "null",
+          "value": null
+        },
+        "manual-version": {
+          "state": "null",
+          "value": null
+        },
+        "measured-latency": {
+          "state": "null",
+          "value": null
+        },
+        "mission-ownership": {
+          "state": "null",
+          "value": null
+        },
+        "mission-patterns": {
+          "state": "null",
+          "value": null
+        },
+        "offline-map": {
+          "state": "null",
+          "value": null
+        },
+        "os": {
+          "state": "null",
+          "value": null
+        },
+        "package-update": {
+          "state": "null",
+          "value": null
+        },
+        "packet-dedup": {
+          "state": "null",
+          "value": null
+        },
+        "payload-ota": {
+          "state": "null",
+          "value": null
+        },
+        "payload-ota-guards": {
+          "state": "null",
+          "value": null
+        },
+        "per-link-status": {
+          "state": "null",
+          "value": null
+        },
+        "permission-checks": {
+          "state": "null",
+          "value": null
+        },
+        "platform": {
+          "state": "null",
+          "value": null
+        },
+        "power": {
+          "state": "null",
+          "value": null
+        },
+        "production-signer": {
+          "state": "null",
+          "value": null
+        },
+        "rc-functions": {
+          "state": "null",
+          "value": null
+        },
+        "resume": {
+          "state": "null",
+          "value": null
+        },
+        "rtcm-carrier": {
+          "state": "null",
+          "value": null
+        },
+        "rtk-client": {
+          "state": "null",
+          "value": null
+        },
+        "rtsp-source": {
+          "state": "null",
+          "value": null
+        },
+        "save-upload": {
+          "state": "null",
+          "value": null
+        },
+        "signing": {
+          "state": "null",
+          "value": null
+        },
+        "soc": {
+          "state": "null",
+          "value": null
+        },
+        "storage": {
+          "state": "null",
+          "value": null
+        },
+        "storage-claim": {
+          "state": "null",
+          "value": null
+        },
+        "survey-figures": {
+          "state": "null",
+          "value": null
+        },
+        "survey-grid": {
+          "state": "null",
+          "value": null
+        },
+        "terrain": {
+          "state": "null",
+          "value": null
+        },
+        "terrain-export": {
+          "state": "null",
+          "value": null
+        },
+        "transport": {
+          "state": "null",
+          "value": null
+        },
+        "version": {
+          "state": "null",
+          "value": null
+        },
+        "video-codec": {
+          "state": "null",
+          "value": null
+        },
+        "video-count": {
+          "state": "null",
+          "value": null
+        },
+        "vio": {
+          "state": "null",
+          "value": null
+        }
+      }
+    },
+    "RAGAS (historical controller example)": {
+      "entity_type": null,
+      "fields": {
+        "abi": {
+          "state": "null",
+          "value": null
+        },
+        "aircraft-battery": {
+          "state": "null",
+          "value": null
+        },
+        "api-endpoints": {
+          "state": "null",
+          "value": null
+        },
+        "api-family": {
+          "state": "null",
+          "value": null
+        },
+        "background-start": {
+          "state": "null",
+          "value": null
+        },
+        "calibration": {
+          "state": "null",
+          "value": null
+        },
+        "camera-upload": {
+          "state": "null",
+          "value": null
+        },
+        "capability-ui": {
+          "state": "null",
+          "value": null
+        },
+        "capture-observation": {
+          "state": "null",
+          "value": null
+        },
+        "channel-feedback": {
+          "state": "null",
+          "value": null
+        },
+        "connection-example": {
+          "claims": [
+            {
+              "capture": {
+                "fetched_at": "2026-10-12T03:49:01.701038+00:00",
+                "origin_id": "rtr",
+                "sha256": "91546c8074f7a916216b76056435bcf1919d6a672a38a6df867839d487cb1c54",
+                "snapshot": "manual-legacy-app-settings.md",
+                "source": "manual-legacy-app-settings",
+                "url": "https://rtrobotics.gitbook.io/real-time-robotics/payloads/herasight-2/ragas-app/app-settings/drone-and-remote-controller.md"
+              },
+              "evidence_span": "192.168.0.210:20002",
+              "extraction": "normalized",
+              "source": "manual-legacy-app-settings",
+              "tier": "A",
+              "value": "TCP 192.168.0.210:20002 in legacy instructions; not a v2 default"
+            }
+          ],
+          "state": "sourced",
+          "value": "TCP 192.168.0.210:20002 in legacy instructions; not a v2 default"
+        },
+        "controller-battery-api": {
+          "state": "null",
+          "value": null
+        },
+        "controller-bsp-update": {
+          "state": "null",
+          "value": null
+        },
+        "cpu-topology": {
+          "state": "null",
+          "value": null
+        },
+        "current-channel-map": {
+          "state": "null",
+          "value": null
+        },
+        "decoder-limit": {
+          "state": "null",
+          "value": null
+        },
+        "device-sdk-url": {
+          "state": "null",
+          "value": null
+        },
+        "flight-authority": {
+          "state": "null",
+          "value": null
+        },
+        "forwarding": {
+          "state": "null",
+          "value": null
+        },
+        "gpu": {
+          "state": "null",
+          "value": null
+        },
+        "h265-depayload": {
+          "state": "null",
+          "value": null
+        },
+        "historical-name": {
+          "state": "null",
+          "value": null
+        },
+        "input-events": {
+          "state": "null",
+          "value": null
+        },
+        "installed-build": {
+          "state": "null",
+          "value": null
+        },
+        "installed-codec-limits": {
+          "state": "null",
+          "value": null
+        },
+        "installed-radio": {
+          "state": "null",
+          "value": null
+        },
+        "joystick-count": {
+          "state": "null",
+          "value": null
+        },
+        "legacy-control-example": {
+          "state": "null",
+          "value": null
+        },
+        "link-statistics": {
+          "state": "null",
+          "value": null
+        },
+        "live-video-codec": {
+          "state": "null",
+          "value": null
+        },
+        "low-latency": {
+          "state": "null",
+          "value": null
+        },
+        "manual-axis": {
+          "state": "null",
+          "value": null
+        },
+        "manual-version": {
+          "state": "null",
+          "value": null
+        },
+        "measured-latency": {
+          "state": "null",
+          "value": null
+        },
+        "mission-ownership": {
+          "state": "null",
+          "value": null
+        },
+        "mission-patterns": {
+          "state": "null",
+          "value": null
+        },
+        "offline-map": {
+          "state": "null",
+          "value": null
+        },
+        "os": {
+          "state": "null",
+          "value": null
+        },
+        "package-update": {
+          "state": "null",
+          "value": null
+        },
+        "packet-dedup": {
+          "state": "null",
+          "value": null
+        },
+        "payload-ota": {
+          "state": "null",
+          "value": null
+        },
+        "payload-ota-guards": {
+          "state": "null",
+          "value": null
+        },
+        "per-link-status": {
+          "state": "null",
+          "value": null
+        },
+        "permission-checks": {
+          "state": "null",
+          "value": null
+        },
+        "platform": {
+          "state": "null",
+          "value": null
+        },
+        "power": {
+          "state": "null",
+          "value": null
+        },
+        "production-signer": {
+          "state": "null",
+          "value": null
+        },
+        "rc-functions": {
+          "state": "null",
+          "value": null
+        },
+        "resume": {
+          "state": "null",
+          "value": null
+        },
+        "rtcm-carrier": {
+          "state": "null",
+          "value": null
+        },
+        "rtk-client": {
+          "state": "null",
+          "value": null
+        },
+        "rtsp-source": {
+          "state": "null",
+          "value": null
+        },
+        "save-upload": {
+          "state": "null",
+          "value": null
+        },
+        "signing": {
+          "state": "null",
+          "value": null
+        },
+        "soc": {
+          "state": "null",
+          "value": null
+        },
+        "storage": {
+          "state": "null",
+          "value": null
+        },
+        "storage-claim": {
+          "state": "null",
+          "value": null
+        },
+        "survey-figures": {
+          "state": "null",
+          "value": null
+        },
+        "survey-grid": {
+          "state": "null",
+          "value": null
+        },
+        "terrain": {
+          "state": "null",
+          "value": null
+        },
+        "terrain-export": {
+          "state": "null",
+          "value": null
+        },
+        "transport": {
+          "state": "null",
+          "value": null
+        },
+        "version": {
+          "state": "null",
+          "value": null
+        },
+        "video-codec": {
+          "state": "null",
+          "value": null
+        },
+        "video-count": {
+          "state": "null",
+          "value": null
+        },
+        "vio": {
+          "state": "null",
+          "value": null
+        }
+      }
+    },
+    "RAGAS (historical payload controls)": {
+      "entity_type": null,
+      "fields": {
+        "abi": {
+          "state": "null",
+          "value": null
+        },
+        "aircraft-battery": {
+          "state": "null",
+          "value": null
+        },
+        "api-endpoints": {
+          "state": "null",
+          "value": null
+        },
+        "api-family": {
+          "state": "null",
+          "value": null
+        },
+        "background-start": {
+          "state": "null",
+          "value": null
+        },
+        "calibration": {
+          "state": "null",
+          "value": null
+        },
+        "camera-upload": {
+          "state": "null",
+          "value": null
+        },
+        "capability-ui": {
+          "state": "null",
+          "value": null
+        },
+        "capture-observation": {
+          "state": "null",
+          "value": null
+        },
+        "channel-feedback": {
+          "state": "null",
+          "value": null
+        },
+        "connection-example": {
+          "state": "null",
+          "value": null
+        },
+        "controller-battery-api": {
+          "state": "null",
+          "value": null
+        },
+        "controller-bsp-update": {
+          "state": "null",
+          "value": null
+        },
+        "cpu-topology": {
+          "state": "null",
+          "value": null
+        },
+        "current-channel-map": {
+          "state": "null",
+          "value": null
+        },
+        "decoder-limit": {
+          "state": "null",
+          "value": null
+        },
+        "device-sdk-url": {
+          "state": "null",
+          "value": null
+        },
+        "flight-authority": {
+          "state": "null",
+          "value": null
+        },
+        "forwarding": {
+          "state": "null",
+          "value": null
+        },
+        "gpu": {
+          "state": "null",
+          "value": null
+        },
+        "h265-depayload": {
+          "state": "null",
+          "value": null
+        },
+        "historical-name": {
+          "state": "null",
+          "value": null
+        },
+        "input-events": {
+          "state": "null",
+          "value": null
+        },
+        "installed-build": {
+          "state": "null",
+          "value": null
+        },
+        "installed-codec-limits": {
+          "state": "null",
+          "value": null
+        },
+        "installed-radio": {
+          "state": "null",
+          "value": null
+        },
+        "joystick-count": {
+          "state": "null",
+          "value": null
+        },
+        "legacy-control-example": {
+          "claims": [
+            {
+              "capture": {
+                "fetched_at": "2026-10-12T03:47:15.771265+00:00",
+                "origin_id": "rtr",
+                "sha256": "546ca236c3881154f8e22c3b385bf114b70a99be0899265b37b86507d9343a61",
+                "snapshot": "manual-payloads-herasight-2-remote-controller-operation.md",
+                "source": "manual-payloads-herasight-2-remote-controller-operation",
+                "url": "https://rtrobotics.gitbook.io/real-time-robotics/payloads/herasight-2/remote-controller-operation.md"
+              },
+              "evidence_span": "1st Scroll Wheel",
+              "extraction": "normalized",
+              "source": "manual-payloads-herasight-2-remote-controller-operation",
+              "tier": "A",
+              "value": "First wheel EO zoom; second wheel IR zoom; not current channel IDs"
+            }
+          ],
+          "state": "sourced",
+          "value": "First wheel EO zoom; second wheel IR zoom; not current channel IDs"
+        },
+        "link-statistics": {
+          "state": "null",
+          "value": null
+        },
+        "live-video-codec": {
+          "state": "null",
+          "value": null
+        },
+        "low-latency": {
+          "state": "null",
+          "value": null
+        },
+        "manual-axis": {
+          "state": "null",
+          "value": null
+        },
+        "manual-version": {
+          "state": "null",
+          "value": null
+        },
+        "measured-latency": {
+          "state": "null",
+          "value": null
+        },
+        "mission-ownership": {
+          "state": "null",
+          "value": null
+        },
+        "mission-patterns": {
+          "state": "null",
+          "value": null
+        },
+        "offline-map": {
+          "state": "null",
+          "value": null
+        },
+        "os": {
+          "state": "null",
+          "value": null
+        },
+        "package-update": {
+          "state": "null",
+          "value": null
+        },
+        "packet-dedup": {
+          "state": "null",
+          "value": null
+        },
+        "payload-ota": {
+          "state": "null",
+          "value": null
+        },
+        "payload-ota-guards": {
+          "state": "null",
+          "value": null
+        },
+        "per-link-status": {
+          "state": "null",
+          "value": null
+        },
+        "permission-checks": {
+          "state": "null",
+          "value": null
+        },
+        "platform": {
+          "state": "null",
+          "value": null
+        },
+        "power": {
+          "state": "null",
+          "value": null
+        },
+        "production-signer": {
+          "state": "null",
+          "value": null
+        },
+        "rc-functions": {
+          "state": "null",
+          "value": null
+        },
+        "resume": {
+          "state": "null",
+          "value": null
+        },
+        "rtcm-carrier": {
+          "state": "null",
+          "value": null
+        },
+        "rtk-client": {
+          "state": "null",
+          "value": null
+        },
+        "rtsp-source": {
+          "state": "null",
+          "value": null
+        },
+        "save-upload": {
+          "state": "null",
+          "value": null
+        },
+        "signing": {
+          "state": "null",
+          "value": null
+        },
+        "soc": {
+          "state": "null",
+          "value": null
+        },
+        "storage": {
+          "state": "null",
+          "value": null
+        },
+        "storage-claim": {
+          "state": "null",
+          "value": null
+        },
+        "survey-figures": {
+          "state": "null",
+          "value": null
+        },
+        "survey-grid": {
+          "state": "null",
+          "value": null
+        },
+        "terrain": {
+          "state": "null",
+          "value": null
+        },
+        "terrain-export": {
+          "state": "null",
+          "value": null
+        },
+        "transport": {
+          "state": "null",
+          "value": null
+        },
+        "version": {
+          "state": "null",
+          "value": null
+        },
+        "video-codec": {
+          "state": "null",
+          "value": null
+        },
+        "video-count": {
+          "state": "null",
+          "value": null
+        },
+        "vio": {
+          "state": "null",
+          "value": null
+        }
+      }
+    },
+    "RAGAS (manual scoped to 4.0.0 build 4)": {
+      "entity_type": null,
+      "fields": {
+        "abi": {
+          "state": "null",
+          "value": null
+        },
+        "aircraft-battery": {
+          "claims": [
+            {
+              "capture": {
+                "fetched_at": "2026-10-12T03:47:15.387131+00:00",
+                "origin_id": "rtr",
+                "sha256": "31564080697e60b6a9c0cf0ec93029494101df03be871aa9fee46df512a22247",
+                "snapshot": "manual-user-guide-flight-top-bar-status.md",
+                "source": "manual-user-guide-flight-top-bar-status",
+                "url": "https://rtrobotics.gitbook.io/real-time-robotics/user-guide/flight/top-bar-status.md"
+              },
+              "evidence_span": "aircraft battery",
+              "extraction": "normalized",
+              "source": "manual-user-guide-flight-top-bar-status",
+              "tier": "A",
+              "value": "Top bar battery indicator refers to the aircraft"
+            }
+          ],
+          "state": "sourced",
+          "value": "Top bar battery indicator refers to the aircraft"
+        },
+        "api-endpoints": {
+          "state": "null",
+          "value": null
+        },
+        "api-family": {
+          "state": "null",
+          "value": null
+        },
+        "background-start": {
+          "state": "null",
+          "value": null
+        },
+        "calibration": {
+          "claims": [
+            {
+              "capture": {
+                "fetched_at": "2026-10-12T03:47:05.940528+00:00",
+                "origin_id": "rtr",
+                "sha256": "0204639a17c640b010d6ff46596f3f8ca02b60c3609d6fcef16eb188d7454f4f",
+                "snapshot": "manual-user-guide-settings-rc-settings.md",
+                "source": "manual-user-guide-settings-rc-settings",
+                "url": "https://rtrobotics.gitbook.io/real-time-robotics/user-guide/settings/rc-settings.md"
+              },
+              "evidence_span": "Guided calibration",
+              "extraction": "normalized",
+              "source": "manual-user-guide-settings-rc-settings",
+              "tier": "A",
+              "value": "Guided sticks, triggers, wheels and switches; stick mode selection"
+            }
+          ],
+          "state": "sourced",
+          "value": "Guided sticks, triggers, wheels and switches; stick mode selection"
+        },
+        "camera-upload": {
+          "state": "null",
+          "value": null
+        },
+        "capability-ui": {
+          "claims": [
+            {
+              "capture": {
+                "fetched_at": "2026-10-12T03:47:11.844610+00:00",
+                "origin_id": "rtr",
+                "sha256": "a0d00b5002b16afa1bfb6ac291d9eed5ee9680b97fc3e1081530d5d30c137278",
+                "snapshot": "manual-reference-capability-matrix.md",
+                "source": "manual-reference-capability-matrix",
+                "url": "https://rtrobotics.gitbook.io/real-time-robotics/reference/capability-matrix.md"
+              },
+              "evidence_span": "EIS",
+              "extraction": "normalized",
+              "source": "manual-reference-capability-matrix",
+              "tier": "A",
+              "value": "Controls depend on actual payload capabilities"
+            }
+          ],
+          "state": "sourced",
+          "value": "Controls depend on actual payload capabilities"
+        },
+        "capture-observation": {
+          "state": "null",
+          "value": null
+        },
+        "channel-feedback": {
+          "claims": [
+            {
+              "capture": {
+                "fetched_at": "2026-10-12T03:47:05.940528+00:00",
+                "origin_id": "rtr",
+                "sha256": "0204639a17c640b010d6ff46596f3f8ca02b60c3609d6fcef16eb188d7454f4f",
+                "snapshot": "manual-user-guide-settings-rc-settings.md",
+                "source": "manual-user-guide-settings-rc-settings",
+                "url": "https://rtrobotics.gitbook.io/real-time-robotics/user-guide/settings/rc-settings.md"
+              },
+              "evidence_span": "Channels are shown live",
+              "extraction": "normalized",
+              "source": "manual-user-guide-settings-rc-settings",
+              "tier": "A",
+              "value": "Live channels and reversed throttle handling documented"
+            }
+          ],
+          "state": "sourced",
+          "value": "Live channels and reversed throttle handling documented"
+        },
+        "connection-example": {
+          "state": "null",
+          "value": null
+        },
+        "controller-battery-api": {
+          "state": "null",
+          "value": null
+        },
+        "controller-bsp-update": {
+          "state": "null",
+          "value": null
+        },
+        "cpu-topology": {
+          "state": "null",
+          "value": null
+        },
+        "current-channel-map": {
+          "state": "null",
+          "value": null
+        },
+        "decoder-limit": {
+          "state": "null",
+          "value": null
+        },
+        "device-sdk-url": {
+          "state": "null",
+          "value": null
+        },
+        "flight-authority": {
+          "claims": [
+            {
+              "capture": {
+                "fetched_at": "2026-10-12T03:47:03.349041+00:00",
+                "origin_id": "rtr",
+                "sha256": "04c5ecff64b0e0f8c833c6ef6d8d9bd3bdbc748eeeedfd994b4d7417913df750",
+                "snapshot": "manual-ragas.md",
+                "source": "manual-ragas",
+                "url": "https://rtrobotics.gitbook.io/real-time-robotics/ragas.md"
+              },
+              "evidence_span": "the behaviour is the autopilot's",
+              "extraction": "normalized",
+              "source": "manual-ragas",
+              "tier": "A",
+              "value": "Autopilot owns avoidance, failsafe actions and fence enforcement"
+            }
+          ],
+          "state": "sourced",
+          "value": "Autopilot owns avoidance, failsafe actions and fence enforcement"
+        },
+        "forwarding": {
+          "claims": [
+            {
+              "capture": {
+                "fetched_at": "2026-10-12T03:47:06.304590+00:00",
+                "origin_id": "rtr",
+                "sha256": "38cd66d07c8781ff9585a24a9b49ead81deb9dbbabf5f29ad579b94dbe755dd0",
+                "snapshot": "manual-user-guide-settings-transmission-settings.md",
+                "source": "manual-user-guide-settings-transmission-settings",
+                "url": "https://rtrobotics.gitbook.io/real-time-robotics/user-guide/settings/transmission-settings.md"
+              },
+              "evidence_span": "Forwarding",
+              "extraction": "normalized",
+              "source": "manual-user-guide-settings-transmission-settings",
+              "tier": "A",
+              "value": "Companion tool forwarding at host/port"
+            }
+          ],
+          "state": "sourced",
+          "value": "Companion tool forwarding at host/port"
+        },
+        "gpu": {
+          "state": "null",
+          "value": null
+        },
+        "h265-depayload": {
+          "state": "null",
+          "value": null
+        },
+        "historical-name": {
+          "state": "null",
+          "value": null
+        },
+        "input-events": {
+          "state": "null",
+          "value": null
+        },
+        "installed-build": {
+          "state": "null",
+          "value": null
+        },
+        "installed-codec-limits": {
+          "state": "null",
+          "value": null
+        },
+        "installed-radio": {
+          "state": "null",
+          "value": null
+        },
+        "joystick-count": {
+          "state": "null",
+          "value": null
+        },
+        "legacy-control-example": {
+          "state": "null",
+          "value": null
+        },
+        "link-statistics": {
+          "claims": [
+            {
+              "capture": {
+                "fetched_at": "2026-10-12T03:47:06.304590+00:00",
+                "origin_id": "rtr",
+                "sha256": "38cd66d07c8781ff9585a24a9b49ead81deb9dbbabf5f29ad579b94dbe755dd0",
+                "snapshot": "manual-user-guide-settings-transmission-settings.md",
+                "source": "manual-user-guide-settings-transmission-settings",
+                "url": "https://rtrobotics.gitbook.io/real-time-robotics/user-guide/settings/transmission-settings.md"
+              },
+              "evidence_span": "Messages sent, received and lost",
+              "extraction": "normalized",
+              "source": "manual-user-guide-settings-transmission-settings",
+              "tier": "A",
+              "value": "Sent, received, lost and current data rate"
+            }
+          ],
+          "state": "sourced",
+          "value": "Sent, received, lost and current data rate"
+        },
+        "live-video-codec": {
+          "state": "null",
+          "value": null
+        },
+        "low-latency": {
+          "state": "null",
+          "value": null
+        },
+        "manual-axis": {
+          "state": "null",
+          "value": null
+        },
+        "manual-version": {
+          "claims": [
+            {
+              "capture": {
+                "fetched_at": "2026-10-12T03:47:03.349041+00:00",
+                "origin_id": "rtr",
+                "sha256": "04c5ecff64b0e0f8c833c6ef6d8d9bd3bdbc748eeeedfd994b4d7417913df750",
+                "snapshot": "manual-ragas.md",
+                "source": "manual-ragas",
+                "url": "https://rtrobotics.gitbook.io/real-time-robotics/ragas.md"
+              },
+              "evidence_span": "RAGAS 4.0.0 (build 4)",
+              "extraction": "normalized",
+              "source": "manual-ragas",
+              "tier": "A",
+              "value": "4.0.0 build 4"
+            }
+          ],
+          "state": "sourced",
+          "value": "4.0.0 build 4"
+        },
+        "measured-latency": {
+          "state": "null",
+          "value": null
+        },
+        "mission-ownership": {
+          "claims": [
+            {
+              "capture": {
+                "fetched_at": "2026-10-12T03:47:11.891444+00:00",
+                "origin_id": "rtr",
+                "sha256": "f711c975026e3e8735ce2492100c847e2399ff8763837541651d61433c4c37c0",
+                "snapshot": "manual-user-guide-mission.md",
+                "source": "manual-user-guide-mission",
+                "url": "https://rtrobotics.gitbook.io/real-time-robotics/user-guide/mission.md"
+              },
+              "evidence_span": "Uploading replaces",
+              "extraction": "normalized",
+              "source": "manual-user-guide-mission",
+              "tier": "A",
+              "value": "Uploading replaces the onboard mission"
+            }
+          ],
+          "state": "sourced",
+          "value": "Uploading replaces the onboard mission"
+        },
+        "mission-patterns": {
+          "claims": [
+            {
+              "capture": {
+                "fetched_at": "2026-10-12T03:47:13.144838+00:00",
+                "origin_id": "rtr",
+                "sha256": "95783c5c8905cf952f6e49161dc0856152d2a48ccbe1a1c96e374c740573e418",
+                "snapshot": "manual-user-guide-mission-waypoints-and-patterns.md",
+                "source": "manual-user-guide-mission-waypoints-and-patterns",
+                "url": "https://rtrobotics.gitbook.io/real-time-robotics/user-guide/mission/waypoints-and-patterns.md"
+              },
+              "evidence_span": "Corridor",
+              "extraction": "normalized",
+              "source": "manual-user-guide-mission-waypoints-and-patterns",
+              "tier": "A",
+              "value": "Survey, corridor, structure and orbit patterns"
+            }
+          ],
+          "state": "sourced",
+          "value": "Survey, corridor, structure and orbit patterns"
+        },
+        "offline-map": {
+          "claims": [
+            {
+              "capture": {
+                "fetched_at": "2026-10-12T03:47:14.267513+00:00",
+                "origin_id": "rtr",
+                "sha256": "02a5fd877a82a4b7f1012d42f460d96d8b488de7421053153f22328b77ea886e",
+                "snapshot": "manual-user-guide-map-offline-map.md",
+                "source": "manual-user-guide-map-offline-map",
+                "url": "https://rtrobotics.gitbook.io/real-time-robotics/user-guide/map/offline-map.md"
+              },
+              "evidence_span": "square",
+              "extraction": "normalized",
+              "source": "manual-user-guide-map-offline-map",
+              "tier": "A",
+              "value": "Download selected square/circle region; capacity/progress and recovery controls"
+            }
+          ],
+          "state": "sourced",
+          "value": "Download selected square/circle region; capacity/progress and recovery controls"
+        },
+        "os": {
+          "state": "null",
+          "value": null
+        },
+        "package-update": {
+          "claims": [
+            {
+              "capture": {
+                "fetched_at": "2026-10-12T03:47:03.348623+00:00",
+                "origin_id": "rtr",
+                "sha256": "ff366705857cfc64c5a9f7bdbd97494a3811972682f5744f0948a1d6e4687108",
+                "snapshot": "manual-getting-started-installation.md",
+                "source": "manual-getting-started-installation",
+                "url": "https://rtrobotics.gitbook.io/real-time-robotics/getting-started/installation.md"
+              },
+              "evidence_span": "updates arrive as an APK",
+              "extraction": "normalized",
+              "source": "manual-getting-started-installation",
+              "tier": "A",
+              "value": "Application updates arrive as APK"
+            }
+          ],
+          "state": "sourced",
+          "value": "Application updates arrive as APK"
+        },
+        "packet-dedup": {
+          "state": "null",
+          "value": null
+        },
+        "payload-ota": {
+          "claims": [
+            {
+              "capture": {
+                "fetched_at": "2026-10-12T03:47:10.693114+00:00",
+                "origin_id": "rtr",
+                "sha256": "330bfa81b498cf7d82a7190a4996ec6d41297b0ebbbc6ef63fded658df803af6",
+                "snapshot": "manual-user-guide-settings-ota-update.md",
+                "source": "manual-user-guide-settings-ota-update",
+                "url": "https://rtrobotics.gitbook.io/real-time-robotics/user-guide/settings/ota-update.md"
+              },
+              "evidence_span": "Installing payload firmware",
+              "extraction": "normalized",
+              "source": "manual-user-guide-settings-ota-update",
+              "tier": "A",
+              "value": "Payload firmware update with rollback/cancel; not Android/BSP OTA"
+            }
+          ],
+          "state": "sourced",
+          "value": "Payload firmware update with rollback/cancel; not Android/BSP OTA"
+        },
+        "payload-ota-guards": {
+          "claims": [
+            {
+              "capture": {
+                "fetched_at": "2026-10-12T03:47:10.693114+00:00",
+                "origin_id": "rtr",
+                "sha256": "330bfa81b498cf7d82a7190a4996ec6d41297b0ebbbc6ef63fded658df803af6",
+                "snapshot": "manual-user-guide-settings-ota-update.md",
+                "source": "manual-user-guide-settings-ota-update",
+                "url": "https://rtrobotics.gitbook.io/real-time-robotics/user-guide/settings/ota-update.md"
+              },
+              "evidence_span": "50%",
+              "extraction": "normalized",
+              "source": "manual-user-guide-settings-ota-update",
+              "tier": "A",
+              "value": "Disarmed aircraft and controller battery at least 50%"
+            }
+          ],
+          "state": "sourced",
+          "value": "Disarmed aircraft and controller battery at least 50%"
+        },
+        "per-link-status": {
+          "claims": [
+            {
+              "capture": {
+                "fetched_at": "2026-10-12T03:47:15.387131+00:00",
+                "origin_id": "rtr",
+                "sha256": "31564080697e60b6a9c0cf0ec93029494101df03be871aa9fee46df512a22247",
+                "snapshot": "manual-user-guide-flight-top-bar-status.md",
+                "source": "manual-user-guide-flight-top-bar-status",
+                "url": "https://rtrobotics.gitbook.io/real-time-robotics/user-guide/flight/top-bar-status.md"
+              },
+              "evidence_span": "per-link breakdown",
+              "extraction": "normalized",
+              "source": "manual-user-guide-flight-top-bar-status",
+              "tier": "A",
+              "value": "Per-link signal and noise detail documented"
+            }
+          ],
+          "state": "sourced",
+          "value": "Per-link signal and noise detail documented"
+        },
+        "permission-checks": {
+          "claims": [
+            {
+              "capture": {
+                "fetched_at": "2026-10-12T03:47:03.348623+00:00",
+                "origin_id": "rtr",
+                "sha256": "ff366705857cfc64c5a9f7bdbd97494a3811972682f5744f0948a1d6e4687108",
+                "snapshot": "manual-getting-started-installation.md",
+                "source": "manual-getting-started-installation",
+                "url": "https://rtrobotics.gitbook.io/real-time-robotics/getting-started/installation.md"
+              },
+              "evidence_span": "Battery-optimisation exemption",
+              "extraction": "normalized",
+              "source": "manual-getting-started-installation",
+              "tier": "A",
+              "value": "Overlay permission and battery-optimisation exemption checked at start"
+            }
+          ],
+          "state": "sourced",
+          "value": "Overlay permission and battery-optimisation exemption checked at start"
+        },
+        "platform": {
+          "claims": [
+            {
+              "capture": {
+                "fetched_at": "2026-10-12T03:47:03.349143+00:00",
+                "origin_id": "rtr",
+                "sha256": "8cbaeca0b5e1afbca27ea387e6a7892b5909846f9cc6a0eaadf9ab4380bc968d",
+                "snapshot": "manual-getting-started-supported-platforms.md",
+                "source": "manual-getting-started-supported-platforms",
+                "url": "https://rtrobotics.gitbook.io/real-time-robotics/getting-started/supported-platforms.md"
+              },
+              "evidence_span": "Android",
+              "extraction": "normalized",
+              "source": "manual-getting-started-supported-platforms",
+              "tier": "A",
+              "value": "Android field controller; Linux/macOS planning and review"
+            }
+          ],
+          "state": "sourced",
+          "value": "Android field controller; Linux/macOS planning and review"
+        },
+        "power": {
+          "state": "null",
+          "value": null
+        },
+        "production-signer": {
+          "state": "null",
+          "value": null
+        },
+        "rc-functions": {
+          "claims": [
+            {
+              "capture": {
+                "fetched_at": "2026-10-12T03:47:05.940528+00:00",
+                "origin_id": "rtr",
+                "sha256": "0204639a17c640b010d6ff46596f3f8ca02b60c3609d6fcef16eb188d7454f4f",
+                "snapshot": "manual-user-guide-settings-rc-settings.md",
+                "source": "manual-user-guide-settings-rc-settings",
+                "url": "https://rtrobotics.gitbook.io/real-time-robotics/user-guide/settings/rc-settings.md"
+              },
+              "evidence_span": "Twelve functions",
+              "extraction": "normalized",
+              "source": "manual-user-guide-settings-rc-settings",
+              "tier": "A",
+              "value": "Twelve assignable functions, not a count of physical buttons"
+            }
+          ],
+          "state": "sourced",
+          "value": "Twelve assignable functions, not a count of physical buttons"
+        },
+        "resume": {
+          "state": "null",
+          "value": null
+        },
+        "rtcm-carrier": {
+          "state": "null",
+          "value": null
+        },
+        "rtk-client": {
+          "claims": [
+            {
+              "capture": {
+                "fetched_at": "2026-10-12T03:47:06.504855+00:00",
+                "origin_id": "rtr",
+                "sha256": "34328098fabed271fd77c34b4088a86fb47497698b54d6b4300b44929cbf1a27",
+                "snapshot": "manual-user-guide-settings-rtk-settings.md",
+                "source": "manual-user-guide-settings-rtk-settings",
+                "url": "https://rtrobotics.gitbook.io/real-time-robotics/user-guide/settings/rtk-settings.md"
+              },
+              "evidence_span": "NTRIP profiles",
+              "extraction": "normalized",
+              "source": "manual-user-guide-settings-rtk-settings",
+              "tier": "A",
+              "value": "NTRIP profiles and automatic reconnection"
+            }
+          ],
+          "state": "sourced",
+          "value": "NTRIP profiles and automatic reconnection"
+        },
+        "rtsp-source": {
+          "state": "null",
+          "value": null
+        },
+        "save-upload": {
+          "claims": [
+            {
+              "capture": {
+                "fetched_at": "2026-10-12T03:47:11.891444+00:00",
+                "origin_id": "rtr",
+                "sha256": "f711c975026e3e8735ce2492100c847e2399ff8763837541651d61433c4c37c0",
+                "snapshot": "manual-user-guide-mission.md",
+                "source": "manual-user-guide-mission",
+                "url": "https://rtrobotics.gitbook.io/real-time-robotics/user-guide/mission.md"
+              },
+              "evidence_span": "Saving is local to the controller",
+              "extraction": "normalized",
+              "source": "manual-user-guide-mission",
+              "tier": "A",
+              "value": "Local save and aircraft upload are separate operations"
+            }
+          ],
+          "state": "sourced",
+          "value": "Local save and aircraft upload are separate operations"
+        },
+        "signing": {
+          "claims": [
+            {
+              "capture": {
+                "fetched_at": "2026-10-12T03:47:06.304590+00:00",
+                "origin_id": "rtr",
+                "sha256": "38cd66d07c8781ff9585a24a9b49ead81deb9dbbabf5f29ad579b94dbe755dd0",
+                "snapshot": "manual-user-guide-settings-transmission-settings.md",
+                "source": "manual-user-guide-settings-transmission-settings",
+                "url": "https://rtrobotics.gitbook.io/real-time-robotics/user-guide/settings/transmission-settings.md"
+              },
+              "evidence_span": "MAVLink 2 signing",
+              "extraction": "normalized",
+              "source": "manual-user-guide-settings-transmission-settings",
+              "tier": "A",
+              "value": "MAVLink 2 signing with key management"
+            }
+          ],
+          "state": "sourced",
+          "value": "MAVLink 2 signing with key management"
+        },
+        "soc": {
+          "state": "null",
+          "value": null
+        },
+        "storage": {
+          "claims": [
+            {
+              "capture": {
+                "fetched_at": "2026-10-12T03:47:09.569971+00:00",
+                "origin_id": "rtr",
+                "sha256": "7bb390b0f1f17b40accaa4d2b8655e999dcbd251d8a1b57be45a4b611399be87",
+                "snapshot": "manual-user-guide-settings-storage.md",
+                "source": "manual-user-guide-settings-storage",
+                "url": "https://rtrobotics.gitbook.io/real-time-robotics/user-guide/settings/storage.md"
+              },
+              "evidence_span": "Terrain cache",
+              "extraction": "normalized",
+              "source": "manual-user-guide-settings-storage",
+              "tier": "A",
+              "value": "Map and terrain caches, telemetry logs and media categories"
+            }
+          ],
+          "state": "sourced",
+          "value": "Map and terrain caches, telemetry logs and media categories"
+        },
+        "storage-claim": {
+          "state": "null",
+          "value": null
+        },
+        "survey-figures": {
+          "state": "null",
+          "value": null
+        },
+        "survey-grid": {
+          "state": "null",
+          "value": null
+        },
+        "terrain": {
+          "claims": [
+            {
+              "capture": {
+                "fetched_at": "2026-10-12T03:47:13.552827+00:00",
+                "origin_id": "rtr",
+                "sha256": "c633cf2923fed8866cb764fd94c9bc4a1fdb06b8af0b9663bf2cd08371a6b074",
+                "snapshot": "manual-user-guide-mission-mission-terrain.md",
+                "source": "manual-user-guide-mission-mission-terrain",
+                "url": "https://rtrobotics.gitbook.io/real-time-robotics/user-guide/mission/mission-terrain.md"
+              },
+              "evidence_span": "cached",
+              "extraction": "normalized",
+              "source": "manual-user-guide-mission-mission-terrain",
+              "tier": "A",
+              "value": "Elevation data cached for later offline use"
+            }
+          ],
+          "state": "sourced",
+          "value": "Elevation data cached for later offline use"
+        },
+        "terrain-export": {
+          "state": "null",
+          "value": null
+        },
+        "transport": {
+          "state": "null",
+          "value": null
+        },
+        "version": {
+          "state": "null",
+          "value": null
+        },
+        "video-codec": {
+          "state": "null",
+          "value": null
+        },
+        "video-count": {
+          "state": "null",
+          "value": null
+        },
+        "vio": {
+          "claims": [
+            {
+              "capture": {
+                "fetched_at": "2026-10-12T03:47:06.504855+00:00",
+                "origin_id": "rtr",
+                "sha256": "34328098fabed271fd77c34b4088a86fb47497698b54d6b4300b44929cbf1a27",
+                "snapshot": "manual-user-guide-settings-rtk-settings.md",
+                "source": "manual-user-guide-settings-rtk-settings",
+                "url": "https://rtrobotics.gitbook.io/real-time-robotics/user-guide/settings/rtk-settings.md"
+              },
+              "evidence_span": "origin coordinates",
+              "extraction": "normalized",
+              "source": "manual-user-guide-settings-rtk-settings",
+              "tier": "A",
+              "value": "Manual/automatic VIO mode and origin coordinates"
+            }
+          ],
+          "state": "sourced",
+          "value": "Manual/automatic VIO mode and origin coordinates"
+        }
+      }
+    },
+    "RAGAS (public API marketing)": {
+      "entity_type": null,
+      "fields": {
+        "abi": {
+          "state": "null",
+          "value": null
+        },
+        "aircraft-battery": {
+          "state": "null",
+          "value": null
+        },
+        "api-endpoints": {
+          "state": "null",
+          "value": null
+        },
+        "api-family": {
+          "claims": [
+            {
+              "capture": {
+                "fetched_at": "2026-10-12T03:45:58.764141+00:00",
+                "origin_id": "rtr",
+                "sha256": "6865989eaa2193d4ffefe3446249c7690bace06314140828cf046649619b9996",
+                "snapshot": "rtr-ragas.html",
+                "source": "rtr-ragas",
+                "url": "https://rtrobotics.com/commercial/ragas"
+              },
+              "evidence_span": "REST + WebSocket",
+              "extraction": "normalized",
+              "source": "rtr-ragas",
+              "tier": "A",
+              "value": "REST and WebSocket advertised; endpoints/schema not supplied here"
+            }
+          ],
+          "state": "sourced",
+          "value": "REST and WebSocket advertised; endpoints/schema not supplied here"
+        },
+        "background-start": {
+          "state": "null",
+          "value": null
+        },
+        "calibration": {
+          "state": "null",
+          "value": null
+        },
+        "camera-upload": {
+          "state": "null",
+          "value": null
+        },
+        "capability-ui": {
+          "state": "null",
+          "value": null
+        },
+        "capture-observation": {
+          "state": "null",
+          "value": null
+        },
+        "channel-feedback": {
+          "state": "null",
+          "value": null
+        },
+        "connection-example": {
+          "state": "null",
+          "value": null
+        },
+        "controller-battery-api": {
+          "state": "null",
+          "value": null
+        },
+        "controller-bsp-update": {
+          "state": "null",
+          "value": null
+        },
+        "cpu-topology": {
+          "state": "null",
+          "value": null
+        },
+        "current-channel-map": {
+          "state": "null",
+          "value": null
+        },
+        "decoder-limit": {
+          "state": "null",
+          "value": null
+        },
+        "device-sdk-url": {
+          "state": "null",
+          "value": null
+        },
+        "flight-authority": {
+          "state": "null",
+          "value": null
+        },
+        "forwarding": {
+          "state": "null",
+          "value": null
+        },
+        "gpu": {
+          "state": "null",
+          "value": null
+        },
+        "h265-depayload": {
+          "state": "null",
+          "value": null
+        },
+        "historical-name": {
+          "state": "null",
+          "value": null
+        },
+        "input-events": {
+          "state": "null",
+          "value": null
+        },
+        "installed-build": {
+          "state": "null",
+          "value": null
+        },
+        "installed-codec-limits": {
+          "state": "null",
+          "value": null
+        },
+        "installed-radio": {
+          "state": "null",
+          "value": null
+        },
+        "joystick-count": {
+          "state": "null",
+          "value": null
+        },
+        "legacy-control-example": {
+          "state": "null",
+          "value": null
+        },
+        "link-statistics": {
+          "state": "null",
+          "value": null
+        },
+        "live-video-codec": {
+          "state": "null",
+          "value": null
+        },
+        "low-latency": {
+          "state": "null",
+          "value": null
+        },
+        "manual-axis": {
+          "state": "null",
+          "value": null
+        },
+        "manual-version": {
+          "state": "null",
+          "value": null
+        },
+        "measured-latency": {
+          "state": "null",
+          "value": null
+        },
+        "mission-ownership": {
+          "state": "null",
+          "value": null
+        },
+        "mission-patterns": {
+          "state": "null",
+          "value": null
+        },
+        "offline-map": {
+          "state": "null",
+          "value": null
+        },
+        "os": {
+          "state": "null",
+          "value": null
+        },
+        "package-update": {
+          "state": "null",
+          "value": null
+        },
+        "packet-dedup": {
+          "state": "null",
+          "value": null
+        },
+        "payload-ota": {
+          "state": "null",
+          "value": null
+        },
+        "payload-ota-guards": {
+          "state": "null",
+          "value": null
+        },
+        "per-link-status": {
+          "state": "null",
+          "value": null
+        },
+        "permission-checks": {
+          "state": "null",
+          "value": null
+        },
+        "platform": {
+          "state": "null",
+          "value": null
+        },
+        "power": {
+          "state": "null",
+          "value": null
+        },
+        "production-signer": {
+          "state": "null",
+          "value": null
+        },
+        "rc-functions": {
+          "state": "null",
+          "value": null
+        },
+        "resume": {
+          "state": "null",
+          "value": null
+        },
+        "rtcm-carrier": {
+          "state": "null",
+          "value": null
+        },
+        "rtk-client": {
+          "state": "null",
+          "value": null
+        },
+        "rtsp-source": {
+          "state": "null",
+          "value": null
+        },
+        "save-upload": {
+          "state": "null",
+          "value": null
+        },
+        "signing": {
+          "state": "null",
+          "value": null
+        },
+        "soc": {
+          "state": "null",
+          "value": null
+        },
+        "storage": {
+          "state": "null",
+          "value": null
+        },
+        "storage-claim": {
+          "state": "null",
+          "value": null
+        },
+        "survey-figures": {
+          "state": "null",
+          "value": null
+        },
+        "survey-grid": {
+          "state": "null",
+          "value": null
+        },
+        "terrain": {
+          "state": "null",
+          "value": null
+        },
+        "terrain-export": {
+          "state": "null",
+          "value": null
+        },
+        "transport": {
+          "state": "null",
+          "value": null
+        },
+        "version": {
+          "state": "null",
+          "value": null
+        },
+        "video-codec": {
+          "state": "null",
+          "value": null
+        },
+        "video-count": {
+          "state": "null",
+          "value": null
+        },
+        "vio": {
+          "state": "null",
+          "value": null
+        }
+      }
+    },
+    "RAGAS (release 4.0.14 build 111)": {
+      "entity_type": null,
+      "fields": {
+        "abi": {
+          "claims": [
+            {
+              "capture": {
+                "fetched_at": "2026-10-12T03:48:59.436129+00:00",
+                "origin_id": "rtr",
+                "sha256": "980762ffeaef7cbcbd7937c0caf1fbee6f9ee9759bad73fcff540418d939fa66",
+                "snapshot": "ragas-release-manifest.json",
+                "source": "ragas-release-manifest",
+                "url": "https://github.com/Real-Time-Robotics/ragas-release/releases/download/v4.0.14-b111/manifest-prod.json"
+              },
+              "evidence_span": "\"abi\": \"arm64-v8a\"",
+              "extraction": "normalized",
+              "source": "ragas-release-manifest",
+              "tier": "A",
+              "value": "Android arm64-v8a"
+            }
+          ],
+          "state": "sourced",
+          "value": "Android arm64-v8a"
+        },
+        "aircraft-battery": {
+          "state": "null",
+          "value": null
+        },
+        "api-endpoints": {
+          "state": "null",
+          "value": null
+        },
+        "api-family": {
+          "state": "null",
+          "value": null
+        },
+        "background-start": {
+          "state": "null",
+          "value": null
+        },
+        "calibration": {
+          "state": "null",
+          "value": null
+        },
+        "camera-upload": {
+          "claims": [
+            {
+              "capture": {
+                "derived_from": {
+                  "sha256": "980762ffeaef7cbcbd7937c0caf1fbee6f9ee9759bad73fcff540418d939fa66",
+                  "snapshot": "ragas-release-manifest.json",
+                  "source": "ragas-release-manifest"
+                },
+                "fetched_at": "2026-10-12T03:48:59.436129+00:00",
+                "origin_id": "rtr",
+                "sha256": "65a4fa7ddb2107149bfc97e1df4adbf74910f8f9c2eaba78e06a06e0f3a1243a",
+                "snapshot": "ragas-release-notes.decoded.txt",
+                "source": "ragas-release-notes",
+                "url": "https://github.com/Real-Time-Robotics/ragas-release/releases/download/v4.0.14-b111/manifest-prod.json"
+              },
+              "evidence_span": "empty placeholders",
+              "extraction": "normalized",
+              "source": "ragas-release-notes",
+              "tier": "A",
+              "value": "Publisher reports camera commands now forwarded to ArduPilot"
+            }
+          ],
+          "state": "sourced",
+          "value": "Publisher reports camera commands now forwarded to ArduPilot"
+        },
+        "capability-ui": {
+          "state": "null",
+          "value": null
+        },
+        "capture-observation": {
+          "claims": [
+            {
+              "capture": {
+                "derived_from": {
+                  "sha256": "980762ffeaef7cbcbd7937c0caf1fbee6f9ee9759bad73fcff540418d939fa66",
+                  "snapshot": "ragas-release-manifest.json",
+                  "source": "ragas-release-manifest"
+                },
+                "fetched_at": "2026-10-12T03:48:59.436129+00:00",
+                "origin_id": "rtr",
+                "sha256": "65a4fa7ddb2107149bfc97e1df4adbf74910f8f9c2eaba78e06a06e0f3a1243a",
+                "snapshot": "ragas-release-notes.decoded.txt",
+                "source": "ragas-release-notes",
+                "url": "https://github.com/Real-Time-Robotics/ragas-release/releases/download/v4.0.14-b111/manifest-prod.json"
+              },
+              "evidence_span": "37/120",
+              "extraction": "normalized",
+              "source": "ragas-release-notes",
+              "tier": "A",
+              "value": "Publisher reports actual/planned photo display"
+            }
+          ],
+          "state": "sourced",
+          "value": "Publisher reports actual/planned photo display"
+        },
+        "channel-feedback": {
+          "state": "null",
+          "value": null
+        },
+        "connection-example": {
+          "state": "null",
+          "value": null
+        },
+        "controller-battery-api": {
+          "state": "null",
+          "value": null
+        },
+        "controller-bsp-update": {
+          "state": "null",
+          "value": null
+        },
+        "cpu-topology": {
+          "state": "null",
+          "value": null
+        },
+        "current-channel-map": {
+          "state": "null",
+          "value": null
+        },
+        "decoder-limit": {
+          "state": "null",
+          "value": null
+        },
+        "device-sdk-url": {
+          "state": "null",
+          "value": null
+        },
+        "flight-authority": {
+          "state": "null",
+          "value": null
+        },
+        "forwarding": {
+          "state": "null",
+          "value": null
+        },
+        "gpu": {
+          "state": "null",
+          "value": null
+        },
+        "h265-depayload": {
+          "state": "null",
+          "value": null
+        },
+        "historical-name": {
+          "state": "null",
+          "value": null
+        },
+        "input-events": {
+          "state": "null",
+          "value": null
+        },
+        "installed-build": {
+          "state": "null",
+          "value": null
+        },
+        "installed-codec-limits": {
+          "state": "null",
+          "value": null
+        },
+        "installed-radio": {
+          "state": "null",
+          "value": null
+        },
+        "joystick-count": {
+          "state": "null",
+          "value": null
+        },
+        "legacy-control-example": {
+          "state": "null",
+          "value": null
+        },
+        "link-statistics": {
+          "state": "null",
+          "value": null
+        },
+        "live-video-codec": {
+          "state": "null",
+          "value": null
+        },
+        "low-latency": {
+          "state": "null",
+          "value": null
+        },
+        "manual-axis": {
+          "state": "null",
+          "value": null
+        },
+        "manual-version": {
+          "state": "null",
+          "value": null
+        },
+        "measured-latency": {
+          "state": "null",
+          "value": null
+        },
+        "mission-ownership": {
+          "state": "null",
+          "value": null
+        },
+        "mission-patterns": {
+          "state": "null",
+          "value": null
+        },
+        "offline-map": {
+          "state": "null",
+          "value": null
+        },
+        "os": {
+          "state": "null",
+          "value": null
+        },
+        "package-update": {
+          "state": "null",
+          "value": null
+        },
+        "packet-dedup": {
+          "state": "null",
+          "value": null
+        },
+        "payload-ota": {
+          "state": "null",
+          "value": null
+        },
+        "payload-ota-guards": {
+          "state": "null",
+          "value": null
+        },
+        "per-link-status": {
+          "state": "null",
+          "value": null
+        },
+        "permission-checks": {
+          "state": "null",
+          "value": null
+        },
+        "platform": {
+          "state": "null",
+          "value": null
+        },
+        "power": {
+          "state": "null",
+          "value": null
+        },
+        "production-signer": {
+          "state": "null",
+          "value": null
+        },
+        "rc-functions": {
+          "state": "null",
+          "value": null
+        },
+        "resume": {
+          "claims": [
+            {
+              "capture": {
+                "derived_from": {
+                  "sha256": "980762ffeaef7cbcbd7937c0caf1fbee6f9ee9759bad73fcff540418d939fa66",
+                  "snapshot": "ragas-release-manifest.json",
+                  "source": "ragas-release-manifest"
+                },
+                "fetched_at": "2026-10-12T03:48:59.436129+00:00",
+                "origin_id": "rtr",
+                "sha256": "65a4fa7ddb2107149bfc97e1df4adbf74910f8f9c2eaba78e06a06e0f3a1243a",
+                "snapshot": "ragas-release-notes.decoded.txt",
+                "source": "ragas-release-notes",
+                "url": "https://github.com/Real-Time-Robotics/ragas-release/releases/download/v4.0.14-b111/manifest-prod.json"
+              },
+              "evidence_span": "last reached",
+              "extraction": "normalized",
+              "source": "ragas-release-notes",
+              "tier": "A",
+              "value": "Publisher reports resume at last reached waypoint"
+            }
+          ],
+          "state": "sourced",
+          "value": "Publisher reports resume at last reached waypoint"
+        },
+        "rtcm-carrier": {
+          "state": "null",
+          "value": null
+        },
+        "rtk-client": {
+          "state": "null",
+          "value": null
+        },
+        "rtsp-source": {
+          "state": "null",
+          "value": null
+        },
+        "save-upload": {
+          "state": "null",
+          "value": null
+        },
+        "signing": {
+          "state": "null",
+          "value": null
+        },
+        "soc": {
+          "state": "null",
+          "value": null
+        },
+        "storage": {
+          "state": "null",
+          "value": null
+        },
+        "storage-claim": {
+          "state": "null",
+          "value": null
+        },
+        "survey-figures": {
+          "claims": [
+            {
+              "capture": {
+                "derived_from": {
+                  "sha256": "980762ffeaef7cbcbd7937c0caf1fbee6f9ee9759bad73fcff540418d939fa66",
+                  "snapshot": "ragas-release-manifest.json",
+                  "source": "ragas-release-manifest"
+                },
+                "fetched_at": "2026-10-12T03:48:59.436129+00:00",
+                "origin_id": "rtr",
+                "sha256": "65a4fa7ddb2107149bfc97e1df4adbf74910f8f9c2eaba78e06a06e0f3a1243a",
+                "snapshot": "ragas-release-notes.decoded.txt",
+                "source": "ragas-release-notes",
+                "url": "https://github.com/Real-Time-Robotics/ragas-release/releases/download/v4.0.14-b111/manifest-prod.json"
+              },
+              "evidence_span": "100×",
+              "extraction": "normalized",
+              "source": "ragas-release-notes",
+              "tier": "A",
+              "value": "Publisher reports area/time/whole-mission photo count corrections"
+            }
+          ],
+          "state": "sourced",
+          "value": "Publisher reports area/time/whole-mission photo count corrections"
+        },
+        "survey-grid": {
+          "claims": [
+            {
+              "capture": {
+                "derived_from": {
+                  "sha256": "980762ffeaef7cbcbd7937c0caf1fbee6f9ee9759bad73fcff540418d939fa66",
+                  "snapshot": "ragas-release-manifest.json",
+                  "source": "ragas-release-manifest"
+                },
+                "fetched_at": "2026-10-12T03:48:59.436129+00:00",
+                "origin_id": "rtr",
+                "sha256": "65a4fa7ddb2107149bfc97e1df4adbf74910f8f9c2eaba78e06a06e0f3a1243a",
+                "snapshot": "ragas-release-notes.decoded.txt",
+                "source": "ragas-release-notes",
+                "url": "https://github.com/Real-Time-Robotics/ragas-release/releases/download/v4.0.14-b111/manifest-prod.json"
+              },
+              "evidence_span": "same spacing phase",
+              "extraction": "normalized",
+              "source": "ragas-release-notes",
+              "tier": "A",
+              "value": "Publisher reports QGC .plan grid alignment fixes"
+            }
+          ],
+          "state": "sourced",
+          "value": "Publisher reports QGC .plan grid alignment fixes"
+        },
+        "terrain": {
+          "state": "null",
+          "value": null
+        },
+        "terrain-export": {
+          "claims": [
+            {
+              "capture": {
+                "derived_from": {
+                  "sha256": "980762ffeaef7cbcbd7937c0caf1fbee6f9ee9759bad73fcff540418d939fa66",
+                  "snapshot": "ragas-release-manifest.json",
+                  "source": "ragas-release-manifest"
+                },
+                "fetched_at": "2026-10-12T03:48:59.436129+00:00",
+                "origin_id": "rtr",
+                "sha256": "65a4fa7ddb2107149bfc97e1df4adbf74910f8f9c2eaba78e06a06e0f3a1243a",
+                "snapshot": "ragas-release-notes.decoded.txt",
+                "source": "ragas-release-notes",
+                "url": "https://github.com/Real-Time-Robotics/ragas-release/releases/download/v4.0.14-b111/manifest-prod.json"
+              },
+              "evidence_span": "wrong altitude",
+              "extraction": "normalized",
+              "source": "ragas-release-notes",
+              "tier": "A",
+              "value": "Publisher reports blocking export when required terrain is missing"
+            }
+          ],
+          "state": "sourced",
+          "value": "Publisher reports blocking export when required terrain is missing"
+        },
+        "transport": {
+          "state": "null",
+          "value": null
+        },
+        "version": {
+          "claims": [
+            {
+              "capture": {
+                "fetched_at": "2026-10-12T03:48:59.436129+00:00",
+                "origin_id": "rtr",
+                "sha256": "980762ffeaef7cbcbd7937c0caf1fbee6f9ee9759bad73fcff540418d939fa66",
+                "snapshot": "ragas-release-manifest.json",
+                "source": "ragas-release-manifest",
+                "url": "https://github.com/Real-Time-Robotics/ragas-release/releases/download/v4.0.14-b111/manifest-prod.json"
+              },
+              "evidence_span": "\"buildNumber\": 111",
+              "extraction": "normalized",
+              "source": "ragas-release-manifest",
+              "tier": "A",
+              "value": "4.0.14 build 111"
+            }
+          ],
+          "state": "sourced",
+          "value": "4.0.14 build 111"
+        },
+        "video-codec": {
+          "state": "null",
+          "value": null
+        },
+        "video-count": {
+          "state": "null",
+          "value": null
+        },
+        "vio": {
+          "state": "null",
+          "value": null
+        }
+      }
+    },
+    "RtR HeraHub (Intel public platform)": {
+      "entity_type": null,
+      "fields": {
+        "abi": {
+          "state": "null",
+          "value": null
+        },
+        "aircraft-battery": {
+          "state": "null",
+          "value": null
+        },
+        "api-endpoints": {
+          "state": "null",
+          "value": null
+        },
+        "api-family": {
+          "state": "null",
+          "value": null
+        },
+        "background-start": {
+          "state": "null",
+          "value": null
+        },
+        "calibration": {
+          "state": "null",
+          "value": null
+        },
+        "camera-upload": {
+          "state": "null",
+          "value": null
+        },
+        "capability-ui": {
+          "state": "null",
+          "value": null
+        },
+        "capture-observation": {
+          "state": "null",
+          "value": null
+        },
+        "channel-feedback": {
+          "state": "null",
+          "value": null
+        },
+        "connection-example": {
+          "state": "null",
+          "value": null
+        },
+        "controller-battery-api": {
+          "state": "null",
+          "value": null
+        },
+        "controller-bsp-update": {
+          "state": "null",
+          "value": null
+        },
+        "cpu-topology": {
+          "state": "null",
+          "value": null
+        },
+        "current-channel-map": {
+          "state": "null",
+          "value": null
+        },
+        "decoder-limit": {
+          "state": "null",
+          "value": null
+        },
+        "device-sdk-url": {
+          "state": "null",
+          "value": null
+        },
+        "flight-authority": {
+          "state": "null",
+          "value": null
+        },
+        "forwarding": {
+          "state": "null",
+          "value": null
+        },
+        "gpu": {
+          "state": "null",
+          "value": null
+        },
+        "h265-depayload": {
+          "state": "null",
+          "value": null
+        },
+        "historical-name": {
+          "state": "null",
+          "value": null
+        },
+        "input-events": {
+          "state": "null",
+          "value": null
+        },
+        "installed-build": {
+          "state": "null",
+          "value": null
+        },
+        "installed-codec-limits": {
+          "state": "null",
+          "value": null
+        },
+        "installed-radio": {
+          "state": "null",
+          "value": null
+        },
+        "joystick-count": {
+          "state": "null",
+          "value": null
+        },
+        "legacy-control-example": {
+          "state": "null",
+          "value": null
+        },
+        "link-statistics": {
+          "state": "null",
+          "value": null
+        },
+        "live-video-codec": {
+          "state": "null",
+          "value": null
+        },
+        "low-latency": {
+          "state": "null",
+          "value": null
+        },
+        "manual-axis": {
+          "state": "null",
+          "value": null
+        },
+        "manual-version": {
+          "state": "null",
+          "value": null
+        },
+        "measured-latency": {
+          "state": "null",
+          "value": null
+        },
+        "mission-ownership": {
+          "state": "null",
+          "value": null
+        },
+        "mission-patterns": {
+          "state": "null",
+          "value": null
+        },
+        "offline-map": {
+          "state": "null",
+          "value": null
+        },
+        "os": {
+          "state": "null",
+          "value": null
+        },
+        "package-update": {
+          "state": "null",
+          "value": null
+        },
+        "packet-dedup": {
+          "state": "null",
+          "value": null
+        },
+        "payload-ota": {
+          "state": "null",
+          "value": null
+        },
+        "payload-ota-guards": {
+          "state": "null",
+          "value": null
+        },
+        "per-link-status": {
+          "state": "null",
+          "value": null
+        },
+        "permission-checks": {
+          "state": "null",
+          "value": null
+        },
+        "platform": {
+          "state": "null",
+          "value": null
+        },
+        "power": {
+          "claims": [
+            {
+              "capture": {
+                "fetched_at": "2026-10-12T03:45:58.763397+00:00",
+                "origin_id": "rtr",
+                "sha256": "f80f1b392474c66411030296be480c2d077fed72bc2404f9900191d15f080b6d",
+                "snapshot": "rtr-herahub.html",
+                "source": "rtr-herahub",
+                "url": "https://rtrobotics.com/commercial/herahub"
+              },
+              "evidence_span": "hot-swappable",
+              "extraction": "normalized",
+              "source": "rtr-herahub",
+              "tier": "A",
+              "value": "Dual hot-swappable batteries"
+            }
+          ],
+          "state": "sourced",
+          "value": "Dual hot-swappable batteries"
+        },
+        "production-signer": {
+          "state": "null",
+          "value": null
+        },
+        "rc-functions": {
+          "state": "null",
+          "value": null
+        },
+        "resume": {
+          "state": "null",
+          "value": null
+        },
+        "rtcm-carrier": {
+          "state": "null",
+          "value": null
+        },
+        "rtk-client": {
+          "state": "null",
+          "value": null
+        },
+        "rtsp-source": {
+          "state": "null",
+          "value": null
+        },
+        "save-upload": {
+          "state": "null",
+          "value": null
+        },
+        "signing": {
+          "state": "null",
+          "value": null
+        },
+        "soc": {
+          "claims": [
+            {
+              "capture": {
+                "fetched_at": "2026-10-12T03:45:58.763397+00:00",
+                "origin_id": "rtr",
+                "sha256": "f80f1b392474c66411030296be480c2d077fed72bc2404f9900191d15f080b6d",
+                "snapshot": "rtr-herahub.html",
+                "source": "rtr-herahub",
+                "url": "https://rtrobotics.com/commercial/herahub"
+              },
+              "evidence_span": "i7-1255U",
+              "extraction": "normalized",
+              "source": "rtr-herahub",
+              "tier": "A",
+              "value": "Intel Core i7-1255U"
+            }
+          ],
+          "state": "sourced",
+          "value": "Intel Core i7-1255U"
+        },
+        "storage": {
+          "state": "null",
+          "value": null
+        },
+        "storage-claim": {
+          "state": "null",
+          "value": null
+        },
+        "survey-figures": {
+          "state": "null",
+          "value": null
+        },
+        "survey-grid": {
+          "state": "null",
+          "value": null
+        },
+        "terrain": {
+          "state": "null",
+          "value": null
+        },
+        "terrain-export": {
+          "state": "null",
+          "value": null
+        },
+        "transport": {
+          "state": "null",
+          "value": null
+        },
+        "version": {
+          "state": "null",
+          "value": null
+        },
+        "video-codec": {
+          "state": "null",
+          "value": null
+        },
+        "video-count": {
+          "claims": [
+            {
+              "capture": {
+                "fetched_at": "2026-10-12T03:45:58.763397+00:00",
+                "origin_id": "rtr",
+                "sha256": "f80f1b392474c66411030296be480c2d077fed72bc2404f9900191d15f080b6d",
+                "snapshot": "rtr-herahub.html",
+                "source": "rtr-herahub",
+                "url": "https://rtrobotics.com/commercial/herahub"
+              },
+              "evidence_span": "8 simultaneous",
+              "extraction": "normalized",
+              "source": "rtr-herahub",
+              "tier": "A",
+              "value": 8
+            }
+          ],
+          "state": "sourced",
+          "value": 8
+        },
+        "vio": {
+          "state": "null",
+          "value": null
+        }
+      }
+    },
+    "RtR HeraHub v2 (Android public platform)": {
+      "entity_type": null,
+      "fields": {
+        "abi": {
+          "state": "null",
+          "value": null
+        },
+        "aircraft-battery": {
+          "state": "null",
+          "value": null
+        },
+        "api-endpoints": {
+          "state": "null",
+          "value": null
+        },
+        "api-family": {
+          "state": "null",
+          "value": null
+        },
+        "background-start": {
+          "state": "null",
+          "value": null
+        },
+        "calibration": {
+          "state": "null",
+          "value": null
+        },
+        "camera-upload": {
+          "state": "null",
+          "value": null
+        },
+        "capability-ui": {
+          "state": "null",
+          "value": null
+        },
+        "capture-observation": {
+          "state": "null",
+          "value": null
+        },
+        "channel-feedback": {
+          "state": "null",
+          "value": null
+        },
+        "connection-example": {
+          "state": "null",
+          "value": null
+        },
+        "controller-battery-api": {
+          "state": "null",
+          "value": null
+        },
+        "controller-bsp-update": {
+          "state": "null",
+          "value": null
+        },
+        "cpu-topology": {
+          "state": "null",
+          "value": null
+        },
+        "current-channel-map": {
+          "state": "null",
+          "value": null
+        },
+        "decoder-limit": {
+          "state": "null",
+          "value": null
+        },
+        "device-sdk-url": {
+          "state": "null",
+          "value": null
+        },
+        "flight-authority": {
+          "state": "null",
+          "value": null
+        },
+        "forwarding": {
+          "state": "null",
+          "value": null
+        },
+        "gpu": {
+          "claims": [
+            {
+              "capture": {
+                "fetched_at": "2026-10-12T03:45:58.763916+00:00",
+                "origin_id": "rtr",
+                "sha256": "f4050872996f3cb620070f67bc86789cda7922158573580644d8df3e8ea16daa",
+                "snapshot": "rtr-herahub-v2.html",
+                "source": "rtr-herahub-v2",
+                "url": "https://rtrobotics.com/commercial/herahub-v2"
+              },
+              "evidence_span": "Adreno 740",
+              "extraction": "normalized",
+              "source": "rtr-herahub-v2",
+              "tier": "A",
+              "value": "Adreno 740"
+            }
+          ],
+          "state": "sourced",
+          "value": "Adreno 740"
+        },
+        "h265-depayload": {
+          "state": "null",
+          "value": null
+        },
+        "historical-name": {
+          "state": "null",
+          "value": null
+        },
+        "input-events": {
+          "state": "null",
+          "value": null
+        },
+        "installed-build": {
+          "state": "null",
+          "value": null
+        },
+        "installed-codec-limits": {
+          "state": "null",
+          "value": null
+        },
+        "installed-radio": {
+          "state": "null",
+          "value": null
+        },
+        "joystick-count": {
+          "claims": [
+            {
+              "capture": {
+                "fetched_at": "2026-10-12T03:45:58.763916+00:00",
+                "origin_id": "rtr",
+                "sha256": "f4050872996f3cb620070f67bc86789cda7922158573580644d8df3e8ea16daa",
+                "snapshot": "rtr-herahub-v2.html",
+                "source": "rtr-herahub-v2",
+                "url": "https://rtrobotics.com/commercial/herahub-v2"
+              },
+              "evidence_span": "4 joysticks",
+              "extraction": "normalized",
+              "source": "rtr-herahub-v2",
+              "tier": "A",
+              "value": 4
+            }
+          ],
+          "state": "sourced",
+          "value": 4
+        },
+        "legacy-control-example": {
+          "state": "null",
+          "value": null
+        },
+        "link-statistics": {
+          "state": "null",
+          "value": null
+        },
+        "live-video-codec": {
+          "state": "null",
+          "value": null
+        },
+        "low-latency": {
+          "state": "null",
+          "value": null
+        },
+        "manual-axis": {
+          "state": "null",
+          "value": null
+        },
+        "manual-version": {
+          "state": "null",
+          "value": null
+        },
+        "measured-latency": {
+          "state": "null",
+          "value": null
+        },
+        "mission-ownership": {
+          "state": "null",
+          "value": null
+        },
+        "mission-patterns": {
+          "state": "null",
+          "value": null
+        },
+        "offline-map": {
+          "state": "null",
+          "value": null
+        },
+        "os": {
+          "claims": [
+            {
+              "capture": {
+                "fetched_at": "2026-10-12T03:45:58.763916+00:00",
+                "origin_id": "rtr",
+                "sha256": "f4050872996f3cb620070f67bc86789cda7922158573580644d8df3e8ea16daa",
+                "snapshot": "rtr-herahub-v2.html",
+                "source": "rtr-herahub-v2",
+                "url": "https://rtrobotics.com/commercial/herahub-v2"
+              },
+              "evidence_span": "Android 13",
+              "extraction": "normalized",
+              "source": "rtr-herahub-v2",
+              "tier": "A",
+              "value": "Android 13"
+            }
+          ],
+          "state": "sourced",
+          "value": "Android 13"
+        },
+        "package-update": {
+          "state": "null",
+          "value": null
+        },
+        "packet-dedup": {
+          "state": "null",
+          "value": null
+        },
+        "payload-ota": {
+          "state": "null",
+          "value": null
+        },
+        "payload-ota-guards": {
+          "state": "null",
+          "value": null
+        },
+        "per-link-status": {
+          "state": "null",
+          "value": null
+        },
+        "permission-checks": {
+          "state": "null",
+          "value": null
+        },
+        "platform": {
+          "state": "null",
+          "value": null
+        },
+        "power": {
+          "state": "null",
+          "value": null
+        },
+        "production-signer": {
+          "state": "null",
+          "value": null
+        },
+        "rc-functions": {
+          "state": "null",
+          "value": null
+        },
+        "resume": {
+          "state": "null",
+          "value": null
+        },
+        "rtcm-carrier": {
+          "state": "null",
+          "value": null
+        },
+        "rtk-client": {
+          "state": "null",
+          "value": null
+        },
+        "rtsp-source": {
+          "state": "null",
+          "value": null
+        },
+        "save-upload": {
+          "state": "null",
+          "value": null
+        },
+        "signing": {
+          "state": "null",
+          "value": null
+        },
+        "soc": {
+          "claims": [
+            {
+              "capture": {
+                "fetched_at": "2026-10-12T03:45:58.763916+00:00",
+                "origin_id": "rtr",
+                "sha256": "f4050872996f3cb620070f67bc86789cda7922158573580644d8df3e8ea16daa",
+                "snapshot": "rtr-herahub-v2.html",
+                "source": "rtr-herahub-v2",
+                "url": "https://rtrobotics.com/commercial/herahub-v2"
+              },
+              "evidence_span": "QCS8550",
+              "extraction": "normalized",
+              "source": "rtr-herahub-v2",
+              "tier": "A",
+              "value": "Qualcomm QCS8550"
+            }
+          ],
+          "state": "sourced",
+          "value": "Qualcomm QCS8550"
+        },
+        "storage": {
+          "state": "null",
+          "value": null
+        },
+        "storage-claim": {
+          "claims": [
+            {
+              "capture": {
+                "fetched_at": "2026-10-12T03:45:58.763916+00:00",
+                "origin_id": "rtr",
+                "sha256": "f4050872996f3cb620070f67bc86789cda7922158573580644d8df3e8ea16daa",
+                "snapshot": "rtr-herahub-v2.html",
+                "source": "rtr-herahub-v2",
+                "url": "https://rtrobotics.com/commercial/herahub-v2"
+              },
+              "evidence_span": "256GB",
+              "extraction": "normalized",
+              "source": "rtr-herahub-v2",
+              "tier": "A",
+              "value": "256GB onboard; optional 1TB SSD"
+            }
+          ],
+          "state": "sourced",
+          "value": "256GB onboard; optional 1TB SSD"
+        },
+        "survey-figures": {
+          "state": "null",
+          "value": null
+        },
+        "survey-grid": {
+          "state": "null",
+          "value": null
+        },
+        "terrain": {
+          "state": "null",
+          "value": null
+        },
+        "terrain-export": {
+          "state": "null",
+          "value": null
+        },
+        "transport": {
+          "state": "null",
+          "value": null
+        },
+        "version": {
+          "state": "null",
+          "value": null
+        },
+        "video-codec": {
+          "state": "null",
+          "value": null
+        },
+        "video-count": {
+          "claims": [
+            {
+              "capture": {
+                "fetched_at": "2026-10-12T03:45:58.763916+00:00",
+                "origin_id": "rtr",
+                "sha256": "f4050872996f3cb620070f67bc86789cda7922158573580644d8df3e8ea16daa",
+                "snapshot": "rtr-herahub-v2.html",
+                "source": "rtr-herahub-v2",
+                "url": "https://rtrobotics.com/commercial/herahub-v2"
+              },
+              "evidence_span": "6 simultaneous",
+              "extraction": "normalized",
+              "source": "rtr-herahub-v2",
+              "tier": "A",
+              "value": 6
+            }
+          ],
+          "state": "sourced",
+          "value": 6
+        },
+        "vio": {
+          "state": "null",
+          "value": null
+        }
+      }
+    },
+    "RtR HeraLink (historical naming)": {
+      "entity_type": null,
+      "fields": {
+        "abi": {
+          "state": "null",
+          "value": null
+        },
+        "aircraft-battery": {
+          "state": "null",
+          "value": null
+        },
+        "api-endpoints": {
+          "state": "null",
+          "value": null
+        },
+        "api-family": {
+          "state": "null",
+          "value": null
+        },
+        "background-start": {
+          "state": "null",
+          "value": null
+        },
+        "calibration": {
+          "state": "null",
+          "value": null
+        },
+        "camera-upload": {
+          "state": "null",
+          "value": null
+        },
+        "capability-ui": {
+          "state": "null",
+          "value": null
+        },
+        "capture-observation": {
+          "state": "null",
+          "value": null
+        },
+        "channel-feedback": {
+          "state": "null",
+          "value": null
+        },
+        "connection-example": {
+          "state": "null",
+          "value": null
+        },
+        "controller-battery-api": {
+          "state": "null",
+          "value": null
+        },
+        "controller-bsp-update": {
+          "state": "null",
+          "value": null
+        },
+        "cpu-topology": {
+          "state": "null",
+          "value": null
+        },
+        "current-channel-map": {
+          "state": "null",
+          "value": null
+        },
+        "decoder-limit": {
+          "state": "null",
+          "value": null
+        },
+        "device-sdk-url": {
+          "state": "null",
+          "value": null
+        },
+        "flight-authority": {
+          "state": "null",
+          "value": null
+        },
+        "forwarding": {
+          "state": "null",
+          "value": null
+        },
+        "gpu": {
+          "state": "null",
+          "value": null
+        },
+        "h265-depayload": {
+          "state": "null",
+          "value": null
+        },
+        "historical-name": {
+          "claims": [
+            {
+              "capture": {
+                "fetched_at": "2026-10-12T03:49:00.549902+00:00",
+                "origin_id": "rtr",
+                "sha256": "eedd8546ab0a0e421882324ea5b83e394fdce5ddea555624d83b2230ee9d22d1",
+                "snapshot": "manual-legacy-payload-setup.md",
+                "source": "manual-legacy-payload-setup",
+                "url": "https://rtrobotics.gitbook.io/real-time-robotics/payloads/herasight-2/setup.md"
+              },
+              "evidence_span": "Preparing the HeraLink",
+              "extraction": "normalized",
+              "source": "manual-legacy-payload-setup",
+              "tier": "A",
+              "value": "HeraLink appears in older HeraSight setup instructions"
+            }
+          ],
+          "state": "sourced",
+          "value": "HeraLink appears in older HeraSight setup instructions"
+        },
+        "input-events": {
+          "state": "null",
+          "value": null
+        },
+        "installed-build": {
+          "state": "null",
+          "value": null
+        },
+        "installed-codec-limits": {
+          "state": "null",
+          "value": null
+        },
+        "installed-radio": {
+          "state": "null",
+          "value": null
+        },
+        "joystick-count": {
+          "state": "null",
+          "value": null
+        },
+        "legacy-control-example": {
+          "state": "null",
+          "value": null
+        },
+        "link-statistics": {
+          "state": "null",
+          "value": null
+        },
+        "live-video-codec": {
+          "state": "null",
+          "value": null
+        },
+        "low-latency": {
+          "state": "null",
+          "value": null
+        },
+        "manual-axis": {
+          "state": "null",
+          "value": null
+        },
+        "manual-version": {
+          "state": "null",
+          "value": null
+        },
+        "measured-latency": {
+          "state": "null",
+          "value": null
+        },
+        "mission-ownership": {
+          "state": "null",
+          "value": null
+        },
+        "mission-patterns": {
+          "state": "null",
+          "value": null
+        },
+        "offline-map": {
+          "state": "null",
+          "value": null
+        },
+        "os": {
+          "state": "null",
+          "value": null
+        },
+        "package-update": {
+          "state": "null",
+          "value": null
+        },
+        "packet-dedup": {
+          "state": "null",
+          "value": null
+        },
+        "payload-ota": {
+          "state": "null",
+          "value": null
+        },
+        "payload-ota-guards": {
+          "state": "null",
+          "value": null
+        },
+        "per-link-status": {
+          "state": "null",
+          "value": null
+        },
+        "permission-checks": {
+          "state": "null",
+          "value": null
+        },
+        "platform": {
+          "state": "null",
+          "value": null
+        },
+        "power": {
+          "state": "null",
+          "value": null
+        },
+        "production-signer": {
+          "state": "null",
+          "value": null
+        },
+        "rc-functions": {
+          "state": "null",
+          "value": null
+        },
+        "resume": {
+          "state": "null",
+          "value": null
+        },
+        "rtcm-carrier": {
+          "state": "null",
+          "value": null
+        },
+        "rtk-client": {
+          "state": "null",
+          "value": null
+        },
+        "rtsp-source": {
+          "state": "null",
+          "value": null
+        },
+        "save-upload": {
+          "state": "null",
+          "value": null
+        },
+        "signing": {
+          "state": "null",
+          "value": null
+        },
+        "soc": {
+          "state": "null",
+          "value": null
+        },
+        "storage": {
+          "state": "null",
+          "value": null
+        },
+        "storage-claim": {
+          "state": "null",
+          "value": null
+        },
+        "survey-figures": {
+          "state": "null",
+          "value": null
+        },
+        "survey-grid": {
+          "state": "null",
+          "value": null
+        },
+        "terrain": {
+          "state": "null",
+          "value": null
+        },
+        "terrain-export": {
+          "state": "null",
+          "value": null
+        },
+        "transport": {
+          "state": "null",
+          "value": null
+        },
+        "version": {
+          "state": "null",
+          "value": null
+        },
+        "video-codec": {
+          "state": "null",
+          "value": null
+        },
+        "video-count": {
+          "state": "null",
+          "value": null
+        },
+        "vio": {
+          "state": "null",
+          "value": null
+        }
+      }
+    }
+  }
+}

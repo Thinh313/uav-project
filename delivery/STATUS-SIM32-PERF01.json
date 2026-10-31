@@ -1,0 +1,23 @@
+{
+  "at": "2026-10-13T16:30:25.835462+00:00",
+  "status": "DELIVERED_EXISTING_RESULTS_WITH_DEFERRED_FINAL_LIVE_GATE",
+  "verification": {
+    "path": "evidence/sim32-perf01/verification.json",
+    "sha256": "441935e7044142bc17c1eef4248239473492fc17602bfc787d84ae2904e8da43"
+  },
+  "contract": {
+    "path": "pilot/sim32/acceptance-contract-v3.json",
+    "sha256": "cc8750425132e8e36ffe403dd566fd66aa83a682206b62e35f2149b6d492a8c3"
+  },
+  "preview": "http://127.0.0.1:8796/",
+  "previewState": "IDLE_NO_SESSION_NO_GRANT",
+  "runtimeConfiguration": {
+    "engine": "optimized",
+    "requestedSpeedup": 1.1,
+    "rateHz": 1200,
+    "lockstep": true
+  },
+  "newRuntimeAdmission": "BLOCKED_RESOURCE_FLOOR",
+  "nextGate": "When capacity permits, final source full UI+SITL repeat; keep declared1.10 and default1 results separate",
+  "ENDURE": "Preserved; no launch/sign/Fly integration"
+}

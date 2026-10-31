@@ -1,0 +1,12 @@
+{
+  "milestone": "NATIVE98",
+  "status": "PARTIAL",
+  "apk": "native/native98/dist/aeris-native98-development02.apk",
+  "apkSha256": "d6d77f559df570497685b7f65f5602572a9a586d7ac5fda4e46b3a2369b667d9",
+  "sourceId": "fd000ddb25f14ae30a96ccfdcb86c0e2419d7b16b992f69fc1a8644f1f0c2bd7",
+  "APK02Runtime": "NOT_CHECKED",
+  "requiredAirborneMission": "NOT_CHECKED",
+  "report": "delivery/COMPLETION-NATIVE98.html",
+  "verification": "evidence/native98/final-verification.json",
+  "productionSigned": false
+}

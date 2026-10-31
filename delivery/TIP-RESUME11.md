@@ -1,0 +1,3 @@
+# TIP-RESUME11
+
+Implement user-authorized roadmap continuation: durable large-transfer checkpoint/resume after lost connection or restart; receiver integrity and no partial/corrupt publication. Seven REQ/AC in docs/RESUME11-CONTRACT.md. Input: STREAM10 deterministic wire/recipient, historical closed SITL evidence and large-data policies. Outputs: resumable receiver service, guarded local API, explicit UI and CLI, source suffix export, tests/evidence, SOT/roadmap/report. No SDK/device or flight changes. Single-agent phases; no independent review claim. Scope already authorized, no additional permission gate for local reversible implementation. SHA is integrity only; no physical/power-loss/remote authentication claims.

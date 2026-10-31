@@ -1,0 +1,2 @@
+/* QA negative control, never in Android asset-list. */
+.telemetry{padding-left:calc(var(--viewport-gutter) + 8px)!important}

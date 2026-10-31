@@ -1,0 +1,20 @@
+import assert from 'node:assert/strict';
+import {readFile,writeFile,mkdir,readdir,copyFile,rm,statfs} from 'node:fs/promises';
+import {clone,digest} from '../heramcu45/schema.mjs';
+import {seal,replayCapsule,transition} from './capsule.mjs';
+import {Durable47} from './workspace.mjs';
+import {storage47,budget} from './storage.mjs';
+const results=[];const test=async(name,fn)=>{try{await fn();results.push({name,pass:true});}catch(e){results.push({name,pass:false,error:e.stack});}};
+const original=JSON.parse(await readFile('evidence/herapersist47/jvm-before-restart.json','utf8'));
+for(const [name,mutate]of [
+ ['physicalflag',c=>c.operational=true],['authority',c=>c.authorityRestorable=true],['wrongcontract',c=>c.contractSha256='0'.repeat(64)],['peerbase',c=>c.epochs[0].baseStoredSha256='0'.repeat(64)],['wrongcontext',c=>c.epochs[0].context.session+='foreign'],['falseaftersha',c=>c.epochs[0].operations[0].afterSha256='0'.repeat(64)],['wrongopclockrevision',c=>c.epochs[0].operations[0].intent.revision=99],['forgedsuccess',c=>c.epochs[0].operations[0].error='NOT_REAL'],['duplicateid',c=>c.epochs[0].operations[1].intent.id=c.epochs[0].operations[0].intent.id],['changedrawmapping',c=>c.epochs[0].operations.at(-1).intent.data.ports[0].invertMask=0],['invaliddrafttype',c=>c.epochs[0].operations.at(-1).intent.data.axes[0].trim='2047'],['intentbadrevision',c=>c.pending={id:'x',epoch:0,kind:'save',data:{},revision:900}],['epochoverbound',c=>{while(c.epochs.length<=8)c.epochs.push(clone(c.epochs[0]));}]
+])await test('rehash semantic tamper refused '+name,()=>{const c=clone(original);mutate(c);assert.throws(()=>replayCapsule(seal(c)));});
+await test('dropped final operation distinctvalidprefix fails expecteddigest',()=>{const c=clone(original);c.epochs[0].operations.pop();const prefix=seal(c);replayCapsule(prefix);assert.throws(()=>replayCapsule(prefix,original.seal.bodySha256));assert.throws(()=>transition(original,prefix));});
+await test('result cannot appear without priorcommitted intent',()=>{const c=clone(original);c.epochs[0].operations.pop();assert.throws(()=>transition(seal(c),original),/RESULT_WITHOUT/);});
+await test('newstore refuses completehistory pretendinginitialintent',()=>assert.throws(()=>transition(null,original),/FIRST_CHECKPOINT/));
+await test('store quota rejects before allocating oversized data',async()=>{await assert.rejects(()=>budget('.local/herapersist47-quota-unused',16*1024**2),/QUOTA/);});
+const root='.local/herapersist47-orphan-qa';
+await test('orphanrecord withoutHEAD quarantined not treatednewempty workspace',async()=>{await mkdir(root);const source='evidence/herapersist47/fault-HEAD_COMMITTED',bin=(await readdir(source)).find(n=>n.endsWith('.bin'));await copyFile(source+'/'+bin,root+'/'+bin);const d=new Durable47(storage47(root));await d.load();assert.equal(d.blocked,true);assert.equal(d.w.model.state,'DISCONNECTED');await assert.rejects(()=>d.dispatch('connect',{},0));assert.deepEqual(await readdir(root),[bin]);});
+await rm(root,{recursive:true,force:true});
+await test('fake echoed token cannot acknowledge realwrite',async()=>{let body='';const d=new Durable47(async(a,t,b)=>{if(a==='save')body=b;return {ok:true,token:a==='load'?'ROOT':'invalid',revision:a==='load'?0:1,pending:false,bodyBase64:Buffer.from(body).toString('base64')};});await d.load();await assert.rejects(()=>d.dispatch('connect',{},0),/COMMIT_REPLY/);assert.equal(d.blocked,true);assert.equal(d.w.model.events.length,0);});
+const f=await statfs('.',{bigint:true});assert.ok(f.bavail*f.bsize>20n*1024n**3n+16777216n);const out={status:results.every(r=>r.pass)?'PASS':'FAIL',checks:results.length,passed:results.filter(r=>r.pass).length,results,scope:'Mock/ownedsmallstores, no actualfullhostvolume test',removed:[root]};await writeFile('evidence/herapersist47/adversarial1.json',JSON.stringify(out,null,2)+'\n',{flag:'wx'});console.log(JSON.stringify({status:out.status,checks:results.length,failures:results.filter(r=>!r.pass)}));assert.equal(out.status,'PASS');

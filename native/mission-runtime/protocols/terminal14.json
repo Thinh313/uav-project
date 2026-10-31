@@ -1,0 +1,180 @@
+{
+  "format": "aeris-terminal-checkpoint14-protocol",
+  "version": 1,
+  "package": "vn.rtr.aeris.cockpitio14",
+  "unchangedCore": "Exact IOADMIT13 owner/session/authority/release/RXgroup/guards andUI05assets; onlynewActivity/checkpointlane andnewpackageClosedReviewnamespace.",
+  "canonical": {
+    "devicePath": "files/latest-state.json",
+    "maximumBytes": 65536,
+    "bytes": "Exact native owner snapshot UTF8, notwrapped",
+    "durability": "Mandatorysinglewriter filefsync->rename->directoryfsync; notbest-effortWebViewqueue."
+  },
+  "checkpointDirectory": {
+    "devicePath": "files/checkpoint14",
+    "members": [
+      "writer.lock",
+      "status.json",
+      "terminal-<contextSHA256>.json"
+    ],
+    "pendingPolicy": "Preserveandfailclosed; noautodeletion/repair",
+    "maximumTerminalFiles": 8,
+    "maximumTerminalBytes": 65536,
+    "maximumAllTerminalBytes": 524288,
+    "statusMaximumBytes": 16384,
+    "quotaScope": "Withinexisting64MiBmetadata/191.5MiBsystem/512MiBAVDgrowth/192MiBexports, notadditionalquota."
+  },
+  "binding": {
+    "contextKeys": [
+      "run",
+      "epoch",
+      "boot",
+      "operator",
+      "generation",
+      "profileId"
+    ],
+    "contextSHA256": "Values.hash(Values.bytes(orderedcontextkeys)); UTF8canonicalValuesorder",
+    "ownerIdentity": "run+\":\"+generation",
+    "source": "APKsourceidentity.sourceSHA256",
+    "newOwner": "ExplicitCONNECTonly, previousmatchingterminal andreview disposition resolved; oldterminalarchived; noautomaticrestoration."
+  },
+  "ACK": {
+    "format": "aeris-terminal-checkpoint14-ack",
+    "version": 1,
+    "keys": [
+      "format",
+      "version",
+      "phase",
+      "context",
+      "contextSHA256",
+      "ownerIdentity",
+      "APKSourceSHA256",
+      "terminalSHA256",
+      "terminalAnchor",
+      "canonicalPath",
+      "archivePath",
+      "statusSHA256",
+      "serial",
+      "canonicalDurableNs",
+      "ackElapsedNs",
+      "reviewStatus",
+      "reviewSHA256",
+      "failure",
+      "lastRejection",
+      "healthyCoalescedNonAuthority",
+      "rejectedOffers",
+      "presentationCallbackErrors",
+      "shutdownRequested",
+      "writerClosed",
+      "authorityRestorable",
+      "ACKScope"
+    ],
+    "positivePhase": "COMMITTED",
+    "scopeValue": "LIVE_SOURCE_BOUND_AFTER_PRIMARY_BARRIERS_NOT_FILE_VISIBILITY",
+    "creation": "Inmemory COMMITTED onlyafterterminalarchive+canonical+status filefsync/rename/directoryfsync return. Matchingstrictreview onlythenruns. NoACKfrombarefilevisibility.",
+    "liveCarrier": "files/workspace-state.json top-levelcheckpoint",
+    "carrierClockField": "checkpointObservedElapsedNs",
+    "carrierClockOrder": "Captureimmutablecheckpoint.snapshot first, thencapture genuineSystemClock.elapsedRealtimeNanos; require canonicalDurableNs<=ackElapsedNs<=checkpointObservedElapsedNs. NeverretimestampACKoroldworkspaceUIat.",
+    "requiredPositiveGate": "LiveACK context/source/view + canonical/archive/status bytes/SHA + originalcase/deadline. ReviewDURABLE andmatchingreviewfileSHA requiredforreviewgate.",
+    "initialPhases": [
+      "STARTING",
+      "READY",
+      "BOUND",
+      "TERMINAL_ADMITTED"
+    ],
+    "unqualifiedPhases": [
+      "RECOVERED_NOT_LIVE_ACK",
+      "FAILED",
+      "REVIEW_FAILED"
+    ],
+    "restart": "Keepcanonical/archive/status exact; inertworkspaceNO_SESSIONdoesnotreplacecanonical anddoesnotreviveoldACKorinputauthority."
+  },
+  "status": {
+    "format": "aeris-terminal-checkpoint14-status",
+    "version": 1,
+    "phase": "CANDIDATE_COMMIT",
+    "scope": "CANDIDATE_ONLY_REQUIRE_LATER_LIVE_ACK",
+    "keys": [
+      "format",
+      "version",
+      "phase",
+      "context",
+      "contextSHA256",
+      "ownerIdentity",
+      "APKSourceSHA256",
+      "terminalSHA256",
+      "terminalAnchor",
+      "canonicalPath",
+      "archivePath",
+      "serial",
+      "reviewStatus",
+      "reviewSHA256",
+      "history",
+      "authorityRestorable",
+      "scope"
+    ],
+    "historyKeys": [
+      "context",
+      "contextSHA256",
+      "ownerIdentity",
+      "APKSourceSHA256",
+      "terminalSHA256",
+      "terminalAnchor",
+      "reviewStatus",
+      "reviewSHA256"
+    ],
+    "historyMaximumItems": 8,
+    "meaning": "Visiblecandidate status isnotcompletionACK. Itsfsync/rename/dirsyncmustfinishbeforehelper exposesCOMMITTED.",
+    "historyReviewSemantics": "PENDING/FAILED require nullreviewSHA; DURABLE requires exactboundedWorkspaceStore filehash/context/nativeTerminal/source/preflight/surveybinding verifiedonstartup. Historyreviewcandidate isstagedlocally; onlymemory historyack updatedafterstatusbarriers."
+  },
+  "review": {
+    "strictConsumer": "ClosedReview exactIOADMIT13semanticreader, newpackage14namespaceonly",
+    "SHA256": "SHAofexactClosedReviewbytescommittedbyWorkspaceStore.saveReview toreview-<run>-<sha>.json",
+    "waitMaximumNs": 60000000000,
+    "source": "Immutablematchingterminal+sessionlink; neverskippedbecauseUIqueuefull/destroyed",
+    "publication": "MemoryreviewStatusDURABLE onlyafterreviewfilecommitANDnewstatuscandidateallbarriersreturn; FAILED/PENDING cannotpromotecompletion.",
+    "budget": "Withinoriginal290sclosureheadroom; noflightfreshnesschange.",
+    "startupValidation": "For everyhistoryclaimDURABLE, require regularnon-symlink workspace03/review-<run>-<sha>.json\u2264128KiB, exacthash/run/epoch/boot/generation/nativeTerminalSHA/head/fullrecordedpreflightcontext/source/surveybinding. Missing/corruptclaimedreviewfailsclosed; no replay/promotion/pendingrepair."
+  },
+  "shutdown": {
+    "terminalDrainMaximumNs": 5000000000,
+    "meaning": "onDestroy requestsboundeddrain; currentownerfinalterminal acceptedbeforedeadline evenwhenActivitydestroyed; writer remainsforseparatereviewwait\u226460s",
+    "late": "Latchesfailure; latercompletedIOcannotrescueoriginaldeadline",
+    "OSLimit": "Cannotguaranteeinterruptorboundkernel/fsyncduration; timeoutremainsexplicitunqualified,prefixesretained."
+  },
+  "coalescing": {
+    "allowed": "Onependinghealthy presentationcheckpointslot only; countednon-authoritative",
+    "notAllowed": [
+      "input",
+      "rawTX",
+      "rawRX",
+      "model",
+      "frame",
+      "journal"
+    ],
+    "terminal": "Reservedimmutableterminalslot, stickythroughinflightIO, exactduplicateidempotent; conflictingterminalfails, olderhealthy/foreign/NO_SESSION cannotoverwrite."
+  },
+  "failure": "Anyprimarywrite/fsync/rename/dirsync/status failure preventsCOMMITTED andstrictreview. Preserveuncertainpendingfiles; nohiddenretry/prune. Callback/presentationfailuredoesnotfabricatecommit.",
+  "unchanged": {
+    "inputUIFreshnessMs": 200,
+    "frameFreshnessMs": 250,
+    "loopMs": 500,
+    "geographyMs": 1500,
+    "samplePeriodMs": 50,
+    "FIFO": 128,
+    "globalPerLoop": 16,
+    "speedup": 1,
+    "capMs": 500,
+    "nativePhysicalMiB": 160,
+    "nativeDecodedMiB": 512,
+    "physicalSegmentMiB": 1,
+    "logicalSegmentMiB": 8,
+    "maxSegments": 256,
+    "fsyncBeforeWireAndSensor": true
+  },
+  "limits": [
+    "Local sourceboundcheckpointACK isnotkernelnetworkage,physicalHID,remotedeviceorflightattestation.",
+    "UnexpecteddestroycanpreventliveworkspaceACKcarrier; canonicalstillretained, originalgatefailsclosedratherthanclaimfromlatefiles.",
+    "Baselinequeueoccupancywasreproducedwithdeclaredseams; actualE13queueoccupancywasnotmeasured.",
+    "Mock/JVM/filefsync doesnotqualifyAndroid\u2013SITL/30minutes/wholebeta/production."
+  ]
+}

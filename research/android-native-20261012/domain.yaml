@@ -1,0 +1,11 @@
+domain: android-native-20261012
+entity_label: Android native diagnostic API references
+schema:
+  type_field: null
+  fields: [inventory, hotplug, enumeration, storage, callbacks, signing]
+rollup_field: null
+universe:
+  estimate: null
+  basis: Six selected primary Android API/tool documents; not native compatibility or completeness measurement
+alias_map: {}
+ambiguous_clusters: []

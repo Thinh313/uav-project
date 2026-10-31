@@ -1,0 +1,31 @@
+{
+  "status": "SOURCE_READY_PENDING_QA_FREEZE",
+  "runtimeCLI": "python3 -B -m pilot.betaintegrated01.cockpit04.backend --config <absolute-run-config.json>",
+  "APCLI": "python3 -B -m pilot.betaintegrated01.cockpit04.ap_supervisor --config /evidence/run-config.json",
+  "controlMountReadOnly": "pilot/betaintegrated01/cockpit04/profiles -> /control",
+  "candidateMount": "reuse existing AP03/clockprobe/copter.parm read-only",
+  "configBuilder": "planning/betaintegrated01/m1cockpit04/host/launch_fixture.py build_config(repository,variant,run,epoch,boot,evidence,case_id,maximum_seconds=60|90|1960,wipe_state=True,state_reuse=None)",
+  "profiles": {
+    "nominal": {
+      "path": "pilot/betaintegrated01/cockpit04/profiles/nominal/run-profile02.json",
+      "SHA256": "6e8b3093e9802e20b4220fa872d57d9260bf02bd2ae40304ac161a53a0b6b17e"
+    },
+    "loss": {
+      "path": "pilot/betaintegrated01/cockpit04/profiles/loss/run-profile02.json",
+      "SHA256": "d5036bdada6b0022fa93ae86edef74c0f04004a3744d6e23fda3655f4db3a23e"
+    }
+  },
+  "runtimeStartsByBuilder": 0,
+  "coldVerification": "read-only original host/AP raw in place; selected native tar only",
+  "perCaseFreshEntry20Required": true,
+  "caseOrder": [
+    "smoke90",
+    "loss90",
+    "restart",
+    "long1960_LAST"
+  ],
+  "API": [
+    "pilot.betaintegrated01.cockpit04.confirmation.create_confirmation_descriptor_long(nativeTarPath,prefix,nativeExternalAnchor,bracket,launchContext)",
+    "pilot.betaintegrated01.cockpit04.oracles.verify_case_long(out,run,epoch,boot,host_anchor=...,AP_anchor=...,transport_anchor=...,scenario=nominal|loss|ground-recovery,native_confirmation=...,confirmedHomeReceiptAnchor=...)"
+  ]
+}

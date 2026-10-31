@@ -1,0 +1,3 @@
+/** Restore ONLY the original media-sidecar body contract. No listener or runtime wiring. */
+export const SIDECAR_CONTRACT_RECIPE=Object.freeze({from:"const needsForeground=!['compile','native82','flight-handoff','handoff','delivery-set','export-artifact'].includes(route);",to:"const needsForeground=!['compile','native82','flight-handoff','handoff','delivery-set','export-artifact','media-sidecar'].includes(route);",count:1});
+export function restoreSidecarContract(source){const parts=source.split(SIDECAR_CONTRACT_RECIPE.from);if(parts.length-1!==1)throw Error('EXACT_FROZEN_G13_SIDECAR_CONTRACT_SITE_REQUIRED');return parts.join(SIDECAR_CONTRACT_RECIPE.to);}

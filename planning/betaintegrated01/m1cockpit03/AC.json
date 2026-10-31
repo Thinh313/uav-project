@@ -1,0 +1,77 @@
+{
+  "scope": "M1-COCKPIT03",
+  "requirements": [
+    {
+      "id": "AC01",
+      "expected": "Frozen source/candidate/ENDURE and all prior seal identities unchanged",
+      "evidence": "preservation-before01.json + after.json",
+      "status": "NOT_CHECKED"
+    },
+    {
+      "id": "AC02",
+      "expected": "One trusted local UI bridge, zero JS flight or authority APIs; one native socket/writer",
+      "evidence": "source/APK/static and adversarial QA",
+      "status": "NOT_CHECKED"
+    },
+    {
+      "id": "AC03",
+      "expected": "Survey edit/save with persisted content digest, revision and explicit reference datum",
+      "evidence": "Android UI + workspace cold receiver",
+      "status": "NOT_CHECKED"
+    },
+    {
+      "id": "AC04",
+      "expected": "Preflight approval bound to saved draft and actual run/epoch/boot, invalidated by editing/stale state",
+      "evidence": "mock + Android native state",
+      "status": "NOT_CHECKED"
+    },
+    {
+      "id": "AC05",
+      "expected": "Actual native Fly manual/assisted, Home post-ARM confirmation and actual telemetry",
+      "evidence": "Android screenshots + cold native/wire oracle",
+      "status": "NOT_CHECKED"
+    },
+    {
+      "id": "AC06",
+      "expected": "UP revokes before observed BRAKE; neutral/release before new lease then explicit LAND",
+      "evidence": "accepted control05 cold full raw oracle",
+      "status": "NOT_CHECKED"
+    },
+    {
+      "id": "AC07",
+      "expected": "All admitted frames retained, model replay same inputs, fsync before sensor speedup1 cap500ms",
+      "evidence": "cold full-frame AP/STAGE/model oracle",
+      "status": "NOT_CHECKED"
+    },
+    {
+      "id": "AC08",
+      "expected": "Durable review linked to exact draft/preflight/native journal anchor; independent fresh ground groups",
+      "evidence": "cold independent workspace/review receiver",
+      "status": "NOT_CHECKED"
+    },
+    {
+      "id": "AC09",
+      "expected": "Ordinary Android restart restores draft/history without connection or authority",
+      "evidence": "before/after SHA and initial state inspection",
+      "status": "NOT_CHECKED"
+    },
+    {
+      "id": "AC10",
+      "expected": "All 4 panes + day/night no overlap, 48dp touch targets, aligned glass UI",
+      "evidence": "actual native screenshots and scoped layout inspection",
+      "status": "NOT_CHECKED"
+    },
+    {
+      "id": "AC11",
+      "expected": "Entry20/livefloor10GiB+256MiB, actual power observed, managed resource closure",
+      "evidence": "admission, runtime guards and ownership closure",
+      "status": "NOT_CHECKED"
+    },
+    {
+      "id": "AC12",
+      "expected": "Honest limits: manual training for survey; no AUTO, hardware, real media or whole Beta claim",
+      "evidence": "review copy + completion report",
+      "status": "NOT_CHECKED"
+    }
+  ]
+}

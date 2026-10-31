@@ -1,0 +1,200 @@
+{
+  "format": "aeris-observer03-readonly-dependencies",
+  "version": 1,
+  "files": {
+    "/scene.mjs": {
+      "path": "pilot/visual56/scene.mjs",
+      "sha256": "e6ec419761a0fe8df843da07af9c87dccc7456c82b5cc6c5a16e6053983d0bde",
+      "bytes": 8825
+    },
+    "/audio.mjs": {
+      "path": "pilot/sim32/viewer/audio.mjs",
+      "sha256": "223f5567afa185f68d938cbfb4772d12e7455af797a221949656ab9dcffb425e",
+      "bytes": 1312
+    },
+    "/assets/outdoor-background.jpg": {
+      "path": "pilot/visual56/assets/outdoor-background.jpg",
+      "sha256": "e61c9123f1393c1c1501ab3acfa4906a7eadc6e632337d7d2740323fde5cea1d",
+      "bytes": 5275330
+    },
+    "/assets/asphalt-color.jpg": {
+      "path": "pilot/visual56/assets/asphalt-color.jpg",
+      "sha256": "28f5ba8690553f192c0e5e1a5ff40f34765b4b93f4cc7059b1a3e9c795b6c28c",
+      "bytes": 3075676
+    },
+    "/assets/cesium-drone.glb": {
+      "path": "pilot/visual56/assets/cesium-drone.glb",
+      "sha256": "77e8a8cfa4763ec83097f492cd48b2143e9c40797ff7211d5752604a35ac3d9d",
+      "bytes": 1169536
+    },
+    "/assets/asphalt-normal.jpg": {
+      "path": "pilot/visual56/assets/asphalt-normal.jpg",
+      "sha256": "ffe49db71a0fd34c1e259625df66a302a237597d6ef655307987ec4e45bc6f21",
+      "bytes": 4943950
+    },
+    "/assets/asphalt-rough.jpg": {
+      "path": "pilot/visual56/assets/asphalt-rough.jpg",
+      "sha256": "b9a516b61b7040a9245ac206642d5f767ad9589a0169c4a1668221429e8a998c",
+      "bytes": 2230457
+    },
+    "/assets/outdoor.hdr": {
+      "path": "pilot/visual56/assets/outdoor.hdr",
+      "sha256": "3fbd33f279f29bd64925c1dd3214fd46c627493d21f1100248b6b1098da4d06e",
+      "bytes": 6480797
+    },
+    "/assets/fonts/METADATA.pb": {
+      "path": "pilot/visual56/assets/fonts/METADATA.pb",
+      "sha256": "636e983a5a87c2d7aa3ff9f6544f65910eac0c8537a2a8b29c584d786770d878",
+      "bytes": 4877
+    },
+    "/assets/fonts/Barlow-Bold.ttf": {
+      "path": "native/crew02/assets/fonts/Barlow-Bold.ttf",
+      "sha256": "84e6a4d61e7c3e21f3c50ea6a4f7e5303a3467864c038be6ea3759bab8d547f9",
+      "bytes": 108220,
+      "originalPath": "pilot/visual56/assets/fonts/Barlow-Bold.ttf"
+    },
+    "/assets/fonts/OFL.txt": {
+      "path": "pilot/visual56/assets/fonts/OFL.txt",
+      "sha256": "186d750eb496a4c17a76385f82be6aea2ac1cf2de074a811d63786cf374ea73f",
+      "bytes": 4377
+    },
+    "/assets/fonts/Barlow-Medium.ttf": {
+      "path": "native/crew02/assets/fonts/Barlow-Medium.ttf",
+      "sha256": "f8906f762cb73dca441da034bc363b2d8e2e68bc10d5c05e58717646c20cc4b4",
+      "bytes": 103536,
+      "originalPath": "pilot/visual56/assets/fonts/Barlow-Medium.ttf"
+    },
+    "/assets/fonts/Barlow-SemiBold.ttf": {
+      "path": "native/crew02/assets/fonts/Barlow-SemiBold.ttf",
+      "sha256": "86577cb32f8abe3673db53ca0f4221e6856751a4f6730c867e00f720f8bb1fc5",
+      "bytes": 108348,
+      "originalPath": "pilot/visual56/assets/fonts/Barlow-SemiBold.ttf"
+    },
+    "/vendor/addons/objects/GroundedSkybox.js": {
+      "path": "pilot/visual56/vendor/addons/objects/GroundedSkybox.js",
+      "sha256": "b67ea3bac2279bd0b48e4094f136780247c95e0c65b5f68b563e659bc9d13507",
+      "bytes": 2000
+    },
+    "/vendor/addons/utils/SkeletonUtils.js": {
+      "path": "pilot/visual56/vendor/addons/utils/SkeletonUtils.js",
+      "sha256": "01bb5831e0d7863495db0f6f0d040ca560bda66dba18f3f59acae6dd898030e2",
+      "bytes": 11555
+    },
+    "/vendor/addons/utils/BufferGeometryUtils.js": {
+      "path": "pilot/visual56/vendor/addons/utils/BufferGeometryUtils.js",
+      "sha256": "9af04fd9d87c50b3d8c32fedf82102a28f0f1462e8689a432ec127c56a278489",
+      "bytes": 37732
+    },
+    "/vendor/addons/math/SimplexNoise.js": {
+      "path": "pilot/visual56/vendor/addons/math/SimplexNoise.js",
+      "sha256": "acfa57d62600179d0452ead1b993208ed607f323b5c1a2abc45cd74dc2e192f9",
+      "bytes": 15150
+    },
+    "/vendor/addons/postprocessing/SSAOPass.js": {
+      "path": "pilot/visual56/vendor/addons/postprocessing/SSAOPass.js",
+      "sha256": "a82084c266a259fcd684f32495f681385903fdbc04daf76ee5aedfe85a3b296b",
+      "bytes": 13483
+    },
+    "/vendor/addons/postprocessing/Pass.js": {
+      "path": "pilot/visual56/vendor/addons/postprocessing/Pass.js",
+      "sha256": "585fe53c31256e09f63e1571ab8827fed4b6f75ca04c5814469266b2e38d98be",
+      "bytes": 4240
+    },
+    "/vendor/addons/postprocessing/MaskPass.js": {
+      "path": "pilot/visual56/vendor/addons/postprocessing/MaskPass.js",
+      "sha256": "972888214d7495fe44c6aa8fb80d388e9711a808fd3cb4f724f847a2e28934ac",
+      "bytes": 4696
+    },
+    "/vendor/addons/postprocessing/EffectComposer.js": {
+      "path": "pilot/visual56/vendor/addons/postprocessing/EffectComposer.js",
+      "sha256": "3dfd500c3ae775b5814ec311c2cb848a9bb841be995065575aa0e8ce5b017179",
+      "bytes": 8521
+    },
+    "/vendor/addons/postprocessing/ShaderPass.js": {
+      "path": "pilot/visual56/vendor/addons/postprocessing/ShaderPass.js",
+      "sha256": "ee99d5b8dc6a3770328a32552aac5a7ed5f473479cb808d5a07e84380f7c128d",
+      "bytes": 3248
+    },
+    "/vendor/addons/postprocessing/OutputPass.js": {
+      "path": "pilot/visual56/vendor/addons/postprocessing/OutputPass.js",
+      "sha256": "3b41db0b3ce0dfb5c4ef2243b259d274b348702e1c03a4cf9f01ff89f164eea6",
+      "bytes": 4204
+    },
+    "/vendor/addons/postprocessing/RenderPass.js": {
+      "path": "pilot/visual56/vendor/addons/postprocessing/RenderPass.js",
+      "sha256": "90743238549ad6730afea7b41c860d7847ee1c91fc2cd7239c3997a48140aeb1",
+      "bytes": 4300
+    },
+    "/vendor/addons/shaders/SSAOShader.js": {
+      "path": "pilot/visual56/vendor/addons/shaders/SSAOShader.js",
+      "sha256": "7cd5164c0e39650bf7b1e23bb2a6f285368be679dfc3772f691c465a512b0ced",
+      "bytes": 6988
+    },
+    "/vendor/addons/shaders/OutputShader.js": {
+      "path": "pilot/visual56/vendor/addons/shaders/OutputShader.js",
+      "sha256": "ac159d210985435b5a0fa29ecb0e6846741b958c9c196839e6360438e9ebfb8d",
+      "bytes": 1878
+    },
+    "/vendor/addons/shaders/CopyShader.js": {
+      "path": "pilot/visual56/vendor/addons/shaders/CopyShader.js",
+      "sha256": "7afe5c9afa71e811c97f376bf07da4d97748b9bf48443cbc3ab0f0caefa90d9a",
+      "bytes": 731
+    },
+    "/vendor/addons/loaders/RGBELoader.js": {
+      "path": "pilot/visual56/vendor/addons/loaders/RGBELoader.js",
+      "sha256": "6c08f9c441040a61a188ad7711078da4df48f8c5ac3b3725dd6f10ac9ff81162",
+      "bytes": 268
+    },
+    "/vendor/addons/loaders/GLTFLoader.js": {
+      "path": "pilot/visual56/vendor/addons/loaders/GLTFLoader.js",
+      "sha256": "5a091f3460ebdf846c3dfd8fd856c49b170a98677715021274cab56c233b608e",
+      "bytes": 117590
+    },
+    "/vendor/addons/loaders/HDRLoader.js": {
+      "path": "pilot/visual56/vendor/addons/loaders/HDRLoader.js",
+      "sha256": "440169c7630ec383556698510e1e57a147150c3d2858008bd352bc18283f4b81",
+      "bytes": 12099
+    },
+    "/vendor/three.module.js": {
+      "path": "pilot/sim32/viewer/vendor/three.module.js",
+      "sha256": "9052042d676cb0fdc1ddfefe193053f34b7ac0513a616fdac4535d49987812ea",
+      "bytes": 662772
+    },
+    "/vendor/three.core.js": {
+      "path": "pilot/sim32/viewer/vendor/three.core.js",
+      "sha256": "9edde002b066a9a05676a6127f67735b62baf399bdea529f2f7e31657da769e6",
+      "bytes": 1458113
+    },
+    "dependency:native/crew02/assets/direct95/vendor/pilot/apstream40/wire.mjs": {
+      "path": "native/crew02/assets/direct95/vendor/pilot/apstream40/wire.mjs",
+      "sha256": "767978351266d6489abd88ac86c41f9353dc6b92004890cc1c33439e21ae998f",
+      "bytes": 6381
+    },
+    "dependency:native/crew02/assets/direct95/vendor/pilot/apstream40/definitions.mjs": {
+      "path": "native/crew02/assets/direct95/vendor/pilot/apstream40/definitions.mjs",
+      "sha256": "b881e15a33e92634ded232fc25b43693e558b662a36dd82571300899d261da7d",
+      "bytes": 300461
+    },
+    "dependency:native/crew02/assets/direct95/vendor/pilot/mavflight37/wire.mjs": {
+      "path": "native/crew02/assets/direct95/vendor/pilot/mavflight37/wire.mjs",
+      "sha256": "ff27a8fea7daef01f44748ef51985c3cd353f1efb2adf1947969fa8392261fc6",
+      "bytes": 6035
+    },
+    "dependency:native/crew02/assets/direct95/vendor/pilot/apflight36/types.mjs": {
+      "path": "native/crew02/assets/direct95/vendor/pilot/apflight36/types.mjs",
+      "sha256": "03c950a61db5b17ec96f92b8e082bc7dddd5db755d63558f3c6ce4a1187d2ea6",
+      "bytes": 1651
+    },
+    "dependency:native/crew02/assets/direct95/vendor/pilot/mavflight37/definitions.mjs": {
+      "path": "native/crew02/assets/direct95/vendor/pilot/mavflight37/definitions.mjs",
+      "sha256": "171efcad793fa2d6863d412a583428d2fc809d464a1aae1053e1949b69f24350",
+      "bytes": 39517
+    },
+    "dependency:native/crew02/assets/direct95/vendor/pilot/apflight36/vendor/common.mjs": {
+      "path": "native/crew02/assets/direct95/vendor/pilot/apflight36/vendor/common.mjs",
+      "sha256": "2c4437d77352884692b8a7cc102543106f88d13fb58e38d432b7c7cbf659e16f",
+      "bytes": 1248
+    }
+  },
+  "scope": "Pinned visual56 full-tier and decoder only; replay files not served"
+}

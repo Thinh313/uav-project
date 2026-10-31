@@ -1,0 +1,23 @@
+import {digest,fail} from '../archive69/io.mjs';import {MockOracle} from '../auth73/oracle.mjs';import {ReceiverAuth,SenderAuth} from '../auth73/adapter.mjs';import {replay as replay73} from '../auth73/state.mjs';
+import {activeWindow} from '../auth73/contract.mjs';import {currentKey,policyCurrent} from './state.mjs';
+export class LiveProvider74 {
+ constructor({registry,receiverId,records=[]}){this.registry=registry;this.receiverId=receiverId;this.mode='MOCK_ONLY';this.productionCapable=false;const keys=[];for(const sub of registry.state.subjects.values())for(const k of sub.keys)if(k.status==='ACTIVE')keys.push({principal:sub.scope.principal,keyId:k.ref.keyId,roles:sub.scope.kind==='SOURCE'?['SOURCE']:['CHALLENGE','RECEIPT'],state:'ACTIVE',notBeforeMs:k.ref.notBeforeMs,notAfterMs:k.ref.notAfterMs});this.inner=new MockOracle({epoch:this.epoch,keys,records});}
+ get epoch(){return this.registry.state.securityEpoch;}
+ key(principal,keyId,role,now){if(this.registry.ca.unavailable)fail('CA_UNAVAILABLE');return currentKey(this.registry.state,principal,keyId,role,this.receiverId,now);}
+ verify(e,{principal,keyId,role,epoch,now,production=false}){if(production)fail('NO_PRODUCTION_VERIFIER');if(epoch!==this.epoch)fail('TRUST_EPOCH_MISMATCH');this.key(principal,keyId,role,now);return this.inner.verifyHistorical(e,{principal,keyId,role,epoch});}
+ verifyHistorical(e,c){return this.inner.verifyHistorical(e,c);}
+ issueFixture(body,meta){this.inner.epoch=this.epoch;return this.inner.issueFixture(body,meta);}
+ snapshot(){return this.inner.snapshot();}
+}
+async function context74(self,now,base){await self.registry.guard(now);policyCurrent(self.registry.state,self.registry.config,self.policy,now);return base.call(self,now);}
+export class Receiver74 extends ReceiverAuth {
+ constructor(c){super(c);this.registry=c.registry;this.lifecycleBusy=false;this.registry.registerProvider(c.policy,c.oracle);}
+ async context(now){return context74(this,now,ReceiverAuth.prototype.context);}
+ async admit(m,ce,se,now){if(this.lifecycleBusy)fail('SERIAL_LIFECYCLE_REQUIRED');this.lifecycleBusy=true;try{await this.context(now);this.verify(ce,'CHALLENGE',now);this.verify(se,'SOURCE',now);activeWindow(ce.body,now);activeWindow(se.body,now);if(ce.body.receiverBootId!==this.boot)fail('CHALLENGE_OLD_BOOT');if(digest(this.challenges.get(ce.body.challengeId)??null)!==digest(ce.body))fail('CHALLENGE_UNKNOWN_OR_USED');const a={manifest:m,challengeEnvelope:ce,sourceEnvelope:se};replay73([...this.ledger.events,{type:'ADMIT',body:a,atMs:now}],'receiver',this.policy);await this.registry.reserve('receiver',this.policy,a,now,this.oracle);return await super.admit(m,ce,se,now);}finally{this.lifecycleBusy=false;}}
+}
+export class Sender74 extends SenderAuth {
+ constructor(c){super(c);this.registry=c.registry;this.lifecycleBusy=false;this.registry.registerProvider(c.policy,c.oracle);}
+ async context(now){return context74(this,now,SenderAuth.prototype.context);}
+ async recordClaim(m,ce,se,now){if(this.lifecycleBusy)fail('SERIAL_LIFECYCLE_REQUIRED');this.lifecycleBusy=true;try{await this.context(now);this.verify(ce,'CHALLENGE',now);this.verify(se,'SOURCE',now);activeWindow(se.body,now);const a={manifest:m,challengeEnvelope:ce,sourceEnvelope:se};replay73([...this.ledger.events,{type:'CLAIM',body:a,atMs:now}],'sender',this.policy);await this.registry.reserve('sender',this.policy,a,now,this.oracle);return await super.recordClaim(m,ce,se,now);}finally{this.lifecycleBusy=false;}}
+}
+export async function archivedReceipt({ledger,provider,receiver72,transferId}){await ledger.load();for(const e of ledger.events){if(e.type==='ADMIT'||e.type==='CLAIM'){const c=e.body.challengeEnvelope,s=e.body.sourceEnvelope;provider.verifyHistorical(c,{principal:ledger.policy.receiverPrincipal,keyId:ledger.policy.receiverKeyId,role:'CHALLENGE',epoch:ledger.policy.trustEpoch});provider.verifyHistorical(s,{principal:s.body.sourcePrincipal,keyId:s.body.sourceKeyId,role:'SOURCE',epoch:ledger.policy.trustEpoch});}if(e.type==='COMMIT'||e.type==='RECEIPT')provider.verifyHistorical(e.body.receiptEnvelope,{principal:ledger.policy.receiverPrincipal,keyId:ledger.policy.receiverKeyId,role:'RECEIPT',epoch:ledger.policy.trustEpoch});}const saved=ledger.state.receipts.get(transferId);if(!saved)fail('NO_HISTORICAL_RECEIPT');const current=await receiver72.inspect(transferId);if(!current.receipt||digest(current.receipt)!==digest(saved.receipt72))fail('ARCHIVED_DATA_INTEGRITY_HOLD');return {...saved,scope:'HISTORICAL_ONLY_NOT_CURRENT_AUTHENTICATION',currentTrust:'HOLD_REVALIDATION_REQUIRED',productionAuthenticated:false,authorityRestored:false,actualImages:0};}

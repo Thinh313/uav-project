@@ -1,0 +1,1 @@
+{"acceptedReadP95BudgetMs":10000,"burstPauseMs":5000,"burstWidth":12,"clientTimeoutMs":20000,"durationMs":1800000,"format":"aeris-load-workload","observeP95BudgetMs":1000,"observePauseMs":250,"observeWorkers":2,"readPauseMs":500,"readWorkers":2,"scope":"30-minute real-time mixed read-only host workload; no multi-day/device SLA","version":1}

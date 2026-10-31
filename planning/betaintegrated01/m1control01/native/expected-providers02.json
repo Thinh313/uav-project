@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "profiles": {
+    "M1-CONTROL01-NOMINAL": {
+      "version": 1,
+      "mode": "CANDIDATE_EXTERNAL",
+      "profileId": "M1-CONTROL01-NOMINAL",
+      "binarySHA256": "77344f3c6f715cb326b99356815e8315769e9331dcb1e4c88bc4076804cb0d53",
+      "modelSHA256": "4975959c968582cabd0057d9166601919c31968d69cc92fde303c1f66c7b4808",
+      "configSHA256": "6bc4788c451fe75319bef471e932a3ef74311d7d62843b5d80301c13c38fa756",
+      "endpoint": "tcp://10.0.2.2:5961",
+      "firmware": "4.7.1",
+      "durationSeconds": 120,
+      "manualCapability": true,
+      "capabilityProfile": "M1_CONTROL01_NO_MEDIA",
+      "typedAsset": "nominal-typed-profile.json",
+      "typedSHA256": "fc42c0aef7c4a5b1a5e25cafc9476d71221f4be205a3973a5609a0b3fccae16e"
+    },
+    "M1-CONTROL01-LOSS": {
+      "version": 1,
+      "mode": "CANDIDATE_EXTERNAL",
+      "profileId": "M1-CONTROL01-LOSS",
+      "binarySHA256": "77344f3c6f715cb326b99356815e8315769e9331dcb1e4c88bc4076804cb0d53",
+      "modelSHA256": "4975959c968582cabd0057d9166601919c31968d69cc92fde303c1f66c7b4808",
+      "configSHA256": "cd51bf6faa24fa737d28f41571c1828ab7ed056413f36cd9e383db7bd70ec297",
+      "endpoint": "tcp://10.0.2.2:5961",
+      "firmware": "4.7.1",
+      "durationSeconds": 120,
+      "manualCapability": true,
+      "capabilityProfile": "M1_CONTROL01_NO_MEDIA",
+      "typedAsset": "loss-typed-profile.json",
+      "typedSHA256": "e38f4b9fdf38e0f2c254e0d530e346610a3e6738eb8188a93fd01e98dc9a2430"
+    }
+  }
+}

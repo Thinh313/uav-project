@@ -1,0 +1,23 @@
+{
+  "asOf": "2026-10-14",
+  "sourceHashes": {
+    "app/core/qgc.mjs": "d2de74f83d5bef53530f88203cfbb9d232689b324023107ce67e3bcaddbe09d8",
+    "services/sitl.mjs": "a28de515747e025ae829983555c616149a851c4915f9549d97f70a95e5efb1a3",
+    "docs/RAGAS-REPLACEMENT-GAPS-20261013.md": "cd60b6f284647eb8630ee786beb68cf71d36424f4639503da38c094af6b4ed3c",
+    "docs/AERIS-PRODUCT-QUALITY-STANDARD.md": "a3c7efbd3ec559a35137375cb2cf08833e6fb6bada658b62375f2b6589b5d536",
+    "docs/HERAHUB-SOFTWARE-RESEARCH.md": "b147703df59f2b14312516448ea9de218e4b455bb90d5db54227211fdadd4805",
+    "docs/HERA-CONTROLLER-BASELINE.md": "1222a60affd2e51c1d5b9a9575e81aec8e535a7984c92c49e34eb5df59363be8",
+    "delivery/COMPLETION-APROUTE28.md": "c656a0da6e733d46d6eb9562b097009a6cd2410d39e126840e14dbcb02f3daad",
+    "delivery/COMPLETION-NATIVE33.md": "0f3a3bf01cf36a8b3d4b5c062d8a0495ae8a8917fab43b3312530f8614737d8a",
+    "delivery/COMPLETION-SIM32-JOURNAL04.md": "6867047cf096101bc663408c24342d1a1c448726b0270b12a5e15b8916ee9324",
+    "evidence/endure27/progress.json": "7784c3aa7b20a1e385c4137b85783540d803cd3c574caf78da29d4437e37cf50"
+  },
+  "status": "ENGINEERING_PROTOTYPE_HOST_SITL_MOCK_NOT_HERA_ACCEPTED",
+  "explicitFindings": [
+    "Nonempty QGC fences are rejected by mission-only execution adapter",
+    "Actual AUTO/flight observed in pinned SITL, not physical Hera",
+    "Native33 installed Android acceptance NOT_CHECKED",
+    "Runtime AI detection/tracking and live airspace dataset MISSING",
+    "ENDURE27 FAILED/HOST_EXTERNAL_POWER_LOST; no24h acceptance"
+  ]
+}

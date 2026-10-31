@@ -1,0 +1,30 @@
+{
+  "status": "PASS",
+  "results": [
+    {
+      "name": "All5400 frames and36 full5s bins, all180s, with no AUTO claim",
+      "status": "PASS"
+    },
+    {
+      "name": "Bad first boundary frame clock is refused, never omitted",
+      "status": "PASS"
+    },
+    {
+      "name": "Cross-window conservative gap remains visible and fails",
+      "status": "PASS"
+    },
+    {
+      "name": "Declared unsupported profile or errorcounter cannot pass",
+      "status": "PASS"
+    },
+    {
+      "name": "UI inverse, explicit SAF buttons, header diagnostics navigation, separate provenance row",
+      "status": "PASS"
+    },
+    {
+      "name": "Reused native package schema remains exact in producer+verifier andnewoutputnamespace",
+      "status": "PASS"
+    }
+  ],
+  "scope": "ANALYTICAL_REPORTS_AND_STATIC_UI_NATIVE_COMPAT_MOCK_NO_RUNTIME_OR_ANDROID"
+}

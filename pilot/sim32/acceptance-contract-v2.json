@@ -1,0 +1,265 @@
+{
+  "format": "aeris-sim32-acceptance-contract",
+  "version": 2,
+  "at": "2026-10-13T15:34:06.064077+00:00",
+  "status": "REFERENCE_INCREMENT_WITH_OPEN_PRODUCT_GATES",
+  "ownerDecision": "Strict algorithm/performance/graphics/simulation quality; competitive product aiming to exceed DJI",
+  "ownerDecisionIsPerformanceEvidence": false,
+  "qualityStandard": {
+    "path": "docs/AERIS-PRODUCT-QUALITY-STANDARD.md",
+    "sha256": "a3c7efbd3ec559a35137375cb2cf08833e6fb6bada658b62375f2b6589b5d536"
+  },
+  "tip": {
+    "path": "delivery/TIP-SIM32.md",
+    "sha256": "f0e63007281ed320031240d750f8d4bbdc597832cb4534a48f941f5467667534"
+  },
+  "requirements": [
+    {
+      "id": "SIM32-01",
+      "status": "REFERENCE_VERIFIED",
+      "verifiedScope": "Versioned SI/NED/FRD profiles with explicit provisional assumptions",
+      "remaining": "Hera measured mass/CG/inertia/actuator calibration",
+      "evidence": [
+        {
+          "path": "docs/SIM32-REFERENCE-AND-COMPARISON.md",
+          "sha256": "956c17973e9abdc00d83b021d29505dabfe16ffbe38a084357fb30244b1ecdd1"
+        }
+      ]
+    },
+    {
+      "id": "SIM32-02",
+      "status": "REFERENCE_VERIFIED",
+      "verifiedScope": "Actual pinned AP servo/sensor closed loop; raw causal traces",
+      "remaining": "Hardware/HIL flight; full unused historical module source archives are partial",
+      "evidence": [
+        {
+          "path": "evidence/sim32/scoped-acceptance-index.json",
+          "sha256": "58e230075e242afd90c801d47ac47b5e6ac0ab4f92cc66a7ef76899c446ceed5"
+        }
+      ]
+    },
+    {
+      "id": "SIM32-03",
+      "status": "REFERENCE_VERIFIED_CALIBRATION_OPEN",
+      "verifiedScope": "20 physics +4 validation tests; empty/central/offset load and calm/crosswind/gust",
+      "remaining": "Aerodynamic/contact fidelity and measured physical tolerances",
+      "evidence": [
+        {
+          "path": "evidence/sim32/physics-unit03.txt",
+          "sha256": "90d0bb98a31ca012dd74e807ba98e3f0c0c8ff6be5a4ae03300f0b347f6aec78"
+        },
+        {
+          "path": "evidence/sim32/profile-validation01.txt",
+          "sha256": "998b64d219735659e120a1143ebbc1fac79b5991a2d9379260d73632dff0a9ad"
+        }
+      ]
+    },
+    {
+      "id": "SIM32-04",
+      "status": "REFERENCE_WORKFLOW_VERIFIED",
+      "verifiedScope": "12 live UI checks, Home/readback/terminal review; synthetic payload identities",
+      "remaining": "Native Android runtime and encoded video/media",
+      "evidence": [
+        {
+          "path": "evidence/sim32/live-browser-qa05.json",
+          "sha256": "425b4655d263ae821a471c4f68969bb8e4ec63c076fbb95873b218eca2270a0d"
+        }
+      ]
+    },
+    {
+      "id": "SIM32-05",
+      "status": "REFERENCE_VISUAL_AUDIO_VERIFIED",
+      "verifiedScope": "Metric scene from physics; Metal replay/live captures and audio checks",
+      "remaining": "Measured Hera sound/SPL, real terrain collision, native video",
+      "evidence": [
+        {
+          "path": "evidence/sim32/browser-qa02.json",
+          "sha256": "2c57fb29527db9b8d582266565e7eb1b2b72eca32bf7472bf5a708b9d4b4f55e"
+        },
+        {
+          "path": "evidence/sim32/live-flight05.png",
+          "sha256": "250fa6fdd7a8feb11d23836aa8d71f480df8539a85822ac30c9ee71023f7bc7a"
+        },
+        {
+          "path": "evidence/sim32/live-payload05.png",
+          "sha256": "95700003ba14c6b2080d557cb7473878962e9fc849c26bc3c717e8b96d1482b9"
+        }
+      ]
+    },
+    {
+      "id": "SIM32-06",
+      "status": "PARTIAL_CORPUS_VERIFIED",
+      "verifiedScope": "Actual GCS-loss RTL/land, sensor-death freshness, wrong target/owner/device, ACK ambiguity, bus close",
+      "remaining": "Restart recovery, encoded-video faults and broader overload/HIL corpus",
+      "evidence": [
+        {
+          "path": "evidence/sim32/runs/fault02/acceptance.json",
+          "sha256": "345bd79c6dec09caae7bc1aeb0bbab8088a2bc5183532c37227b3be052da13b8"
+        },
+        {
+          "path": "evidence/sim32/runs/payload06/acceptance.json",
+          "sha256": "afd6493b5945c8edb6250953da0086b31f75b76e8cdb53fce917ac3b89c09fbf"
+        }
+      ]
+    },
+    {
+      "id": "SIM32-07",
+      "status": "MEASURED_TARGETS_NOT_FULLY_MET",
+      "verifiedScope": "Declared host/frame/RSS/deadline/age traces; failed samples retained",
+      "remaining": "Physics >=1x not met; local feedback/native video/GPU completion not checked",
+      "evidence": [
+        {
+          "path": "evidence/sim32/verification-runtime03.json",
+          "sha256": "ad13ee60464a89aa6e327ac1f4a006055fbc3b37ad63464281ec5f776f651b73"
+        },
+        {
+          "path": "evidence/sim32/host-reference.json",
+          "sha256": "97321e48aa40075744afdaa083ca9b9c749d511d6ebca0e7bfee4c51222862ca"
+        }
+      ]
+    },
+    {
+      "id": "SIM32-08",
+      "status": "METHOD_PREPARED_NOT_CHECKED",
+      "verifiedScope": "Comparison protocol with configurations/tasks/denominators/confounders",
+      "remaining": "Actual Ragas/DJI data collection and analysis",
+      "evidence": [
+        {
+          "path": "docs/SIM32-REFERENCE-AND-COMPARISON.md",
+          "sha256": "956c17973e9abdc00d83b021d29505dabfe16ffbe38a084357fb30244b1ecdd1"
+        }
+      ]
+    },
+    {
+      "id": "SIM32-09",
+      "status": "INVENTORY_VERIFIED_AFTER_RESTORATION",
+      "verifiedScope": "3576 +5 +3 protected files and24 source/copies match; exact22-file recovery/cleanup, no signing/soak",
+      "remaining": "No continuous original-path presence claim; prior resource failure retained",
+      "evidence": [
+        {
+          "path": "evidence/sim32/verification-runtime03.json",
+          "sha256": "ad13ee60464a89aa6e327ac1f4a006055fbc3b37ad63464281ec5f776f651b73"
+        },
+        {
+          "path": "evidence/sim32/protected-recovery01.json",
+          "sha256": "c567acfce1ca3ad5fd8e048b416ade423d4b5936bd978e975283b43de3aa9a7a"
+        },
+        {
+          "path": "evidence/sim32/protected-recovery02.json",
+          "sha256": "115395c3f3838345342eb3b0f03810b12d1d3076d8cb8f70c7383c0daea50a11"
+        },
+        {
+          "path": "evidence/sim32/cleanup-final.json",
+          "sha256": "04aabc0276254d64adfa8a62dbe58eae43f8295dc5bc154fe529913e18f0c4a1"
+        }
+      ]
+    }
+  ],
+  "engineeringTargets": {
+    "status": "MEASURED_HOST_REFERENCE_NOT_FULL_PRODUCT_ACCEPTANCE",
+    "referenceConfiguration": {
+      "path": "evidence/sim32/host-reference.json",
+      "sha256": "97321e48aa40075744afdaa083ca9b9c749d511d6ebca0e7bfee4c51222862ca"
+    },
+    "render": {
+      "nominalFps": 60,
+      "widthPx": 1280,
+      "heightPx": 800,
+      "p95FrameMs": 16.7,
+      "p99FrameMs": 33.3,
+      "measured": {
+        "standalone1280x800": {
+          "samples": 1332,
+          "p95FrameMs": 9.6,
+          "p99FrameMs": 10.2,
+          "maxFrameMs": 266.6,
+          "above16_7ms": 4,
+          "above33_3ms": 1
+        },
+        "live910x726": {
+          "samples": 7339,
+          "p95FrameMs": 9.2,
+          "p99FrameMs": 9.3,
+          "maxFrameMs": 33.4,
+          "ageSamples": 7249,
+          "p95AgeMs": 200,
+          "p99AgeMs": 211,
+          "maxAgeMs": 246
+        },
+        "scope": "RAF intervals on ANGLE Metal M1 Max; distinct workloads; not GPU completion/native Hera. Closure-inclusive distribution retained separately."
+      }
+    },
+    "localUiFeedback": {
+      "p95Ms": 100,
+      "measured": null
+    },
+    "physics": {
+      "realtimeFactorMinimumAt1x": 1,
+      "convergenceSteps": [
+        "dt",
+        "dt/2",
+        "dt/4"
+      ],
+      "calibratedTolerance": null,
+      "measured": {
+        "activeRtfFlight10": 0.9564371492,
+        "activeRtfFlight11": 0.9945989226,
+        "activeRtfFlight12": 0.9721148765,
+        "activeRtfLiveUi": 0.9283582388,
+        "targetMet": false
+      }
+    },
+    "missionControlVideoBudgets": null
+  },
+  "comparisons": {
+    "ragas": {
+      "status": "NOT_CHECKED",
+      "configuration": null,
+      "binaryHash": null,
+      "measurements": null,
+      "winner": null,
+      "method": "Same supported hardware/configuration when feasible"
+    },
+    "dji": {
+      "status": "NOT_CHECKED",
+      "platform": null,
+      "controller": null,
+      "softwareVersion": null,
+      "payload": null,
+      "measurements": null,
+      "winner": null,
+      "method": "Equivalent systems/tasks/environment/output requirements; record hardware and other confounders"
+    }
+  },
+  "resourcePolicy": {
+    "minimumHostFreeBytes": 21474836480,
+    "budget": "Peak archives+full uncompressed output+runtime+AVD+evidence+host margin",
+    "largeInstallAtCurrentCapacity": "NOT_AUTHORIZED_USER_RETAINED_CAPACITY",
+    "priorIncident": "evidence/native31/resource-attempt01.json"
+  },
+  "isolation": {
+    "allowedModule": "pilot/sim32",
+    "frozenSourceEdits": false,
+    "ENDUREMutation": false,
+    "softwareReleaseSigning": false,
+    "physicalFlightCommands": false,
+    "inspectorReplayAsControl": false,
+    "exactByteMissingPathRestorationAuthorized": true,
+    "restoredPaths": 22,
+    "historyRewrite": false
+  },
+  "readiness": {
+    "closedLoopRuntime": "REFERENCE_FUNCTIONAL_VERIFIED",
+    "physicsCalibration": "NOT_CHECKED",
+    "visualAudioRuntime": "HOST_REFERENCE_VERIFIED",
+    "androidHeraHub": "NOT_CHECKED",
+    "competitiveSuperiority": "NOT_CHECKED",
+    "fullProduct": "OPEN_GATES",
+    "encodedNativeVideo": "NOT_CHECKED"
+  },
+  "review": "Sequential Contractor/Builder/Verify by one agent; not independent audit; prior contract/history retained",
+  "previousVersion": {
+    "path": "pilot/sim32/acceptance-contract.json",
+    "sha256": "c8fc0d98659a7f49859bf08025562cf87215a2b40a020b7c174fd7e16780f573"
+  }
+}

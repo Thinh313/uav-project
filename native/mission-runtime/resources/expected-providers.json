@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "profiles": {
+    "M1-COCKPIT04-NOMINAL": {
+      "version": 1,
+      "mode": "CANDIDATE_EXTERNAL",
+      "profileId": "M1-COCKPIT04-NOMINAL",
+      "binarySHA256": "77344f3c6f715cb326b99356815e8315769e9331dcb1e4c88bc4076804cb0d53",
+      "modelSHA256": "4975959c968582cabd0057d9166601919c31968d69cc92fde303c1f66c7b4808",
+      "configSHA256": "6e8b3093e9802e20b4220fa872d57d9260bf02bd2ae40304ac161a53a0b6b17e",
+      "endpoint": "tcp://10.0.2.2:5961",
+      "firmware": "4.7.1",
+      "durationSeconds": 2000,
+      "manualCapability": true,
+      "capabilityProfile": "M1_COCKPIT04_NO_MEDIA",
+      "typedAsset": "nominal-typed-profile.json",
+      "typedSHA256": "c577cde4e02d7a34635dd0b5fceb7d73100ebbb7cb478bb9a1e03c99ea219b05"
+    },
+    "M1-COCKPIT04-LOSS": {
+      "version": 1,
+      "mode": "CANDIDATE_EXTERNAL",
+      "profileId": "M1-COCKPIT04-LOSS",
+      "binarySHA256": "77344f3c6f715cb326b99356815e8315769e9331dcb1e4c88bc4076804cb0d53",
+      "modelSHA256": "4975959c968582cabd0057d9166601919c31968d69cc92fde303c1f66c7b4808",
+      "configSHA256": "d5036bdada6b0022fa93ae86edef74c0f04004a3744d6e23fda3655f4db3a23e",
+      "endpoint": "tcp://10.0.2.2:5961",
+      "firmware": "4.7.1",
+      "durationSeconds": 2000,
+      "manualCapability": true,
+      "capabilityProfile": "M1_COCKPIT04_NO_MEDIA",
+      "typedAsset": "loss-typed-profile.json",
+      "typedSHA256": "aff0eadb1e7a62cdda8ad2f3291f697951b0b3538a96bc17eb622276205e0aa2"
+    }
+  }
+}

@@ -1,0 +1,5 @@
+package vn.rtr.aeris.native88;
+import java.io.*;import java.util.*;
+public final class BundleIOTest88{
+ static int n=0;static void denied(byte[]b,long len,String sha)throws Exception{try{BundleIO88.copy(new ByteArrayInputStream(b),new ByteArrayOutputStream(),len,sha);throw new AssertionError("must reject");}catch(IOException e){n++;}}
+ public static void main(String[]args)throws Exception{byte[] b=new byte[100000];new Random(88).nextBytes(b);String h=DraftStore.hash(b);ByteArrayOutputStream o=new ByteArrayOutputStream();BundleIO88.copy(new ByteArrayInputStream(b),o,b.length,h);if(!Arrays.equals(b,o.toByteArray()))throw new AssertionError();n++;BundleIO88.copy(new ByteArrayInputStream(b),null,b.length,h);n++;denied(Arrays.copyOf(b,b.length-1),b.length,h);denied(Arrays.copyOf(b,b.length+1),b.length,h);denied(b,b.length,String.join("",Collections.nCopies(64,"a")));denied(b,BundleIO88.MAX+1,h);denied(b,0,h);try{BundleIO88.copy(new InputStream(){public int read()throws IOException{throw new IOException("fault");}},o,b.length,h);throw new AssertionError();}catch(IOException e){n++;}System.out.println("BUNDLE_IO_PASS "+n);}}

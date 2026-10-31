@@ -1,0 +1,27 @@
+# SURVEY02 v0.5 / geographic operator workflow
+
+Default entry is now `app/survey.html`: Plan → Fly → Review uses the actual loopback ArduPilot adapter. Legacy SURVEY01 rehearsal remains `/legacy.html`; engineering lab remains `/sitl.html`. Independent RtR application, no RAGAS source. AI supports development through executable contracts and evidence; no runtime LLM has command authority.
+
+## Geographic source contract
+
+`geodata/sources.json` freezes two public source byte captures. A single bounded Overpass vector extract covers 10.846–10.862 N,106.799–106.815 E, timestamp 2026-10-12T05:14:04Z. No public raster tiles or offline tile scraping. OSM attribution/ODbL metadata accompanies map and exported package. Official Copernicus GLO-30 COG N10/E106 supplies a 59×60 PixelIsPoint crop, WGS84 horizontal coordinates and EGM2008 metre elevations. All 3,540 cropped source pixels and 692 way geometries are checked against original bytes. It is DSM, including surface objects; acquisition date/uncertainty per pixel and current obstacles remain unknown.
+
+`app/data/manifest.json` records source URLs/query/fetched times/hashes, derived asset sizes/hashes, coverage, datum, attribution and limitations. `geo-pins.mjs` pins the exact approved bundle. Import verifies manifest and every asset before writing local storage; invalid input does not overwrite a valid package. Browser renders vectors itself. Service worker caches application shell/static approved files only; API responses, tokens and flight commands are excluded. Offline permits planning/review of data; no fresh telemetry implies no flight commands.
+
+Compiler accepts `aeris-survey-run` v1 envelope containing source id/hash, explicit simulation flag, altitude policy and existing v2 survey package. Server independently loads hash-pinned source assets and compiles; client-derived mission/elevation commands are never trusted as upload input. Source mismatch, unsupported operational policy, missing home/route DSM, no-data, invalid geometry, envelope/radius or altitude bounds fail before mission upload. Sampling is bilinear at ≤10 m along route, with bounded 12,000 samples, not claimed to increase 30 m source accuracy.
+
+## Vertical reference
+
+`sim-flat`: commands use constant virtual Home-relative height; DSM remains geographic planning context. `sim-dsm-offset`: commands use nominal height + DSM waypoint EGM2008 height − DSM Home EGM2008 height, float32 quantized, relative-home frame6. This is a **virtual SITL mapping**. Simulator physics remain flat. No physical AGL, surveyed DTM, validated EGM2008-to-autopilot geoid/launch conversion or operational terrain-following capability is claimed. NAV segment linear interpolation is checked against DSM samples; minimum virtual clearance <5 m blocks compilation. RTL altitude uses existing pinned SITL params, not computed operational terrain clearance. Profile is a design trace, not measured ground truth.
+
+## State and recovery
+
+Draft identity and expected/onboard mission are separate. Editing/importing a draft cannot alter onboard readback or current commands. Upload remains disarmed-only after all nine preflight checks; ACK alone is insufficient. Full download comparison covers topology, navigation, speed, trigger distance and altitude commands. Tagged AP_Mission source and observed variable-height readback establish float-metre → integer-centimetre → float-metre normalization; comparison accepts that exact conversion, not an arbitrary centimetre tolerance. See reference/AP_Mission-Copter-4.7.1.cpp and evidence/survey02/altitude-source.json.
+
+After disconnect the adapter clears mission verification and live telemetry. A heartbeat gap over 3 s also invalidates prior readback; fresh telemetry alone cannot restore it. Expected request is retained in adapter memory and local browser storage as an expectation only. An explicit recover transaction downloads the actual onboard mission and compares compiler output; it sends mission-list/request-int/ack only, no mission writes or flight commands. It also works after application restart when given a valid retained envelope. Matching armed AUTO becomes `observed-active`, with an empty reached history; it cannot restore “completed” from storage. Changed count/items, reboot or timeout leave unverified/unknown state and block AUTO. Final completion requires observed final item-reached, fresh disarmed heartbeat and landed-state1. Readback/recovery cannot establish earlier unseen flight history.
+
+## Test interpretation and remaining product gates
+
+Browser and TCP fault tests use real ArduCopter4.7.1 in the pinned local simulator. Inbound stream drop is a controlled TCP test, not RF packet-loss characterization. Restart is a disarmed simulator restart; `-w` resets EEPROM/mission. No inference of airborne reboot behavior. A/B02 includes A evidence and B NOT_CHECKED; no comparative usability/performance score. HeraHub SDK/as-built/input/video/physical configuration remains unknown; no native APK/HIL/field flight gate is passed by these tests.
+
+Next product increment: obtain an observed HeraHub configuration, implement native telemetry/input/lifecycle integration and an installable diagnostic build, then HIL. QGC interchange, operational terrain/launch references and broader airborne failsafe campaigns remain parallel M2 gaps. Physical video/RTK/payload/camera calibration must pass measured integration before commercial survey use.

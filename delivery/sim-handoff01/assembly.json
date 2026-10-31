@@ -1,0 +1,12 @@
+{
+  "status": "ASSEMBLED_NOT_RUNTIME_ACCEPTANCE",
+  "archive": "delivery/sim-handoff01/aeris-sim-handoff01-engineering.tar.gz",
+  "bytes": 25642142,
+  "sha256": "6b36304d31554f32299021feb3cde770bbad31168ab093f08a9cac741fc3bfd3",
+  "manifestSHA256": "415576a64ffbf5855382b81ea8d4393e283881c7abd8e07c5a27b1390d617fce",
+  "fileCount": 104,
+  "uncompressedBytes": 33704789,
+  "maxCompressedBytes": 536870912,
+  "keysIncluded": false,
+  "oldRawEvidenceIncluded": false
+}

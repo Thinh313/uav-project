@@ -1,0 +1,294 @@
+{
+  "format": "aeris-beta-m0-cold-target-profile",
+  "version": 1,
+  "id": "BETA01-REFERENCE-ARM64-API33",
+  "atUTC": "2026-10-26T16:50:36.040930+00:00",
+  "state": "COLD_PREREQUISITES_PINNED_NOT_RUNTIME_QUALIFIED",
+  "toolObservations": {
+    "macOS": {
+      "argv": [
+        "sw_vers"
+      ],
+      "exit": 0,
+      "stdout": "ProductName:\t\tmacOS\nProductVersion:\t\t27.0.1\nBuildVersion:\t\t26A434",
+      "stderr": ""
+    },
+    "architecture": {
+      "argv": [
+        "uname",
+        "-m"
+      ],
+      "exit": 0,
+      "stdout": "arm64",
+      "stderr": ""
+    },
+    "RAMBytes": {
+      "argv": [
+        "sysctl",
+        "-n",
+        "hw.memsize"
+      ],
+      "exit": 0,
+      "stdout": "34359738368",
+      "stderr": ""
+    },
+    "CPUCount": {
+      "argv": [
+        "sysctl",
+        "-n",
+        "hw.ncpu"
+      ],
+      "exit": 0,
+      "stdout": "10",
+      "stderr": ""
+    },
+    "node": {
+      "argv": [
+        "node",
+        "--version"
+      ],
+      "exit": 0,
+      "stdout": "v24.14.1",
+      "stderr": ""
+    },
+    "python": {
+      "argv": [
+        "python3",
+        "--version"
+      ],
+      "exit": 0,
+      "stdout": "Python 3.14.6",
+      "stderr": ""
+    },
+    "java": {
+      "argv": [
+        "/opt/homebrew/opt/openjdk/libexec/openjdk.jdk/Contents/Home/bin/java",
+        "--version"
+      ],
+      "exit": 0,
+      "stdout": "openjdk 26.0.2.1 2026-08-18\nOpenJDK Runtime Environment Homebrew (build 26.0.2.1)\nOpenJDK 64-Bit Server VM Homebrew (build 26.0.2.1, mixed mode, sharing)",
+      "stderr": ""
+    },
+    "adb": {
+      "argv": [
+        "/opt/homebrew/share/android-commandlinetools/platform-tools/adb",
+        "version"
+      ],
+      "exit": 0,
+      "stdout": "Android Debug Bridge version 1.0.41\nVersion 37.0.1-15733141\nInstalled as /opt/homebrew/share/android-commandlinetools/platform-tools/adb\nRunning on Darwin 27.0.0 (arm64)",
+      "stderr": ""
+    },
+    "attachedAndroidDevices": {
+      "argv": [
+        "/opt/homebrew/share/android-commandlinetools/platform-tools/adb",
+        "devices"
+      ],
+      "exit": 0,
+      "stdout": "List of devices attached",
+      "stderr": ""
+    },
+    "power": {
+      "argv": [
+        "pmset",
+        "-g",
+        "batt"
+      ],
+      "exit": 0,
+      "stdout": "Now drawing from 'AC Power'\n -InternalBattery-0 (id=38535267)\t80%; AC attached; not charging present: true",
+      "stderr": ""
+    },
+    "DockerImage": {
+      "argv": [
+        "docker",
+        "image",
+        "inspect",
+        "rtr-aeris-sim32-trace-builder:local",
+        "--format",
+        "{{json .Id}} {{json .Architecture}} {{json .Os}}"
+      ],
+      "exit": 0,
+      "stdout": "\"sha256:e27f0236daf88218a8a76a2c58c4c185e36fbc0c67e05d12ca5af9292f442f84\" \"arm64\" \"linux\"",
+      "stderr": ""
+    }
+  },
+  "artifactFiles": {
+    "emulator": {
+      "path": "/Users/os/Downloads/AI technique/aeris/.local/native86-android/sdk/emulator/emulator",
+      "status": "PRESENT_COLD_HASHED",
+      "bytes": 9178208,
+      "sha256": "5e2249e94368759aabd8fa942d2961cfef07b980a44639a2ec9b7ced3fbe2281"
+    },
+    "systemImage": {
+      "path": "/Users/os/Downloads/AI technique/aeris/.local/native86-android/sdk/system-images/android-33/default/arm64-v8a/system.img",
+      "status": "PRESENT_COLD_HASHED",
+      "bytes": 4306501632,
+      "sha256": "a2a5eccce9411da7a286c86f38d9cc2c9a071c8c52c6f350e0811a48975b591a"
+    },
+    "systemImageProperties": {
+      "path": "/Users/os/Downloads/AI technique/aeris/.local/native86-android/sdk/system-images/android-33/default/arm64-v8a/source.properties",
+      "status": "PRESENT_COLD_HASHED",
+      "bytes": 373,
+      "sha256": "d916d95dd126aa9e98f9a7af054a0d4c893cdaf7c8b009748c6b2dc8354b8d2b"
+    },
+    "AVDConfig": {
+      "path": "/Users/os/Downloads/AI technique/aeris/.local/field02/avd/aeris-field02.avd/config.ini",
+      "status": "PRESENT_COLD_HASHED",
+      "bytes": 569,
+      "sha256": "ed178719220f378f68ee081122f8166acc6c3806a26dc815ecc38c9aa91377b6"
+    },
+    "androidJar": {
+      "path": "/opt/homebrew/share/android-commandlinetools/platforms/android-37.0/android.jar",
+      "status": "PRESENT_COLD_HASHED",
+      "bytes": 43044472,
+      "sha256": "bf1b4387cc7ca94fc6ef684f040d9d16fbf16248e181819f020736ea2053f177"
+    },
+    "aapt2": {
+      "path": "/opt/homebrew/share/android-commandlinetools/build-tools/36.0.0/aapt2",
+      "status": "PRESENT_COLD_HASHED",
+      "bytes": 10682288,
+      "sha256": "a8844d4089b442b034aed8953deee1893253053c900e03141ae7173e3edd8157"
+    },
+    "d8": {
+      "path": "/opt/homebrew/share/android-commandlinetools/build-tools/36.0.0/d8",
+      "status": "PRESENT_COLD_HASHED",
+      "bytes": 2678,
+      "sha256": "b773a721be3d4988dea9660815a9e441b76100e5b0f5c72b5893cfadadc76c6f"
+    },
+    "zipalign": {
+      "path": "/opt/homebrew/share/android-commandlinetools/build-tools/36.0.0/zipalign",
+      "status": "PRESENT_COLD_HASHED",
+      "bytes": 503264,
+      "sha256": "0427144f4a3fd242c5a159e7088637082539ae556bc1d2bbc2032bb775d47cea"
+    },
+    "apksigner": {
+      "path": "/opt/homebrew/share/android-commandlinetools/build-tools/36.0.0/apksigner",
+      "status": "PRESENT_COLD_HASHED",
+      "bytes": 2959,
+      "sha256": "b47549e373b895ce6ca620d0c7887e674d9615ffa837a86ac601dcfd04adb0f0"
+    },
+    "javac": {
+      "path": "/opt/homebrew/opt/openjdk/libexec/openjdk.jdk/Contents/Home/bin/javac",
+      "status": "PRESENT_COLD_HASHED",
+      "bytes": 51792,
+      "sha256": "a587e4bfa51de17788dfc9de7b22960174f11cb5fed8f21bf2867151eb2524fa"
+    },
+    "java": {
+      "path": "/opt/homebrew/opt/openjdk/libexec/openjdk.jdk/Contents/Home/bin/java",
+      "status": "PRESENT_COLD_HASHED",
+      "bytes": 51856,
+      "sha256": "38025293a292f9d2161c9c2683191555eabefeb8b987cde9d8c88cafb843d333"
+    },
+    "adb": {
+      "path": "/opt/homebrew/share/android-commandlinetools/platform-tools/adb",
+      "status": "PRESENT_COLD_HASHED",
+      "bytes": 18844128,
+      "sha256": "1811e253b21b12cbfda7201ebaf86c10e7ddcb5c606a7a81f7c82b4c429c2d3b"
+    },
+    "native98AP": {
+      "path": "/Users/os/Downloads/AI technique/aeris/runtime/sitl/arducopter",
+      "status": "PRESENT_COLD_HASHED",
+      "bytes": 7231384,
+      "sha256": "011627d41dd95640c3aca02d45283474be48721c8b1bb7a4b234d38b69063482"
+    },
+    "externalInstrumentedAP": {
+      "path": "/Users/os/Downloads/AI technique/aeris/runtime/sim32-instrument01-build/ardupilot/build/sitl/bin/arducopter",
+      "status": "PRESENT_COLD_HASHED",
+      "bytes": 7172024,
+      "sha256": "f2be1f349f84b4aedaa5912b3050f64f476f3218bc4f68b34ad4de11393c2d08"
+    },
+    "referencePhysics": {
+      "path": "/Users/os/Downloads/AI technique/aeris/evidence/sim32/source-final/pilot/sim32/physics.py",
+      "status": "PRESENT_COLD_HASHED",
+      "bytes": 8025,
+      "sha256": "6e2c77cc1202a83e5b009b1a06393057546a120ef20d9a8062a5f0bfc98d40c1"
+    },
+    "nativePhysicsKernel": {
+      "path": "/Users/os/Downloads/AI technique/aeris/runtime/sim32-pipe03-build/host-native/_sim32_integrator.cpython-314-darwin.so",
+      "status": "PRESENT_COLD_HASHED",
+      "bytes": 51624,
+      "sha256": "26f9e96b64053aa970402f781880baf7fbde87c5bb8aa289b15f2d4e3a0abb64"
+    }
+  },
+  "host": {
+    "architecture": "arm64",
+    "RAMBytes": 34359738368,
+    "CPUCount": 10,
+    "freeBytesAtObservation": 23243300864
+  },
+  "Android": {
+    "runtimeAPI": 33,
+    "ABI": "arm64-v8a",
+    "compileAPI": 37,
+    "legacyMinSDK": 26,
+    "legacyTargetSDK": 33,
+    "targetViewport": [
+      1280,
+      800
+    ],
+    "densityDPI": 160,
+    "targetEmulatorCores": 4,
+    "AVDDefaultCores": 2,
+    "targetMemoryMiB": 2048,
+    "overrideMustBeInLaunchReceipt": true,
+    "GUIAutomationScopeCurrentlyAuthorized": "owned emulator-5582 only; no physical root",
+    "serial": "emulator-5582",
+    "bootedNow": false,
+    "WebViewVersion": null,
+    "GPUActualRenderer": null,
+    "codecActualBackend": null,
+    "versionNullMeaning": "NOT_OBSERVED_COLD; explicit mandatory first-launch probe before connect/ARM, never infer from API/system image"
+  },
+  "baselineAPProfiles": [
+    {
+      "id": "N98-INTERNAL-QUAD-REGRESSION",
+      "artifactRef": "native98AP",
+      "physics": "AP built-in quad",
+      "endpoint": "10.0.2.2:5937 from emulator only",
+      "role": "Regression/reference, not external FID2 candidate"
+    },
+    {
+      "id": "SIM32-EXTERNAL-TRACE-REGRESSION",
+      "artifactRef": "externalInstrumentedAP",
+      "physicsArtifactRef": "referencePhysics",
+      "controlSource": "AP external reference physics",
+      "role": "Known trace-capacity/clock/stages defects; reference only"
+    }
+  ],
+  "selectedIntegrationArchitecture": {
+    "soleFlightPayloadWriter": "Android Native98-derived DirectTransport95/UnifiedCore98, adapted behind new provider boundary",
+    "manualAlgorithms": "Exact SIM-STABILITY03 neutral/handoff/release/session code, ported not second host writer",
+    "missionAndWorkbench": "MissionBeta/Workbench domain+presentation adapted to native domain",
+    "media": "BETA-VIDEO03 host source/Android decoder adapted, not frozen server active",
+    "APCandidate": "NEW_VERSIONED_EXTERNAL_INSTRUMENTATION_ARTIFACT_REQUIRED",
+    "APCandidateSHA256": null,
+    "unknownHashBlocksActualLaunch": true,
+    "noSilentReplacementOfBaseline": true
+  },
+  "clientB": {
+    "mode": "Separate authenticated browser process/session to simulated payload broker; Android secondary installation later target-specific",
+    "sameActivityTwoCardsAccepted": false,
+    "identity": "Per-client transient cert/token, explicit resource consent; no source-shared private keys"
+  },
+  "network": {
+    "default": "Loopback/owned emulator alias only",
+    "pairedLAN": "DISABLED_UNTIL_VERSIONED_TLS_PAIRING_ADAPTER_AND_SECURITY_TESTS",
+    "physicalDroneProviderEnabled": false,
+    "hardcodedBaselinePortsAreNotNewConfiguration": "N98 5937, SIMHAND 5870 are separate topology bindings; adapt explicitly"
+  },
+  "firstLaunchProbeRequirements": [
+    "Android API/ABI/build fingerprint,WebView package/version and own app identity",
+    "Actual viewport/insets/font scale and GPU renderer, full quality eligibility",
+    "Codec support plus actual source/decoder backend distinction, not hardware hint inference",
+    "Native socket/boot/session provider plus actual AP4.7.1 firmware and parameter types",
+    "Host/guest clock bracket + power/lid/sleep/PID ownership + measured storage admission",
+    "Refuse flight grants until the profile is observed and pinned for this candidate"
+  ],
+  "physicalTargets": {
+    "Xiaomi": "MODEL_OS_WEBVIEW_UNKNOWN_NOT_CHECKED",
+    "HeraHub": "MODEL_MCU_RADIO_SDK_UNKNOWN_NOT_CHECKED"
+  },
+  "runtimeProcessesStarted": 0,
+  "newBuilds": 0,
+  "signingKeysRead": false,
+  "productReadiness": "NOT_INFERRED_FROM_COLD_HASHES"
+}

@@ -1,0 +1,9 @@
+# FIELD02 QA correction, 22/10/2026
+
+The second actual SITL run sa441395468974fc1973f reached upload/readback and post-arm Home. The QA harness incorrectly searched for the literal substring `10.854`; observed latitude `10.8539998` is within centimetres of the declared fixture. The assertion stopped before AUTO, so this is a harness failure, not evidence of flight rejection or successful flight. Home and extra-parameter freshness subsequently expired and AP disarmed on the ground. The operator explicitly aborted; retain the raw and accepted:false review.
+
+QA now compares the observed Home numerically to the existing one-metre horizontal and 0.5-metre MSL fixture bounds. This changes the QA assertion only, never the product's freshness or configuration gate. Actual ADB taps use fresh screenshots and local OCR; UIAutomator hierarchy reads can be slow and are excluded from the timing-critical sequence. No flight POST or DOM control is injected.
+
+Contractor re-evaluation permits one finite additional SITL attempt, at most six total, to replace this identified QA defect. Two actual attempts have been consumed; four slots remain for nominal polygon, corridor, C2 cut and AP reboot. No automatic retries. Existing 29 GiB admission, 21 GiB guard, 20 GiB floor, speedup and duration bounds remain. APK build budget remains two consumed. This is not authority to expand the budget again without a new diagnosed reason and explicit re-evaluation.
+
+The observed post-disarm UX needs a safe exit: prefer an explicit, confirmed close of the incomplete run with fresh ground/disarm observations, then require the operator to connect a new run manually. Do not add execution epochs, relax raw replay, renew authority or automatically repeat upload/AUTO merely to avoid a new attempt. Preserve failed attempts and all old manifests.

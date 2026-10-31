@@ -1,0 +1,82 @@
+{
+  "aggregates": {
+    "cells_by_state": {
+      "sourced": 3
+    },
+    "coverage_pct": null,
+    "n_entities": 1,
+    "rollup": {},
+    "rollup_field": null,
+    "universe_estimate": null
+  },
+  "registry": {
+    "Pinned read-only configuration protocol": {
+      "entity_type": null,
+      "fields": {
+        "cache_uncertainty": {
+          "claims": [
+            {
+              "capture": {
+                "fetched_at": "2026-10-12T09:58:49.212084+00:00",
+                "origin_id": "mavlink-upstream",
+                "sha256": "7d41e043b4870bb02a4f9919ce711541e2eaf9a4ed31e1c3d1c7ab3a686faafc",
+                "snapshot": "parameter-protocol.html",
+                "source": "mavlink-parameters",
+                "url": "https://mavlink.io/en/services/parameter.html"
+              },
+              "evidence_span": "Cache synchronisation is not guaranteed",
+              "extraction": "normalized",
+              "source": "mavlink-parameters",
+              "tier": "A",
+              "value": "Cache synchronisation is not guaranteed; the profile uses explicit bounded re-reads"
+            }
+          ],
+          "state": "sourced",
+          "value": "Cache synchronisation is not guaranteed; the profile uses explicit bounded re-reads"
+        },
+        "encoding": {
+          "claims": [
+            {
+              "capture": {
+                "fetched_at": "2026-10-12T09:58:49.212517+00:00",
+                "origin_id": "ardupilot-upstream",
+                "sha256": "668b245bf81cb9b3545b3751a08106a9086172cb7f0b477ae892b1e1ce3a1b83",
+                "snapshot": "GCS_Param.cpp",
+                "source": "copter-param-pinned",
+                "url": "https://raw.githubusercontent.com/ArduPilot/ardupilot/Copter-4.7.1/libraries/GCS_MAVLink/GCS_Param.cpp"
+              },
+              "evidence_span": "reply.value = vp->cast_to_float(reply.p_type);",
+              "extraction": "normalized",
+              "source": "copter-param-pinned",
+              "tier": "A",
+              "value": "Pinned ArduPilot parameter read path casts the parameter to float and reports its MAV parameter type"
+            }
+          ],
+          "state": "sourced",
+          "value": "Pinned ArduPilot parameter read path casts the parameter to float and reports its MAV parameter type"
+        },
+        "named_read": {
+          "claims": [
+            {
+              "capture": {
+                "fetched_at": "2026-10-12T09:58:49.212084+00:00",
+                "origin_id": "mavlink-upstream",
+                "sha256": "7d41e043b4870bb02a4f9919ce711541e2eaf9a4ed31e1c3d1c7ab3a686faafc",
+                "snapshot": "parameter-protocol.html",
+                "source": "mavlink-parameters",
+                "url": "https://mavlink.io/en/services/parameter.html"
+              },
+              "evidence_span": "Request a single parameter",
+              "extraction": "normalized",
+              "source": "mavlink-parameters",
+              "tier": "A",
+              "value": "PARAM_REQUEST_READ requests a named parameter; PARAM_VALUE reports it separately from PARAM_SET writes"
+            }
+          ],
+          "state": "sourced",
+          "value": "PARAM_REQUEST_READ requests a named parameter; PARAM_VALUE reports it separately from PARAM_SET writes"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,1 @@
+export function assertMarkup(html){if(/<\/[a-z][a-z0-9]*\s+[^>\s]/i.test(html))throw Error('HTML_END_TAG_HAS_ATTRIBUTES');for(const mode of ['CONTINUE_CONFIRMED_CLEANUP','RESTORE_BEFORE_DELETE','RETAIN_UNSTARTED_METADATA'])if(!html.includes('<option value="'+mode+'">'))throw Error('RECOVERY_OPTION_MISSING:'+mode);return true;}

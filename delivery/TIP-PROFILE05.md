@@ -1,0 +1,12 @@
+# TIP-PROFILE05 · versioned read-only configuration contract
+
+Owner authorizes profile versions, read-only preflight comparison, frozen execution snapshots and SITL without SDK/HeraHub. Single-agent Contractor→Builder→Verify, no independent review. Preserve previous receipts/records; no RAGAS application source, PARAM_SET, forced arm or physical flight.
+
+AC01 pinned simulator-only profile identity/version/content hash with firmware/vehicle, command-envelope scope and four parameter expectations/types/units/provenance. Unsupported profile/encoding/configuration cannot become operational defaults.
+AC02 explicit bounded fresh configuration transaction (firmware + four allowlisted named reads), bound to aircraft/session/read timestamps. Foreign, partial, stale, malformed/type/version mismatch fails. Status GET performs no read transaction. Refresh/timeout can be retried without write or auto-flight.
+AC03 authoritative profile preflight and guards for upload/ARM/AUTO; missing/stale/mismatched data blocks before wire writes. HOLD/RTL retain their existing emergency path. Disconnect/heartbeat gap/reboot/observed configuration change invalidate observation; no implicit resume or age refresh from cached data.
+AC04 clear read-only profile UI shared Plan/Fly, QGC and lab: definition version, observed/expected values and reasons, read/re-read action, missing/stale states, no claimed hardware certification or automatic parameter repair.
+AC05 new execution-record v2 freezes profile definition/ref/hash, observation/derived comparison at attempt boundary and command guard events; independent validation against pinned definition/session/vehicle/outcome. Historical v1 remains readable unchanged; missing recovery snapshot is explicit and grants no authority.
+AC06 real SITL baseline read/guarded completed flight, interrupted HOLD/RTL, missing/stale reads and CRC-correct proxy-injected mismatch/foreign/missing/firmware/type/change cases, no PARAM_SET; source/wire/record evidence with fault injection scope separated.
+AC07 meaningful unit/API/negative/storage/legacy and browser responsive/offline/review regression, actual snapshot export/import corruption rejection and current-vs-historical separation; required unrun checks NOT_CHECKED.
+AC08 ADR/contract/REQ coverage/Completion, sole owner-intent SOT addition through unchanged adapters/gates, source/evidence manifests and disk cleanup. Normal disarmed simulator retained.

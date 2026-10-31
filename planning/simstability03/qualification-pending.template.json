@@ -1,0 +1,11 @@
+{
+  "assemblyAuthorized": false,
+  "sourceManifestSHA256": "df3eb4ec961e2fc83116440ec017796593b36847f2e1a601e7dd0a8b11ec5c8f",
+  "runtimeAcceptance": "PENDING",
+  "status": "PENDING",
+  "verifiedOutcomes": [],
+  "remainingGates": [
+    "Await Contractor final declared runtime/SAF/audio status."
+  ],
+  "scope": "TEMPLATE_ONLY_NOT_ASSEMBLY_AUTHORIZATION"
+}

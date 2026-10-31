@@ -1,0 +1,45 @@
+{
+  "atUTC": "2026-10-27T04:56:33.484048+00:00",
+  "status": "ISOLATED_VISUAL_MOCK_READY_DOM_SOURCE_CHECKED_BROWSER_NOT_CHECKED",
+  "scope": "planning/betaintegrated01/cockpit05-ui only",
+  "preview": "planning/betaintegrated01/cockpit05-ui/mock.html",
+  "frontendDesignSkill": "personal/vendor frontend-design instructions read; compactplan/critique inCONTRACT.md",
+  "repairs": [
+    "Reviewrowsflat2pxcorner80pxminheight/divideralignedtitlemeta/trailinggoldcheck+accessiblecurrentname",
+    "Neutralnoticeinfoicon+text removesleadinggoldborder",
+    "ActiveNAVshortcenteredstraightunderline/iconbackground removesleftcurvedpseudo"
+  ],
+  "copiedBaselineAssetBytes": 389042,
+  "changedAssets": [
+    "index.html",
+    "cockpit.css",
+    "app.js"
+  ],
+  "unchangedBehaviorProof": "AppnormalizesBYTEEXACTtoaccepted04 afterremovingonlyaccessiblelabel/checkSVG; model.jsbyteexact; HTMLnormalizesBYTEEXACTafternoticewrapperonly",
+  "functionalMapRadioBatterySVGPreserved": true,
+  "cockpit04All37BuildInputPinsAndAPKUnchanged": true,
+  "DOMDouble": "mock_ui05.mjs PASS63 groups, includes8newvisualstructurechecks; notindependentorvisualrenderproof",
+  "scriptSyntax": "node--check app.js/mock-bridge.js PASS",
+  "browserPixelQA": "NOT_CHECKED; file:// blocked by toolURLpolicy; no localserver/alternatebrowser/renderer bypass",
+  "APKNativeSITLSigning": "NOT_RUN_NOT_IN_SCOPE",
+  "networkOrSDKOrDependencies": "NONE",
+  "previewMock": "explicitheaderMOCK; allmemoryonly; noflight/nativebridge/transport; syntheticSHAzeros andmockreviewsnotrealevidence",
+  "sourceSHA256": {
+    "planning/betaintegrated01/cockpit05-ui/mock_ui05.mjs": "1c8e58ba9660bcd31f4846022db247a87ae3b2767d58db15ab7c257e6dfd1207",
+    "planning/betaintegrated01/cockpit05-ui/BUILDER.diff": "91faebddefc6980f2c4581a76aa7c732e143c0723406f8c4910e06b2339fae94",
+    "planning/betaintegrated01/cockpit05-ui/mock-bridge.js": "2a025fa1947798b768b679571a9e83cf8a34872441d55b2590d550257feb391f",
+    "planning/betaintegrated01/cockpit05-ui/CONTRACT.md": "48ea55a71320e677c23b9346510eb36e965117c8b465fc7589b5720ee6c0b22f",
+    "planning/betaintegrated01/cockpit05-ui/mock.css": "50c5d915abdfba26c9ff81edb1734b8426df69ca06a45b53b58a5646246110c5",
+    "planning/betaintegrated01/cockpit05-ui/mock.html": "51c4ee02d153d37877bf1d1360247996ba7322e4f6d767f7fe74caed10082e88",
+    "planning/betaintegrated01/cockpit05-ui/qa-dom/results.json": "d5e77382fefc794059e6ca6927d2ccdaa5cc22d370150ab3e58736cd629ae718",
+    "planning/betaintegrated01/cockpit05-ui/assets/index.html": "5aceda3931bd7cd8c87853bdc1d5c30916d457740352f76f56c8d1b701e20a0e",
+    "planning/betaintegrated01/cockpit05-ui/assets/cockpit.css": "4ebd481fc6adad371e1132bd15e7beeb1b58b02da83e0555a46cde20495130f6",
+    "planning/betaintegrated01/cockpit05-ui/assets/model.js": "b3be3407ff2c501ca48bae40f29bbbb4cd7d12db13e5f2659409558363f4dcb7",
+    "planning/betaintegrated01/cockpit05-ui/assets/app.js": "4b520fd08f531159f8b318d68a1891687c853cb0fe3531390301436ce32d6030",
+    "planning/betaintegrated01/cockpit05-ui/assets/fonts/Barlow-Bold.ttf": "84e6a4d61e7c3e21f3c50ea6a4f7e5303a3467864c038be6ea3759bab8d547f9",
+    "planning/betaintegrated01/cockpit05-ui/assets/fonts/OFL.txt": "186d750eb496a4c17a76385f82be6aea2ac1cf2de074a811d63786cf374ea73f",
+    "planning/betaintegrated01/cockpit05-ui/assets/fonts/Barlow-Medium.ttf": "f8906f762cb73dca441da034bc363b2d8e2e68bc10d5c05e58717646c20cc4b4",
+    "planning/betaintegrated01/cockpit05-ui/assets/fonts/Barlow-SemiBold.ttf": "86577cb32f8abe3673db53ca0f4221e6856751a4f6730c867e00f720f8bb1fc5"
+  },
+  "cleanup": "No scratch/projectcopy/dependency/build/cache created; alloutputsretainedinsideisolatedscope"
+}

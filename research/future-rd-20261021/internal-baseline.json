@@ -1,0 +1,78 @@
+{
+  "at": "2026-10-21T03:59:25.523375+00:00",
+  "authority": "internal user/specification/history; not external Refinery claims",
+  "files": [
+    {
+      "path": "hardware/herahub2/profile.json",
+      "status": "PRESENT",
+      "sha256": "30232dc89dd01225099298374c976b903c5ef65f82e33769380e9edf78815d15"
+    },
+    {
+      "path": "hardware/herahub2/sources/372b7f97e9c1bb99.json",
+      "status": "PRESENT",
+      "sha256": "bf6fd4a551fd7b8f456cc1b3485f1ef2bd4b3779b4d547d0c012cb1d957009c5"
+    },
+    {
+      "path": "hardware/hera/bom/summary.json",
+      "status": "PRESENT",
+      "sha256": "b34f4d378d420607ed1ee6f93c75fe3191f03f0d289644495182af5ce55fe18a"
+    },
+    {
+      "path": "pilot/heramcu45/contract.json",
+      "status": "PRESENT",
+      "sha256": "916b53c6aa44dc6862671ce13a3fd1df5a1020176c3f19d3fabfc95eea246b67"
+    },
+    {
+      "path": "pilot/cyber65/contracts.mjs",
+      "status": "PRESENT",
+      "sha256": "cef9741bec67011c2d5ec485bc4758ae88b1770e2fc915db8238ca449e05bbae"
+    },
+    {
+      "path": "docs/ADR-037-ACTUAL-ARDUPILOT-PAYLOAD-ROUTING.md",
+      "status": "PRESENT",
+      "sha256": "d7f72898d9b0b30275f5be349aa2d4224e5fa5693f253015f0b6691b6abd2243"
+    },
+    {
+      "path": "planning/scan-20261021/MILESTONES.md",
+      "status": "PRESENT",
+      "sha256": "2249410a72b919ef553f51bf3138350403b99d6feab638fefb57ea09e6ab9403"
+    },
+    {
+      "path": "planning/cyber64/source-user.txt",
+      "status": "PRESENT",
+      "sha256": "28248d2f5f0142dac794d2f506e496d44a1f742924c7690704e480377443986e"
+    },
+    {
+      "path": "delivery/COMPLETION-BIG01.md",
+      "status": "PRESENT",
+      "sha256": "fa58b01dead7029b8cf3f2b9c3790717dbc8723a413da529a40283db2579edbc"
+    },
+    {
+      "path": "delivery/COMPLETION-BIG02-HOST01.md",
+      "status": "PRESENT",
+      "sha256": "a682cf45eac959601d6115e0ba1ae806d222652006f64c6213cbe0abf3687d7b"
+    },
+    {
+      "path": "evidence/big02/final-verification01.json",
+      "status": "PRESENT",
+      "sha256": "d6ef80fec5f59de04d2a7ce51f46d557de67f59318cdc9a9a5dc546d659371bb"
+    },
+    {
+      "path": "evidence/phone06/builder/source-ready07.json",
+      "status": "PRESENT",
+      "sha256": "435e9d9f86106e24ac46c1b0121346a72f6117daa2098b6fd21f35943e02c524"
+    },
+    {
+      "path": "evidence/big02/builder/source-ready04.json",
+      "status": "PRESENT",
+      "sha256": "aa99731b4c702ffb1b7f48ddf4dc6d501888c647d622a8bde0b5b33041694beb"
+    }
+  ],
+  "interpretation": [
+    "Existing Hera/HeraHub documents inform constraints but do not bind future configuration proposals",
+    "Controller and airframe are separate identities; BOM variants must not be merged automatically",
+    "MCU wire dialect/calibration mapping still unresolved; no physical wire compatibility inferred",
+    "Current actual camera/Sony/PhaseOne/radiometry integration remains NOT_CHECKED",
+    "Preserve current frozen source/candidate/ENDURE; target proposal never rewrites current acceptance"
+  ]
+}

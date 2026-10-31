@@ -1,0 +1,11 @@
+# AERIS future R&D configuration research
+
+2026-10-21. User authorizes internal/external research and reasoned configuration proposals for future products, without requiring existing Hera BOM compatibility. Horizon 2027–2029 is an assistant-authored planning horizon, not a vendor delivery prediction.
+
+Outcome: a sourced hardware/protocol shortlist, explicit reference configurations and alternatives, proposed performance/acceptance budgets, disproof tests and a sequenced implementation plan. This is a research/design delivery, not implementation or hardware qualification. No purchase, SDK application, vendor contact, installation, signing, APK/SITL/emulator/soak or flight command.
+
+Keep present hardware truth, target requirements, engineering hypotheses and observed acceptance separate. Existing source/candidate/ENDURE/canonical SOT and PHONE06/BIG02 source/APK are read-only. Changes are confined to this research directory, `planning/future-rd-20261021`, `evidence/future-rd-20261021` and a new delivery report. Internal records retain their own authority; external manufacturer pages are source claims processed through Refinery, never promoted to verified aircraft performance.
+
+Budget: existing Python/stdlib/PyYAML only; no new dependency. At most 28 bounded public HTML/text captures, 2 MiB each, 12-second timeout, at most four workers, at most one justified alternate URL for failed capture. Keep source failures. New artifacts target <64 MiB; retain 20 GiB free. No photos/videos/model weights or whole-project copies. Disposable bite-test copies only inside this research directory, removed on completion. Manufacturer-origin grouping prevents false corroboration from multiple pages by the same vendor.
+
+Core questions: open flight/payload interfaces; practical Sony/gimbal integration; Phase One modular integration; qualitative versus radiometric IR and a credible higher-end thermal target; onboard compute versus controller compute; image/control/clock/ownership transport; power/storage/link/thermal budgets; one-airframe proof before cross-UAV scaling. Competitive outcome must be measured on actual tasks, not TOPS/megapixels alone. A direct LLM is not a flight-controller baseline; future AI-assistance features must be compared with simpler deterministic/manual workflows and direct tool-enabled assistant where relevant.

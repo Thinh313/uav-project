@@ -1,0 +1,12 @@
+# Recipient engineering review · ACCEPT13
+
+1. Open handoff, complete transfer or explicitly resume the same checkpoint/source. Wait for a VERIFIED byte receipt. An incomplete stage is not an acceptance candidate.
+2. Open `/acceptance.html`, select the intended receipt, inspect record/source/outcome/camera/quality and fresh verification timestamp.
+3. Load the known-source expectation from the reviewed delivery specification. For this engineering campaign the example is `evidence/accept13/<case>-completed-expectation.json`, generated from the frozen mission/profile and declared product bytes before receiver intake. Those files are test expectations, not a real client's purchase order.
+4. Compare identity, mission source, profile, exact file inventory, completed flight outcome and bounded scope. Any mismatch blocks full acceptance. A STOPPED/UNKNOWN mission never becomes COMPLETED from a reviewer note.
+5. Declare reviewer/role and the basis or specific conditions. Review the source requirements, acknowledge simulation scope, type the displayed digest prefix and choose accepted/conditional/rejected. A changed expectation or newer decision requires a new comparison. No automatic acceptance and no flight command follows.
+6. Export the separate acceptance audit, with receipt/decision hashes and verification timestamp. Payload re-export stays byte-identical. Current acceptance display requires fresh server byte verification; offline/corrupt state has no fresh decision authority. Historical decisions are preserved in the append-only journal and downloadable audits, not rewritten as new evidence.
+
+The current accepted scope is `simulation-engineering`. Synthetic report and planned GeoJSON demonstrate data workflow only. QGC products use compiled planned navigation LineStrings, internal surveys use planned polygon boundaries. Neither proves actual imagery, achieved coverage, GSD/processing accuracy, field datum or physical camera captures. Physical-survey accepted/conditional decisions are refused. Unsigned reviewer identity, remote transport/security and commercial/client acceptance remain separate gates.
+
+Default receiver protection keeps payload/receipt/acceptance audit. LIFECYCLE12 cleanup can release only proven redundant staging, after explicit confirmed plan; it cannot remove canonical accepted files or decision history. If storage/audit budget or journal health blocks the decision, investigate and retry explicitly; do not erase prior decisions or bypass reserves.

@@ -1,0 +1,25 @@
+{
+  "kind": "synthetic-hand-derived-fixtures",
+  "review": "Analytical expectations, maintainer self-review; domain expert review pending",
+  "model": "flat-local-rectangle-v1",
+  "cases": [
+    {
+      "id": "square-one-footprint",
+      "settings": { "width":100,"height":100,"altitude":100,"speed":5,"sideOverlap":50,"frontOverlap":50,"sensorWidth":20,"sensorHeight":20,"focalLength":20,"imageWidth":1000,"minInterval":1 },
+      "expected": { "area":10000,"lineCount":1,"photoCount":3,"distance":100,"nominalSeconds":20,"triggerSpacing":50,"triggerInterval":10,"gsdCm":10 },
+      "derivation": "100 m footprint spans the full width. One 100 m line, shots at y=0/50/100. Distance 100; duration 100/5=20. GSD 100/1000 m=10 cm."
+    },
+    {
+      "id": "three-transects",
+      "settings": { "width":200,"height":100,"altitude":100,"speed":5,"sideOverlap":50,"frontOverlap":50,"sensorWidth":20,"sensorHeight":20,"focalLength":20,"imageWidth":1000,"minInterval":1 },
+      "expected": { "area":20000,"lineCount":3,"photoCount":9,"distance":400,"nominalSeconds":80,"triggerSpacing":50,"triggerInterval":10,"gsdCm":10 },
+      "derivation": "Footprint 100 m; centres x=50/100/150. Three 100 m lines plus two 50 m connectors=400 m; 400/5=80 s; 3 shots per line=9."
+    },
+    {
+      "id": "non-divisible-photo-spacing",
+      "settings": { "width":200,"height":110,"altitude":100,"speed":5,"sideOverlap":50,"frontOverlap":50,"sensorWidth":20,"sensorHeight":20,"focalLength":20,"imageWidth":1000,"minInterval":1 },
+      "expected": { "area":22000,"lineCount":3,"photoCount":12,"distance":430,"nominalSeconds":86,"triggerSpacing":36.666666666666664,"triggerInterval":7.333333333333333,"gsdCm":10 },
+      "derivation": "Each 110 m line needs 4 endpoint-inclusive shots, spacing 110/3; 3*110+100=430 m. This avoids accidentally applying overlap twice."
+    }
+  ]
+}

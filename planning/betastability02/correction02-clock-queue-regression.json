@@ -1,0 +1,11 @@
+{
+  "format": "aeris-correction02-clock-queue-regression",
+  "version": 1,
+  "status": "PASS",
+  "at": "2026-10-26T01:38:37.963Z",
+  "received": 1200,
+  "goodRetained": 112,
+  "ordered": true,
+  "overflowFailsClosed": true,
+  "scope": "ACTUAL_CLIENT_MOCK_FETCH_NO_RUNTIME_OR_ANDROID_ACCEPTANCE"
+}

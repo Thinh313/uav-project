@@ -1,0 +1,21 @@
+{
+  "version": 1,
+  "upstream": {
+    "file": "upstream-section-v5.1.5.plan",
+    "url": "https://raw.githubusercontent.com/mavlink/qgroundcontrol/3a67d31f0c36bf3fe38ec52970d250a89d0aaf67/test/MissionManager/SectionTest.plan",
+    "scope": "Unmodified official legacy PX4 fixture; parsed, SITL execution blocked"
+  },
+  "generated": {
+    "files": [
+      "aeris-simple.plan",
+      "aeris-cached-survey.plan"
+    ],
+    "generator": "tools/make_qgc_fixtures.mjs",
+    "scope": "AERIS-authored schema fixtures; NOT a QGC application export; QGC open/save and regeneration NOT_CHECKED"
+  },
+  "sha256": {
+    "aeris-simple.plan": "58c94a6aa8d363619e19d04fabdf11bdcc2e43f597bba1e88431a9153d0df66b",
+    "upstream-section-v5.1.5.plan": "9384d034adb292da7245f1223b11c6d872d1422a424a9eb116395b7d3e3a97de",
+    "aeris-cached-survey.plan": "0c7e69d9f5eccd31c0e672614a0f7374db686c1b6913ea71e864bddf713b962d"
+  }
+}

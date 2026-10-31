@@ -1,0 +1,12 @@
+# NATIVE96 — Native direct fault evidence and Android SAF handoff
+
+18/10/2026. SPEC → BUILD → VERIFY by one agent. User requests link-loss/reboot on native direct and raw SAF export. Existing engineering APK/emulator-5582/ADB/root authorization persists; no hardware or production signing.
+
+- R96-1: isolate in native96; preserve frozen source/candidate/ENDURE and all receipts through95. >=20GiB floor; admit build/runtime only >=26GiB, no dependencies/images downloaded.
+- R96-2: mock first. Framing/CRC/target/boot/clock/lease faults and cut at upload/readback/Home/AUTO must never restore authority, resume or retry. Native interrupted review must retain unknown aircraft outcome, not manufacture completion from ACK or stale ground.
+- R96-3: actual Android direct TCP → pinned AP4.7.1 internal quad. Nominal regression; explicit owned simulator socket cut during AUTO, independent passive observer verifies GCS failsafe/RTL/ground. AP process reboot on ground after verified upload/readback; native old session closes and never reconnects/regrants. Reboot on ground is not airborne recovery. Android restart retains raw/review, no restored authority.
+- R96-4: local immutable raw package from a closed native generation. SHA-chain, original full raw bytes including any torn tail, root metadata and optional bound review. Manifest distinguishes CLOSED vs UNTERMINATED/TORN; integrity alone never flight PASS. No deletion or repair of source evidence.
+- R96-5: Android ACTION_CREATE_DOCUMENT actual UI export, provider readback exact SHA; persisted FileOps statuses. Cancellation isn't success; restart leaves UNKNOWN requiring explicit reconciliation of same original bytes, no automatic write retry. Receiver independently bounds/validates archive/CRC/semantic raw, binds receiver+nonce and durable digest receipt; rejects corruption/foreign receiver/replay; restart preserves receipt.
+- R96-6: fix UI diagnostic quota with UTF-8 exact bytes and bounded per-Activity generations, preserve all generations/no automatic cleanup. Test Unicode, quota, symlinks/restart; stale self-report cannot attest runtime.
+
+No arbitrary endpoint, host flight/GCS proxy, physical flight, SDK/HeraHub, candidate promotion, production signature or ENDURE24h claim. Native raw SAF package is integrity evidence, not authenticated aircraft identity or actual images. Missing required criteria = NOT_CHECKED/PARTIAL. Scope decisions: targeted actual faults above; broader airborne AP hard-reboot/Android-kill matrix remains explicit future qualification.

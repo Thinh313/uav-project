@@ -1,0 +1,14 @@
+{
+  "originalFrozenSource": "planning/betaintegrated01/cockpit05-entry10/runtime/verify_capture.py",
+  "originalSHA256": "fb414a766fc33038fb62343cb564098f0d29ea6e3d5ca33293f793d69e5dbc16",
+  "derivedSHA256": "a28699c9451e333bef2f5924be000f961fe0f6e3dfb12b016e5c7d2f9171eeea",
+  "changes": [
+    "Importexplicitnewstrictjournal",
+    "Renameverify_prefix",
+    "AcceptONLYonefinalValueError/SEND_RAISED/UNKNOWNtailinsteadcompletephase",
+    "Returntruthfulincompleteprefixresult; separateAPgroupaudit required"
+  ],
+  "modelClockLoopOtherwiseExact": true,
+  "rawCopies": 0,
+  "execution": "NOT_RUN_BY_PREPARATION"
+}

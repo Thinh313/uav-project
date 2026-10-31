@@ -1,0 +1,56 @@
+Herahub - Commercial | Real-time Robotics | NDAA Compliant DronesSkip to content
+Defense
+Commercial
+OEM
+Training
+Partner Deals
+Sales
+About
+VITalk to SalesVIRTROBOTICS
+Invent. Build. Prove.
+Platform
+HERA Platform
+VEGA Platform
+DualSight Payload
+Compare
+Solutions
+Government & Defense
+Defense & National Security
+Law Enforcement
+Industrial Inspection
+Agriculture & Mapping
+Resources
+Partner Deal Registration
+Case Studies
+Support
+News
+Press & Media
+Company
+About
+Careers
+Partners
+Contact
+ContactUS Headquarters
+4250 Heyer Ave, Castro Valley, CA 94546R&D Center
+Lot I-4b-4.2, Saigon Hi-Tech Park, HCMC[email protected]+1 (510) 457-6280(+84) 9111 00 357NDAA §889US DesignedBlue sUAS ReadyData Secure105 TOPS AI© 2026 Real-time Robotics Inc. All rights reserved.Privacy Policy·Terms of Service·Terms of Sale·Warranty·Made in USA / VNController / HeraHubTARGET ACQUIREDCommercial/HeraHubController
+HeraHub
+Mission-critical command station combining ruggedized hardware, edge computing, and unmatched connectivity. Intel i7 processing with optional external GPU support for real-time AI. Dual hot-swappable batteries for unlimited operation.Request DemoView SpecsA Multi-payload and Multi-link GCSFeatures
+Key Capabilities01
+Unlimited Power
+Dual hot-swappable batteries - no reboots or downtime during critical missions.02
+External GPU AI
+Connect NVIDIA Titan or RTX 4090 for real-time AI processing at the ground station.03
+Multi-Stream Video
+Display up to 8 simultaneous 1080p feeds from multiple payloads and sensors.04
+Dual-Operator Mode
+Split flight and payload control between two operators for complex missions.05
+Integrated RTK Base
+Built-in RTK-GNSS base station for centimeter-level drone navigation accuracy.Specifications
+Technical SpecificationsProcessorIntel Core i7-1255U (4.7GHz Turbo)Display10.1" WUXGA, 1000 nit sunlight-readableExternal GPUNVIDIA Titan / RTX 4090 compatibleVideo StreamsUp to 8 simultaneous 1080pBatteryDual hot-swap, unlimited operationRTKIntegrated RTK-GNSS base stationConnectivityRF + LTE simultaneousWeight6.2 lbs (2.8 kg)Ecosystem
+Related Products
+HeraHub v2
+Next-Gen Mobile Command Station
+HeraSight
+240× stable zoom · Real-time edge AI
+Talk to Sales
+Connect with our solutions team for capability demonstrations and technical specifications.Contact Sales

@@ -1,0 +1,7 @@
+# VISUAL56 · Typography Barlow
+
+15/10/2026. Thay font UI từ IBM Plex Sans sang Barlow, giữ bộ khung compact48px. Nút/select SemiBold600, tiêu đề Bold700, nội dung Medium500 và số đo600; nút header13px trên desktop,12px trên mobile. Giữ chữ RtR hiện có. CSS khai báo từng file font đúng weight, không dùng synthetic bold cho UI. Ba file TTF nguyên bản khoảng320KB từ Google Fonts, SIL OFL1.1 và metadata đóng gói cùng assets/fonts; source/SHA trong type-acquisition.json. Credits được bổ sung, không phụ thuộc tải font ngoài khi chạy.
+
+Đã đọc trực tiếp cmap format4 và OS/2 từ cả3 font:194 codepoint gồm ASCII/chữ Việt tiền tổ hợp/dấu tổ hợp, không thiếu glyph, weight đúng500/600/700. Không cài font hệ thống hoặc dependency. Kiểm CUA tại857×988,1920×1080 và320×568: nét chữ mới rõ trên nút và panel, computed family Barlow, weight đúng; header/thanh phát desktop vẫn48px; mobile không scroll ngang. Console error/warning cuối rỗng. Đã trả viewport override về mặc định. Đây là kiểm host/browser của agent chính, chưa đánh giá trên Hera hoặc máy chiếu.
+
+Chỉ sửa style.css và credits.html của visual56, thêm font và bằng chứng mới. Không đổi renderer/physics/ui.mjs/candidate/SOT/ENDURE, không ký hoặc build APK. Receipt/fingerprint trước giữ nguyên; type-fingerprints.json ghi phiên bản font mới. Bằng chứng: type-acquisition.json, type-font-verification.json, type-browser.json, type-ui-1920.jpg, type-header.jpg, preservation-type-before/final.json.

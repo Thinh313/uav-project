@@ -1,0 +1,33 @@
+# CREW02 engineering module
+
+Implementation contract: `planning/crew02/TIP.md`; L2 changes remain Contractor decisions, not relaxed authentication or flight safety. Curated P1 source/assets provenance is `evidence/crew02/build-copy-provenance01.json`. P1, ENDURE and old baselines are not modified.
+
+Android A is package `vn.rtr.aeris.crew02`. Node B is `host/companion.mjs`, a separate process and key holder; browser UI does not receive the private key. Native A is an app-context identity, not an actor supplied by JavaScript. B is the admin-pinned mTLS client certificate identity. Neither identity authentication nor joining grants a resource. Aircraft A-only, camera and gimbal grants are separate; selecting feed is presentation only. Both clients emit only their own heartbeat.
+
+## Provisioning and interfaces
+
+1. In main Fly open the payload/settings island; `#crew-init-native-key` explicitly generates/reuses AndroidKeyStore P256 identity. Public-only `files/crew02/public-identity.json` contains `certDerBase64`, `certPem`, `certSha256`, `spkiSha256`, actual `securityLevel` and validity. No exportable native private key. Emulator security level is not attestation.
+2. Administrator places `files/crew02/admin-trust.json`, exact flat fields: `format=aeris-crew02-admin-trust`, `version=1`, `realm=rtr-crew02-test`, `aircraft=sitl-42`, positive `trustEpoch`, `nativeSpkiSha256`, `peerPrincipal=payload-b`, `peerCertDerBase64`, `peerCertSha256`, `peerSpkiSha256`, `peerScopes` comma-separated allowed scopes. Scope example: `camera:center,camera:front,camera:rear,gimbal:center,gimbal:front`. No private key or sender enrollment. Epoch rollback/equal-epoch policy rewrite is refused against retained append-only audit.
+3. `#crew-listen` explicitly validates policy and certificate and binds mTLS guest127.0.0.1:5942. Root owns ADBforward localhost5942→5942. Node must retain standard CA/hostname checks (`servername=localhost`) plus SPKI pin; no TLS bypass or plaintext/LAN fallback. `#crew-stop` revokes and closes. `#crew-attach` attaches after native AP link; `#crew-discover` is explicit native discovery.
+4. A joins with `#crew-join-A`, then explicitly claims flight via `#crew-aircraft-claim`. Root opens B UI on127.0.0.1:8850; Connect performs mTLS/HELLO, Join separately confirms current boot/nonces/epoch/AP generation. Unjoined challenge expires30s from HELLO, never renewed by reads. Joined presence expires3000ms; own heartbeat500ms. No auto reconnect/join/grant/resend.
+5. Native A `#op-target` chooses front/center/rear locally, `#crew-resource` camera/gimbal. `#op-claim`, `#op-release`, `#op-transfer`, `#op-accept`, `#op-decline` operate the chosen resource. Main shutter and zoom arrows are actual explicit native intents. Ranges/presets only change requested values; `#op-send-gimbal`, `#op-send-zoom`, `#op-send-focus` apply. Authority1001 is one-time per manager/generation; consumed buttons are disabled. It is not sent again to demonstrate a human role transfer.
+
+Native local bridge uses only `crew02:<init-key|listen|stop|state|attach|join|discover|heartbeat|action>`; old `payload97:*` entry points are rejected and old actor/proxy-heartbeat lab is removed. A native context cannot be chosen via body `actor`/`sid`. Network B can only send HELLO, JOIN, STATE, HEARTBEAT and ACTION; it has no route to the A bridge or raw autopilot socket.
+
+Wire framing:4-byte big-endian byte count, request1..16384 and response≤32768, strict UTF-8 and flat JSON primitive schema. HELLO fields `kind,clientBoot,clientNonce`; JOIN binds `kind,serverBoot,clientBoot,clientNonce,challenge,channelId,realm,aircraft,trustEpoch,generation`. ACTION/HEARTBEAT exact fields `kind,serverBoot,clientBoot,session,trustEpoch,generation,seq,revision,operation,resource,to,a,b,acknowledge`. Values `a,b` are bounded integer percentages/degrees, converted to wire radians in native core as applicable. No app-layer message signatures: TLS integrity/possession and raw SHA bindings are distinct from signed archival nonrepudiation.
+
+Host launch (Root only, no downloads): `node --max-old-space-size=128 native/crew02/host/companion.mjs --identity-dir .local/crew02/identity --native-public <public-identity.json> --evidence-root <fresh-run-directory>`. B key file is0600 in a0700 directory, never evidence/APK/VCS. Host routes require exact127.0.0.1:8850 Host, same Origin, CSRF token and body bound. STATE cache age is explicit; read-only Refresh reconciles current sequence/revision. Known rejected actions may return current read-only state; there is no ACTION retry.
+
+## Durability and lifecycle
+
+One DirectTransport socket/RX/sequence/WAL. After TX_INTENT fsync, native checks the current TLS/app principal, session, trust epoch, scope, CAS, AP generation, foreground and freshness. Known B-only prewrite denial can suppress with TX_SUPPRESSED/UNKNOWN and revoke B while a healthy authenticated flight-owning A continues; actual write/storage/shared-policy ambiguity closes common transport. No retry. The compact audit is append/fsync and hash linked; no authority is restored from it.
+
+Clock-only `snapshotAtMs` and stations[].seenMs are omitted only from semantic-change comparison, while polled state retains presence ages. Raw RX bytes remain; grants/revisions/ownership/alive/pending/revocation changes still produce state and durable authority evidence. This avoids full-state fsync caused only by own heartbeat timestamps.
+
+Host20GiB floor is managed by Root, not confused with emulator filesystem size. Native audit uses4MiB/4096records and32MiB app-volume reserve; raw32MiB and P1 bounds remain. No cleanup/eviction. Admission26GiB, existing toolchain/AVD only, at most3 causal APK builds. Builder may compile/mock inside this module; only Root starts runtime/ADB and authorizes APK builds.
+
+Scope remains Android+localhost+SITL and synthetic camera/gimbal observations. No real Hera, Phase One API, remote radio/hardware authentication, production PKI/signature, real photos or physical safety claim. AUTH73/KEY74 mock-oracle objects are not used to claim cryptographic authentication.
+
+Raw SAF retains the inherited raw/source-meta/review package members. Crew audit and public trust/certificate evidence are separately pinned in the delivery receipt; exported ZIP alone is not a self-contained crew-identity or nonrepudiation proof. Neither private key is exported.
+
+Companion processBoot/PID identify the real process. clientBoot (`boot` in the local view) is a fresh authentication-instance nonce per explicit Connect; fresh clientBoot alone is not evidence of a process restart. Partition recovery requires a new TLS channel/JOIN and explicit grants; it never resumes a request.

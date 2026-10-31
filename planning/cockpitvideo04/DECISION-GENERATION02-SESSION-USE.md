@@ -1,0 +1,5 @@
+# Generation02 session-use clarification
+
+Contractor22October2026. Two initial emulator admission observations failed the unchanged256MiB decline guard before any intent/process/AP request. The first sandbox host03 listen EPERM created no listening session. Host03-admitted listened but was closed cleanly before UI, source or AP use. After closure, independent read-only31samples observed38,051,840,000bytes constant with zero decline. Retain all incidents. This is a changed observed condition, not a threshold waiver.
+
+Use the second and final permitted actual listening host session host-app04 with emulator03, subject a fresh unchanged admission. Run the two authorized remaining AP requests sequentially within the same20minute host/emulator budget if time allows: nominal, explicit close, explicit native process restart with zero rights, then distinct fault run. One media measurement per document and at most two existing sidecars. No new host/coldboot beyond L2 maxima, no sourcequota/sessiondeadline extension. Any missing scenario remains NOT_CHECKED; no automatic extra run.

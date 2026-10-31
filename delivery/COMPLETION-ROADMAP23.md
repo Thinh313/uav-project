@@ -1,0 +1,11 @@
+# ROADMAP23 · Completion
+
+DONE trong phạm vi rà soát/tài liệu, 13/10/2026. [Ưu tiên mới](../docs/ROADMAP-PRIORITIES-20261013.md) bổ sung cho roadmap lịch sử đã fingerprint; [gap review](../docs/RAGAS-REPLACEMENT-GAPS-20261013.md) ghi 16 khoảng trống và exit criteria. Không thay source/candidate/slot/controller/corpus/trust/SOT hay lịch heartbeat.
+
+Thay đổi chính: hoàn tất ENDURE20 và PROTOCOL22 Fly đúng TIP; ưu tiên aircraft/payload transport/mission routing, native shell/input và video/media, cấu hình observed, bench/HIL, khảo sát thực và A/B. Việc native contract/build/mock không bị chặn hoàn toàn vì thiếu SDK. Dời infrastructure tổng quát, mission chuyên dụng, runtime AI/accessories sau hành trình khảo sát; các mục cần cho pilot được đưa lên P0. Full RAGAS replacement vẫn phải nghiệm thu phạm vi rộng hơn; không có parity percentage/winner hay date/capacity giả.
+
+[Verification receipt](../evidence/roadmap23/verification.json): R23-01–05 PASS trong phạm vi tài liệu. Kiểm hash trước/sau:2009 source files,140 frozen source và140 slot files,5controller,25PAYLOAD21,58PROTOCOL22, candidate/launch/package/canonical SOT đều khớp. PID53226/53229, writer lock, startedAt/manifest/generation04 giữ nguyên; live GET200. Lúc kiểm cuối soak93phút/0errors/RUNNING_NOT_FINAL; không phải nghiệm thu ENDURE20.
+
+Bảy tài liệu chính thức được lưu raw/hash/URL/thời điểm; local links đều tồn tại. Hai fetch Android MediaCodec không thành công và một URL RAGAS đoán sai404 được lưu trong source receipt; không dùng để khẳng định API compatibility. Nguồn web là source claims, self-review là một agent, không independent audit. Các sự cố đường dẫn trước đây được giữ và dẫn trong gap review; endpoint fingerprint không chứng minh path hiện diện liên tục.
+
+Không chạy thêm flight/SITL, build/install, regression runtime hay ký gói trong lượt này vì chỉ đổi tài liệu. SDK/HeraHub/native execution/video/capture/HIL/field/RAGAS A/B vẫn NOT_CHECKED. RM-02 đã được ủy quyền tiếp tục sau nghiệm thu qua heartbeat hiện có; RM-04–13 là ưu tiên đề xuất, chưa triển khai hoặc mở rộng tự động authorization. Không có scratch/project copy/Docker/build folder mới để dọn; raw sources và audit receipts được giữ có chủ đích.

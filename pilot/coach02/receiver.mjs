@@ -1,0 +1,2 @@
+import fs from'node:fs';import{verifyPackage}from'./journal.mjs';
+try{if(process.argv.length!==3)throw Error('Usage: node pilot/coach02/receiver.mjs manual-package.json');const result=verifyPackage(fs.readFileSync(process.argv[2]));console.log(JSON.stringify({status:result.status,sessionId:result.sessionId,verdict:result.review.verdict,sha256:result.sha256,steps:result.review.observedSteps,authorityRestorable:false,sourceAuthenticated:false},null,2));}catch(e){console.error(JSON.stringify({status:'REJECTED',error:e.message}));process.exitCode=1;}

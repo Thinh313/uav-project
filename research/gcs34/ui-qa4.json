@@ -1,0 +1,165 @@
+{
+  "status": "PASS",
+  "checks": [
+    {
+      "name": "explicit proposed/synthetic provenance",
+      "pass": true
+    },
+    {
+      "name": "aligned stable command actions",
+      "pass": true
+    },
+    {
+      "name": "primary actions remain visible1280x800",
+      "pass": true
+    },
+    {
+      "name": "contextual warning airspace",
+      "pass": true
+    },
+    {
+      "name": "actions stable in airspace",
+      "pass": true
+    },
+    {
+      "name": "contextual warning video",
+      "pass": true
+    },
+    {
+      "name": "actions stable in video",
+      "pass": true
+    },
+    {
+      "name": "old frame visibly marked",
+      "pass": true
+    },
+    {
+      "name": "primary video also marks stale frame",
+      "pass": true
+    },
+    {
+      "name": "contextual warning link",
+      "pass": true
+    },
+    {
+      "name": "actions stable in link",
+      "pass": true
+    },
+    {
+      "name": "lost telemetry never asserts AUTO",
+      "pass": true
+    },
+    {
+      "name": "network-dependent controls blocked",
+      "pass": true
+    },
+    {
+      "name": "contextual warning battery",
+      "pass": true
+    },
+    {
+      "name": "actions stable in battery",
+      "pass": true
+    },
+    {
+      "name": "contextual warning unknown",
+      "pass": true
+    },
+    {
+      "name": "actions stable in unknown",
+      "pass": true
+    },
+    {
+      "name": "action only opens explicit no-command illustration",
+      "pass": true
+    },
+    {
+      "name": "stage ownership Plan",
+      "pass": true
+    },
+    {
+      "name": "no flight action outside Fly Plan",
+      "pass": true
+    },
+    {
+      "name": "stage ownership Preflight",
+      "pass": true
+    },
+    {
+      "name": "no flight action outside Fly Preflight",
+      "pass": true
+    },
+    {
+      "name": "stage ownership Review",
+      "pass": true
+    },
+    {
+      "name": "no flight action outside Fly Review",
+      "pass": true
+    },
+    {
+      "name": "stage ownership Fly",
+      "pass": true
+    },
+    {
+      "name": "primary and secondary selected stream agree",
+      "pass": true
+    },
+    {
+      "name": "no horizontal overflow 1920",
+      "pass": true
+    },
+    {
+      "name": "visible controls minimum52 CSSpx 1920",
+      "pass": true
+    },
+    {
+      "name": "no horizontal overflow 1280",
+      "pass": true
+    },
+    {
+      "name": "visible controls minimum52 CSSpx 1280",
+      "pass": true
+    },
+    {
+      "name": "no horizontal overflow 1024",
+      "pass": true
+    },
+    {
+      "name": "visible controls minimum52 CSSpx 1024",
+      "pass": true
+    },
+    {
+      "name": "no horizontal overflow 800",
+      "pass": true
+    },
+    {
+      "name": "visible controls minimum52 CSSpx 800",
+      "pass": true
+    },
+    {
+      "name": "no horizontal overflow 600",
+      "pass": true
+    },
+    {
+      "name": "visible controls minimum52 CSSpx 600",
+      "pass": true
+    },
+    {
+      "name": "no horizontal overflow 360",
+      "pass": true
+    },
+    {
+      "name": "visible controls minimum52 CSSpx 360",
+      "pass": true
+    },
+    {
+      "name": "no console errors/network writes/remote fetches",
+      "pass": true
+    }
+  ],
+  "errors": [],
+  "external": [],
+  "writes": [],
+  "scope": "Interactive design illustration only, not AERIS function/flight/native48dp/operator acceptance"
+}

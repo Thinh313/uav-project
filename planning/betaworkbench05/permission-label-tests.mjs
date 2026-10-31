@@ -1,0 +1,6 @@
+import assert from'node:assert/strict';import fs from'node:fs';import{payloadLabel,flightStageLabel}from'../../pilot/betaworkbench05/client-fence.mjs';
+const s={client:{active:true,id:'c',epoch:2},flight:{run:'r',request:{boot:'b'}},payloadAuthority:{gatewaySession:'g',failedClosed:false,last:{post:{leaseCount:0}},current:{gatewaySession:'g',flightRun:'r',flightBoot:'b',clientId:'c',clientEpoch:2,leaseCount:1,authorityRestored:false}}};
+assert.equal(payloadLabel(s),'Đã cấp · 1');const cases=[];
+for(const [k,v,want]of[['leaseCount',0,'Chưa cấp'],['flightBoot','old','Chưa xác định'],['clientEpoch',1,'Chưa xác định']]){const q=structuredClone(s);q.payloadAuthority.current[k]=v;assert.equal(payloadLabel(q),want);cases.push(k);}
+let q=structuredClone(s);delete q.payloadAuthority.current;assert.equal(payloadLabel(q),'Chưa xác định');q=structuredClone(s);q.flight.run=null;q.payloadAuthority.current.leaseCount=0;q.payloadAuthority.last.post.leaseCount=1;assert.equal(payloadLabel(q),'Chưa cấp');assert.equal(flightStageLabel('ARMED_HOME_REVIEW'),'Kiểm Home');
+fs.writeFileSync('evidence/betaworkbench05/permission-label-tests01.json',JSON.stringify({status:'PASS',groups:7,staleReceiptCannotSupplyCurrentAuthority:true,cases},null,2),{flag:'wx'});console.log('PERMISSION_LABEL7_PASS');

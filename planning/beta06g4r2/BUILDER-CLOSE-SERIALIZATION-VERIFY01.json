@@ -1,0 +1,148 @@
+{
+  "status": "PASS_BUILDER_SOURCE_MOCK_CORRECTION_ONLY_UNWIRED",
+  "TIP": "planning/beta06g4r2/TIP-COMPLETION-CORRECTION.md",
+  "causeProof": {
+    "strictCanonicalMaxObjectKeys": 64,
+    "actualFilesSha256Keys": 842,
+    "oversizeObjectPath": "review.filesSha256",
+    "exactOldSerialization": "canonicalize({review,authorityRestored:false})",
+    "reproducedError": "JSON_TYPE",
+    "reviewBytes": 105106,
+    "reviewAccepted": true,
+    "rawRecords": 17150,
+    "currentRunAfterClose": null,
+    "closureStopped": true,
+    "closureError": null,
+    "containerId": "97536488f26762927ccc8acbc78f86f986aa7749794d6764bbdac18e68b1911d",
+    "terminalExitCode": 0,
+    "sameActionId": "ec2938d8-b14a-4adb-b951-43beadbff994",
+    "uiStatus": "REJECTED",
+    "uiError": "JSON_TYPE",
+    "correlatedHostActions": [
+      {
+        "seq": 1785,
+        "kind": "ACTION_BEGIN",
+        "uiActionId": "ec2938d8-b14a-4adb-b951-43beadbff994",
+        "success": null,
+        "error": null,
+        "currentRun": "sfae933b8b0fe4d6192c5"
+      },
+      {
+        "seq": 1786,
+        "kind": "ACTION_END",
+        "uiActionId": "ec2938d8-b14a-4adb-b951-43beadbff994",
+        "success": false,
+        "error": "JSON_TYPE",
+        "currentRun": null
+      }
+    ],
+    "actualWALRows": 103,
+    "actualWALFlightReviewRowsForRun": 0,
+    "attribution": "Post-flight store.append fullreview strictserialization fails after sealed close. This is not a Docker/flight rejection and does not establish the separate complete_nominal phase-wait cause."
+  },
+  "correction": {
+    "module": "pilot/beta06g4r2/sealed-flight-close.mjs",
+    "compactIndexBytesOnActualReview": 2599,
+    "completeExecutionCanonicalBytesPreserved": 1388,
+    "largeMapTreatment": "Explicit reference to immutable fullreview exactSHA256/path/bytecount; map not truncated",
+    "semanticValidation": "Every fullreview semanticfield except explicitlargefilesSha256map passes unchanged strictjsonBytes; completeexecution retained",
+    "postEffectFailure": "CLOSED_REVIEW_INDEX_PENDING with exactsealedreviewreference, automaticRetryfalse andcampaignContinuationAllowedfalse",
+    "unverifiedSeal": "CLOSE_RETURNED_REVIEW_UNVERIFIED with noappend and noeffectverificationclaim",
+    "appendAttempts": 1,
+    "appWired": false,
+    "historicalWALRepaired": false,
+    "canonicalLimitsRelaxed": false
+  },
+  "testOutputs": [
+    {
+      "status": "PASS_SOURCE_MOCK_ONLY_NOT_WIRED",
+      "checks": [
+        "actual_842_file_map_strict_store_JSON_TYPE_reproduced_after_sealed_accepted_review",
+        "compact_digest_reference_valid_under_unchanged_strict_canonical_limits",
+        "single_post_effect_index_receipt_acknowledges_closed_effect_without_new_flight_acceptance",
+        "five_post_effect_index_failures_preserve_completed_effect_never_false_REJECTED_or_retry",
+        "missing_durable_index_receipt_is_unknown_after_one_write_no_retry",
+        "nine_bad_or_unknown_seals_refuse_index_and_never_claim_effect_verified_or_retry",
+        "actual_frozen_Store01_fixture_full_review_fails_without_WAL_write_compact_reference_fsyncs_one_record"
+      ],
+      "postEffectFailureCases": 5,
+      "badSealCases": 9,
+      "actualBytesOrigin": "evidence/beta06/generation04/flight/runs/sfae933b8b0fe4d6192c5",
+      "temporaryRemoved": "/private/var/folders/81/y445_2554tb49zsn_qtb_9v80000gn/T/codex-tmp-g4r2-close-20261022-lsuysU",
+      "actualRuntimePerformed": false
+    },
+    {
+      "status": "PASS_SEMANTIC_NEGATIVES",
+      "semanticCases": [
+        "NONFINITE_EXECUTION",
+        "NONFINITE_UNKNOWN_SEMANTIC",
+        "UNSUPPORTED_EXECUTION_NULL",
+        "MISSING_EXECUTION",
+        "ACCEPTED_WITH_INCOMPLETE_EXECUTION",
+        "ACCEPTED_WITH_WRITER_FAILURE",
+        "HASH_BOUND_CLOSURE_MAP_MISMATCH"
+      ],
+      "explicitDigestMismatchCases": 2,
+      "noBlanketJSONRoundtripOrCanonicalLimitRelaxation": true
+    }
+  ],
+  "fingerprintsBeforeAndAfterTestsIdentical": {
+    "pilot/beta06g4r2/sealed-flight-close.mjs": {
+      "sha256": "806b7c97e11a80f20e8756944c56473a05e3d7c86c8399f80bcd2ae11dbc69b3",
+      "bytes": 5836
+    },
+    "planning/beta06g4r2/test-sealed-flight-close.mjs": {
+      "sha256": "8d41ae5c73f63e2c87aea271ccb81fed9e74f533ef840e9b6826915e5fc6ea15",
+      "bytes": 7248
+    },
+    "pilot/beta06g4/app.mjs": {
+      "sha256": "b112790ff38b8c6b5794e1e6f0653636ed23dcddc8c14e1bf78e647bdec4d7d5",
+      "bytes": 22520
+    },
+    "pilot/beta06g4/flight/base.mjs": {
+      "sha256": "6ffb42c79cff75da798167f342a9014622bc2b0f2ffe2d3c346e69e8c9b70b70",
+      "bytes": 16735
+    },
+    "pilot/field02/evidence/store.mjs": {
+      "sha256": "529df9ae2b210140502423c1ae892bf5258eb3d81d7b91a3de7bbd308884096d",
+      "bytes": 14702
+    },
+    "media/big02/geotag.mjs": {
+      "sha256": "b7b037b53e3ea7120fcc1dad48109d532c7527924891a6ab3f61b3c19aba3a2b",
+      "bytes": 8927
+    },
+    "evidence/beta06/generation04/flight/runs/sfae933b8b0fe4d6192c5/review.json": {
+      "sha256": "7d92189db04a77e74473ce2609a1b31257bcb5927c22646a419703d05f337ee2",
+      "bytes": 105106
+    },
+    "evidence/beta06/generation04/flight/runs/sfae933b8b0fe4d6192c5/closure.json": {
+      "sha256": "f9c026d18fb363e3d5cf6c0d7612dccd4e82ee0e220f634cc628a4981623bd38",
+      "bytes": 1010
+    },
+    "evidence/beta06/generation04/g4r1-n1-close-rejection-snapshot01.json": {
+      "sha256": "346a3db63b02d7f869c37ee2173f9754d4407888ad15916fb76bf9d5aefde924",
+      "bytes": 541264
+    },
+    "evidence/beta06/generation04/g4r1-n1-explicit-ground-close-receipt.json": {
+      "sha256": "0efbca382949aa7382668e4f768f3e60c9b8f77c3afc0713f3ee09eafe233157",
+      "bytes": 27726
+    },
+    "evidence/beta06/generation04/workspace02/journal.jsonl": {
+      "sha256": "e5ac42d3be5e95b74cced1b4bc1e2d5eec28be74635f02ef1b3c4b1761546211",
+      "bytes": 338089
+    },
+    "evidence/beta06/generation04/host-app04-recheck01/overlap-events.jsonl": {
+      "sha256": "5627f93c36aabc08f73eb40056f2d1ba57502a4000f7014e41f98f5138083536",
+      "bytes": 4664615
+    }
+  },
+  "actualRuntimePerformed": false,
+  "noDockerADBEmulatorBrowserListenerBuildSignInstall": true,
+  "cleanup": "Temporary codex-tmp-g4r2-close-20261022-* fixture stores automatically removed, including initial directory-symlink-refusal fixture; no historical evidence deleted",
+  "limits": [
+    "Unwired source/mock fix does not change the already rejected actual UI receipt",
+    "Index success preserves the existing review claim; it does not independently rerun canonical raw acceptance",
+    "No new campaign or F1/N2/F2 is authorized or run by this correction",
+    "Independent QA pending"
+  ]
+}

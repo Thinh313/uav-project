@@ -1,0 +1,10 @@
+import assert from 'node:assert/strict';
+import {corpus43,replayCorpus43} from '../preflight43/corpus.mjs';
+import {coldLifecycle43} from '../preflight43/cold-lifecycle.mjs';
+import {replay43} from '../preflight43/replay.mjs';
+import {replay as replay42} from '../flightsafety42/replay.mjs';
+import {admission,receipt} from './io.mjs';
+admission();const cases=replayCorpus43(corpus43());assert.equal(cases.length,38);assert.ok(cases.every(x=>x.pass));
+const lifecycle=coldLifecycle43(),raw43=await replay43('run02'),raw42=await replay42('run03');
+await receipt('cold-regression1.json',{status:'PASS',corpus43:cases,lifecycle43:lifecycle,raw43,raw42,scope:'Existing evidence cold replay only; no newSITL/transport/flight or oldreceipt writes'});
+console.log(JSON.stringify({status:'PASS',corpus43:cases.length,lifecycle43:lifecycle.length,raw43Sessions:raw43.sessions.length,raw42Checks:raw42.checkCount}));

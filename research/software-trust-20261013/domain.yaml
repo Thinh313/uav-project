@@ -1,0 +1,11 @@
+domain: software-trust-20261013
+entity_label: Software trust definitions
+schema:
+  type_field: null
+  fields: [rotation_quorum, consecutive_version, durable_root, bootstrap_boundary]
+rollup_field: null
+universe:
+  estimate: null
+  basis: Four selected primary definitions; not a compliance denominator
+alias_map: {}
+ambiguous_clusters: []

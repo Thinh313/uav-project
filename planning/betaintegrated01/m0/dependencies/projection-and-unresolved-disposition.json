@@ -1,0 +1,512 @@
+{
+  "status": "ALL37_UNION_ISSUES_DISPOSITIONED_NOT_RUNTIME_ACCEPTANCE",
+  "unresolvedOriginalCount": 37,
+  "dispositions": [
+    {
+      "from": "native/native98/assets/direct95/vendor/pilot/apstream40/wire.mjs",
+      "line": 1,
+      "path": "native/native98/assets/direct95/vendor/pilot/apstream40/definitions.mjs",
+      "status": "MISSING_LITERAL_OR_GENERATED_ROUTE_REQUIRES_ADAPTATION",
+      "disposition": "BOUND_VIRTUAL_MISSING_NATIVE_ASSET",
+      "binding": {
+        "inputPath": "planning/betaintegrated01/m0/dependencies/intake/pilot/apstream40/definitions.mjs",
+        "expectedSHA256": "b881e15a33e92634ded232fc25b43693e558b662a36dd82571300899d261da7d",
+        "bindingKind": "EXACT_GIT_INTAKE_FOR_MISSING_HISTORICAL_PROJECTION"
+      }
+    },
+    {
+      "from": "native/native98/assets/workflow/preflight/wire.mjs",
+      "line": 1,
+      "path": "native/native98/assets/workflow/preflight/definitions.mjs",
+      "status": "MISSING_LITERAL_OR_GENERATED_ROUTE_REQUIRES_ADAPTATION",
+      "disposition": "BOUND_VIRTUAL_MISSING_NATIVE_ASSET",
+      "binding": {
+        "inputPath": "planning/betaintegrated01/m0/dependencies/intake/pilot/apstream40/definitions.mjs",
+        "expectedSHA256": "b881e15a33e92634ded232fc25b43693e558b662a36dd82571300899d261da7d",
+        "bindingKind": "EXACT_GIT_INTAKE_FOR_MISSING_HISTORICAL_PROJECTION"
+      }
+    },
+    {
+      "from": "pilot/workbench01/server.mjs",
+      "line": 3,
+      "path": ".",
+      "status": "DIRECTORY_SELECTION_REQUIRES_MANIFEST_NOT_EXPANDED",
+      "disposition": "ROOT_OR_OUTPUT_DIRECTORY_ANCHOR_NOT_A_MISSING_MODULE",
+      "executionSelection": "NOT_SELECTED"
+    },
+    {
+      "from": "pilot/workbench02/project-ui.mjs",
+      "line": 2,
+      "path": ".",
+      "status": "DIRECTORY_SELECTION_REQUIRES_MANIFEST_NOT_EXPANDED",
+      "disposition": "ROOT_OR_OUTPUT_DIRECTORY_ANCHOR_NOT_A_MISSING_MODULE",
+      "executionSelection": "NOT_SELECTED"
+    },
+    {
+      "from": "pilot/workbench02/server.mjs",
+      "line": 3,
+      "path": ".",
+      "status": "DIRECTORY_SELECTION_REQUIRES_MANIFEST_NOT_EXPANDED",
+      "disposition": "ROOT_OR_OUTPUT_DIRECTORY_ANCHOR_NOT_A_MISSING_MODULE",
+      "executionSelection": "NOT_SELECTED"
+    },
+    {
+      "from": "pilot/missionbeta01/media-projection.mjs",
+      "line": 2,
+      "path": ".",
+      "status": "DIRECTORY_SELECTION_REQUIRES_MANIFEST_NOT_EXPANDED",
+      "disposition": "ROOT_OR_OUTPUT_DIRECTORY_ANCHOR_NOT_A_MISSING_MODULE",
+      "executionSelection": "NOT_SELECTED"
+    },
+    {
+      "from": "pilot/missionbeta01/mock-transport.mjs",
+      "line": 2,
+      "path": ".",
+      "status": "DIRECTORY_SELECTION_REQUIRES_MANIFEST_NOT_EXPANDED",
+      "disposition": "ROOT_OR_OUTPUT_DIRECTORY_ANCHOR_NOT_A_MISSING_MODULE",
+      "executionSelection": "NOT_SELECTED"
+    },
+    {
+      "from": "pilot/missionbeta01/resource.mjs",
+      "line": 3,
+      "path": ".",
+      "status": "DIRECTORY_SELECTION_REQUIRES_MANIFEST_NOT_EXPANDED",
+      "disposition": "ROOT_OR_OUTPUT_DIRECTORY_ANCHOR_NOT_A_MISSING_MODULE",
+      "executionSelection": "NOT_SELECTED"
+    },
+    {
+      "from": "pilot/missionbeta01/server.mjs",
+      "line": 7,
+      "path": ".",
+      "status": "DIRECTORY_SELECTION_REQUIRES_MANIFEST_NOT_EXPANDED",
+      "disposition": "ROOT_OR_OUTPUT_DIRECTORY_ANCHOR_NOT_A_MISSING_MODULE",
+      "executionSelection": "NOT_SELECTED"
+    },
+    {
+      "from": "pilot/missionbeta01/session.mjs",
+      "line": 16,
+      "path": ".",
+      "status": "DIRECTORY_SELECTION_REQUIRES_MANIFEST_NOT_EXPANDED",
+      "disposition": "ROOT_OR_OUTPUT_DIRECTORY_ANCHOR_NOT_A_MISSING_MODULE",
+      "executionSelection": "NOT_SELECTED"
+    },
+    {
+      "from": "pilot/missionbeta01/viewer.mjs",
+      "line": 2,
+      "path": "pilot/missionbeta01/clock-lifecycle.mjs",
+      "status": "MISSING_LITERAL_OR_GENERATED_ROUTE_REQUIRES_ADAPTATION",
+      "disposition": "HTTP_ASSET_ROUTER_BINDING_NOT_NEIGHBOR_FILE",
+      "binding": {
+        "path": "pilot/clockvideo05/media/clock-lifecycle.mjs",
+        "bytes": 4076,
+        "sha256": "651e31263759af10f54f94187dab9ec9f5214a19aba47cccd3f5b3e98226cf2f"
+      },
+      "recipeEvidence": [
+        "pilot/beta06g5/media/server.mjs:83-86",
+        "pilot/betavideo03/media-projection.mjs:31",
+        "pilot/missionbeta01/media-projection.mjs:15"
+      ],
+      "materializationNeeded": "New media module graph must make these explicit imports/resources; existing source is browser-served, not Node-importable in place"
+    },
+    {
+      "from": "pilot/missionbeta01/viewer.mjs",
+      "line": 3,
+      "path": "pilot/missionbeta01/client.mjs",
+      "status": "MISSING_LITERAL_OR_GENERATED_ROUTE_REQUIRES_ADAPTATION",
+      "disposition": "HTTP_ASSET_ROUTER_BINDING_NOT_NEIGHBOR_FILE",
+      "binding": {
+        "path": "pilot/clockvideo05/media/client.mjs",
+        "bytes": 14784,
+        "sha256": "9dc3211a84741a34bb20520e3070e382b3f9faa5f8f3a08307cbdbc91a686b15"
+      },
+      "recipeEvidence": [
+        "pilot/beta06g5/media/server.mjs:83-86",
+        "pilot/betavideo03/media-projection.mjs:31",
+        "pilot/missionbeta01/media-projection.mjs:15"
+      ],
+      "materializationNeeded": "New media module graph must make these explicit imports/resources; existing source is browser-served, not Node-importable in place"
+    },
+    {
+      "from": "pilot/missionbeta01/viewer.mjs",
+      "line": 4,
+      "path": "pilot/missionbeta01/relay-core.mjs",
+      "status": "MISSING_LITERAL_OR_GENERATED_ROUTE_REQUIRES_ADAPTATION",
+      "disposition": "HTTP_ASSET_ROUTER_BINDING_NOT_NEIGHBOR_FILE",
+      "binding": {
+        "path": "media/big02/relay-core.mjs",
+        "bytes": 5061,
+        "sha256": "56ddcbbe265106f56e8be9de8944610424fa9804060b64b62262df320dda15f5"
+      },
+      "recipeEvidence": [
+        "pilot/beta06g5/media/server.mjs:83-86",
+        "pilot/betavideo03/media-projection.mjs:31",
+        "pilot/missionbeta01/media-projection.mjs:15"
+      ],
+      "materializationNeeded": "New media module graph must make these explicit imports/resources; existing source is browser-served, not Node-importable in place"
+    },
+    {
+      "from": "pilot/missionbeta01/viewer.mjs",
+      "line": 5,
+      "path": "pilot/missionbeta01/network-bootstrap.mjs",
+      "status": "MISSING_LITERAL_OR_GENERATED_ROUTE_REQUIRES_ADAPTATION",
+      "disposition": "HTTP_ASSET_ROUTER_BINDING_NOT_NEIGHBOR_FILE",
+      "binding": {
+        "path": "pilot/clockvideo05/media/network-bootstrap.mjs",
+        "bytes": 2085,
+        "sha256": "06275636d1dceef567f5f4780ba3eb84d245e5a96c5509499bb63503e74351a2"
+      },
+      "recipeEvidence": [
+        "pilot/beta06g5/media/server.mjs:83-86",
+        "pilot/betavideo03/media-projection.mjs:31",
+        "pilot/missionbeta01/media-projection.mjs:15"
+      ],
+      "materializationNeeded": "New media module graph must make these explicit imports/resources; existing source is browser-served, not Node-importable in place"
+    },
+    {
+      "from": "pilot/betavideo03/archive-worker.mjs",
+      "line": 3,
+      "path": ".",
+      "status": "DIRECTORY_SELECTION_REQUIRES_MANIFEST_NOT_EXPANDED",
+      "disposition": "ROOT_OR_OUTPUT_DIRECTORY_ANCHOR_NOT_A_MISSING_MODULE",
+      "executionSelection": "NOT_SELECTED"
+    },
+    {
+      "from": "pilot/betavideo03/archive-worker.mjs",
+      "line": 4,
+      "path": ".",
+      "status": "DIRECTORY_SELECTION_REQUIRES_MANIFEST_NOT_EXPANDED",
+      "disposition": "ROOT_OR_OUTPUT_DIRECTORY_ANCHOR_NOT_A_MISSING_MODULE",
+      "executionSelection": "NOT_SELECTED"
+    },
+    {
+      "from": "pilot/betavideo03/archive-worker.mjs",
+      "line": 5,
+      "path": ".",
+      "status": "DIRECTORY_SELECTION_REQUIRES_MANIFEST_NOT_EXPANDED",
+      "disposition": "ROOT_OR_OUTPUT_DIRECTORY_ANCHOR_NOT_A_MISSING_MODULE",
+      "executionSelection": "NOT_SELECTED"
+    },
+    {
+      "from": "pilot/betavideo03/archive-worker.mjs",
+      "line": 6,
+      "path": ".",
+      "status": "DIRECTORY_SELECTION_REQUIRES_MANIFEST_NOT_EXPANDED",
+      "disposition": "ROOT_OR_OUTPUT_DIRECTORY_ANCHOR_NOT_A_MISSING_MODULE",
+      "executionSelection": "NOT_SELECTED"
+    },
+    {
+      "from": "pilot/betavideo03/archive-worker.mjs",
+      "line": 7,
+      "path": ".",
+      "status": "DIRECTORY_SELECTION_REQUIRES_MANIFEST_NOT_EXPANDED",
+      "disposition": "ROOT_OR_OUTPUT_DIRECTORY_ANCHOR_NOT_A_MISSING_MODULE",
+      "executionSelection": "NOT_SELECTED"
+    },
+    {
+      "from": "pilot/betavideo03/media-projection.mjs",
+      "line": 2,
+      "path": ".",
+      "status": "DIRECTORY_SELECTION_REQUIRES_MANIFEST_NOT_EXPANDED",
+      "disposition": "ROOT_OR_OUTPUT_DIRECTORY_ANCHOR_NOT_A_MISSING_MODULE",
+      "executionSelection": "NOT_SELECTED"
+    },
+    {
+      "from": "pilot/betavideo03/mock-transport.mjs",
+      "line": 2,
+      "path": ".",
+      "status": "DIRECTORY_SELECTION_REQUIRES_MANIFEST_NOT_EXPANDED",
+      "disposition": "ROOT_OR_OUTPUT_DIRECTORY_ANCHOR_NOT_A_MISSING_MODULE",
+      "executionSelection": "NOT_SELECTED"
+    },
+    {
+      "from": "pilot/betavideo03/native-publisher.mjs",
+      "line": 6,
+      "path": ".",
+      "status": "DIRECTORY_SELECTION_REQUIRES_MANIFEST_NOT_EXPANDED",
+      "disposition": "ROOT_OR_OUTPUT_DIRECTORY_ANCHOR_NOT_A_MISSING_MODULE",
+      "executionSelection": "NOT_SELECTED"
+    },
+    {
+      "from": "pilot/betavideo03/resource.mjs",
+      "line": 5,
+      "path": ".",
+      "status": "DIRECTORY_SELECTION_REQUIRES_MANIFEST_NOT_EXPANDED",
+      "disposition": "ROOT_OR_OUTPUT_DIRECTORY_ANCHOR_NOT_A_MISSING_MODULE",
+      "executionSelection": "NOT_SELECTED"
+    },
+    {
+      "from": "pilot/betavideo03/resource.mjs",
+      "line": 9,
+      "path": "evidence/betavideo03",
+      "status": "DIRECTORY_SELECTION_REQUIRES_MANIFEST_NOT_EXPANDED",
+      "disposition": "ROOT_OR_OUTPUT_DIRECTORY_ANCHOR_NOT_A_MISSING_MODULE",
+      "executionSelection": "NOT_SELECTED"
+    },
+    {
+      "from": "pilot/betavideo03/server.mjs",
+      "line": 9,
+      "path": ".",
+      "status": "DIRECTORY_SELECTION_REQUIRES_MANIFEST_NOT_EXPANDED",
+      "disposition": "ROOT_OR_OUTPUT_DIRECTORY_ANCHOR_NOT_A_MISSING_MODULE",
+      "executionSelection": "NOT_SELECTED"
+    },
+    {
+      "from": "pilot/betavideo03/session.mjs",
+      "line": 16,
+      "path": ".",
+      "status": "DIRECTORY_SELECTION_REQUIRES_MANIFEST_NOT_EXPANDED",
+      "disposition": "ROOT_OR_OUTPUT_DIRECTORY_ANCHOR_NOT_A_MISSING_MODULE",
+      "executionSelection": "NOT_SELECTED"
+    },
+    {
+      "from": "pilot/betavideo03/viewer-engine.mjs",
+      "line": 4,
+      "path": "pilot/betavideo03/clock-lifecycle.mjs",
+      "status": "MISSING_LITERAL_OR_GENERATED_ROUTE_REQUIRES_ADAPTATION",
+      "disposition": "HTTP_ASSET_ROUTER_BINDING_NOT_NEIGHBOR_FILE",
+      "binding": {
+        "path": "pilot/clockvideo05/media/clock-lifecycle.mjs",
+        "bytes": 4076,
+        "sha256": "651e31263759af10f54f94187dab9ec9f5214a19aba47cccd3f5b3e98226cf2f"
+      },
+      "recipeEvidence": [
+        "pilot/beta06g5/media/server.mjs:83-86",
+        "pilot/betavideo03/media-projection.mjs:31",
+        "pilot/missionbeta01/media-projection.mjs:15"
+      ],
+      "materializationNeeded": "New media module graph must make these explicit imports/resources; existing source is browser-served, not Node-importable in place"
+    },
+    {
+      "from": "pilot/betavideo03/viewer-engine.mjs",
+      "line": 6,
+      "path": "pilot/betavideo03/relay-core.mjs",
+      "status": "MISSING_LITERAL_OR_GENERATED_ROUTE_REQUIRES_ADAPTATION",
+      "disposition": "HTTP_ASSET_ROUTER_BINDING_NOT_NEIGHBOR_FILE",
+      "binding": {
+        "path": "media/big02/relay-core.mjs",
+        "bytes": 5061,
+        "sha256": "56ddcbbe265106f56e8be9de8944610424fa9804060b64b62262df320dda15f5"
+      },
+      "recipeEvidence": [
+        "pilot/beta06g5/media/server.mjs:83-86",
+        "pilot/betavideo03/media-projection.mjs:31",
+        "pilot/missionbeta01/media-projection.mjs:15"
+      ],
+      "materializationNeeded": "New media module graph must make these explicit imports/resources; existing source is browser-served, not Node-importable in place"
+    },
+    {
+      "from": "pilot/betavideo03/viewer-engine.mjs",
+      "line": 7,
+      "path": "pilot/betavideo03/network-bootstrap.mjs",
+      "status": "MISSING_LITERAL_OR_GENERATED_ROUTE_REQUIRES_ADAPTATION",
+      "disposition": "HTTP_ASSET_ROUTER_BINDING_NOT_NEIGHBOR_FILE",
+      "binding": {
+        "path": "pilot/clockvideo05/media/network-bootstrap.mjs",
+        "bytes": 2085,
+        "sha256": "06275636d1dceef567f5f4780ba3eb84d245e5a96c5509499bb63503e74351a2"
+      },
+      "recipeEvidence": [
+        "pilot/beta06g5/media/server.mjs:83-86",
+        "pilot/betavideo03/media-projection.mjs:31",
+        "pilot/missionbeta01/media-projection.mjs:15"
+      ],
+      "materializationNeeded": "New media module graph must make these explicit imports/resources; existing source is browser-served, not Node-importable in place"
+    },
+    {
+      "from": "snapshots/simstability03/pilot/simhand01/budget.mjs",
+      "line": 2,
+      "path": "snapshots/simstability03",
+      "status": "DIRECTORY_SELECTION_REQUIRES_MANIFEST_NOT_EXPANDED",
+      "disposition": "ROOT_OR_OUTPUT_DIRECTORY_ANCHOR_NOT_A_MISSING_MODULE",
+      "executionSelection": "NOT_SELECTED"
+    },
+    {
+      "from": "snapshots/simstability03/pilot/simhand01/link.mjs",
+      "line": 3,
+      "path": "snapshots/simstability03",
+      "status": "DIRECTORY_SELECTION_REQUIRES_MANIFEST_NOT_EXPANDED",
+      "disposition": "ROOT_OR_OUTPUT_DIRECTORY_ANCHOR_NOT_A_MISSING_MODULE",
+      "executionSelection": "NOT_SELECTED"
+    },
+    {
+      "from": "snapshots/simstability03/pilot/simhand01/link.mjs",
+      "line": 4,
+      "path": "snapshots/simstability03/pilot/simtrain53/authority.mjs",
+      "status": "MISSING_LITERAL_OR_GENERATED_ROUTE_REQUIRES_ADAPTATION",
+      "disposition": "VIRTUAL_OVERLAY_INHERITS_ORIGINAL_LOGICAL_PATH",
+      "binding": {
+        "path": "pilot/simtrain53/authority.mjs",
+        "bytes": 2386,
+        "sha256": "1f978c0f14c359e12643784b5faa72bfc726c33702973c0d26efc85043d91ab5"
+      },
+      "materializationNeeded": "Resolve imports at logical pilot/simhand01 location; snapshot directory is archival overlay, not runnable module root"
+    },
+    {
+      "from": "snapshots/simstability03/pilot/simhand01/server.mjs",
+      "line": 2,
+      "path": "snapshots/simstability03",
+      "status": "DIRECTORY_SELECTION_REQUIRES_MANIFEST_NOT_EXPANDED",
+      "disposition": "ROOT_OR_OUTPUT_DIRECTORY_ANCHOR_NOT_A_MISSING_MODULE",
+      "executionSelection": "NOT_SELECTED"
+    },
+    {
+      "from": "pilot/aeris57/domain.mjs",
+      "line": 7,
+      "path": ".",
+      "status": "DIRECTORY_SELECTION_REQUIRES_MANIFEST_NOT_EXPANDED",
+      "disposition": "ROOT_OR_OUTPUT_DIRECTORY_ANCHOR_NOT_A_MISSING_MODULE",
+      "executionSelection": "NOT_SELECTED"
+    },
+    {
+      "from": "pilot/simhand01/budget.mjs",
+      "line": 2,
+      "path": ".",
+      "status": "DIRECTORY_SELECTION_REQUIRES_MANIFEST_NOT_EXPANDED",
+      "disposition": "ROOT_OR_OUTPUT_DIRECTORY_ANCHOR_NOT_A_MISSING_MODULE",
+      "executionSelection": "NOT_SELECTED"
+    },
+    {
+      "from": "pilot/simhand01/link.mjs",
+      "line": 2,
+      "path": ".",
+      "status": "DIRECTORY_SELECTION_REQUIRES_MANIFEST_NOT_EXPANDED",
+      "disposition": "ROOT_OR_OUTPUT_DIRECTORY_ANCHOR_NOT_A_MISSING_MODULE",
+      "executionSelection": "NOT_SELECTED"
+    },
+    {
+      "from": "pilot/simhand01/server.mjs",
+      "line": 2,
+      "path": ".",
+      "status": "DIRECTORY_SELECTION_REQUIRES_MANIFEST_NOT_EXPANDED",
+      "disposition": "ROOT_OR_OUTPUT_DIRECTORY_ANCHOR_NOT_A_MISSING_MODULE",
+      "executionSelection": "NOT_SELECTED"
+    }
+  ],
+  "actualUnresolvedInputs": [],
+  "projectionRecipes": [
+    {
+      "id": "PR01",
+      "recipe": "Native98 APK source generation",
+      "inputs": [
+        {
+          "path": "native/native98/build.py",
+          "bytes": 5495,
+          "sha256": "6cac95a07e2e5dfea47bf3b4ff4aa557b9dd36f01d410c2ef8934c975bca517c"
+        },
+        {
+          "path": "native/native98/AndroidManifest.xml",
+          "bytes": 917,
+          "sha256": "d98f8b0c6694bbae2a405d806fbd7598020c0affa274e6e5f2db8ea4563446d0"
+        }
+      ],
+      "behavior": "Directory sourceId scan + explicit Java list + copyassets; generated BuildInfo90.java + Android toolchain; no projection recipe run",
+      "requiredM1Action": "Replace historical output/evidence/signing paths with explicit new manifest and injected provider; preserve v26 API compatibility gate; no old buildCLI"
+    },
+    {
+      "id": "PR02",
+      "recipe": "Workbench UI projection",
+      "inputs": [
+        {
+          "path": "pilot/workbench02/project-ui.mjs",
+          "bytes": 5901,
+          "sha256": "921dc2d32e22956b69989f8c7d1799bc02aaee4537f5fc57c37ea242bd40c3d8"
+        },
+        {
+          "path": "pilot/workbench01/ui.mjs",
+          "bytes": 31024,
+          "sha256": "5491daaa1cfb9446a3d43b33c8b036da83f42b1bc1b3b36312c3314b0c6ddbe5"
+        },
+        {
+          "path": "evidence/workbench01/handoff-manifest.json",
+          "bytes": 12211,
+          "sha256": "d7c5b1e20f387e4a2fd2fa2769c79e8c909f229f3f323fee1a4e60ea60c46766"
+        }
+      ],
+      "behavior": "Pinned asset text edits, count/inverse assertions, projected modules/HTML; not executed here",
+      "requiredM1Action": "Materialize standalone versioned UI/domain modules; keep one Fly owner and native transport delegate"
+    },
+    {
+      "id": "PR03",
+      "recipe": "MissionBeta/BetaVideo UI projection",
+      "inputs": [
+        {
+          "path": "pilot/missionbeta01/ui-projection.mjs",
+          "bytes": 4292,
+          "sha256": "a068602599a967211562e3b27dea7ea1dd72daf075dc2be00b863702272a500b"
+        },
+        {
+          "path": "pilot/betavideo03/ui-projection.mjs",
+          "bytes": 5126,
+          "sha256": "129796c3519016f7a622788a082005b4a4f766e0a76f7c8db32be34224ef95a7"
+        }
+      ],
+      "behavior": "Composes Workbench projection and injects BetaWorkbench host session control",
+      "requiredM1Action": "Do not include host flight writer; adapt mission/media/review domain behind native flight service"
+    },
+    {
+      "id": "PR04",
+      "recipe": "Media server runtime projection",
+      "inputs": [
+        {
+          "path": "pilot/betavideo03/media-projection.mjs",
+          "bytes": 9940,
+          "sha256": "7eb439b9718913a860a9083358d1318b667a6cfab7aa0765815d1584637a988c"
+        },
+        {
+          "path": "pilot/beta06g5/media/server.mjs",
+          "bytes": 22633,
+          "sha256": "dfe6ee4563b4d7dfb2c86bdba8a5838d0726f30955cda46ffd871cca3668f052"
+        },
+        {
+          "path": "evidence/beta06/generation17/flight-pins01.json",
+          "bytes": 211133,
+          "sha256": "6ca7200a4b17d01a1b7d5c525fcac13ac2a87bdc7cc44c2c9788cd251e9fcf0c"
+        }
+      ],
+      "behavior": "Rewrites historical media server roots/importURLs/routes and imports data:text/javascript code at runtime",
+      "requiredM1Action": "Extract explicit new media host modules and literal HTTP asset map from pinned source; no opaque data import in selected release"
+    },
+    {
+      "id": "PR05",
+      "recipe": "MissionBeta runtime exec",
+      "inputs": [
+        {
+          "path": "pilot/missionbeta01/runtime.py",
+          "bytes": 1839,
+          "sha256": "a3cfe007971f459dd3fcc749fe05c4e92039a14d6b32518797478bba7524b655"
+        },
+        {
+          "path": "pilot/beta06g17/flight/runtime.py",
+          "bytes": 25171,
+          "sha256": "70a0406b02157907990629cb91f82f7327e1cfa10b4f0759454d2e5877f95ef3"
+        },
+        {
+          "path": "evidence/missionbeta01/source-pins07.json",
+          "bytes": 114470,
+          "sha256": "0dd2f20d466555ed97c4d5852e75105a9a6c6130283e404b7b5fe87b98b1bbab"
+        }
+      ],
+      "behavior": "Rewrites frozenG17 source string and exec(compiles) it with new output guards",
+      "requiredM1Action": "Excluded as beta executor; implement/pin new explicit simulator provider launcher/context if preserving algorithm"
+    },
+    {
+      "id": "PR06",
+      "recipe": "SIMSTABILITY03 archival overlay",
+      "inputs": [
+        {
+          "path": "snapshots/simstability03/overlay.json",
+          "bytes": 2909,
+          "sha256": "3e83fdb49330fdf5f92991993418dc502ffd2332e75550be7f9ae2c0282e5df0"
+        },
+        {
+          "path": "snapshots/simstability03/source-bundle-manifest.json",
+          "bytes": 21305,
+          "sha256": "df3eb4ec961e2fc83116440ec017796593b36847f2e1a601e7dd0a8b11ec5c8f"
+        }
+      ],
+      "behavior": "9changed files; inherits unchanged original source/resources. Includes independent host TrainingLink flight authority",
+      "requiredM1Action": "Port manual/lifecycle/recorder algorithms into native-owner architecture; host TrainingLink cannot remain second live writer"
+    }
+  ],
+  "sourceOfCounts": "source-reference-union01.json; directory anchors were not missing executable modules"
+}

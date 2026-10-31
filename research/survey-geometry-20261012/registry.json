@@ -1,0 +1,105 @@
+{
+  "aggregates": {
+    "cells_by_state": {
+      "null": 3,
+      "sourced": 3
+    },
+    "coverage_pct": null,
+    "n_entities": 3,
+    "rollup": {},
+    "rollup_field": null,
+    "universe_estimate": null
+  },
+  "registry": {
+    "GeographicLib LocalCartesian source": {
+      "entity_type": null,
+      "fields": {
+        "format": {
+          "state": "null",
+          "value": null
+        },
+        "method": {
+          "claims": [
+            {
+              "capture": {
+                "fetched_at": "2026-10-12T04:29:35.787763+00:00",
+                "origin_id": "geographiclib",
+                "sha256": "83d333c14df95e91a3777bf4d5c0f9805216d9c6b02995c5731f5f611d44f156",
+                "snapshot": "LocalCartesian.cpp.txt",
+                "source": "geographiclib-local",
+                "url": "https://raw.githubusercontent.com/geographiclib/geographiclib/main/src/LocalCartesian.cpp"
+              },
+              "evidence_span": "_earth.IntForward",
+              "extraction": "normalized",
+              "source": "geographiclib-local",
+              "tier": "A",
+              "value": "Published implementation translates geocentric origin and rotates to local axes"
+            }
+          ],
+          "state": "sourced",
+          "value": "Published implementation translates geocentric origin and rotates to local axes"
+        }
+      }
+    },
+    "PROJ topocentric": {
+      "entity_type": null,
+      "fields": {
+        "format": {
+          "state": "null",
+          "value": null
+        },
+        "method": {
+          "claims": [
+            {
+              "capture": {
+                "fetched_at": "2026-10-12T04:29:35.787280+00:00",
+                "origin_id": "proj",
+                "sha256": "287992d78617fe40c255659ee322c01bcb2fcbffafb019740c6c0640072c00f3",
+                "snapshot": "proj-topocentric.html",
+                "source": "proj-topocentric",
+                "url": "https://proj.org/en/stable/operations/conversions/topocentric.html"
+              },
+              "evidence_span": "local tangent plane",
+              "extraction": "normalized",
+              "source": "proj-topocentric",
+              "tier": "A",
+              "value": "Geographic coordinates convert via geocentric into local ENU tangent frame"
+            }
+          ],
+          "state": "sourced",
+          "value": "Geographic coordinates convert via geocentric into local ENU tangent frame"
+        }
+      }
+    },
+    "QGC plan file format": {
+      "entity_type": null,
+      "fields": {
+        "format": {
+          "claims": [
+            {
+              "capture": {
+                "fetched_at": "2026-10-12T04:29:35.787871+00:00",
+                "origin_id": "qgroundcontrol",
+                "sha256": "d37edecfb43bcd5e3dd809650c6194e358b1c1083c410d8bc8782121d3d7acb1",
+                "snapshot": "qgc-plan.html",
+                "source": "qgc-plan",
+                "url": "https://docs.qgroundcontrol.com/master/en/qgc-dev-guide/file_formats/plan.html"
+              },
+              "evidence_span": "ComplexItem",
+              "extraction": "normalized",
+              "source": "qgc-plan",
+              "tier": "A",
+              "value": "QGC mission schema includes SimpleItem and ComplexItem; AERIS v2 does not imply compatibility"
+            }
+          ],
+          "state": "sourced",
+          "value": "QGC mission schema includes SimpleItem and ComplexItem; AERIS v2 does not imply compatibility"
+        },
+        "method": {
+          "state": "null",
+          "value": null
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,2 @@
+import {parseKml94} from './kml.mjs';import {compile} from './planner.mjs';import{CAMERA,OPTIONS}from'./common.mjs';export{CAMERA,OPTIONS};
+export async function planMission(d){if(typeof d?.kml!=='string'||new TextEncoder().encode(d.kml).length>262144)throw Error('KML_SIZE');const document=parseKml94(d.kml),plan=compile(document,d.featureId,d.options,d.camera??CAMERA);return{format:'aeris57-planning-record',version:1,kml:d.kml,document,plan,source:'MAPPING51_IMMUTABLE_COMPILER',flightReady:false,uploadAvailable:false,actualImages:0};}

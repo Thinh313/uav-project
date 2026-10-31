@@ -1,0 +1,25 @@
+import assert from 'node:assert/strict';
+import {readFile,readdir,writeFile} from 'node:fs/promises';
+import {validateCapsule44} from '../cockpit82/assets/workflow/capsule.mjs';
+const E='evidence/cockpit82-emulator04';const rows=[];const load=async n=>JSON.parse(await readFile(E+'/'+n+'.json','utf8'));
+function test(name,fn){fn();rows.push({name,pass:true});}
+const actual=(await readdir(E)).filter(n=>n.endsWith('-capsule.json')).sort();
+for(const n of actual){const c=await validateCapsule44(await readFile(E+'/'+n,'utf8'));test('Actual Android capsule semantic replay '+n,()=>{assert.equal(c.operational,false);assert.equal(c.authorityRestorable,false);});}
+const base=await load('baseline04'),draft=await load('draft-saved04'),dr=await load('draft-restarted04'),start=await load('fly-start04'),ack=await load('ack-no-progress04'),one=await load('point-one04'),awaited=await load('await-landing04'),done=await load('completed-review04'),restart=await load('completed-app-restart04'),cold=await load('completed-cold-reboot04'),final=await load('main-final04');
+test('Original COCKPIT82 saved draft preserved before work',()=>assert.equal(base.head,'7af49ef5db3c2f7568164c3bfe0b758bf2f0cccceb3b6359c7c7fe3170e501af'));
+test('UI edited and saved exact survey values',()=>{const f=draft.capsule.journey.draft.form;assert.equal(f.name,'COCKPIT82_E2E04');assert.equal(f.altitude,'31');assert.equal(f.speed,'1.1');});
+test('Draft app restart retains exact HEAD and body SHA',()=>{assert.equal(draft.head,dr.head);assert.equal(draft.bodySha256,dr.bodySha256);});
+test('Native Fly starts at cursor0',()=>{assert.equal(start.capsule.journey.current.phase,'RUNNING_MOCK');assert.equal(start.capsule.journey.current.cursor,0);});
+test('ACK records event but no progress',()=>{assert.equal(ack.capsule.journey.current.phase,'RUNNING_MOCK');assert.equal(ack.capsule.journey.current.cursor,0);assert.equal(ack.capsule.journey.current.events.at(-1).body.kind,'ACK_NOT_EXECUTION');});
+test('Point1 and2 preserve observed progression, await landing',()=>{assert.equal(one.capsule.journey.current.cursor,1);assert.equal(one.capsule.journey.current.phase,'RUNNING_MOCK');assert.equal(awaited.capsule.journey.current.cursor,2);assert.equal(awaited.capsule.journey.current.phase,'AWAITING_MOCK_LANDING');});
+test('Completion requires explicit landing event',()=>{assert.equal(done.capsule.journey.current.phase,'COMPLETED_MOCK');assert.equal(done.capsule.journey.current.events.at(-1).body.kind,'LANDING_OBSERVED');assert.equal(done.capsule.journey.current.cursor,2);});
+test('Completed record remains exact through app restart and cold guest reboot',()=>{for(const c of [restart,cold,final]){assert.equal(c.head,done.head);assert.equal(c.bodySha256,done.bodySha256);assert.equal(c.revision,16);assert.equal(c.capsule.authorityRestorable,false);}});
+const active=await load('active-point-one06'),interrupted=await load('active-restart06'),again=await load('active-restart-repeat06');
+test('Active interruption keeps old immutable records and complete event prefix',()=>{const a=active.capsule.journey.current,b=interrupted.capsule.journey.current;assert.equal(a.phase,'RUNNING_MOCK');assert.equal(a.cursor,1);assert.equal(b.phase,'INTERRUPTED_RESTART');assert.equal(b.cursor,1);assert.deepEqual(b.events.slice(0,-1),a.events);assert.equal(b.events.at(-1).body.kind,'INTERRUPTED_RESTART');for(const [n,h]of Object.entries(active.files))if(n.endsWith('.bin'))assert.equal(interrupted.files[n],h);});
+test('Repeated interrupted restart does not duplicate events or change HEAD',()=>{assert.equal(interrupted.head,again.head);assert.equal(interrupted.bodySha256,again.bodySha256);assert.equal(again.capsule.authorityRestorable,false);});
+test('No pending journal at any observed checkpoint',()=>{for(const c of [base,draft,dr,start,ack,one,awaited,done,restart,cold,final,active,interrupted,again])assert.equal(c.pending,false);});
+const timing=[];for(const [id,w]of [['main04',done.capsule],['active06',again.capsule]]){
+ const intent=w.audit.find(x=>x.body.kind==='MOCK_START_INTENT').body,handoff=w.audit.find(x=>x.body.kind==='MOCK_START_HANDOFF').body,event=w.journey.current.events.find(x=>x.body.kind==='MOCK_STARTED').body,delta=handoff.elapsedMs-intent.elapsedMs;
+ test('Original ticket timing bound respected '+id,()=>{assert(delta>=0&&delta<=1500);assert(event.elapsedMs-intent.elapsedMs>=0&&event.elapsedMs-intent.elapsedMs<=1500);assert(w.preflightSnapshots.length<=4);});timing.push({id,intentToHandoffMs:delta,intentToStartedMs:event.elapsedMs-intent.elapsedMs,snapshots:w.preflightSnapshots.length});
+}
+await writeFile(E+'/semantic-qa.json',JSON.stringify({status:'PASS',pass:rows.length,fail:0,actualCapsules:actual.length,tests:rows,timing,scope:'Separate host semantic replay of app-private bytes + strict comparisons; same agent, not independent human/code oracle. Visual no-authority/media checks remain in screenshots.'},null,2)+'\n');console.log(JSON.stringify({pass:rows.length,fail:0,actualCapsules:actual.length,timing}));

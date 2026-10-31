@@ -1,0 +1,688 @@
+{
+  "created_at": "2026-10-15T06:38:19.042925+00:00",
+  "result": "PASS_RESEARCH_INTEGRITY",
+  "passed": 131,
+  "failed": 0,
+  "checks": [
+    {
+      "check": "snapshot-sha:releases",
+      "pass": true,
+      "scope": "RESEARCH_INTEGRITY"
+    },
+    {
+      "check": "snapshot-sha:v4.0.14-b111",
+      "pass": true,
+      "scope": "RESEARCH_INTEGRITY"
+    },
+    {
+      "check": "derived-parent:v4.0.14-b111",
+      "pass": true,
+      "scope": "RESEARCH_INTEGRITY"
+    },
+    {
+      "check": "snapshot-sha:v4.0.10-b111",
+      "pass": true,
+      "scope": "RESEARCH_INTEGRITY"
+    },
+    {
+      "check": "derived-parent:v4.0.10-b111",
+      "pass": true,
+      "scope": "RESEARCH_INTEGRITY"
+    },
+    {
+      "check": "snapshot-sha:v4.0.8-b110",
+      "pass": true,
+      "scope": "RESEARCH_INTEGRITY"
+    },
+    {
+      "check": "derived-parent:v4.0.8-b110",
+      "pass": true,
+      "scope": "RESEARCH_INTEGRITY"
+    },
+    {
+      "check": "snapshot-sha:v4.0.5-b109",
+      "pass": true,
+      "scope": "RESEARCH_INTEGRITY"
+    },
+    {
+      "check": "derived-parent:v4.0.5-b109",
+      "pass": true,
+      "scope": "RESEARCH_INTEGRITY"
+    },
+    {
+      "check": "snapshot-sha:v4.0.4-b108",
+      "pass": true,
+      "scope": "RESEARCH_INTEGRITY"
+    },
+    {
+      "check": "derived-parent:v4.0.4-b108",
+      "pass": true,
+      "scope": "RESEARCH_INTEGRITY"
+    },
+    {
+      "check": "snapshot-sha:v4.0.4-b107",
+      "pass": true,
+      "scope": "RESEARCH_INTEGRITY"
+    },
+    {
+      "check": "derived-parent:v4.0.4-b107",
+      "pass": true,
+      "scope": "RESEARCH_INTEGRITY"
+    },
+    {
+      "check": "snapshot-sha:test-linux-u20",
+      "pass": true,
+      "scope": "RESEARCH_INTEGRITY"
+    },
+    {
+      "check": "derived-parent:test-linux-u20",
+      "pass": true,
+      "scope": "RESEARCH_INTEGRITY"
+    },
+    {
+      "check": "snapshot-sha:v4.0.3-b106",
+      "pass": true,
+      "scope": "RESEARCH_INTEGRITY"
+    },
+    {
+      "check": "derived-parent:v4.0.3-b106",
+      "pass": true,
+      "scope": "RESEARCH_INTEGRITY"
+    },
+    {
+      "check": "snapshot-sha:tag-4014",
+      "pass": true,
+      "scope": "RESEARCH_INTEGRITY"
+    },
+    {
+      "check": "snapshot-sha:tag-4010",
+      "pass": true,
+      "scope": "RESEARCH_INTEGRITY"
+    },
+    {
+      "check": "snapshot-sha:main-head",
+      "pass": true,
+      "scope": "RESEARCH_INTEGRITY"
+    },
+    {
+      "check": "snapshot-sha:readme-main",
+      "pass": true,
+      "scope": "RESEARCH_INTEGRITY"
+    },
+    {
+      "check": "snapshot-sha:qgc-plan",
+      "pass": true,
+      "scope": "RESEARCH_INTEGRITY"
+    },
+    {
+      "check": "snapshot-sha:mavlink-mission",
+      "pass": true,
+      "scope": "RESEARCH_INTEGRITY"
+    },
+    {
+      "check": "snapshot-sha:mavlink-camera",
+      "pass": true,
+      "scope": "RESEARCH_INTEGRITY"
+    },
+    {
+      "check": "snapshot-sha:v4.0.14-b111--manifest-prod-linux-u20.json",
+      "pass": true,
+      "scope": "RESEARCH_INTEGRITY"
+    },
+    {
+      "check": "snapshot-sha:v4.0.14-b111--manifest-prod.json",
+      "pass": true,
+      "scope": "RESEARCH_INTEGRITY"
+    },
+    {
+      "check": "snapshot-sha:v4.0.14-b111--ragas-4.0.14+111-arm64-v8a.apk.sha256",
+      "pass": true,
+      "scope": "RESEARCH_INTEGRITY"
+    },
+    {
+      "check": "snapshot-sha:v4.0.14-b111--ragas-4.0.14+111-x64-u20.deb.sha256",
+      "pass": true,
+      "scope": "RESEARCH_INTEGRITY"
+    },
+    {
+      "check": "snapshot-sha:v4.0.10-b111--manifest-prod.json",
+      "pass": true,
+      "scope": "RESEARCH_INTEGRITY"
+    },
+    {
+      "check": "snapshot-sha:v4.0.10-b111--ragas-4.0.10+111-arm64-v8a.apk.sha256",
+      "pass": true,
+      "scope": "RESEARCH_INTEGRITY"
+    },
+    {
+      "check": "registry-auditor",
+      "pass": true,
+      "scope": "RESEARCH_INTEGRITY"
+    },
+    {
+      "check": "registry-idempotent",
+      "pass": true,
+      "scope": "RESEARCH_INTEGRITY"
+    },
+    {
+      "check": "no-runtime-promotion",
+      "pass": true,
+      "scope": "RESEARCH_INTEGRITY"
+    },
+    {
+      "check": "publisher-not-corroborated-by-own-mirrors",
+      "pass": true,
+      "scope": "RESEARCH_INTEGRITY"
+    },
+    {
+      "check": "refinery-bite:CAPTURE_MISSING",
+      "pass": true,
+      "scope": "INJECTED_FAULT"
+    },
+    {
+      "check": "refinery-bite:SPAN_NOT_FOUND",
+      "pass": true,
+      "scope": "INJECTED_FAULT"
+    },
+    {
+      "check": "refinery-bite:SOURCED_ATTR",
+      "pass": true,
+      "scope": "INJECTED_FAULT"
+    },
+    {
+      "check": "refinery-bite:IDEMPOTENT",
+      "pass": true,
+      "scope": "INJECTED_FAULT"
+    },
+    {
+      "check": "refinery-bite:NO_INFERRED",
+      "pass": true,
+      "scope": "INJECTED_FAULT"
+    },
+    {
+      "check": "refinery-bite:fabricated_cell",
+      "pass": true,
+      "scope": "INJECTED_FAULT"
+    },
+    {
+      "check": "refinery-bite:fabricated_aggregate",
+      "pass": true,
+      "scope": "INJECTED_FAULT"
+    },
+    {
+      "check": "scratch-removed",
+      "pass": true,
+      "scope": "RESEARCH_INTEGRITY"
+    },
+    {
+      "check": "matrix-25-unique",
+      "pass": true,
+      "scope": "RESEARCH_INTEGRITY"
+    },
+    {
+      "check": "matrix-contract:RG54-00",
+      "pass": true,
+      "scope": "RESEARCH_INTEGRITY"
+    },
+    {
+      "check": "not-run-remains-not-checked:RG54-00",
+      "pass": true,
+      "scope": "RESEARCH_INTEGRITY"
+    },
+    {
+      "check": "matrix-contract:RG54-01",
+      "pass": true,
+      "scope": "RESEARCH_INTEGRITY"
+    },
+    {
+      "check": "not-run-remains-not-checked:RG54-01",
+      "pass": true,
+      "scope": "RESEARCH_INTEGRITY"
+    },
+    {
+      "check": "matrix-contract:RG54-02",
+      "pass": true,
+      "scope": "RESEARCH_INTEGRITY"
+    },
+    {
+      "check": "not-run-remains-not-checked:RG54-02",
+      "pass": true,
+      "scope": "RESEARCH_INTEGRITY"
+    },
+    {
+      "check": "matrix-contract:RG54-03",
+      "pass": true,
+      "scope": "RESEARCH_INTEGRITY"
+    },
+    {
+      "check": "not-run-remains-not-checked:RG54-03",
+      "pass": true,
+      "scope": "RESEARCH_INTEGRITY"
+    },
+    {
+      "check": "matrix-contract:RG54-04",
+      "pass": true,
+      "scope": "RESEARCH_INTEGRITY"
+    },
+    {
+      "check": "not-run-remains-not-checked:RG54-04",
+      "pass": true,
+      "scope": "RESEARCH_INTEGRITY"
+    },
+    {
+      "check": "matrix-contract:RG54-05",
+      "pass": true,
+      "scope": "RESEARCH_INTEGRITY"
+    },
+    {
+      "check": "not-run-remains-not-checked:RG54-05",
+      "pass": true,
+      "scope": "RESEARCH_INTEGRITY"
+    },
+    {
+      "check": "matrix-contract:RG54-06",
+      "pass": true,
+      "scope": "RESEARCH_INTEGRITY"
+    },
+    {
+      "check": "not-run-remains-not-checked:RG54-06",
+      "pass": true,
+      "scope": "RESEARCH_INTEGRITY"
+    },
+    {
+      "check": "matrix-contract:RG54-07",
+      "pass": true,
+      "scope": "RESEARCH_INTEGRITY"
+    },
+    {
+      "check": "not-run-remains-not-checked:RG54-07",
+      "pass": true,
+      "scope": "RESEARCH_INTEGRITY"
+    },
+    {
+      "check": "matrix-contract:RG54-08",
+      "pass": true,
+      "scope": "RESEARCH_INTEGRITY"
+    },
+    {
+      "check": "not-run-remains-not-checked:RG54-08",
+      "pass": true,
+      "scope": "RESEARCH_INTEGRITY"
+    },
+    {
+      "check": "matrix-contract:RG54-09",
+      "pass": true,
+      "scope": "RESEARCH_INTEGRITY"
+    },
+    {
+      "check": "not-run-remains-not-checked:RG54-09",
+      "pass": true,
+      "scope": "RESEARCH_INTEGRITY"
+    },
+    {
+      "check": "matrix-contract:RG54-10",
+      "pass": true,
+      "scope": "RESEARCH_INTEGRITY"
+    },
+    {
+      "check": "not-run-remains-not-checked:RG54-10",
+      "pass": true,
+      "scope": "RESEARCH_INTEGRITY"
+    },
+    {
+      "check": "matrix-contract:RG54-11",
+      "pass": true,
+      "scope": "RESEARCH_INTEGRITY"
+    },
+    {
+      "check": "not-run-remains-not-checked:RG54-11",
+      "pass": true,
+      "scope": "RESEARCH_INTEGRITY"
+    },
+    {
+      "check": "matrix-contract:RG54-12",
+      "pass": true,
+      "scope": "RESEARCH_INTEGRITY"
+    },
+    {
+      "check": "not-run-remains-not-checked:RG54-12",
+      "pass": true,
+      "scope": "RESEARCH_INTEGRITY"
+    },
+    {
+      "check": "matrix-contract:RG54-13",
+      "pass": true,
+      "scope": "RESEARCH_INTEGRITY"
+    },
+    {
+      "check": "not-run-remains-not-checked:RG54-13",
+      "pass": true,
+      "scope": "RESEARCH_INTEGRITY"
+    },
+    {
+      "check": "matrix-contract:RG54-14",
+      "pass": true,
+      "scope": "RESEARCH_INTEGRITY"
+    },
+    {
+      "check": "not-run-remains-not-checked:RG54-14",
+      "pass": true,
+      "scope": "RESEARCH_INTEGRITY"
+    },
+    {
+      "check": "matrix-contract:RG54-15",
+      "pass": true,
+      "scope": "RESEARCH_INTEGRITY"
+    },
+    {
+      "check": "not-run-remains-not-checked:RG54-15",
+      "pass": true,
+      "scope": "RESEARCH_INTEGRITY"
+    },
+    {
+      "check": "matrix-contract:RG54-16",
+      "pass": true,
+      "scope": "RESEARCH_INTEGRITY"
+    },
+    {
+      "check": "not-run-remains-not-checked:RG54-16",
+      "pass": true,
+      "scope": "RESEARCH_INTEGRITY"
+    },
+    {
+      "check": "matrix-contract:RG54-17",
+      "pass": true,
+      "scope": "RESEARCH_INTEGRITY"
+    },
+    {
+      "check": "not-run-remains-not-checked:RG54-17",
+      "pass": true,
+      "scope": "RESEARCH_INTEGRITY"
+    },
+    {
+      "check": "matrix-contract:RG54-18",
+      "pass": true,
+      "scope": "RESEARCH_INTEGRITY"
+    },
+    {
+      "check": "not-run-remains-not-checked:RG54-18",
+      "pass": true,
+      "scope": "RESEARCH_INTEGRITY"
+    },
+    {
+      "check": "matrix-contract:RG54-19",
+      "pass": true,
+      "scope": "RESEARCH_INTEGRITY"
+    },
+    {
+      "check": "not-run-remains-not-checked:RG54-19",
+      "pass": true,
+      "scope": "RESEARCH_INTEGRITY"
+    },
+    {
+      "check": "matrix-contract:RG54-20",
+      "pass": true,
+      "scope": "RESEARCH_INTEGRITY"
+    },
+    {
+      "check": "not-run-remains-not-checked:RG54-20",
+      "pass": true,
+      "scope": "RESEARCH_INTEGRITY"
+    },
+    {
+      "check": "matrix-contract:RG54-21",
+      "pass": true,
+      "scope": "RESEARCH_INTEGRITY"
+    },
+    {
+      "check": "not-run-remains-not-checked:RG54-21",
+      "pass": true,
+      "scope": "RESEARCH_INTEGRITY"
+    },
+    {
+      "check": "matrix-contract:RG54-22",
+      "pass": true,
+      "scope": "RESEARCH_INTEGRITY"
+    },
+    {
+      "check": "not-run-remains-not-checked:RG54-22",
+      "pass": true,
+      "scope": "RESEARCH_INTEGRITY"
+    },
+    {
+      "check": "matrix-contract:RG54-23",
+      "pass": true,
+      "scope": "RESEARCH_INTEGRITY"
+    },
+    {
+      "check": "not-run-remains-not-checked:RG54-23",
+      "pass": true,
+      "scope": "RESEARCH_INTEGRITY"
+    },
+    {
+      "check": "matrix-contract:RG54-24",
+      "pass": true,
+      "scope": "RESEARCH_INTEGRITY"
+    },
+    {
+      "check": "not-run-remains-not-checked:RG54-24",
+      "pass": true,
+      "scope": "RESEARCH_INTEGRITY"
+    },
+    {
+      "check": "reject-ragas_runtime_result",
+      "pass": true,
+      "scope": "INJECTED_FAULT"
+    },
+    {
+      "check": "reject-independent_oracle",
+      "pass": true,
+      "scope": "INJECTED_FAULT"
+    },
+    {
+      "check": "reject-fail_criterion",
+      "pass": true,
+      "scope": "INJECTED_FAULT"
+    },
+    {
+      "check": "release-dates",
+      "pass": true,
+      "scope": "RESEARCH_INTEGRITY"
+    },
+    {
+      "check": "old-new-note-equivalence",
+      "pass": true,
+      "scope": "RESEARCH_INTEGRITY"
+    },
+    {
+      "check": "identity-discrepancy-observed",
+      "pass": true,
+      "scope": "RESEARCH_INTEGRITY"
+    },
+    {
+      "check": "metadata-finding-is-not-runtime-fail",
+      "pass": true,
+      "scope": "RESEARCH_INTEGRITY"
+    },
+    {
+      "check": "notes-comparison-no-invented-first-introduction",
+      "pass": true,
+      "scope": "RESEARCH_INTEGRITY"
+    },
+    {
+      "check": "android-publisher-checksum-agreement",
+      "pass": true,
+      "scope": "RESEARCH_INTEGRITY"
+    },
+    {
+      "check": "linux-publisher-checksum-agreement",
+      "pass": true,
+      "scope": "RESEARCH_INTEGRITY"
+    },
+    {
+      "check": "readme-badge-observed",
+      "pass": true,
+      "scope": "RESEARCH_INTEGRITY"
+    },
+    {
+      "check": "retained-hash:evidence/qgc03/desktop/corpus-qa.json",
+      "pass": true,
+      "scope": "RESEARCH_INTEGRITY"
+    },
+    {
+      "check": "retained-hash:evidence/qgc03/sitl/qa.json",
+      "pass": true,
+      "scope": "RESEARCH_INTEGRITY"
+    },
+    {
+      "check": "retained-hash:evidence/qgc03/browser-qa.json",
+      "pass": true,
+      "scope": "RESEARCH_INTEGRITY"
+    },
+    {
+      "check": "retained-hash:evidence/qgc03/browser-regression-qa.json",
+      "pass": true,
+      "scope": "RESEARCH_INTEGRITY"
+    },
+    {
+      "check": "retained-hash:evidence/qgc03/qgc02-browser-qa.json",
+      "pass": true,
+      "scope": "RESEARCH_INTEGRITY"
+    },
+    {
+      "check": "retained-hash:evidence/qgc03/operator-qa.json",
+      "pass": true,
+      "scope": "RESEARCH_INTEGRITY"
+    },
+    {
+      "check": "retained-hash:evidence/qgc03/receipt-integrity.json",
+      "pass": true,
+      "scope": "RESEARCH_INTEGRITY"
+    },
+    {
+      "check": "retained-hash:app/fixtures/qgc/desktop/aeris-simple-qgc-saved.plan",
+      "pass": true,
+      "scope": "RESEARCH_INTEGRITY"
+    },
+    {
+      "check": "retained-hash:app/fixtures/qgc/desktop/aeris-cached-survey-qgc-saved.plan",
+      "pass": true,
+      "scope": "RESEARCH_INTEGRITY"
+    },
+    {
+      "check": "retained-hash:app/fixtures/qgc/desktop/qgc-survey-angle35.plan",
+      "pass": true,
+      "scope": "RESEARCH_INTEGRITY"
+    },
+    {
+      "check": "retained-hash:app/fixtures/qgc/desktop/qgc-created-simple.plan",
+      "pass": true,
+      "scope": "RESEARCH_INTEGRITY"
+    },
+    {
+      "check": "retained-hash:app/fixtures/qgc/desktop/qgc-created-geofence.plan",
+      "pass": true,
+      "scope": "RESEARCH_INTEGRITY"
+    },
+    {
+      "check": "retained-hash:app/fixtures/qgc/desktop/qgc-created-amsl-fence.plan",
+      "pass": true,
+      "scope": "RESEARCH_INTEGRITY"
+    },
+    {
+      "check": "retained-hash:app/fixtures/qgc/desktop/qgc-reopened-simple.plan",
+      "pass": true,
+      "scope": "RESEARCH_INTEGRITY"
+    },
+    {
+      "check": "retained-hash:app/fixtures/qgc/roundtrip03/camera-pair-qgc-saved.plan",
+      "pass": true,
+      "scope": "RESEARCH_INTEGRITY"
+    },
+    {
+      "check": "retained-hash:app/fixtures/qgc/roundtrip03/simple-relative-qgc-saved.plan",
+      "pass": true,
+      "scope": "RESEARCH_INTEGRITY"
+    },
+    {
+      "check": "retained-hash:app/fixtures/qgc/roundtrip03/survey-absolute-qgc-saved.plan",
+      "pass": true,
+      "scope": "RESEARCH_INTEGRITY"
+    },
+    {
+      "check": "retained-hash:app/fixtures/qgc/roundtrip03/simple-relative-qgc-reopened.plan",
+      "pass": true,
+      "scope": "RESEARCH_INTEGRITY"
+    },
+    {
+      "check": "html-no-active-runtime",
+      "pass": true,
+      "scope": "RESEARCH_INTEGRITY"
+    },
+    {
+      "check": "html-matrix-row-count",
+      "pass": true,
+      "scope": "RESEARCH_INTEGRITY"
+    },
+    {
+      "check": "html-local-link:assessment.md",
+      "pass": true,
+      "scope": "RESEARCH_INTEGRITY"
+    },
+    {
+      "check": "html-local-link:verification-matrix.json",
+      "pass": true,
+      "scope": "RESEARCH_INTEGRITY"
+    },
+    {
+      "check": "html-local-link:baseline.json",
+      "pass": true,
+      "scope": "RESEARCH_INTEGRITY"
+    },
+    {
+      "check": "html-local-link:reuse.json",
+      "pass": true,
+      "scope": "RESEARCH_INTEGRITY"
+    },
+    {
+      "check": "html-local-link:fixtures.json",
+      "pass": true,
+      "scope": "RESEARCH_INTEGRITY"
+    },
+    {
+      "check": "html-local-link:sources.json",
+      "pass": true,
+      "scope": "RESEARCH_INTEGRITY"
+    },
+    {
+      "check": "source-candidate-sot-not-output-targets",
+      "pass": true,
+      "scope": "RESEARCH_INTEGRITY"
+    }
+  ],
+  "refinery_digest": "b7e843d7ffdec689",
+  "claims": 30,
+  "matrix_cases": 25,
+  "scratch_removed": [
+    "/var/folders/81/y445_2554tb49zsn_qtb_9v80000gn/T/codex-tmp-ragas54-20261015-el0wivab",
+    "/var/folders/81/y445_2554tb49zsn_qtb_9v80000gn/T/codex-tmp-ragas54-20261015-k1_x0s_2",
+    "/var/folders/81/y445_2554tb49zsn_qtb_9v80000gn/T/codex-tmp-ragas54-20261015-2ziobk37",
+    "/var/folders/81/y445_2554tb49zsn_qtb_9v80000gn/T/codex-tmp-ragas54-20261015-bg3ajs61",
+    "/var/folders/81/y445_2554tb49zsn_qtb_9v80000gn/T/codex-tmp-ragas54-20261015-cmu9w7mi",
+    "/var/folders/81/y445_2554tb49zsn_qtb_9v80000gn/T/codex-tmp-ragas54-20261015-j30_jkgu",
+    "/var/folders/81/y445_2554tb49zsn_qtb_9v80000gn/T/codex-tmp-ragas54-20261015-27p8b18s",
+    "/var/folders/81/y445_2554tb49zsn_qtb_9v80000gn/T/codex-tmp-ragas54-20261015-t23ots9a",
+    "/var/folders/81/y445_2554tb49zsn_qtb_9v80000gn/T/codex-tmp-ragas54-20261015-5kys5u2g",
+    "/var/folders/81/y445_2554tb49zsn_qtb_9v80000gn/T/codex-tmp-ragas54-20261015-9cxinmap",
+    "/var/folders/81/y445_2554tb49zsn_qtb_9v80000gn/T/codex-tmp-ragas54-20261015-_uglfax9",
+    "/var/folders/81/y445_2554tb49zsn_qtb_9v80000gn/T/codex-tmp-ragas54-20261015-056lbj4l",
+    "/var/folders/81/y445_2554tb49zsn_qtb_9v80000gn/T/codex-tmp-ragas54-20261015-xl0gczr5"
+  ],
+  "dependency_installs": 0,
+  "binary_downloads": 0,
+  "new_application_runs": 0,
+  "ragas_runtime": "NOT_CHECKED",
+  "release_identity_metadata": "FAIL_METADATA_IDENTITY_CONSISTENCY",
+  "visual_browser_review": "NOT_CHECKED: browser policy refuses file protocol; no workaround attempted. Static HTML/link audit only.",
+  "verification_limits": "One agent; schema/hash/bites do not independently validate all semantic interpretations or certify product behavior."
+}

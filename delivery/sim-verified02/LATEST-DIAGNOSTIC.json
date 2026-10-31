@@ -1,0 +1,9 @@
+{
+  "selectedArchive": "AERIS-SIM-VERIFY02-DIAGNOSTIC02-NOT-READY.tar.gz",
+  "sha256": "4c0794f432b26afab8f6f733ecca5a4da8f9c67c4e91abef68efaf5f454322a7",
+  "packagingAttempt": 2,
+  "parserCompatibility": "PASS_INCLUDED_PYTHON_AND_NODE",
+  "functionalStatus": "NOT_READY",
+  "doNotUseArchiveAttempt01": "AERIS-SIM-VERIFY02-DIAGNOSTIC-NOT-READY.tar.gz",
+  "reasonAttempt01Rejected": "INCLUDED_PARSER_CHECKSUM_WIRE_FORMAT"
+}

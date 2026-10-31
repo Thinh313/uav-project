@@ -1,0 +1,22 @@
+{
+  "format": "aeris-m1runtime-independent-qa-contract",
+  "version": 1,
+  "scope": "Adapter integration unit/fault review; actual observations supplied by root separately",
+  "authoredBy": "independent QA /root/m1runtime_qa",
+  "cases": [
+    {"id": "Q01", "area": "native journal", "requires": "Exact global sequence/context survives rotation; active segment sync precedes observable wire callback; default cold bytes do not self-attest commit"},
+    {"id": "Q02", "area": "native send faults", "requires": "Short/throw/unknown send, fsync and seal faults retain admitted prefix, fence future writes and authority, do not fabricate SENT"},
+    {"id": "Q03", "area": "native lifecycle", "requires": "Background/foreign boot or generation/stale clock/sink failure cannot dispatch; repeat close stable; restart has no restored grant"},
+    {"id": "Q04", "area": "native provider", "requires": "Expected AP/model/config/hash/endpoint and current observed identity must agree; metadata supplied by caller remains labelled structural"},
+    {"id": "Q05", "area": "host frame receive", "requires": "Each admitted AP frame is contiguous with exact received bytes; wrong peer/rate/duplicate/truncated RX fails; full record and INTENT fsync before sensor callback"},
+    {"id": "Q06", "area": "host clock", "requires": "Real observer serialized with frame groups, <=250ms freshness and bounded pending state; wrong nonce/peer/boot and stale calibration never refresh valid state"},
+    {"id": "Q07", "area": "AP observer", "requires": "New pinned artifact and format; exact global event ranges/stages; bounded producer publication plus durable drain; no unread overwrite, sampling or flush-after-exit assumption"},
+    {"id": "Q08", "area": "cold integrity", "requires": "Independent current-format receivers reject missing/reordered/tampered/context-mismatched segments, retain incomplete as unknown; external anchors not inferred from package"},
+    {"id": "Q09", "area": "admission", "requires": "20GiB entry,10GiB+256MiB floor/15sforecast and declared run/copies/export budget; zero diskfill or guard weakening"},
+    {"id": "Q10", "area": "runtime closure", "requires": "Precise executable/source/input allowlist and observed APK/AP/tool/process/probe identity; no broad wildcard or silent regression-provider substitution"},
+    {"id": "Q11", "area": "actual short smoke", "requires": "Root observed Android-source telemetry/provider/journal/clock/lifecycle and cold closed raw, preserving local-send versus AP-execution distinction"},
+    {"id": "Q12", "area": "actual M1", "requires": "Manual/assisted/neutral takeover, link/AP reboot and30min fullframes1x/500mscap on selected native externalcandidate; immutable elapsed and all owned resource closures"}
+  ],
+  "initialStatus": "NOT_CHECKED",
+  "notSufficientForPass": ["Source present", "Builder completion text", "M1mock prior receipts", "Self-authored expected and observed metadata", "Host CLOSE alone", "Elapsed walltime", "ACK/local send"]
+}

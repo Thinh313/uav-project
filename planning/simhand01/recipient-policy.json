@@ -1,0 +1,1 @@
+{"format":"aeris-simhand01-recipient-policy","version":1,"requiresExplicitSimulationStart":true,"hostSeconds":5400,"apSeconds":300,"maxAPSessions":6,"maxHostStarts":6,"admissionGiB":20,"floorGiB":10,"reserveMiB":256,"maxEvidenceBytes":2147483648,"maxEvidenceFiles":12000,"speedup":1,"pacingCapMs":500,"automaticRenewal":false,"automaticArm":false,"hostPlatform":"Darwin-arm64"}

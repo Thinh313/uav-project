@@ -1,0 +1,11 @@
+domain: software-package-20261013
+entity_label: Signed software package definitions
+schema:
+  type_field: null
+  fields: [signature_algorithm, independent_trust, version_freshness]
+rollup_field: null
+universe:
+  estimate: null
+  basis: Three selected primary definitions; not a standards compliance denominator
+alias_map: {}
+ambiguous_clusters: []

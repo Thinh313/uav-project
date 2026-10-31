@@ -1,0 +1,39 @@
+{
+  "format": "aeris-correction02-client-tests",
+  "version": 1,
+  "status": "PASS",
+  "at": "2026-10-26T01:37:57.509Z",
+  "results": [
+    {
+      "case": "ACTUAL_CLIENT_PREFIX_WITH_NEW_FRAMES_AND_OLD_CLOCK_SNAPSHOT",
+      "status": "PASS",
+      "prefix": {
+        "format": "aeris-betastability02-trace-prefix",
+        "version": 1,
+        "traceId": "88bb7f22-3ba3-4640-8e08-b7a528844a40",
+        "configId": "c",
+        "serverBoot": "b",
+        "requiredThrough": 2,
+        "ackThrough": 2,
+        "durable": {
+          "complete": true,
+          "fatal": null,
+          "hostThrough": 20,
+          "hostHead": "1111111111111111111111111111111111111111111111111111111111111111",
+          "receiptSha256": "2222222222222222222222222222222222222222222222222222222222222222",
+          "receiptFile": "trace-barrier-00001.json"
+        },
+        "currentLiveAccepted": 4,
+        "currentLiveAcknowledged": 2,
+        "currentLivePending": 2,
+        "fatal": null,
+        "scope": "DURABLE_REQUIRED_PREFIX_ONLY_LIVE_PRODUCER_CONTINUES"
+      }
+    },
+    {
+      "case": "ACTUAL_CLIENT_MISSING_REQUIRED_ACK_REJECTED",
+      "status": "PASS"
+    }
+  ],
+  "scope": "ACTUAL_CLIENT_CODE_WITH_MOCK_FETCH_NO_RUNTIME_OR_ANDROID_ACCEPTANCE"
+}

@@ -1,0 +1,11 @@
+{
+  "format":"aeris-big02-profile","version":1,"declaredBeforeLiveMeasurement":true,
+  "profiles":[
+    {"id":"H264-720P30-V1","codec":"avc1.42001f","width":1280,"height":720,"framerate":30,"bitrate":4000000,"latencyMode":"realtime","hardwareAcceleration":"prefer-software","avc":{"format":"annexb"}},
+    {"id":"VP8-720P30-V1","codec":"vp8","width":1280,"height":720,"framerate":30,"bitrate":4000000,"latencyMode":"realtime","hardwareAcceleration":"prefer-software","fallbackFor":"H264-720P30-V1","requiresExplicitSelection":true}
+  ],
+  "targets":{"minimumMeasurementMs":30000,"maximumMeasurementMs":60000,"latencyP95Ms":300,"latencyP99Ms":500,"minimumDisplayedFps":24,"maximumUnexplainedFreezeMs":1000,"recoveryMs":2000},
+  "bounds":{"encodedChunkBytes":1048576,"relayQueueChunks":4,"relayQueueBytes":2097152,"encoderQueue":2,"decoderQueue":2,"samples":4096,"captureJpegBytes":2097152,"reports":8},
+  "clockClaim":"same-browser source-to-canvas-display proxy; relay hrtime separate; backend UNKNOWN despite software preference",
+  "scope":"SYNTHETIC_RGB_AND_THERMAL_LOOK_NO_RADIOMETRY_NO_CAMERA_OR_DEVICE_ACCEPTANCE"
+}

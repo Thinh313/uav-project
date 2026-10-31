@@ -1,0 +1,3 @@
+import {execFile} from 'node:child_process';
+import {fileURLToPath} from 'node:url';
+export function parseKml(text){return new Promise((resolve,reject)=>{if(typeof text!=='string'||Buffer.byteLength(text)>262144)return reject(Error('KML_BOUND'));const child=execFile('python3',['-B',fileURLToPath(new URL('../mapping51/kml.py',import.meta.url))],{timeout:3000,maxBuffer:524288},(error,stdout)=>{try{const r=JSON.parse(stdout);if(error||!r.ok)throw Error(r.error??error?.message??'KML_PARSER');resolve(r.document);}catch(e){reject(e);}});child.stdin.on('error',()=>{});child.stdin.end(JSON.stringify({text}));});}

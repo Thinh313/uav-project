@@ -1,0 +1,62 @@
+[
+  {
+    "id": "qgc-startup",
+    "url": "https://raw.githubusercontent.com/mavlink/qgroundcontrol/3a67d31f0c36bf3fe38ec52970d250a89d0aaf67/src/QGCApplication.cc",
+    "snapshot": "qgc-startup.txt",
+    "origin_id": "qgc-upstream"
+  },
+  {
+    "id": "qgc-plan-master",
+    "url": "https://raw.githubusercontent.com/mavlink/qgroundcontrol/3a67d31f0c36bf3fe38ec52970d250a89d0aaf67/src/MissionManager/PlanMasterController.cc",
+    "snapshot": "qgc-plan-master.txt",
+    "origin_id": "qgc-upstream"
+  },
+  {
+    "id": "copter-failsafe",
+    "url": "https://raw.githubusercontent.com/ArduPilot/ardupilot/Copter-4.7.1/ArduCopter/events.cpp",
+    "snapshot": "copter-failsafe.txt",
+    "origin_id": "ardupilot-upstream"
+  },
+  {
+    "id": "copter-parameters",
+    "url": "https://raw.githubusercontent.com/ArduPilot/ardupilot/Copter-4.7.1/ArduCopter/Parameters.cpp",
+    "snapshot": "copter-parameters.txt",
+    "origin_id": "ardupilot-upstream"
+  },
+  {
+    "id": "gcs-failsafe-doc",
+    "url": "https://ardupilot.org/copter/docs/gcs-failsafe.html",
+    "snapshot": "gcs-failsafe-doc.html",
+    "origin_id": "ardupilot-upstream"
+  },
+  {
+    "id": "mode-reason",
+    "url": "https://raw.githubusercontent.com/ArduPilot/ardupilot/Copter-4.7.1/libraries/AP_Vehicle/ModeReason.h",
+    "snapshot": "mode-reason.txt",
+    "origin_id": "ardupilot-upstream"
+  },
+  {
+    "id": "qgc-cli",
+    "url": "https://raw.githubusercontent.com/mavlink/qgroundcontrol/3a67d31f0c36bf3fe38ec52970d250a89d0aaf67/src/Utilities/QGCCommandLineParser.cc",
+    "snapshot": "qgc-cli.txt",
+    "origin_id": "qgc-upstream"
+  },
+  {
+    "id": "qgc-release",
+    "url": "https://api.github.com/repos/mavlink/qgroundcontrol/releases/tags/v5.1.5",
+    "snapshot": "qgc-release.json",
+    "origin_id": "qgc-upstream"
+  },
+  {
+    "id": "camera-section",
+    "url": "https://raw.githubusercontent.com/mavlink/qgroundcontrol/3a67d31f0c36bf3fe38ec52970d250a89d0aaf67/src/MissionManager/CameraSection.cc",
+    "snapshot": "camera-section.txt",
+    "origin_id": "qgc-upstream"
+  },
+  {
+    "id": "mission-settings",
+    "url": "https://raw.githubusercontent.com/mavlink/qgroundcontrol/3a67d31f0c36bf3fe38ec52970d250a89d0aaf67/src/MissionManager/MissionSettingsItem.cc",
+    "snapshot": "mission-settings.txt",
+    "origin_id": "qgc-upstream"
+  }
+]

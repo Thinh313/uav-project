@@ -1,0 +1,32 @@
+[
+  {
+    "id": "camera-section",
+    "url": "https://raw.githubusercontent.com/mavlink/qgroundcontrol/3a67d31f0c36bf3fe38ec52970d250a89d0aaf67/src/MissionManager/CameraSection.cc",
+    "snapshot": "camera-section.txt",
+    "origin_id": "qgc-upstream"
+  },
+  {
+    "id": "ap-mission",
+    "url": "https://raw.githubusercontent.com/ArduPilot/ardupilot/Copter-4.7.1/libraries/AP_Mission/AP_Mission.cpp",
+    "snapshot": "ap-mission.txt",
+    "origin_id": "ardupilot-upstream"
+  },
+  {
+    "id": "ap-mission-commands",
+    "url": "https://raw.githubusercontent.com/ArduPilot/ardupilot/Copter-4.7.1/libraries/AP_Mission/AP_Mission_Commands.cpp",
+    "snapshot": "ap-mission-commands.txt",
+    "origin_id": "ardupilot-upstream"
+  },
+  {
+    "id": "ap-camera",
+    "url": "https://raw.githubusercontent.com/ArduPilot/ardupilot/Copter-4.7.1/libraries/AP_Camera/AP_Camera.cpp",
+    "snapshot": "ap-camera.txt",
+    "origin_id": "ardupilot-upstream"
+  },
+  {
+    "id": "mission-settings",
+    "url": "https://raw.githubusercontent.com/mavlink/qgroundcontrol/3a67d31f0c36bf3fe38ec52970d250a89d0aaf67/src/MissionManager/MissionSettingsItem.cc",
+    "snapshot": "mission-settings.txt",
+    "origin_id": "qgc-upstream"
+  }
+]

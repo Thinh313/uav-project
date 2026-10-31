@@ -1,0 +1,11 @@
+# External recording policy amendment: entry10
+
+Root decision27/10, user authorizes20→10GiB entry and implementation. The frozen profile02 retains its original bytes and SHA for AP identity, model, typed39 parameters and native provider allowlist. Its `hostDiskGuardPolicy` resource label is explicitly superseded only by a new versioned external recording-policy amendment. Do not claim the old profile's20GiB resource label remains the selected host policy.
+
+Builder may add nine small isolated runtime derivative modules in this new task scope: journal writer/package/receiver, frame adapter constructor, transparent transport, backend, capture verification, audit and oracles. Explicit imports must select the new entry10 guard and strict entry10 receiver; do not replace loaded module globals or change any frozen file. Backend must reject absent/foreign/unknown amendments before writers start and record selected amendment and truthful entry10 policy. The old receiver must reject entry10 manifests; the new receiver must reject20/mixed/otherfloor or reserve policies.
+
+All receive/model/send/frame retention/fsync methods remain inherited byte-identical method objects or only import-path substitutions; physics profile, speedup1/cap500ms, source/candidate/ENDURE and native APK remain unchanged. Policy changes do not qualify actual flight. No new full30minute launcher/controller/guardian is admitted by this document. Whole30minute case still requires18.79252684GiB with unchanged10GiB livefloor +256MiB reserve; current~13GiB cannot fit declared raw quotas.
+
+A tiny actual host journal roundtrip may run once after source/QA checks, without Android/AP/flight, with original real15s prime, fsync and strict receiver. Bound original fixture to≤1MiB plus small receipts, fresh floor+reserve+budget. Inputs remain synthetic even when actual host disk/clock/fsync observations are real. No end-to-end30minute or flight claim from this check.
+
+Android attempt01 separately failed POWER_ENTRY before prime or emulator creation; keep failure intact. No automatic retry. Subsequent actual runtime needs a new bounded invocation with live resource/power checks and source identity; do not delete or overwrite failed attempt files.

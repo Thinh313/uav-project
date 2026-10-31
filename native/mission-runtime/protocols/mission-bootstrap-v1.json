@@ -1,0 +1,160 @@
+{
+  "format": "aeris-mission-bootstrap-protocol",
+  "version": 1,
+  "package": "vn.rtr.aeris.mission",
+  "component": "vn.rtr.aeris.mission/.CockpitActivity",
+  "transport": {
+    "intentActionExtra": "missionAction",
+    "allowedActions": [
+      "STATUS",
+      "BOOTSTRAP"
+    ],
+    "requestExtra": "missionRequestBase64",
+    "encoding": "URL_SAFE_BASE64_UTF8",
+    "encodedMaxBytes": 43692,
+    "decodedMaxBytes": 32768,
+    "statusMaxBytes": 512,
+    "simulationOnly": true,
+    "automaticConnectConsentArm": false
+  },
+  "statusRequest": {
+    "version": 1,
+    "requestNonce": "32 lowercase hex, caller unpredictable per request"
+  },
+  "bootstrapRequest": {
+    "version": 1,
+    "requestNonce": "32 lowercase hex",
+    "processEpoch": "32 lowercase hex from current live STATUS",
+    "viewEpoch": "exact integer1..1000000000 from same current STATUS",
+    "baseRevision": "exact latest committed STATUS revision",
+    "sourceSHA256": "64 lowercase hex, must equal local packaged source identity",
+    "context": [
+      "run",
+      "epoch",
+      "boot",
+      "operator",
+      "generation",
+      "profileId"
+    ],
+    "provider": "Existing exact ControlConfig observed provider binding; identical context; system42/rootOwnedContainer/CANDIDATE_EXTERNAL/tcp://10.0.2.2:5961",
+    "survey": "Normal WorkspaceDomain input with revision0, only empty workspace; null if reusing",
+    "expectedDraftSHA256": "Exact64hex existing saved draft hash, null if new survey; no overwrite"
+  },
+  "nonceRules": [
+    "Same nonce with byte-identical descriptor idempotent without additional survey commit",
+    "Same nonce different bytes fails",
+    "Active owner or pending review rejects new bootstrap",
+    "History Intent never stages; no automatic restoration after restart",
+    "One pending setup request/16 recent nonces; exact replay retains original receipt; foreground dispatch<=2s; request completion including emission<=10s"
+  ],
+  "liveAck": {
+    "logTag": "AERIS_MISSION",
+    "format": "aeris-mission-live-ack",
+    "version": 1,
+    "fields": [
+      "format",
+      "version",
+      "event",
+      "requestNonce",
+      "processEpoch",
+      "requestReceivedElapsedNs",
+      "viewEpoch",
+      "pid",
+      "revision",
+      "sourceSHA256",
+      "context",
+      "snapshotPath",
+      "snapshotSHA256",
+      "committedElapsedNs",
+      "ackElapsedNs",
+      "phase",
+      "emittedElapsedNs"
+    ],
+    "events": [
+      "STATUS",
+      "READY",
+      "TERMINAL",
+      "REVIEW"
+    ],
+    "fileVisibilityIsNotAck": true,
+    "clock": "Original Intent receipt <= immutable snapshot observed <= committed <= ack <= emitted. emitted is genuine producer sample immediately before Log.i, source-bound not network delivery attestation. Every explicit STATUS/READY receipt->emitted<=10s; no late ACK rescue.",
+    "hostDeadlineSeconds": 10,
+    "requiredHostProof": [
+      "live log subscription active before request",
+      "fresh unpredictable nonce, actual current PID, processEpoch/viewEpoch/source",
+      "exact snapshot bytes/hash/revision/context",
+      "snapshot observedElapsedNs<=committedElapsedNs<=ackElapsedNs",
+      "ignore prior process output only while bounded startup; fresh foreign identity fails",
+      "all peer integerfields reject float/bool/string coercion; current viewEpoch exact; emitted is not a host/guest clock correlation proof"
+    ]
+  },
+  "snapshot": {
+    "format": "aeris-mission-snapshot",
+    "version": 1,
+    "maxBytes": 131072,
+    "fields": [
+      "format",
+      "version",
+      "revision",
+      "processEpoch",
+      "viewEpoch",
+      "pid",
+      "sourceSHA256",
+      "context",
+      "bootstrapSHA256",
+      "requestNonce",
+      "requestReceivedElapsedNs",
+      "event",
+      "observedElapsedNs",
+      "state",
+      "layout",
+      "lifecycle"
+    ],
+    "requestPath": "files/runtime/response.json",
+    "terminalPath": "files/runtime/current.json",
+    "policy": "One coherent immutable UI/native/layout capture, then workspace/checkpoint provenance; request slot retained until next explicit request, terminal/review cannot overwrite it. No baseline. No per-paint/per-RX disk publication.",
+    "writer": "single bounded lane; four mandatory tasks plus at most one coalescible healthy presentation; never carries raw/input/lease work",
+    "pendingFailure": "preserve uncertain .pending and fail closed; no cleanup/retry masking; lock prevents concurrent writers"
+  },
+  "phases": [
+    "STARTING",
+    "READY",
+    "CONNECTED",
+    "CLOSING",
+    "NATIVE_SEALED",
+    "TERMINAL_DURABLE",
+    "REVIEW_READY",
+    "FAILED",
+    "STOPPED"
+  ],
+  "sealProof": "Native closed; journal closed/notfailed/commitAnchor; resourcesClosedNs; consentfalse/leaseIdnull/no localRC. Independent from later Checkpoint14/review; mandatory fresh live STATUS snapshot required by Supervisor. Failed raw history cannot qualify nominal flow.",
+  "completionProof": "TERMINAL_DURABLE and then REVIEW_READY require original Checkpoint14 COMMITTED live source-bound postbarrier ACK and strict raw/source/context/archive/review proof, not just lifecycle strings.",
+  "recovery": "NO_SESSION, no owner/lease restoration; valid old terminal/reviews retained; Checkpoint RECOVERED_NOT_LIVE_ACK never reused as a live ACK. New generation only explicit product bootstrap then visible CONNECT/consent.",
+  "unchanged": [
+    "all IOADMIT13 core and Release12/Compact10/RX/input guards",
+    "input/UI200ms, frame250ms, FIFO128/global16, sampler50ms",
+    "canonical terminal64KiB, archive8/512KiB, metadata64MiB, original whole quotas",
+    "UI05 graphic assets exact except minimal app.js workspace-render acknowledgement; package-local shell Checkpoint14 core unchanged"
+  ],
+  "workspaceProjection": {
+    "stateField": "workspaceProjection",
+    "fields": [
+      "version",
+      "sha256",
+      "canonicalJSON",
+      "observedElapsedNs",
+      "mutationSerial",
+      "pendingRefresh",
+      "initialized",
+      "scope"
+    ],
+    "canonicalJSON": "Exact immutable last-published WorkspaceDTO string; UTF8 SHA256 must match sha256 and parsing must equal state.workspace. Duplication counts inside unchanged131072-byte carrier cap.",
+    "version": "monotonic int;0 uninitialized, positive after published cache",
+    "observedElapsedNs": "original off-UI cache observation, never refreshed by later STATUS; <= snapshot observedElapsedNs",
+    "pendingRefresh": "true for mutation/refresh gap; old DTO remains truthful presentation history, not newest disk claim",
+    "renderedField": "state.renderedWorkspaceVersion",
+    "READY": "initialized,!pendingRefresh,exact current cache version acknowledged by WebView after2RAF,current saved draft SHA semantic proof; original10s receipt deadline unchanged",
+    "terminal": "NATIVE_SEALED STATUS can carry last published pending workspace and does not wait for review/filesystem; final REVIEW_READY still needs durable history and current source/context proof",
+    "writer": "normal workspace save/bootstrap/link/review mutations tracked; refresh existing worker guarded before/after mutation serial; snapshot lane only consumes immutable cache"
+  }
+}

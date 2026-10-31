@@ -1,0 +1,33 @@
+import assert from 'node:assert/strict';
+import {readFile,writeFile} from 'node:fs/promises';
+import {encodeFull,FullFramer,hex} from '../apstream40/wire.mjs';
+import {BINARY,packet,validateTX,assertManifest,PROFILE,target} from './contract.mjs';
+import {Observations42,distance} from './observe.mjs';
+import {liveLease} from './client.mjs';
+const checks=[];const test=(name,fn)=>{fn();checks.push({name,pass:true});};
+const m={scope:'OWNED_REAL_SITL_FLIGHT_TEST_ONLY',binarySha256:BINARY,containerId:'a'.repeat(64),pid:42,startedAt:'2026-10-14T00:00:00Z',system:42,component:1,session:'MOCK_UNIT_NOT_NETWORK'};
+const p=(id,f,meta={})=>encodeFull(id,f,{system:255,component:190,...meta});
+test('normal scoped arm allowed no force',()=>assert.equal(validateTX(packet(76,{...target,command:400,param1:1})).fields.param2,0));
+for(const [name,id,f,meta] of [
+ ['force-arm',76,{...target,command:400,param1:1,param2:21196},{}],['terminate',76,{...target,command:185,param1:1},{}],['reboot',76,{...target,command:246,param1:1},{}],['mission upload',44,{...target,count:1},{}],['unknown mode',76,{...target,command:176,param1:1,param2:3},{}],['retry',76,{...target,command:400,param1:1,confirmation:1},{}],['broadcast sys',76,{target_system:0,target_component:1,command:400,param1:1},{}],['wrong target',76,{target_system:43,target_component:1,command:400,param1:1},{}],['broadcast component',76,{target_system:42,target_component:0,command:400,param1:1},{}],['wrong sender',76,{...target,command:400,param1:1},{system:254}],['disable arming checks',23,{...target,param_id:'ARMING_SKIPCHK',param_type:6,param_value:1},{}],['wrong param type',23,{...target,param_id:'FENCE_RADIUS',param_type:6,param_value:10},{}],['unreviewed param value',23,{...target,param_id:'FENCE_RADIUS',param_type:9,param_value:100},{}],['unknown param',20,{...target,param_id:'SIM_ACC1_FAIL',param_index:-1},{}],['terrain target',86,{...target,coordinate_frame:11,type_mask:3576,lat_int:108541799,lon_int:1068070000,alt:10},{}],['outside region target',86,{...target,coordinate_frame:6,type_mask:3576,lat_int:100000000,lon_int:1068070000,alt:10},{}],['wrong yaw mask',86,{...target,coordinate_frame:6,type_mask:0,lat_int:108541799,lon_int:1068070000,alt:10},{}]
+])test(name+' refused',()=>assert.throws(()=>validateTX(p(id,f,meta))));
+for(const [name,mut] of [['wrong manifest binary',{binarySha256:'b'.repeat(64)}],['wrong scope',{scope:'HERA'}],['zero PID',{pid:0}],['missing CID',{containerId:''}],['wrong system',{system:43}]])test(name,()=>assert.throws(()=>assertManifest({...m,...mut})));
+const arm=packet(76,{...target,command:400,param1:1});test('two concatenated commands refused',()=>assert.throws(()=>validateTX(new Uint8Array([...arm,...arm]))));test('truncated command refused',()=>assert.throws(()=>validateTX(arm.slice(0,-1))));test('corrupt CRC refused',()=>{const b=arm.slice();b[13]^=1;assert.throws(()=>validateTX(b));});
+const hb=(seq=0,system=42)=>encodeFull(0,{type:2,autopilot:3,base_mode:0,custom_mode:4,system_status:3},{system,component:1,seq});
+const old=JSON.parse(await readFile('evidence/sitldiscovery41/run03/attempt02/session01-snapshot.json','utf8'));const ver=new FullFramer().push(new Uint8Array(Buffer.from(old.version.rawHex,'hex')),0)[0];
+const version=(seq=1,meta={},fields={})=>encodeFull(148,{...ver.fields,...fields},{system:42,component:1,seq,...meta});
+test('ACK alone cannot create freshness',()=>{const o=new Observations42(m);o.receive(encodeFull(77,{command:400,result:0,target_system:255,target_component:190},{system:42,component:1}),0);assert.equal(o.fresh(0),false);});
+test('wrong sender cannot create selected heartbeat',()=>{const o=new Observations42(m);o.receive(hb(0,43),0);assert.equal(o.latest[0],undefined);});
+test('version + fresh heartbeat only observed simulator freshness',()=>{const o=new Observations42(m);o.receive(hb(),0);o.receive(version(),1);assert.equal(o.fresh(1000),true);assert.equal(o.fresh(1501),false);assert.equal(o.snapshot().physicalAuthority,false);});
+test('socket loss revokes freshness',()=>{const o=new Observations42(m);o.receive(hb(),0);o.receive(version(),1);o.loss('MOCK_LOSS');assert.equal(o.fresh(2),false);assert.throws(()=>o.receive(hb(2),3));});
+test('serialized lease not restorable',()=>assert.equal(liveLease({format:'owned-simulation42-only',manifest:m},1),false));
+test('firmware mismatch refused',()=>{const o=new Observations42(m);assert.throws(()=>o.receive(version(1,{}, {flight_sw_version:1}),1));});
+test('boot clock regression refused',()=>{const o=new Observations42(m);o.receive(encodeFull(33,{time_boot_ms:100},{system:42,component:1,seq:0}),1);assert.throws(()=>o.receive(encodeFull(33,{time_boot_ms:1},{system:42,component:1,seq:1}),2));});
+test('duplicate cannot refresh heartbeat',()=>{const o=new Observations42(m);o.receive(hb(),0);o.receive(hb(),1000);assert.equal(o.latest[0].at,0);});
+test('reordered cannot replace heartbeat',()=>{const o=new Observations42(m);o.receive(hb(100),0);o.receive(hb(99),1000);assert.equal(o.latest[0].at,0);});
+test('receipt clock regression refused',()=>{const o=new Observations42(m);o.receive(hb(),5);assert.throws(()=>o.receive(hb(1),4));});
+test('stale partial frame refused',()=>{const o=new Observations42(m);o.receive(hb().slice(0,4),0);assert.throws(()=>o.receive(hb().slice(4),1600));});
+test('invalid boot preamble refused',()=>{const o=new Observations42(m);assert.throws(()=>o.receive(new Uint8Array([...Buffer.from('wrong banner\n'),...hb()]),0));});
+test('Home units distance metres',()=>assert.ok(Math.abs(distance(108541799,1068070000,{latitude:108540000,longitude:1068070000})-20)<.1));
+for(const [name,[type,values]] of Object.entries(PROFILE))test('parameter boundary '+name,()=>{for(const value of values)assert.equal(validateTX(packet(23,{...target,param_id:name,param_type:type,param_value:value})).fields.param_value,value);});
+const out={status:'PASS',scope:'MOCK_UNIT_FAULT_NO_NETWORK',checks:checks.length,passed:checks.length,results:checks};let n=1;const {existsSync}=await import('node:fs');while(existsSync(`evidence/flightsafety42/unit${n}.json`))n++;await writeFile(`evidence/flightsafety42/unit${n}.json`,JSON.stringify(out,null,2)+'\n',{flag:'wx'});console.log(JSON.stringify({status:'PASS',checks:checks.length}));

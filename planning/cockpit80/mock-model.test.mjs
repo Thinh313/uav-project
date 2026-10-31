@@ -1,0 +1,42 @@
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+import {createAuthority,applyAuthority,owns,sessionKey,createMission,editMission,undoMission,approveMission,approvalValid,channelState,flightEnabled,cameraEnabled} from './mock-model.mjs';
+const results=[];
+function test(name,fn){try{fn();results.push({name,status:'PASS'});}catch(e){results.push({name,status:'FAIL',error:e.message});}}
+let seq=0;
+function event(a,actor,patch){return {id:`e${++seq}`,revision:a.revision,actor,...patch};}
+function apply(a,actor,patch){const r=applyAuthority(a,event(a,actor,patch));assert.equal(r.ok,true,r.reason);return r.authority;}
+function seeded(){let a=createAuthority();a=apply(a,'A',{kind:'grant',resource:'flight'});a=apply(a,'B',{kind:'grant',resource:'payload',payload:'phase'});return a;}
+test('New/reloaded rehearsal has no automatic grants',()=>{const a=createAuthority();assert.equal(a.flight,null);assert.ok(Object.values(a.payload).every(x=>x===null));});
+test('Pilot and camera operator hold independent resources',()=>{const a=seeded();assert.ok(owns(a,'A','flight'));assert.ok(!owns(a,'B','flight'));assert.ok(owns(a,'B','payload','phase'));assert.ok(!owns(a,'A','payload','phase'));});
+test('Camera operator cannot receive flight authority',()=>{const a=createAuthority();assert.equal(applyAuthority(a,event(a,'B',{kind:'grant',resource:'flight'})).ok,false);});
+test('Grant cannot steal existing owner',()=>{const a=seeded();assert.equal(applyAuthority(a,event(a,'A',{kind:'grant',resource:'payload',payload:'phase'})).ok,false);});
+test('Request does not transfer camera authority',()=>{let a=seeded();a=apply(a,'A',{kind:'request',resource:'payload',payload:'phase'});assert.ok(owns(a,'B','payload','phase'));assert.equal(a.pending.length,1);});
+test('Only owner can accept handoff',()=>{let a=seeded();a=apply(a,'A',{kind:'request',resource:'payload',payload:'phase'});assert.equal(applyAuthority(a,event(a,'A',{kind:'resolve',requestId:a.pending[0].id,payload:'phase',accept:true})).ok,false);});
+test('Wrong payload reply is rejected with state unchanged',()=>{let a=seeded();a=apply(a,'A',{kind:'request',resource:'payload',payload:'phase'});const r=applyAuthority(a,event(a,'B',{kind:'resolve',requestId:a.pending[0].id,payload:'thermal',accept:true}));assert.equal(r.ok,false);assert.deepEqual(r.authority,a);});
+test('Owner denial leaves authority and closes pending',()=>{let a=seeded();a=apply(a,'A',{kind:'request',resource:'payload',payload:'phase'});a=apply(a,'B',{kind:'resolve',requestId:a.pending[0].id,payload:'phase',accept:false});assert.ok(owns(a,'B','payload','phase'));assert.equal(a.pending.length,0);});
+test('Owner approval transfers only requested camera',()=>{let a=seeded();a=apply(a,'B',{kind:'grant',resource:'payload',payload:'thermal'});a=apply(a,'A',{kind:'request',resource:'payload',payload:'phase'});a=apply(a,'B',{kind:'resolve',requestId:a.pending[0].id,payload:'phase',accept:true});assert.ok(owns(a,'A','payload','phase'));assert.ok(owns(a,'B','payload','thermal'));assert.ok(owns(a,'A','flight'));});
+test('Concurrent request and old revision rejected',()=>{let a=seeded();const old=event(a,'A',{kind:'request',resource:'payload',payload:'phase'});a=apply(a,'A',{kind:'request',resource:'payload',payload:'phase'});assert.equal(applyAuthority(a,old).ok,false);assert.equal(applyAuthority(a,event(a,'A',{kind:'request',resource:'payload',payload:'phase'})).ok,false);});
+test('Duplicate acceptance cannot replay',()=>{let a=seeded();a=apply(a,'A',{kind:'request',resource:'payload',payload:'phase'});const e=event(a,'B',{kind:'resolve',requestId:a.pending[0].id,payload:'phase',accept:true});a=applyAuthority(a,e).authority;assert.equal(applyAuthority(a,{...e,revision:a.revision}).ok,false);});
+test('Requester restart invalidates pending epoch',()=>{let a=seeded();a=apply(a,'A',{kind:'request',resource:'payload',payload:'phase'});const requestId=a.pending[0].id;a=apply(a,'A',{kind:'restart'});assert.equal(a.pending.length,0);assert.equal(applyAuthority(a,event(a,'B',{kind:'resolve',requestId,payload:'phase',accept:true})).ok,false);assert.equal(a.flight,null);});
+test('Owner disconnect/reconnect never restores camera authority',()=>{let a=seeded();a=apply(a,'B',{kind:'disconnect'});assert.equal(a.payload.phase,null);a=apply(a,'B',{kind:'reconnect'});assert.equal(a.payload.phase,null);});
+test('Disconnected session cannot grant or request',()=>{let a=createAuthority();a=apply(a,'B',{kind:'disconnect'});assert.equal(sessionKey(a,'B'),null);assert.equal(applyAuthority(a,event(a,'B',{kind:'grant',resource:'payload',payload:'sony'})).ok,false);});
+test('Loss revokes all resources and pending',()=>{let a=seeded();a=apply(a,'A',{kind:'request',resource:'payload',payload:'phase'});a=apply(a,'A',{kind:'revokeAll'});assert.equal(a.flight,null);assert.ok(Object.values(a.payload).every(x=>x===null));assert.equal(a.pending.length,0);});
+test('Viewed camera cannot borrow another payload grant',()=>{const a=seeded(),c=channelState('healthy',0,100);assert.ok(cameraEnabled(a,'B','phase',c));assert.ok(!cameraEnabled(a,'B','thermal',c));});
+test('Video loss blocks shutter but permits flight with fresh telemetry',()=>{const a=seeded(),c=channelState('video',0,100);assert.ok(flightEnabled(a,'A',c));assert.ok(!cameraEnabled(a,'B','phase',c));});
+test('Telemetry stale blocks flight even if RC is present',()=>{const a=seeded(),c=channelState('telemetry',0,100);assert.ok(c.rc);assert.equal(c.telemetry,'stale');assert.ok(!flightEnabled(a,'A',c));});
+test('RC loss blocks flight and shutter; video stays separate',()=>{const a=seeded(),c=channelState('link',0,100);assert.equal(c.video,'fresh');assert.ok(!flightEnabled(a,'A',c));assert.ok(!cameraEnabled(a,'B','phase',c));});
+test('Unknown after reboot is distinct from stale last-known',()=>{const c=channelState('reboot',0,5000);assert.equal(c.telemetry,'unknown');assert.equal(c.payload,'unknown');assert.equal(c.battery,null);});
+test('Freshness age advances from monotonic delta',()=>{const a=channelState('video',1000,1000),b=channelState('video',1000,6500);assert.equal(a.age,4);assert.equal(b.age,9);assert.notEqual(a.videoLabel,b.videoLabel);});
+test('Battery and critical scenario have explicit sample thresholds',()=>{assert.equal(channelState('battery',0,0).battery,22);assert.equal(channelState('critical',0,0).battery,12);});
+test('Approval bound to revision, payload and session epoch',()=>{let m=approveMission(createMission(),3,'A:1');assert.ok(approvalValid(m,'A:1'));assert.ok(!approvalValid(m,'A:2'));m=editMission(m,{payload:'sony'}).mission;assert.equal(m.approval,null);});
+test('Incomplete preflight cannot approve',()=>{const m=approveMission(createMission(),2,'A:1');assert.equal(m.approval,null);});
+test('Every mission dimension invalidates approval',()=>{for(const patch of [{type:'survey'},{speed:6},{altitude:90},{payload:'sony'}]){const m=editMission(approveMission(createMission(),3,'A:1'),patch).mission;assert.equal(m.revision,2);assert.equal(m.approval,null);}});
+test('Numeric edits accept precision without silent step rounding',()=>{const r=editMission(createMission(),{altitude:83.7,speed:4.3});assert.ok(r.ok);assert.equal(r.mission.altitude,83.7);assert.equal(r.mission.speed,4.3);});
+test('Out of range, NaN, invalid precision rejected without mutation',()=>{for(const patch of [{altitude:29.9},{altitude:120.1},{altitude:NaN},{altitude:80.123},{speed:0},{speed:10.1},{payload:'missing'}]){const m=createMission();assert.equal(editMission(m,patch).ok,false);assert.equal(m.revision,1);assert.equal(m.altitude,80);}});
+test('Undo restores values but never restores approval or old revision',()=>{const m=editMission(approveMission(createMission(),3,'A:1'),{altitude:90}).mission,u=undoMission(m);assert.equal(u.altitude,80);assert.equal(u.revision,3);assert.equal(u.approval,null);});
+test('No-op edit does not silently invalidate valid approval',()=>{const m=approveMission(createMission(),3,'A:1');assert.equal(editMission(m,{altitude:80}).mission,m);});
+const receipt={scope:'Pure mock model, no browser/native/flight transport',results,pass:results.filter(x=>x.status==='PASS').length,fail:results.filter(x=>x.status==='FAIL').length};
+fs.writeFileSync('evidence/cockpit80/qa-fix02/model-tests.json',JSON.stringify(receipt,null,2)+'\n');
+console.log(JSON.stringify({pass:receipt.pass,fail:receipt.fail}));
+if(receipt.fail)process.exitCode=1;

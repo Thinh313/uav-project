@@ -1,0 +1,28 @@
+[
+  {
+    "id": "mavlink-parameters",
+    "url": "https://mavlink.io/en/services/parameter.html",
+    "snapshot": "parameter-protocol.html",
+    "fetched_at": "2026-10-12T09:58:49.212084+00:00",
+    "http_status": 200,
+    "final_url": "https://mavlink.io/en/services/parameter.html",
+    "content_type": "text/html; charset=utf-8",
+    "status": "captured",
+    "sha256": "7d41e043b4870bb02a4f9919ce711541e2eaf9a4ed31e1c3d1c7ab3a686faafc",
+    "bytes": 126146,
+    "capture_format": "Raw HTTP response bytes"
+  },
+  {
+    "id": "copter-param-pinned",
+    "url": "https://raw.githubusercontent.com/ArduPilot/ardupilot/Copter-4.7.1/libraries/GCS_MAVLink/GCS_Param.cpp",
+    "snapshot": "GCS_Param.cpp",
+    "fetched_at": "2026-10-12T09:58:49.212517+00:00",
+    "http_status": 200,
+    "final_url": "https://raw.githubusercontent.com/ArduPilot/ardupilot/Copter-4.7.1/libraries/GCS_MAVLink/GCS_Param.cpp",
+    "content_type": "text/plain; charset=utf-8",
+    "status": "captured",
+    "sha256": "668b245bf81cb9b3545b3751a08106a9086172cb7f0b477ae892b1e1ce3a1b83",
+    "bytes": 16903,
+    "capture_format": "Raw HTTP response bytes"
+  }
+]

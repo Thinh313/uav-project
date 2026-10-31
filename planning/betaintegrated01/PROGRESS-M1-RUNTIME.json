@@ -1,0 +1,17 @@
+{
+  "atUTC": "2026-10-26T23:42:27.174064+00:00",
+  "M0": "COMPLETE_SOURCE_HANDOFF",
+  "M1Mock": "FOUNDATION_READY",
+  "M1Runtime": "ADAPTERS_WIRED_READONLY_SHORT_PASSED",
+  "M1Actual": "NOT_READY",
+  "BETA_SIM": "NOT_READY",
+  "verification": "evidence/betaintegrated01-m1runtime/verification-final01.json",
+  "failedIntervalsAddedToCurrent": false,
+  "current": {
+    "APK": "native/betaintegrated01/runtime02/dist/aeris-m1-runtime-development-05.apk",
+    "AP": "runtime/betaintegrated01/dist/arducopter-m1-stagepipe-03",
+    "profile": "runtime/betaintegrated01/dist/run-profile03.json"
+  },
+  "thirtyMinuteGate": "REFUSED_CAPACITY_NO_RUN",
+  "canonicalSOTOrPriorProgressEdited": false
+}

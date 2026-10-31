@@ -1,0 +1,67 @@
+{
+  "at": "2026-10-20T10:10:30.731305+07:00",
+  "overallStatus": "NOT READY",
+  "userDisposition": "HANDOFF_CHECKED_PARTS_NO_MORE_RUNTIME",
+  "userOutcome": "DevelopmentAPK04 installed exact; coldboot35privatefiles exact; integrated finaluserjourney unproved",
+  "apk": "native/integration03/dist/aeris-integration03-development04.apk",
+  "apkSha256": "9218acc3b71ad271b3ee9b7ba291d76fe1f97cd714e962ec34630fb6eb6f4ddf",
+  "nativeSourceId": "7784d45e8ba42e654e0a8f15a87476febf8145f0f70d30d88cefb261ed9edab3",
+  "observerSourceId": "3894481d2de04f8be796343896bee451fdf829b85e1aecf3f5149ece808e2d1c",
+  "requirementCoverage": {
+    "I01": "PARTIAL_FINAL_AGED_COHORTS_MISSING",
+    "I02": "PASS_SCOPED",
+    "I03": "FINAL_MISSION_UNACCEPTED",
+    "I04": "PARTIAL_FINAL_B_PAYLOAD_WIRE_MISSING",
+    "I05": "FINAL_FAULTS_UNTESTED",
+    "I06": "PARTIAL_AIRBORNE_30S_MISSING",
+    "I07": "FINAL_SAF_UNTESTED",
+    "I08": "PARTIAL_FINAL_PERSISTENCE_UNTESTED",
+    "I09": "PARTIAL_FINAL_JOURNEY_UI_UNTESTED",
+    "I10": "PARTIAL_DEPENDENT_INTEGRITY_GATES_MISSING"
+  },
+  "mandatoryAC": 10,
+  "scopedAccepted": [
+    "I02"
+  ],
+  "commercialMaturityPercentage": null,
+  "actualLatestRun": "sb3f198d1ac1f6fb249ef",
+  "actualLatestOutcome": "FAILED_PREARM_BOOTSTRAP_EOF_ZERO_RECORDS_NO_RETRY",
+  "exactBootstrapCause": "UNKNOWN",
+  "latestNativeCanonicalRaw": "RETAINED_IN_AVD_NOT_EXTRACTED_OR_SEAL_VERIFIED",
+  "latestUIPrearmError": "CONNECT_FAILED_ECONNREFUSED_after_APmanagedclosure",
+  "resourceProfile": {
+    "Android": "cachedAPI33ARM64_4CPU2048MiB_GPUhost_1280x800",
+    "ArduPilot": "2CPU512MiB_speedup1",
+    "userFloorGiB": 20,
+    "runtimeGuardGiB": 21,
+    "noObservedFloorBreach": true,
+    "minimumInitialAdmissionGiB": 29,
+    "noNewLaunchAuthorizedInHandoff": true
+  },
+  "sourceChecks": "192nativepins+112APKcockpitassets+9observerpins independentlyverified; developmentcertificate verified; source/mock notruntimeacceptance",
+  "protectedPaths": 71158,
+  "protectedFailures": [],
+  "valueEvidence": {
+    "status": "PARTIAL",
+    "measured": "Offlinehistoryequivalence; realAndroidintake; byteexactinstall andmidtaskcoldboot; groundobserverindependentcorrespondence",
+    "unmeasured": "Finalintegratedmission andcomparisonDJI/Ragas; physicalHera/PhaseOne; calibratedphysics/acoustics",
+    "baseline": "DirectLLM notapplicable to deterministicflighttransport; no superiorityclaim"
+  },
+  "report": "delivery/COMPLETION-INTEGRATION03-03.md",
+  "supersedesStatusOnly": "delivery/COMPLETION-INTEGRATION03-02.json",
+  "noProductionRelease": true,
+  "noHardwareClaim": true,
+  "noFrozenSOTRewrite": true,
+  "cleanup": {
+    "ownedBuildStagingAbsent": true,
+    "unsignedIntermediateRemoved": true,
+    "developmentAPKsRetained": true,
+    "dockerImagePruneReclaimedBytes": 0,
+    "containersVolumesPruned": false,
+    "wholeProjectTmpCopyCreated": false
+  },
+  "freeBytesAtReport": 25395200000,
+  "editorialClarification": "DistinctQGCfixtures; preparedSAFworkflow isnotexecutedfinaldeclaration/export; noacceptancechange",
+  "independentQA": "evidence/integration03-qa/verification-final02.json",
+  "I02Qualification": "SCOPED_COMPONENT_PASS; distinctQGCfixtures; qualifyingpositivepolygonpostinspectionnotunseen"
+}

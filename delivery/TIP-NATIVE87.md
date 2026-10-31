@@ -1,0 +1,11 @@
+# TIP NATIVE87 — native workspace outcomes and Android–SITL cockpit
+
+Authorized by user's “triển khai” accepting the3-gate plan. New namespace native87/evidence/native87 only; preserve native86 and all earlier immutable source/candidate/ENDURE. Existing development cert authorized, no production signing. Existing owned-emulator5582 ADB/UIAutomator/root authorization reused; no physical device. SDK cache86 read-only, newAVD87. Hard20GiB floor; launch30GiB, runtime stop21GiB. New loopback bridge8849 and owned SITL5887; never send to physical UAV. Fixed binary/image pins, speedup1.
+
+REQ87-01: durable file operation identity/outcomes before picker, no false completion on timeout/late callback/restart, explicit status/reconciliation, current workspace/head binding, no auto retry/selection/deletion. Mock/fault tests then actual Android delayed picker and restart. Preserve archive83 bytes/schema and old raw evidence.
+REQ87-02: native cockpit source explicitly separates mock and SITL, fresh read-only position/height/mode/battery/age/aircraft/session/boot, stale values cleared on loss and app background. No grants restored.
+REQ87-03: actual Android survey/KML→compile→preflight→upload/readback→explicit post-arm Home review→AUTO→observed terminal RTL/land/disarm→committed review in same app. Camera commands preserved; zero actual photos. ACK not execution; all raw retained. Existing adapter safety gates reused.
+REQ87-04: simulator disarmed telemetry loss, AP reboot and Android/app restart; no automatic reconnect or authority restoration; wrong/unknown epoch never live. Aborted review cannot become accepted; completed review exact through restart. In-flight tests only if explicit scenario safe within owned internal quad, otherwise NOT_CHECKED.
+REQ87-05: regression, source/archive/mission raw independent replay, Android selected UI and geometry, clean owned runtime closure, preservation before/after and disk receipts; DONE only actual required checks pass, else PARTIAL with missing cases.
+
+Single agent switches specification/build/QA phases; not independent-team review. No additional interview needed: scope and simulator-only authorization already explicit. Canonical SOT remains frozen; new delivery overlay records results.

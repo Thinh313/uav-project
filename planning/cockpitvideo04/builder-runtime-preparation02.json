@@ -1,0 +1,19 @@
+{
+  "scope": "BUILDER_OWN_RUNTIME_UI_HELPER_SOURCE_ONLY",
+  "files": {
+    "planning/cockpitvideo04/qa-runtime.py": "3131203ee08668093fa4f5ede8a55ea6b45a493d3293f48383e8bb8139faa934",
+    "planning/cockpitvideo04/qa-runtime-mock.py": "c9369085cdb716b6051a08d39ea01630902f8af7c659e7346543a0850cc9df52",
+    "planning/cockpitvideo04/qa-ui-sequence.py": "516df534c13518b565c5b2361c8fa6509115cbffdbc5fbf5226859d5a2731fcf",
+    "planning/cockpitvideo04/qa-device.py": "05838d9319c871064993205c1e75d9e296811d47500ce980f1bf67c0a7e6f641",
+    "planning/cockpitvideo04/qa-android.py": "1b7f5339eca807e86532eedda7bd327b89beddae08820f872d87627b2f6dea6a"
+  },
+  "helperPolicyMockChecks": 9,
+  "AST": "PASS",
+  "autoWindowRequiredMs": 1800,
+  "explicitMockModeLabels": true,
+  "phaseNamesBindExactRun": true,
+  "adbCalls": 0,
+  "runtimeStarts": 0,
+  "productionEdits": 0,
+  "earlierPreparation": "builder-runtime-preparation.json preserved; it inventories an additional independent QA file read-only, not authored by this Builder"
+}

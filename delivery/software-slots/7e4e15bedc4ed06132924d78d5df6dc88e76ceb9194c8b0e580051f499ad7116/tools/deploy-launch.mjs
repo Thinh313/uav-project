@@ -1,0 +1,2 @@
+import {readFile} from 'node:fs/promises';import {spawn} from 'node:child_process';import {launchPlan} from '../services/software-release.mjs';
+export async function startVerified(slot,options){const p=await launchPlan(slot,options),child=spawn(p.command,p.args,{cwd:slot,env:{...process.env,...p.env},stdio:'inherit'});for(const signal of ['SIGINT','SIGTERM'])process.once(signal,()=>child.kill(signal));child.on('error',e=>{console.error(e.message);process.exitCode=1;});child.on('exit',code=>{process.exitCode=code??1;});return {child,plan:p};}

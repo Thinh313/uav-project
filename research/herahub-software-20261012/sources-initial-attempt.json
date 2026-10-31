@@ -1,0 +1,52 @@
+[
+  {
+    "id": "rtr-herahub",
+    "url": "https://rtrobotics.com/commercial/herahub",
+    "origin_id": "rtr",
+    "tier": "A",
+    "scope": "Official published scope only, not source access/device benchmark",
+    "fetched_at": "2026-10-12T03:45:27.246745+00:00",
+    "status": "unavailable",
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>"
+  },
+  {
+    "id": "rtr-herahub-v2",
+    "url": "https://rtrobotics.com/commercial/herahub-v2",
+    "origin_id": "rtr",
+    "tier": "A",
+    "scope": "Official published scope only, not source access/device benchmark",
+    "fetched_at": "2026-10-12T03:45:27.279653+00:00",
+    "status": "unavailable",
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>"
+  },
+  {
+    "id": "rtr-ragas",
+    "url": "https://rtrobotics.com/commercial/ragas",
+    "origin_id": "rtr",
+    "tier": "A",
+    "scope": "Official published scope only, not source access/device benchmark",
+    "fetched_at": "2026-10-12T03:45:27.280076+00:00",
+    "status": "unavailable",
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>"
+  },
+  {
+    "id": "ragas-index",
+    "url": "https://rtrobotics.gitbook.io/real-time-robotics/llms.txt",
+    "origin_id": "rtr",
+    "tier": "A",
+    "scope": "Official published scope only, not source access/device benchmark",
+    "fetched_at": "2026-10-12T03:45:27.280391+00:00",
+    "status": "unavailable",
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>"
+  },
+  {
+    "id": "ragas-readme",
+    "url": "https://raw.githubusercontent.com/Real-Time-Robotics/ragas-release/main/README.md",
+    "origin_id": "rtr",
+    "tier": "A",
+    "scope": "Official published scope only, not source access/device benchmark",
+    "fetched_at": "2026-10-12T03:45:27.280654+00:00",
+    "status": "unavailable",
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>"
+  }
+]

@@ -1,0 +1,11 @@
+/** Namespace normalization proof. Reads only, never launches flight or application. */
+import fs from'node:fs';import assert from'node:assert/strict';import{createHash}from'node:crypto';import{NEW_FILES,RECIPES,transform,E}from'../../pilot/beta06g6/overlay.mjs';
+const sha=b=>createHash('sha256').update(b).digest('hex'),rows=[];
+for(const p of NEW_FILES.filter(p=>!['entry.mjs','overlay.mjs','pins.mjs','freeze.mjs'].includes(p.split('/').at(-1)))){
+ const old=p.replace('beta06g6','beta06g5'),source=fs.readFileSync(p,'utf8');let normalized=source;
+ if(p.endsWith('/flight/adapter.mjs'))normalized=normalized.replace("from'../../beta06g5/flight/takeoff-wrapper.mjs'","from'./takeoff-wrapper.mjs'").replace("if(p.priorGeneration05SITLRequests?.length!==0)throw Error('EXACT_ZERO_G5_ACTUAL_REQUESTS');",'');
+ normalized=normalized.replaceAll('beta06g6','beta06g5').replaceAll('generation06','generation05').replaceAll('GENERATION06','GENERATION05').replaceAll('G6','G5');assert.equal(normalized,fs.readFileSync(old,'utf8'),p);rows.push({path:p,original:old,originalSha256:sha(fs.readFileSync(old)),newSha256:sha(source),namespaceOnly:true,exception:p.endsWith('/adapter.mjs')?'Exact zero-G5-actual fence and existing G5 takeoff superclass import only':null});
+}
+const compiled=Object.entries(RECIPES).map(([p])=>{const b=fs.readFileSync(p),effective=transform(p,b.toString());assert.notEqual(effective,b.toString());return{path:p,originalSha256:sha(b),compiledSha256:sha(effective),exactReplacementCounts:RECIPES[p].map(r=>r.count)};});
+const runtime=fs.readFileSync('pilot/beta06g6/flight/runtime.py','utf8');for(const s of ["STREAM=2*2**20; META=256*1024","from readiness import SerialReadiness","'.local/beta06g3/arducopter'","runner.background=[];runner.closing=True","'--speedup','1'","'hardDeadlineS':540","'MAX_FOUR_RETAINED_G6_CONTAINERS'"])assert(runtime.includes(s),s);
+const report={status:'PASS_NAMESPACE_NORMALIZATION_NOT_RUNTIME',groups:rows.length+compiled.length+1,rows,compiled,qualificationAlgorithms:'G5 byte-identical after explicit namespace normalization; no parser/authority/physics/closure/capture/readiness change',actualAPRequests:0,listeners:0};fs.writeFileSync(E+'qa-source-normalization06.json',JSON.stringify(report,null,2)+'\n',{flag:'wx'});console.log(JSON.stringify({status:report.status,groups:report.groups}));

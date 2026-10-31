@@ -1,0 +1,53 @@
+{
+  "files": {
+    "Android.command": {
+      "bytes": 147,
+      "sha256": "16077ab5c0791476f8555a975801022630842a19130204c8cb2a8a8b866e47b0"
+    },
+    "Doctor.command": {
+      "bytes": 169,
+      "sha256": "6de6415ede844d05132a67efa28c2efa99f5c84619cc4eb0aebb3b07d973e525"
+    },
+    "README.md": {
+      "bytes": 4284,
+      "sha256": "8dc85b352871dc2185b7ada8dfdfabc4d942273a5597a0c18011ce9626399c6a"
+    },
+    "Start Beta.command": {
+      "bytes": 168,
+      "sha256": "f09fae1a490f8b62a763c63403e731789a3fbb969a1e78047bf30e970adccf35"
+    },
+    "Start Mock Android.command": {
+      "bytes": 168,
+      "sha256": "66ed41e7c941059e97cd9f3544223891ccf2505e10b1cbc7a854d53b81b7d245"
+    },
+    "Start Mock.command": {
+      "bytes": 157,
+      "sha256": "9b32e3b0c894a7da1b4d32bfdb3ee97162c47c6680c75c591ea0ae87d5ec34e2"
+    },
+    "Status.command": {
+      "bytes": 146,
+      "sha256": "0f86573824c0b43cb98104c74208befe92beb4d35f9d10c621da0b3276888210"
+    },
+    "Stop Beta.command": {
+      "bytes": 144,
+      "sha256": "d0373e0756b98579565dcc9d92c48195acee1f589b24572f9c0636f17274391d"
+    },
+    "Verify Package.command": {
+      "bytes": 279,
+      "sha256": "84ebf90b2d48de228cfaa1d77e100980981bc4d66340e1db9235b5d239e66c63"
+    },
+    "package-info.json": {
+      "bytes": 1294,
+      "sha256": "abf8363484598b7cec3bae9417329d72cce1b73fed93591b746c286e114c2a83"
+    },
+    "source-pin-index.json": {
+      "bytes": 191108,
+      "sha256": "4364c569dfc60dd6b050abaaf428d85452190111004f40345b8f155bb67db07e"
+    },
+    "verify-package.mjs": {
+      "bytes": 508,
+      "sha256": "d2b4fa301419ae936903d0546de353b2ded545d206705521b01753bef44e0988"
+    }
+  },
+  "originSignature": false
+}

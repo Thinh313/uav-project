@@ -1,0 +1,18 @@
+# COACH01: Replay training and inspection adviser
+
+25/10/2026. Contractor → Builder → Verify phases by the same assistant; no independent human reviewer. User authorized the next complete practical slice after MonoRace research. Scope: offline observation, no motor/neural controller, no flight route or native APK change.
+
+Outcome: an engineer opens the retained Beta05 SAF package or uploads another supported package, replays positions/events, sees measured motion and planned-strip distance, understands unqualified imagery, exports/reopens a digest-bound report after companion restart. This is the deterministic baseline and data contract for AI Assisted Training & Inspection, not a trained AI pilot or a Hera-calibrated grading system.
+
+AC1 Verify package hashes/raw/WAL with existing read-only verifier, then independently bind SESSION target/boot and reconstructed KML/model/plan before analysis. Reject tampering or unsupported context. Hash integrity is not source authentication.
+AC2 Decode CRC-checked RX wire, cite original record ordinals, separate host receive and guest boot clocks; detect stale heartbeat, guest regression/duplicates, sensor gaps and foreign targets. Never differentiate/interpolate across gaps or score pilot skill from AUTO.
+AC3 Motion: measured ground speed, relative-Home height, vector acceleration and wrapped yaw rate only across qualified adjacent samples. Compare nearest planned survey strip only inside AUTO/altitude/heartbeat eligibility. This does not assert exact executed route/obstacle safety/AGL or surveyed area.
+AC4 Inspection: link stored synthetic JPEG and geotag provenance; actual images remain 0 and real coverage/blur/GSD/overlap UNKNOWN. Reuse planned geometry only. Recommendations are deterministic templates with evidence, no LLM calls or hidden proposals-to-command path.
+AC5 Local replay UI: RtR Barlow Vietnamese, restrained yellow, dark/light glass tools, responsive map/timeline and evidence panel. File import, replay/scrub, event selection, report export, persistent history. Keyboard focus/reduced motion, no interpolation over unavailable intervals.
+AC6 Exclusive bounded persistent store, content-addressed source/report, source+analysis hashes, restart verification, no overwrite/delete/authority restoration. Receiver recomputes exact report from original package and refuses mutation.
+AC7 Analytic/negative corpus + existing actual SITL package read-only + alternate Python math oracle; UI browser input/export/restart validation. Record elapsed timings; direct LLM and human productivity benchmark NOT_MEASURED. Tests are not Hera/market certification.
+AC8 Preserve frozen source/candidate/ENDURE and existing baseline identities/bytes plus all Beta05 handoff members. No APK/build/install/download/SITL/emulator/new signature or deleting user/evidence data. Start free20GiB; write floor10GiB +256MiB reserve. Scoped persistent store256MiB, source32MiB, raw100000 rows, one request worker, session30min. No new external model/provider dependency.
+
+Architecture: read-only imports Beta05 package/auto-video verifier, existing MAVLink decoder and KML planner/preparation. New coach engine → digest-bound report → report-only HTTP/UI/store. It imports no session/transport runtime. AI seam is explicitly DISABLED, language templates described as rules, not model inference. Simplest baseline wins for current inputs. Full onboard perception/RL, real-media image grading and physics training environment remain separate future gates.
+
+Acceptance boundaries: observed position trace plus independently reconstructed plan; no flight PASS from adviser score. Overall READY applies only to supported offline replay workflow. Unknown fields never become 0 or PASS.

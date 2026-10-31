@@ -1,0 +1,7 @@
+# ADR074 — mission AUTO uses internal ArduPilot physics
+
+Functional mission qualification uses existing original Copter4.7.1 binary and fixed local container with its internal quad physics, rather than external JSON frame/WAL loop. This avoids conflating mission correctness with unresolved SIM32 host pacing; no change to SIM32 source, speedup, cap or evidence. Raw MAVLink and AP DataFlash are retained; there is no claim of external sensor-frame fsync/order testing in this increment.
+
+Mapping51 output remains HOST_MOCK_ONLY; a new compiler explicitly derives a simulator-only QGC SimpleItem mission with selected fixed Home, relative altitude, speed, per-strip camera start/stop, terminal RTL and provenance. Original editable KML and acquisition plan remain unchanged. Unsupported terrain or unsafe route cannot be made fly-ready by flattening it silently. Corresponding radius/height/duration gates apply to every executable navigation point and connector inside a convex simulated circular fence.
+
+Reuse PREFLIGHT43 for a task-qualified readonly profile; disarmed readiness is distinct from a private scoped simulator authorization. Typed parameter observation changes and transport/clock/boot changes invalidate authorization. Durable, bounded raw capture accompanies upload and readback; completion is derived from physical telemetry and reached navigation, not only mission ACK or JSON receipt.

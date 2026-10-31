@@ -1,0 +1,10 @@
+{
+  "at": "2026-10-17T14:19:15.564879+07:00",
+  "scope": "Verification overlay index, not canonical SOT edit",
+  "latestReport": "delivery/COMPLETION-COCKPIT82-EMULATOR04.html",
+  "verification": "evidence/cockpit82-emulator04/verification.json",
+  "status": "PASS_ANDROID_EMULATOR_MOCK_JOURNEY_AND_PERSISTENCE",
+  "closes": "R82-06 priorPARTIAL",
+  "previousReportPreserved": "delivery/COMPLETION-COCKPIT82.html",
+  "apkUnchanged": "488fc04515d716191292df234dbbc403be99e6a0f45fd3c85235a920e334b25b"
+}

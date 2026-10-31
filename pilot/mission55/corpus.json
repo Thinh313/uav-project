@@ -1,0 +1,502 @@
+{
+  "schema": 1,
+  "generated": [
+    {
+      "id": "camera-mixed-altitude",
+      "path": "pilot/mission55/fixtures/camera-mixed-altitude.plan",
+      "sha256": "854b98d6dd91b0cb77684b086dac1128b3daa24d4052e2f8dd9ae743ad32a812",
+      "provenance": "SYNTHETIC",
+      "parent": null,
+      "producer": "MISSION55 fixture builder; NOT QGC application"
+    },
+    {
+      "id": "placeholder",
+      "path": "pilot/mission55/fixtures/placeholder.plan",
+      "sha256": "dfadd88d64388bf7577503baa874202bf03fb78d49ca8875bbb15641f0194a58",
+      "provenance": "SYNTHETIC_DERIVATIVE",
+      "parent": "camera-mixed-altitude",
+      "producer": "MISSION55 fixture builder; NOT QGC application"
+    },
+    {
+      "id": "distance",
+      "path": "pilot/mission55/fixtures/distance.plan",
+      "sha256": "e0db7a3c67b25f842c1e77532fb6a39408366ee03c52e53779bccff74b45d9e5",
+      "provenance": "SYNTHETIC_DERIVATIVE",
+      "parent": "camera-mixed-altitude",
+      "producer": "MISSION55 fixture builder; NOT QGC application"
+    },
+    {
+      "id": "immediate",
+      "path": "pilot/mission55/fixtures/immediate.plan",
+      "sha256": "c9b44c8aad916b78c805b651e3b0053c10a4363677556ae39cf1312c2de386bc",
+      "provenance": "SYNTHETIC_DERIVATIVE",
+      "parent": "camera-mixed-altitude",
+      "producer": "MISSION55 fixture builder; NOT QGC application"
+    },
+    {
+      "id": "camera-id",
+      "path": "pilot/mission55/fixtures/camera-id.plan",
+      "sha256": "3675a9f4c3dbf0dc5434f2aa2e61f96f06369dd95cec0f9c61c4509ef509297b",
+      "provenance": "SYNTHETIC_DERIVATIVE",
+      "parent": "camera-mixed-altitude",
+      "producer": "MISSION55 fixture builder; NOT QGC application"
+    },
+    {
+      "id": "image-period",
+      "path": "pilot/mission55/fixtures/image-period.plan",
+      "sha256": "a84ce0952aa256f803720f0d0a2016c2dd7a8b7d5395ce7b12b5e8bddd4c2fd8",
+      "provenance": "SYNTHETIC_DERIVATIVE",
+      "parent": "camera-mixed-altitude",
+      "producer": "MISSION55 fixture builder; NOT QGC application"
+    },
+    {
+      "id": "image-count",
+      "path": "pilot/mission55/fixtures/image-count.plan",
+      "sha256": "e851409825a1728ff59e7e49762d244758e5245d36c7e1d114ea5f5d7d7a1187",
+      "provenance": "SYNTHETIC_DERIVATIVE",
+      "parent": "camera-mixed-altitude",
+      "producer": "MISSION55 fixture builder; NOT QGC application"
+    },
+    {
+      "id": "reserved-null-zero",
+      "path": "pilot/mission55/fixtures/reserved-null-zero.plan",
+      "sha256": "79c4d3db06eb9973a0123b3d63059573180428ba8cb986b2d17220dd941f8219",
+      "provenance": "SYNTHETIC_DERIVATIVE",
+      "parent": "camera-mixed-altitude",
+      "producer": "MISSION55 fixture builder; NOT QGC application"
+    },
+    {
+      "id": "video-stop-id",
+      "path": "pilot/mission55/fixtures/video-stop-id.plan",
+      "sha256": "f94556507936ea3c375d23e7c224f356d604cbe36e7d9c0290cff9030cf8096d",
+      "provenance": "SYNTHETIC_DERIVATIVE",
+      "parent": "camera-mixed-altitude",
+      "producer": "MISSION55 fixture builder; NOT QGC application"
+    },
+    {
+      "id": "home-height",
+      "path": "pilot/mission55/fixtures/home-height.plan",
+      "sha256": "a2fa3331d724c7a84291ea9988367090c3b6b15aae6d12f191527983ee9cdc96",
+      "provenance": "SYNTHETIC_DERIVATIVE",
+      "parent": "camera-mixed-altitude",
+      "producer": "MISSION55 fixture builder; NOT QGC application"
+    },
+    {
+      "id": "home-position",
+      "path": "pilot/mission55/fixtures/home-position.plan",
+      "sha256": "fec2c4bfc54b1157aba87fd311b4e9f32b06c9603a06bb99bf8ebec777f6c56f",
+      "provenance": "SYNTHETIC_DERIVATIVE",
+      "parent": "camera-mixed-altitude",
+      "producer": "MISSION55 fixture builder; NOT QGC application"
+    },
+    {
+      "id": "cruise-not-hover",
+      "path": "pilot/mission55/fixtures/cruise-not-hover.plan",
+      "sha256": "8c995c69c264f7300affd2f96d189f64d8e608e3bcf57c8708c40e8a3ccd9909",
+      "provenance": "SYNTHETIC_DERIVATIVE",
+      "parent": "camera-mixed-altitude",
+      "producer": "MISSION55 fixture builder; NOT QGC application"
+    },
+    {
+      "id": "label-change",
+      "path": "pilot/mission55/fixtures/label-change.plan",
+      "sha256": "c5bbcd04daae4e4687f65d053613d1f57d74ffb7919561066c27794f00474eae",
+      "provenance": "SYNTHETIC_DERIVATIVE",
+      "parent": "camera-mixed-altitude",
+      "producer": "MISSION55 fixture builder; NOT QGC application"
+    },
+    {
+      "id": "nav-null-yaw-zero",
+      "path": "pilot/mission55/fixtures/nav-null-yaw-zero.plan",
+      "sha256": "4d79dda75088695a367225c5aa874572debc5dd027fcf0a5d0c55453b6bd2c2d",
+      "provenance": "SYNTHETIC_DERIVATIVE",
+      "parent": "camera-mixed-altitude",
+      "producer": "MISSION55 fixture builder; NOT QGC application"
+    },
+    {
+      "id": "fence-change",
+      "path": "pilot/mission55/fixtures/fence-change.plan",
+      "sha256": "263e0e112f79829be4e8b3920ee7fbcb53bdc74a3b44076f4d9582a8c00b2689",
+      "provenance": "SYNTHETIC_DERIVATIVE",
+      "parent": "camera-mixed-altitude",
+      "producer": "MISSION55 fixture builder; NOT QGC application"
+    },
+    {
+      "id": "rally-change",
+      "path": "pilot/mission55/fixtures/rally-change.plan",
+      "sha256": "549c6fc796416712c4afb7493c016d77d9c9785f8cebd1681470917683d2d0ee",
+      "provenance": "SYNTHETIC_DERIVATIVE",
+      "parent": "camera-mixed-altitude",
+      "producer": "MISSION55 fixture builder; NOT QGC application"
+    },
+    {
+      "id": "drop-camera",
+      "path": "pilot/mission55/fixtures/drop-camera.plan",
+      "sha256": "17662cb733b037991d9fe34a926441b32e94b8bf0b7f48f39f62f1a332a8a5c3",
+      "provenance": "SYNTHETIC_DERIVATIVE",
+      "parent": "camera-mixed-altitude",
+      "producer": "MISSION55 fixture builder; NOT QGC application"
+    },
+    {
+      "id": "reorder-camera",
+      "path": "pilot/mission55/fixtures/reorder-camera.plan",
+      "sha256": "e4e737523cf2c8f19317dc8dee26b13de28a2b0d545bcdf1a2323faed2cf497a",
+      "provenance": "SYNTHETIC_DERIVATIVE",
+      "parent": "camera-mixed-altitude",
+      "producer": "MISSION55 fixture builder; NOT QGC application"
+    },
+    {
+      "id": "survey35-retained-derived",
+      "path": "pilot/mission55/fixtures/survey35-retained-derived.plan",
+      "sha256": "aad665dd4513a9025772e841eb97472b05caeb3f2d06f94e26f8b663810a04a1",
+      "provenance": "SYNTHETIC_DERIVATIVE_OF_QGC51",
+      "parent": {
+        "path": "app/fixtures/qgc/desktop/qgc-survey-angle35.plan",
+        "sha256": "712b50e40162c38fdeea4baa5ff59a8f13364d686662d2b850bcbc6a4538dc92"
+      },
+      "producer": "MISSION55 fixture builder; NOT QGC application"
+    },
+    {
+      "id": "survey-angle",
+      "path": "pilot/mission55/fixtures/survey-angle.plan",
+      "sha256": "001fc1ff0dc07e33f8cdd56e932794c0794c770851e8b898fa584c4a63938d64",
+      "provenance": "SYNTHETIC_DERIVATIVE_NOT_REGENERATED",
+      "parent": {
+        "path": "app/fixtures/qgc/desktop/qgc-survey-angle35.plan",
+        "sha256": "712b50e40162c38fdeea4baa5ff59a8f13364d686662d2b850bcbc6a4538dc92"
+      },
+      "producer": "MISSION55 fixture builder; NOT QGC application"
+    },
+    {
+      "id": "survey-entry",
+      "path": "pilot/mission55/fixtures/survey-entry.plan",
+      "sha256": "c1dd132e50e4d7ebbb5483bbd3b42527eb58d76039ad554cc976e69bf4e03bc4",
+      "provenance": "SYNTHETIC_DERIVATIVE_NOT_REGENERATED",
+      "parent": {
+        "path": "app/fixtures/qgc/desktop/qgc-survey-angle35.plan",
+        "sha256": "712b50e40162c38fdeea4baa5ff59a8f13364d686662d2b850bcbc6a4538dc92"
+      },
+      "producer": "MISSION55 fixture builder; NOT QGC application"
+    },
+    {
+      "id": "survey-alternate",
+      "path": "pilot/mission55/fixtures/survey-alternate.plan",
+      "sha256": "cba44b896dfad29c02866031bc3f091d327d3104d77d6c6b091f67f2fcebb7f9",
+      "provenance": "SYNTHETIC_DERIVATIVE_NOT_REGENERATED",
+      "parent": {
+        "path": "app/fixtures/qgc/desktop/qgc-survey-angle35.plan",
+        "sha256": "712b50e40162c38fdeea4baa5ff59a8f13364d686662d2b850bcbc6a4538dc92"
+      },
+      "producer": "MISSION55 fixture builder; NOT QGC application"
+    },
+    {
+      "id": "survey-concave",
+      "path": "pilot/mission55/fixtures/survey-concave.plan",
+      "sha256": "bd701dff140163f22c904db1a5ad5c248c595d0684a82f863ef1b29f8e06d0be",
+      "provenance": "SYNTHETIC_DERIVATIVE_NOT_REGENERATED",
+      "parent": {
+        "path": "app/fixtures/qgc/desktop/qgc-survey-angle35.plan",
+        "sha256": "712b50e40162c38fdeea4baa5ff59a8f13364d686662d2b850bcbc6a4538dc92"
+      },
+      "producer": "MISSION55 fixture builder; NOT QGC application"
+    },
+    {
+      "id": "survey-refly",
+      "path": "pilot/mission55/fixtures/survey-refly.plan",
+      "sha256": "9e7d02c8779704e20a4f82979708620fbf332da594bb7f24e849a62a51a0c7ec",
+      "provenance": "SYNTHETIC_DERIVATIVE_NOT_REGENERATED",
+      "parent": {
+        "path": "app/fixtures/qgc/desktop/qgc-survey-angle35.plan",
+        "sha256": "712b50e40162c38fdeea4baa5ff59a8f13364d686662d2b850bcbc6a4538dc92"
+      },
+      "producer": "MISSION55 fixture builder; NOT QGC application"
+    },
+    {
+      "id": "survey-shot-count",
+      "path": "pilot/mission55/fixtures/survey-shot-count.plan",
+      "sha256": "e1bbccbe3364c08d0338bd118f0a97d57a3c73545817ddba2637209db998c166",
+      "provenance": "SYNTHETIC_DERIVATIVE_NOT_REGENERATED",
+      "parent": {
+        "path": "app/fixtures/qgc/desktop/qgc-survey-angle35.plan",
+        "sha256": "712b50e40162c38fdeea4baa5ff59a8f13364d686662d2b850bcbc6a4538dc92"
+      },
+      "producer": "MISSION55 fixture builder; NOT QGC application"
+    },
+    {
+      "id": "survey-overlap-footprint",
+      "path": "pilot/mission55/fixtures/survey-overlap-footprint.plan",
+      "sha256": "4991719cdc2ea0b2f5ef02c638a5cec933ef1776fdaffff4b191024a2802d7ff",
+      "provenance": "SYNTHETIC_DERIVATIVE_NOT_REGENERATED",
+      "parent": {
+        "path": "app/fixtures/qgc/desktop/qgc-survey-angle35.plan",
+        "sha256": "712b50e40162c38fdeea4baa5ff59a8f13364d686662d2b850bcbc6a4538dc92"
+      },
+      "producer": "MISSION55 fixture builder; NOT QGC application"
+    },
+    {
+      "id": "survey-cache-placeholder",
+      "path": "pilot/mission55/fixtures/survey-cache-placeholder.plan",
+      "sha256": "431706690967960525f581b9d9fbd5099076165f6cd478dc6f6086117127a904",
+      "provenance": "SYNTHETIC_DERIVATIVE_NOT_REGENERATED",
+      "parent": {
+        "path": "app/fixtures/qgc/desktop/qgc-survey-angle35.plan",
+        "sha256": "712b50e40162c38fdeea4baa5ff59a8f13364d686662d2b850bcbc6a4538dc92"
+      },
+      "producer": "MISSION55 fixture builder; NOT QGC application"
+    },
+    {
+      "id": "survey-vertex",
+      "path": "pilot/mission55/fixtures/survey-vertex.plan",
+      "sha256": "f7ea1e261d59d214e339d3df7d8a6a3c30df11054a9014327f92b16f1d3d41d4",
+      "provenance": "SYNTHETIC_DERIVATIVE_NOT_REGENERATED",
+      "parent": {
+        "path": "app/fixtures/qgc/desktop/qgc-survey-angle35.plan",
+        "sha256": "712b50e40162c38fdeea4baa5ff59a8f13364d686662d2b850bcbc6a4538dc92"
+      },
+      "producer": "MISSION55 fixture builder; NOT QGC application"
+    },
+    {
+      "id": "survey-flattened-snapshot",
+      "path": "pilot/mission55/fixtures/survey-flattened-snapshot.plan",
+      "sha256": "615947a53457eb91daeabc10adef7cc7e1517b2a17fd82f1ce67d9b2a307f6aa",
+      "provenance": "SYNTHETIC_DERIVATIVE_LOST_EDITABLE_DESIGN",
+      "parent": {
+        "path": "app/fixtures/qgc/desktop/qgc-survey-angle35.plan",
+        "sha256": "712b50e40162c38fdeea4baa5ff59a8f13364d686662d2b850bcbc6a4538dc92"
+      },
+      "producer": "MISSION55 fixture builder; NOT QGC application"
+    },
+    {
+      "id": "two-survey-patterns-synthetic",
+      "path": "pilot/mission55/fixtures/two-survey-patterns-synthetic.plan",
+      "sha256": "bf98883314b205d3eb53c63c17242c4c8be5a63b1bd7c0f289b792155ec48fe4",
+      "provenance": "SYNTHETIC_DUPLICATE_GEOMETRY_NOT_REGENERATED",
+      "parent": {
+        "path": "app/fixtures/qgc/desktop/qgc-survey-angle35.plan",
+        "sha256": "712b50e40162c38fdeea4baa5ff59a8f13364d686662d2b850bcbc6a4538dc92"
+      },
+      "producer": "MISSION55 fixture builder; NOT QGC application"
+    },
+    {
+      "id": "angle-recipe-0",
+      "path": "pilot/mission55/fixtures/angle-recipe-0.plan",
+      "sha256": "84f0682c0abf30b3c97bdc5ff01dcbf69a55129cc5db4fd4d263c497db2126c1",
+      "provenance": "SYNTHETIC_DESIGN_ONLY_NOT_REGENERATED",
+      "parent": {
+        "path": "app/fixtures/qgc/desktop/qgc-survey-angle35.plan",
+        "sha256": "712b50e40162c38fdeea4baa5ff59a8f13364d686662d2b850bcbc6a4538dc92"
+      },
+      "producer": "MISSION55 fixture builder; NOT QGC application"
+    },
+    {
+      "id": "angle-recipe-35",
+      "path": "pilot/mission55/fixtures/angle-recipe-35.plan",
+      "sha256": "aad665dd4513a9025772e841eb97472b05caeb3f2d06f94e26f8b663810a04a1",
+      "provenance": "SYNTHETIC_DESIGN_ONLY_NOT_REGENERATED",
+      "parent": {
+        "path": "app/fixtures/qgc/desktop/qgc-survey-angle35.plan",
+        "sha256": "712b50e40162c38fdeea4baa5ff59a8f13364d686662d2b850bcbc6a4538dc92"
+      },
+      "producer": "MISSION55 fixture builder; NOT QGC application"
+    },
+    {
+      "id": "angle-recipe-90",
+      "path": "pilot/mission55/fixtures/angle-recipe-90.plan",
+      "sha256": "001fc1ff0dc07e33f8cdd56e932794c0794c770851e8b898fa584c4a63938d64",
+      "provenance": "SYNTHETIC_DESIGN_ONLY_NOT_REGENERATED",
+      "parent": {
+        "path": "app/fixtures/qgc/desktop/qgc-survey-angle35.plan",
+        "sha256": "712b50e40162c38fdeea4baa5ff59a8f13364d686662d2b850bcbc6a4538dc92"
+      },
+      "producer": "MISSION55 fixture builder; NOT QGC application"
+    },
+    {
+      "id": "angle-recipe-179",
+      "path": "pilot/mission55/fixtures/angle-recipe-179.plan",
+      "sha256": "9fc11796b00fc578211d93e422fb9e67f4c3f3b4fd2a929774343552b03f5f03",
+      "provenance": "SYNTHETIC_DESIGN_ONLY_NOT_REGENERATED",
+      "parent": {
+        "path": "app/fixtures/qgc/desktop/qgc-survey-angle35.plan",
+        "sha256": "712b50e40162c38fdeea4baa5ff59a8f13364d686662d2b850bcbc6a4538dc92"
+      },
+      "producer": "MISSION55 fixture builder; NOT QGC application"
+    },
+    {
+      "id": "extension-retained",
+      "path": "pilot/mission55/fixtures/extension-retained.plan",
+      "sha256": "92545f1b8d3bd9dc79a4b158b52a1d25ed095b1d16e530978d9ac699c32ca5a6",
+      "provenance": "SYNTHETIC_UNSUPPORTED_REVIEW_ONLY",
+      "parent": null,
+      "producer": "MISSION55 fixture builder; NOT QGC application"
+    },
+    {
+      "id": "jump-unsupported",
+      "path": "pilot/mission55/fixtures/jump-unsupported.plan",
+      "sha256": "2c8dbaf6440aa901c3f7d98a5de9707951cbaf8d81ce778a9f26e8f86b252388",
+      "provenance": "SYNTHETIC_UNSUPPORTED_REVIEW_ONLY",
+      "parent": null,
+      "producer": "MISSION55 fixture builder; NOT QGC application"
+    },
+    {
+      "id": "bool-param",
+      "path": "pilot/mission55/fixtures/bool-param.plan",
+      "sha256": "5cf3bc350c32ce7d20a8d14693846a06eaa2f0a5c01c0bcde6cb42bb0e54b81b",
+      "provenance": "SYNTHETIC_INVALID_NEGATIVE",
+      "parent": null,
+      "producer": "MISSION55 fixture builder; NOT QGC application"
+    },
+    {
+      "id": "axis-swap",
+      "path": "pilot/mission55/fixtures/axis-swap.plan",
+      "sha256": "f4db7163cfce03b7294666db11b4b781ee82ca269d33f220c8a1322cf285f5b5",
+      "provenance": "SYNTHETIC_INVALID_NEGATIVE",
+      "parent": null,
+      "producer": "MISSION55 fixture builder; NOT QGC application"
+    },
+    {
+      "id": "unknown-version",
+      "path": "pilot/mission55/fixtures/unknown-version.plan",
+      "sha256": "84a5d943ee57775c33e93249f5b620498b4bc4cb81df5f7b5e2c751a8fa50d47",
+      "provenance": "SYNTHETIC_INVALID_NEGATIVE",
+      "parent": null,
+      "producer": "MISSION55 fixture builder; NOT QGC application"
+    },
+    {
+      "id": "frame-conflict",
+      "path": "pilot/mission55/fixtures/frame-conflict.plan",
+      "sha256": "96022d9251670c289b667fce24d210a76e9fc94e85a3c0dc8572dfacf7970793",
+      "provenance": "SYNTHETIC_INVALID_NEGATIVE",
+      "parent": null,
+      "producer": "MISSION55 fixture builder; NOT QGC application"
+    },
+    {
+      "id": "display-alt-conflict",
+      "path": "pilot/mission55/fixtures/display-alt-conflict.plan",
+      "sha256": "515a21fef5bed2c97caa0f4d02a05bf127a6422a02dc522869ed9aaac0c36c12",
+      "provenance": "SYNTHETIC_INVALID_NEGATIVE",
+      "parent": null,
+      "producer": "MISSION55 fixture builder; NOT QGC application"
+    },
+    {
+      "id": "terrain-no-data",
+      "path": "pilot/mission55/fixtures/terrain-no-data.plan",
+      "sha256": "c3681590c35c3cb9345f30c76925bbc76dfa27cbf520d550d9e76b956786f2f5",
+      "provenance": "SYNTHETIC_INVALID_NEGATIVE",
+      "parent": null,
+      "producer": "MISSION55 fixture builder; NOT QGC application"
+    },
+    {
+      "id": "missing-cache",
+      "path": "pilot/mission55/fixtures/missing-cache.plan",
+      "sha256": "04be4a5233cee2abdda71ada6f540b06756a3c905199d6c77a596341ab1fb4e0",
+      "provenance": "SYNTHETIC_INVALID_NEGATIVE",
+      "parent": null,
+      "producer": "MISSION55 fixture builder; NOT QGC application"
+    }
+  ],
+  "retained": [
+    {
+      "id": "QGC-desktop-aeris-simple-qgc-saved",
+      "path": "app/fixtures/qgc/desktop/aeris-simple-qgc-saved.plan",
+      "sha256": "509feaacd40613b19e143fa4880a156c786e6e96d6f9dce334f94ba71943ad9d",
+      "expected": "509feaacd40613b19e143fa4880a156c786e6e96d6f9dce334f94ba71943ad9d",
+      "matches": true,
+      "producer": "Actual QGC5.1.5 desktop serialization",
+      "scope": "Opened AERIS fixture; Save As via actual QGC UI; Home7 and camera stop immediate flags changed"
+    },
+    {
+      "id": "QGC-desktop-aeris-cached-survey-qgc-saved",
+      "path": "app/fixtures/qgc/desktop/aeris-cached-survey-qgc-saved.plan",
+      "sha256": "2b8285af81f89b20796747cc395d7e658561138a123e4c05c71cfc227c75632a",
+      "expected": "2b8285af81f89b20796747cc395d7e658561138a123e4c05c71cfc227c75632a",
+      "matches": true,
+      "producer": "Actual QGC5.1.5 desktop serialization",
+      "scope": "Opened fixture in QGC; Save As; generated cached Items changed without intentional grid edit"
+    },
+    {
+      "id": "QGC-desktop-qgc-survey-angle35",
+      "path": "app/fixtures/qgc/desktop/qgc-survey-angle35.plan",
+      "sha256": "712b50e40162c38fdeea4baa5ff59a8f13364d686662d2b850bcbc6a4538dc92",
+      "expected": "712b50e40162c38fdeea4baa5ff59a8f13364d686662d2b850bcbc6a4538dc92",
+      "matches": true,
+      "producer": "Actual QGC5.1.5 desktop serialization",
+      "scope": "Actual QGC editor angle changed0→35; QGC regenerated route from retained polygon; Save As"
+    },
+    {
+      "id": "QGC-desktop-qgc-created-simple",
+      "path": "app/fixtures/qgc/desktop/qgc-created-simple.plan",
+      "sha256": "0883338619dcf0c140104d3928c8d0c0137cb056574e57dbc84213f545923978",
+      "expected": "0883338619dcf0c140104d3928c8d0c0137cb056574e57dbc84213f545923978",
+      "matches": true,
+      "producer": "Actual QGC5.1.5 desktop serialization",
+      "scope": "Clear saved draft; map Home; No Template; takeoff15; four clicked waypoints default50; RTL; Save As"
+    },
+    {
+      "id": "QGC-desktop-qgc-created-geofence",
+      "path": "app/fixtures/qgc/desktop/qgc-created-geofence.plan",
+      "sha256": "dd93486b1577c8fa809450400835354cc2cc69ec9c887006afaf6d6ab9d45f48",
+      "expected": "dd93486b1577c8fa809450400835354cc2cc69ec9c887006afaf6d6ab9d45f48",
+      "matches": true,
+      "producer": "Actual QGC5.1.5 desktop serialization",
+      "scope": "Actual QGC Circular Fence96.8m inclusion; Save As"
+    },
+    {
+      "id": "QGC-desktop-qgc-created-amsl-fence",
+      "path": "app/fixtures/qgc/desktop/qgc-created-amsl-fence.plan",
+      "sha256": "1c3af83915cb273da2ff6395224f74486c291ce8a27a6ca9eec2401b342134bd",
+      "expected": "1c3af83915cb273da2ff6395224f74486c291ce8a27a6ca9eec2401b342134bd",
+      "matches": true,
+      "producer": "Actual QGC5.1.5 desktop serialization",
+      "scope": "Defaults Mixed; first waypoint Alt Frame AMSL; Save As"
+    },
+    {
+      "id": "QGC-desktop-qgc-reopened-simple",
+      "path": "app/fixtures/qgc/desktop/qgc-reopened-simple.plan",
+      "sha256": "509feaacd40613b19e143fa4880a156c786e6e96d6f9dce334f94ba71943ad9d",
+      "expected": "509feaacd40613b19e143fa4880a156c786e6e96d6f9dce334f94ba71943ad9d",
+      "matches": true,
+      "producer": "Actual QGC5.1.5 desktop serialization",
+      "scope": "Opened saved plan again; Save As; no intentional item edits"
+    },
+    {
+      "id": "QGC-roundtrip03-camera-pair-qgc-saved",
+      "path": "app/fixtures/qgc/roundtrip03/camera-pair-qgc-saved.plan",
+      "sha256": "7b083bf82168d8a5f51052ef3e35b73194fe3776f6bdf56d0e44ff2707529c6b",
+      "expected": "7b083bf82168d8a5f51052ef3e35b73194fe3776f6bdf56d0e44ff2707529c6b",
+      "matches": true,
+      "producer": "Actual QGroundControl5.1.5 desktop",
+      "scope": "Open and Save As; first experiment with numeric reserved fields"
+    },
+    {
+      "id": "QGC-roundtrip03-simple-relative-qgc-saved",
+      "path": "app/fixtures/qgc/roundtrip03/simple-relative-qgc-saved.plan",
+      "sha256": "fe244563ad5c75965219b28e6d8c0c29d2c7fa1161231494cff3f62805937772",
+      "expected": "fe244563ad5c75965219b28e6d8c0c29d2c7fa1161231494cff3f62805937772",
+      "matches": true,
+      "producer": "Actual QGroundControl5.1.5 desktop",
+      "scope": "Open and Save As; no intended edits"
+    },
+    {
+      "id": "QGC-roundtrip03-survey-absolute-qgc-saved",
+      "path": "app/fixtures/qgc/roundtrip03/survey-absolute-qgc-saved.plan",
+      "sha256": "2dc02f3d2e24fb9f4021b365215583f1d14a888eec4cc298108abe842b741230",
+      "expected": "2dc02f3d2e24fb9f4021b365215583f1d14a888eec4cc298108abe842b741230",
+      "matches": true,
+      "producer": "Actual QGroundControl5.1.5 desktop",
+      "scope": "Open flattened stored snapshot and Save As; no intended edits"
+    },
+    {
+      "id": "QGC-roundtrip03-simple-relative-qgc-reopened",
+      "path": "app/fixtures/qgc/roundtrip03/simple-relative-qgc-reopened.plan",
+      "sha256": "fe244563ad5c75965219b28e6d8c0c29d2c7fa1161231494cff3f62805937772",
+      "expected": "fe244563ad5c75965219b28e6d8c0c29d2c7fa1161231494cff3f62805937772",
+      "matches": true,
+      "producer": "Actual QGroundControl5.1.5 desktop",
+      "scope": "Reopen QGC output and Save As; no intended edits"
+    }
+  ],
+  "newQgcExports": 0,
+  "newRagasRuns": 0,
+  "generatedGridRegeneration": "NOT_CHECKED",
+  "scope": "Synthetic/derived fixtures plus hash-pinned retained files"
+}

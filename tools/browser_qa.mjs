@@ -1,0 +1,46 @@
+import assert from 'node:assert/strict';
+import { writeFile, readFile } from 'node:fs/promises';
+import { fileURLToPath, pathToFileURL } from 'node:url';
+import path from 'node:path';
+const root=fileURLToPath(new URL('../',import.meta.url)), output=path.join(root,process.env.AERIS_QA_OUTPUT||'evidence');
+let playwright;
+try { playwright = process.env.AERIS_PLAYWRIGHT_MODULE ? await import(pathToFileURL(process.env.AERIS_PLAYWRIGHT_MODULE)) : await import('playwright'); }
+catch { throw new Error('Provide installed Playwright via AERIS_PLAYWRIGHT_MODULE; app itself needs no browser dependency.'); }
+const browser=await playwright.chromium.launch({headless:true});
+const context=await browser.newContext({viewport:{width:1440,height:1000},acceptDownloads:true});
+const page=await context.newPage();const checks=[],errors=[],external=[];
+page.on('pageerror',e=>errors.push(e.message));
+page.on('console',msg=>{if(msg.type()==='error')errors.push(msg.text());});
+page.on('request',req=>{if(!req.url().startsWith('http://127.0.0.1:8788')&&!req.url().startsWith('data:'))external.push(req.url());});
+async function missionAction(id){if(await page.locator('#mission-menu').isHidden())await page.locator('#open-mission-menu').click();await page.locator('#'+id).click();}
+async function testAction(id){if(await page.locator('#test-console').isHidden())await page.locator('#open-test-console').click();await page.locator('#'+id).click();}
+async function check(name,fn){await fn();checks.push({name,status:'PASS'});console.log('PASS',name);}
+try{
+  await page.goto('http://127.0.0.1:8788');await page.locator('#mission-summary .metric').first().waitFor();await page.evaluate(()=>document.fonts.ready);
+  await check('REQ-008 initial plan loads with explicit rehearsal labeling',async()=>{assert.match(await page.locator('.rehearsal-banner').textContent(),/Dữ liệu giả lập/);assert.match(await page.locator('#mission-summary').textContent(),/7,92/);});
+  await page.screenshot({path:path.join(output,'plan-desktop.png'),fullPage:true});
+  await check('REQ-005 dirty inputs cannot export previous mission',async()=>{await page.locator('[name=width]').fill('200');assert.equal(await page.locator('#export-mission').isDisabled(),true);await page.locator('[data-workspace=fly]').click();assert.equal(await page.locator('[data-mode=AUTO]').isDisabled(),true);await page.locator('[data-workspace=plan]').click();});
+  await check('REQ-003 recalculation changes actual summary',async()=>{await page.locator('.recalculate').click();assert.match(await page.locator('#mission-summary').textContent(),/4,4/);});
+  await check('REQ-004 camera-rate failure blocks save/export/rehearsal',async()=>{await page.locator('details summary').click();await page.locator('[name=minInterval]').fill('10');await page.locator('.recalculate').click();assert.match(await page.locator('#mission-validation').textContent(),/chụp nhanh/);assert.equal(await page.locator('#save-mission').isDisabled(),true);assert.equal(await page.locator('#export-mission').isDisabled(),true);await page.locator('[name=minInterval]').fill('1');await page.locator('.recalculate').click();});
+  await check('REQ-005 local save/read restores mission and replans',async()=>{await missionAction('save-mission');await page.locator('[name=width]').fill('500');await page.locator('.recalculate').click();await missionAction('load-mission');assert.equal(await page.locator('[name=width]').inputValue(),'200');assert.match(await page.locator('#mission-summary').textContent(),/4,4/);});
+  await check('REQ-005 download/import round-trip preserves settings',async()=>{const promise=page.waitForEvent('download');await missionAction('export-mission');const download=await promise;const target=path.join(output,'survey-01.aeris.json');await download.saveAs(target);const pkg=JSON.parse(await readFile(target,'utf8'));assert.equal(pkg.operational,false);assert.equal(pkg.settings.width,200);await page.locator('#mission-file').setInputFiles(target);assert.match(await page.locator('#notice').textContent(),/Đã nhập/);});
+  await check('REQ-005 malformed import remains visible without replacing plan',async()=>{await page.locator('#mission-file').setInputFiles({name:'bad.json',mimeType:'application/json',buffer:Buffer.from('{')});await page.locator('#notice').filter({hasText:'Không đọc được'}).waitFor();assert.equal(await page.locator('[name=width]').inputValue(),'200');});
+  await page.locator('#open-fly').click();
+  await check('REQ-006 ACK alone does not change mode',async()=>{await page.locator('[data-mode=AUTO]').click();await testAction('ack-accepted');assert.match(await page.locator('#command-state').textContent(),/chưa xác nhận/);assert.equal(await page.locator('#flight-mode').textContent(),'HOLD');});
+  await check('REQ-006 independent telemetry marks observed execution',async()=>{await testAction('observe-mode');assert.match(await page.locator('#command-state').textContent(),/đã xác nhận/);assert.equal(await page.locator('#flight-mode').textContent(),'AUTO');});
+  await check('REQ-007 video failure is distinct from telemetry link',async()=>{await testAction('toggle-video');assert.match(await page.locator('#link-label').textContent(),/Telemetry diễn tập/);await page.locator('[data-workspace=inspect]').click();assert.match(await page.locator('#video-status').textContent(),/mất kênh video/);await page.locator('[data-workspace=fly]').click();});
+  await check('REQ-007 stale telemetry labels values and gates new commands',async()=>{await testAction('pause-telemetry');await page.waitForFunction(()=>document.getElementById('link-label').textContent==='Telemetry đã cũ',null,{timeout:5000});assert.equal(await page.locator('[data-mode=RTL]').isDisabled(),true);assert.match(await page.locator('#flight-mode').textContent(),/dữ liệu cũ/);await testAction('pause-telemetry');});
+  await check('REQ-006 rejected command is displayed',async()=>{await page.locator('[data-mode=RTL]').click();await testAction('ack-rejected');assert.match(await page.locator('#command-state').textContent(),/từ chối/);});
+  await check('REQ-007 no ACK causes explicit ambiguous timeout',async()=>{await page.locator('[data-mode=HOLD]').click();await page.waitForFunction(()=>document.getElementById('command-state').textContent.includes('kết quả chưa xác định'),null,{timeout:7000});assert.equal(await page.locator('#flight-mode').textContent(),'AUTO');});
+  await page.screenshot({path:path.join(output,'fly-desktop.png'),fullPage:true});
+  await check('REQ-009 exported event log captures actual rehearsal states',async()=>{await page.locator('[data-workspace=review]').click();const promise=page.waitForEvent('download');await page.locator('#export-events').click();const d=await promise;const target=path.join(output,'rehearsal-events.json');await d.saveAs(target);const log=JSON.parse(await readFile(target,'utf8'));assert.equal(log.operational,false);for(const type of ['command-sent','command-accepted','command-observed','command-rejected','command-timed-out'])assert.ok(log.events.some(e=>e.type===type),type);assert.ok(log.events.every(e=>e.aircraftId==='SIM-001'&&e.sessionId===log.sessionId));});
+  await check('REQ-008 loaded core workflow works with browser network disabled',async()=>{await context.setOffline(true);await page.locator('[data-workspace=plan]').click();await page.locator('[name=width]').fill('360');await page.locator('.recalculate').click();assert.match(await page.locator('#mission-summary').textContent(),/7,92/);await missionAction('save-mission');await context.setOffline(false);});
+  await check('REQ-008 keyboard focus reaches active workspace controls',async()=>{await page.locator('[data-workspace=fly]').focus();await page.keyboard.press('Enter');assert.equal(await page.locator('#workspace-fly').isVisible(),true);});
+  await page.locator('[data-workspace=plan]').click();
+  await check('REQ-008 desktop/tablet/mobile all workspaces avoid horizontal viewport overflow',async()=>{for(const [width,height] of [[1440,1000],[1024,768],[768,1024],[390,844]]){await page.setViewportSize({width,height});for(const name of ['plan','fly','inspect','review']){await page.locator(`[data-workspace=${name}]`).click();assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),true,`${name} ${width}`);}await page.locator('[data-workspace=plan]').click();if(width===390)await page.screenshot({path:path.join(output,'plan-mobile.png'),fullPage:true});}});
+  await check('REQ-008 core pages request no external resources and have no runtime errors',async()=>{assert.deepEqual(external,[]);assert.deepEqual(errors,[]);});
+  await check('REQ-008 HTTP surface serves only static allowlist',async()=>{for(const url of ['/../package.json','/docs/BLUEPRINT.md','/core/../../sot/source_canonical/product_truth.json']){const res=await context.request.get('http://127.0.0.1:8788'+url);assert.equal(res.status(),404);}const post=await context.request.post('http://127.0.0.1:8788');assert.equal(post.status(),405);});
+} finally{
+  await writeFile(path.join(output,'browser-qa.json'),JSON.stringify({checkedAt:new Date().toISOString(),browser:'Chromium headless',checks,errors,externalRequests:external,scope:'Synthetic local workflow only; not controller/operator/hardware testing'},null,2)+'\n');
+  await browser.close();
+}

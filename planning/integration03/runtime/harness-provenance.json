@@ -1,0 +1,94 @@
+{
+  "android_qa.py": {
+    "source": "planning/crew02/qa/android_qa.py",
+    "sha256": "5828eb39b3a4d6feb908ed8aa1500825bd2419de0b7bb36dea23da565aaba7a2"
+  },
+  "ui94.py": {
+    "source": "planning/crew02/qa/ui94.py",
+    "sha256": "79bfb19c7e59cb201115fa74bc6504ea102093c919ee8ba16ae92b071a2d7bb6"
+  },
+  "ui97.py": {
+    "source": "planning/crew02/qa/ui97.py",
+    "sha256": "2f4007df04f33b680e2807b4046d51c451690b63fa53ae698b5525eda169a600"
+  },
+  "ui98.py": {
+    "source": "planning/crew02/qa/ui98.py",
+    "sha256": "ecd8b0dd3b0a876e8414963b338278b7bb3ec082e204fd875721855e20963390"
+  },
+  "ui01.py": {
+    "source": "planning/crew02/qa/ui01.py",
+    "sha256": "36753f4add3fda0260785464138bc85f40a63aabb1ebf44f0a7d8bcab18051af"
+  },
+  "start.py": {
+    "source": "planning/crew02/qa/start.py",
+    "sha256": "58e342eb48993c6750bdd029ad8a6e65cb865585dd85a8d24dd56c25af0e58a4"
+  },
+  "setup_native.py": {
+    "source": "planning/crew02/qa/setup_native.py",
+    "sha256": "668d76b6e5d05e765dced237ec01cd65102f43fcae66bca4afe61d21b189696e"
+  },
+  "wait_health.py": {
+    "source": "planning/crew02/qa/wait_health.py",
+    "sha256": "6cb2c7cbd86d1c71a530766396169b292601f468333803fd25fd85177ead46f2"
+  },
+  "private_snapshot.py": {
+    "source": "planning/crew02/qa/private_snapshot.py",
+    "sha256": "dfe22a7542984096b76ded527b4bd1f72a9d08f3fb4680e2fb1f8c026c9c4e90"
+  },
+  "import_plan.py": {
+    "source": "planning/crew02/qa/import_plan.py",
+    "sha256": "a5c434e3bb76f6b98614c85c9f4987a8f8080a8691ffb7df9ea0b1391384f467"
+  },
+  "peers.mjs": {
+    "source": "planning/crew02/qa/peers.mjs",
+    "sha256": "31c338f5d7c6a23bc720aa319c1d5b97b5ba5383920ef18d23b95e8fee795ca4"
+  },
+  "sitl.parm": {
+    "source": "planning/crew02/qa/sitl.parm",
+    "sha256": "341fe8138bb321bb0fdc15f1659aed36ab527ebfaf79901d309a510170cbf921"
+  },
+  "b_rpc.py": {
+    "source": "planning/crew02/qa/b_rpc.py",
+    "sha256": "45336c4217f9b9bd13db0ad61275097c8bd06d78cade3b1e628fc4ee9ac390f0"
+  },
+  "start_auto_v2.py": {
+    "source": "planning/crew02/qa/start_auto_v2.py",
+    "sha256": "068db7dcc5614de666342e48c58c1cc282c9a5b1e0e3ead62197f5b630410481"
+  },
+  "set_angles.py": {
+    "source": "planning/crew02/qa/set_angles.py",
+    "sha256": "772d3b055ee0bdcad9f6c91fc5cb58166cd644a22b54620dd0e683405218bb85"
+  },
+  "nominal_a_consent.py": {
+    "source": "planning/crew02/qa/nominal_a_consent.py",
+    "sha256": "4b6cd30ef10fa52f432635e9fae215208ab534448385ef379408eff5548d5901"
+  },
+  "nominal_b_values.py": {
+    "source": "planning/crew02/qa/nominal_b_values.py",
+    "sha256": "560755199cf1e2f04acbf9f1427a89d0a937f65121281bc20be4d8212ec327f8"
+  },
+  "pilot_loss_v2.py": {
+    "source": "planning/crew02/qa/pilot_loss_v2.py",
+    "sha256": "90b714829a00283fd7976a778a6c3ac075095282952d8f7314a0032520784820"
+  },
+  "partition_final.py": {
+    "source": "planning/crew02/qa/partition_final.py",
+    "sha256": "e241d9f5e6f344c3754254e1e61fc2f0ca750f6df6d8a418684e75fbb43b74a4"
+  },
+  "archive_loss.py": {
+    "source": "planning/crew02/qa/archive_loss.py",
+    "sha256": "57e2a2f5a4bc97c2a83b02f53e3fab9f8add2ac9e3b92369e758c3b99d3c992e"
+  },
+  "finish_nominal.py": {
+    "source": "planning/crew02/qa/finish_nominal.py",
+    "sha256": "87f3a7e630e462d5a7edbc90f15a7644613a786d91b1ca1aa883627374569527"
+  },
+  "saf_finish.py": {
+    "source": "planning/crew02/qa/saf_finish.py",
+    "sha256": "bab2d2d1ac267ec88895761901b8eae1c20ea85d08c50704091844fe4d1b287a"
+  },
+  "coldboot_manifest.py": {
+    "source": "planning/crew02/qa/coldboot_manifest.py",
+    "sha256": "40dba5083fd98d7e1024e38e1cf0a952621e20862f259526151902cc5b656ae1"
+  }
+}

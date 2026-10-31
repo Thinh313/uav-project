@@ -1,0 +1,13 @@
+# ADR HOST01: synthetic media qualification before Android availability
+
+Status: accepted within host-preparation scope, 2026-10-21. Authority: user requested BIG-02 before preparing Android; no change to full milestone acceptance.
+
+Reuse the existing PHONE06 cockpit through a new, disposable curated overlay. Preserve its pinned source and APK. Use cached browser WebCodecs and a bounded Node loopback relay rather than installing ffmpeg, another media stack or a new app. This is the smallest runnable encoded/decode/display experiment available without Android/camera/SDK and avoids spending disk space on a second runtime. H264 support must be probed; VP8 is an explicit separate engineering profile. A software preference does not prove the actual hardware/software codec backend.
+
+This relay is an instrumented single-consumer host test fixture, not a selected production video transport or fanout architecture. Hardware topology and jitter bottleneck remain unknown. Multi-device, network, thermal-load and camera clock qualification remain mandatory later. No measurement from this fixture is camera glass-to-glass latency. The direct baseline is the existing unmeasured synthetic clip/display: the new slice adds actual encoded bytes and bounded pipeline measurements; no operational advantage is claimed before device comparison.
+
+Preserve the original JPEG unchanged. Attach canonical sidecar metadata with exposure clock, GNSS bracket, identities, uncertainty, units and datum instead of rewriting EXIF. Independently validate package hashes and geospatial derivation at the receiver. The first contract accepts only explicitly synthetic data and ellipsoid altitude; MSL/relative-Home conversion needs an explicit future adapter with a known geoid/Home source. The captured position is aircraft GNSS, with camera lever arm unknown and target position undetermined.
+
+Revisit transport choice only after actual camera/phone topology measurements. Add SDKs, RTSP/WebRTC, hardware decode or native integration only when a concrete configuration and measurement justify them; this decision authorizes none of those deployments.
+
+Primary references consulted: [VideoEncoder](https://developer.mozilla.org/en-US/docs/Web/API/VideoEncoder), [VideoDecoder](https://developer.mozilla.org/en-US/docs/Web/API/VideoDecoder) and [MAVLink CAMERA_IMAGE_CAPTURED](https://mavlink.io/en/messages/common.html#CAMERA_IMAGE_CAPTURED). API support and queue counters are interface documentation, not measured performance. The MAVLink image message has distinct boot/UTC timestamps and altitude fields; it is not a substitute for retrieved image bytes or clock qualification. No live camera message was tested here.

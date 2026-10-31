@@ -1,0 +1,69 @@
+{
+  "status": "PASS_MOCK_ONLY_CLOCK11_NOT_INTEGRATED",
+  "checks": {
+    "invalidUnsupportedAndMixedBootBasis": "PASS_14_NEGATIVE_CASES",
+    "AP225": {
+      "exact": "PASS",
+      "oneMsShort": "REFUSED",
+      "authorityGranted": false
+    },
+    "emulator240": {
+      "exact": "PASS",
+      "oneMsShort": "REFUSED",
+      "authorityGranted": false
+    },
+    "closure90": {
+      "exact": "PASS",
+      "oneMsShort": "REFUSED",
+      "noControllerCommandOrThread": true
+    },
+    "twoAppleProcesses": {
+      "parentPid": 11603,
+      "boot": "FA789860-E721-4DC3-A5BA-7097CD9C07DE",
+      "parentOldMonotonicAnchorNs": 407452958,
+      "parentRawBeforeNs": 268676874678750,
+      "parentRawAfterNs": 268677024296833,
+      "permit": {
+        "boot": "FA789860-E721-4DC3-A5BA-7097CD9C07DE",
+        "basis": "MACOS_CLOCK_UPTIME_RAW_NS_SAME_HOST_BOOT_V1",
+        "hostAnchorNs": 268676874658458,
+        "hostDeadlineNs": 271376874658458,
+        "emulatorAnchorNs": 268676874658458,
+        "emulatorDeadlineNs": 271376874658458
+      },
+      "child": {
+        "pid": 11614,
+        "ppid": 11603,
+        "boot": "FA789860-E721-4DC3-A5BA-7097CD9C07DE",
+        "basis": "MACOS_CLOCK_UPTIME_RAW_NS_SAME_HOST_BOOT_V1",
+        "nowNs": 268677020844416,
+        "oldAppleMonotonicNs": 103139541,
+        "hostRemainingNs": 2699853814042,
+        "emulatorRemainingNs": 2699853814042,
+        "version": "3.9.6 (default, Aug 17 2026, 12:07:42) \n[Clang 21.0.0 (clang-2100.3.34.1)]",
+        "executable": "/Applications/Xcode.app/Contents/Developer/usr/bin/python3"
+      },
+      "oldRelativeOriginWouldMakeParentAnchorFuture": true,
+      "newSharedRawOrderAndOriginalDeadline": "PASS"
+    },
+    "BrewExactBasisObservation": {
+      "outerAppleBeforeNs": 268677024516833,
+      "outerAppleAfterNs": 268677050384000,
+      "beforeRawNs": 268677047857375,
+      "monotonicNs": 268677047858000,
+      "afterRawNs": 268677047858416,
+      "clockId": 8,
+      "version": "3.14.6 (main, Jun 10 2026, 10:03:53) [Clang 21.0.0 (clang-2100.0.123.102)]",
+      "executable": "/opt/homebrew/opt/python@3.14/bin/python3.14",
+      "scope": "Read-only sequential observation on CLOCK_UPTIME_RAW; no wall-clock alignment, RTC or alternate sleep basis."
+    }
+  },
+  "source": {
+    "clockModuleSha256": "40fba1dc750f09ba042668c916547f88ef59eb05c0c9de2f07bd8defcb5bda17",
+    "testSha256": "4a1f58878865879b96b6fe3214ac0a82b4737ad74e70817177664e8d4a8ed126",
+    "frozenDeadlineSha256": "c76f20bbc0a33ed7ddc7d6254724f213b65486458df5ad4a9bf904b5c4cf050d",
+    "frozenControllerSha256": "c9aae044831467b1756d9f4f51e2eec61f25176e7920c9244d9f15eceeb954fa"
+  },
+  "scope": "Only clock/sysctl reads, two-Apple-process proof plus separate Brew observation, frozen guard objects with injected pure mock ns; no command/controller campaign/thread/ports/AP/Android or stdlib monkeypatch. All G10 source and evidence unchanged.",
+  "futureIntegration": "NOT_IMPLEMENTED_NOT_AUTHORIZED_FOR_ACTUAL"
+}

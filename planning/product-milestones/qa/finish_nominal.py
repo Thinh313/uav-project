@@ -1,0 +1,26 @@
+from ui98 import *
+import importlib.util
+owned();run=sys.argv[1];out=E/'runs'/run;sp=importlib.util.spec_from_file_location('m',R/'pilot/apstream40/oracle-v2.py');m=importlib.util.module_from_spec(sp);sp.loader.exec_module(m);meta=events98(run,'META')[0][1];needed={i['seq']for i in meta['document']['compiled']['plan']['compiled']['items']if i['seq']>0 and i['command']==16};end=time.monotonic()+200
+while time.monotonic()<end:
+ p=m.MAVLink(None);p.robust_parsing=True;latest={};reached=set();armed=False
+ for line in(out/'observer.jsonl').read_bytes().splitlines():
+  r=json.loads(line)
+  for f in p.parse_buffer(bytes.fromhex(r['hex']))or[]:
+   if f.get_srcSystem()!=42 or f.get_srcComponent()!=1:continue
+   latest[f.get_msgId()]=(int(r['hostMonoNs']),f)
+   if f.get_msgId()==0:armed|=bool(f.base_mode&128)
+   if f.get_msgId()==46:reached.add(f.seq)
+ if armed and needed<=reached and all(k in latest and time.monotonic_ns()-latest[k][0]<3e9 for k in[0,245,33])and not latest[0][1].base_mode&128 and latest[245][1].landed_state==1 and abs(latest[33][1].relative_alt)<1000:break
+ if(out/'closure.json').exists():raise AssertionError('RUNTIME_CLOSED')
+ time.sleep(2)
+else:raise AssertionError('OBSERVER_NOMINAL_GROUND_DEADLINE')
+tap94('Preflight / Fly SITL');capture(run+'-ground');tap94('complete83');wait98(run,'CLOSED',seconds=6);capture(run+'-review-saved');journal(run+'-workspace-closed')
+b=raw98(run);(out/'android-raw.jsonl').open('xb').write(b);raw=adb('exec-out','tar','-C','/data/user/0/'+P+'/files','-cf','-','.');assert len(raw)<64*2**20;(out/'private-closed.tar').open('xb').write(raw)
+with tarfile.open(fileobj=io.BytesIO(raw))as t:
+ reviews=[]
+ for e in t.getmembers():
+  if e.isfile()and '/sitl/'in e.name and e.name.endswith('.bin'):
+   q=json.loads(t.extractfile(e).read().split(b'\n',6)[6])
+   if q['run']==run:reviews.append(q)
+ assert len(reviews)==1 and reviews[0]['accepted']is True;assert reviews[0]['authorityRestorable']is False;(out/'review.json').open('x').write(json.dumps(reviews[0],ensure_ascii=False,indent=2))
+(out/'stop-request.json').open('x').write('{"reason":"Nominal complete/raw and review saved; observer ground-disarm"}');print('NOMINAL_REVIEW_SAVED',flush=True)

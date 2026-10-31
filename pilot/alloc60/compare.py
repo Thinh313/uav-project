@@ -1,0 +1,14 @@
+from pathlib import Path
+import json,statistics
+R=Path(__file__).resolve().parents[2];E=R/'evidence/alloc60';rows=[]
+for i in range(1,5):
+ tag=f'R{i}';driver=json.loads((E/f'a60{tag}-driver-result.json').read_text());rid=driver['owner']['run'];out=E/'runs'/rid
+ req=json.loads((out/'request.json').read_text());read=json.loads((out/'readback.json').read_text());io=json.loads((out/'io-analysis.json').read_text());pace=json.loads((E/f'{tag}-pacing.json').read_text());ext=json.loads((out/'extent-verification.json').read_text());b=json.loads((E/f'{tag}-browser.json').read_text());ui=b['qa']['metrics']['timing']
+ rows.append({'tag':tag,'run':rid,'allocation':req['allocation'],'driverStatus':driver['status'],'frames':read['frames'],'RTF':pace['wholeRTF'],'minimumFull5sRTF':min(v['fixedWallBucketRTF']for v in pace['windows']if v['fullFiveSeconds']),'gapP99Ms':pace['hostReceiveGapMs']['p99'],'gapMaxMs':pace['hostReceiveGapMs']['max'],'capClips':pace['ap']['capClipCount'],'discardedDebtUs':pace['ap']['discardedDebtUs'],'backendPresendMs':io['hostReceiveToSendMs'],'rxWriteMs':io['groups']['write:RX']['wallMs'],'intentWriteMs':io['groups']['write:INTENT']['wallMs'],'sentWriteMs':io['groups']['write:SENT']['wallMs'],'fsyncMs':io['groups']['fsync:INTENT']['wallMs'],'allocationCallMs':io['groups'].get('preallocate:EXTENT',{}).get('wallMs'),'wakeThreadMaxMs':io['wake']['thread']['latenessMs']['max'],'wakeProcessMaxMs':io['wake']['process']['latenessMs']['max'],'uiHz':ui['measuredHz'],'uiMaxGapMs':ui['intervalMaxMs'],'walLogicalBytes':ext['logicalBytesAfterClose'],'walPhysicalBytes':ext['physicalBytesAfterClose']})
+groups={a:[r for r in rows if r['allocation']==a]for a in ['none','preallocate']};effects={}
+for metric in ['rxWriteMs','intentWriteMs','sentWriteMs','fsyncMs','backendPresendMs']:
+ effects[metric]={q:{a:statistics.median(r[metric][q]for r in rs)for a,rs in groups.items()}for q in ['p50','p95','p99','max']}
+ for q,d in effects[metric].items():d['preallocatedDivNone']=d['preallocate']/d['none'] if d['none']else None
+r={'status':'DESCRIPTIVE_ABBA_NOT_BROAD_1X_ACCEPTANCE','order':[r['allocation']for r in rows],'actualFrames':sum(r['frames']for r in rows),'runs':rows,'medianOfRunQuantilesMs':effects,'method':'ABBA, two samples/variant, same source/observer/UI, no controlled host load or statistical causality claim; per-run quantiles are not pooled quantiles. Startup allocation shown separately and not subtracted.','stable1x':'NOT_ACCEPTED_NO_NEW_WINDOW_TOLERANCE','productionSelection':'NONE_KEEP_EXPERIMENTAL'}
+with(E/'comparison.json').open('x')as f:json.dump(r,f,indent=2)
+print(json.dumps({'frames':r['actualFrames'],'runs':[{k:v for k,v in row.items()if k in ['tag','allocation','frames','RTF','minimumFull5sRTF','capClips','uiHz']}for row in rows],'effectsP99':{k:v['p99']for k,v in effects.items()}},indent=2))

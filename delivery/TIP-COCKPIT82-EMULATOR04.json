@@ -1,0 +1,44 @@
+{
+  "id": "COCKPIT82-EMULATOR04",
+  "request": "Complete existing signed development02 survey→preflight→Fly mock→review and persistence/restart on owned emulator5582",
+  "requirements": {
+    "E82-01": "Reproduce/measure host-guest/ADB/render readiness; fix environment without relaxing product gates",
+    "E82-02": "Install exact existing development02 and preserve saved31m/1.1mps journal on existing AVD",
+    "E82-03": "Perform survey edit/save/compile, explicit pilot grant, fresh preflight confirmations and Fly mock; ACK does not advance cursor",
+    "E82-04": "Complete observed route and landing, semantic review, no real media claim",
+    "E82-05": "Force-stop/relaunch and cold reboot persistence exactHEAD; no restored control authority",
+    "E82-06": "Protected manifest/fileSHA preservation,20GiB floor, bounded process and SDK cleanup"
+  },
+  "constraints": [
+    "No production signature/build or app asset edits",
+    "No source/candidate/ENDURE/SOT mutations",
+    "No deadline/quota relaxation or synthetic evidence substitution",
+    "Use authorized ADB/UIAutomator/root only owned emulator5582",
+    "Preserve prior reports including PARTIAL; create new evidence overlay"
+  ],
+  "hypotheses": [
+    {
+      "id": "H1",
+      "claim": "Qt/host graphics presentation contributes to emulator stalls",
+      "confidence": "medium",
+      "test": "headless host renderer same image/APK; trace capture/ADB latencies"
+    },
+    {
+      "id": "H2",
+      "claim": "VM acceleration/scheduling or guest resource limits cause whole-system stalls",
+      "confidence": "medium",
+      "test": "accel-check, explicit accel on, host/guest uptime and resource samples"
+    },
+    {
+      "id": "H3",
+      "claim": "WebView/ART startup or app workload causes UI-only stall",
+      "confidence": "open",
+      "test": "compare shell latency vs UI/gfxinfo/logcat and warm initialization"
+    }
+  ],
+  "decisions": [
+    "Reversible runtime/environment checks already authorized; no new approval checkpoint",
+    "Same agent sequential implementation and verification; not independent review"
+  ],
+  "method": "Vibecode Kit6.3 transfer debug protocol, Jev OFF"
+}

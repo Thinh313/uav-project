@@ -1,0 +1,61 @@
+# HOSTVIDEO03: nguồn host, Android chỉ nhận và giải mã
+
+**Đã triển khai và kiểm đạt hai cửa sổ video 30 giây trên hai cold boot độc lập. Phạm vi nghiệm thu là harness video cô lập; FIELD02 và phần cứng Hera chưa được nâng trạng thái.**
+
+Ngày 22/10/2026. Nguồn RGB tổng hợp được tạo/mã hóa trong Chrome trên laptop, truyền qua relay localhost và ADB reverse tới APK Android hiện có. Android chỉ chạy đường nhận, giải mã và hiển thị. Không tạo APK, chữ ký, dependency hoặc SDK mới.
+
+## Kết quả thực tế
+
+| Chỉ tiêu | Ngưỡng | Cold cohort01 / host01 | Cold cohort03 / host02 |
+|---|---:|---:|---:|
+| Frame / thời gian đo | ≥30 giây | 885 / 30.001,1 ms | 886 / 30.001,2 ms |
+| FPS hiển thị, tính cả ngắt relay | ≥24 | **29,499 PASS** | **29,532 PASS** |
+| P95 upper nguồn → canvas | ≤300 ms | **22,112 ms PASS** | **21,871 ms PASS** |
+| Bấm mở viewer lần đầu → fresh-ready | ≤1.500 ms | **225,9 ms PASS** | **234,5 ms PASS** |
+| Phục hồi sau ngắt relay 500 ms | ≤2.000 ms | **553,2 ms PASS** | **545,8 ms PASS** |
+| Workspace native trước/sau | Không đổi SHA | 15/15 file khớp | 15/15 file khớp |
+
+QA độc lập tính lại từng sample, khoảng sai số đồng hồ, FPS, P95 và frame phục hồi mới sau thời điểm relay mở lại. Không bỏ 500 ms outage khỏi mẫu số FPS, không ghép số tốt của các lượt khác nhau. Hai boot có bootID, PID app, server/source identity được đối chiếu; Android Activity Manager đều ghi COLD. Không probe encoder hoặc warm-retry viewer để lấy điểm đạt.
+
+Cấu hình giữ nguyên VP8 1280×720, 30 FPS, 4 Mbps, prefer-software; Android 13/API33 arm64, WebView101.0.4951.61, 4 CPU, 2 GiB RAM, viewport1280×716. Backend codec thực chưa được xác định. “225,9/234,5 ms” là thời gian từ thao tác mở viewer đến khung mới sẵn sàng trong app process mới; không phải tổng thời gian boot emulator hoặc khởi động camera. Nguồn laptop đã chạy khi viewer được mở.
+
+## Thay đổi được bàn giao
+
+Mã mới nằm riêng trong `pilot/hostvideo03`: wrapper media-only, trang nhận Android, điều khiển đo/ngắt/lưu và bộ kiểm. Relay, producer, viewer FIELD02 và các fence clock/session/boot/config tiếp tục dùng đúng byte cũ. Không nhúng iframe producer hoặc gọi encode-probe trên Android. Thư viện client được tái sử dụng có một export encode-probe không được gọi; không tuyên bố toàn bộ byte JavaScript tải xuống không chứa từ khóa encoder.
+
+Request User-Agent thực phân biệt Chrome laptop phát chunk với Android nhận video; Android không gọi publisher API hoặc tải publisher assets trong các cohort đã kiểm. Đây là tách đường thực thi, không phải cơ chế xác thực mạnh ngăn mọi client khác đóng vai publisher. Wrapper không có API điều khiển bay/payload/workspace. Yêu cầu mirror tự động từ APK được từ chối, không tạo mirror hoặc sửa journal cũ. Báo cáo raw giữ nguyên; sidecar gắn SHA và identity, không biến chứng cứ topology thành số đo hiệu suất mới.
+
+Mock và QA đã kiểm đường receiver không tự chạy encoder, không tự nối lại khi foreground, dừng/fence callback muộn sau background, coverage canvas, action/route sai, SHA/session mismatch, ghi sidecar và guard tài nguyên. Builder mock 8 nhóm, VM receiver 6 nhóm; QA độc lập receiver/route/resource 6 nhóm và sidecar 5 nhóm. Các nhóm có giao nhau về mục tiêu, không cộng thành phần trăm trưởng thành sản phẩm.
+
+## Lượt bị chặn được giữ nguyên
+
+Có **ba cold boot, hai cửa sổ đo thành công**. Cohort02 bị chặn trước khi đo vì nguồn host01 phát liên tục tới quota byte 128 MiB. Chrome báo BODY_OR_RUN_BYTE_BOUND; server ghi 134.235.385 byte đã đọc, không có báo cáo đo thứ hai. Đây không phải bằng chứng lỗi codec hoặc cold-start thành công. Tất cả log, screenshot, hash workspace và closure của lượt này được giữ.
+
+Quyết định L2 cho phép đúng một boot bù03 và dùng phiên host02 mới trong ngân sách hai host session đã khai báo. Không nới quota, FPS, profile, clock bounds hay thời gian khởi tạo. Nguồn mới được mở sát lượt kiểm để giảm thời gian phát chờ. Không reset bộ đếm của phiên cũ hoặc retry POST lỗi. Quota test vẫn tồn tại: chưa nghiệm thu video liên tục dài hạn hoặc vận hành qua nhiều phiên sản phẩm thực.
+
+## Bảo toàn và tài nguyên
+
+Kiểm cuối: 1.486 file baseline bảo vệ, 78 source FIELD02, 1.393 file bằng chứng trước task, 7 source native và 17 đường dẫn source/import được pin đều không lệch SHA. Source/candidate đóng băng và ENDURE giữ nguyên trong baseline đã khai báo. 95 đường dẫn Git-deleted có trước task vẫn là ngoại lệ; không tuyên bố toàn repository nguyên vẹn.
+
+APK development02 giữ SHA256 `df49885f45fd94fb05226712838769ccca48ecb4185b8d7a0c71a68bba03753d`, được đối chiếu cả trên emulator. Không ký lại, không build, chạy SITL, gửi lệnh bay hoặc công bố ra ngoài.
+
+Admission 31 mẫu ≥29 GiB; guard 28 GiB và dự báo xu hướng dừng sớm. Mức trống thấp nhất trong trace runtime khoảng 34,22 GiB; kiểm cuối khoảng 34,21 GiB. Không ghi nhận vi phạm sàn 20 GiB. Dữ liệu mới khoảng 4 MiB, dưới ngân sách 64 MiB. Đây là quan sát theo mẫu, không phải bảo đảm trước mọi tác động ghi của tiến trình ngoài task.
+
+Đã dừng producer, đóng riêng tab Chrome do task tạo, đóng ba emulator và hai server sạch; các cổng8872/8873/5582/5583 không còn listener. Giữ tab Chrome ban đầu, AVD, APK và toàn bộ bằng chứng. Không tạo bản sao toàn project, cache build, venv hoặc scratch ngoài repo; không có scratch mới cần xóa. Docker image prune thu hồi 0 byte, không prune volume/container.
+
+## Ý nghĩa và bước kế tiếp
+
+Topology mới đáp ứng các ngưỡng video trong hai cửa sổ đã kiểm. So với lượt FIELD02 repair01 cuối 7,95 FPS/P95 573 ms, kết quả mới tốt hơn trong môi trường quan sát này. Do nguồn chuyển sang browser/CPU khác, tải host và thời điểm khác, chưa có đối chứng đủ để quy toàn bộ cải thiện cho một nguyên nhân hoặc tuyên bố ưu thế mọi mặt.
+
+Phần tiếp theo hợp lý là ghép đường nhận đã kiểm vào cockpit cô lập, kiểm đồng thời nhiệm vụ và payload, rồi thay nguồn tổng hợp bằng stream camera thật. Nghiệm thu dài hạn cần chính sách lifecycle/quota nguồn phù hợp và chiến dịch riêng. Xiaomi/HeraHub, radio, camera exposure/photon latency, RGB/thermal thật, geotag, AP reboot khi lease còn hiệu lực, regression cockpit/SAF, ENDURE và production đều là gate riêng. Không có runtime AI trong lát cắt này; đối chứng LLM trực tiếp không áp dụng.
+
+## Hồ sơ kiểm chứng
+
+- [QA độc lập cuối](../evidence/field02/hostvideo03/qa-final-independent01.json), [review](../planning/hostvideo03/qa-final-review.md)
+
+- [TIP](../planning/hostvideo03/TIP.md), [ADR](../planning/hostvideo03/ADR-HOST-SOURCE.md), [quyết định boot bù](../planning/hostvideo03/DECISION-SOURCE-QUOTA.md)
+- [Source freeze](../evidence/field02/hostvideo03/builder-source-freeze01.json), [QA trước runtime](../evidence/field02/hostvideo03/qa-pre-runtime-gate01.json)
+- [QA cửa sổ01](../evidence/field02/hostvideo03/qa-media-window01.json), [QA cửa sổ03](../evidence/field02/hostvideo03/qa-media-window03.json)
+- [Cohort01](../evidence/field02/hostvideo03/cohort-attestation01.json), [cohort03](../evidence/field02/hostvideo03/cohort-attestation03.json)
+- [Raw host01](../evidence/field02/hostvideo03/host-app01/media/report-01.json), [raw host02](../evidence/field02/hostvideo03/host-app02/media/report-01.json)
+- [Sự cố quota](../evidence/field02/hostvideo03/qa-source-quota-incident01.json), [kiểm cuối](../evidence/field02/hostvideo03/final-verification.json)

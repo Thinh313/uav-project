@@ -1,0 +1,9 @@
+"""Pure CSS→native mapping + windowidentity tests; no ADB."""
+from pathlib import Path
+import importlib.util,json
+spec=importlib.util.spec_from_file_location('ui05',Path(__file__).with_name('qa-ui.py'));m=importlib.util.module_from_spec(spec);spec.loader.exec_module(m);cases=[]
+v={'width':1280,'height':716,'dpr':1};a=m.mapping(v,[0,24,1280,740],[1280,800]);assert m.native_point({'x':100,'y':100,'width':44,'height':44},a)==[122,146];cases.append('nonzero_native_y_origin');v2={'width':640,'height':358,'dpr':2};b=m.mapping(v2,[0,24,1280,740],[1280,800]);assert m.native_point({'x':100,'y':100,'width':44,'height':44},b)==[244,268];cases.append('device_pixel_scale2');
+def bad(name,fn):
+ try:fn();raise RuntimeError('MUST_FAIL')
+ except AssertionError:cases.append(name)
+bad('rotation_or_scale_mismatch',lambda:m.mapping(v,[0,24,800,1280],[800,1280]));bad('out_of_screen',lambda:m.mapping(v,[0,24,1280,801],[1280,800]));bad('nonuniform_scaling',lambda:m.mapping(v,[0,24,1280,750],[1280,800]));s='  mCurrentFocus=Window{abc u0 vn.rtr.aeris.field02/vn.rtr.aeris.field02.ShellActivity}\n  Window #0 Window{abc u0 vn.rtr.aeris.field02/vn.rtr.aeris.field02.ShellActivity}:\n    mFrame=[0,24][1280,740]\n  Window #1 Window{def u0 com.android.systemui}:\n    mFrame=[0,0][1280,24]\n';x=m.window_frame_signature(s);assert x['lines']==['mFrame=[0,24][1280,740]'];cases.append('owned_window_only');bad('missing_owned_window',lambda:m.window_frame_signature('Window #0 Window{abc u0 other}:\n mFrame=[0,24][1280,740]'));assert m.window_frame_signature(s.replace('[0,24][1280,740]','[0,0][1280,716]',1))!=x;cases.append('insets_changed_fingerprint_diff');bad('cross_read_same_component_new_window_refused',lambda:m.window_snapshot_signature(s,s.replace('Window{abc u0','Window{new u0')));print(json.dumps({'status':'PASS','checks':len(cases),'cases':cases,'runtimeStarted':False,'adbCalls':0},indent=2))

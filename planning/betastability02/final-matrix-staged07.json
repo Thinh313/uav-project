@@ -1,0 +1,88 @@
+{
+  "atUTC": "2026-10-26T02:49:22.040032+00:00",
+  "status": "STAGED_MATRIX_NOT_FINAL_WHILE_ANDROID_RUNTIME_OPEN",
+  "currentPins": "source-pins07.json",
+  "integratedNominal": [
+    {
+      "kind": "polygon",
+      "index": 1,
+      "status": "NOT_RUN",
+      "reason": "CURRENT_EXACT_SOFTWARE_DECODER_CONFIGURATION_UNSUPPORTED_OBSERVED_ON_ANDROID; CAMPAIGN04_NOT_STARTED"
+    },
+    {
+      "kind": "polygon",
+      "index": 2,
+      "status": "NOT_RUN",
+      "reason": "CURRENT_EXACT_SOFTWARE_DECODER_CONFIGURATION_UNSUPPORTED_OBSERVED_ON_ANDROID; CAMPAIGN04_NOT_STARTED"
+    },
+    {
+      "kind": "polygon",
+      "index": 3,
+      "status": "NOT_RUN",
+      "reason": "CURRENT_EXACT_SOFTWARE_DECODER_CONFIGURATION_UNSUPPORTED_OBSERVED_ON_ANDROID; CAMPAIGN04_NOT_STARTED"
+    },
+    {
+      "kind": "corridor",
+      "index": 1,
+      "status": "NOT_RUN",
+      "reason": "CURRENT_EXACT_SOFTWARE_DECODER_CONFIGURATION_UNSUPPORTED_OBSERVED_ON_ANDROID; CAMPAIGN04_NOT_STARTED"
+    },
+    {
+      "kind": "corridor",
+      "index": 2,
+      "status": "NOT_RUN",
+      "reason": "CURRENT_EXACT_SOFTWARE_DECODER_CONFIGURATION_UNSUPPORTED_OBSERVED_ON_ANDROID; CAMPAIGN04_NOT_STARTED"
+    },
+    {
+      "kind": "corridor",
+      "index": 3,
+      "status": "NOT_RUN",
+      "reason": "CURRENT_EXACT_SOFTWARE_DECODER_CONFIGURATION_UNSUPPORTED_OBSERVED_ON_ANDROID; CAMPAIGN04_NOT_STARTED"
+    }
+  ],
+  "qualifiedNominal": {
+    "passed": 0,
+    "required": 6
+  },
+  "componentFaults": [
+    {
+      "kind": "cut",
+      "run": "sa1d450160a574fd1bd92",
+      "status": "PASS_COMPONENT_ONLY_INTEGRATED_BETA_NOT_READY",
+      "scope": "ACTUAL_OWNED_AP_AIRBORNE_AND_MOCK_PAYLOAD_AUTHORITY_NO_VIDEO_OR_CAPTURE",
+      "preLeaseCount": 1,
+      "postLeaseCount": 0,
+      "video": "FAILED_UNSUPPORTED_SOFTWARE_PROFILE_NOT_RETRIED",
+      "capture": "NOT_CHECKED_NO_VALID_DECODED_FRAME",
+      "fullNominalQualified": false,
+      "authorityRestored": false
+    },
+    {
+      "kind": "reboot",
+      "run": "sf00b3561a30a4cc5ad3e",
+      "status": "PASS_COMPONENT_ONLY_INTEGRATED_BETA_NOT_READY",
+      "scope": "ACTUAL_OWNED_AP_AIRBORNE_AND_MOCK_PAYLOAD_AUTHORITY_NO_VIDEO_OR_CAPTURE",
+      "preLeaseCount": 1,
+      "postLeaseCount": 0,
+      "video": "FAILED_UNSUPPORTED_SOFTWARE_PROFILE_NOT_RETRIED",
+      "capture": "NOT_CHECKED_NO_VALID_DECODED_FRAME",
+      "fullNominalQualified": false,
+      "authorityRestored": false
+    }
+  ],
+  "integratedVideoPayloadFaults": "NOT_RUN_WITH_VALID_DECODED_VIDEO",
+  "SAF": "PENDING_ROOT_CURRENT_TEST",
+  "persistence": "PENDING_ROOT_CURRENT_TEST",
+  "UIVisualQA": "PENDING_ROOT_CURRENT_TEST",
+  "observedBudgetsFromRoot": {
+    "boundHostStarts": 7,
+    "maxHosts": 8,
+    "APRequests": 5,
+    "maxAPRequests": 12,
+    "scope": "ROOT_REPORTED_COUNTS_TO_RECOMPUTE_FROM_CLOSED_RECEIPTS"
+  },
+  "preservation": "PREPARED_NOT_RUN_UNTIL_RUNTIME_CLOSED",
+  "sourceCandidateENDURE": "NO_EDITS_OR_RESTORATION_BY_THIS_AGENT",
+  "hardware": "NOT_CHECKED",
+  "actualImages": 0
+}

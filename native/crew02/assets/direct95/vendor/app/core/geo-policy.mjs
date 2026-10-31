@@ -1,0 +1,5 @@
+const freeze=x=>{if(x&&typeof x==='object'){Object.values(x).forEach(freeze);Object.freeze(x);}return x;};
+export const GEO_POLICY=freeze({format:'aeris-geo-quality-policy',version:1,id:'geo14-engineering',revision:'1.0.0',simulation:true,homeHorizontalM:1,homeVerticalM:.5,homeFreshnessMs:3000,reviewFreshnessMs:30000,plan:{maxGsdCm:1,minFrontOverlapPct:70,minSideOverlapPct:60,minModelClearanceM:5},product:{maxGsdCm:1,minCoveragePct:98,minUsableImagePct:95,maxHorizontalRmseCm:3,maxVerticalRmseCm:5,minIndependentCheckpoints:5},scope:'Operator engineering test targets only; no field/client certification or aircraft default.'});
+export const GEO_POLICY_SHA='ddebe2e7574b5fb348723a658b3dc44ba61f55884ac6e9cbdbb0eb6c74896e2b';
+export const GEO_POLICY_REF=Object.freeze({id:GEO_POLICY.id,version:GEO_POLICY.revision,sha256:GEO_POLICY_SHA});
+export function assertGeoPolicy(ref){if(!ref||Object.keys(ref).sort().join()!=='id,sha256,version'||ref.id!==GEO_POLICY_REF.id||ref.version!==GEO_POLICY_REF.version||ref.sha256!==GEO_POLICY_REF.sha256)throw Error('Geo/quality policy version/hash unsupported');return GEO_POLICY;}

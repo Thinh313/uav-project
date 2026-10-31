@@ -1,0 +1,10 @@
+{
+  "at": "2026-10-17T15:12:36.079755+07:00",
+  "status": "READY_SCOPED_ANDROID_EMULATOR_AND_OWNED_SITL",
+  "report": "delivery/COMPLETION-NATIVE83.html",
+  "verification": "evidence/native83/verification.json",
+  "apk": "native/native83/dist/aeris-native83-development05.apk",
+  "apkSHA256": "d1ea1a595ae17db3535354b307404e8eb1b5db88cbc5c6a50612d70288948a89",
+  "scope": "Isolated overlay; no canonicalSOT or candidate promotion",
+  "next": "delivery/ROADMAP-NATIVE83.md"
+}

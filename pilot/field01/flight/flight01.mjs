@@ -1,0 +1,71 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import {randomUUID,createHash} from 'node:crypto';
+import {spawn,execFileSync} from 'node:child_process';
+import {fileURLToPath} from 'node:url';
+import './isolated-loader.mjs';
+const {MissionLink,wait}=await import('../../auto63/link-v5.mjs');
+const {connectMock}=await import('../../auto63/mock-v5.mjs');
+const {Capture,save,replay}=await import('../../auto63/journal-v3.mjs');
+const {verifyPlan,sha}=await import('../../auto63/compiler.mjs');
+const {validateDocument92,binding92,sameBinding92}=await import('../../../native/integration03/assets/mission92.mjs');
+const {replay94}=await import('../../../native/integration03/assets/offline94.mjs');
+export const ROOT=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'../../..');
+const DOCKER='/usr/local/bin/docker', hash=p=>createHash('sha256').update(fs.readFileSync(p)).digest('hex');
+const mono=()=>Number(process.hrtime.bigint())/1e6;
+export class Flight01 {
+ constructor({root=ROOT,evidenceRoot=path.join(root,'evidence/field01/flight')}={}){
+  if(path.resolve(root)!==ROOT||path.resolve(evidenceRoot)!==path.join(ROOT,'evidence/field01/flight'))throw Error('FIXED_FIELD01_OWNED_ROOT');
+  this.root=root;this.evidenceRoot=evidenceRoot;fs.mkdirSync(evidenceRoot+'/runs',{recursive:true});this.instance=randomUUID();this.current=null;this.document=null;this.binding=null;this.authority=null;this.busy=false;this.error=null;this.lastReview=null;this.positionHistory=[];
+ }
+ async setDocument(document){if(this.busy||this.current)throw Error('CLOSE_SESSION_BEFORE_REBIND');await validateDocument92(document);if(!document.compiled)throw Error('COMPILED_DOCUMENT_REQUIRED');await replay94(document);verifyPlan(document.compiled.plan);this.document=structuredClone(document);this.binding={...binding92(document),documentSha256:sha(document)};this.authority=null;return this.state();}
+ pins(){const p=JSON.parse(fs.readFileSync(this.evidenceRoot+'/source-pins.json'));for(const [n,h] of Object.entries(p.files))if(hash(path.join(this.root,n))!==h)throw Error('SOURCE_PIN:'+n);return p;}
+ scope(d,{connected=false,grant=false}={}){
+  if(d.instance!==this.instance||!sameBinding92(d,this.binding)||d.documentSha256!==this.binding?.documentSha256)throw Error('EXACT_INSTANCE_MODEL_PLAN_BINDING');
+  if(connected){const c=this.current;if(!c||d.run!==c.run||d.session!==c.link.sessionId||d.boot!==c.link.boot)throw Error('EXACT_OWNED_RUN_SESSION_BOOT');}
+  if(grant){this.invalidate();if(!this.authority||d.authorityId!==this.authority.id)throw Error('EXPLICIT_FLIGHT_GRANT_REQUIRED');this.current.link.fresh();}
+ }
+ invalidate(){const c=this.current;if(c&&this.authority&&(c.link.failure||c.link.ambiguous||c.link.transport!=='connected'||!c.link.freshness(0,1500)||!c.link.freshness(33,1500))){this.authority=null;try{c.link.record('AUTHORITY_INVALIDATED',{reason:c.link.failure??'STALE_LINK',authorityRestored:false})}catch{}}}
+ async action(route,d={}){
+  if(this.busy)throw Error('ACTION_IN_PROGRESS');this.busy=true;let intent,c=this.current;
+  try{
+   this.scope(d,{connected:route!=='connect',grant:['upload','arm','auto'].includes(route)});
+   if(route!=='connect'){intent=c.capture.append('FIELD01_INTENT',{route,request:d,binding:this.binding});}
+   let result;
+   if(route==='connect')result=await this.connect(d);
+   else if(route==='preflight'){this.attest();c.link.record('FIELD01_PREFLIGHT_SENSOR_WAIT',{maximumMs:90000,readonly:true});await c.link.until(()=>c.link.preflight().filter(x=>['link','position','gps','estimator','sensors','autopilot-prearm','home','firmware','session'].includes(x.id)).every(x=>x.pass),90000);result=await c.link.inspect();}
+   else if(route==='grant'){this.attest();if(d.authorityConfirmed!==true||!c.link.preflightView().ready)throw Error('EXPLICIT_READY_SIMULATION_AUTHORITY');c.link.fresh();this.authority={id:randomUUID(),...this.binding,run:c.run,session:c.link.sessionId,boot:c.link.boot,issuedAtMonoMs:mono(),scope:'OWNED_SIMULATOR_MISSION_ONLY'};c.link.record('FIELD01_EXPLICIT_GRANT',this.authority);result=this.authority;}
+   else if(route==='revoke'){this.authority=null;c.link.record('AUTHORITY_REVOKED',{explicit:true});result={revoked:true};}
+   else if(route==='upload'){this.attest();result=await c.link.upload63({...d,homeConfirmed:true});}
+   else if(route==='arm'){this.attest();result=await c.link.arm({...d,homeConfirmed:true});}
+   else if(route==='auto'){this.attest();result=await c.link.auto({...d,homeConfirmed:true});}
+   else if(route==='close'){if(!c.link.completion().complete)throw Error('OBSERVED_AUTO_NAV_RTL_GROUND_DISARM_REQUIRED');result=await this.close(false);}
+   else if(['abort','cut','reboot'].includes(route)){if(d.confirmSimulation!==true)throw Error('EXPLICIT_SIMULATION_FAULT_OR_ABORT');this.authority=null;if(route!=='abort'){c.link.failure='INJECTED_'+route.toUpperCase()+'_NO_AUTHORITY_RESTORE';c.link.record('FIELD01_FAULT',{route,notFlightCompletion:true});}result=await this.close(true);}
+   else throw Error('ACTION_ALLOWLIST');
+   if(c&&!c.capture.closed)c.capture.append('FIELD01_OUTCOME',{intent:intent?.sha256,route,status:'OBSERVED_RESPONSE'});
+   this.error=null;return result;
+  }catch(e){this.error=e.message;if(c&&!c.capture.closed)try{c.capture.append('FIELD01_OUTCOME',{intent:intent?.sha256,route,status:c.link.ambiguous?'UNKNOWN_NO_RETRY':'REJECTED_OR_PARTIAL',error:e.message})}catch{}this.invalidate();throw e;}finally{this.busy=false;}
+ }
+ async connect(d){
+  if(this.current)throw Error('SESSION_ALREADY_EXISTS');if(d.confirmSimulation!==true||!['mock','sitl'].includes(d.mode))throw Error('EXPLICIT_SIMULATION_MODE');const sourcePins=this.pins();verifyPlan(this.document.compiled.plan);
+  if(d.mode==='sitl'&&fs.readdirSync(this.evidenceRoot+'/runs').filter(n=>{try{return JSON.parse(fs.readFileSync(this.evidenceRoot+'/runs/'+n+'/request.json')).mode==='sitl'}catch{return false}}).length>=3)throw Error('MAX_THREE_SITL_ATTEMPTS');
+  const run=(d.mode==='sitl'?'s':'m')+randomUUID().replaceAll('-','').slice(0,20),out=this.evidenceRoot+'/runs/'+run;fs.mkdirSync(out);save(out+'/source-pins.json',sourcePins);save(out+'/plan.json',this.document.compiled.plan);save(out+'/document92.json',this.document);save(out+'/request.json',{run,mode:d.mode,instance:this.instance,binding:this.binding,source:'HOST_NODE_GCS_SIM_ONLY',at:new Date().toISOString()});
+  const capture=new Capture(out);let link,proc;
+  try{
+   if(d.mode==='sitl'){
+    const start=mono(),samples=[];for(let i=0;i<31;i++){const f=fs.statfsSync(this.root);const freeBytes=f.bavail*f.bsize;samples.push({hostMonoMs:mono(),freeBytes});if(freeBytes<29*2**30)throw Error('ADMISSION_BELOW_29GIB');if(i<30)await wait(1000);}save(out+'/admission.json',{samples,durationMs:mono()-start,minimumBytes:29*2**30});
+    const fd=fs.openSync(out+'/runtime-console.txt','wx');proc=spawn('python3',['-B','pilot/field01/flight/runtime.py',run],{cwd:this.root,stdio:['ignore',fd,fd]});fs.closeSync(fd);const end=mono()+35000;while(!fs.existsSync(out+'/launch.json')){if(proc.exitCode!==null||proc.signalCode!==null)throw Error('OWNED_RUNTIME_LAUNCH_FAILED');if(mono()>end)throw Error('OWNED_RUNTIME_LAUNCH_DEADLINE_NO_RETRY');await wait(100);}
+    const launch=JSON.parse(fs.readFileSync(out+'/launch.json'));link=new MissionLink(capture,this.document.compiled.plan);link.port=5970;link.simSource='OBSERVED_ARDUPILOT_INTERNAL_QUAD_HOST_NODE_GCS';this.observe(link,run);await link.connect();link.attach({scope:'READONLY_PREFLIGHT43',origin:'OBSERVED_OWNED_SITL',binarySha256:launch.binarySha256,system:42,component:1,session:link.sessionId,boot:randomUUID(),epoch:run,containerId:launch.containerId,pid:launch.pid,startedAt:launch.startedAt});await link.until(()=>link.freshness(0),5000);
+   }else{link=await connectMock(capture,this.document.compiled.plan);this.observe(link,run);}
+   this.current={run,out,capture,link,proc,mode:d.mode};this.authority=null;this.attest();link.record('FIELD01_BINDING',{...this.binding,run,hostArchitecture:'HOST_NODE_GCS_SIM_ONLY',authorityRestored:false});save(out+'/session.json',{run,session:link.sessionId,boot:link.boot,mode:d.mode});return this.state();
+  }catch(e){try{link?.close63();if(!capture.closed)capture.close()}catch{}if(proc){if(!fs.existsSync(out+'/stop-request.json'))save(out+'/stop-request.json',{reason:'LAUNCH_FAILURE',error:e.message});await this.waitProcess(proc);}this.current=null;save(out+'/launch-failure.json',{error:e.message,accepted:false});throw e;}
+ }
+ observe(link,run){const original=link.process63.bind(link);link.process63=m=>{original(m);if(m.system!==42||m.component!==1||m.id!==33)return;const p=m.fields,g=link.samples[24],hostMonoMs=mono();const sample={run,session:link.sessionId,boot:link.boot??null,...this.binding,hostMonoMs,hostReceivedUTC:new Date().toISOString(),telemetryReceiptHostMonoMs:hostMonoMs,apTimeBootMs:p.time_boot_ms,timeBootMs:p.time_boot_ms,lat:p.lat/1e7,lon:p.lon/1e7,latitudeDeg:p.lat/1e7,longitudeDeg:p.lon/1e7,gpsFix:g?.fields.fix_type??null,altitudeMslM:p.alt/1000,relativeHomeM:p.relative_alt/1000,altitudeDatum:'ARDUPILOT_GLOBAL_POSITION_INT_MSL_AND_RELATIVE_HOME_METRES',gps:g?{fixType:g.fields.fix_type,satellites:g.fields.satellites_visible,ephCm:g.fields.eph,epvCm:g.fields.epv,ageMs:link.now()-g.at}:null,quality:'SIMULATED_GNSS_REFERENCE_ONLY',clock:'HOST_HRTIME_MONOTONIC_MS',sensorTimeUncertaintyMs:null,physicalExposurePosition:false,ellipsoidAltitudeM:null};const row=link.record('FIELD01_POSITION_REFERENCE',sample);this.positionHistory.push({...sample,rawRef:{file:'raw.jsonl',n:row.n,sha256:row.sha256}});if(this.positionHistory.length>6000)this.positionHistory.shift();};}
+ positions({limit=600}={}){if(!Number.isSafeInteger(limit)||limit<1||limit>6000)throw Error('POSITION_BOUND');return structuredClone(this.positionHistory.slice(-limit));}
+ lookupPosition({hostMonoMs,maxDeltaMs=1500}={}){if(!Number.isFinite(hostMonoMs)||!Number.isFinite(maxDeltaMs)||maxDeltaMs<0||maxDeltaMs>3000)throw Error('POSITION_LOOKUP_BOUND');const p=this.positionHistory.reduce((best,x)=>!best||Math.abs(x.hostMonoMs-hostMonoMs)<Math.abs(best.hostMonoMs-hostMonoMs)?x:best,null);return p&&Math.abs(p.hostMonoMs-hostMonoMs)<=maxDeltaMs?{...structuredClone(p),hostReferenceDeltaMs:Math.abs(p.hostMonoMs-hostMonoMs),method:'NEAREST_HOST_RECEIPT_REFERENCE_NO_SENSOR_SYNC'}:null;}
+ attest(){const c=this.current;if(!c||c.mode!=='sitl')return;if(c.proc.exitCode!==null)throw Error('OWNED_RUNTIME_EXITED');const l=JSON.parse(fs.readFileSync(c.out+'/launch.json')),i=JSON.parse(execFileSync(DOCKER,['inspect','aeris-field01'],{encoding:'utf8',timeout:3000}))[0];if(i.Id!==l.containerId||i.Image!==l.imageId||i.State.Pid!==l.pid||i.State.StartedAt!==l.startedAt||!i.State.Running||i.Config.Labels['aeris.run']!==c.run||i.NetworkSettings.Ports['5760/tcp']?.[0]?.HostPort!=='5970'||i.NetworkSettings.Ports['5760/tcp']?.[0]?.HostIp!=='127.0.0.1'||hash(this.root+'/runtime/sitl/arducopter')!==l.binarySha256)throw Error('OWNED_SIMULATOR_ATTESTATION');}
+ async waitProcess(proc){const end=mono()+35000;while(proc.exitCode===null&&proc.signalCode===null){if(mono()>end)throw Error('OWNED_CLOSURE_PENDING_NO_RETRY');await wait(100);}}
+ async close(aborted){const c=this.current,l=c.link,observed=l.view63();this.authority=null;l.record('FIELD01_CLOSING',{aborted,observed});let writerError=null;try{l.close63()}catch(e){writerError=e.message}if(c.proc){save(c.out+'/stop-request.json',{reason:aborted?'EXPLICIT_SIMULATOR_ABORT_NOT_COMPLETION':'OBSERVED_AUTO_NAV_RTL_GROUND_DISARM'});await this.waitProcess(c.proc);}const raw=replay(c.out+'/raw.jsonl'),closure=c.proc?JSON.parse(fs.readFileSync(c.out+'/closure.json')):{stopped:true,error:null};const files={};const walk=dir=>{for(const n of fs.readdirSync(dir)){const q=path.join(dir,n),s=fs.lstatSync(q);if(s.isSymbolicLink())throw Error('REVIEW_LINK');if(s.isDirectory())walk(q);else files[path.relative(c.out,q)]=hash(q);}};walk(c.out);const r={format:'aeris-field01-flight-review',version:1,run:c.run,mode:c.mode,source:l.simSource,architecture:'HOST_NODE_GCS_SIM_ONLY',...this.binding,readback:l.readback??null,preflight:l.inspectionGate,execution:aborted?{...observed.completion,complete:false}:observed.completion,aborted,failure:l.failure,writerError,accepted:!aborted&&!writerError&&!l.failure&&observed.completion.complete&&closure.stopped&&!closure.error,rawHead:raw.head,rawRecords:raw.rows.length,filesSha256:files,authorityRestorable:false,actualImages:0,scope:'HOST_INTERNAL_QUAD_SIMULATION_ONLY_NOT_ANDROID_OR_HARDWARE',closedAt:new Date().toISOString()};save(c.out+'/review.json',r);this.lastReview=r;this.current=null;return r;}
+ review(run){if(!/^[ms][a-f0-9]{20}$/.test(run))throw Error('RUN_ID');const out=this.evidenceRoot+'/runs/'+run,r=JSON.parse(fs.readFileSync(out+'/review.json'));for(const [n,h] of Object.entries(r.filesSha256))if(path.isAbsolute(n)||n.split('/').includes('..')||hash(out+'/'+n)!==h)throw Error('REVIEW_HASH_MISMATCH');return r;}
+ state(){this.invalidate();const c=this.current,live=c?c.link.view63():null;const free=fs.statfsSync(this.root);return{instance:this.instance,busy:this.busy,error:this.error,source:'HOST_NODE_GCS_SIM_ONLY',architecture:'HOST_NODE_GCS_SIM_ONLY',binding:this.binding,request:{instance:this.instance,...this.binding,run:c?.run??null,session:c?.link.sessionId??null,boot:c?.link.boot??null,authorityId:this.authority?.id??null},run:c?.run??null,mode:c?.mode??null,live,authority:this.authority,authorityRestored:false,latestPosition:c?this.positionHistory.findLast(x=>x.run===c.run)??null:null,positionCount:this.positionHistory.length,pendingTransactions:c?.link.pending?1:0,rawBytes:c?.capture.bytes??0,lastReview:this.lastReview,storage:{freeBytes:free.bavail*free.bsize,admissionBytes:29*2**30,stopBytes:21*2**30,protectedFloorBytes:20*2**30},noRealHardware:true};}
+}

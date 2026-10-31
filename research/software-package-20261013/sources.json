@@ -1,0 +1,32 @@
+[
+  {
+    "origin_id": "node-crypto",
+    "url": "https://nodejs.org/download/release/v24.14.1/docs/api/crypto.html",
+    "snapshot": "node-crypto.html",
+    "fetched_at": "2026-10-13T02:13:28.319936+00:00",
+    "http_status": 200,
+    "status": "captured",
+    "sha256": "15075fdeec2d16f9c1dc13fb594ef3022c22594cf3ab2c758425e4d8dea9a2b5",
+    "bytes": 586738
+  },
+  {
+    "origin_id": "rfc8032",
+    "url": "https://www.rfc-editor.org/rfc/rfc8032.txt",
+    "snapshot": "rfc8032.txt",
+    "fetched_at": "2026-10-13T02:13:29.267496+00:00",
+    "http_status": 200,
+    "status": "captured",
+    "sha256": "ed63657ff389301282b169b0abde9b5dd2c7e4d524fdfa5da6ff3094fc93c4c3",
+    "bytes": 103210
+  },
+  {
+    "origin_id": "tuf-spec",
+    "url": "https://theupdateframework.github.io/specification/latest/",
+    "snapshot": "tuf-spec.html",
+    "fetched_at": "2026-10-13T02:13:29.849859+00:00",
+    "http_status": 200,
+    "status": "captured",
+    "sha256": "f20fda0dda7128f3b9cc1f12f3d90301b0f6e163576ba285bfe485d1671e8def",
+    "bytes": 248698
+  }
+]

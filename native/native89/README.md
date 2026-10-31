@@ -1,0 +1,15 @@
+# AERIS Native89 — input/video bench companion
+
+Separate Android package `vn.rtr.aeris.native89`, min26/target33. The qualified Native88 cockpit APK and every frozen source/candidate/ENDURE artifact remain unchanged. Native89 requests **no Android permissions** and has no aircraft, network, SDK or flight-output transport.
+
+Use the signed development02 APK for the companion. Its screen provides ART self-test; synthetic VP8 playback; deliberate retained-frame pause to exercise staleness; explicit video stop; neutral/deadman/axis input mock; invalid-axis test after mock calibration; Android input observation; historical trace inventory. After focus/background/restart, playback and mock ownership are never restored. Native controls and their tested bounds are engineering diagnostics, not a new premium cockpit release.
+
+The input model is a namespaced copy of N24 with declared fixture calibration/deadzone and250ms staleness. Android KeyEvent callbacks and raw joystick callbacks are observation-only. ADB injected events exercised both public Android dispatch paths; they are not physical HeraHub/HID evidence. Generic-motion device/range mapping is deliberately unverified. No raw axis or button is forwarded to any UAV.
+
+Only the SHA-pinned `synthetic.webm` from N24 is decoded. MediaExtractor reports640×360VP8,23compressed samples and1474595us duration. TextureView callbacks record generation, producer timestamp and local callback age. They do not prove camera capture age, camera latency, actual scanout or presentation of every encoded frame. The500ms policy concerns render callbacks only; actual watchdog observation was544ms in the tested pause. New playback requires a deliberate new generation.
+
+Each Activity opens an exclusive new SHA-chain trace under private `files/bench89`, fsyncs records, keeps prior files, and cannot append to an earlier session. One writer,512events/session,1MiB/file,8MiB aggregate admission and24entry admission; no auto deletion. Quota/clock/I/O failure blocks acceptance. Logging can affect callback timing. App-force-stop/reboot tests establish the captured committed bytes, not physical power-loss durability.
+
+Host model/storage checks and Android traces are in `evidence/native89`; independent `verify_trace.py` verifies the retained final TAR, and `negative_qa.py` demonstrates rejection of malformed/rehashed contradictory traces. QA helpers target only the task-owned emulator-5582 with matching AVD/launch identity; they intentionally refuse arbitrary/physical devices or reused PIDs. Do not overwrite retained evidence or relaunch old controllers.
+
+Hardware bench still requires Native88 `bench/intake.json`: actual controller/MCU/SDK, radio topology, camera/gimbal identities, approved mapping and latency budgets. BH03/BH04 now have Android software evidence; their physical hardware gates remain NOT_CHECKED. Next isolated integration can expose this local/mock source in the cockpit with the same provenance/freshness guards before any real SDK adapter.

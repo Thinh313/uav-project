@@ -1,0 +1,35 @@
+{
+  "scope": "GENERATION02_QA_SOURCE_ONLY_NO_RUNTIME_OR_ADB",
+  "files": {
+    "planning/cockpitvideo04/qa-runtime-v2.py": "07e2d0c3032f6b62f24e4b17e5abaf4c2eaf004cb5c72fd98847f7e5c84f083c",
+    "planning/cockpitvideo04/qa-android-v2.py": "7ad059eac58cebe93c9ec264858e1e1ff7cf9ee39bece9b15401827e93a2d35b",
+    "planning/cockpitvideo04/qa-device-actions-v2.py": "5aeaca181759be34078482e29000ac247caf62b9478663204a869f318615a83c",
+    "planning/cockpitvideo04/qa-device-v2.py": "8d314e48cb6002545ab5424163b0b3d2e98394485d35ec794a1c179d1a4dca9a",
+    "planning/cockpitvideo04/qa-arm-auto-v2.py": "46ad998f9fcdf54eb6dbb647f8fafba4800af4edcbb6defe2ec858349260d3d1",
+    "planning/cockpitvideo04/qa-preflight-upload-v2.py": "b2cbdb9c08a4cb54b14ac980005d585772091694aa52a1ff31dba2d0745f00d6",
+    "planning/cockpitvideo04/qa-live-actions-v2.py": "8372b427b5e628a70fc686d92c805c9fdabfd97057fd42fd21d4df8f0194dd5b",
+    "planning/cockpitvideo04/qa-runtime-mock-v2.py": "4846d36a877523025f36cb3a06177b1c30ef2cab676c7ad64c22c96d529efba9"
+  },
+  "declaredAttempts": [
+    "03",
+    "04"
+  ],
+  "runtimePolicyMockChecks": 9,
+  "AST": "PASS",
+  "api": 33,
+  "cpu": 4,
+  "ramMiB": 2048,
+  "admissionGiB": 29,
+  "guardGiB": 28,
+  "floorGiB": 20,
+  "pollMs": 250,
+  "forecastS": 15,
+  "hardDurationS": 1200,
+  "newAPRequestsPreparedByTheseHelpers": 0,
+  "remainingAP10_11": "NEW_ADAPTER_ADMISSION_ROOT_AND_BUILDER_GATE",
+  "genericOCRClick": "DISABLED_ONLY_COORDINATES_AND_STRICT_5_AUTO",
+  "oldHelperFilesEdited": false,
+  "adbCalls": 0,
+  "runtimeStarts": 0,
+  "productionEdits": 0
+}

@@ -1,0 +1,23 @@
+# QGC01 v0.7 · Mission interchange / M2
+
+Local simulator release profile, independent RtR implementation, SDK/device not required. Official QGC v5.1.5 schema reference locked at `3a67d31f0c36bf3fe38ec52970d250a89d0aaf67`. Captures/claims/hash/provenance are under `research/qgc-interchange-20261012`; current serializers resolve moving-document discrepancies. No QGC/Qt or RAGAS application code linked into the app.
+
+| Format | Source intake/export | SITL execution |
+|---|---|---|
+| Plan v1, mission v2, seven-param SimpleItems | Exact original text retained, metadata preserved | Bounded Copter profile below |
+| Legacy SimpleItem coordinate + four params | Normalized view, original retained | Same profile; official PX4 SectionTest execution blocked |
+| Survey v4/v5, TransectStyle v1/v2 with stored Items | Complex object/polygon/camera retained on original export | Explicit stored-command snapshot only; no regeneration parity claim |
+| Nonempty geofence/rally, other vehicle/firmware/datum/command | Supported structural source retained for review | Blocked; never silently dropped or relocated |
+| Other Plan/mission/complex versions or missing cached Items | Rejected atomically; old valid intake preserved | Blocked |
+
+Intake accepts ≤64KiB UTF-8, ≤511 flattened commands plus home, ≤128 polygon vertices. Plan headers, params, types and coordinates are checked. Unknown extensions remain in original source and can block execution. Source local archive is hashed and rechecked on reload; failed import/size/hash/local-storage write preserves prior active state. SHA proves byte equality, not source authentication or mission safety. Import/restore resets explicit simulator-review consent and sends no commands.
+
+Execution envelope `aeris-qgc-run` v1 includes exact rawPlan, simulation=true, pinned world/profile. Server reparses source independently. Only ArduPilot firmwareType3 / quadrotor2, Home exactly matching virtual world, relative-home frames3/6, navigation5–120m, route/polygon ≤500m, takeoff22-first at Home, waypoint16 and RTL20-last, autocontinue=true. NAV params only zero extras and integer hold0–60s; pinned Copter ignored yaw null→0 is explicitly recorded, source stays null. Other yaw/radius/pass-by/meaningful nulls are rejected. DO_CHANGE_SPEED178 ground-speed0.5–20m/s, DO_SET_CAM_TRIGG_DIST206 bounded distance and required final off; unsupported commands never removed. False autocontinue is rejected because pinned AP_Mission downloads true. Current-item is live progress, not static content.
+
+QGC export button in Plan emits standard SimpleItems, planned Home separate, doJumpId starts1, AltitudeMode1 relative-home, camera start/stop and speed. Companion lineage identifies simulator mapping and source request. DSM-adjusted relative heights are virtual-world offsets, not operational terrain. Standard `.plan` cannot enforce simulator-only use in QGC; filenames/UI/companion record that limit. Export original on interchange view preserves byte-for-byte source, including null and complex metadata; it does not serialize our compiled normalization back over the source.
+
+Preflight/live heartbeat/session/token/same-origin checks are shared with FLIGHT01. Upload only disarmed, ACK plus full readback required. Readback compares autocontinue, command/frame/seq/type, params, location and documented centimeter altitude conversion. No AUTO after mismatch/timeout/gap/reboot until matching recovery; read-only recovery does not upload or command. All live position/GPS/health require fresh heartbeat as well as own sample age. Accepted command ACK requires post-ACK heartbeat observation. Completion needs final reached + landed + disarmed.
+
+Evidence splits: unmodified upstream legacy PX4 fixture; AERIS-authored simple/complex schema fixtures; actual ArduCopter SITL journals and CAM DataFlash; Chromium import/export/offline/layout and actual loopback operator upload. AERIS-generated fixture is not described as an export from QGC application. QGC application open/save, QGC-generated complex fixture regeneration, QGC↔autopilot direct A/B parity, broader payload/vehicle patterns, real terrain/launch/HeraHub/RF/HIL/physical camera are NOT_CHECKED. Native diagnostic APK remains v0.6 unchanged.
+
+Run `node tools/qgc_sitl_qa.mjs`, then `node tools/qgc_fault_qa.mjs` against task-owned disarmed simulator. Fault runner uses fixed5761 proxy and two real inbound-loss/timeout/reconnect/read-only/disarmed-reboot cycles. It does not test RF fades or in-flight GCS failsafe. Do not run another controlling link concurrently. Retain immutable journals/compressed DataFlash before deleting raw logs; no dependency installations or project copies needed.

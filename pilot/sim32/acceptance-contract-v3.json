@@ -1,0 +1,167 @@
+{
+  "format": "aeris-sim32-acceptance-contract",
+  "version": 3,
+  "at": "2026-10-13T16:30:25.835462+00:00",
+  "status": "REFERENCE_PERFORMANCE_INCREMENT_PARTIAL_OWNER_DEFERRED",
+  "previousVersion": {
+    "path": "pilot/sim32/acceptance-contract-v2.json",
+    "sha256": "7c70b5332051990ea3c078dd775be8abaae1022357b8d413f63d55a7393d130b"
+  },
+  "tip": {
+    "path": "delivery/TIP-SIM32-PERF01.md",
+    "sha256": "f2cf05ab867c1f70119485123c295bcc5c20fe16f8bf2d059b7c2e9a8295f82b"
+  },
+  "qualityStandard": {
+    "path": "docs/AERIS-PRODUCT-QUALITY-STANDARD.md",
+    "sha256": "a3c7efbd3ec559a35137375cb2cf08833e6fb6bada658b62375f2b6589b5d536"
+  },
+  "requirements": [
+    {
+      "id": "REQ-P01",
+      "status": "PASS",
+      "verifiedScope": "20 analytic/convergence +5 validation; ideal zero resistance/damping valid, negative/nonfinite refused",
+      "evidence": [
+        {
+          "path": "evidence/sim32-perf01/baseline-regression.json",
+          "sha256": "eba2c574d4b3efaedaca5b39bc520c9bae9d9d236d445f33e9924a3bf9ea7223"
+        },
+        {
+          "path": "evidence/sim32-perf01/physics-native01.txt",
+          "sha256": "18df844a6ba73519e218c4cf45dec3d6ecd53017e8c6ee82c56f5ac44668a788"
+        },
+        {
+          "path": "evidence/sim32-perf01/validation-native01.txt",
+          "sha256": "2b59f6bba764d6c7732b5e6fae2627db9149df4cfc61f50e932b653d924b74bb"
+        }
+      ]
+    },
+    {
+      "id": "REQ-P02",
+      "status": "PASS_CORPUS_SCOPE",
+      "verifiedScope": "593888 old frames exact sensor/aux numeric and serialized sensor bytes;20000 random derivatives exact; airborne model computation paired3.159–3.218x",
+      "remaining": "Measured physical/Hera calibration and portable native ABI",
+      "evidence": [
+        {
+          "path": "evidence/sim32-perf01/full-corpus-wire-equivalence.json",
+          "sha256": "0caf639d8abb99c030a95a7a6aa17fd8b4a2f59148d9d333c79cc75e8f3fc309"
+        },
+        {
+          "path": "evidence/sim32-perf01/kernel-adversarial01.json",
+          "sha256": "81a61e5d05c7570104bf819869621603970f12f913401e7377999f0c6e0891c9"
+        },
+        {
+          "path": "evidence/sim32-perf01/airborne-benchmark.json",
+          "sha256": "4c0802481be1eae935e5b21bbaa2db47671536f51b69f6ca22ff172959779390"
+        },
+        {
+          "path": "evidence/sim32-perf01/kernel-build01.json",
+          "sha256": "f8c06a7e8268d47fa40efc0a0642b86f674aa054bc76eb8ba20709f6f26e68bc"
+        }
+      ]
+    },
+    {
+      "id": "REQ-P03",
+      "status": "PASS_REFERENCE_SCOPE",
+      "verifiedScope": "Bounded FIFO256;4 journal tests and6 review seal checks;613322 new raw frames replayed; overflow/write errors cannot mark complete",
+      "remaining": "Broader overload/long-duration/native-platform checks",
+      "evidence": [
+        {
+          "path": "evidence/sim32-perf01/journal-tests01.txt",
+          "sha256": "5ce05e1fdc3df0f2ba5619ec475641e92cea64ed09ffb754645be83453364bb4"
+        },
+        {
+          "path": "evidence/sim32-perf01/review-seal-tests01.json",
+          "sha256": "ea924f41edfd0aa719c2e6c45a1aec71f812bca86d36bfe63e1388c656c9552f"
+        },
+        {
+          "path": "evidence/sim32-perf01/new-raw-verification.json",
+          "sha256": "349b5c2e7be239430a1f16151f4587cbba5bbf692c998d079076188b1b6e5ab8"
+        }
+      ]
+    },
+    {
+      "id": "REQ-P04",
+      "status": "PARTIAL_SCOPED_1_10_PASS",
+      "verifiedScope": "Three UI/SITL cases measured1.0955–1.0973x at declared1.10 AP pacing,1200Hz unchanged; baseline1.10 also1.0912x",
+      "defaultPacing1": "FAIL_RTF_TARGET_0.9276_TO_0.9359",
+      "finalSourceLiveRepeat": "NOT_CHECKED_RESOURCE_FLOOR_OWNER_DEFERRED",
+      "evidence": [
+        {
+          "path": "evidence/sim32-perf01/performance-cases.json",
+          "sha256": "9938f9a0acae9c4e5f3e08a29a991692a8f86eeb65b72304a8f92d2f20a5dfbd"
+        },
+        {
+          "path": "evidence/sim32-perf01/browser-qafinal03.json",
+          "sha256": "2c57fb29527db9b8d582266565e7eb1b2b72eca32bf7472bf5a708b9d4b4f55e"
+        },
+        {
+          "path": "evidence/sim32-perf01/tested-source-availability.json",
+          "sha256": "44d2623a6e3c41b0bfbefa4a6bd73d89c15d9f6f52631e714538c577e340bd56"
+        },
+        {
+          "path": "evidence/sim32/runs/ui1791907507117/acceptance.json",
+          "sha256": "bf26ac2f5f77157bd1b6bc101efacb2adb3d6238dbf96fe87ce5953d8b91c345"
+        },
+        {
+          "path": "evidence/sim32/runs/ui1791907624118/acceptance.json",
+          "sha256": "df869f36c5854a9e85747bac946ed7e304de07fb78447311ad36f25199920d83"
+        },
+        {
+          "path": "evidence/sim32/runs/ui1791907783253/acceptance.json",
+          "sha256": "2bf183601bebc7583633b3548829734bc612aec99b6e8997d8012b3df70a20fa"
+        }
+      ]
+    },
+    {
+      "id": "REQ-P05",
+      "status": "PRESERVATION_PASS_HANDOFF_WITH_RESOURCE_HOLD",
+      "verifiedScope": "4051 protected files unchanged at final preservation; prior failures/receipts retained; no signing/ENDURE change; owned cache/state cleaned",
+      "finalResourceStatus": "BELOW_FLOOR_NO_NEW_RUNTIME",
+      "ownerDecision": "Deliver existing results and explicitly defer final live repetition",
+      "evidence": [
+        {
+          "path": "evidence/sim32-perf01/final-resource-and-preservation.json",
+          "sha256": "ded07de84581207ee707e7280b77dfe37d422a13850bfa0cc5fecd9d2d114395"
+        },
+        {
+          "path": "evidence/sim32-perf01/preview-handoff.json",
+          "sha256": "91ff89c34f2486a7723b0f3ed262bed0b0f104a1676b88891067ba7681fd82e1"
+        }
+      ]
+    }
+  ],
+  "previousRequirementsRetainedByReference": true,
+  "correctionToPreviousScope": "Older20-test receipt preceded current validator. Current baseline reproduced4 ideal-case errors; fixed and reverified20+5. Prior receipts unchanged.",
+  "rtfScope": {
+    "target": 1,
+    "rateHz": 1200,
+    "declaredPacingAccepted": 1.1,
+    "defaultPacingTargetMet": false,
+    "algorithmSpeedupDistinctFromPacing": true,
+    "eachProfileLiveRepetitions": 1,
+    "finalSourceFullLiveQualified": false
+  },
+  "readiness": {
+    "closedLoopRuntime": "REFERENCE_FUNCTIONAL_AT_TESTED_PINS",
+    "finalSourceOfflineReplay": "PASS_9_CHECKS",
+    "finalSourceFullLive": "NOT_CHECKED",
+    "physicsCalibration": "NOT_CHECKED",
+    "androidHeraHub": "NOT_CHECKED",
+    "encodedNativeVideo": "NOT_CHECKED",
+    "competitiveSuperiority": "NOT_CHECKED",
+    "fullProduct": "OPEN_GATES"
+  },
+  "isolation": {
+    "frozenSourceEdited": false,
+    "candidateEdited": false,
+    "ENDUREEditedOrRestarted": false,
+    "newSoftwareReleaseOrSignature": false,
+    "physicalFlightCommands": false
+  },
+  "review": "Sequential Contractor/Builder/Verify by one agent; not independent audit",
+  "resourcePolicy": {
+    "minimumFreeBytes": 21474836480,
+    "newRuntimeAdmissionHeadroomBytes": 671088640,
+    "finalResourceStatus": "BELOW_FLOOR_NO_NEW_RUNTIME"
+  }
+}

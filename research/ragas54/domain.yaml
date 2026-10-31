@@ -1,0 +1,14 @@
+domain: ragas54
+entity_label: Version-scoped RAGAS publisher claims
+schema:
+  type_field: null
+  fields: [publisher_statement, runtime_test_evidence, installed_apk_version]
+rollup_field: null
+universe:
+  estimate: null
+  basis: Selected release claims, not exhaustive software capabilities
+refresh_days: {default: 7}
+alias_map: {}
+ambiguous_clusters: []
+domain_gates:
+  no_inferred_fields: [publisher_statement, runtime_test_evidence, installed_apk_version]

@@ -1,0 +1,19 @@
+{
+  "format": "aeris-phone06-phase-admission",
+  "status": "TEMPLATE_NOT_ADMITTED",
+  "issuedAt": "REPLACE_BY_CONTRACTOR_ISO8601",
+  "expiresAt": "REPLACE_BY_CONTRACTOR_MAX_ONE_HOUR",
+  "package": "vn.rtr.aeris.phone06",
+  "selectedSerial": "REPLACE_EXACT_PHYSICAL_USB_SERIAL",
+  "allowedRuns": ["s00000000000000000000"],
+  "binarySha256": "011627d41dd95640c3aca02d45283474be48721c8b1bb7a4b234d38b69063482",
+  "nativeSourceId": "REPLACE_FROM_BUILD_RECEIPT",
+  "apk": {"path": "REPLACE_SIGNED_DEVELOPMENT_APK_PATH", "sha256": "REPLACE_EXACT_APK_SHA256"},
+  "buildReceipt": "REPLACE_BUILD_RECEIPT_PATH",
+  "manualActualQualified": false,
+  "qualificationIssuance": "UNSUPPORTED_PENDING_ACTUAL_PROOF",
+  "runtimeGuardBytes": 22548578304,
+  "remainingForecastBytes": 1073741824,
+  "reserveBytes": 1073741824,
+  "minAdmissionBytes": 23622320128
+}

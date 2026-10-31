@@ -1,0 +1,1007 @@
+{
+  "registry": {
+    "v4.0.10-b111 / Correct Area, Time and Photos": {
+      "entity_type": null,
+      "fields": {
+        "publisher_statement": {
+          "state": "sourced",
+          "value": "Sửa tổng khảo sát.",
+          "claims": [
+            {
+              "value": "Sửa tổng khảo sát.",
+              "tier": "A",
+              "source": "Real-Time-Robotics/ragas-release",
+              "extraction": "normalized",
+              "evidence_span": "- **Correct Area, Time and Photos**: Three numbers in the mission summary were wrong. Area was reported 100× too small, Est. Time was computed at a hover speed nothing in the app ever sets instead of your cruise speed, and Photos showed the selected pattern's count rather than the whole mission's. All three are now right, and a mission with two surveys adds them up.",
+              "capture": {
+                "url": "https://github.com/Real-Time-Robotics/ragas-release/releases/tag/v4.0.10-b111",
+                "fetched_at": "2026-10-15T06:27:32.926755+00:00",
+                "snapshot": "v4.0.10-b111.md",
+                "source": "Real-Time-Robotics/ragas-release",
+                "origin_id": "rtr-ragas-publisher"
+              }
+            }
+          ]
+        },
+        "runtime_test_evidence": {
+          "state": "null",
+          "value": null
+        },
+        "installed_apk_version": {
+          "state": "null",
+          "value": null
+        }
+      }
+    },
+    "v4.0.10-b111 / Layout Settings Survive a Round Trip": {
+      "entity_type": null,
+      "fields": {
+        "publisher_statement": {
+          "state": "sourced",
+          "value": "Giữ tùy chọn lưới qua nhập xuất.",
+          "claims": [
+            {
+              "value": "Giữ tùy chọn lưới qua nhập xuất.",
+              "tier": "A",
+              "source": "Real-Time-Robotics/ragas-release",
+              "extraction": "normalized",
+              "evidence_span": "- **Layout Settings Survive a Round Trip**: Entry corner, alternate transects and split-concave polygons are now written on export and read back on import, so a saved mission reopens as the grid you saved instead of being re-laid from a default corner.",
+              "capture": {
+                "url": "https://github.com/Real-Time-Robotics/ragas-release/releases/tag/v4.0.10-b111",
+                "fetched_at": "2026-10-15T06:27:32.926755+00:00",
+                "snapshot": "v4.0.10-b111.md",
+                "source": "Real-Time-Robotics/ragas-release",
+                "origin_id": "rtr-ragas-publisher"
+              }
+            }
+          ]
+        },
+        "runtime_test_evidence": {
+          "state": "null",
+          "value": null
+        },
+        "installed_apk_version": {
+          "state": "null",
+          "value": null
+        }
+      }
+    },
+    "v4.0.10-b111 / Photo Counts You Can Trust": {
+      "entity_type": null,
+      "fields": {
+        "publisher_statement": {
+          "state": "sourced",
+          "value": "Sửa khoảng chụp và làm tròn.",
+          "claims": [
+            {
+              "value": "Sửa khoảng chụp và làm tròn.",
+              "tier": "A",
+              "source": "Real-Time-Robotics/ragas-release",
+              "extraction": "normalized",
+              "evidence_span": "- **Photo Counts You Can Trust**: Camera trigger spacing no longer applies the frontal overlap a second time, shots are rounded per transect the way QGC rounds them, and a camera with no usable footprint now reports no triggering instead of an absurd number. **Expect survey shot counts to differ from earlier versions** — these are the corrected figures, and the hover-and-capture points generated along each line moved with them.",
+              "capture": {
+                "url": "https://github.com/Real-Time-Robotics/ragas-release/releases/tag/v4.0.10-b111",
+                "fetched_at": "2026-10-15T06:27:32.926755+00:00",
+                "snapshot": "v4.0.10-b111.md",
+                "source": "Real-Time-Robotics/ragas-release",
+                "origin_id": "rtr-ragas-publisher"
+              }
+            }
+          ]
+        },
+        "runtime_test_evidence": {
+          "state": "null",
+          "value": null
+        },
+        "installed_apk_version": {
+          "state": "null",
+          "value": null
+        }
+      }
+    },
+    "v4.0.10-b111 / Plan On the Surface": {
+      "entity_type": null,
+      "fields": {
+        "publisher_statement": {
+          "state": "sourced",
+          "value": "Sửa điểm trên địa hình.",
+          "claims": [
+            {
+              "value": "Sửa điểm trên địa hình.",
+              "tier": "A",
+              "source": "Real-Time-Robotics/ragas-release",
+              "extraction": "normalized",
+              "evidence_span": "- **Plan On the Surface**: Waypoints and survey boundaries sit on the ground where you put them. Drag a waypoint across the terrain, or drag its altitude handle to raise and lower it, and the flight line follows the hillside underneath.",
+              "capture": {
+                "url": "https://github.com/Real-Time-Robotics/ragas-release/releases/tag/v4.0.10-b111",
+                "fetched_at": "2026-10-15T06:27:32.926755+00:00",
+                "snapshot": "v4.0.10-b111.md",
+                "source": "Real-Time-Robotics/ragas-release",
+                "origin_id": "rtr-ragas-publisher"
+              }
+            }
+          ]
+        },
+        "runtime_test_evidence": {
+          "state": "null",
+          "value": null
+        },
+        "installed_apk_version": {
+          "state": "null",
+          "value": null
+        }
+      }
+    },
+    "v4.0.10-b111 / Surveys Laid Out the Way QGC Lays Them": {
+      "entity_type": null,
+      "fields": {
+        "publisher_statement": {
+          "state": "sourced",
+          "value": "Lưới nhập theo QGC.",
+          "claims": [
+            {
+              "value": "Lưới nhập theo QGC.",
+              "tier": "A",
+              "source": "Real-Time-Robotics/ragas-release",
+              "extraction": "normalized",
+              "evidence_span": "- **Surveys Laid Out the Way QGC Lays Them**: Opening a QGroundControl `.plan` now reproduces the same grid — same angle, same line count, same spacing phase. A survey that used to come out a quarter turn from the angle you typed now lies where you asked for it.",
+              "capture": {
+                "url": "https://github.com/Real-Time-Robotics/ragas-release/releases/tag/v4.0.10-b111",
+                "fetched_at": "2026-10-15T06:27:32.926755+00:00",
+                "snapshot": "v4.0.10-b111.md",
+                "source": "Real-Time-Robotics/ragas-release",
+                "origin_id": "rtr-ragas-publisher"
+              }
+            }
+          ]
+        },
+        "runtime_test_evidence": {
+          "state": "null",
+          "value": null
+        },
+        "installed_apk_version": {
+          "state": "null",
+          "value": null
+        }
+      }
+    },
+    "v4.0.10-b111 / Where It Runs": {
+      "entity_type": null,
+      "fields": {
+        "publisher_statement": {
+          "state": "sourced",
+          "value": "3D dành cho Android ARM64.",
+          "claims": [
+            {
+              "value": "3D dành cho Android ARM64.",
+              "tier": "A",
+              "source": "Real-Time-Robotics/ragas-release",
+              "extraction": "normalized",
+              "evidence_span": "- **Where It Runs**: Android controllers with 64-bit ARM hardware. On anything else the 3D button is simply not offered, rather than shown and then failing.",
+              "capture": {
+                "url": "https://github.com/Real-Time-Robotics/ragas-release/releases/tag/v4.0.10-b111",
+                "fetched_at": "2026-10-15T06:27:32.926755+00:00",
+                "snapshot": "v4.0.10-b111.md",
+                "source": "Real-Time-Robotics/ragas-release",
+                "origin_id": "rtr-ragas-publisher"
+              }
+            }
+          ]
+        },
+        "runtime_test_evidence": {
+          "state": "null",
+          "value": null
+        },
+        "installed_apk_version": {
+          "state": "null",
+          "value": null
+        }
+      }
+    },
+    "v4.0.14-b111 / Above Terrain, Calculated for You": {
+      "entity_type": null,
+      "fields": {
+        "publisher_statement": {
+          "state": "sourced",
+          "value": "Đổi terrain sang AMSL; chặn khi thiếu.",
+          "claims": [
+            {
+              "value": "Đổi terrain sang AMSL; chặn khi thiếu.",
+              "tier": "A",
+              "source": "Real-Time-Robotics/ragas-release",
+              "extraction": "normalized",
+              "evidence_span": "- **Above Terrain, Calculated for You**: For terrain-following waypoints, RAGAS works out the AMSL altitude from elevation data. A mission whose terrain could not be fetched is not exported with a wrong altitude.",
+              "capture": {
+                "url": "https://github.com/Real-Time-Robotics/ragas-release/releases/tag/v4.0.14-b111",
+                "fetched_at": "2026-10-15T06:27:32.926755+00:00",
+                "snapshot": "v4.0.14-b111.md",
+                "source": "Real-Time-Robotics/ragas-release",
+                "origin_id": "rtr-ragas-publisher"
+              }
+            }
+          ]
+        },
+        "runtime_test_evidence": {
+          "state": "null",
+          "value": null
+        },
+        "installed_apk_version": {
+          "state": "null",
+          "value": null
+        }
+      }
+    },
+    "v4.0.14-b111 / Camera Commands Reach the Autopilot": {
+      "entity_type": null,
+      "fields": {
+        "publisher_statement": {
+          "state": "sourced",
+          "value": "Giữ lệnh camera khi upload.",
+          "claims": [
+            {
+              "value": "Giữ lệnh camera khi upload.",
+              "tier": "A",
+              "source": "Real-Time-Robotics/ragas-release",
+              "extraction": "normalized",
+              "evidence_span": "- **Camera Commands Reach the Autopilot**: Camera trigger, image capture and video capture commands in a mission are now sent to ArduPilot as they are, the way QGC sends them. Previously they were replaced with empty placeholders on upload, so the autopilot never fired the camera on its own.",
+              "capture": {
+                "url": "https://github.com/Real-Time-Robotics/ragas-release/releases/tag/v4.0.14-b111",
+                "fetched_at": "2026-10-15T06:27:32.926755+00:00",
+                "snapshot": "v4.0.14-b111.md",
+                "source": "Real-Time-Robotics/ragas-release",
+                "origin_id": "rtr-ragas-publisher"
+              }
+            }
+          ]
+        },
+        "runtime_test_evidence": {
+          "state": "null",
+          "value": null
+        },
+        "installed_apk_version": {
+          "state": "null",
+          "value": null
+        }
+      }
+    },
+    "v4.0.14-b111 / Camera Commands on a Waypoint": {
+      "entity_type": null,
+      "fields": {
+        "publisher_statement": {
+          "state": "sourced",
+          "value": "Chụp theo thời gian tại waypoint.",
+          "claims": [
+            {
+              "value": "Chụp theo thời gian tại waypoint.",
+              "tier": "A",
+              "source": "Real-Time-Robotics/ragas-release",
+              "extraction": "normalized",
+              "evidence_span": "- **Camera Commands on a Waypoint**: A waypoint can now start image capture, with an interval and a photo count, or stop it — the same commands QGC offers.",
+              "capture": {
+                "url": "https://github.com/Real-Time-Robotics/ragas-release/releases/tag/v4.0.14-b111",
+                "fetched_at": "2026-10-15T06:27:32.926755+00:00",
+                "snapshot": "v4.0.14-b111.md",
+                "source": "Real-Time-Robotics/ragas-release",
+                "origin_id": "rtr-ragas-publisher"
+              }
+            }
+          ]
+        },
+        "runtime_test_evidence": {
+          "state": "null",
+          "value": null
+        },
+        "installed_apk_version": {
+          "state": "null",
+          "value": null
+        }
+      }
+    },
+    "v4.0.14-b111 / Cameras Found Automatically": {
+      "entity_type": null,
+      "fields": {
+        "publisher_statement": {
+          "state": "sourced",
+          "value": "Tự nhận diện các camera.",
+          "claims": [
+            {
+              "value": "Tự nhận diện các camera.",
+              "tier": "A",
+              "source": "Real-Time-Robotics/ragas-release",
+              "extraction": "normalized",
+              "evidence_span": "- **Cameras Found Automatically**: Cameras on the payload are discovered and identified on their own, and the settings for each camera sit in one panel.",
+              "capture": {
+                "url": "https://github.com/Real-Time-Robotics/ragas-release/releases/tag/v4.0.14-b111",
+                "fetched_at": "2026-10-15T06:27:32.926755+00:00",
+                "snapshot": "v4.0.14-b111.md",
+                "source": "Real-Time-Robotics/ragas-release",
+                "origin_id": "rtr-ragas-publisher"
+              }
+            }
+          ]
+        },
+        "runtime_test_evidence": {
+          "state": "null",
+          "value": null
+        },
+        "installed_apk_version": {
+          "state": "null",
+          "value": null
+        }
+      }
+    },
+    "v4.0.14-b111 / Choose How It Takes Off": {
+      "entity_type": null,
+      "fields": {
+        "publisher_statement": {
+          "state": "sourced",
+          "value": "Hai cách lấy độ cao cất cánh.",
+          "claims": [
+            {
+              "value": "Hai cách lấy độ cao cất cánh.",
+              "tier": "A",
+              "source": "Real-Time-Robotics/ragas-release",
+              "extraction": "normalized",
+              "evidence_span": "- **Choose How It Takes Off**: Safe Takeoff climbs to the safe takeoff altitude before heading to the first point. Direct Ascent climbs straight to the first point's altitude, then flies level to it.",
+              "capture": {
+                "url": "https://github.com/Real-Time-Robotics/ragas-release/releases/tag/v4.0.14-b111",
+                "fetched_at": "2026-10-15T06:27:32.926755+00:00",
+                "snapshot": "v4.0.14-b111.md",
+                "source": "Real-Time-Robotics/ragas-release",
+                "origin_id": "rtr-ragas-publisher"
+              }
+            }
+          ]
+        },
+        "runtime_test_evidence": {
+          "state": "null",
+          "value": null
+        },
+        "installed_apk_version": {
+          "state": "null",
+          "value": null
+        }
+      }
+    },
+    "v4.0.14-b111 / Circle Fence Around Home": {
+      "entity_type": null,
+      "fields": {
+        "publisher_statement": {
+          "state": "sourced",
+          "value": "Fence tròn quanh Home.",
+          "claims": [
+            {
+              "value": "Fence tròn quanh Home.",
+              "tier": "A",
+              "source": "Real-Time-Robotics/ragas-release",
+              "extraction": "normalized",
+              "evidence_span": "- **Circle Fence Around Home**: A circular fence can be set around the home point, and the fence editor has been reworked to be easier to edit.",
+              "capture": {
+                "url": "https://github.com/Real-Time-Robotics/ragas-release/releases/tag/v4.0.14-b111",
+                "fetched_at": "2026-10-15T06:27:32.926755+00:00",
+                "snapshot": "v4.0.14-b111.md",
+                "source": "Real-Time-Robotics/ragas-release",
+                "origin_id": "rtr-ragas-publisher"
+              }
+            }
+          ]
+        },
+        "runtime_test_evidence": {
+          "state": "null",
+          "value": null
+        },
+        "installed_apk_version": {
+          "state": "null",
+          "value": null
+        }
+      }
+    },
+    "v4.0.14-b111 / Correct Area, Time and Photos": {
+      "entity_type": null,
+      "fields": {
+        "publisher_statement": {
+          "state": "sourced",
+          "value": "Sửa tổng khảo sát.",
+          "claims": [
+            {
+              "value": "Sửa tổng khảo sát.",
+              "tier": "A",
+              "source": "Real-Time-Robotics/ragas-release",
+              "extraction": "normalized",
+              "evidence_span": "- **Correct Area, Time and Photos**: Three numbers in the mission summary were wrong. Area was reported 100× too small, Est. Time was computed at a hover speed nothing in the app ever sets instead of your cruise speed, and Photos showed the selected pattern's count rather than the whole mission's. All three are now right, and a mission with two surveys adds them up.",
+              "capture": {
+                "url": "https://github.com/Real-Time-Robotics/ragas-release/releases/tag/v4.0.14-b111",
+                "fetched_at": "2026-10-15T06:27:32.926755+00:00",
+                "snapshot": "v4.0.14-b111.md",
+                "source": "Real-Time-Robotics/ragas-release",
+                "origin_id": "rtr-ragas-publisher"
+              }
+            }
+          ]
+        },
+        "runtime_test_evidence": {
+          "state": "null",
+          "value": null
+        },
+        "installed_apk_version": {
+          "state": "null",
+          "value": null
+        }
+      }
+    },
+    "v4.0.14-b111 / Each Waypoint Its Own Altitude Mode": {
+      "entity_type": null,
+      "fields": {
+        "publisher_statement": {
+          "state": "sourced",
+          "value": "Chế độ cao độ từng waypoint.",
+          "claims": [
+            {
+              "value": "Chế độ cao độ từng waypoint.",
+              "tier": "A",
+              "source": "Real-Time-Robotics/ragas-release",
+              "extraction": "normalized",
+              "evidence_span": "- **Each Waypoint Its Own Altitude Mode**: A waypoint can fly relative to launch, above terrain, or at an absolute (AMSL) altitude, chosen in its own panel. The mode is saved with the waypoint and survives export and import.",
+              "capture": {
+                "url": "https://github.com/Real-Time-Robotics/ragas-release/releases/tag/v4.0.14-b111",
+                "fetched_at": "2026-10-15T06:27:32.926755+00:00",
+                "snapshot": "v4.0.14-b111.md",
+                "source": "Real-Time-Robotics/ragas-release",
+                "origin_id": "rtr-ragas-publisher"
+              }
+            }
+          ]
+        },
+        "runtime_test_evidence": {
+          "state": "null",
+          "value": null
+        },
+        "installed_apk_version": {
+          "state": "null",
+          "value": null
+        }
+      }
+    },
+    "v4.0.14-b111 / GSD You Can Rely On": {
+      "entity_type": null,
+      "fields": {
+        "publisher_statement": {
+          "state": "sourced",
+          "value": "GSD thuộc nhiệm vụ đã upload.",
+          "claims": [
+            {
+              "value": "GSD thuộc nhiệm vụ đã upload.",
+              "tier": "A",
+              "source": "Real-Time-Robotics/ragas-release",
+              "extraction": "normalized",
+              "evidence_span": "- **GSD You Can Rely On**: The GSD in the Play Mission panel now comes from the mission's own camera patterns. Previously it depended on which item happened to be selected when you uploaded, so it sometimes vanished and sometimes showed a value from another survey.",
+              "capture": {
+                "url": "https://github.com/Real-Time-Robotics/ragas-release/releases/tag/v4.0.14-b111",
+                "fetched_at": "2026-10-15T06:27:32.926755+00:00",
+                "snapshot": "v4.0.14-b111.md",
+                "source": "Real-Time-Robotics/ragas-release",
+                "origin_id": "rtr-ragas-publisher"
+              }
+            }
+          ]
+        },
+        "runtime_test_evidence": {
+          "state": "null",
+          "value": null
+        },
+        "installed_apk_version": {
+          "state": "null",
+          "value": null
+        }
+      }
+    },
+    "v4.0.14-b111 / Ground Clearance Chart": {
+      "entity_type": null,
+      "fields": {
+        "publisher_statement": {
+          "state": "sourced",
+          "value": "Độ hở theo terrain dưới máy bay.",
+          "claims": [
+            {
+              "value": "Độ hở theo terrain dưới máy bay.",
+              "tier": "A",
+              "source": "Real-Time-Robotics/ragas-release",
+              "extraction": "normalized",
+              "evidence_span": "- **Ground Clearance Chart**: The Play Mission panel shows the terrain around the aircraft with your planned altitude line over it and the path already flown. The height above ground is read from the actual terrain under the drone, not the takeoff point.",
+              "capture": {
+                "url": "https://github.com/Real-Time-Robotics/ragas-release/releases/tag/v4.0.14-b111",
+                "fetched_at": "2026-10-15T06:27:32.926755+00:00",
+                "snapshot": "v4.0.14-b111.md",
+                "source": "Real-Time-Robotics/ragas-release",
+                "origin_id": "rtr-ragas-publisher"
+              }
+            }
+          ]
+        },
+        "runtime_test_evidence": {
+          "state": "null",
+          "value": null
+        },
+        "installed_apk_version": {
+          "state": "null",
+          "value": null
+        }
+      }
+    },
+    "v4.0.14-b111 / Layout Settings Survive a Round Trip": {
+      "entity_type": null,
+      "fields": {
+        "publisher_statement": {
+          "state": "sourced",
+          "value": "Giữ tùy chọn lưới qua nhập xuất.",
+          "claims": [
+            {
+              "value": "Giữ tùy chọn lưới qua nhập xuất.",
+              "tier": "A",
+              "source": "Real-Time-Robotics/ragas-release",
+              "extraction": "normalized",
+              "evidence_span": "- **Layout Settings Survive a Round Trip**: Entry corner, alternate transects and split-concave polygons are now written on export and read back on import, so a saved mission reopens as the grid you saved instead of being re-laid from a default corner.",
+              "capture": {
+                "url": "https://github.com/Real-Time-Robotics/ragas-release/releases/tag/v4.0.14-b111",
+                "fetched_at": "2026-10-15T06:27:32.926755+00:00",
+                "snapshot": "v4.0.14-b111.md",
+                "source": "Real-Time-Robotics/ragas-release",
+                "origin_id": "rtr-ragas-publisher"
+              }
+            }
+          ]
+        },
+        "runtime_test_evidence": {
+          "state": "null",
+          "value": null
+        },
+        "installed_apk_version": {
+          "state": "null",
+          "value": null
+        }
+      }
+    },
+    "v4.0.14-b111 / More Capture Options": {
+      "entity_type": null,
+      "fields": {
+        "publisher_statement": {
+          "state": "sourced",
+          "value": "Hover, refly và turnaround.",
+          "claims": [
+            {
+              "value": "Hover, refly và turnaround.",
+              "tier": "A",
+              "source": "Real-Time-Robotics/ragas-release",
+              "extraction": "normalized",
+              "evidence_span": "- **More Capture Options**: Surveys offer hover-and-capture, refly at 90° and images in turnarounds, and the hover time at each photo can be set from 1 to 60 seconds.",
+              "capture": {
+                "url": "https://github.com/Real-Time-Robotics/ragas-release/releases/tag/v4.0.14-b111",
+                "fetched_at": "2026-10-15T06:27:32.926755+00:00",
+                "snapshot": "v4.0.14-b111.md",
+                "source": "Real-Time-Robotics/ragas-release",
+                "origin_id": "rtr-ragas-publisher"
+              }
+            }
+          ]
+        },
+        "runtime_test_evidence": {
+          "state": "null",
+          "value": null
+        },
+        "installed_apk_version": {
+          "state": "null",
+          "value": null
+        }
+      }
+    },
+    "v4.0.14-b111 / Photo Counts You Can Trust": {
+      "entity_type": null,
+      "fields": {
+        "publisher_statement": {
+          "state": "sourced",
+          "value": "Sửa khoảng chụp và làm tròn.",
+          "claims": [
+            {
+              "value": "Sửa khoảng chụp và làm tròn.",
+              "tier": "A",
+              "source": "Real-Time-Robotics/ragas-release",
+              "extraction": "normalized",
+              "evidence_span": "- **Photo Counts You Can Trust**: Camera trigger spacing no longer applies the frontal overlap a second time, shots are rounded per transect the way QGC rounds them, and a camera with no usable footprint now reports no triggering instead of an absurd number. **Expect survey shot counts to differ from earlier versions** — these are the corrected figures, and the hover-and-capture points generated along each line moved with them.",
+              "capture": {
+                "url": "https://github.com/Real-Time-Robotics/ragas-release/releases/tag/v4.0.14-b111",
+                "fetched_at": "2026-10-15T06:27:32.926755+00:00",
+                "snapshot": "v4.0.14-b111.md",
+                "source": "Real-Time-Robotics/ragas-release",
+                "origin_id": "rtr-ragas-publisher"
+              }
+            }
+          ]
+        },
+        "runtime_test_evidence": {
+          "state": "null",
+          "value": null
+        },
+        "installed_apk_version": {
+          "state": "null",
+          "value": null
+        }
+      }
+    },
+    "v4.0.14-b111 / Photos Taken vs Planned": {
+      "entity_type": null,
+      "fields": {
+        "publisher_statement": {
+          "state": "sourced",
+          "value": "Tách số ảnh báo về và dự kiến.",
+          "claims": [
+            {
+              "value": "Tách số ảnh báo về và dự kiến.",
+              "tier": "A",
+              "source": "Real-Time-Robotics/ragas-release",
+              "extraction": "normalized",
+              "evidence_span": "- **Photos Taken vs Planned**: While a mission flies, the Photos figure shows the shots the aircraft actually reported against the number planned, for example `37/120`. A mission with no planned count shows the shots taken so far.",
+              "capture": {
+                "url": "https://github.com/Real-Time-Robotics/ragas-release/releases/tag/v4.0.14-b111",
+                "fetched_at": "2026-10-15T06:27:32.926755+00:00",
+                "snapshot": "v4.0.14-b111.md",
+                "source": "Real-Time-Robotics/ragas-release",
+                "origin_id": "rtr-ragas-publisher"
+              }
+            }
+          ]
+        },
+        "runtime_test_evidence": {
+          "state": "null",
+          "value": null
+        },
+        "installed_apk_version": {
+          "state": "null",
+          "value": null
+        }
+      }
+    },
+    "v4.0.14-b111 / Plan On the Surface": {
+      "entity_type": null,
+      "fields": {
+        "publisher_statement": {
+          "state": "sourced",
+          "value": "Sửa điểm trên địa hình.",
+          "claims": [
+            {
+              "value": "Sửa điểm trên địa hình.",
+              "tier": "A",
+              "source": "Real-Time-Robotics/ragas-release",
+              "extraction": "normalized",
+              "evidence_span": "- **Plan On the Surface**: Waypoints and survey boundaries sit on the ground where you put them. Drag a waypoint across the terrain, or drag its altitude handle to raise and lower it, and the flight line follows the hillside underneath.",
+              "capture": {
+                "url": "https://github.com/Real-Time-Robotics/ragas-release/releases/tag/v4.0.14-b111",
+                "fetched_at": "2026-10-15T06:27:32.926755+00:00",
+                "snapshot": "v4.0.14-b111.md",
+                "source": "Real-Time-Robotics/ragas-release",
+                "origin_id": "rtr-ragas-publisher"
+              }
+            }
+          ]
+        },
+        "runtime_test_evidence": {
+          "state": "null",
+          "value": null
+        },
+        "installed_apk_version": {
+          "state": "null",
+          "value": null
+        }
+      }
+    },
+    "v4.0.14-b111 / Quick to Come Back To": {
+      "entity_type": null,
+      "fields": {
+        "publisher_statement": {
+          "state": "sourced",
+          "value": "Giữ góc nhìn và cache terrain.",
+          "claims": [
+            {
+              "value": "Giữ góc nhìn và cache terrain.",
+              "tier": "A",
+              "source": "Real-Time-Robotics/ragas-release",
+              "extraction": "normalized",
+              "evidence_span": "- **Quick to Come Back To**: Switching to 2D and back keeps your 3D camera where you left it, and terrain tiles are cached so revisited ground loads without waiting on the network.",
+              "capture": {
+                "url": "https://github.com/Real-Time-Robotics/ragas-release/releases/tag/v4.0.14-b111",
+                "fetched_at": "2026-10-15T06:27:32.926755+00:00",
+                "snapshot": "v4.0.14-b111.md",
+                "source": "Real-Time-Robotics/ragas-release",
+                "origin_id": "rtr-ragas-publisher"
+              }
+            }
+          ]
+        },
+        "runtime_test_evidence": {
+          "state": "null",
+          "value": null
+        },
+        "installed_apk_version": {
+          "state": "null",
+          "value": null
+        }
+      }
+    },
+    "v4.0.14-b111 / Reboot the Aircraft From RAGAS": {
+      "entity_type": null,
+      "fields": {
+        "publisher_statement": {
+          "state": "sourced",
+          "value": "Gửi reboot và báo thất bại.",
+          "claims": [
+            {
+              "value": "Gửi reboot và báo thất bại.",
+              "tier": "A",
+              "source": "Real-Time-Robotics/ragas-release",
+              "extraction": "normalized",
+              "evidence_span": "- **Reboot the Aircraft From RAGAS**: When a change only takes effect after a restart, RAGAS offers to reboot the aircraft and tells you if the reboot fails.",
+              "capture": {
+                "url": "https://github.com/Real-Time-Robotics/ragas-release/releases/tag/v4.0.14-b111",
+                "fetched_at": "2026-10-15T06:27:32.926755+00:00",
+                "snapshot": "v4.0.14-b111.md",
+                "source": "Real-Time-Robotics/ragas-release",
+                "origin_id": "rtr-ragas-publisher"
+              }
+            }
+          ]
+        },
+        "runtime_test_evidence": {
+          "state": "null",
+          "value": null
+        },
+        "installed_apk_version": {
+          "state": "null",
+          "value": null
+        }
+      }
+    },
+    "v4.0.14-b111 / Resume Where It Stopped": {
+      "entity_type": null,
+      "fields": {
+        "publisher_statement": {
+          "state": "sourced",
+          "value": "Resume từ waypoint đã tới cuối.",
+          "claims": [
+            {
+              "value": "Resume từ waypoint đã tới cuối.",
+              "tier": "A",
+              "source": "Real-Time-Robotics/ragas-release",
+              "extraction": "normalized",
+              "evidence_span": "- **Resume Where It Stopped**: An interrupted mission resumes at the waypoint it last reached, not the one after it, so no ground is skipped.",
+              "capture": {
+                "url": "https://github.com/Real-Time-Robotics/ragas-release/releases/tag/v4.0.14-b111",
+                "fetched_at": "2026-10-15T06:27:32.926755+00:00",
+                "snapshot": "v4.0.14-b111.md",
+                "source": "Real-Time-Robotics/ragas-release",
+                "origin_id": "rtr-ragas-publisher"
+              }
+            }
+          ]
+        },
+        "runtime_test_evidence": {
+          "state": "null",
+          "value": null
+        },
+        "installed_apk_version": {
+          "state": "null",
+          "value": null
+        }
+      }
+    },
+    "v4.0.14-b111 / Surveys Laid Out the Way QGC Lays Them": {
+      "entity_type": null,
+      "fields": {
+        "publisher_statement": {
+          "state": "sourced",
+          "value": "Lưới nhập theo QGC.",
+          "claims": [
+            {
+              "value": "Lưới nhập theo QGC.",
+              "tier": "A",
+              "source": "Real-Time-Robotics/ragas-release",
+              "extraction": "normalized",
+              "evidence_span": "- **Surveys Laid Out the Way QGC Lays Them**: Opening a QGroundControl `.plan` now reproduces the same grid — same angle, same line count, same spacing phase. A survey that used to come out a quarter turn from the angle you typed now lies where you asked for it.",
+              "capture": {
+                "url": "https://github.com/Real-Time-Robotics/ragas-release/releases/tag/v4.0.14-b111",
+                "fetched_at": "2026-10-15T06:27:32.926755+00:00",
+                "snapshot": "v4.0.14-b111.md",
+                "source": "Real-Time-Robotics/ragas-release",
+                "origin_id": "rtr-ragas-publisher"
+              }
+            }
+          ]
+        },
+        "runtime_test_evidence": {
+          "state": "null",
+          "value": null
+        },
+        "installed_apk_version": {
+          "state": "null",
+          "value": null
+        }
+      }
+    },
+    "v4.0.14-b111 / Takeoff Placed by Tap Counts": {
+      "entity_type": null,
+      "fields": {
+        "publisher_statement": {
+          "state": "sourced",
+          "value": "Đổi takeoff cập nhật dự toán.",
+          "claims": [
+            {
+              "value": "Đổi takeoff cập nhật dự toán.",
+              "tier": "A",
+              "source": "Real-Time-Robotics/ragas-release",
+              "extraction": "normalized",
+              "evidence_span": "- **Takeoff Placed by Tap Counts**: Dropping the takeoff point on the map now recalculates distance, time and photos immediately.",
+              "capture": {
+                "url": "https://github.com/Real-Time-Robotics/ragas-release/releases/tag/v4.0.14-b111",
+                "fetched_at": "2026-10-15T06:27:32.926755+00:00",
+                "snapshot": "v4.0.14-b111.md",
+                "source": "Real-Time-Robotics/ragas-release",
+                "origin_id": "rtr-ragas-publisher"
+              }
+            }
+          ]
+        },
+        "runtime_test_evidence": {
+          "state": "null",
+          "value": null
+        },
+        "installed_apk_version": {
+          "state": "null",
+          "value": null
+        }
+      }
+    },
+    "v4.0.14-b111 / Trigger Distance 0 in Manual": {
+      "entity_type": null,
+      "fields": {
+        "publisher_statement": {
+          "state": "sourced",
+          "value": "Khoảng 0 hiện số ảnh chưa biết.",
+          "claims": [
+            {
+              "value": "Khoảng 0 hiện số ảnh chưa biết.",
+              "tier": "A",
+              "source": "Real-Time-Robotics/ragas-release",
+              "extraction": "normalized",
+              "evidence_span": "- **Trigger Distance 0 in Manual**: A Manual camera on a survey or corridor scan accepts a Trigger Distance of 0, so the photos can be taken another way — for example by time from a waypoint command. The planner then shows the photo count as `--` rather than a misleading 0.",
+              "capture": {
+                "url": "https://github.com/Real-Time-Robotics/ragas-release/releases/tag/v4.0.14-b111",
+                "fetched_at": "2026-10-15T06:27:32.926755+00:00",
+                "snapshot": "v4.0.14-b111.md",
+                "source": "Real-Time-Robotics/ragas-release",
+                "origin_id": "rtr-ragas-publisher"
+              }
+            }
+          ]
+        },
+        "runtime_test_evidence": {
+          "state": "null",
+          "value": null
+        },
+        "installed_apk_version": {
+          "state": "null",
+          "value": null
+        }
+      }
+    },
+    "v4.0.14-b111 / Type the Exact Position": {
+      "entity_type": null,
+      "fields": {
+        "publisher_statement": {
+          "state": "sourced",
+          "value": "Nhập vị trí bằng số.",
+          "claims": [
+            {
+              "value": "Nhập vị trí bằng số.",
+              "tier": "A",
+              "source": "Real-Time-Robotics/ragas-release",
+              "extraction": "normalized",
+              "evidence_span": "- **Type the Exact Position**: Waypoints, takeoff and pattern corners have latitude and longitude fields and a nudge pad, so a point can be set to a surveyed coordinate or moved a step at a time.",
+              "capture": {
+                "url": "https://github.com/Real-Time-Robotics/ragas-release/releases/tag/v4.0.14-b111",
+                "fetched_at": "2026-10-15T06:27:32.926755+00:00",
+                "snapshot": "v4.0.14-b111.md",
+                "source": "Real-Time-Robotics/ragas-release",
+                "origin_id": "rtr-ragas-publisher"
+              }
+            }
+          ]
+        },
+        "runtime_test_evidence": {
+          "state": "null",
+          "value": null
+        },
+        "installed_apk_version": {
+          "state": "null",
+          "value": null
+        }
+      }
+    },
+    "v4.0.14-b111 / Warned Before It Is Too Fast": {
+      "entity_type": null,
+      "fields": {
+        "publisher_statement": {
+          "state": "sourced",
+          "value": "Cảnh báo vượt nhịp camera.",
+          "claims": [
+            {
+              "value": "Cảnh báo vượt nhịp camera.",
+              "tier": "A",
+              "source": "Real-Time-Robotics/ragas-release",
+              "extraction": "normalized",
+              "evidence_span": "- **Warned Before It Is Too Fast**: When the flight speed and trigger spacing would ask the camera to fire faster than it can, the camera panel says so.",
+              "capture": {
+                "url": "https://github.com/Real-Time-Robotics/ragas-release/releases/tag/v4.0.14-b111",
+                "fetched_at": "2026-10-15T06:27:32.926755+00:00",
+                "snapshot": "v4.0.14-b111.md",
+                "source": "Real-Time-Robotics/ragas-release",
+                "origin_id": "rtr-ragas-publisher"
+              }
+            }
+          ]
+        },
+        "runtime_test_evidence": {
+          "state": "null",
+          "value": null
+        },
+        "installed_apk_version": {
+          "state": "null",
+          "value": null
+        }
+      }
+    },
+    "v4.0.14-b111 / Where It Runs": {
+      "entity_type": null,
+      "fields": {
+        "publisher_statement": {
+          "state": "sourced",
+          "value": "3D dành cho Android ARM64.",
+          "claims": [
+            {
+              "value": "3D dành cho Android ARM64.",
+              "tier": "A",
+              "source": "Real-Time-Robotics/ragas-release",
+              "extraction": "normalized",
+              "evidence_span": "- **Where It Runs**: Android controllers with 64-bit ARM hardware. On anything else the 3D button is simply not offered, rather than shown and then failing.",
+              "capture": {
+                "url": "https://github.com/Real-Time-Robotics/ragas-release/releases/tag/v4.0.14-b111",
+                "fetched_at": "2026-10-15T06:27:32.926755+00:00",
+                "snapshot": "v4.0.14-b111.md",
+                "source": "Real-Time-Robotics/ragas-release",
+                "origin_id": "rtr-ragas-publisher"
+              }
+            }
+          ]
+        },
+        "runtime_test_evidence": {
+          "state": "null",
+          "value": null
+        },
+        "installed_apk_version": {
+          "state": "null",
+          "value": null
+        }
+      }
+    }
+  },
+  "aggregates": {
+    "n_entities": 30,
+    "universe_estimate": null,
+    "coverage_pct": null,
+    "cells_by_state": {
+      "null": 60,
+      "sourced": 30
+    },
+    "rollup_field": null,
+    "rollup": {}
+  },
+  "build_digest": "b7e843d7ffdec689",
+  "scope": "Sourced publisher claims only; null runtime_test_evidence and installed_apk_version"
+}

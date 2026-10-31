@@ -1,0 +1,54 @@
+{
+  "qgcPin": {
+    "release": "v5.1.5",
+    "commit": "3a67d31f0c36bf3fe38ec52970d250a89d0aaf67"
+  },
+  "runtimeReceipt": "evidence/qgc03/desktop/runtime-pin.json",
+  "fixtures": [
+    {
+      "file": "camera-pair-qgc-saved.plan",
+      "sha256": "7b083bf82168d8a5f51052ef3e35b73194fe3776f6bdf56d0e44ff2707529c6b",
+      "bytes": 8797,
+      "sourcePath": "app/fixtures/qgc/roundtrip03/camera-pair-input.plan",
+      "sourceSha256": "f3029cccc03995cdac89c5507afa526bd36bccdc77539406ca8496f3ebea0336",
+      "label": "QGC03 · cặp camera, reserved 0→null",
+      "action": "Open and Save As; first experiment with numeric reserved fields",
+      "producer": "Actual QGroundControl5.1.5 desktop",
+      "observedDate": "2026-10-12"
+    },
+    {
+      "file": "simple-relative-qgc-saved.plan",
+      "sha256": "fe244563ad5c75965219b28e6d8c0c29d2c7fa1161231494cff3f62805937772",
+      "bytes": 8818,
+      "sourcePath": "app/fixtures/qgc/roundtrip03/simple-relative-input.plan",
+      "sourceSha256": "5669a3cf398ada221d799233763f58ebb824f54443ff01f247d877fff9185206",
+      "label": "QGC03 · giữ chiều cao tương đối",
+      "action": "Open and Save As; no intended edits",
+      "producer": "Actual QGroundControl5.1.5 desktop",
+      "observedDate": "2026-10-12"
+    },
+    {
+      "file": "survey-absolute-qgc-saved.plan",
+      "sha256": "2dc02f3d2e24fb9f4021b365215583f1d14a888eec4cc298108abe842b741230",
+      "bytes": 8912,
+      "sourcePath": "app/fixtures/qgc/roundtrip03/survey-absolute-input.plan",
+      "sourceSha256": "2e22e729e89e0a550b271944a024721b60d955eb23b775ebce3e760077ee9f6c",
+      "label": "QGC03 · Survey snapshot giữ AMSL",
+      "action": "Open flattened stored snapshot and Save As; no intended edits",
+      "producer": "Actual QGroundControl5.1.5 desktop",
+      "observedDate": "2026-10-12"
+    },
+    {
+      "file": "simple-relative-qgc-reopened.plan",
+      "sha256": "fe244563ad5c75965219b28e6d8c0c29d2c7fa1161231494cff3f62805937772",
+      "bytes": 8818,
+      "sourcePath": "app/fixtures/qgc/roundtrip03/simple-relative-qgc-saved.plan",
+      "sourceSha256": "fe244563ad5c75965219b28e6d8c0c29d2c7fa1161231494cff3f62805937772",
+      "label": "QGC03 · mở/lưu lần hai",
+      "action": "Reopen QGC output and Save As; no intended edits",
+      "producer": "Actual QGroundControl5.1.5 desktop",
+      "observedDate": "2026-10-12"
+    }
+  ],
+  "scope": "Actual desktop outputs, untouched; derived inputs have separate lineage. Strict Home equality remains open."
+}

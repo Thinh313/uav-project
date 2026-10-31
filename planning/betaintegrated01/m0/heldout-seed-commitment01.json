@@ -1,0 +1,8 @@
+{
+  "sha256": "daeebf158655a167232fa1b131cc97e7756224c73b29c03db183cf3e0314d7be",
+  "cases": 6,
+  "nominalRepetitions": 18,
+  "method": "Random seeds committed before M1 implementation; values kept in host-local evidence. Not a claim of independent human blinding; shared workspace actor could inspect. No input re-selection after failure.",
+  "custodianRole": "Root QA; later held-out fixture generation separate from implementation",
+  "generator": "SystemRandom/OS source; not a credential/signing key"
+}

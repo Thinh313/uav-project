@@ -1,0 +1,13 @@
+[
+  {
+    "origin_id": "tuf-spec",
+    "source": "tuf-spec",
+    "url": "https://theupdateframework.github.io/specification/latest/",
+    "snapshot": "tuf-spec.html",
+    "fetched_at": "2026-10-13T02:55:05.572180+00:00",
+    "sha256": "f20fda0dda7128f3b9cc1f12f3d90301b0f6e163576ba285bfe485d1671e8def",
+    "bytes": 248698,
+    "status": "captured",
+    "http_status": 200
+  }
+]

@@ -1,0 +1,5 @@
+# ADR-022 · evidence-preserving storage lifecycle
+
+Accepted under explicit LIFECYCLE12 request. Use the existing exclusive data-store writer and separate host-fsync lifecycle ledger; never edit execution history, associations, wire or receipt schemas. Keep canonical accepted data and lifecycle/checkpoint metadata. Reclaim redundant staging bytes only after proving an intact retained copy. An abandoned checkpoint can release chunk bytes only against a VERIFIED same-manifest packet in another stage; a journal projection then blocks resurrection and labels it released rather than corrupt.
+
+Persist a digest-bound preview plan before a destructive action. Current policy/holds and filesystem identities bind it; revalidate candidate/keeper bytes before start and keeper identities before each unlink. Record start/progress/directory fsync; after a crash preserve the plan and require explicit continuation or cancellation, without inferring unacknowledged deletion success. Reserve metadata quota and conservative export workspace separately from flight-journal budgets. No automatic deletion or physical disk-preallocation claim.

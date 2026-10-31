@@ -1,0 +1,85 @@
+{
+  "results": [
+    {
+      "check": "CAPTURE_MISSING",
+      "status": "PASS",
+      "reason": "GATE BITES · build dừng · [CAPTURE_MISSING] claim#0 entity='v4.0.14-b111 / Camera Commands Reach the Autopilot' field='publisher_statement': snapshot 'v4.0.14-b111.md' không tồn tại"
+    },
+    {
+      "check": "SPAN_NOT_FOUND",
+      "status": "PASS",
+      "reason": "GATE BITES · build dừng · [SPAN_NOT_FOUND] claim#0 entity='v4.0.14-b111 / Camera Commands Reach the Autopilot' field='publisher_statement': evidence_span không thấy verbatim trong snapshot"
+    },
+    {
+      "check": "SOURCED_ATTR",
+      "status": "PASS",
+      "reason": "GATE BITES · build dừng · [SOURCED_ATTR] claim#0 entity='v4.0.14-b111 / Camera Commands Reach the Autopilot' field='publisher_statement': tier không hợp lệ 'Z'"
+    },
+    {
+      "check": "AMBIGUOUS_MERGE_UNFLAGGED",
+      "status": "N/A",
+      "reason": "N/A · domain không khai cụm mơ hồ"
+    },
+    {
+      "check": "DISTRIBUTION_NO_DENOMINATOR",
+      "status": "N/A",
+      "reason": "No distribution/coverage is published; rollup_field=null"
+    },
+    {
+      "check": "IDEMPOTENT",
+      "status": "PASS",
+      "reason": "GATE BITES · build dừng · [IDEMPOTENT] build hai lần ra byte khác nhau"
+    },
+    {
+      "check": "REQUIRED_FIELD",
+      "status": "N/A",
+      "reason": "N/A · domain không khai required_fields"
+    },
+    {
+      "check": "ORIGIN_EVIDENCE",
+      "status": "N/A",
+      "reason": "N/A · domain không khai origin_evidence"
+    },
+    {
+      "check": "NO_INFERRED",
+      "status": "PASS",
+      "reason": "GATE BITES · build dừng · [NO_INFERRED] claim#0 field='publisher_statement': giá-trị này không được suy-diễn (inferred) — chỉ verbatim/normalized từ nguồn công-bố"
+    },
+    {
+      "check": "STRATUM_MISMATCH",
+      "status": "N/A",
+      "reason": "N/A · domain không khai expected_stratum"
+    },
+    {
+      "check": "SCOPE_PLACEMENT",
+      "status": "N/A",
+      "reason": "N/A · domain không khai allowed_scopes"
+    },
+    {
+      "check": "CAUSE_SOURCED",
+      "status": "N/A",
+      "reason": "N/A · domain không khai cause_grounded"
+    },
+    {
+      "check": "SEVERITY_SOURCED",
+      "status": "N/A",
+      "reason": "N/A · domain không khai severity_grounded"
+    },
+    {
+      "check": "NO_BLAME_INFERRED",
+      "status": "N/A",
+      "reason": "N/A · domain không khai no_blame_inferred"
+    },
+    {
+      "check": "fabricated_cell",
+      "status": "PASS",
+      "reason": "Auditor rejected tampered derived output"
+    },
+    {
+      "check": "fabricated_aggregate",
+      "status": "PASS",
+      "reason": "Auditor rejected tampered derived output"
+    }
+  ],
+  "scope": "Applicable injected faults; no semantic source validation"
+}

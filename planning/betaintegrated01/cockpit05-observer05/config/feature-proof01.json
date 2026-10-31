@@ -1,0 +1,29 @@
+{
+  "format": "aeris-observer05-cached-source-feature-proof",
+  "version": 1,
+  "APBinary": "runtime/betaintegrated01/dist/arducopter-m1-stagepipe-03",
+  "APSHA256": "77344f3c6f715cb326b99356815e8315769e9331dcb1e4c88bc4076804cb0d53",
+  "exactArtifactContainsSymbolsAndPath": [
+    "message-intervals-chan%u.txt",
+    "_ZN11GCS_MAVLINK46initialise_message_intervals_from_config_filesEv",
+    "_ZN11GCS_MAVLINK27get_intervals_from_filepathEPKcR25DefaultIntervalsFromFiles"
+  ],
+  "sourceSHA256": {
+    "runtime/sim32-instrument01-build/ardupilot/libraries/GCS_MAVLink/GCS_Common.cpp": "a940c630d50ff2bf2339ebff21fae998445ae8c52cb74091ed6b40cc1142a48e",
+    "runtime/sim32-instrument01-build/ardupilot/libraries/GCS_MAVLink/GCS_config.h": "484a48331e07eb7e5af7b0ed51780d6a8fb761c9764de2cfc0c7f23358aadb15",
+    "runtime/sim32-instrument01-build/ardupilot/libraries/AP_SerialManager/AP_SerialManager.cpp": "fe7cfce006fcef8e47388e965f17c4758da54613b67002877122dfec27256d9b",
+    "pilot/betaintegrated01/cockpit04/profiles/nominal/control.parm": "4ea8a33ad4ccf95fbe3f4125bd6ef22c7d663111f2102a1076b2b90887ce47c0",
+    "pilot/betaintegrated01/cockpit04/profiles/loss/control.parm": "cdd858ec731ce2a670051a8da72b955215edc56dab4bfb1a2daa410ea5b74c3d"
+  },
+  "sourceSemantics": {
+    "GCS_Common.cpp:146-154": "channel=MAVLINK_COMM_0+instance; nthMAVLink serial protocol instance",
+    "GCS_Common.cpp:1571-1576": "streamrate defaults initialized FIRST then configuration files applied before deferred_messages_initialised latch",
+    "GCS_Common.cpp:6988-7013": "mavlinkID + interval parsed as integer milliseconds, recognized ID converted to AP message",
+    "GCS_Common.cpp:7020-7023": "@ROMFS path loaded first then local cwd message-intervals-chan%u.txt",
+    "GCS_Common.cpp:7082-7089": "each configured interval applied with set_ap_message_interval",
+    "AP_SerialManager.cpp:600": "find_protocol_instance enumerates matching serial protocols",
+    "control.parm": "SERIAL0/1/2_PROTOCOL all2; serial1 is MAVLink instance/channel1; AP CLI serial1=tcp:5762:nowait"
+  },
+  "proofScope": "Cached selected artifact/source feature support, NOT actual requested cadence observed; actualCRC heartbeat rate/freshness required nextshort",
+  "APbuildOrLaunch": false
+}

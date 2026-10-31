@@ -1,0 +1,11 @@
+# ADR113 · one native transport, separate flight/payload authority
+
+Accepted for NATIVE98 isolated engineering. DirectTransport95 is the sole socket owner and serializes every RX/apply/TX/write/close. A pure UnifiedCore98 joins native WireGate95 and PayloadCore97 under one generation and sender255/190. Native sequencer assigns wire sequence and recomputes CRC, binding original intent bytes to physical wire in append-only raw. This avoids independent producer sequence streams and prevents either adapter bypassing the other domain's allowlist.
+
+Payload has no socket or heartbeat producer. Explicit attach uses an already-owned, committed simulator flight session; roles/grants remain explicit. One RX raw durable receipt precedes native consumers and JS delivery; all native sends fsync intent then recheck authority/foreground immediately before socket write. Transport failures close both consumers. A deliberate payload-only detach revokes local payload roles without closing flight; later attach in same generation is refused.
+
+The payload arbiter permits an armed heartbeat only when WireGate recorded a valid native ARM transmit for this exact mission/session. Unexpected armed state and invalid flight/parameter/Home/boot/CRC context close both. Flight authority and payload ownership are distinct; payload ownership never authorizes arm/mode/upload. Existing conservative ACK ambiguity fence remains. Claimed launch metadata is emulator engineering context, not hardware authentication.
+
+Two actual cases will retain separate run/session/generation and reviews. A link-loss native review stays UNKNOWN even if a separate observer later sees RTL/landing; observer evidence cannot rewrite native knowledge. New software has only the already-authorized development APK signature. Frozen candidate/source/ENDURE and prior receipts are not edited.
+
+QA refinement: RX_RAW/RX_DECODED/TX_RAW and redundant JS FOREIGN_IGNORED are not duplicated as semantic WAL writes; all physical RX/TX bytes remain durable in the native journal. This reduces per-packet bridge/fsync work without dropping wire frames or weakening ordering. Prior runtime gaps are retained and no performance improvement is claimed until measured.

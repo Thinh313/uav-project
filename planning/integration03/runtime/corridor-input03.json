@@ -1,0 +1,15 @@
+{
+  "source": "evidence/integration03-qa/heldout-corpus01.json",
+  "key": "inputs.corridorKml",
+  "sha256": "424b368f9d6b530bc19dceb7633d6c95be8fd055c6cf264b47d0ca6394f0c773",
+  "options": {
+    "altitudeAglM": 13,
+    "speedMS": 1.4,
+    "frontOverlapPct": 86,
+    "sideOverlapPct": 77,
+    "headingDeg": 11.210458053049527,
+    "corridorWidthM": 9,
+    "datumAcknowledged": true
+  },
+  "provenance": "Previously frozen QA-authored H02, known after offline execution; not newly unseen live input"
+}

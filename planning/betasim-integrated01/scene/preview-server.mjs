@@ -1,0 +1,21 @@
+/** Local fixture only. No simulator, MAVLink, aircraft input or SDK imports. */
+import http from 'node:http';import fs from 'node:fs';import path from 'node:path';import {fileURLToPath} from 'node:url';import {createHash} from 'node:crypto';
+import {assetManifest,serveSceneAsset} from './assets.mjs';
+const HERE=path.dirname(fileURLToPath(import.meta.url)),REPO=path.resolve(HERE,'../../..'),caseName=process.argv.includes('--case')?process.argv[process.argv.indexOf('--case')+1]:'fixture01',ORIGIN='http://127.0.0.1:8894';
+if(!/^fixture0[1-8]$/.test(caseName))throw Error('BOUNDED_FIXTURE_CASE');const OUT=path.join(REPO,'evidence/betasim-integrated01/scene',caseName);
+if(!process.argv.includes('--fixture-no-ap'))throw Error('EXPLICIT_GRAPHICS_FIXTURE_REQUIRED');if(fs.statfsSync(REPO).bavail*fs.statfsSync(REPO).bsize<10*2**30+256*2**20)throw Error('DISK_FLOOR');fs.mkdirSync(OUT,{recursive:true});
+const pins=assetManifest();fs.writeFileSync(path.join(OUT,'asset-inputs.json'),JSON.stringify({source:'IMMUTABLE_REFERENCE_FILES_NO_COPIES_OR_DOWNLOADS',pins},null,2)+'\n',{flag:'wx'});
+let counter=0,closed=false;const exports=new Map();const local={'/':'preview.html','/scene/preview.mjs':'preview.mjs','/scene/preview.css':'preview.css','/scene/audio-capture-worklet.mjs':'audio-capture-worklet.mjs'};
+const server=http.createServer(async(req,res)=>{const send=(code,b,type='application/json')=>{b=Buffer.isBuffer(b)?b:Buffer.from(typeof b==='string'?b:JSON.stringify(b));res.writeHead(code,{'Content-Type':type,'Content-Length':b.length,'Cache-Control':'no-store','X-Content-Type-Options':'nosniff','Content-Security-Policy':"default-src 'self';script-src 'self';style-src 'self';font-src 'self';img-src 'self' blob:;connect-src 'self' blob:;worker-src 'self';object-src 'none';frame-ancestors 'none'"});res.end(b);};
+ try{if(closed||req.headers.host!=='127.0.0.1:8894')throw Error('FIXTURE_HOST');
+  if(req.method==='GET'){
+   if(req.url==='/api/scene'){const now=process.hrtime.bigint(),frame=counter++;return send(200,{format:'aeris-sim-scene-frame',version:1,mode:'SCENE_FIXTURE',poseSource:'EXPLICIT_GRAPHICS_FIXTURE',relayAgeUpperMs:0,context:{run:'scene-fixture',epoch:'fixture-e1',boot:'fixture-b1',profileId:'SCENE_FIXTURE'},frame,simulationTimeS:frame/20,sampleHostNs:String(now-2_000_000n),committedHostNs:String(now-1_000_000n),rootNowNs:String(now),positionNedM:[0,0,-5],quaternionWxyz:[1,0,0,0],rpmEstimated:[3200,3300,3200,3300],ap:{armed:true,heartbeatHostNs:String(now-2_000_000n)},rawRef:{relativePath:'fixture/not-an-ap-journal',throughSequence:frame+1,prefixBytes:128*(frame+1),frame,headSHA256:createHash('sha256').update('EXPLICIT_FIXTURE_'+frame).digest('hex')}});}
+   if(local[req.url])return send(200,fs.readFileSync(path.join(HERE,local[req.url])),req.url.endsWith('.css')?'text/css':req.url.endsWith('.mjs')?'text/javascript':'text/html; charset=utf-8');
+   const asset=await serveSceneAsset(req.url);if(asset)return send(200,asset.bytes,asset.type);return send(404,'Not found','text/plain');
+  }
+  const rules={'/preview/capture':['image.png','application/octet-stream','fixture-image',8*2**20],'/preview/exposure':['exposure.json','application/json','fixture-metadata',32768],'/preview/audio':['audio-graph.wav','audio/wav','own-graph-pcm',1024*1024]};const rule=rules[req.url];
+  if(req.method!=='POST'||!rule||req.headers.origin!==ORIGIN||req.headers['content-type']!==rule[1]||req.headers['x-aeris-scene']!==rule[2]||exports.has(rule[0]))throw Error('FIXTURE_CAPTURE_SCOPE_OR_QUOTA');exports.set(rule[0],'PENDING');
+  const chunks=[];let bytes=0;for await(const b of req){bytes+=b.length;if(bytes>rule[3])throw Error('FIXTURE_CAPTURE_BOUND');chunks.push(b);}const b=Buffer.concat(chunks);fs.writeFileSync(path.join(OUT,rule[0]),b,{flag:'wx'});exports.set(rule[0],'SAVED');return send(200,{saved:rule[0],bytes,scope:'SCENE_FIXTURE_NOT_ACTUAL_AP_OR_CAMERA'});
+ }catch(e){send(400,{error:e.message});}});
+server.requestTimeout=5000;server.headersTimeout=3000;server.listen(8894,'127.0.0.1',()=>console.log(JSON.stringify({origin:ORIGIN,pid:process.pid,output:OUT,scope:'SCENE_FIXTURE_NO_AP_NO_FLIGHT_COMMANDS'})));
+for(const signal of ['SIGINT','SIGTERM'])process.once(signal,()=>{closed=true;server.close();server.closeAllConnections();});

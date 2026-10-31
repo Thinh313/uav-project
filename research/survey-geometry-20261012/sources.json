@@ -1,0 +1,50 @@
+[
+  {
+    "id": "proj-topocentric",
+    "url": "https://proj.org/en/stable/operations/conversions/topocentric.html",
+    "origin_id": "proj",
+    "snapshot": "proj-topocentric.html",
+    "tier": "A",
+    "scope": "Primary documentation/source scope only; not AERIS compatibility or production verification",
+    "fetched_at": "2026-10-12T04:29:35.787280+00:00",
+    "http_status": 200,
+    "final_url": "https://proj.org/en/stable/operations/conversions/topocentric.html",
+    "content_type": "text/html; charset=utf-8",
+    "status": "captured",
+    "sha256": "287992d78617fe40c255659ee322c01bcb2fcbffafb019740c6c0640072c00f3",
+    "bytes": 18600,
+    "capture_format": "Raw HTTP response bytes"
+  },
+  {
+    "id": "geographiclib-local",
+    "url": "https://raw.githubusercontent.com/geographiclib/geographiclib/main/src/LocalCartesian.cpp",
+    "origin_id": "geographiclib",
+    "snapshot": "LocalCartesian.cpp.txt",
+    "tier": "A",
+    "scope": "Primary documentation/source scope only; not AERIS compatibility or production verification",
+    "fetched_at": "2026-10-12T04:29:35.787763+00:00",
+    "http_status": 200,
+    "final_url": "https://raw.githubusercontent.com/geographiclib/geographiclib/main/src/LocalCartesian.cpp",
+    "content_type": "text/plain; charset=utf-8",
+    "status": "captured",
+    "sha256": "83d333c14df95e91a3777bf4d5c0f9805216d9c6b02995c5731f5f611d44f156",
+    "bytes": 2048,
+    "capture_format": "Raw HTTP response bytes"
+  },
+  {
+    "id": "qgc-plan",
+    "url": "https://docs.qgroundcontrol.com/master/en/qgc-dev-guide/file_formats/plan.html",
+    "origin_id": "qgroundcontrol",
+    "snapshot": "qgc-plan.html",
+    "tier": "A",
+    "scope": "Primary documentation/source scope only; not AERIS compatibility or production verification",
+    "fetched_at": "2026-10-12T04:29:35.787871+00:00",
+    "http_status": 200,
+    "final_url": "https://docs.qgroundcontrol.com/master/en/qgc-dev-guide/file_formats/plan.html",
+    "content_type": "text/html; charset=utf-8",
+    "status": "captured",
+    "sha256": "d37edecfb43bcd5e3dd809650c6194e358b1c1083c410d8bc8782121d3d7acb1",
+    "bytes": 141860,
+    "capture_format": "Raw HTTP response bytes"
+  }
+]

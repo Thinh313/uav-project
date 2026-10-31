@@ -1,0 +1,17 @@
+# G5 Flight Builder handover: source/mock only
+
+The G5 app now routes completed SITL close/cut/reboot/abort results through the unchanged R2 sealed-review contract and strict Store01. It reads bounded regular sealed review/closure files, checks their exact digests and returned-result bytes, stores a compact reference with the complete execution result, and exposes verified reference history after reload. Post-effect index, outcome or action-journal failures produce visible UNCERTAIN outcomes and block progression. A closed effect is never repeated as a retry.
+
+**Scope limit, Root L2 disposition:** this is an isolated SITL engineering target. The immutable R2 contract accepts SITL reviews only. Source/mock route tests stub SITL effects, using the retained actual SITL review as an explicitly labeled fixture. They are distinct from selecting UI `mode='mock'`. Protocol-only mock terminal mode is unsupported: it returns UNVERIFIED and stops. No complete protocol-only mock journey or general all-modes readiness is claimed.
+
+The user explicitly requested code integration and mocks only. All actual G5 Android, AP, AUTO, media/payload, cut/reboot/restart and persistence gates are NOT RUN / USER_DEFERRED. Product remains NOT READY. This handover does not authorize an actual launch.
+
+Frozen pins: `evidence/beta06/generation05/flight-pins.json`, SHA `b47eb2b569c53afea460d02b2cf2232011a119b687a15c266533f5c75ca9d72d`, 700 files, 90,926 bytes. Source freeze SHA `a417674ecb90ff19df1fae2740be8e27e60324faedee0356ba54091a1fee0939`. Native helper freeze SHA `7942f0d79bea228f567c8f4f2e110103fdae64f2021b139b18767557ba7a4526`.
+
+The 20-file workspace fork is 870,221 bytes. Original copied bytes remain exact, no first-writer claim or lock was consumed by mocks. The app checks lineage before the real Store01 writer lock; a managed restart checks the immutable original files and journal prefix. G4 workspace and earlier evidence remain untouched.
+
+Entry paths for a later explicitly authorized run: `pilot/beta06g5/app.mjs`, `planning/beta06g5/qa-root-controller.py`; read-only replay paths: `planning/beta06g5/qa-raw-flight.mjs`, `qa-cut-replay.mjs`, `qa-reboot-replay.mjs`, `qa-overlap-replay.mjs`. The unchanged artifact remains `.local/beta06g3/arducopter`, exact 7,172,336 bytes/mode0755/SHA pinned. AP540/speedup1/resources, authority/freshness, fixed ports and retained exact-CID closure remain unchanged. The new campaign specification is separate from the historical 15 requests, with at most four future G5 requests.
+
+Verification: 12 actual-handler/strict-store mock-effect groups; five history reload/tamper groups; four actual UI-function VM groups; ten asset/media handler groups; four request-cap groups; four first-writer mock-file groups. Conservative projected 1,666-file review is 250,111 bytes under the unchanged 262,144-byte cap; compact index is 2,599 bytes under 8,192. These are source/mock checks, not runtime proof. Evidence and precise limitations are in `evidence/beta06/generation05/builder-flight-integration05.json`.
+
+All `codex-tmp-g5-cap-20261022-*` and `codex-tmp-g5-lineage-20261022-*` scratch directories were removed. Failed setup fixtures are retained only under the new G5 evidence namespace. No Docker, ADB, browser, listeners, builds, installs or signing were performed by the Builder. No further source changes are planned; final independent QA governs this frozen integration's source/mock disposition.

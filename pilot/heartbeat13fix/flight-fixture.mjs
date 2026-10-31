@@ -1,0 +1,3 @@
+/** Transport placeholder for heartbeat HTTP experiments. Every flight command refuses. */
+import{randomUUID}from'node:crypto';
+export class FlightFixture{constructor({evidenceRoot}){this.evidenceRoot=evidenceRoot;this.instance=randomUUID();this.binding={};this.authority=null;}setClientGuard(f){this.guard=f;}async setDocument(d){this.document=d;this.binding={modelSha256:d.mission.sha256,planSha256:d.compiled.plan.sha256};}state(){return{instance:this.instance,busy:false,error:null,run:null,request:{instance:this.instance,...this.binding,run:null,session:null,boot:null},authority:null,live:null,latestPosition:null};}revokeClient(){this.authority=null;}transportDiagnostics(){return null;}async action(){throw Error('PHASE_A_NO_FLIGHT_EFFECTS');}}

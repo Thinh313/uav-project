@@ -1,0 +1,11 @@
+domain: geodata-20261012
+entity_label: Geographic source and policy references
+schema:
+  type_field: null
+  fields: [model, datum, storage, license, offline_policy]
+rollup_field: null
+universe:
+  estimate: null
+  basis: Four selected primary source/policy captures; no accuracy or coverage completeness claim
+alias_map: {}
+ambiguous_clusters: []

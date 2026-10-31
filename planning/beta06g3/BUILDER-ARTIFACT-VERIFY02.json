@@ -1,0 +1,82 @@
+{
+  "at": "2026-10-22T08:06:18.254887+00:00",
+  "status": "ENGINEERING_ARTIFACT_PREPARED_NOT_RUNTIME_PROVEN_BETA_NOT_READY",
+  "authorization": {
+    "path": "planning/beta06g3/DECISION-OFFLINE-EXECUTABLE-ARTIFACT.md",
+    "sha256": "a041a2ab3578957da6e6a9488f0ce8396c5e9b048a9ac4a14e7e6a53ba52d880"
+  },
+  "preparation": {
+    "source": {
+      "path": "/Users/os/Downloads/AI technique/aeris/evidence/sim32-instrument01/direct-uncorrected-source/arducopter",
+      "sha256": "1d3479f1fd2b9c6d85c95f38eeb8c105e6735ea1dc372736ddc07efd5162fc41",
+      "bytes": 7172336,
+      "mode": "0644",
+      "identityUnchanged": true
+    },
+    "destination": {
+      "path": "/Users/os/Downloads/AI technique/aeris/.local/beta06g3/arducopter",
+      "sha256": "1d3479f1fd2b9c6d85c95f38eeb8c105e6735ea1dc372736ddc07efd5162fc41",
+      "bytes": 7172336,
+      "mode": "0755",
+      "exclusiveCreated": true
+    },
+    "disk": {
+      "freeBeforeBytes": 39075840000,
+      "freeAfterBytes": 39075840000,
+      "floorBytes": 21474836480,
+      "metadataReserveBytes": 65536
+    },
+    "fsync": {
+      "fileAfterCopy": true,
+      "fileAfterMode": true,
+      "destinationParent": true,
+      "newParentParent": true
+    },
+    "copiedBytes": 7172336,
+    "chunkMaximumBytes": 65536,
+    "sourceExecuted": false,
+    "destinationExecuted": false,
+    "dockerOrGuestStarted": false,
+    "existingPathsOverwritten": false,
+    "engineeringPreparationOnly": true
+  },
+  "testResults": {
+    "newPreparerFixtureGroups": 10,
+    "newPassed": 10,
+    "failed": 0,
+    "command": "python3 -B pilot/beta06g3/test_prepare_executable.py",
+    "seconds": 0.011,
+    "retainedPreviousContractGroups": 10,
+    "provenance": "BUILDER_OFFLINE_UNIT_AND_BOUNDED_REAL_FILE_FIXTURES_NOT_INDEPENDENT_QA"
+  },
+  "runtime": {
+    "executed": false,
+    "dockerCalls": 0,
+    "APAttempts": 0,
+    "AndroidBoots": 0,
+    "builds": 0,
+    "signatures": 0,
+    "newRuntimeBudgetGranted": false
+  },
+  "generation02Manifest": {
+    "sha256Before": "42770f9c0bea35bdf73fcc1b90199ebd2912d3e141c96c7b6a6799f2159e5c20",
+    "sha256After": "42770f9c0bea35bdf73fcc1b90199ebd2912d3e141c96c7b6a6799f2159e5c20"
+  },
+  "newSourceFiles": {
+    "pilot/beta06g3/prepare_executable.py": {
+      "bytes": 6209,
+      "sha256": "f29b0c429789f903a5b492d13eebf1c442672e22f581ac1fb6f7c4e888264da2"
+    },
+    "pilot/beta06g3/test_prepare_executable.py": {
+      "bytes": 4051,
+      "sha256": "4051f985eeb4b32f390cd88c48ae1de1095a1791a4af76871f6323b9b2c8c9a5"
+    }
+  },
+  "scratchRemaining": [],
+  "limitations": [
+    "ExactByteCopyAndExecutableMetadataDoNotProveSuccessfulAPBoot",
+    "ActualG2Exit255CauseRemainsUnknownWithoutOCIStderr",
+    "NewRuntimeAndDurableLaunchCapturePendingSeparateScopedDecision",
+    "AllOldSourcesCandidatesENDUREAndEvidenceRetained"
+  ]
+}

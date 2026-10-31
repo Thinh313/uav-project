@@ -1,0 +1,32 @@
+import {validateBenchmarkSuite,validateBenchmarkRun,benchmarkReport,MAX_BENCH_BYTES} from './core/benchmark.mjs';
+import {compileSurvey,SITL_WORLD} from './core/compiler.mjs';
+import {compileQgc} from './core/qgc.mjs';
+import {localFrame} from './core/survey.mjs';
+const $=id=>document.getElementById(id),key='aeris-benchmark-run-v1';let suite,run=null,selected;
+const node=(tag,text)=>{const e=document.createElement(tag);if(text!==undefined)e.textContent=text;return e;};
+const say=(text,error=false)=>{$('notice').textContent=text;$('notice').classList.toggle('error',error);};
+function download(name,value){const a=node('a');a.href=URL.createObjectURL(new Blob([JSON.stringify(value,null,2)+'\n'],{type:'application/json'}));a.download=name;a.click();setTimeout(()=>URL.revokeObjectURL(a.href),1000);}
+function field(label,value){$('identity').append(node('dt',label),node('dd',value));}
+function render(){
+ const report=benchmarkReport(run);$('results').replaceChildren();
+ for(const r of report.armA.rows){const tr=node('tr');const title=node('td',suite.cases.find(c=>c.id===r.caseId).title);if(r.recordId)title.append(node('small',r.recordId));tr.append(title,node('td',r.kind==='completed'?'Hoàn tất tuyến':'HOLD → RTL'),node('td',r.status==='NOT_CHECKED'?'Chưa kiểm':r.status==='PASS'?(r.outcome==='COMPLETED'?'Hoàn tất quan sát':'Dừng chủ động'):'Cần kiểm tra'),node('td',r.readbackVerified===null?'—':r.readbackVerified?'Khớp':'Không khớp'));$('results').append(tr);}
+ $('negative-results').replaceChildren();for(const c of suite.cases.filter(c=>!c.expected.accepted)){const p=node('p');p.append(node('strong',c.title),node('span',run?.negativeChecks.some(n=>n.caseId===c.id)?'Đã kiểm từ chối trước khi ghi mission':'Kỳ vọng từ chối · chưa kiểm SITL'));$('negative-results').append(p);}
+ $('arm-a').textContent=report.armA.status==='ENGINEERING_PASS'?'Đạt ma trận kỹ thuật SITL':report.armA.status==='PARTIAL'?'Gói chưa đủ / cần kiểm tra':'Chưa kiểm';$('arm-b').textContent='Chưa đo · NOT_CHECKED';$('comparison').textContent='Chưa đủ điều kiện · NOT_COMPARABLE';$('identity').replaceChildren();field('Suite',suite.id);field('Suite SHA',suite.sha256);field('Phạm vi','Simulator / profile '+suite.profile.version);
+ if(run){field('Build',run.freeze.build.label);field('Khóa trước chạy',run.freeze.createdAt);field('Freeze SHA',run.freeze.sha256);field('Gói SHA',run.sha256);$('freeze').textContent=JSON.stringify(run.freeze,null,2);}else $('freeze').textContent='Chưa có freeze / hồ sơ thực thi.';
+ $('export').disabled=!run;$('export-suite').disabled=false;
+}
+function geometry(c){
+ const g=$('geometry');g.replaceChildren();const f=localFrame({lat:SITL_WORLD.home.lat,lon:SITL_WORLD.home.lon});const polygon=c.request.settings?.polygon?.map(p=>f.forward(p))??[];
+ let route=[];if(c.expected.accepted){const compiled=c.request.format==='aeris-qgc-run'?compileQgc(c.request):compileSurvey(c.request,SITL_WORLD);route=compiled.items.filter(i=>i.seq>0&&[16,22].includes(i.command)).map(i=>f.forward({lat:i.x/1e7,lon:i.y/1e7}));}
+ const points=[...polygon,...route];if(!points.length)return;const xs=points.map(p=>p.x),ys=points.map(p=>p.y),minX=Math.min(...xs)-5,maxX=Math.max(...xs)+5,minY=Math.min(...ys)-5,maxY=Math.max(...ys)+5,scale=Math.min(720/(maxX-minX),340/(maxY-minY)),x=p=>400+(p.x-(minX+maxX)/2)*scale,y=p=>210-(p.y-(minY+maxY)/2)*scale;
+ const svg=(tag,attributes)=>{const n=document.createElementNS('http://www.w3.org/2000/svg',tag);for(const[k,v]of Object.entries(attributes))n.setAttribute(k,v);g.append(n);return n;};
+ if(polygon.length)svg('polygon',{points:polygon.map(p=>`${x(p)},${y(p)}`).join(' '),fill:'#ffffff06',stroke:c.expected.accepted?'#777':'#b4a28a','stroke-width':1.5});
+ if(route.length)svg('polyline',{points:route.map(p=>`${x(p)},${y(p)}`).join(' '),fill:'none',stroke:'#edc62c','stroke-width':1.5});
+ for(const p of route)svg('circle',{cx:x(p),cy:y(p),r:3,fill:'#eee'});
+}
+function select(id){selected=id;const c=suite.cases.find(c=>c.id===id);$('case-title').textContent=c.title;$('case-policy').textContent=c.expected.accepted?'Compiler chấp nhận':'Compiler từ chối';$('case-scope').textContent=c.expected.accepted?`${c.expected.items} lệnh / ${c.expected.transects??'—'} đoạn khảo sát · WGS84 → relative Home trong world SITL`:`${c.expected.error} Không xuất tuyến thực thi.`;$('case-provenance').textContent=c.provenance.kind==='synthetic'?'Mẫu hình học sinh bằng AERIS · chưa có địa hình thực.':'Bản dẫn xuất corpus QGC desktop; nguồn/Home/độ cao giữ trong receipt.';for(const b of $('case-list').children)b.setAttribute('aria-pressed',String(b.dataset.case===id));geometry(c);}
+async function adopt(value){const next=await validateBenchmarkRun(value,{suiteSha256:suite.sha256});run=next;render();try{localStorage.setItem(key,JSON.stringify(next));say('Gói hợp lệ. Bằng chứng lịch sử chỉ dùng để review; RAGAS chưa đo.');}catch{say('Gói hợp lệ; chưa lưu được ngoại tuyến vì kho trình duyệt đầy.',true);}}
+async function load(){try{const response=await fetch('/api/benchmarks/latest');if(!response.ok)throw Error(response.status===404?'Chưa có gói thực thi. Chạy campaign BENCH06 hoặc mở gói đã xuất.':'Không đọc được gói kiểm chứng mới nhất.');await adopt(await response.text());}catch(e){say(e.message+(run?' Giữ gói đang xem.':''),true);}}
+$('load').onclick=load;$('import').onclick=()=>$('file').click();$('file').onchange=async()=>{try{const f=$('file').files[0];if(!f)return;if(f.size>MAX_BENCH_BYTES)throw Error('Gói kiểm chứng cần ≤8 MiB.');await adopt(await f.text());}catch(e){say(e.message+(run?' Giữ gói đang xem.':''),true);}finally{$('file').value='';}};
+$('export').onclick=()=>run&&download('aeris-bench06-run.json',run);$('export-suite').onclick=()=>download('aeris-bench06-suite.json',suite);
+try{suite=await validateBenchmarkSuite(await(await fetch('/fixtures/bench06/suite.json')).text());for(const c of suite.cases){const b=node('button');b.dataset.case=c.id;b.append(node('span',c.title),node('small',c.expected.accepted?'Chấp nhận':'Từ chối'));b.onclick=()=>select(c.id);$('case-list').append(b);}render();select(suite.cases[0].id);const cached=localStorage.getItem(key);if(cached){try{await adopt(cached);say('Đang xem gói đã lưu; build và thời điểm thuộc lần kiểm lịch sử.');}catch(e){say('Bản lưu không hợp lệ: '+e.message,true);}}else await load();}catch(e){say('Không đọc được corpus: '+e.message,true);$('load').disabled=true;$('import').disabled=true;}

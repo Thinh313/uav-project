@@ -1,0 +1,30 @@
+{
+  "format": "aeris-independent-m1-control02-acceptance",
+  "version": 1,
+  "scope": "Isolated geography oracle plus existing APK02 nominal release/LAND. No new runtime by QA.",
+  "geography": [
+    "Origin binds exact run/epoch/boot/operator/generation and closed native external anchor, specific explicit post-arm confirmation row and raw AP Home. A matching checksum on an unbound arbitrary file is insufficient.",
+    "Use every actual armed observation through terminal disarm; reject re-arming after terminal disarm, empty/unfinished windows, missing samples or changed context. No best safe subwindow selection.",
+    "Keep pre-authority startup coordinates and label them, including 0,0. Legitimate confirmed Home 0,0 is valid for the oracle when current GPS/EKF/Home qualify.",
+    "Any armed geographic jump, including 0,0 from another Home, remains in the window and fails the unchanged 10m limit. Relative altitude remains at most 5m.",
+    "Latest preceding GPS/EKF/Home/HB must qualify and remain fresh for each armed position. A newer bad or unknown fact overrides older good facts. Duplicate/reordered/foreign or boot-reset bytes cannot refresh qualification.",
+    "After confirmation, any changed Home or datum/context mismatch fails. Native confirmation cannot precede actual armed/post-arm Home observations.",
+    "Strict finite WGS84 lat/lon, E7/mm integer types, domains, missing values and declared datum. Boolean-as-integer and strings fail. No blanket rejection of geographic 0,0.",
+    "Dateline wrap and polar coordinates tested against independent WGS84 ECEF chord for short distances; long distances need only fail the 10m bound without wrap artifacts.",
+    "Ground-only no-consent recovery does not need a post-arm confirmation and cannot produce a flight pass.",
+    "Old loss05 may receive a new versioned result, while its original CONTROL_NOT_READY receipt stays immutable. This cannot be represented as historical acceptance."
+  ],
+  "nominal": [
+    "UP revokes user consent before one BRAKE17 safety intent.",
+    "A fresh actual AP mode17 observation precedes neutral and release. ACK alone is insufficient.",
+    "No normal RC after revocation, no consent while WAIT_HOLD and no automatic grant from neutral sampling.",
+    "Fresh centered unheld sample plus a second explicit operator action produces a different lease ID.",
+    "User LAND9 requires completed release and new fresh consent; root observes LAND/ground/disarm independently of ACK or forced stop.",
+    "No GCS-failsafe or error confounder for the explicit nominal LAND scenario."
+  ],
+  "retainedGaps": [
+    "Existing immutable native Flight02 rejects Home0,0; new oracle support is not global native product support.",
+    "Kernel/remote network age and physical HID remain unmeasured.",
+    "30-minute, full cockpit/media, real Hera/HeraHub/payload and production remain separate."
+  ]
+}

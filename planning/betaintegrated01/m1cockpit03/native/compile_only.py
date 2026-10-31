@@ -1,0 +1,8 @@
+from pathlib import Path
+import subprocess,shutil,json,hashlib,runpy
+R=Path(__file__).resolve().parents[4];N=R/'native/betaintegrated01/cockpit03';B=runpy.run_path(str(N/'build.py'));base=B['BASE'];flight=B['FLIGHT_BASE'];owner=B['OWNER_BASE'];sources=[(flight if n=='ControlFlight.java' else owner if n=='ControlOwner.java' else base)/'src/vn/rtr/aeris/control01'/n for n in ['ControlAuthority.java','ControlConfig.java','ControlFlight.java','ControlOwner.java','ControlSession.java','RcWire.java']]+sorted((N/'src').rglob('*.java'));sources += [R/'native/betaintegrated01/runtime/src/vn/rtr/aeris/beta01runtime'/n for n in ['Mavlink.java','NativeSegments.java','Values.java']]+[R/'native/betaintegrated01/runtime/src/vn/rtr/aeris/native98'/n for n in ['Dialect95.java','Json.java']]+[R/'native/betaintegrated01/runtime02/src/vn/rtr/aeris/beta01runtime/PendingExplicitAction.java']+[R/'native/betaintegrated01/src/vn/rtr/aeris/betaintegrated01'/n for n in ['ProviderDescriptor.java','RunLifecycle.java']]
+w=R/'native/betaintegrated01/.build/cockpit03-compile';assert not w.exists();w.mkdir();log={}
+try:
+ p=subprocess.run([str(B['J']/'bin/javac'),'-source','8','-target','8','-bootclasspath',str(B['B']/'core-lambda-stubs.jar')+':'+str(B['A']),'-d',str(w),*map(str,sources)],text=True,capture_output=True);log=dict(exit=p.returncode,stdout=p.stdout,stderr=p.stderr,sourcePins={str(p.relative_to(R)):hashlib.sha256(p.read_bytes()).hexdigest()for p in sources},installOrLaunch=False);print(p.returncode,p.stderr);assert p.returncode==0
+finally:
+ shutil.rmtree(w);log['scratchRemoved']=str(w.relative_to(R));print(json.dumps(log));

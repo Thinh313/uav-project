@@ -1,0 +1,3 @@
+# CREW02 L2 refinement03: explicit JOIN window
+
+20/10/2026. Contractor approved Builder proposal: authenticated but UNJOINED HELLO challenge has an absolute30s TTL from helloAt, with zero grants. This permits a user to inspect identity before explicit JOIN. STATE/polls do not renew this window. Expired unjoined sockets must close and release bounded workers. After JOIN, native monotonic presence remains3000ms with own-runtime heartbeat500ms. Frame deadline3s, TLS handshake deadline5s, max2workers, explicit consent, no authority restoration/retry remain unchanged. This changes setup UX only; it does not relax authority or flight freshness. Frozen TIP AC unchanged; disclosure here prevents silently changing the draft3s HELLO limit.

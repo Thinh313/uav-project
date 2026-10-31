@@ -1,0 +1,7 @@
+# QGC interchange review · 2026-10-12
+
+Single-agent contextual review. Tagged v5.1.5 commit resolves moving-document ambiguity: AltitudeFrameRelative is enum 1; old documentation example mode 0 is not used in our current export. MissionItem stores seven parameters; null maps to possibleNaN in the QGC loader. AP_Mission-Copter-4.7.1 separately permits NAV yaw NaN but does not store NAV yaw for the bounded commands. Our profile records null-to-zero normalization and preserves the source raw null; other meaningful nulls reject execution.
+
+Survey serializer writes v5; TransectStyle v1 migrates to v2 and loads generated Items. We preserve cached commands and polygon/camera metadata, but do not claim generated commands match polygon settings or that our generator matches QGC. AERIS-authored simple/complex fixtures are distinct from the unchanged official SectionTest.plan (legacy/PX4/camera 205), whose execution is correctly blocked. Actual QGC binary open/save and QGC-generated complex fixture remain NOT_CHECKED.
+
+All QGC captures share upstream origin; sourced, not independently corroborated. Cached Items are untrusted input with explicit review and bounded simulator gates. Nonempty geofence/rally are retained on source export and block the mission-only transport. License snapshot is reference provenance; no QGC/Qt application binary is bundled or linked. No RAGAS application source obtained or used. This review is not legal certification, interoperability certification or operational flight acceptance.

@@ -1,0 +1,26 @@
+{
+  "entries": [
+    {
+      "source": "native/dual67/index.html",
+      "sourceSha256": "b88cb7ba1d2489c7c8c00e6542c7ba2a15a64b860d942c7883aed8cd70076915",
+      "destination": "native/journal68/index.html",
+      "derivedSha256": "dda16a681d25703eb6adc1e4f4a0ba167da61e4302307ff9c5de145f4844e6a4",
+      "changes": "Isolated UI copy; journal mode guard, durable status, historical-only panel; no original edits"
+    },
+    {
+      "source": "native/dual67/cockpit.css",
+      "sourceSha256": "6cfaf9b622fb28ec0db05244b4ce2b2e6b46db5649e21374c3366afe0ec9a004",
+      "destination": "native/journal68/cockpit.css",
+      "derivedSha256": "8b9e79ca985f31b7fb75c37fa94e147b37c50d8032d49eacdf661078e426d2b5",
+      "changes": "Isolated UI copy; journal mode guard, durable status, historical-only panel; no original edits"
+    },
+    {
+      "source": "native/dual67/client.mjs",
+      "sourceSha256": "68dbca1bce1c1c41f1236605f45814b4f15800cb3cc81882d5c4e1d596f90c52",
+      "destination": "native/journal68/client.mjs",
+      "derivedSha256": "2b9bcbc1f46bdef631da71aac85ad4997442eb2b7696269d8d84c53f3ff3b76b",
+      "changes": "Isolated UI copy; journal mode guard, durable status, historical-only panel; no original edits"
+    }
+  ],
+  "scope": "Three small UI assets only; no project/dependency copy"
+}

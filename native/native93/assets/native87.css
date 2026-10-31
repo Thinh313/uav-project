@@ -1,0 +1,12 @@
+.source87{display:flex;gap:4px;align-items:center;flex:none}.source87 a{display:grid;place-items:center;min-height:48px;padding:8px 10px;border:1px solid var(--glass-rule);border-radius:10px;font-size:13px;color:var(--glass-ink);text-decoration:none}.source87 a[aria-current]{border-color:#c6a631;background:#c6a63120}.topbar .aircraft{min-width:0}.topbar .concept-mark{display:none}.topbar .authority-chip{min-width:150px;max-width:180px}#fileops87{border-top:1px solid var(--glass-rule);margin-top:16px;padding-top:12px}#operations87 article{padding:12px 0;border-bottom:1px solid var(--glass-rule)}#operations87 p{font-size:13px;overflow-wrap:anywhere}#operations87 small{display:block;margin:8px 0}body[data-source87=sitl] #task-pane,body[data-source87=sitl] #review-panel,body[data-source87=sitl] #native-fly-controls{display:none!important}.source87 a:focus-visible{outline:2px solid #d9b631;outline-offset:2px}@media(max-width:1150px){.source87 a{font-size:12px;padding:6px}.topbar .satellite{display:none}.topbar .authority-chip{min-width:120px}.topbar .aircraft{display:none}}
+
+@media(min-width:1151px) and (max-width:1450px){.topbar .satellite{display:none}.topbar .authority-chip{min-width:180px;max-width:190px}}
+
+button,button *,nav a,summary{-webkit-user-select:none;user-select:none}input,textarea{-webkit-user-select:text;user-select:text}
+
+/* Simulator observations never share the illustrative mission/camera background in any view. */
+body[data-source87=sitl] #camera-scene,body[data-source87=sitl] #map-scene,body[data-source87=sitl] .reticle,body[data-source87=sitl] #swap,body[data-source87=sitl] #camera-meta,body[data-source87=sitl] .scene-top .camera-chip{display:none!important}
+
+/* Native88: structural row ownership; content clips inside its own grid row. */
+.task-pane:not([hidden]){display:grid!important;grid-template-rows:auto minmax(0,1fr) auto!important;overflow:hidden;isolation:isolate}.pane-scroll{min-height:0;overflow:auto;position:relative;clip-path:inset(0);scroll-padding-block:16px;contain:paint}.pane-heading,.pane-action{position:relative;z-index:1;margin:0}.pane-scroll .confirmations>label{min-height:64px;scroll-margin-block:16px}.pane-scroll input:focus{scroll-margin-block:24px}
+#incident88{margin:16px 0;border:1px solid var(--glass-rule);border-radius:14px;padding:16px;background:rgba(255,255,255,.03)}#incident88 h3{margin:0 0 8px;font-size:21px}#incident88 p{white-space:pre-line}#technical88{font-size:13px;max-height:140px}#incident88 .actions83{gap:8px}

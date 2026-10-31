@@ -1,0 +1,124 @@
+{
+  "aggregates": {
+    "cells_by_state": {
+      "sourced": 5
+    },
+    "coverage_pct": null,
+    "n_entities": 1,
+    "rollup": {},
+    "rollup_field": null,
+    "universe_estimate": null
+  },
+  "registry": {
+    "Geo/Home/datum review definitions": {
+      "entity_type": null,
+      "fields": {
+        "dsm": {
+          "claims": [
+            {
+              "capture": {
+                "fetched_at": "2026-10-13T00:54:05.765269+00:00",
+                "origin_id": "copernicus-dataspace",
+                "sha256": "eddf2454b6846fec04dd821f0e638acf26d8de59f6861a517fb0b09f132eb103",
+                "snapshot": "copernicus.html",
+                "source": "copernicus-datum",
+                "url": "https://dataspace.copernicus.eu/explore-data/data-collections/copernicus-contributing-missions/collections-description/COP-DEM"
+              },
+              "evidence_span": "Digital Surface Model",
+              "extraction": "normalized",
+              "source": "copernicus-datum",
+              "tier": "A",
+              "value": "DSM represents surface objects, not surveyed bare ground"
+            }
+          ],
+          "state": "sourced",
+          "value": "DSM represents surface objects, not surveyed bare ground"
+        },
+        "geoid_context": {
+          "claims": [
+            {
+              "capture": {
+                "fetched_at": "2026-10-13T00:54:05.765607+00:00",
+                "origin_id": "usgs-datum-guidance",
+                "sha256": "123c667c192664752bd3746bb4ac14ee62255aa592ea7fb805a835e55aae53cd",
+                "snapshot": "usgs-web-extract.txt",
+                "source": "usgs-web-extract",
+                "url": "https://www.usgs.gov/about/organization/science-support/office-science-quality-and-integrity/guidance-use-and"
+              },
+              "evidence_span": "geoid model used in the conversion",
+              "extraction": "normalized",
+              "source": "usgs-web-extract",
+              "tier": "A",
+              "value": "USGS guidance calls for conversion geoid model documentation; US publication guidance, not Vietnam datum approval"
+            }
+          ],
+          "state": "sourced",
+          "value": "USGS guidance calls for conversion geoid model documentation; US publication guidance, not Vietnam datum approval"
+        },
+        "home_altitude": {
+          "claims": [
+            {
+              "capture": {
+                "fetched_at": "2026-10-13T00:54:05.266340+00:00",
+                "origin_id": "mavlink-upstream",
+                "sha256": "0e226021cf0a90aa9cfbcf764da3f2b1b2f4b8d7c236c91c1cf73a3cd204b5bb",
+                "snapshot": "mavlink-common.html",
+                "source": "mavlink-common",
+                "url": "https://mavlink.io/en/messages/common.html"
+              },
+              "evidence_span": "Altitude (MSL)",
+              "extraction": "normalized",
+              "source": "mavlink-common",
+              "tier": "A",
+              "value": "HOME_POSITION height is MSL; relative Home height is distinct"
+            }
+          ],
+          "state": "sourced",
+          "value": "HOME_POSITION height is MSL; relative Home height is distinct"
+        },
+        "relative_home": {
+          "claims": [
+            {
+              "capture": {
+                "fetched_at": "2026-10-13T00:54:05.266340+00:00",
+                "origin_id": "mavlink-upstream",
+                "sha256": "0e226021cf0a90aa9cfbcf764da3f2b1b2f4b8d7c236c91c1cf73a3cd204b5bb",
+                "snapshot": "mavlink-common.html",
+                "source": "mavlink-common",
+                "url": "https://mavlink.io/en/messages/common.html"
+              },
+              "evidence_span": "altitude relative to the home position",
+              "extraction": "normalized",
+              "source": "mavlink-common",
+              "tier": "A",
+              "value": "Relative-Home is not terrain AGL"
+            }
+          ],
+          "state": "sourced",
+          "value": "Relative-Home is not terrain AGL"
+        },
+        "vertical_datum": {
+          "claims": [
+            {
+              "capture": {
+                "fetched_at": "2026-10-13T00:54:05.765269+00:00",
+                "origin_id": "copernicus-dataspace",
+                "sha256": "eddf2454b6846fec04dd821f0e638acf26d8de59f6861a517fb0b09f132eb103",
+                "snapshot": "copernicus.html",
+                "source": "copernicus-datum",
+                "url": "https://dataspace.copernicus.eu/explore-data/data-collections/copernicus-contributing-missions/collections-description/COP-DEM"
+              },
+              "evidence_span": "EGM2008",
+              "extraction": "normalized",
+              "source": "copernicus-datum",
+              "tier": "A",
+              "value": "Copernicus DEM names EGM2008 vertical reference"
+            }
+          ],
+          "state": "sourced",
+          "value": "Copernicus DEM names EGM2008 vertical reference"
+        }
+      }
+    }
+  }
+}

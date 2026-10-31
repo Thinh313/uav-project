@@ -1,0 +1,11 @@
+{
+  "atUTC": "2026-10-26T23:00:22.114987+00:00",
+  "supersedesStatusOnly": "planning/betaintegrated01/PROGRESS.json",
+  "M0": "COMPLETE_SOURCE_HANDOFF",
+  "M1Mock": "FOUNDATION_READY",
+  "M1Actual": "NOT_READY",
+  "BETA_SIM": "NOT_READY",
+  "verification": "evidence/betaintegrated01-m1mock/verification-final01.json",
+  "next": "M1-BUILD/ACTUAL: selected provider/runtime closure, AP-stage/native-journal adapters, cadence/freshness and short smoke before30min",
+  "historicalFilesRewritten": false
+}

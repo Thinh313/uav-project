@@ -1,0 +1,9 @@
+# ADR036 · Observe forced sleep and preserve fetch diagnostics
+
+New scoped engineering controller13/10/2026, same signed9application/independent pinnedbootstrap, new generation05/evidence/endure27. Old controller/source/corpus/attempts immutable. NoFly/Hera changes/new signing. Sleep affects24h continuity even if cadence gap<90s; observed forced clamshell interruption cannot be repaired by timeout relaxation or HTTPretry.
+
+New small macOSIOKit observer registers system sleep/wake, fsyncs bounded raw notification before allowingOSchange; it never cancels or prevents forced sleep. Parent consumes native events and rejects sleep/wake or observerdeath, pollsAC/lid read-only. AC and openlid are preconditions, not guarantees. A final raw notification replay and OS power log corroboration prevent acceptance from a late/lost callback. Existing idle-sleep assertion stays duration-limited and supervised. Physical real sleep is not induced during testing; callback injection tests and actual registration smoke are separately labeled.
+
+External fetch helper retains structured bounded errors/causes and admission/timing/abort provenance without serializing request tokens or bodies. Actual loopback connection-reset/body/header/timeout tests distinguish intentional local body abort, externalcancel and unknownerror; unknown faults stay fatal, no retry. Currenttime/campaignstage/canaryoutput and failed supervisory receipt remain diagnostics. No application/transport change is needed for observed host interruption; reuse byte-identical signed9.
+
+Old intervals excluded. Observer metadata is host engineering evidence, not independently signed drone evidence or power-loss certification. New package/candidate selection remains gated by actual raw24h and all corpus/trust checks. Future integration intoFly is explicitly outside this task.

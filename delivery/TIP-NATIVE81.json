@@ -1,0 +1,24 @@
+{
+  "scope": "Native81 offline isolated shell from cockpit80 QA02 and native79 journal/44 workflow",
+  "authorized": "Implement native UI; no new signature; preserve frozen source/candidate/ENDURE and20GiB floor",
+  "acceptance": [
+    "AC81-01 selective derivation/fingerprints/preservation",
+    "AC81-02 Android Java + assets compile unsigned, no signing keys or signature operation",
+    "AC81-03 survey edit/save/compile, profile freshness/Home/datum, guarded Fly mock points/landing, actual persisted review",
+    "AC81-04 ACK nonexecution, stale/wrongtype/airspace blocks, background/restart no grants, corruption/pending/quota no silent overwrite",
+    "AC81-05 host UI readability1280x800/1024x600 and retained QA02 design",
+    "AC81-06 disk budget, cleanup, report limits"
+  ],
+  "notCheckedByDesign": [
+    "Install/run unsigned APK on Android: requires an accepted signed development artifact later",
+    "Hera SDK/hardware/live flight",
+    "Native GPU/input/HIL"
+  ],
+  "bounds": {
+    "floorGiB": 20,
+    "stopGiB": 20.75,
+    "maxBuildForecastMiB": 200
+  },
+  "noSign": true,
+  "noEmulatorDownload": true
+}

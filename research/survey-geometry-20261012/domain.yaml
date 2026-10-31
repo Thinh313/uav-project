@@ -1,0 +1,13 @@
+domain: survey-geometry-20261012
+entity_label: Bounded coordinate and file format method references
+schema:
+  type_field: null
+  fields:
+  - method
+  - format
+rollup_field: null
+universe:
+  estimate: null
+  basis: Three selected primary sources; no standards or implementation coverage claim
+alias_map: {}
+ambiguous_clusters: []

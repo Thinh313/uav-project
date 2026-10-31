@@ -1,0 +1,9 @@
+/** Observation only: original record, commands, guards and durability are unchanged. */
+export function observeTransport(link,run,{now=()=>Number(process.hrtime.bigint())/1e6}={}){
+ const timing={format:'aeris-beta06g3-transport-observation/1',run,clockDomain:'NODE_HRTIME_MS',recordCalls:0,rxChunks:0,txRecords:0,lastRxRawHostMonoMs:null,lastTxRawHostMonoMs:null,maxOriginalAppendMs:0,lastOriginalAppendMs:null,lastSocketEvent:null,inspectionInvalidationReason:null,diagnosticErrors:0,events:[]};
+ const event=(kind,extra={})=>{timing.events.push({kind,atHostMonoMs:now(),...extra});if(timing.events.length>32)timing.events.shift();};
+ const original=link.record;
+ link.record=function(kind,data){const start=now();try{return original.call(this,kind,data);}finally{try{const end=now(),elapsed=end-start;timing.recordCalls++;if(Number.isFinite(elapsed)&&elapsed>=0){timing.lastOriginalAppendMs=elapsed;timing.maxOriginalAppendMs=Math.max(timing.maxOriginalAppendMs,elapsed);}if(kind==='RX_RAW'){timing.rxChunks++;timing.lastRxRawHostMonoMs=start;}if(kind==='TX_RAW'){timing.txRecords++;timing.lastTxRawHostMonoMs=start;}}catch{timing.diagnosticErrors++;}}};
+ link.on('event',e=>{if(!['before-disconnect','disconnected','transport-error','heartbeat-gap'].includes(e.type))return;try{timing.lastSocketEvent=e.type;if(e.type==='before-disconnect'&&link.failure==='RX_CONTEXT_OR_CLOCK'){const s=link.inspection?.snapshot(link.now());if(s?.phase==='INVALIDATED')timing.inspectionInvalidationReason=String(s.reason).slice(0,160);}event(e.type,{failure:link.failure??null,inspectionInvalidationReason:timing.inspectionInvalidationReason,gapMs:Number.isFinite(e.detail?.gapMs)?e.detail.gapMs:null});}catch{timing.diagnosticErrors++;}});
+ return{snapshot(){return structuredClone({...timing,observedAtHostMonoMs:now(),currentFailure:link.failure??null,basis:'ORIGINAL_RECORD_CALL_DURATION_INCLUDES_HASH_WRITE_FSYNC;NOT_PURE_FILESYSTEM_OR_GUEST_CPU;NO_ROOT_CAUSE_ATTESTATION'});}};
+}

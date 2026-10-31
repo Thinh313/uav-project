@@ -1,0 +1,11 @@
+# SIMTRAIN52 G1 idle probe — prospective admission
+
+Resource observation2 at 04:53 UTC showed 22.93 GiB free and no absent protected path, above the inherited short-launch minimum of 21.5 GiB. This changes short-probe admission only; no full-workload admission or G1 acceptance is implied. User authorization to implement SIMTRAIN52 includes isolated ArduPilot/SITL, with old source/candidate and ENDURE preserved.
+
+Run a new bounded **idle** JSON servo/sensor exchange using the exact existing instrumented AP binary and local image; no image pull/build, arm/mode/mission/RC connection, published MAVLink port, physical endpoint, UI connection or Fly integration. No old runtime helper or output directory. New driver in `pilot/simtrain52/idle_probe.py`; output exclusively `evidence/simtrain52-probe/<newid>`.
+
+Keep 1,200 Hz, speedup 1, pinned existing pacer cap 500 ms. Maximum 4,800 consecutive frames or 25 seconds backend wall lifetime, controller deadline 30 seconds. Reject gap/duplicate/foreign endpoint/rate/clock discontinuity rather than retry. WAL RX/INTENT/SENT keeps publication intent fsynced before local UDP send; a send return is not AP execution. Retain all sensor bytes and per-stage host timing, AP trace, guest/host nonce clock pairs, process identity, closure and failure evidence. No lost frame is converted into successful completion.
+
+Prospective separate probe peak reserve 1.5 GiB, including AP's fixed 128 MiB mapped trace, WAL capped 32 MiB, bounded runtime/logs, state and margin. Probe artifact ceiling 256 MiB; foundation's separate 32 MiB budget stays unchanged. Check current free space again at launch and during frames; stop above the 20 GiB floor. Retain state/evidence, no automatic retry/resume. Stop only owned backend/container, flush observer before container closure. Prune dangling Docker images after this task's Docker operation; never prune volumes/containers.
+
+Read back every intent against the original model, correlate INTENT→SENT/close with CRC+SHA chain, check sequence/rate and process closure. Report measured idle timing with fsync policy; never promote idle RTF to controlled-flight/UI workload acceptance. A successful probe is G1 preparation only. Full flight/manual/UI/pacing/jitter/load acceptance remains pending, as does actual projector review.

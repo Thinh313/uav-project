@@ -1,0 +1,25 @@
+{
+  "format": "auth73-contract/1",
+  "assurance": "MOCK_ONLY_NOT_AUTHENTICATED",
+  "productionAuthenticated": false,
+  "productionMode": "REFUSED",
+  "proofProvider": {
+    "scheme": "MOCK_ORACLE_73",
+    "evidence": "Opaque fixture ID matched against immutable body digest and issuer/role/epoch tuple",
+    "roles": ["CHALLENGE", "SOURCE", "RECEIPT"],
+    "privateKeys": false,
+    "digitalSignatures": false,
+    "productionFallback": false
+  },
+  "bindings": ["realm", "policySha256", "trustEpoch", "purpose", "sourcePrincipal", "sourceKeyId", "sourceRootId", "sourceGeneration", "receiverId", "receiverPrincipal", "receiverKeyId", "receiverBootId", "transferId", "job", "manifestSha256", "bundleSha256", "senderNonce", "challengeId", "sequence"],
+  "replayPolicy": {
+    "nonce": "Receiver-generated, single use within durable ledger; bounded volatile challenges",
+    "sequence": "Strictly increasing safe integer per source principal within policy/receiver ledger; gaps allowed, no reset on restart",
+    "restart": "No outstanding challenge or data admission restored; explicit fresh challenge/claim required",
+    "receipt": "Only one receiver COMMIT and one sender RECEIPT per transfer; read-only reconciliation is a separate operation",
+    "commitTime": "Must precede source admission expiry, even when sender receives archival receipt later"
+  },
+  "clock": {"unit": "ms", "provider": "Injected synthetic trusted-clock port", "challengeTTL": 30000, "expiryBoundary": "now >= expiresAtMs refuses", "rollback": "Before last observed/committed time refuses", "realHostClockMapping": "NOT_CHECKED"},
+  "storage": {"ledger": "Canonical exclusive append plus file and directory fsync", "anchor": "Separate append-only mock frontier; mismatch HOLD, no repair", "jointRollbackProtection": "NOT_CHECKED", "recordBytes": 65536, "ledgerBytes": 1048576, "manifestBytes": 16384, "maxEvents": 256, "maxChallengesPerBoot": 8, "diskFloorGiB": 20},
+  "scope": {"transport": "Mock calls and subprocess replay only, no retrofit of R72 HTTP API", "receiver72": "Unmodified package semantic/readback verifier in new fixture namespaces", "authorityRestored": false, "actualImages": 0, "newSoftwareSignature": false}
+}

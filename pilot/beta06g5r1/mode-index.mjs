@@ -1,0 +1,44 @@
+/** Mode-aware archival seam. SITL delegates to the immutable original G5/R2 contract. */
+import fs from'node:fs';import path from'node:path';import{archiveCompletedClose as sitlArchive,reviewHistory as sitlHistory,persistCloseOutcome as originalPersist}from'../beta06g5/close-index.mjs';
+import{jsonBytes}from'../field02/evidence/schema.mjs';import{boundedFile}from'./overlay.mjs';import{mockRun,mockReviewIndex}from'./mock-review.mjs';
+const attempted=new Set(),roots=new WeakMap();
+const base=run=>({format:'aeris-flight-close-index-outcome',version:1,run:mockRun(run)?run:null,effectStatus:'CLOSE_ALREADY_RETURNED',authorityRestorable:false,automaticRetry:false,campaignContinuationAllowed:false,APExecutionProven:false});
+export async function archiveCompletedClose(input){
+ if(!mockRun(input.run)&&input.result?.mode!=='mock')return sitlArchive(input);
+ const{run,root}=input;let index,outcome;
+ try{if(!input.result||typeof input.result!=='object'||Array.isArray(input.result))throw Error('RETURNED_MOCK_REVIEW_OBJECT_REQUIRED');index=mockReviewIndex(input);if(attempted.has(path.join(root,run))||fs.existsSync(path.join(root,'runs',run,'mock-index-outcome.json')))throw Error('MOCK_INDEX_ALREADY_ATTEMPTED_NO_RETRY');}catch(e){outcome={...base(run),status:'CLOSE_RETURNED_REVIEW_UNVERIFIED',reviewIndexStatus:'NOT_ATTEMPTED',error:String(e.message).slice(0,160),reviewRef:null};}
+ if(index&&!outcome){attempted.add(path.join(root,run));const completed={...base(run),effectStatus:'SEALED_PROTOCOL_MOCK_CLOSED',reviewRef:index.mockReviewRef};try{if(typeof input.append!=='function')throw Error('MOCK_INDEX_WRITER_REQUIRED');const receipt=await input.append('FLIGHT_REVIEW_MOCK_REF',index);if(!Number.isSafeInteger(receipt?.seq)||receipt.seq<1||!/^[a-f0-9]{64}$/.test(receipt?.hash??''))throw Error('MOCK_INDEX_DURABLE_RECEIPT_UNKNOWN');outcome={...completed,status:'CLOSED_REVIEW_INDEXED',reviewIndexStatus:'INDEXED',receipt:{seq:receipt.seq,hash:receipt.hash},error:null};}catch(e){outcome={...completed,status:'CLOSED_REVIEW_INDEX_PENDING',reviewIndexStatus:'FAILED_OR_UNKNOWN',receipt:null,error:String(e.message).slice(0,160)};}}
+ const result=outcome.reviewRef?{...input.result,closeIndex:outcome}:{format:'aeris-flight-close-unverified-result',run:outcome.run,authorityRestorable:false,actualImages:0,closeIndex:outcome};if(index)roots.set(result,root);return result;
+}
+export function persistCloseOutcome(out,result){
+ // Persist the command outcome before exposing history. A WAL ref alone is never an ACK.
+ originalPersist(out,result);const root=roots.get(result);if(!root)return;
+ const p=path.join(root,'runs',result.closeIndex.run,'mock-index-outcome.json'),fd=fs.openSync(p,'wx',0o600);try{fs.writeFileSync(fd,jsonBytes(result.closeIndex));fs.fsyncSync(fd);}finally{fs.closeSync(fd);}const d=fs.openSync(path.dirname(p),'r');try{fs.fsyncSync(d);}finally{fs.closeSync(d);}
+}
+export function reviewHistory(records,root){return records.flatMap(row=>{
+ if(row.kind!=='FLIGHT_REVIEW_MOCK_REF')return sitlHistory([row],root);
+ const ref=row.data?.mockReviewRef;if(!ref||row.data.authorityRestored!==false)throw Error('MOCK_INDEX_RECORD_SCHEMA');const expected=mockReviewIndex({root,run:ref.run,currentRun:null});if(!jsonBytes(expected).equals(jsonBytes(row.data)))throw Error('MOCK_INDEX_REFERENCE_DRIFT');
+ let originalOutcome=null;try{originalOutcome=JSON.parse(boundedFile(path.join(root,'runs',ref.run,'mock-index-outcome.json'),16384));if(originalOutcome.run!==ref.run||originalOutcome.reviewRef?.review?.sha256!==ref.review.sha256||originalOutcome.automaticRetry!==false||originalOutcome.authorityRestorable!==false)throw Error('MOCK_OUTCOME_BINDING');}catch(e){if(e.code!=='ENOENT')throw e;}
+ let uncertainty=null;try{uncertainty=JSON.parse(boundedFile(path.join(root,'runs',ref.run,'mock-index-uncertain.json'),16384));if(uncertainty.run!==ref.run||uncertainty.status==='CLOSED_REVIEW_INDEXED'||uncertainty.automaticRetry!==false||uncertainty.authorityRestorable!==false)throw Error('MOCK_UNCERTAINTY_BINDING');}catch(e){if(e.code!=='ENOENT')throw e;}
+ const durableReceiptMatches=originalOutcome?.status==='CLOSED_REVIEW_INDEXED'&&originalOutcome.receipt?.seq===row.seq&&originalOutcome.receipt?.hash===row.hash;
+ if(!durableReceiptMatches||uncertainty)throw Error('MOCK_COMMAND_OUTCOME_UNKNOWN_BLOCKED:'+ref.run+':'+(uncertainty?.status??originalOutcome?.status??'MISSING_OUTCOME'));
+ return[{...ref,format:'aeris-field02-flight-review',reviewStorage:'VERIFIED_MOCK_PROTOCOL_REFERENCE',indexProvenance:{seq:row.seq,hash:row.hash},artifactReverified:true,originalCommandOutcome:uncertainty?.status??originalOutcome?.status??'OUTCOME_UNKNOWN_NO_ACK',indexReceiptVerified:!!durableReceiptMatches,commandReceiptVerified:false,commandDelivery:'NOT_PROVEN_BY_ARTIFACT_OR_INDEX_ROW',automaticRetry:false,authorityRestorable:false,APExecutionProven:false}];
+ });}
+
+/** A later journal/response failure remains uncertain after history reload. Never retries. */
+export function notePostEffectFailure(root,outcome){if(!mockRun(outcome?.run))return;try{const p=path.join(root,'runs',outcome.run,'mock-index-uncertain.json'),fd=fs.openSync(p,'wx',0o600);try{fs.writeFileSync(fd,jsonBytes(outcome));fs.fsyncSync(fd);}finally{fs.closeSync(fd);}const d=fs.openSync(path.dirname(p),'r');try{fs.fsyncSync(d);}finally{fs.closeSync(d);}}catch{/* Existing campaign latch owns progression. Missing marker never proves command delivery. */}}
+
+function exclusiveJSON(p,data){const fd=fs.openSync(p,'wx',0o600);try{fs.writeFileSync(fd,jsonBytes(data));fs.fsyncSync(fd);}finally{fs.closeSync(fd);}const d=fs.openSync(path.dirname(p),'r');try{fs.fsyncSync(d);}finally{fs.closeSync(d);}}
+/** Workspace binding is made once on connect, before any terminal effect/index attempt. */
+export function bindMockWorkspace(root,workspaceRoot,run){if(!mockRun(run)||!path.isAbsolute(root)||!path.isAbsolute(workspaceRoot))throw Error('MOCK_WORKSPACE_BINDING');const dir=path.join(workspaceRoot,'mock-close-bindings');fs.mkdirSync(dir,{recursive:true});exclusiveJSON(path.join(dir,run+'.json'),{format:'aeris-mock-workspace-run-binding',run,root,workspaceRoot,authorityRestorable:false});}
+export function assertWorkspaceOutcomes(root,workspaceRoot,records,currentRun){
+ const dir=path.join(workspaceRoot,'mock-close-bindings');if(!fs.existsSync(dir))return;const names=fs.readdirSync(dir);if(names.length>128)throw Error('MOCK_WORKSPACE_ATTEMPT_BOUND');
+ for(const n of names){if(!/^m[a-f0-9]{20}\.json$/.test(n))throw Error('MOCK_UNKNOWN_WORKSPACE_BINDING');const binding=JSON.parse(boundedFile(path.join(dir,n),4096)),run=n.slice(0,-5);if(binding.format!=='aeris-mock-workspace-run-binding'||binding.run!==run||binding.root!==root||binding.workspaceRoot!==workspaceRoot||binding.authorityRestorable!==false)throw Error('MOCK_WORKSPACE_BINDING_DRIFT');if(currentRun===run)continue;
+  let o;try{o=JSON.parse(boundedFile(path.join(root,'runs',run,'mock-index-outcome.json'),16384));}catch{throw Error('MOCK_CLOSED_OUTCOME_MISSING_BLOCKED:'+run);}if(o.status!=='CLOSED_REVIEW_INDEXED'||o.run!==run||o.authorityRestorable!==false||o.automaticRetry!==false||fs.existsSync(path.join(root,'runs',run,'mock-index-uncertain.json')))throw Error('MOCK_CLOSED_OUTCOME_PENDING_BLOCKED:'+run);
+  let response;try{response=JSON.parse(boundedFile(path.join(root,'runs',run,'mock-index-response-complete.json'),4096));}catch{throw Error('MOCK_RESPONSE_COMPLETION_UNKNOWN_BLOCKED:'+run);}if(response.format!=='aeris-mock-host-response-completion'||response.run!==run||response.receipt?.seq!==o.receipt?.seq||response.receipt?.hash!==o.receipt?.hash||response.reviewSha256!==o.reviewRef?.review?.sha256||response.clientAcknowledgementProven!==false||response.request?.route!=='/api/flight'||response.request?.action!==o.reviewRef?.terminalAction||!(response.request.uiActionId===null||/^[-a-f0-9]{36}$/.test(response.request.uiActionId??'')))throw Error('MOCK_RESPONSE_COMPLETION_BINDING');
+  const row=records.find(r=>r.kind==='FLIGHT_REVIEW_MOCK_REF'&&r.data?.mockReviewRef?.run===run);if(!row||o.receipt?.seq!==row.seq||o.receipt?.hash!==row.hash)throw Error('MOCK_INDEX_RECEIPT_NOT_IN_WORKSPACE_BLOCKED:'+run);
+ }
+}
+
+/** Records host res.end return, never a client ACK. Failure means unknown on reload. */
+export function noteCommandResponse(root,outcome,request){if(!mockRun(outcome?.run)||outcome.status!=='CLOSED_REVIEW_INDEXED'||request?.route!=='/api/flight'||request?.action!==outcome.reviewRef?.terminalAction)return;try{exclusiveJSON(path.join(root,'runs',outcome.run,'mock-index-response-complete.json'),{format:'aeris-mock-host-response-completion',run:outcome.run,receipt:outcome.receipt,reviewSha256:outcome.reviewRef.review.sha256,request,clientAcknowledgementProven:false,authorityRestorable:false});}catch{/* Missing completion receipt always blocks continuation through the workspace guard. */}}

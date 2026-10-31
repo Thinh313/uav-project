@@ -1,0 +1,20 @@
+[
+  {
+    "file": "pilot/betastability02/server.mjs",
+    "matchedPins05": true,
+    "method": "UNCHANGED_OR_EXACT_INVERSE_OF_THIS_TASK_EDIT_VALIDATED_AGAINST_EXISTING_SHA",
+    "sha256": "98ce2219231ada48502ba63ee46b136da03a3198d8f10d197e48e9ae2105610d"
+  },
+  {
+    "file": "pilot/betastability02/media-projection.mjs",
+    "matchedPins05": true,
+    "method": "UNCHANGED_OR_EXACT_INVERSE_OF_THIS_TASK_EDIT_VALIDATED_AGAINST_EXISTING_SHA",
+    "sha256": "7063f104ef5cb42763ceb99e0f41e434eb7bafa6b00aee7a6901b23c329fffdf"
+  },
+  {
+    "file": "pilot/betastability02/beta-client.mjs",
+    "matchedPins05": true,
+    "method": "UNCHANGED_OR_EXACT_INVERSE_OF_THIS_TASK_EDIT_VALIDATED_AGAINST_EXISTING_SHA",
+    "sha256": "eb76422664680a4f255ec4972d8318a5f1e0b38f9b6e20f9c7a7edd3a497dd33"
+  }
+]

@@ -1,0 +1,8 @@
+/* Keep the reviewed RtR glass cockpit; one editor column, stable 48px touch targets. */
+#editor92{margin:16px 0;display:flex;flex-direction:column;gap:12px}.actions92{display:flex;flex-wrap:wrap;gap:10px}.actions92 button{min-height:48px;padding:10px 14px;border:1px solid var(--glass-rule);border-radius:12px;background:transparent;color:var(--glass-ink);font:600 16px Barlow}.actions92 button:focus-visible{outline:2px solid #edc83c;outline-offset:2px}.check92{display:flex;gap:12px;align-items:flex-start;font:500 16px/1.5 Barlow}.check92 input{flex:none;width:24px;height:24px;margin:0}.check92 span{flex:1}#editor92 textarea{font:500 15px/1.4 Barlow;overflow-wrap:anywhere}.task-pane{width:min(560px,calc(100vw - var(--rail) - 160px))}#preview92{width:100%;height:100%;color:var(--glass-ink)}#live-result83{max-height:260px;overflow:auto}#model-state92{font-weight:600}#plan-panel .native-plan-actions button{min-height:48px}#plan-panel .survey-geometry{margin-top:16px}#plan-panel .native-field input,#plan-panel .native-field select{min-height:48px}#pane-next{white-space:normal}#task-pane [hidden]{display:none!important}
+
+#map-scene>#terrain{display:none!important}#map-scene>#preview92{display:block}
+
+body[data-source87=sitl][data-view=plan] #task-pane:not([hidden]){display:flex!important}
+
+#plan-panel .plan-advanced,.source87 a[href="index.html"]{display:none!important}

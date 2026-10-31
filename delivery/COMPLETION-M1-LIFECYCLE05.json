@@ -1,0 +1,81 @@
+{
+  "at": "2026-10-20T10:57:23.673753+07:00",
+  "milestone": "M1 Integrated Operational Alpha",
+  "overallStatus": "NOT READY",
+  "scopeStatus": "READY_SCOPED_OFFLINE_LIFECYCLE",
+  "userOutcome": "Actual controller top-level fault injection now preserves cause, cleans partial-start console, and returns honest failed/unsealed outcome. No actual M1 acceptance claimed.",
+  "requirementCoverage": {
+    "offlineTIPImplementedAndVerified": 6,
+    "offlineTIPTotal": 6,
+    "actualIntegrationCriteria": "I01-I10 remain mandatory; no new actual-run acceptance in this task"
+  },
+  "scenarioResults": {
+    "builderDeclaredDistinctInputs": 20,
+    "builderControllerExecutions": 28,
+    "historical05SelectedScenariosPassed": 19,
+    "historical05RuntimeSHA256": "7b977a0bf0ccf3e4be84548a58b2e55f9782b08d4bacabc920ad7f1b3e48c8fb",
+    "final05TargetedFatalInputPassed": 1,
+    "final05IndependentQAPassed": 12,
+    "final05IndependentQATotal": 12,
+    "combinedDeclaredInputs": 32,
+    "combinedControllerExecutions": 40,
+    "notProductFeatureCount": true,
+    "sourceP0P1Open": []
+  },
+  "technicalHealth": {
+    "sourceId": "bc50dfa5bdca8bcdd8de1f8a82bdbbfc128defc6ac7ef559dd90facd0f4c503d",
+    "sourcePins": {
+      "planning/integration03/runtime/runtime05.py": "586a0d2d8f9193dbc4e0ce420059d3cb3b4b8ca3b2c06b9c54f6fd6a76e07842",
+      "planning/integration03/runtime/lifecycle05_harness.py": "2e165cdeacc643417e580660b9732393f43dce926e7714b763b683802c704552",
+      "planning/integration03/runtime/lifecycle05_cases.py": "d359cb1647476d42616c95cc68725b9fdaebfaa5152890e965a1e3096cb7fbb8",
+      "planning/integration03/runtime/lifecycle05_verify.py": "c9aeb1819c0b6f0b78a7cc84157de4d28210dff58edc2507cb7a72bdc020e69f"
+    },
+    "rootChecks": "evidence/integration03-lifecycle05/root-check01.json",
+    "independentQA": "evidence/integration03-lifecycle05/qa/verification-final01.json",
+    "protectedCheckpoints": {
+      "before": "evidence/integration03-lifecycle05/protected-before.json",
+      "after": "evidence/integration03-lifecycle05/protected-after.json",
+      "paths": 71158,
+      "failures": 0,
+      "continuousPresenceClaim": false
+    },
+    "nativeSourceFilesUnchanged": 192,
+    "APKUnchangedSHA256": "9218acc3b71ad271b3ee9b7ba291d76fe1f97cd714e962ec34630fb6eb6f4ddf",
+    "actualRuntime": "NOT RUN_USER_MOCK_ONLY",
+    "buildOrSignature": false,
+    "ENDUREAction": false
+  },
+  "valueEvidence": {
+    "status": "PARTIAL",
+    "measured": "Three original actual04 lifecycle failures reproduced under injection and targeted repair checked. An introduced finally/fatal masking error caught and repaired before use.",
+    "notMeasured": "Real filesystem durability, concurrency timing, native performance, flight safety, market superiority and historical actualEOF cause.",
+    "LLMBaseline": "Not applicable to this deterministic controller fault repair; no model superiority claim."
+  },
+  "limits": [
+    "No actual Docker/AP/Android/ADB/network/browser/emulator/build/sign/download/SDK/hardware executed.",
+    "Old actual BOOTSTRAP_EOF root cause remains UNKNOWN. Mock race/fault behavior is not its reproduction or cure.",
+    "Actual M1 I01-I10 long-session cohorts/mission/crew/partition/airborne30s/SAF/restart gates remain unmet. Source, resource and finite-window admissions still mandatory; this offline-only task authorizes no launch even if free space increases.",
+    "Real firmware identity, real socket delivery, process death, filesystem durability and concurrent native performance remain actual-run obligations."
+  ],
+  "resource": {
+    "freeBytes": 22159360000,
+    "freeGiB": 20.638,
+    "floorGiB": 20,
+    "sourceBytes": 39870,
+    "evidenceBytesBeforeFinalReport": 901344,
+    "newDependencies": false,
+    "outsideRepoScratch": false,
+    "projectCopy": false
+  },
+  "cleanup": {
+    "perCaseScratchRemovedByHarness": true,
+    "builderAndQAScratchRemoved": true,
+    "rootEmptyDirectoriesRemoved": [
+      ".local/integration03-lifecycle05"
+    ],
+    "dockerUsed": false,
+    "dockerPruneRequiredThisTask": false,
+    "evidenceAutomaticallyDeleted": false
+  },
+  "disposition": "Offline slice complete. Keep runtime05 separate, no automatic launch if disk frees. Explicit user change to mock-only scope plus fresh real resource/source gates required before Android-SITL. See M1-ACCEPTANCE-SEQUENCE05.md."
+}

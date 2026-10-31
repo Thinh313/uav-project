@@ -1,0 +1,19 @@
+{
+  "at": "2026-10-14T05:51:14.213499+00:00",
+  "status": "RESEARCH_AND_DESIGN_VERIFIED_NOT_PRODUCT_ACCEPTANCE",
+  "capturedPrimaryPages": 19,
+  "claims": 39,
+  "proposedFeatures": 47,
+  "proposalGroups": 9,
+  "refineryGateBites": 7,
+  "UIIllustrationChecks": 39,
+  "protectedPathsChecked": 8659,
+  "failures": [],
+  "currentFreeBytes": 27074560000,
+  "sourceCandidateENDUREMutations": 0,
+  "SDKEmulatorInstalls": 0,
+  "realFlightCommands": 0,
+  "claimScope": "Manufacturer/documentation assertions; independent performance honest-null",
+  "review": "Single-agent extraction and programmatic re-derivation; not an independent human audit",
+  "cleanup": "Owned research/.gcs34-bites removed; browser closed; no project copy/build/dependency install"
+}

@@ -1,0 +1,4951 @@
+{
+  "format": "aeris-execution-record",
+  "version": 2,
+  "simulation": true,
+  "id": "e9417e80-6e5f-44b4-ac3a-d5c279c27c5d",
+  "rows": [
+    {
+      "n": 0,
+      "previous": "",
+      "event": {
+        "type": "attempt-open",
+        "time": "2026-10-12T10:22:31.825Z",
+        "sessionId": "56ce3aa9-3424-4e1a-94b7-e34797994139",
+        "detail": {},
+        "header": {
+          "recordVersion": 2,
+          "profileSnapshot": {
+            "format": "aeris-profile-snapshot",
+            "version": 1,
+            "simulation": true,
+            "definition": {
+              "format": "aeris-vehicle-profile",
+              "schemaVersion": 1,
+              "id": "aeris-copter471-loopback",
+              "version": "1.0.0",
+              "simulation": true,
+              "label": "ArduCopter 4.7.1 · loopback SITL",
+              "target": {
+                "firmware": "4.7.1",
+                "autopilot": 3,
+                "vehicleType": 2,
+                "component": 1,
+                "encoding": "ardupilot-c-cast"
+              },
+              "freshnessMs": 30000,
+              "parameters": [
+                {
+                  "name": "FS_GCS_ENABLE",
+                  "expected": 1,
+                  "type": 2,
+                  "unit": "enum"
+                },
+                {
+                  "name": "FS_GCS_TIMEOUT",
+                  "expected": 5,
+                  "type": 9,
+                  "unit": "s"
+                },
+                {
+                  "name": "FS_OPTIONS",
+                  "expected": 16,
+                  "type": 6,
+                  "unit": "bitmask"
+                },
+                {
+                  "name": "MAV_GCS_SYSID",
+                  "expected": 255,
+                  "type": 4,
+                  "unit": "system-id"
+                }
+              ],
+              "missionScope": {
+                "world": "aeris-flat-world-v1",
+                "commands": [
+                  16,
+                  22,
+                  178,
+                  206,
+                  2001,
+                  20
+                ],
+                "envelopes": [
+                  "aeris-qgc-run",
+                  "aeris-survey-run",
+                  "aeris-survey"
+                ]
+              },
+              "provenance": {
+                "baseline": "evidence/review04/final-runtime.json",
+                "definition": "PROFILE05 engineering test policy, observed four-value/types baseline; not manufacturer defaults",
+                "protocol": "research/vehicle-profile-20261012/sources.json"
+              },
+              "scope": "Simulator-only four-parameter comparison; no complete aircraft/payload/RTK/battery/geofence or HeraHub acceptance."
+            },
+            "profile": {
+              "id": "aeris-copter471-loopback",
+              "version": "1.0.0",
+              "sha256": "c4f28187ea445df1e5779b099dd90a3c324e38b8710a990c75c314f86125306a"
+            },
+            "context": {
+              "sessionId": "56ce3aa9-3424-4e1a-94b7-e34797994139",
+              "vehicle": {
+                "system": 1,
+                "component": 1
+              }
+            },
+            "observation": {
+              "format": "aeris-configuration-observation",
+              "version": 1,
+              "simulation": true,
+              "id": "fd82c2fc-bd5f-4388-9ccf-ea04e7afea77",
+              "sessionId": "56ce3aa9-3424-4e1a-94b7-e34797994139",
+              "vehicle": {
+                "system": 1,
+                "component": 1
+              },
+              "autopilot": 3,
+              "vehicleType": 2,
+              "startedAtUTC": "2026-10-12T10:22:31.804Z",
+              "completedAtUTC": "2026-10-12T10:22:31.816Z",
+              "firmware": {
+                "version": "4.7.1",
+                "flightSwVersion": 67568127,
+                "encoding": "ardupilot-c-cast",
+                "capabilities": 64495,
+                "observedAtUTC": "2026-10-12T10:22:31.806Z",
+                "ageMs": 18.808583999999428
+              },
+              "parameters": {
+                "FS_GCS_ENABLE": {
+                  "value": 1,
+                  "type": 2,
+                  "index": 65535,
+                  "observedAtUTC": "2026-10-12T10:22:31.816Z",
+                  "ageMs": 8.92950000000019
+                },
+                "FS_GCS_TIMEOUT": {
+                  "value": 5,
+                  "type": 9,
+                  "index": 65535,
+                  "observedAtUTC": "2026-10-12T10:22:31.816Z",
+                  "ageMs": 8.887834000000112
+                },
+                "FS_OPTIONS": {
+                  "value": 16,
+                  "type": 6,
+                  "index": 65535,
+                  "observedAtUTC": "2026-10-12T10:22:31.816Z",
+                  "ageMs": 8.875833000000057
+                },
+                "MAV_GCS_SYSID": {
+                  "value": 255,
+                  "type": 4,
+                  "index": 65535,
+                  "observedAtUTC": "2026-10-12T10:22:31.816Z",
+                  "ageMs": 8.868375000000015
+                }
+              }
+            },
+            "comparison": {
+              "format": "aeris-profile-comparison",
+              "version": 1,
+              "simulation": true,
+              "profile": {
+                "id": "aeris-copter471-loopback",
+                "version": "1.0.0",
+                "sha256": "c4f28187ea445df1e5779b099dd90a3c324e38b8710a990c75c314f86125306a"
+              },
+              "state": "MATCH",
+              "pass": true,
+              "checks": [
+                {
+                  "id": "profile-reference",
+                  "status": "MATCH",
+                  "pass": true,
+                  "reason": "Profile đã khóa phiên bản/hash.",
+                  "expected": {
+                    "id": "aeris-copter471-loopback",
+                    "version": "1.0.0",
+                    "sha256": "c4f28187ea445df1e5779b099dd90a3c324e38b8710a990c75c314f86125306a"
+                  },
+                  "observed": {
+                    "id": "aeris-copter471-loopback",
+                    "version": "1.0.0",
+                    "sha256": "c4f28187ea445df1e5779b099dd90a3c324e38b8710a990c75c314f86125306a"
+                  },
+                  "unit": null
+                },
+                {
+                  "id": "aircraft-session",
+                  "status": "MATCH",
+                  "pass": true,
+                  "reason": "Nguồn autopilot và phiên khớp.",
+                  "expected": {
+                    "sessionId": "56ce3aa9-3424-4e1a-94b7-e34797994139",
+                    "vehicle": {
+                      "system": 1,
+                      "component": 1
+                    }
+                  },
+                  "observed": {
+                    "sessionId": "56ce3aa9-3424-4e1a-94b7-e34797994139",
+                    "vehicle": {
+                      "system": 1,
+                      "component": 1
+                    }
+                  },
+                  "unit": null
+                },
+                {
+                  "id": "observation-validity",
+                  "status": "MATCH",
+                  "pass": true,
+                  "reason": "Không có gián đoạn/thay đổi đã quan sát.",
+                  "expected": null,
+                  "observed": null,
+                  "unit": null
+                },
+                {
+                  "id": "firmware",
+                  "status": "MATCH",
+                  "pass": true,
+                  "reason": "Firmware/encoding khớp.",
+                  "expected": "4.7.1",
+                  "observed": "4.7.1",
+                  "unit": null
+                },
+                {
+                  "id": "FS_GCS_ENABLE",
+                  "status": "MATCH",
+                  "pass": true,
+                  "reason": "Giá trị/kiểu khớp.",
+                  "expected": {
+                    "value": 1,
+                    "type": 2
+                  },
+                  "observed": {
+                    "value": 1,
+                    "type": 2,
+                    "ageMs": 8.92950000000019
+                  },
+                  "unit": "enum"
+                },
+                {
+                  "id": "FS_GCS_TIMEOUT",
+                  "status": "MATCH",
+                  "pass": true,
+                  "reason": "Giá trị/kiểu khớp.",
+                  "expected": {
+                    "value": 5,
+                    "type": 9
+                  },
+                  "observed": {
+                    "value": 5,
+                    "type": 9,
+                    "ageMs": 8.887834000000112
+                  },
+                  "unit": "s"
+                },
+                {
+                  "id": "FS_OPTIONS",
+                  "status": "MATCH",
+                  "pass": true,
+                  "reason": "Giá trị/kiểu khớp.",
+                  "expected": {
+                    "value": 16,
+                    "type": 6
+                  },
+                  "observed": {
+                    "value": 16,
+                    "type": 6,
+                    "ageMs": 8.875833000000057
+                  },
+                  "unit": "bitmask"
+                },
+                {
+                  "id": "MAV_GCS_SYSID",
+                  "status": "MATCH",
+                  "pass": true,
+                  "reason": "Giá trị/kiểu khớp.",
+                  "expected": {
+                    "value": 255,
+                    "type": 4
+                  },
+                  "observed": {
+                    "value": 255,
+                    "type": 4,
+                    "ageMs": 8.868375000000015
+                  },
+                  "unit": "system-id"
+                }
+              ],
+              "freshnessMs": 30000,
+              "scope": "Simulator-only four-parameter comparison; no complete aircraft/payload/RTK/battery/geofence or HeraHub acceptance."
+            }
+          },
+          "profileSnapshotSha256": "47908f7b89a744a033fe63518689295c45235d8b2c672d4269aa663275416d6c",
+          "id": "e9417e80-6e5f-44b4-ac3a-d5c279c27c5d",
+          "origin": "upload",
+          "sessionId": "56ce3aa9-3424-4e1a-94b7-e34797994139",
+          "vehicle": {
+            "system": 1,
+            "component": 1
+          },
+          "firmware": "4.7.1",
+          "world": {
+            "id": "aeris-flat-world-v1",
+            "simulation": true,
+            "home": {
+              "lat": 10.854,
+              "lon": 106.807,
+              "amsl": 10
+            },
+            "ground": "flat-at-home",
+            "maxRadiusM": 500
+          },
+          "build": "1.1.0-PROFILE05",
+          "startedAt": "2026-10-12T10:22:31.825Z",
+          "sourceRequest": {
+            "format": "aeris-qgc-run",
+            "version": 1,
+            "simulation": true,
+            "worldId": "aeris-flat-world-v1",
+            "profile": "copter-4.7.1-stored-snapshot-v1",
+            "rawPlan": "{\n  \"fileType\": \"Plan\",\n  \"version\": 1,\n  \"groundStation\": \"AERIS\",\n  \"geoFence\": {\n    \"version\": 2,\n    \"circles\": [],\n    \"polygons\": []\n  },\n  \"rallyPoints\": {\n    \"version\": 2,\n    \"points\": []\n  },\n  \"mission\": {\n    \"version\": 2,\n    \"firmwareType\": 3,\n    \"vehicleType\": 2,\n    \"cruiseSpeed\": 15,\n    \"hoverSpeed\": 5,\n    \"globalPlanAltitudeMode\": 1,\n    \"plannedHomePosition\": [\n      10.854,\n      106.807,\n      10\n    ],\n    \"items\": [\n      {\n        \"type\": \"SimpleItem\",\n        \"frame\": 3,\n        \"command\": 22,\n        \"autoContinue\": true,\n        \"doJumpId\": 1,\n        \"params\": [\n          0,\n          0,\n          0,\n          null,\n          10.854,\n          106.807,\n          15\n        ],\n        \"AltitudeMode\": 1,\n        \"Altitude\": 15,\n        \"AMSLAltAboveTerrain\": null\n      },\n      {\n        \"type\": \"SimpleItem\",\n        \"frame\": 2,\n        \"command\": 178,\n        \"autoContinue\": true,\n        \"doJumpId\": 2,\n        \"params\": [\n          1,\n          6,\n          -1,\n          0,\n          0,\n          0,\n          0\n        ]\n      },\n      {\n        \"type\": \"SimpleItem\",\n        \"frame\": 3,\n        \"command\": 16,\n        \"autoContinue\": true,\n        \"doJumpId\": 3,\n        \"params\": [\n          0,\n          0,\n          0,\n          null,\n          10.854,\n          106.8071029,\n          15\n        ],\n        \"AltitudeMode\": 1,\n        \"Altitude\": 15,\n        \"AMSLAltAboveTerrain\": null\n      },\n      {\n        \"type\": \"SimpleItem\",\n        \"frame\": 2,\n        \"command\": 206,\n        \"autoContinue\": true,\n        \"doJumpId\": 4,\n        \"params\": [\n          10.5,\n          0,\n          1,\n          0,\n          0,\n          0,\n          0\n        ]\n      },\n      {\n        \"type\": \"SimpleItem\",\n        \"frame\": 3,\n        \"command\": 16,\n        \"autoContinue\": true,\n        \"doJumpId\": 5,\n        \"params\": [\n          0,\n          0,\n          0,\n          null,\n          10.8544068,\n          106.8071029,\n          15\n        ],\n        \"AltitudeMode\": 1,\n        \"Altitude\": 15,\n        \"AMSLAltAboveTerrain\": null\n      },\n      {\n        \"type\": \"SimpleItem\",\n        \"frame\": 2,\n        \"command\": 206,\n        \"autoContinue\": true,\n        \"doJumpId\": 6,\n        \"params\": [\n          0,\n          0,\n          0,\n          0,\n          0,\n          0,\n          0\n        ]\n      },\n      {\n        \"type\": \"SimpleItem\",\n        \"frame\": 2,\n        \"command\": 2001,\n        \"autoContinue\": true,\n        \"doJumpId\": 7,\n        \"params\": [\n          0,\n          null,\n          null,\n          null,\n          null,\n          null,\n          null\n        ]\n      },\n      {\n        \"type\": \"SimpleItem\",\n        \"frame\": 3,\n        \"command\": 16,\n        \"autoContinue\": true,\n        \"doJumpId\": 8,\n        \"params\": [\n          0,\n          0,\n          0,\n          null,\n          10.8544068,\n          106.8072058,\n          15\n        ],\n        \"AltitudeMode\": 1,\n        \"Altitude\": 15,\n        \"AMSLAltAboveTerrain\": null\n      },\n      {\n        \"type\": \"SimpleItem\",\n        \"frame\": 2,\n        \"command\": 206,\n        \"autoContinue\": true,\n        \"doJumpId\": 9,\n        \"params\": [\n          10.5,\n          0,\n          1,\n          0,\n          0,\n          0,\n          0\n        ]\n      },\n      {\n        \"type\": \"SimpleItem\",\n        \"frame\": 3,\n        \"command\": 16,\n        \"autoContinue\": true,\n        \"doJumpId\": 10,\n        \"params\": [\n          0,\n          0,\n          0,\n          null,\n          10.854,\n          106.8072058,\n          15\n        ],\n        \"AltitudeMode\": 1,\n        \"Altitude\": 15,\n        \"AMSLAltAboveTerrain\": null\n      },\n      {\n        \"type\": \"SimpleItem\",\n        \"frame\": 2,\n        \"command\": 206,\n        \"autoContinue\": true,\n        \"doJumpId\": 11,\n        \"params\": [\n          0,\n          0,\n          0,\n          0,\n          0,\n          0,\n          0\n        ]\n      },\n      {\n        \"type\": \"SimpleItem\",\n        \"frame\": 2,\n        \"command\": 2001,\n        \"autoContinue\": true,\n        \"doJumpId\": 12,\n        \"params\": [\n          0,\n          null,\n          null,\n          null,\n          null,\n          null,\n          null\n        ]\n      },\n      {\n        \"type\": \"SimpleItem\",\n        \"frame\": 3,\n        \"command\": 16,\n        \"autoContinue\": true,\n        \"doJumpId\": 13,\n        \"params\": [\n          0,\n          0,\n          0,\n          null,\n          10.854,\n          106.8073087,\n          15\n        ],\n        \"AltitudeMode\": 1,\n        \"Altitude\": 15,\n        \"AMSLAltAboveTerrain\": null\n      },\n      {\n        \"type\": \"SimpleItem\",\n        \"frame\": 2,\n        \"command\": 206,\n        \"autoContinue\": true,\n        \"doJumpId\": 14,\n        \"params\": [\n          10.5,\n          0,\n          1,\n          0,\n          0,\n          0,\n          0\n        ]\n      },\n      {\n        \"type\": \"SimpleItem\",\n        \"frame\": 3,\n        \"command\": 16,\n        \"autoContinue\": true,\n        \"doJumpId\": 15,\n        \"params\": [\n          0,\n          0,\n          0,\n          null,\n          10.8544068,\n          106.8073087,\n          15\n        ],\n        \"AltitudeMode\": 1,\n        \"Altitude\": 15,\n        \"AMSLAltAboveTerrain\": null\n      },\n      {\n        \"type\": \"SimpleItem\",\n        \"frame\": 2,\n        \"command\": 206,\n        \"autoContinue\": true,\n        \"doJumpId\": 16,\n        \"params\": [\n          0,\n          0,\n          0,\n          0,\n          0,\n          0,\n          0\n        ]\n      },\n      {\n        \"type\": \"SimpleItem\",\n        \"frame\": 2,\n        \"command\": 2001,\n        \"autoContinue\": true,\n        \"doJumpId\": 17,\n        \"params\": [\n          0,\n          null,\n          null,\n          null,\n          null,\n          null,\n          null\n        ]\n      },\n      {\n        \"type\": \"SimpleItem\",\n        \"frame\": 2,\n        \"command\": 20,\n        \"autoContinue\": true,\n        \"doJumpId\": 18,\n        \"params\": [\n          0,\n          0,\n          0,\n          0,\n          0,\n          0,\n          0\n        ]\n      }\n    ]\n  }\n}\n"
+          },
+          "sourceSha256": "e09925ad35b3e744a59243447dfcf9586e7941c556f44cb9c1914c6792dd87f8",
+          "compiledItems": [
+            {
+              "seq": 0,
+              "command": 16,
+              "frame": 6,
+              "param1": 0,
+              "param2": 0,
+              "param3": 0,
+              "param4": 0,
+              "x": 108540000,
+              "y": 1068070000,
+              "z": 0,
+              "current": 0,
+              "autocontinue": 1,
+              "mission_type": 0
+            },
+            {
+              "seq": 1,
+              "command": 22,
+              "frame": 6,
+              "param1": 0,
+              "param2": 0,
+              "param3": 0,
+              "param4": 0,
+              "x": 108540000,
+              "y": 1068070000,
+              "z": 15,
+              "current": 0,
+              "autocontinue": 1,
+              "mission_type": 0
+            },
+            {
+              "seq": 2,
+              "command": 178,
+              "frame": 2,
+              "param1": 1,
+              "param2": 6,
+              "param3": -1,
+              "param4": 0,
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "current": 0,
+              "autocontinue": 1,
+              "mission_type": 0
+            },
+            {
+              "seq": 3,
+              "command": 16,
+              "frame": 6,
+              "param1": 0,
+              "param2": 0,
+              "param3": 0,
+              "param4": 0,
+              "x": 108540000,
+              "y": 1068071029,
+              "z": 15,
+              "current": 0,
+              "autocontinue": 1,
+              "mission_type": 0
+            },
+            {
+              "seq": 4,
+              "command": 206,
+              "frame": 2,
+              "param1": 10.5,
+              "param2": 0,
+              "param3": 1,
+              "param4": 0,
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "current": 0,
+              "autocontinue": 1,
+              "mission_type": 0
+            },
+            {
+              "seq": 5,
+              "command": 16,
+              "frame": 6,
+              "param1": 0,
+              "param2": 0,
+              "param3": 0,
+              "param4": 0,
+              "x": 108544068,
+              "y": 1068071029,
+              "z": 15,
+              "current": 0,
+              "autocontinue": 1,
+              "mission_type": 0
+            },
+            {
+              "seq": 6,
+              "command": 206,
+              "frame": 2,
+              "param1": 0,
+              "param2": 0,
+              "param3": 0,
+              "param4": 0,
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "current": 0,
+              "autocontinue": 1,
+              "mission_type": 0
+            },
+            {
+              "seq": 7,
+              "command": 2001,
+              "frame": 2,
+              "param1": 0,
+              "param2": 0,
+              "param3": 0,
+              "param4": 0,
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "current": 0,
+              "autocontinue": 1,
+              "mission_type": 0
+            },
+            {
+              "seq": 8,
+              "command": 16,
+              "frame": 6,
+              "param1": 0,
+              "param2": 0,
+              "param3": 0,
+              "param4": 0,
+              "x": 108544068,
+              "y": 1068072058,
+              "z": 15,
+              "current": 0,
+              "autocontinue": 1,
+              "mission_type": 0
+            },
+            {
+              "seq": 9,
+              "command": 206,
+              "frame": 2,
+              "param1": 10.5,
+              "param2": 0,
+              "param3": 1,
+              "param4": 0,
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "current": 0,
+              "autocontinue": 1,
+              "mission_type": 0
+            },
+            {
+              "seq": 10,
+              "command": 16,
+              "frame": 6,
+              "param1": 0,
+              "param2": 0,
+              "param3": 0,
+              "param4": 0,
+              "x": 108540000,
+              "y": 1068072058,
+              "z": 15,
+              "current": 0,
+              "autocontinue": 1,
+              "mission_type": 0
+            },
+            {
+              "seq": 11,
+              "command": 206,
+              "frame": 2,
+              "param1": 0,
+              "param2": 0,
+              "param3": 0,
+              "param4": 0,
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "current": 0,
+              "autocontinue": 1,
+              "mission_type": 0
+            },
+            {
+              "seq": 12,
+              "command": 2001,
+              "frame": 2,
+              "param1": 0,
+              "param2": 0,
+              "param3": 0,
+              "param4": 0,
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "current": 0,
+              "autocontinue": 1,
+              "mission_type": 0
+            },
+            {
+              "seq": 13,
+              "command": 16,
+              "frame": 6,
+              "param1": 0,
+              "param2": 0,
+              "param3": 0,
+              "param4": 0,
+              "x": 108540000,
+              "y": 1068073087,
+              "z": 15,
+              "current": 0,
+              "autocontinue": 1,
+              "mission_type": 0
+            },
+            {
+              "seq": 14,
+              "command": 206,
+              "frame": 2,
+              "param1": 10.5,
+              "param2": 0,
+              "param3": 1,
+              "param4": 0,
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "current": 0,
+              "autocontinue": 1,
+              "mission_type": 0
+            },
+            {
+              "seq": 15,
+              "command": 16,
+              "frame": 6,
+              "param1": 0,
+              "param2": 0,
+              "param3": 0,
+              "param4": 0,
+              "x": 108544068,
+              "y": 1068073087,
+              "z": 15,
+              "current": 0,
+              "autocontinue": 1,
+              "mission_type": 0
+            },
+            {
+              "seq": 16,
+              "command": 206,
+              "frame": 2,
+              "param1": 0,
+              "param2": 0,
+              "param3": 0,
+              "param4": 0,
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "current": 0,
+              "autocontinue": 1,
+              "mission_type": 0
+            },
+            {
+              "seq": 17,
+              "command": 2001,
+              "frame": 2,
+              "param1": 0,
+              "param2": 0,
+              "param3": 0,
+              "param4": 0,
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "current": 0,
+              "autocontinue": 1,
+              "mission_type": 0
+            },
+            {
+              "seq": 18,
+              "command": 20,
+              "frame": 2,
+              "param1": 0,
+              "param2": 0,
+              "param3": 0,
+              "param4": 0,
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "current": 0,
+              "autocontinue": 1,
+              "mission_type": 0
+            }
+          ],
+          "geoBundle": null,
+          "derivation": {
+            "format": "aeris-qgc-derived-review",
+            "version": 1,
+            "simulation": true,
+            "sourceSha256": "fe244563ad5c75965219b28e6d8c0c29d2c7fa1161231494cff3f62805937772",
+            "derivedSha256": "5669a3cf398ada221d799233763f58ebb824f54443ff01f247d877fff9185206",
+            "sourceRaw": "{\n    \"fileType\": \"Plan\",\n    \"geoFence\": {\n        \"circles\": [\n        ],\n        \"polygons\": [\n        ],\n        \"version\": 2\n    },\n    \"groundStation\": \"QGroundControl\",\n    \"mission\": {\n        \"cruiseSpeed\": 15,\n        \"firmwareType\": 3,\n        \"globalPlanAltitudeMode\": 1,\n        \"hoverSpeed\": 5,\n        \"items\": [\n            {\n                \"AMSLAltAboveTerrain\": null,\n                \"Altitude\": 15,\n                \"AltitudeMode\": 1,\n                \"autoContinue\": true,\n                \"command\": 22,\n                \"doJumpId\": 1,\n                \"frame\": 3,\n                \"params\": [\n                    0,\n                    0,\n                    0,\n                    null,\n                    10.854,\n                    106.807,\n                    15\n                ],\n                \"type\": \"SimpleItem\"\n            },\n            {\n                \"autoContinue\": true,\n                \"command\": 178,\n                \"doJumpId\": 2,\n                \"frame\": 2,\n                \"params\": [\n                    1,\n                    6,\n                    -1,\n                    0,\n                    0,\n                    0,\n                    0\n                ],\n                \"type\": \"SimpleItem\"\n            },\n            {\n                \"AMSLAltAboveTerrain\": null,\n                \"Altitude\": 15,\n                \"AltitudeMode\": 1,\n                \"autoContinue\": true,\n                \"command\": 16,\n                \"doJumpId\": 3,\n                \"frame\": 3,\n                \"params\": [\n                    0,\n                    0,\n                    0,\n                    null,\n                    10.854,\n                    106.8071029,\n                    15\n                ],\n                \"type\": \"SimpleItem\"\n            },\n            {\n                \"autoContinue\": true,\n                \"command\": 206,\n                \"doJumpId\": 4,\n                \"frame\": 2,\n                \"params\": [\n                    10.5,\n                    0,\n                    1,\n                    0,\n                    0,\n                    0,\n                    0\n                ],\n                \"type\": \"SimpleItem\"\n            },\n            {\n                \"AMSLAltAboveTerrain\": null,\n                \"Altitude\": 15,\n                \"AltitudeMode\": 1,\n                \"autoContinue\": true,\n                \"command\": 16,\n                \"doJumpId\": 5,\n                \"frame\": 3,\n                \"params\": [\n                    0,\n                    0,\n                    0,\n                    null,\n                    10.8544068,\n                    106.8071029,\n                    15\n                ],\n                \"type\": \"SimpleItem\"\n            },\n            {\n                \"autoContinue\": true,\n                \"command\": 206,\n                \"doJumpId\": 6,\n                \"frame\": 2,\n                \"params\": [\n                    0,\n                    0,\n                    0,\n                    0,\n                    0,\n                    0,\n                    0\n                ],\n                \"type\": \"SimpleItem\"\n            },\n            {\n                \"autoContinue\": true,\n                \"command\": 2001,\n                \"doJumpId\": 7,\n                \"frame\": 2,\n                \"params\": [\n                    0,\n                    null,\n                    null,\n                    null,\n                    null,\n                    null,\n                    null\n                ],\n                \"type\": \"SimpleItem\"\n            },\n            {\n                \"AMSLAltAboveTerrain\": null,\n                \"Altitude\": 15,\n                \"AltitudeMode\": 1,\n                \"autoContinue\": true,\n                \"command\": 16,\n                \"doJumpId\": 7,\n                \"frame\": 3,\n                \"params\": [\n                    0,\n                    0,\n                    0,\n                    null,\n                    10.8544068,\n                    106.8072058,\n                    15\n                ],\n                \"type\": \"SimpleItem\"\n            },\n            {\n                \"autoContinue\": true,\n                \"command\": 206,\n                \"doJumpId\": 8,\n                \"frame\": 2,\n                \"params\": [\n                    10.5,\n                    0,\n                    1,\n                    0,\n                    0,\n                    0,\n                    0\n                ],\n                \"type\": \"SimpleItem\"\n            },\n            {\n                \"AMSLAltAboveTerrain\": null,\n                \"Altitude\": 15,\n                \"AltitudeMode\": 1,\n                \"autoContinue\": true,\n                \"command\": 16,\n                \"doJumpId\": 9,\n                \"frame\": 3,\n                \"params\": [\n                    0,\n                    0,\n                    0,\n                    null,\n                    10.854,\n                    106.8072058,\n                    15\n                ],\n                \"type\": \"SimpleItem\"\n            },\n            {\n                \"autoContinue\": true,\n                \"command\": 206,\n                \"doJumpId\": 10,\n                \"frame\": 2,\n                \"params\": [\n                    0,\n                    0,\n                    0,\n                    0,\n                    0,\n                    0,\n                    0\n                ],\n                \"type\": \"SimpleItem\"\n            },\n            {\n                \"autoContinue\": true,\n                \"command\": 2001,\n                \"doJumpId\": 11,\n                \"frame\": 2,\n                \"params\": [\n                    0,\n                    null,\n                    null,\n                    null,\n                    null,\n                    null,\n                    null\n                ],\n                \"type\": \"SimpleItem\"\n            },\n            {\n                \"AMSLAltAboveTerrain\": null,\n                \"Altitude\": 15,\n                \"AltitudeMode\": 1,\n                \"autoContinue\": true,\n                \"command\": 16,\n                \"doJumpId\": 11,\n                \"frame\": 3,\n                \"params\": [\n                    0,\n                    0,\n                    0,\n                    null,\n                    10.854,\n                    106.8073087,\n                    15\n                ],\n                \"type\": \"SimpleItem\"\n            },\n            {\n                \"autoContinue\": true,\n                \"command\": 206,\n                \"doJumpId\": 12,\n                \"frame\": 2,\n                \"params\": [\n                    10.5,\n                    0,\n                    1,\n                    0,\n                    0,\n                    0,\n                    0\n                ],\n                \"type\": \"SimpleItem\"\n            },\n            {\n                \"AMSLAltAboveTerrain\": null,\n                \"Altitude\": 15,\n                \"AltitudeMode\": 1,\n                \"autoContinue\": true,\n                \"command\": 16,\n                \"doJumpId\": 13,\n                \"frame\": 3,\n                \"params\": [\n                    0,\n                    0,\n                    0,\n                    null,\n                    10.8544068,\n                    106.8073087,\n                    15\n                ],\n                \"type\": \"SimpleItem\"\n            },\n            {\n                \"autoContinue\": true,\n                \"command\": 206,\n                \"doJumpId\": 14,\n                \"frame\": 2,\n                \"params\": [\n                    0,\n                    0,\n                    0,\n                    0,\n                    0,\n                    0,\n                    0\n                ],\n                \"type\": \"SimpleItem\"\n            },\n            {\n                \"autoContinue\": true,\n                \"command\": 2001,\n                \"doJumpId\": 15,\n                \"frame\": 2,\n                \"params\": [\n                    0,\n                    null,\n                    null,\n                    null,\n                    null,\n                    null,\n                    null\n                ],\n                \"type\": \"SimpleItem\"\n            },\n            {\n                \"autoContinue\": true,\n                \"command\": 20,\n                \"doJumpId\": 15,\n                \"frame\": 2,\n                \"params\": [\n                    0,\n                    0,\n                    0,\n                    0,\n                    0,\n                    0,\n                    0\n                ],\n                \"type\": \"SimpleItem\"\n            }\n        ],\n        \"plannedHomePosition\": [\n            10.854,\n            106.807,\n            7\n        ],\n        \"vehicleType\": 2,\n        \"version\": 2\n    },\n    \"rallyPoints\": {\n        \"points\": [\n        ],\n        \"version\": 2\n    },\n    \"version\": 1\n}\n",
+            "options": {
+              "confirmHome": true,
+              "confirmSnapshot": false,
+              "altitudePolicy": "preserve-relative",
+              "cameraPolicy": "preserve"
+            },
+            "homeBefore": [
+              10.854,
+              106.807,
+              7
+            ],
+            "homeAfter": [
+              10.854,
+              106.807,
+              10
+            ],
+            "heightChanges": [
+              {
+                "sourceSeq": 1,
+                "relativeBefore": 15,
+                "relativeAfter": 15,
+                "impliedAmslBefore": 22,
+                "impliedAmslAfter": 25
+              },
+              {
+                "sourceSeq": 3,
+                "relativeBefore": 15,
+                "relativeAfter": 15,
+                "impliedAmslBefore": 22,
+                "impliedAmslAfter": 25
+              },
+              {
+                "sourceSeq": 5,
+                "relativeBefore": 15,
+                "relativeAfter": 15,
+                "impliedAmslBefore": 22,
+                "impliedAmslAfter": 25
+              },
+              {
+                "sourceSeq": 8,
+                "relativeBefore": 15,
+                "relativeAfter": 15,
+                "impliedAmslBefore": 22,
+                "impliedAmslAfter": 25
+              },
+              {
+                "sourceSeq": 10,
+                "relativeBefore": 15,
+                "relativeAfter": 15,
+                "impliedAmslBefore": 22,
+                "impliedAmslAfter": 25
+              },
+              {
+                "sourceSeq": 13,
+                "relativeBefore": 15,
+                "relativeAfter": 15,
+                "impliedAmslBefore": 22,
+                "impliedAmslAfter": 25
+              },
+              {
+                "sourceSeq": 15,
+                "relativeBefore": 15,
+                "relativeAfter": 15,
+                "impliedAmslBefore": 22,
+                "impliedAmslAfter": 25
+              }
+            ],
+            "cameraChanges": [],
+            "sequenceLabelChanges": [
+              {
+                "sourceSeq": 8,
+                "from": 7,
+                "to": 8
+              },
+              {
+                "sourceSeq": 9,
+                "from": 8,
+                "to": 9
+              },
+              {
+                "sourceSeq": 10,
+                "from": 9,
+                "to": 10
+              },
+              {
+                "sourceSeq": 11,
+                "from": 10,
+                "to": 11
+              },
+              {
+                "sourceSeq": 12,
+                "from": 11,
+                "to": 12
+              },
+              {
+                "sourceSeq": 13,
+                "from": 11,
+                "to": 13
+              },
+              {
+                "sourceSeq": 14,
+                "from": 12,
+                "to": 14
+              },
+              {
+                "sourceSeq": 15,
+                "from": 13,
+                "to": 15
+              },
+              {
+                "sourceSeq": 16,
+                "from": 14,
+                "to": 16
+              },
+              {
+                "sourceSeq": 17,
+                "from": 15,
+                "to": 17
+              },
+              {
+                "sourceSeq": 18,
+                "from": 15,
+                "to": 18
+              }
+            ],
+            "insertions": [],
+            "flattenedComplex": 0,
+            "normalizations": [
+              {
+                "seq": 1,
+                "field": "param4",
+                "from": null,
+                "to": 0,
+                "reason": "Copter-4.7.1 AP_Mission ignores NAV yaw; original null retained"
+              },
+              {
+                "seq": 3,
+                "field": "param4",
+                "from": null,
+                "to": 0,
+                "reason": "Copter-4.7.1 AP_Mission ignores NAV yaw; original null retained"
+              },
+              {
+                "seq": 5,
+                "field": "param4",
+                "from": null,
+                "to": 0,
+                "reason": "Copter-4.7.1 AP_Mission ignores NAV yaw; original null retained"
+              },
+              {
+                "seq": 7,
+                "field": "param2",
+                "from": null,
+                "to": 0,
+                "reason": "Copter-4.7.1 IMAGE_STOP_CAPTURE stores only camera ID; reserved null retained in original"
+              },
+              {
+                "seq": 7,
+                "field": "param3",
+                "from": null,
+                "to": 0,
+                "reason": "Copter-4.7.1 IMAGE_STOP_CAPTURE stores only camera ID; reserved null retained in original"
+              },
+              {
+                "seq": 7,
+                "field": "param4",
+                "from": null,
+                "to": 0,
+                "reason": "Copter-4.7.1 IMAGE_STOP_CAPTURE stores only camera ID; reserved null retained in original"
+              },
+              {
+                "seq": 7,
+                "field": "param5",
+                "from": null,
+                "to": 0,
+                "reason": "Copter-4.7.1 IMAGE_STOP_CAPTURE stores only camera ID; reserved null retained in original"
+              },
+              {
+                "seq": 7,
+                "field": "param6",
+                "from": null,
+                "to": 0,
+                "reason": "Copter-4.7.1 IMAGE_STOP_CAPTURE stores only camera ID; reserved null retained in original"
+              },
+              {
+                "seq": 7,
+                "field": "param7",
+                "from": null,
+                "to": 0,
+                "reason": "Copter-4.7.1 IMAGE_STOP_CAPTURE stores only camera ID; reserved null retained in original"
+              },
+              {
+                "seq": 8,
+                "field": "param4",
+                "from": null,
+                "to": 0,
+                "reason": "Copter-4.7.1 AP_Mission ignores NAV yaw; original null retained"
+              },
+              {
+                "seq": 10,
+                "field": "param4",
+                "from": null,
+                "to": 0,
+                "reason": "Copter-4.7.1 AP_Mission ignores NAV yaw; original null retained"
+              },
+              {
+                "seq": 12,
+                "field": "param2",
+                "from": null,
+                "to": 0,
+                "reason": "Copter-4.7.1 IMAGE_STOP_CAPTURE stores only camera ID; reserved null retained in original"
+              },
+              {
+                "seq": 12,
+                "field": "param3",
+                "from": null,
+                "to": 0,
+                "reason": "Copter-4.7.1 IMAGE_STOP_CAPTURE stores only camera ID; reserved null retained in original"
+              },
+              {
+                "seq": 12,
+                "field": "param4",
+                "from": null,
+                "to": 0,
+                "reason": "Copter-4.7.1 IMAGE_STOP_CAPTURE stores only camera ID; reserved null retained in original"
+              },
+              {
+                "seq": 12,
+                "field": "param5",
+                "from": null,
+                "to": 0,
+                "reason": "Copter-4.7.1 IMAGE_STOP_CAPTURE stores only camera ID; reserved null retained in original"
+              },
+              {
+                "seq": 12,
+                "field": "param6",
+                "from": null,
+                "to": 0,
+                "reason": "Copter-4.7.1 IMAGE_STOP_CAPTURE stores only camera ID; reserved null retained in original"
+              },
+              {
+                "seq": 12,
+                "field": "param7",
+                "from": null,
+                "to": 0,
+                "reason": "Copter-4.7.1 IMAGE_STOP_CAPTURE stores only camera ID; reserved null retained in original"
+              },
+              {
+                "seq": 13,
+                "field": "param4",
+                "from": null,
+                "to": 0,
+                "reason": "Copter-4.7.1 AP_Mission ignores NAV yaw; original null retained"
+              },
+              {
+                "seq": 15,
+                "field": "param4",
+                "from": null,
+                "to": 0,
+                "reason": "Copter-4.7.1 AP_Mission ignores NAV yaw; original null retained"
+              },
+              {
+                "seq": 17,
+                "field": "param2",
+                "from": null,
+                "to": 0,
+                "reason": "Copter-4.7.1 IMAGE_STOP_CAPTURE stores only camera ID; reserved null retained in original"
+              },
+              {
+                "seq": 17,
+                "field": "param3",
+                "from": null,
+                "to": 0,
+                "reason": "Copter-4.7.1 IMAGE_STOP_CAPTURE stores only camera ID; reserved null retained in original"
+              },
+              {
+                "seq": 17,
+                "field": "param4",
+                "from": null,
+                "to": 0,
+                "reason": "Copter-4.7.1 IMAGE_STOP_CAPTURE stores only camera ID; reserved null retained in original"
+              },
+              {
+                "seq": 17,
+                "field": "param5",
+                "from": null,
+                "to": 0,
+                "reason": "Copter-4.7.1 IMAGE_STOP_CAPTURE stores only camera ID; reserved null retained in original"
+              },
+              {
+                "seq": 17,
+                "field": "param6",
+                "from": null,
+                "to": 0,
+                "reason": "Copter-4.7.1 IMAGE_STOP_CAPTURE stores only camera ID; reserved null retained in original"
+              },
+              {
+                "seq": 17,
+                "field": "param7",
+                "from": null,
+                "to": 0,
+                "reason": "Copter-4.7.1 IMAGE_STOP_CAPTURE stores only camera ID; reserved null retained in original"
+              }
+            ],
+            "diff": {
+              "format": "aeris-qgc-semantic-diff",
+              "version": 1,
+              "equal": false,
+              "changes": [
+                {
+                  "path": "mission.plannedHomePosition",
+                  "before": [
+                    10.854,
+                    106.807,
+                    7
+                  ],
+                  "after": [
+                    10.854,
+                    106.807,
+                    10
+                  ]
+                }
+              ],
+              "before": {
+                "items": 18,
+                "visualItems": 18,
+                "complex": 0,
+                "home": [
+                  10.854,
+                  106.807,
+                  7
+                ],
+                "firmwareType": 3,
+                "vehicleType": 2,
+                "cameraCommands": 6
+              },
+              "after": {
+                "items": 18,
+                "visualItems": 18,
+                "complex": 0,
+                "home": [
+                  10.854,
+                  106.807,
+                  10
+                ],
+                "firmwareType": 3,
+                "vehicleType": 2,
+                "cameraCommands": 6
+              },
+              "scope": "Strict semantic comparison; formatting/key order/doJumpId/groundStation ignored. Null yaw, camera flags, Home and generated coordinates remain visible. Comparison sends no flight command."
+            },
+            "scope": "Explicit SITL-only derivative; sequential label repair without DO_JUMP support; no lateral relocation, terrain/AGL assertion, polygon regeneration or physical camera claim. Review/adoption sends no command."
+          },
+          "parameterObservation": null
+        }
+      },
+      "digest": "6690b112a8b0fdfa403f7d56aae13ac8311d5433967c5084fd5423c58b965a0f"
+    },
+    {
+      "n": 1,
+      "previous": "6690b112a8b0fdfa403f7d56aae13ac8311d5433967c5084fd5423c58b965a0f",
+      "event": {
+        "index": 7,
+        "time": "2026-10-12T10:22:31.825Z",
+        "sessionId": "56ce3aa9-3424-4e1a-94b7-e34797994139",
+        "type": "mission-upload-request",
+        "detail": {
+          "count": 19,
+          "world": "aeris-flat-world-v1"
+        },
+        "proof": {
+          "heartbeat": {
+            "ageMs": 9.206666000000041,
+            "fields": {
+              "custom_mode": 6,
+              "type": 2,
+              "autopilot": 3,
+              "base_mode": 81,
+              "system_status": 3,
+              "mavlink_version": 3
+            }
+          },
+          "landed": {
+            "ageMs": 8.601208000000042,
+            "fields": {
+              "vtol_state": 3,
+              "landed_state": 1
+            }
+          },
+          "position": {
+            "ageMs": 8.633374999999432,
+            "fields": {
+              "time_boot_ms": 20047925,
+              "lat": 108539998,
+              "lon": 1068069999,
+              "alt": 10090,
+              "relative_alt": 8,
+              "vx": -1,
+              "vy": 1,
+              "vz": 0,
+              "hdg": 35987
+            }
+          },
+          "home": {
+            "lat": 10.8539996,
+            "lon": 106.8070001,
+            "amsl": 10.09,
+            "horizontalDeltaM": 0.04557648041733909,
+            "amslDeltaM": 0.08999999999999986,
+            "reference": "HOME_POSITION / AMSL; simulated world only"
+          }
+        }
+      },
+      "digest": "1d4634dd04f3e4e26467bbc7f07ac7362f029e16061391274751ed782844f54d"
+    },
+    {
+      "n": 2,
+      "previous": "1d4634dd04f3e4e26467bbc7f07ac7362f029e16061391274751ed782844f54d",
+      "event": {
+        "index": 8,
+        "time": "2026-10-12T10:22:31.855Z",
+        "sessionId": "56ce3aa9-3424-4e1a-94b7-e34797994139",
+        "type": "mission-upload-accepted",
+        "detail": {
+          "notExecution": true
+        },
+        "proof": {
+          "heartbeat": {
+            "ageMs": 39.20670799999971,
+            "fields": {
+              "custom_mode": 6,
+              "type": 2,
+              "autopilot": 3,
+              "base_mode": 81,
+              "system_status": 3,
+              "mavlink_version": 3
+            }
+          },
+          "landed": {
+            "ageMs": 38.60291600000073,
+            "fields": {
+              "vtol_state": 3,
+              "landed_state": 1
+            }
+          },
+          "position": {
+            "ageMs": 38.63758299999972,
+            "fields": {
+              "time_boot_ms": 20047925,
+              "lat": 108539998,
+              "lon": 1068069999,
+              "alt": 10090,
+              "relative_alt": 8,
+              "vx": -1,
+              "vy": 1,
+              "vz": 0,
+              "hdg": 35987
+            }
+          },
+          "home": {
+            "lat": 10.8539996,
+            "lon": 106.8070001,
+            "amsl": 10.09,
+            "horizontalDeltaM": 0.04557648041733909,
+            "amslDeltaM": 0.08999999999999986,
+            "reference": "HOME_POSITION / AMSL; simulated world only"
+          }
+        }
+      },
+      "digest": "40bd73bde693b682e6dff29ce2b4d45a57f65bd589fc20a0d80f75863c1cdcb2"
+    },
+    {
+      "n": 3,
+      "previous": "40bd73bde693b682e6dff29ce2b4d45a57f65bd589fc20a0d80f75863c1cdcb2",
+      "event": {
+        "index": 9,
+        "time": "2026-10-12T10:22:31.855Z",
+        "sessionId": "56ce3aa9-3424-4e1a-94b7-e34797994139",
+        "type": "autopilot-status",
+        "detail": {
+          "severity": 6,
+          "text": "Flight plan received"
+        },
+        "proof": {
+          "heartbeat": {
+            "ageMs": 39.363000000000284,
+            "fields": {
+              "custom_mode": 6,
+              "type": 2,
+              "autopilot": 3,
+              "base_mode": 81,
+              "system_status": 3,
+              "mavlink_version": 3
+            }
+          },
+          "landed": {
+            "ageMs": 38.75745800000004,
+            "fields": {
+              "vtol_state": 3,
+              "landed_state": 1
+            }
+          },
+          "position": {
+            "ageMs": 38.7895410000001,
+            "fields": {
+              "time_boot_ms": 20047925,
+              "lat": 108539998,
+              "lon": 1068069999,
+              "alt": 10090,
+              "relative_alt": 8,
+              "vx": -1,
+              "vy": 1,
+              "vz": 0,
+              "hdg": 35987
+            }
+          },
+          "home": {
+            "lat": 10.8539996,
+            "lon": 106.8070001,
+            "amsl": 10.09,
+            "horizontalDeltaM": 0.04557648041733909,
+            "amslDeltaM": 0.08999999999999986,
+            "reference": "HOME_POSITION / AMSL; simulated world only"
+          }
+        }
+      },
+      "digest": "06fb70092788f6d5ac489fe2c0f5e81dee7f973f73c1aac89dd761c9620bfc3a"
+    },
+    {
+      "n": 4,
+      "previous": "06fb70092788f6d5ac489fe2c0f5e81dee7f973f73c1aac89dd761c9620bfc3a",
+      "event": {
+        "index": 10,
+        "time": "2026-10-12T10:22:31.880Z",
+        "sessionId": "56ce3aa9-3424-4e1a-94b7-e34797994139",
+        "type": "mission-readback",
+        "detail": {
+          "matches": true,
+          "count": 19
+        },
+        "proof": {
+          "heartbeat": {
+            "ageMs": 64.55779100000018,
+            "fields": {
+              "custom_mode": 6,
+              "type": 2,
+              "autopilot": 3,
+              "base_mode": 81,
+              "system_status": 3,
+              "mavlink_version": 3
+            }
+          },
+          "landed": {
+            "ageMs": 9.566874999999527,
+            "fields": {
+              "vtol_state": 3,
+              "landed_state": 1
+            }
+          },
+          "position": {
+            "ageMs": 9.608167000000321,
+            "fields": {
+              "time_boot_ms": 20048125,
+              "lat": 108539998,
+              "lon": 1068069999,
+              "alt": 10090,
+              "relative_alt": 8,
+              "vx": -1,
+              "vy": 1,
+              "vz": 0,
+              "hdg": 35987
+            }
+          },
+          "home": {
+            "lat": 10.8539996,
+            "lon": 106.8070001,
+            "amsl": 10.09,
+            "horizontalDeltaM": 0.04557648041733909,
+            "amslDeltaM": 0.08999999999999986,
+            "reference": "HOME_POSITION / AMSL; simulated world only"
+          }
+        },
+        "readback": [
+          {
+            "param1": 0,
+            "param2": 0,
+            "param3": 0,
+            "param4": 0,
+            "x": 108539996,
+            "y": 1068070001,
+            "z": 10.09000015258789,
+            "seq": 0,
+            "command": 16,
+            "target_system": 255,
+            "target_component": 190,
+            "frame": 0,
+            "current": 0,
+            "autocontinue": 1,
+            "mission_type": 0
+          },
+          {
+            "param1": 0,
+            "param2": 0,
+            "param3": 0,
+            "param4": 0,
+            "x": 108540000,
+            "y": 1068070000,
+            "z": 15,
+            "seq": 1,
+            "command": 22,
+            "target_system": 255,
+            "target_component": 190,
+            "frame": 3,
+            "current": 0,
+            "autocontinue": 1,
+            "mission_type": 0
+          },
+          {
+            "param1": 1,
+            "param2": 6,
+            "param3": -1,
+            "param4": 0,
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "seq": 2,
+            "command": 178,
+            "target_system": 255,
+            "target_component": 190,
+            "frame": 0,
+            "current": 0,
+            "autocontinue": 1,
+            "mission_type": 0
+          },
+          {
+            "param1": 0,
+            "param2": 0,
+            "param3": 0,
+            "param4": 0,
+            "x": 108540000,
+            "y": 1068071029,
+            "z": 15,
+            "seq": 3,
+            "command": 16,
+            "target_system": 255,
+            "target_component": 190,
+            "frame": 3,
+            "current": 0,
+            "autocontinue": 1,
+            "mission_type": 0
+          },
+          {
+            "param1": 10.5,
+            "param2": 0,
+            "param3": 1,
+            "param4": 0,
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "seq": 4,
+            "command": 206,
+            "target_system": 255,
+            "target_component": 190,
+            "frame": 0,
+            "current": 0,
+            "autocontinue": 1,
+            "mission_type": 0
+          },
+          {
+            "param1": 0,
+            "param2": 0,
+            "param3": 0,
+            "param4": 0,
+            "x": 108544068,
+            "y": 1068071029,
+            "z": 15,
+            "seq": 5,
+            "command": 16,
+            "target_system": 255,
+            "target_component": 190,
+            "frame": 3,
+            "current": 0,
+            "autocontinue": 1,
+            "mission_type": 0
+          },
+          {
+            "param1": 0,
+            "param2": 0,
+            "param3": 0,
+            "param4": 0,
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "seq": 6,
+            "command": 206,
+            "target_system": 255,
+            "target_component": 190,
+            "frame": 0,
+            "current": 0,
+            "autocontinue": 1,
+            "mission_type": 0
+          },
+          {
+            "param1": 0,
+            "param2": 0,
+            "param3": 0,
+            "param4": 0,
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "seq": 7,
+            "command": 2001,
+            "target_system": 255,
+            "target_component": 190,
+            "frame": 0,
+            "current": 0,
+            "autocontinue": 1,
+            "mission_type": 0
+          },
+          {
+            "param1": 0,
+            "param2": 0,
+            "param3": 0,
+            "param4": 0,
+            "x": 108544068,
+            "y": 1068072058,
+            "z": 15,
+            "seq": 8,
+            "command": 16,
+            "target_system": 255,
+            "target_component": 190,
+            "frame": 3,
+            "current": 0,
+            "autocontinue": 1,
+            "mission_type": 0
+          },
+          {
+            "param1": 10.5,
+            "param2": 0,
+            "param3": 1,
+            "param4": 0,
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "seq": 9,
+            "command": 206,
+            "target_system": 255,
+            "target_component": 190,
+            "frame": 0,
+            "current": 0,
+            "autocontinue": 1,
+            "mission_type": 0
+          },
+          {
+            "param1": 0,
+            "param2": 0,
+            "param3": 0,
+            "param4": 0,
+            "x": 108540000,
+            "y": 1068072058,
+            "z": 15,
+            "seq": 10,
+            "command": 16,
+            "target_system": 255,
+            "target_component": 190,
+            "frame": 3,
+            "current": 0,
+            "autocontinue": 1,
+            "mission_type": 0
+          },
+          {
+            "param1": 0,
+            "param2": 0,
+            "param3": 0,
+            "param4": 0,
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "seq": 11,
+            "command": 206,
+            "target_system": 255,
+            "target_component": 190,
+            "frame": 0,
+            "current": 0,
+            "autocontinue": 1,
+            "mission_type": 0
+          },
+          {
+            "param1": 0,
+            "param2": 0,
+            "param3": 0,
+            "param4": 0,
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "seq": 12,
+            "command": 2001,
+            "target_system": 255,
+            "target_component": 190,
+            "frame": 0,
+            "current": 0,
+            "autocontinue": 1,
+            "mission_type": 0
+          },
+          {
+            "param1": 0,
+            "param2": 0,
+            "param3": 0,
+            "param4": 0,
+            "x": 108540000,
+            "y": 1068073087,
+            "z": 15,
+            "seq": 13,
+            "command": 16,
+            "target_system": 255,
+            "target_component": 190,
+            "frame": 3,
+            "current": 0,
+            "autocontinue": 1,
+            "mission_type": 0
+          },
+          {
+            "param1": 10.5,
+            "param2": 0,
+            "param3": 1,
+            "param4": 0,
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "seq": 14,
+            "command": 206,
+            "target_system": 255,
+            "target_component": 190,
+            "frame": 0,
+            "current": 0,
+            "autocontinue": 1,
+            "mission_type": 0
+          },
+          {
+            "param1": 0,
+            "param2": 0,
+            "param3": 0,
+            "param4": 0,
+            "x": 108544068,
+            "y": 1068073087,
+            "z": 15,
+            "seq": 15,
+            "command": 16,
+            "target_system": 255,
+            "target_component": 190,
+            "frame": 3,
+            "current": 0,
+            "autocontinue": 1,
+            "mission_type": 0
+          },
+          {
+            "param1": 0,
+            "param2": 0,
+            "param3": 0,
+            "param4": 0,
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "seq": 16,
+            "command": 206,
+            "target_system": 255,
+            "target_component": 190,
+            "frame": 0,
+            "current": 0,
+            "autocontinue": 1,
+            "mission_type": 0
+          },
+          {
+            "param1": 0,
+            "param2": 0,
+            "param3": 0,
+            "param4": 0,
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "seq": 17,
+            "command": 2001,
+            "target_system": 255,
+            "target_component": 190,
+            "frame": 0,
+            "current": 0,
+            "autocontinue": 1,
+            "mission_type": 0
+          },
+          {
+            "param1": 0,
+            "param2": 0,
+            "param3": 0,
+            "param4": 0,
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "seq": 18,
+            "command": 20,
+            "target_system": 255,
+            "target_component": 190,
+            "frame": 0,
+            "current": 0,
+            "autocontinue": 1,
+            "mission_type": 0
+          }
+        ]
+      },
+      "digest": "965e5e3a35c722f75896fccb8d2ef6cd151bf506697508792b35d6a96f243529"
+    },
+    {
+      "n": 5,
+      "previous": "965e5e3a35c722f75896fccb8d2ef6cd151bf506697508792b35d6a96f243529",
+      "event": {
+        "index": 11,
+        "time": "2026-10-12T10:22:31.884Z",
+        "sessionId": "56ce3aa9-3424-4e1a-94b7-e34797994139",
+        "type": "command-sent",
+        "detail": {
+          "name": "guided",
+          "simulation": true
+        },
+        "proof": {
+          "heartbeat": {
+            "ageMs": 68.28800000000047,
+            "fields": {
+              "custom_mode": 6,
+              "type": 2,
+              "autopilot": 3,
+              "base_mode": 81,
+              "system_status": 3,
+              "mavlink_version": 3
+            }
+          },
+          "landed": {
+            "ageMs": 13.296959000000243,
+            "fields": {
+              "vtol_state": 3,
+              "landed_state": 1
+            }
+          },
+          "position": {
+            "ageMs": 13.337625000000116,
+            "fields": {
+              "time_boot_ms": 20048125,
+              "lat": 108539998,
+              "lon": 1068069999,
+              "alt": 10090,
+              "relative_alt": 8,
+              "vx": -1,
+              "vy": 1,
+              "vz": 0,
+              "hdg": 35987
+            }
+          },
+          "home": {
+            "lat": 10.8539996,
+            "lon": 106.8070001,
+            "amsl": 10.09,
+            "horizontalDeltaM": 0.04557648041733909,
+            "amslDeltaM": 0.08999999999999986,
+            "reference": "HOME_POSITION / AMSL; simulated world only"
+          }
+        }
+      },
+      "digest": "d7795c1479398f46e66b054aef934ea6754ee8a68807269750108ef2992bee58"
+    },
+    {
+      "n": 6,
+      "previous": "d7795c1479398f46e66b054aef934ea6754ee8a68807269750108ef2992bee58",
+      "event": {
+        "index": 12,
+        "time": "2026-10-12T10:22:31.885Z",
+        "sessionId": "56ce3aa9-3424-4e1a-94b7-e34797994139",
+        "type": "command-ack",
+        "detail": {
+          "name": "guided",
+          "result": 0
+        },
+        "proof": {
+          "heartbeat": {
+            "ageMs": 69.95933299999979,
+            "fields": {
+              "custom_mode": 6,
+              "type": 2,
+              "autopilot": 3,
+              "base_mode": 81,
+              "system_status": 3,
+              "mavlink_version": 3
+            }
+          },
+          "landed": {
+            "ageMs": 14.978791999999885,
+            "fields": {
+              "vtol_state": 3,
+              "landed_state": 1
+            }
+          },
+          "position": {
+            "ageMs": 15.019583999999668,
+            "fields": {
+              "time_boot_ms": 20048125,
+              "lat": 108539998,
+              "lon": 1068069999,
+              "alt": 10090,
+              "relative_alt": 8,
+              "vx": -1,
+              "vy": 1,
+              "vz": 0,
+              "hdg": 35987
+            }
+          },
+          "home": {
+            "lat": 10.8539996,
+            "lon": 106.8070001,
+            "amsl": 10.09,
+            "horizontalDeltaM": 0.04557648041733909,
+            "amslDeltaM": 0.08999999999999986,
+            "reference": "HOME_POSITION / AMSL; simulated world only"
+          }
+        }
+      },
+      "digest": "92ba011fda16a708f99f72f4cf8a90bdbb269f31089da1da8ab8b47a2b10966e"
+    },
+    {
+      "n": 7,
+      "previous": "92ba011fda16a708f99f72f4cf8a90bdbb269f31089da1da8ab8b47a2b10966e",
+      "event": {
+        "index": 13,
+        "time": "2026-10-12T10:22:31.886Z",
+        "sessionId": "56ce3aa9-3424-4e1a-94b7-e34797994139",
+        "type": "command-observed",
+        "detail": {
+          "name": "guided"
+        },
+        "proof": {
+          "heartbeat": {
+            "ageMs": 0.06779200000073615,
+            "fields": {
+              "custom_mode": 4,
+              "type": 2,
+              "autopilot": 3,
+              "base_mode": 89,
+              "system_status": 3,
+              "mavlink_version": 3
+            }
+          },
+          "landed": {
+            "ageMs": 15.08075000000008,
+            "fields": {
+              "vtol_state": 3,
+              "landed_state": 1
+            }
+          },
+          "position": {
+            "ageMs": 15.120458999999755,
+            "fields": {
+              "time_boot_ms": 20048125,
+              "lat": 108539998,
+              "lon": 1068069999,
+              "alt": 10090,
+              "relative_alt": 8,
+              "vx": -1,
+              "vy": 1,
+              "vz": 0,
+              "hdg": 35987
+            }
+          },
+          "home": {
+            "lat": 10.8539996,
+            "lon": 106.8070001,
+            "amsl": 10.09,
+            "horizontalDeltaM": 0.04557648041733909,
+            "amslDeltaM": 0.08999999999999986,
+            "reference": "HOME_POSITION / AMSL; simulated world only"
+          }
+        }
+      },
+      "digest": "b6b42d557422274f1bc1aba1a8f80972cd4b686245e073e5837c49f23e42593d"
+    },
+    {
+      "n": 8,
+      "previous": "b6b42d557422274f1bc1aba1a8f80972cd4b686245e073e5837c49f23e42593d",
+      "event": {
+        "index": 14,
+        "time": "2026-10-12T10:22:31.888Z",
+        "sessionId": "56ce3aa9-3424-4e1a-94b7-e34797994139",
+        "type": "profile-guard",
+        "detail": {
+          "action": "arm",
+          "readOnly": true,
+          "profileSnapshot": {
+            "format": "aeris-profile-snapshot",
+            "version": 1,
+            "simulation": true,
+            "definition": {
+              "format": "aeris-vehicle-profile",
+              "schemaVersion": 1,
+              "id": "aeris-copter471-loopback",
+              "version": "1.0.0",
+              "simulation": true,
+              "label": "ArduCopter 4.7.1 · loopback SITL",
+              "target": {
+                "firmware": "4.7.1",
+                "autopilot": 3,
+                "vehicleType": 2,
+                "component": 1,
+                "encoding": "ardupilot-c-cast"
+              },
+              "freshnessMs": 30000,
+              "parameters": [
+                {
+                  "name": "FS_GCS_ENABLE",
+                  "expected": 1,
+                  "type": 2,
+                  "unit": "enum"
+                },
+                {
+                  "name": "FS_GCS_TIMEOUT",
+                  "expected": 5,
+                  "type": 9,
+                  "unit": "s"
+                },
+                {
+                  "name": "FS_OPTIONS",
+                  "expected": 16,
+                  "type": 6,
+                  "unit": "bitmask"
+                },
+                {
+                  "name": "MAV_GCS_SYSID",
+                  "expected": 255,
+                  "type": 4,
+                  "unit": "system-id"
+                }
+              ],
+              "missionScope": {
+                "world": "aeris-flat-world-v1",
+                "commands": [
+                  16,
+                  22,
+                  178,
+                  206,
+                  2001,
+                  20
+                ],
+                "envelopes": [
+                  "aeris-qgc-run",
+                  "aeris-survey-run",
+                  "aeris-survey"
+                ]
+              },
+              "provenance": {
+                "baseline": "evidence/review04/final-runtime.json",
+                "definition": "PROFILE05 engineering test policy, observed four-value/types baseline; not manufacturer defaults",
+                "protocol": "research/vehicle-profile-20261012/sources.json"
+              },
+              "scope": "Simulator-only four-parameter comparison; no complete aircraft/payload/RTK/battery/geofence or HeraHub acceptance."
+            },
+            "profile": {
+              "id": "aeris-copter471-loopback",
+              "version": "1.0.0",
+              "sha256": "c4f28187ea445df1e5779b099dd90a3c324e38b8710a990c75c314f86125306a"
+            },
+            "context": {
+              "sessionId": "56ce3aa9-3424-4e1a-94b7-e34797994139",
+              "vehicle": {
+                "system": 1,
+                "component": 1
+              }
+            },
+            "observation": {
+              "format": "aeris-configuration-observation",
+              "version": 1,
+              "simulation": true,
+              "id": "fd82c2fc-bd5f-4388-9ccf-ea04e7afea77",
+              "sessionId": "56ce3aa9-3424-4e1a-94b7-e34797994139",
+              "vehicle": {
+                "system": 1,
+                "component": 1
+              },
+              "autopilot": 3,
+              "vehicleType": 2,
+              "startedAtUTC": "2026-10-12T10:22:31.804Z",
+              "completedAtUTC": "2026-10-12T10:22:31.816Z",
+              "firmware": {
+                "version": "4.7.1",
+                "flightSwVersion": 67568127,
+                "encoding": "ardupilot-c-cast",
+                "capabilities": 64495,
+                "observedAtUTC": "2026-10-12T10:22:31.806Z",
+                "ageMs": 82.54266699999971
+              },
+              "parameters": {
+                "FS_GCS_ENABLE": {
+                  "value": 1,
+                  "type": 2,
+                  "index": 65535,
+                  "observedAtUTC": "2026-10-12T10:22:31.816Z",
+                  "ageMs": 72.6619580000006
+                },
+                "FS_GCS_TIMEOUT": {
+                  "value": 5,
+                  "type": 9,
+                  "index": 65535,
+                  "observedAtUTC": "2026-10-12T10:22:31.816Z",
+                  "ageMs": 72.6202089999997
+                },
+                "FS_OPTIONS": {
+                  "value": 16,
+                  "type": 6,
+                  "index": 65535,
+                  "observedAtUTC": "2026-10-12T10:22:31.816Z",
+                  "ageMs": 72.60820800000056
+                },
+                "MAV_GCS_SYSID": {
+                  "value": 255,
+                  "type": 4,
+                  "index": 65535,
+                  "observedAtUTC": "2026-10-12T10:22:31.816Z",
+                  "ageMs": 72.60070900000028
+                }
+              }
+            },
+            "comparison": {
+              "format": "aeris-profile-comparison",
+              "version": 1,
+              "simulation": true,
+              "profile": {
+                "id": "aeris-copter471-loopback",
+                "version": "1.0.0",
+                "sha256": "c4f28187ea445df1e5779b099dd90a3c324e38b8710a990c75c314f86125306a"
+              },
+              "state": "MATCH",
+              "pass": true,
+              "checks": [
+                {
+                  "id": "profile-reference",
+                  "status": "MATCH",
+                  "pass": true,
+                  "reason": "Profile đã khóa phiên bản/hash.",
+                  "expected": {
+                    "id": "aeris-copter471-loopback",
+                    "version": "1.0.0",
+                    "sha256": "c4f28187ea445df1e5779b099dd90a3c324e38b8710a990c75c314f86125306a"
+                  },
+                  "observed": {
+                    "id": "aeris-copter471-loopback",
+                    "version": "1.0.0",
+                    "sha256": "c4f28187ea445df1e5779b099dd90a3c324e38b8710a990c75c314f86125306a"
+                  },
+                  "unit": null
+                },
+                {
+                  "id": "aircraft-session",
+                  "status": "MATCH",
+                  "pass": true,
+                  "reason": "Nguồn autopilot và phiên khớp.",
+                  "expected": {
+                    "sessionId": "56ce3aa9-3424-4e1a-94b7-e34797994139",
+                    "vehicle": {
+                      "system": 1,
+                      "component": 1
+                    }
+                  },
+                  "observed": {
+                    "sessionId": "56ce3aa9-3424-4e1a-94b7-e34797994139",
+                    "vehicle": {
+                      "system": 1,
+                      "component": 1
+                    }
+                  },
+                  "unit": null
+                },
+                {
+                  "id": "observation-validity",
+                  "status": "MATCH",
+                  "pass": true,
+                  "reason": "Không có gián đoạn/thay đổi đã quan sát.",
+                  "expected": null,
+                  "observed": null,
+                  "unit": null
+                },
+                {
+                  "id": "firmware",
+                  "status": "MATCH",
+                  "pass": true,
+                  "reason": "Firmware/encoding khớp.",
+                  "expected": "4.7.1",
+                  "observed": "4.7.1",
+                  "unit": null
+                },
+                {
+                  "id": "FS_GCS_ENABLE",
+                  "status": "MATCH",
+                  "pass": true,
+                  "reason": "Giá trị/kiểu khớp.",
+                  "expected": {
+                    "value": 1,
+                    "type": 2
+                  },
+                  "observed": {
+                    "value": 1,
+                    "type": 2,
+                    "ageMs": 72.6619580000006
+                  },
+                  "unit": "enum"
+                },
+                {
+                  "id": "FS_GCS_TIMEOUT",
+                  "status": "MATCH",
+                  "pass": true,
+                  "reason": "Giá trị/kiểu khớp.",
+                  "expected": {
+                    "value": 5,
+                    "type": 9
+                  },
+                  "observed": {
+                    "value": 5,
+                    "type": 9,
+                    "ageMs": 72.6202089999997
+                  },
+                  "unit": "s"
+                },
+                {
+                  "id": "FS_OPTIONS",
+                  "status": "MATCH",
+                  "pass": true,
+                  "reason": "Giá trị/kiểu khớp.",
+                  "expected": {
+                    "value": 16,
+                    "type": 6
+                  },
+                  "observed": {
+                    "value": 16,
+                    "type": 6,
+                    "ageMs": 72.60820800000056
+                  },
+                  "unit": "bitmask"
+                },
+                {
+                  "id": "MAV_GCS_SYSID",
+                  "status": "MATCH",
+                  "pass": true,
+                  "reason": "Giá trị/kiểu khớp.",
+                  "expected": {
+                    "value": 255,
+                    "type": 4
+                  },
+                  "observed": {
+                    "value": 255,
+                    "type": 4,
+                    "ageMs": 72.60070900000028
+                  },
+                  "unit": "system-id"
+                }
+              ],
+              "freshnessMs": 30000,
+              "scope": "Simulator-only four-parameter comparison; no complete aircraft/payload/RTK/battery/geofence or HeraHub acceptance."
+            }
+          }
+        },
+        "proof": {
+          "heartbeat": {
+            "ageMs": 2.8037920000006125,
+            "fields": {
+              "custom_mode": 4,
+              "type": 2,
+              "autopilot": 3,
+              "base_mode": 89,
+              "system_status": 3,
+              "mavlink_version": 3
+            }
+          },
+          "landed": {
+            "ageMs": 17.817584000000352,
+            "fields": {
+              "vtol_state": 3,
+              "landed_state": 1
+            }
+          },
+          "position": {
+            "ageMs": 17.857834000000366,
+            "fields": {
+              "time_boot_ms": 20048125,
+              "lat": 108539998,
+              "lon": 1068069999,
+              "alt": 10090,
+              "relative_alt": 8,
+              "vx": -1,
+              "vy": 1,
+              "vz": 0,
+              "hdg": 35987
+            }
+          },
+          "home": {
+            "lat": 10.8539996,
+            "lon": 106.8070001,
+            "amsl": 10.09,
+            "horizontalDeltaM": 0.04557648041733909,
+            "amslDeltaM": 0.08999999999999986,
+            "reference": "HOME_POSITION / AMSL; simulated world only"
+          }
+        }
+      },
+      "digest": "b78669ec3c45c843483321fd02dc24967a7b01c7efcbd4d75b83504c15a22f0b"
+    },
+    {
+      "n": 9,
+      "previous": "b78669ec3c45c843483321fd02dc24967a7b01c7efcbd4d75b83504c15a22f0b",
+      "event": {
+        "index": 15,
+        "time": "2026-10-12T10:22:31.888Z",
+        "sessionId": "56ce3aa9-3424-4e1a-94b7-e34797994139",
+        "type": "command-sent",
+        "detail": {
+          "name": "arm",
+          "simulation": true
+        },
+        "proof": {
+          "heartbeat": {
+            "ageMs": 2.87604200000078,
+            "fields": {
+              "custom_mode": 4,
+              "type": 2,
+              "autopilot": 3,
+              "base_mode": 89,
+              "system_status": 3,
+              "mavlink_version": 3
+            }
+          },
+          "landed": {
+            "ageMs": 17.889208999999937,
+            "fields": {
+              "vtol_state": 3,
+              "landed_state": 1
+            }
+          },
+          "position": {
+            "ageMs": 17.928917000000183,
+            "fields": {
+              "time_boot_ms": 20048125,
+              "lat": 108539998,
+              "lon": 1068069999,
+              "alt": 10090,
+              "relative_alt": 8,
+              "vx": -1,
+              "vy": 1,
+              "vz": 0,
+              "hdg": 35987
+            }
+          },
+          "home": {
+            "lat": 10.8539996,
+            "lon": 106.8070001,
+            "amsl": 10.09,
+            "horizontalDeltaM": 0.04557648041733909,
+            "amslDeltaM": 0.08999999999999986,
+            "reference": "HOME_POSITION / AMSL; simulated world only"
+          }
+        }
+      },
+      "digest": "1bb1104d302c0b6538d91d04e08d906c23a724d8e973b9b88b4c4d90ad8c73a8"
+    },
+    {
+      "n": 10,
+      "previous": "1bb1104d302c0b6538d91d04e08d906c23a724d8e973b9b88b4c4d90ad8c73a8",
+      "event": {
+        "index": 16,
+        "time": "2026-10-12T10:22:31.891Z",
+        "sessionId": "56ce3aa9-3424-4e1a-94b7-e34797994139",
+        "type": "command-ack",
+        "detail": {
+          "name": "arm",
+          "result": 0
+        },
+        "proof": {
+          "heartbeat": {
+            "ageMs": 5.334625000000415,
+            "fields": {
+              "custom_mode": 4,
+              "type": 2,
+              "autopilot": 3,
+              "base_mode": 89,
+              "system_status": 3,
+              "mavlink_version": 3
+            }
+          },
+          "landed": {
+            "ageMs": 20.34862499999963,
+            "fields": {
+              "vtol_state": 3,
+              "landed_state": 1
+            }
+          },
+          "position": {
+            "ageMs": 20.389000000000124,
+            "fields": {
+              "time_boot_ms": 20048125,
+              "lat": 108539998,
+              "lon": 1068069999,
+              "alt": 10090,
+              "relative_alt": 8,
+              "vx": -1,
+              "vy": 1,
+              "vz": 0,
+              "hdg": 35987
+            }
+          },
+          "home": {
+            "lat": 10.8539996,
+            "lon": 106.8070001,
+            "amsl": 10.09,
+            "horizontalDeltaM": 0.04557648041733909,
+            "amslDeltaM": 0.08999999999999986,
+            "reference": "HOME_POSITION / AMSL; simulated world only"
+          }
+        }
+      },
+      "digest": "c62a4ff5e6d3e3a6b458078ce95eef395d4b2a2a6cefa3a793641ba0d8ee48fa"
+    },
+    {
+      "n": 11,
+      "previous": "c62a4ff5e6d3e3a6b458078ce95eef395d4b2a2a6cefa3a793641ba0d8ee48fa",
+      "event": {
+        "index": 17,
+        "time": "2026-10-12T10:22:31.891Z",
+        "sessionId": "56ce3aa9-3424-4e1a-94b7-e34797994139",
+        "type": "autopilot-status",
+        "detail": {
+          "severity": 6,
+          "text": "Arming motors"
+        },
+        "proof": {
+          "heartbeat": {
+            "ageMs": 5.371334000000388,
+            "fields": {
+              "custom_mode": 4,
+              "type": 2,
+              "autopilot": 3,
+              "base_mode": 89,
+              "system_status": 3,
+              "mavlink_version": 3
+            }
+          },
+          "landed": {
+            "ageMs": 20.384084000000257,
+            "fields": {
+              "vtol_state": 3,
+              "landed_state": 1
+            }
+          },
+          "position": {
+            "ageMs": 20.423792000000503,
+            "fields": {
+              "time_boot_ms": 20048125,
+              "lat": 108539998,
+              "lon": 1068069999,
+              "alt": 10090,
+              "relative_alt": 8,
+              "vx": -1,
+              "vy": 1,
+              "vz": 0,
+              "hdg": 35987
+            }
+          },
+          "home": {
+            "lat": 10.8539998,
+            "lon": 106.8069999,
+            "amsl": 10.09,
+            "horizontalDeltaM": 0.02467731355803568,
+            "amslDeltaM": 0.08999999999999986,
+            "reference": "HOME_POSITION / AMSL; simulated world only"
+          }
+        }
+      },
+      "digest": "29e3eda278a5c05a7b0dc14f652e5adff009fe9032ff06e285ce0c95d1c591e5"
+    },
+    {
+      "n": 12,
+      "previous": "29e3eda278a5c05a7b0dc14f652e5adff009fe9032ff06e285ce0c95d1c591e5",
+      "event": {
+        "index": 18,
+        "time": "2026-10-12T10:22:32.080Z",
+        "sessionId": "56ce3aa9-3424-4e1a-94b7-e34797994139",
+        "type": "command-observed",
+        "detail": {
+          "name": "arm"
+        },
+        "proof": {
+          "heartbeat": {
+            "ageMs": 0.10316699999930279,
+            "fields": {
+              "custom_mode": 4,
+              "type": 2,
+              "autopilot": 3,
+              "base_mode": 217,
+              "system_status": 3,
+              "mavlink_version": 3
+            }
+          },
+          "landed": {
+            "ageMs": 50.116250000000036,
+            "fields": {
+              "vtol_state": 3,
+              "landed_state": 1
+            }
+          },
+          "position": {
+            "ageMs": 50.16508299999987,
+            "fields": {
+              "time_boot_ms": 20048727,
+              "lat": 108539998,
+              "lon": 1068069999,
+              "alt": 10090,
+              "relative_alt": 9,
+              "vx": -1,
+              "vy": 1,
+              "vz": 0,
+              "hdg": 35987
+            }
+          },
+          "home": {
+            "lat": 10.8539998,
+            "lon": 106.8069999,
+            "amsl": 10.09,
+            "horizontalDeltaM": 0.02467731355803568,
+            "amslDeltaM": 0.08999999999999986,
+            "reference": "HOME_POSITION / AMSL; simulated world only"
+          }
+        }
+      },
+      "digest": "0c322a8492e1891b0fa0d81eb7ce849339ecc63243edac0d1b8b6fc294ad885a"
+    },
+    {
+      "n": 13,
+      "previous": "0c322a8492e1891b0fa0d81eb7ce849339ecc63243edac0d1b8b6fc294ad885a",
+      "event": {
+        "index": 19,
+        "time": "2026-10-12T10:22:32.082Z",
+        "sessionId": "56ce3aa9-3424-4e1a-94b7-e34797994139",
+        "type": "profile-guard",
+        "detail": {
+          "action": "auto",
+          "readOnly": true,
+          "profileSnapshot": {
+            "format": "aeris-profile-snapshot",
+            "version": 1,
+            "simulation": true,
+            "definition": {
+              "format": "aeris-vehicle-profile",
+              "schemaVersion": 1,
+              "id": "aeris-copter471-loopback",
+              "version": "1.0.0",
+              "simulation": true,
+              "label": "ArduCopter 4.7.1 · loopback SITL",
+              "target": {
+                "firmware": "4.7.1",
+                "autopilot": 3,
+                "vehicleType": 2,
+                "component": 1,
+                "encoding": "ardupilot-c-cast"
+              },
+              "freshnessMs": 30000,
+              "parameters": [
+                {
+                  "name": "FS_GCS_ENABLE",
+                  "expected": 1,
+                  "type": 2,
+                  "unit": "enum"
+                },
+                {
+                  "name": "FS_GCS_TIMEOUT",
+                  "expected": 5,
+                  "type": 9,
+                  "unit": "s"
+                },
+                {
+                  "name": "FS_OPTIONS",
+                  "expected": 16,
+                  "type": 6,
+                  "unit": "bitmask"
+                },
+                {
+                  "name": "MAV_GCS_SYSID",
+                  "expected": 255,
+                  "type": 4,
+                  "unit": "system-id"
+                }
+              ],
+              "missionScope": {
+                "world": "aeris-flat-world-v1",
+                "commands": [
+                  16,
+                  22,
+                  178,
+                  206,
+                  2001,
+                  20
+                ],
+                "envelopes": [
+                  "aeris-qgc-run",
+                  "aeris-survey-run",
+                  "aeris-survey"
+                ]
+              },
+              "provenance": {
+                "baseline": "evidence/review04/final-runtime.json",
+                "definition": "PROFILE05 engineering test policy, observed four-value/types baseline; not manufacturer defaults",
+                "protocol": "research/vehicle-profile-20261012/sources.json"
+              },
+              "scope": "Simulator-only four-parameter comparison; no complete aircraft/payload/RTK/battery/geofence or HeraHub acceptance."
+            },
+            "profile": {
+              "id": "aeris-copter471-loopback",
+              "version": "1.0.0",
+              "sha256": "c4f28187ea445df1e5779b099dd90a3c324e38b8710a990c75c314f86125306a"
+            },
+            "context": {
+              "sessionId": "56ce3aa9-3424-4e1a-94b7-e34797994139",
+              "vehicle": {
+                "system": 1,
+                "component": 1
+              }
+            },
+            "observation": {
+              "format": "aeris-configuration-observation",
+              "version": 1,
+              "simulation": true,
+              "id": "fd82c2fc-bd5f-4388-9ccf-ea04e7afea77",
+              "sessionId": "56ce3aa9-3424-4e1a-94b7-e34797994139",
+              "vehicle": {
+                "system": 1,
+                "component": 1
+              },
+              "autopilot": 3,
+              "vehicleType": 2,
+              "startedAtUTC": "2026-10-12T10:22:31.804Z",
+              "completedAtUTC": "2026-10-12T10:22:31.816Z",
+              "firmware": {
+                "version": "4.7.1",
+                "flightSwVersion": 67568127,
+                "encoding": "ardupilot-c-cast",
+                "capabilities": 64495,
+                "observedAtUTC": "2026-10-12T10:22:31.806Z",
+                "ageMs": 276.49654199999986
+              },
+              "parameters": {
+                "FS_GCS_ENABLE": {
+                  "value": 1,
+                  "type": 2,
+                  "index": 65535,
+                  "observedAtUTC": "2026-10-12T10:22:31.816Z",
+                  "ageMs": 266.6168750000006
+                },
+                "FS_GCS_TIMEOUT": {
+                  "value": 5,
+                  "type": 9,
+                  "index": 65535,
+                  "observedAtUTC": "2026-10-12T10:22:31.816Z",
+                  "ageMs": 266.57524999999987
+                },
+                "FS_OPTIONS": {
+                  "value": 16,
+                  "type": 6,
+                  "index": 65535,
+                  "observedAtUTC": "2026-10-12T10:22:31.816Z",
+                  "ageMs": 266.56325000000015
+                },
+                "MAV_GCS_SYSID": {
+                  "value": 255,
+                  "type": 4,
+                  "index": 65535,
+                  "observedAtUTC": "2026-10-12T10:22:31.816Z",
+                  "ageMs": 266.55666699999983
+                }
+              }
+            },
+            "comparison": {
+              "format": "aeris-profile-comparison",
+              "version": 1,
+              "simulation": true,
+              "profile": {
+                "id": "aeris-copter471-loopback",
+                "version": "1.0.0",
+                "sha256": "c4f28187ea445df1e5779b099dd90a3c324e38b8710a990c75c314f86125306a"
+              },
+              "state": "MATCH",
+              "pass": true,
+              "checks": [
+                {
+                  "id": "profile-reference",
+                  "status": "MATCH",
+                  "pass": true,
+                  "reason": "Profile đã khóa phiên bản/hash.",
+                  "expected": {
+                    "id": "aeris-copter471-loopback",
+                    "version": "1.0.0",
+                    "sha256": "c4f28187ea445df1e5779b099dd90a3c324e38b8710a990c75c314f86125306a"
+                  },
+                  "observed": {
+                    "id": "aeris-copter471-loopback",
+                    "version": "1.0.0",
+                    "sha256": "c4f28187ea445df1e5779b099dd90a3c324e38b8710a990c75c314f86125306a"
+                  },
+                  "unit": null
+                },
+                {
+                  "id": "aircraft-session",
+                  "status": "MATCH",
+                  "pass": true,
+                  "reason": "Nguồn autopilot và phiên khớp.",
+                  "expected": {
+                    "sessionId": "56ce3aa9-3424-4e1a-94b7-e34797994139",
+                    "vehicle": {
+                      "system": 1,
+                      "component": 1
+                    }
+                  },
+                  "observed": {
+                    "sessionId": "56ce3aa9-3424-4e1a-94b7-e34797994139",
+                    "vehicle": {
+                      "system": 1,
+                      "component": 1
+                    }
+                  },
+                  "unit": null
+                },
+                {
+                  "id": "observation-validity",
+                  "status": "MATCH",
+                  "pass": true,
+                  "reason": "Không có gián đoạn/thay đổi đã quan sát.",
+                  "expected": null,
+                  "observed": null,
+                  "unit": null
+                },
+                {
+                  "id": "firmware",
+                  "status": "MATCH",
+                  "pass": true,
+                  "reason": "Firmware/encoding khớp.",
+                  "expected": "4.7.1",
+                  "observed": "4.7.1",
+                  "unit": null
+                },
+                {
+                  "id": "FS_GCS_ENABLE",
+                  "status": "MATCH",
+                  "pass": true,
+                  "reason": "Giá trị/kiểu khớp.",
+                  "expected": {
+                    "value": 1,
+                    "type": 2
+                  },
+                  "observed": {
+                    "value": 1,
+                    "type": 2,
+                    "ageMs": 266.6168750000006
+                  },
+                  "unit": "enum"
+                },
+                {
+                  "id": "FS_GCS_TIMEOUT",
+                  "status": "MATCH",
+                  "pass": true,
+                  "reason": "Giá trị/kiểu khớp.",
+                  "expected": {
+                    "value": 5,
+                    "type": 9
+                  },
+                  "observed": {
+                    "value": 5,
+                    "type": 9,
+                    "ageMs": 266.57524999999987
+                  },
+                  "unit": "s"
+                },
+                {
+                  "id": "FS_OPTIONS",
+                  "status": "MATCH",
+                  "pass": true,
+                  "reason": "Giá trị/kiểu khớp.",
+                  "expected": {
+                    "value": 16,
+                    "type": 6
+                  },
+                  "observed": {
+                    "value": 16,
+                    "type": 6,
+                    "ageMs": 266.56325000000015
+                  },
+                  "unit": "bitmask"
+                },
+                {
+                  "id": "MAV_GCS_SYSID",
+                  "status": "MATCH",
+                  "pass": true,
+                  "reason": "Giá trị/kiểu khớp.",
+                  "expected": {
+                    "value": 255,
+                    "type": 4
+                  },
+                  "observed": {
+                    "value": 255,
+                    "type": 4,
+                    "ageMs": 266.55666699999983
+                  },
+                  "unit": "system-id"
+                }
+              ],
+              "freshnessMs": 30000,
+              "scope": "Simulator-only four-parameter comparison; no complete aircraft/payload/RTK/battery/geofence or HeraHub acceptance."
+            }
+          }
+        },
+        "proof": {
+          "heartbeat": {
+            "ageMs": 2.8330419999992955,
+            "fields": {
+              "custom_mode": 4,
+              "type": 2,
+              "autopilot": 3,
+              "base_mode": 217,
+              "system_status": 3,
+              "mavlink_version": 3
+            }
+          },
+          "landed": {
+            "ageMs": 2.4077909999996336,
+            "fields": {
+              "vtol_state": 3,
+              "landed_state": 1
+            }
+          },
+          "position": {
+            "ageMs": 2.4432919999999285,
+            "fields": {
+              "time_boot_ms": 20048927,
+              "lat": 108539998,
+              "lon": 1068069999,
+              "alt": 10090,
+              "relative_alt": 9,
+              "vx": -1,
+              "vy": 1,
+              "vz": 0,
+              "hdg": 35987
+            }
+          },
+          "home": {
+            "lat": 10.8539998,
+            "lon": 106.8069999,
+            "amsl": 10.09,
+            "horizontalDeltaM": 0.02467731355803568,
+            "amslDeltaM": 0.08999999999999986,
+            "reference": "HOME_POSITION / AMSL; simulated world only"
+          }
+        }
+      },
+      "digest": "c7c916741c8aa9c2efd656bada1b5b2b1ff16daca7a422fd7849008c8c829a59"
+    },
+    {
+      "n": 14,
+      "previous": "c7c916741c8aa9c2efd656bada1b5b2b1ff16daca7a422fd7849008c8c829a59",
+      "event": {
+        "index": 20,
+        "time": "2026-10-12T10:22:32.082Z",
+        "sessionId": "56ce3aa9-3424-4e1a-94b7-e34797994139",
+        "type": "command-sent",
+        "detail": {
+          "name": "auto",
+          "simulation": true
+        },
+        "proof": {
+          "heartbeat": {
+            "ageMs": 2.9159579999995913,
+            "fields": {
+              "custom_mode": 4,
+              "type": 2,
+              "autopilot": 3,
+              "base_mode": 217,
+              "system_status": 3,
+              "mavlink_version": 3
+            }
+          },
+          "landed": {
+            "ageMs": 2.4888330000003407,
+            "fields": {
+              "vtol_state": 3,
+              "landed_state": 1
+            }
+          },
+          "position": {
+            "ageMs": 2.5237919999999576,
+            "fields": {
+              "time_boot_ms": 20048927,
+              "lat": 108539998,
+              "lon": 1068069999,
+              "alt": 10090,
+              "relative_alt": 9,
+              "vx": -1,
+              "vy": 1,
+              "vz": 0,
+              "hdg": 35987
+            }
+          },
+          "home": {
+            "lat": 10.8539998,
+            "lon": 106.8069999,
+            "amsl": 10.09,
+            "horizontalDeltaM": 0.02467731355803568,
+            "amslDeltaM": 0.08999999999999986,
+            "reference": "HOME_POSITION / AMSL; simulated world only"
+          }
+        }
+      },
+      "digest": "375df569677b95913cf7d0e9ca1ae6e4ae3771ace026ea122f10cb805d550fab"
+    },
+    {
+      "n": 15,
+      "previous": "375df569677b95913cf7d0e9ca1ae6e4ae3771ace026ea122f10cb805d550fab",
+      "event": {
+        "index": 21,
+        "time": "2026-10-12T10:22:32.084Z",
+        "sessionId": "56ce3aa9-3424-4e1a-94b7-e34797994139",
+        "type": "command-ack",
+        "detail": {
+          "name": "auto",
+          "result": 0
+        },
+        "proof": {
+          "heartbeat": {
+            "ageMs": 4.23333299999922,
+            "fields": {
+              "custom_mode": 4,
+              "type": 2,
+              "autopilot": 3,
+              "base_mode": 217,
+              "system_status": 3,
+              "mavlink_version": 3
+            }
+          },
+          "landed": {
+            "ageMs": 3.806749999999738,
+            "fields": {
+              "vtol_state": 3,
+              "landed_state": 1
+            }
+          },
+          "position": {
+            "ageMs": 3.8419999999996435,
+            "fields": {
+              "time_boot_ms": 20048927,
+              "lat": 108539998,
+              "lon": 1068069999,
+              "alt": 10090,
+              "relative_alt": 9,
+              "vx": -1,
+              "vy": 1,
+              "vz": 0,
+              "hdg": 35987
+            }
+          },
+          "home": {
+            "lat": 10.8539998,
+            "lon": 106.8069999,
+            "amsl": 10.09,
+            "horizontalDeltaM": 0.02467731355803568,
+            "amslDeltaM": 0.08999999999999986,
+            "reference": "HOME_POSITION / AMSL; simulated world only"
+          }
+        }
+      },
+      "digest": "37fa5ed080ec3e2a06319323abd4ca2e823545698397d3d1262a652a7855fe6e"
+    },
+    {
+      "n": 16,
+      "previous": "37fa5ed080ec3e2a06319323abd4ca2e823545698397d3d1262a652a7855fe6e",
+      "event": {
+        "index": 22,
+        "time": "2026-10-12T10:22:32.084Z",
+        "sessionId": "56ce3aa9-3424-4e1a-94b7-e34797994139",
+        "type": "command-observed",
+        "detail": {
+          "name": "auto"
+        },
+        "proof": {
+          "heartbeat": {
+            "ageMs": 0.011417000000619737,
+            "fields": {
+              "custom_mode": 3,
+              "type": 2,
+              "autopilot": 3,
+              "base_mode": 217,
+              "system_status": 3,
+              "mavlink_version": 3
+            }
+          },
+          "landed": {
+            "ageMs": 3.8358330000000933,
+            "fields": {
+              "vtol_state": 3,
+              "landed_state": 1
+            }
+          },
+          "position": {
+            "ageMs": 3.870708999999806,
+            "fields": {
+              "time_boot_ms": 20048927,
+              "lat": 108539998,
+              "lon": 1068069999,
+              "alt": 10090,
+              "relative_alt": 9,
+              "vx": -1,
+              "vy": 1,
+              "vz": 0,
+              "hdg": 35987
+            }
+          },
+          "home": {
+            "lat": 10.8539998,
+            "lon": 106.8069999,
+            "amsl": 10.09,
+            "horizontalDeltaM": 0.02467731355803568,
+            "amslDeltaM": 0.08999999999999986,
+            "reference": "HOME_POSITION / AMSL; simulated world only"
+          }
+        }
+      },
+      "digest": "42fee1b6df3332911e0beaf881092a1932903c196b052f272e55925ddadad9a2"
+    },
+    {
+      "n": 17,
+      "previous": "42fee1b6df3332911e0beaf881092a1932903c196b052f272e55925ddadad9a2",
+      "event": {
+        "index": 23,
+        "time": "2026-10-12T10:22:32.084Z",
+        "sessionId": "56ce3aa9-3424-4e1a-94b7-e34797994139",
+        "type": "autopilot-status",
+        "detail": {
+          "severity": 6,
+          "text": "Mission: 1 Takeoff"
+        },
+        "proof": {
+          "heartbeat": {
+            "ageMs": 0.7082500000005894,
+            "fields": {
+              "custom_mode": 3,
+              "type": 2,
+              "autopilot": 3,
+              "base_mode": 217,
+              "system_status": 3,
+              "mavlink_version": 3
+            }
+          },
+          "landed": {
+            "ageMs": 4.534582999999657,
+            "fields": {
+              "vtol_state": 3,
+              "landed_state": 1
+            }
+          },
+          "position": {
+            "ageMs": 4.570208999999522,
+            "fields": {
+              "time_boot_ms": 20048927,
+              "lat": 108539998,
+              "lon": 1068069999,
+              "alt": 10090,
+              "relative_alt": 9,
+              "vx": -1,
+              "vy": 1,
+              "vz": 0,
+              "hdg": 35987
+            }
+          },
+          "home": {
+            "lat": 10.8539998,
+            "lon": 106.8069999,
+            "amsl": 10.09,
+            "horizontalDeltaM": 0.02467731355803568,
+            "amslDeltaM": 0.08999999999999986,
+            "reference": "HOME_POSITION / AMSL; simulated world only"
+          }
+        }
+      },
+      "digest": "6e93660877f0bb75d8d6a6303a46ed057b4ea67d67f59dc08f990c68d52d7cee"
+    },
+    {
+      "n": 18,
+      "previous": "6e93660877f0bb75d8d6a6303a46ed057b4ea67d67f59dc08f990c68d52d7cee",
+      "event": {
+        "index": 24,
+        "time": "2026-10-12T10:22:33.376Z",
+        "sessionId": "56ce3aa9-3424-4e1a-94b7-e34797994139",
+        "type": "autopilot-status",
+        "detail": {
+          "severity": 6,
+          "text": "EKF3 IMU0 MAG0 in-flight yaw alignment complete"
+        },
+        "proof": {
+          "heartbeat": {
+            "ageMs": 248.03491699999995,
+            "fields": {
+              "custom_mode": 3,
+              "type": 2,
+              "autopilot": 3,
+              "base_mode": 217,
+              "system_status": 4,
+              "mavlink_version": 3
+            }
+          },
+          "landed": {
+            "ageMs": 46.64941699999963,
+            "fields": {
+              "vtol_state": 3,
+              "landed_state": 3
+            }
+          },
+          "position": {
+            "ageMs": 46.717625000000226,
+            "fields": {
+              "time_boot_ms": 20053725,
+              "lat": 108539999,
+              "lon": 1068069998,
+              "alt": 12560,
+              "relative_alt": 2475,
+              "vx": -1,
+              "vy": 1,
+              "vz": -219,
+              "hdg": 35986
+            }
+          },
+          "home": {
+            "lat": 10.8539998,
+            "lon": 106.8069999,
+            "amsl": 10.09,
+            "horizontalDeltaM": 0.02467731355803568,
+            "amslDeltaM": 0.08999999999999986,
+            "reference": "HOME_POSITION / AMSL; simulated world only"
+          }
+        }
+      },
+      "digest": "413732d3bb1139933846e862d6da2ef2fb3ab8a21c46e1ae83245fe2d6d11f6a"
+    },
+    {
+      "n": 19,
+      "previous": "413732d3bb1139933846e862d6da2ef2fb3ab8a21c46e1ae83245fe2d6d11f6a",
+      "event": {
+        "index": 25,
+        "time": "2026-10-12T10:22:33.378Z",
+        "sessionId": "56ce3aa9-3424-4e1a-94b7-e34797994139",
+        "type": "autopilot-status",
+        "detail": {
+          "severity": 6,
+          "text": "EKF3 IMU1 MAG0 in-flight yaw alignment complete"
+        },
+        "proof": {
+          "heartbeat": {
+            "ageMs": 249.8149169999997,
+            "fields": {
+              "custom_mode": 3,
+              "type": 2,
+              "autopilot": 3,
+              "base_mode": 217,
+              "system_status": 4,
+              "mavlink_version": 3
+            }
+          },
+          "landed": {
+            "ageMs": 48.42774999999983,
+            "fields": {
+              "vtol_state": 3,
+              "landed_state": 3
+            }
+          },
+          "position": {
+            "ageMs": 48.48625000000084,
+            "fields": {
+              "time_boot_ms": 20053725,
+              "lat": 108539999,
+              "lon": 1068069998,
+              "alt": 12560,
+              "relative_alt": 2475,
+              "vx": -1,
+              "vy": 1,
+              "vz": -219,
+              "hdg": 35986
+            }
+          },
+          "home": {
+            "lat": 10.8539998,
+            "lon": 106.8069999,
+            "amsl": 10.09,
+            "horizontalDeltaM": 0.02467731355803568,
+            "amslDeltaM": 0.08999999999999986,
+            "reference": "HOME_POSITION / AMSL; simulated world only"
+          }
+        }
+      },
+      "digest": "67d8ff2fa4df825d6cb2dc4963de8cc35392fcd5b1e114ddc2fd1e76f112a3cd"
+    },
+    {
+      "n": 20,
+      "previous": "67d8ff2fa4df825d6cb2dc4963de8cc35392fcd5b1e114ddc2fd1e76f112a3cd",
+      "event": {
+        "index": 26,
+        "time": "2026-10-12T10:22:34.935Z",
+        "sessionId": "56ce3aa9-3424-4e1a-94b7-e34797994139",
+        "type": "mission-item-reached",
+        "detail": {
+          "seq": 2
+        },
+        "proof": {
+          "heartbeat": {
+            "ageMs": 244.79433299999982,
+            "fields": {
+              "custom_mode": 3,
+              "type": 2,
+              "autopilot": 3,
+              "base_mode": 217,
+              "system_status": 4,
+              "mavlink_version": 3
+            }
+          },
+          "landed": {
+            "ageMs": 36.435749999998734,
+            "fields": {
+              "vtol_state": 3,
+              "landed_state": 3
+            }
+          },
+          "position": {
+            "ageMs": 36.480375000001004,
+            "fields": {
+              "time_boot_ms": 20059725,
+              "lat": 108539999,
+              "lon": 1068069998,
+              "alt": 25050,
+              "relative_alt": 14969,
+              "vx": -1,
+              "vy": 1,
+              "vz": -26,
+              "hdg": 35868
+            }
+          },
+          "home": {
+            "lat": 10.8539998,
+            "lon": 106.8069999,
+            "amsl": 10.09,
+            "horizontalDeltaM": 0.02467731355803568,
+            "amslDeltaM": 0.08999999999999986,
+            "reference": "HOME_POSITION / AMSL; simulated world only"
+          }
+        }
+      },
+      "digest": "2bec22b24e4ab6cfa2cd50720856c2330d49a27386c401fc50ece715d48b5961"
+    },
+    {
+      "n": 21,
+      "previous": "2bec22b24e4ab6cfa2cd50720856c2330d49a27386c401fc50ece715d48b5961",
+      "event": {
+        "index": 27,
+        "time": "2026-10-12T10:22:34.935Z",
+        "sessionId": "56ce3aa9-3424-4e1a-94b7-e34797994139",
+        "type": "autopilot-status",
+        "detail": {
+          "severity": 6,
+          "text": "Mission: 2 ChangeSpeed"
+        },
+        "proof": {
+          "heartbeat": {
+            "ageMs": 244.8528750000005,
+            "fields": {
+              "custom_mode": 3,
+              "type": 2,
+              "autopilot": 3,
+              "base_mode": 217,
+              "system_status": 4,
+              "mavlink_version": 3
+            }
+          },
+          "landed": {
+            "ageMs": 36.490499999999884,
+            "fields": {
+              "vtol_state": 3,
+              "landed_state": 3
+            }
+          },
+          "position": {
+            "ageMs": 36.53350000000137,
+            "fields": {
+              "time_boot_ms": 20059725,
+              "lat": 108539999,
+              "lon": 1068069998,
+              "alt": 25050,
+              "relative_alt": 14969,
+              "vx": -1,
+              "vy": 1,
+              "vz": -26,
+              "hdg": 35868
+            }
+          },
+          "home": {
+            "lat": 10.8539998,
+            "lon": 106.8069999,
+            "amsl": 10.09,
+            "horizontalDeltaM": 0.02467731355803568,
+            "amslDeltaM": 0.08999999999999986,
+            "reference": "HOME_POSITION / AMSL; simulated world only"
+          }
+        }
+      },
+      "digest": "97e6eeb59301e731254b4f3e5f6a9ede1d1d110d6179dcccfe02ebe9cdef6fff"
+    },
+    {
+      "n": 22,
+      "previous": "97e6eeb59301e731254b4f3e5f6a9ede1d1d110d6179dcccfe02ebe9cdef6fff",
+      "event": {
+        "index": 28,
+        "time": "2026-10-12T10:22:34.935Z",
+        "sessionId": "56ce3aa9-3424-4e1a-94b7-e34797994139",
+        "type": "autopilot-status",
+        "detail": {
+          "severity": 6,
+          "text": "Mission: 3 WP"
+        },
+        "proof": {
+          "heartbeat": {
+            "ageMs": 244.87087500000052,
+            "fields": {
+              "custom_mode": 3,
+              "type": 2,
+              "autopilot": 3,
+              "base_mode": 217,
+              "system_status": 4,
+              "mavlink_version": 3
+            }
+          },
+          "landed": {
+            "ageMs": 36.50812499999847,
+            "fields": {
+              "vtol_state": 3,
+              "landed_state": 3
+            }
+          },
+          "position": {
+            "ageMs": 36.55108300000029,
+            "fields": {
+              "time_boot_ms": 20059725,
+              "lat": 108539999,
+              "lon": 1068069998,
+              "alt": 25050,
+              "relative_alt": 14969,
+              "vx": -1,
+              "vy": 1,
+              "vz": -26,
+              "hdg": 35868
+            }
+          },
+          "home": {
+            "lat": 10.8539998,
+            "lon": 106.8069999,
+            "amsl": 10.09,
+            "horizontalDeltaM": 0.02467731355803568,
+            "amslDeltaM": 0.08999999999999986,
+            "reference": "HOME_POSITION / AMSL; simulated world only"
+          }
+        }
+      },
+      "digest": "786b54297928286896ef6d65ae6b977b1123e6ae913a14a6e7a8c7641f1c7fcc"
+    },
+    {
+      "n": 23,
+      "previous": "786b54297928286896ef6d65ae6b977b1123e6ae913a14a6e7a8c7641f1c7fcc",
+      "event": {
+        "index": 29,
+        "time": "2026-10-12T10:22:36.530Z",
+        "sessionId": "56ce3aa9-3424-4e1a-94b7-e34797994139",
+        "type": "mission-item-reached",
+        "detail": {
+          "seq": 3
+        },
+        "proof": {
+          "heartbeat": {
+            "ageMs": 261.4202920000007,
+            "fields": {
+              "custom_mode": 3,
+              "type": 2,
+              "autopilot": 3,
+              "base_mode": 217,
+              "system_status": 4,
+              "mavlink_version": 3
+            }
+          },
+          "landed": {
+            "ageMs": 38.25391599999966,
+            "fields": {
+              "vtol_state": 3,
+              "landed_state": 2
+            }
+          },
+          "position": {
+            "ageMs": 38.30004200000076,
+            "fields": {
+              "time_boot_ms": 20065725,
+              "lat": 108540058,
+              "lon": 1068070929,
+              "alt": 25080,
+              "relative_alt": 14999,
+              "vx": 118,
+              "vy": 180,
+              "vz": 0,
+              "hdg": 6047
+            }
+          },
+          "home": {
+            "lat": 10.8539998,
+            "lon": 106.8069999,
+            "amsl": 10.09,
+            "horizontalDeltaM": 0.02467731355803568,
+            "amslDeltaM": 0.08999999999999986,
+            "reference": "HOME_POSITION / AMSL; simulated world only"
+          }
+        }
+      },
+      "digest": "7a77d12998fb0a37e3b440b9f1ea6c26cc268048fd13ac3be49e2851a6709d44"
+    },
+    {
+      "n": 24,
+      "previous": "7a77d12998fb0a37e3b440b9f1ea6c26cc268048fd13ac3be49e2851a6709d44",
+      "event": {
+        "index": 30,
+        "time": "2026-10-12T10:22:36.530Z",
+        "sessionId": "56ce3aa9-3424-4e1a-94b7-e34797994139",
+        "type": "autopilot-status",
+        "detail": {
+          "severity": 6,
+          "text": "Reached command #3"
+        },
+        "proof": {
+          "heartbeat": {
+            "ageMs": 261.47170800000094,
+            "fields": {
+              "custom_mode": 3,
+              "type": 2,
+              "autopilot": 3,
+              "base_mode": 217,
+              "system_status": 4,
+              "mavlink_version": 3
+            }
+          },
+          "landed": {
+            "ageMs": 38.302207999999155,
+            "fields": {
+              "vtol_state": 3,
+              "landed_state": 2
+            }
+          },
+          "position": {
+            "ageMs": 38.34712500000023,
+            "fields": {
+              "time_boot_ms": 20065725,
+              "lat": 108540058,
+              "lon": 1068070929,
+              "alt": 25080,
+              "relative_alt": 14999,
+              "vx": 118,
+              "vy": 180,
+              "vz": 0,
+              "hdg": 6047
+            }
+          },
+          "home": {
+            "lat": 10.8539998,
+            "lon": 106.8069999,
+            "amsl": 10.09,
+            "horizontalDeltaM": 0.02467731355803568,
+            "amslDeltaM": 0.08999999999999986,
+            "reference": "HOME_POSITION / AMSL; simulated world only"
+          }
+        }
+      },
+      "digest": "468060efcccf52e0ee4995d4d70aacef211c8657fe0ea7022cabc713f85b6dee"
+    },
+    {
+      "n": 25,
+      "previous": "468060efcccf52e0ee4995d4d70aacef211c8657fe0ea7022cabc713f85b6dee",
+      "event": {
+        "index": 31,
+        "time": "2026-10-12T10:22:36.530Z",
+        "sessionId": "56ce3aa9-3424-4e1a-94b7-e34797994139",
+        "type": "autopilot-status",
+        "detail": {
+          "severity": 6,
+          "text": "Mission: 4 SetCamTrigDst"
+        },
+        "proof": {
+          "heartbeat": {
+            "ageMs": 261.4924170000013,
+            "fields": {
+              "custom_mode": 3,
+              "type": 2,
+              "autopilot": 3,
+              "base_mode": 217,
+              "system_status": 4,
+              "mavlink_version": 3
+            }
+          },
+          "landed": {
+            "ageMs": 38.32279100000051,
+            "fields": {
+              "vtol_state": 3,
+              "landed_state": 2
+            }
+          },
+          "position": {
+            "ageMs": 38.36762500000077,
+            "fields": {
+              "time_boot_ms": 20065725,
+              "lat": 108540058,
+              "lon": 1068070929,
+              "alt": 25080,
+              "relative_alt": 14999,
+              "vx": 118,
+              "vy": 180,
+              "vz": 0,
+              "hdg": 6047
+            }
+          },
+          "home": {
+            "lat": 10.8539998,
+            "lon": 106.8069999,
+            "amsl": 10.09,
+            "horizontalDeltaM": 0.02467731355803568,
+            "amslDeltaM": 0.08999999999999986,
+            "reference": "HOME_POSITION / AMSL; simulated world only"
+          }
+        }
+      },
+      "digest": "7e9fccbe6f9607c1b983b4943fc40edc66654c4e3bd856b1452ae435f5ec05c4"
+    },
+    {
+      "n": 26,
+      "previous": "7e9fccbe6f9607c1b983b4943fc40edc66654c4e3bd856b1452ae435f5ec05c4",
+      "event": {
+        "index": 32,
+        "time": "2026-10-12T10:22:36.530Z",
+        "sessionId": "56ce3aa9-3424-4e1a-94b7-e34797994139",
+        "type": "autopilot-status",
+        "detail": {
+          "severity": 6,
+          "text": "Mission: 5 WP"
+        },
+        "proof": {
+          "heartbeat": {
+            "ageMs": 261.50833299999977,
+            "fields": {
+              "custom_mode": 3,
+              "type": 2,
+              "autopilot": 3,
+              "base_mode": 217,
+              "system_status": 4,
+              "mavlink_version": 3
+            }
+          },
+          "landed": {
+            "ageMs": 38.33849999999984,
+            "fields": {
+              "vtol_state": 3,
+              "landed_state": 2
+            }
+          },
+          "position": {
+            "ageMs": 38.38329200000044,
+            "fields": {
+              "time_boot_ms": 20065725,
+              "lat": 108540058,
+              "lon": 1068070929,
+              "alt": 25080,
+              "relative_alt": 14999,
+              "vx": 118,
+              "vy": 180,
+              "vz": 0,
+              "hdg": 6047
+            }
+          },
+          "home": {
+            "lat": 10.8539998,
+            "lon": 106.8069999,
+            "amsl": 10.09,
+            "horizontalDeltaM": 0.02467731355803568,
+            "amslDeltaM": 0.08999999999999986,
+            "reference": "HOME_POSITION / AMSL; simulated world only"
+          }
+        }
+      },
+      "digest": "bb5c14841d6e055925df12b321d645a3402d62e48424de116ccbb87023f98d94"
+    },
+    {
+      "n": 27,
+      "previous": "bb5c14841d6e055925df12b321d645a3402d62e48424de116ccbb87023f98d94",
+      "event": {
+        "index": 33,
+        "time": "2026-10-12T10:22:39.073Z",
+        "sessionId": "56ce3aa9-3424-4e1a-94b7-e34797994139",
+        "type": "mission-item-reached",
+        "detail": {
+          "seq": 5
+        },
+        "proof": {
+          "heartbeat": {
+            "ageMs": 35.786958000000595,
+            "fields": {
+              "custom_mode": 3,
+              "type": 2,
+              "autopilot": 3,
+              "base_mode": 217,
+              "system_status": 4,
+              "mavlink_version": 3
+            }
+          },
+          "landed": {
+            "ageMs": 35.695416999999,
+            "fields": {
+              "vtol_state": 3,
+              "landed_state": 2
+            }
+          },
+          "position": {
+            "ageMs": 35.74595800000134,
+            "fields": {
+              "time_boot_ms": 20074925,
+              "lat": 108544013,
+              "lon": 1068071086,
+              "alt": 25090,
+              "relative_alt": 15005,
+              "vx": 184,
+              "vy": 121,
+              "vz": 0,
+              "hdg": 2922
+            }
+          },
+          "home": {
+            "lat": 10.8539998,
+            "lon": 106.8069999,
+            "amsl": 10.09,
+            "horizontalDeltaM": 0.02467731355803568,
+            "amslDeltaM": 0.08999999999999986,
+            "reference": "HOME_POSITION / AMSL; simulated world only"
+          }
+        }
+      },
+      "digest": "be428b33efb39ecfb1bd665a7c72e81c5b31d361b18d5cd10869b54f48c71115"
+    },
+    {
+      "n": 28,
+      "previous": "be428b33efb39ecfb1bd665a7c72e81c5b31d361b18d5cd10869b54f48c71115",
+      "event": {
+        "index": 34,
+        "time": "2026-10-12T10:22:39.073Z",
+        "sessionId": "56ce3aa9-3424-4e1a-94b7-e34797994139",
+        "type": "autopilot-status",
+        "detail": {
+          "severity": 6,
+          "text": "Reached command #5"
+        },
+        "proof": {
+          "heartbeat": {
+            "ageMs": 35.83170799999971,
+            "fields": {
+              "custom_mode": 3,
+              "type": 2,
+              "autopilot": 3,
+              "base_mode": 217,
+              "system_status": 4,
+              "mavlink_version": 3
+            }
+          },
+          "landed": {
+            "ageMs": 35.73687499999869,
+            "fields": {
+              "vtol_state": 3,
+              "landed_state": 2
+            }
+          },
+          "position": {
+            "ageMs": 35.7863750000015,
+            "fields": {
+              "time_boot_ms": 20074925,
+              "lat": 108544013,
+              "lon": 1068071086,
+              "alt": 25090,
+              "relative_alt": 15005,
+              "vx": 184,
+              "vy": 121,
+              "vz": 0,
+              "hdg": 2922
+            }
+          },
+          "home": {
+            "lat": 10.8539998,
+            "lon": 106.8069999,
+            "amsl": 10.09,
+            "horizontalDeltaM": 0.02467731355803568,
+            "amslDeltaM": 0.08999999999999986,
+            "reference": "HOME_POSITION / AMSL; simulated world only"
+          }
+        }
+      },
+      "digest": "ce2ae734f6e78fc80f32e97a5bf3ac88776b4d0727349a6877d11879e9e92290"
+    },
+    {
+      "n": 29,
+      "previous": "ce2ae734f6e78fc80f32e97a5bf3ac88776b4d0727349a6877d11879e9e92290",
+      "event": {
+        "index": 35,
+        "time": "2026-10-12T10:22:39.073Z",
+        "sessionId": "56ce3aa9-3424-4e1a-94b7-e34797994139",
+        "type": "autopilot-status",
+        "detail": {
+          "severity": 6,
+          "text": "Mission: 6 SetCamTrigDst"
+        },
+        "proof": {
+          "heartbeat": {
+            "ageMs": 35.8504580000008,
+            "fields": {
+              "custom_mode": 3,
+              "type": 2,
+              "autopilot": 3,
+              "base_mode": 217,
+              "system_status": 4,
+              "mavlink_version": 3
+            }
+          },
+          "landed": {
+            "ageMs": 35.75537499999882,
+            "fields": {
+              "vtol_state": 3,
+              "landed_state": 2
+            }
+          },
+          "position": {
+            "ageMs": 35.804792000000816,
+            "fields": {
+              "time_boot_ms": 20074925,
+              "lat": 108544013,
+              "lon": 1068071086,
+              "alt": 25090,
+              "relative_alt": 15005,
+              "vx": 184,
+              "vy": 121,
+              "vz": 0,
+              "hdg": 2922
+            }
+          },
+          "home": {
+            "lat": 10.8539998,
+            "lon": 106.8069999,
+            "amsl": 10.09,
+            "horizontalDeltaM": 0.02467731355803568,
+            "amslDeltaM": 0.08999999999999986,
+            "reference": "HOME_POSITION / AMSL; simulated world only"
+          }
+        }
+      },
+      "digest": "24e771e03743ab43f5937c13093a00d688c055edbcc6bc37cf98a1c4703872d2"
+    },
+    {
+      "n": 30,
+      "previous": "24e771e03743ab43f5937c13093a00d688c055edbcc6bc37cf98a1c4703872d2",
+      "event": {
+        "index": 36,
+        "time": "2026-10-12T10:22:39.073Z",
+        "sessionId": "56ce3aa9-3424-4e1a-94b7-e34797994139",
+        "type": "autopilot-status",
+        "detail": {
+          "severity": 6,
+          "text": "Mission: 8 WP"
+        },
+        "proof": {
+          "heartbeat": {
+            "ageMs": 35.86670799999956,
+            "fields": {
+              "custom_mode": 3,
+              "type": 2,
+              "autopilot": 3,
+              "base_mode": 217,
+              "system_status": 4,
+              "mavlink_version": 3
+            }
+          },
+          "landed": {
+            "ageMs": 35.771458999999595,
+            "fields": {
+              "vtol_state": 3,
+              "landed_state": 2
+            }
+          },
+          "position": {
+            "ageMs": 35.82087500000125,
+            "fields": {
+              "time_boot_ms": 20074925,
+              "lat": 108544013,
+              "lon": 1068071086,
+              "alt": 25090,
+              "relative_alt": 15005,
+              "vx": 184,
+              "vy": 121,
+              "vz": 0,
+              "hdg": 2922
+            }
+          },
+          "home": {
+            "lat": 10.8539998,
+            "lon": 106.8069999,
+            "amsl": 10.09,
+            "horizontalDeltaM": 0.02467731355803568,
+            "amslDeltaM": 0.08999999999999986,
+            "reference": "HOME_POSITION / AMSL; simulated world only"
+          }
+        }
+      },
+      "digest": "f964d1a6875c72cf071fb43f580568bf34d389d157e8964df92d62b809e331ec"
+    },
+    {
+      "n": 31,
+      "previous": "f964d1a6875c72cf071fb43f580568bf34d389d157e8964df92d62b809e331ec",
+      "event": {
+        "index": 37,
+        "time": "2026-10-12T10:22:39.073Z",
+        "sessionId": "56ce3aa9-3424-4e1a-94b7-e34797994139",
+        "type": "autopilot-status",
+        "detail": {
+          "severity": 6,
+          "text": "Mission: 7 ImageStopCapture"
+        },
+        "proof": {
+          "heartbeat": {
+            "ageMs": 36.10974999999962,
+            "fields": {
+              "custom_mode": 3,
+              "type": 2,
+              "autopilot": 3,
+              "base_mode": 217,
+              "system_status": 4,
+              "mavlink_version": 3
+            }
+          },
+          "landed": {
+            "ageMs": 36.01483399999961,
+            "fields": {
+              "vtol_state": 3,
+              "landed_state": 2
+            }
+          },
+          "position": {
+            "ageMs": 36.06429200000093,
+            "fields": {
+              "time_boot_ms": 20074925,
+              "lat": 108544013,
+              "lon": 1068071086,
+              "alt": 25090,
+              "relative_alt": 15005,
+              "vx": 184,
+              "vy": 121,
+              "vz": 0,
+              "hdg": 2922
+            }
+          },
+          "home": {
+            "lat": 10.8539998,
+            "lon": 106.8069999,
+            "amsl": 10.09,
+            "horizontalDeltaM": 0.02467731355803568,
+            "amslDeltaM": 0.08999999999999986,
+            "reference": "HOME_POSITION / AMSL; simulated world only"
+          }
+        }
+      },
+      "digest": "ce43003fc1bfa190ccd9fb33752830d90068335cfb7d7f3af1e288d8c88ae4cd"
+    },
+    {
+      "n": 32,
+      "previous": "ce43003fc1bfa190ccd9fb33752830d90068335cfb7d7f3af1e288d8c88ae4cd",
+      "event": {
+        "index": 38,
+        "time": "2026-10-12T10:22:40.124Z",
+        "sessionId": "56ce3aa9-3424-4e1a-94b7-e34797994139",
+        "type": "mission-item-reached",
+        "detail": {
+          "seq": 8
+        },
+        "proof": {
+          "heartbeat": {
+            "ageMs": 249.18824999999924,
+            "fields": {
+              "custom_mode": 3,
+              "type": 2,
+              "autopilot": 3,
+              "base_mode": 217,
+              "system_status": 4,
+              "mavlink_version": 3
+            }
+          },
+          "landed": {
+            "ageMs": 10.867708000001585,
+            "fields": {
+              "vtol_state": 3,
+              "landed_state": 2
+            }
+          },
+          "position": {
+            "ageMs": 10.922040999999808,
+            "fields": {
+              "time_boot_ms": 20078725,
+              "lat": 108544027,
+              "lon": 1068071970,
+              "alt": 25090,
+              "relative_alt": 15005,
+              "vx": -148,
+              "vy": 174,
+              "vz": 0,
+              "hdg": 12542
+            }
+          },
+          "home": {
+            "lat": 10.8539998,
+            "lon": 106.8069999,
+            "amsl": 10.09,
+            "horizontalDeltaM": 0.02467731355803568,
+            "amslDeltaM": 0.08999999999999986,
+            "reference": "HOME_POSITION / AMSL; simulated world only"
+          }
+        }
+      },
+      "digest": "3ce1d0b9ee9fc34e8233371b171a15723cb9151ab8493fa3dace7a6b30bc5651"
+    },
+    {
+      "n": 33,
+      "previous": "3ce1d0b9ee9fc34e8233371b171a15723cb9151ab8493fa3dace7a6b30bc5651",
+      "event": {
+        "index": 39,
+        "time": "2026-10-12T10:22:40.124Z",
+        "sessionId": "56ce3aa9-3424-4e1a-94b7-e34797994139",
+        "type": "autopilot-status",
+        "detail": {
+          "severity": 6,
+          "text": "Reached command #8"
+        },
+        "proof": {
+          "heartbeat": {
+            "ageMs": 249.23300000000017,
+            "fields": {
+              "custom_mode": 3,
+              "type": 2,
+              "autopilot": 3,
+              "base_mode": 217,
+              "system_status": 4,
+              "mavlink_version": 3
+            }
+          },
+          "landed": {
+            "ageMs": 10.90941600000042,
+            "fields": {
+              "vtol_state": 3,
+              "landed_state": 2
+            }
+          },
+          "position": {
+            "ageMs": 10.963041000000885,
+            "fields": {
+              "time_boot_ms": 20078725,
+              "lat": 108544027,
+              "lon": 1068071970,
+              "alt": 25090,
+              "relative_alt": 15005,
+              "vx": -148,
+              "vy": 174,
+              "vz": 0,
+              "hdg": 12542
+            }
+          },
+          "home": {
+            "lat": 10.8539998,
+            "lon": 106.8069999,
+            "amsl": 10.09,
+            "horizontalDeltaM": 0.02467731355803568,
+            "amslDeltaM": 0.08999999999999986,
+            "reference": "HOME_POSITION / AMSL; simulated world only"
+          }
+        }
+      },
+      "digest": "9a4f136a80c877e02d382fe2743858cb249adf18cbda027e8e2415139944fe78"
+    },
+    {
+      "n": 34,
+      "previous": "9a4f136a80c877e02d382fe2743858cb249adf18cbda027e8e2415139944fe78",
+      "event": {
+        "index": 40,
+        "time": "2026-10-12T10:22:40.124Z",
+        "sessionId": "56ce3aa9-3424-4e1a-94b7-e34797994139",
+        "type": "autopilot-status",
+        "detail": {
+          "severity": 6,
+          "text": "Mission: 9 SetCamTrigDst"
+        },
+        "proof": {
+          "heartbeat": {
+            "ageMs": 249.2638339999994,
+            "fields": {
+              "custom_mode": 3,
+              "type": 2,
+              "autopilot": 3,
+              "base_mode": 217,
+              "system_status": 4,
+              "mavlink_version": 3
+            }
+          },
+          "landed": {
+            "ageMs": 10.94012500000099,
+            "fields": {
+              "vtol_state": 3,
+              "landed_state": 2
+            }
+          },
+          "position": {
+            "ageMs": 10.993749999999636,
+            "fields": {
+              "time_boot_ms": 20078725,
+              "lat": 108544027,
+              "lon": 1068071970,
+              "alt": 25090,
+              "relative_alt": 15005,
+              "vx": -148,
+              "vy": 174,
+              "vz": 0,
+              "hdg": 12542
+            }
+          },
+          "home": {
+            "lat": 10.8539998,
+            "lon": 106.8069999,
+            "amsl": 10.09,
+            "horizontalDeltaM": 0.02467731355803568,
+            "amslDeltaM": 0.08999999999999986,
+            "reference": "HOME_POSITION / AMSL; simulated world only"
+          }
+        }
+      },
+      "digest": "43e8b52c0c666bb72b502a87902769836caaa28cf4e4c5cfac0719a2c681b627"
+    },
+    {
+      "n": 35,
+      "previous": "43e8b52c0c666bb72b502a87902769836caaa28cf4e4c5cfac0719a2c681b627",
+      "event": {
+        "index": 41,
+        "time": "2026-10-12T10:22:40.124Z",
+        "sessionId": "56ce3aa9-3424-4e1a-94b7-e34797994139",
+        "type": "autopilot-status",
+        "detail": {
+          "severity": 6,
+          "text": "Mission: 10 WP"
+        },
+        "proof": {
+          "heartbeat": {
+            "ageMs": 249.2932920000003,
+            "fields": {
+              "custom_mode": 3,
+              "type": 2,
+              "autopilot": 3,
+              "base_mode": 217,
+              "system_status": 4,
+              "mavlink_version": 3
+            }
+          },
+          "landed": {
+            "ageMs": 10.969500000001062,
+            "fields": {
+              "vtol_state": 3,
+              "landed_state": 2
+            }
+          },
+          "position": {
+            "ageMs": 11.023041000000376,
+            "fields": {
+              "time_boot_ms": 20078725,
+              "lat": 108544027,
+              "lon": 1068071970,
+              "alt": 25090,
+              "relative_alt": 15005,
+              "vx": -148,
+              "vy": 174,
+              "vz": 0,
+              "hdg": 12542
+            }
+          },
+          "home": {
+            "lat": 10.8539998,
+            "lon": 106.8069999,
+            "amsl": 10.09,
+            "horizontalDeltaM": 0.02467731355803568,
+            "amslDeltaM": 0.08999999999999986,
+            "reference": "HOME_POSITION / AMSL; simulated world only"
+          }
+        }
+      },
+      "digest": "61244782b28ab052f74218a25a62bffdf8cb812418692c5568814267e39ea6f3"
+    },
+    {
+      "n": 36,
+      "previous": "61244782b28ab052f74218a25a62bffdf8cb812418692c5568814267e39ea6f3",
+      "event": {
+        "index": 42,
+        "time": "2026-10-12T10:22:42.629Z",
+        "sessionId": "56ce3aa9-3424-4e1a-94b7-e34797994139",
+        "type": "mission-item-reached",
+        "detail": {
+          "seq": 10
+        },
+        "proof": {
+          "heartbeat": {
+            "ageMs": 263.6943749999991,
+            "fields": {
+              "custom_mode": 3,
+              "type": 2,
+              "autopilot": 3,
+              "base_mode": 217,
+              "system_status": 4,
+              "mavlink_version": 3
+            }
+          },
+          "landed": {
+            "ageMs": 50.95379200000025,
+            "fields": {
+              "vtol_state": 3,
+              "landed_state": 2
+            }
+          },
+          "position": {
+            "ageMs": 51.018207999999504,
+            "fields": {
+              "time_boot_ms": 20087725,
+              "lat": 108540068,
+              "lon": 1068072105,
+              "alt": 25080,
+              "relative_alt": 14998,
+              "vx": -201,
+              "vy": 109,
+              "vz": 0,
+              "hdg": 15540
+            }
+          },
+          "home": {
+            "lat": 10.8539998,
+            "lon": 106.8069999,
+            "amsl": 10.09,
+            "horizontalDeltaM": 0.02467731355803568,
+            "amslDeltaM": 0.08999999999999986,
+            "reference": "HOME_POSITION / AMSL; simulated world only"
+          }
+        }
+      },
+      "digest": "6544b4762194fc9a8759c05463e15581fa878ef13ec7045c7aa52b7edf8c6380"
+    },
+    {
+      "n": 37,
+      "previous": "6544b4762194fc9a8759c05463e15581fa878ef13ec7045c7aa52b7edf8c6380",
+      "event": {
+        "index": 43,
+        "time": "2026-10-12T10:22:42.629Z",
+        "sessionId": "56ce3aa9-3424-4e1a-94b7-e34797994139",
+        "type": "autopilot-status",
+        "detail": {
+          "severity": 6,
+          "text": "Reached command #10"
+        },
+        "proof": {
+          "heartbeat": {
+            "ageMs": 263.74062500000036,
+            "fields": {
+              "custom_mode": 3,
+              "type": 2,
+              "autopilot": 3,
+              "base_mode": 217,
+              "system_status": 4,
+              "mavlink_version": 3
+            }
+          },
+          "landed": {
+            "ageMs": 50.99662499999977,
+            "fields": {
+              "vtol_state": 3,
+              "landed_state": 2
+            }
+          },
+          "position": {
+            "ageMs": 51.060082999998485,
+            "fields": {
+              "time_boot_ms": 20087725,
+              "lat": 108540068,
+              "lon": 1068072105,
+              "alt": 25080,
+              "relative_alt": 14998,
+              "vx": -201,
+              "vy": 109,
+              "vz": 0,
+              "hdg": 15540
+            }
+          },
+          "home": {
+            "lat": 10.8539998,
+            "lon": 106.8069999,
+            "amsl": 10.09,
+            "horizontalDeltaM": 0.02467731355803568,
+            "amslDeltaM": 0.08999999999999986,
+            "reference": "HOME_POSITION / AMSL; simulated world only"
+          }
+        }
+      },
+      "digest": "a0e4afa0af4022273f1f0926785f14f66a49b3bc76e99564640cefc6e49edae7"
+    },
+    {
+      "n": 38,
+      "previous": "a0e4afa0af4022273f1f0926785f14f66a49b3bc76e99564640cefc6e49edae7",
+      "event": {
+        "index": 44,
+        "time": "2026-10-12T10:22:42.629Z",
+        "sessionId": "56ce3aa9-3424-4e1a-94b7-e34797994139",
+        "type": "autopilot-status",
+        "detail": {
+          "severity": 6,
+          "text": "Mission: 11 SetCamTrigDst"
+        },
+        "proof": {
+          "heartbeat": {
+            "ageMs": 263.7586659999997,
+            "fields": {
+              "custom_mode": 3,
+              "type": 2,
+              "autopilot": 3,
+              "base_mode": 217,
+              "system_status": 4,
+              "mavlink_version": 3
+            }
+          },
+          "landed": {
+            "ageMs": 51.014374999998836,
+            "fields": {
+              "vtol_state": 3,
+              "landed_state": 2
+            }
+          },
+          "position": {
+            "ageMs": 51.07770799999889,
+            "fields": {
+              "time_boot_ms": 20087725,
+              "lat": 108540068,
+              "lon": 1068072105,
+              "alt": 25080,
+              "relative_alt": 14998,
+              "vx": -201,
+              "vy": 109,
+              "vz": 0,
+              "hdg": 15540
+            }
+          },
+          "home": {
+            "lat": 10.8539998,
+            "lon": 106.8069999,
+            "amsl": 10.09,
+            "horizontalDeltaM": 0.02467731355803568,
+            "amslDeltaM": 0.08999999999999986,
+            "reference": "HOME_POSITION / AMSL; simulated world only"
+          }
+        }
+      },
+      "digest": "8ffcd24c6a102f7745706e166b7346b66414dd18e65036c56686c81d78659663"
+    },
+    {
+      "n": 39,
+      "previous": "8ffcd24c6a102f7745706e166b7346b66414dd18e65036c56686c81d78659663",
+      "event": {
+        "index": 45,
+        "time": "2026-10-12T10:22:42.629Z",
+        "sessionId": "56ce3aa9-3424-4e1a-94b7-e34797994139",
+        "type": "autopilot-status",
+        "detail": {
+          "severity": 6,
+          "text": "Mission: 13 WP"
+        },
+        "proof": {
+          "heartbeat": {
+            "ageMs": 263.7772499999992,
+            "fields": {
+              "custom_mode": 3,
+              "type": 2,
+              "autopilot": 3,
+              "base_mode": 217,
+              "system_status": 4,
+              "mavlink_version": 3
+            }
+          },
+          "landed": {
+            "ageMs": 51.03287499999897,
+            "fields": {
+              "vtol_state": 3,
+              "landed_state": 2
+            }
+          },
+          "position": {
+            "ageMs": 51.096207999999024,
+            "fields": {
+              "time_boot_ms": 20087725,
+              "lat": 108540068,
+              "lon": 1068072105,
+              "alt": 25080,
+              "relative_alt": 14998,
+              "vx": -201,
+              "vy": 109,
+              "vz": 0,
+              "hdg": 15540
+            }
+          },
+          "home": {
+            "lat": 10.8539998,
+            "lon": 106.8069999,
+            "amsl": 10.09,
+            "horizontalDeltaM": 0.02467731355803568,
+            "amslDeltaM": 0.08999999999999986,
+            "reference": "HOME_POSITION / AMSL; simulated world only"
+          }
+        }
+      },
+      "digest": "c21668c1b95497bc8b303db374f94fdb45f2f642011d637b6d546c10b72899c0"
+    },
+    {
+      "n": 40,
+      "previous": "c21668c1b95497bc8b303db374f94fdb45f2f642011d637b6d546c10b72899c0",
+      "event": {
+        "index": 46,
+        "time": "2026-10-12T10:22:42.629Z",
+        "sessionId": "56ce3aa9-3424-4e1a-94b7-e34797994139",
+        "type": "autopilot-status",
+        "detail": {
+          "severity": 6,
+          "text": "Mission: 12 ImageStopCapture"
+        },
+        "proof": {
+          "heartbeat": {
+            "ageMs": 264.0887079999993,
+            "fields": {
+              "custom_mode": 3,
+              "type": 2,
+              "autopilot": 3,
+              "base_mode": 217,
+              "system_status": 4,
+              "mavlink_version": 3
+            }
+          },
+          "landed": {
+            "ageMs": 51.346582999998645,
+            "fields": {
+              "vtol_state": 3,
+              "landed_state": 2
+            }
+          },
+          "position": {
+            "ageMs": 51.410790999998426,
+            "fields": {
+              "time_boot_ms": 20087725,
+              "lat": 108540068,
+              "lon": 1068072105,
+              "alt": 25080,
+              "relative_alt": 14998,
+              "vx": -201,
+              "vy": 109,
+              "vz": 0,
+              "hdg": 15540
+            }
+          },
+          "home": {
+            "lat": 10.8539998,
+            "lon": 106.8069999,
+            "amsl": 10.09,
+            "horizontalDeltaM": 0.02467731355803568,
+            "amslDeltaM": 0.08999999999999986,
+            "reference": "HOME_POSITION / AMSL; simulated world only"
+          }
+        }
+      },
+      "digest": "289d11e1bca532bd49d7d209dcdb2a749ae740ecdbf2e3aa6f9bf578474a0897"
+    },
+    {
+      "n": 41,
+      "previous": "289d11e1bca532bd49d7d209dcdb2a749ae740ecdbf2e3aa6f9bf578474a0897",
+      "event": {
+        "index": 47,
+        "time": "2026-10-12T10:22:43.639Z",
+        "sessionId": "56ce3aa9-3424-4e1a-94b7-e34797994139",
+        "type": "mission-item-reached",
+        "detail": {
+          "seq": 13
+        },
+        "proof": {
+          "heartbeat": {
+            "ageMs": 210.40899999999965,
+            "fields": {
+              "custom_mode": 3,
+              "type": 2,
+              "autopilot": 3,
+              "base_mode": 217,
+              "system_status": 4,
+              "mavlink_version": 3
+            }
+          },
+          "landed": {
+            "ageMs": 30.19458400000076,
+            "fields": {
+              "vtol_state": 3,
+              "landed_state": 2
+            }
+          },
+          "position": {
+            "ageMs": 30.249917000001005,
+            "fields": {
+              "time_boot_ms": 20091525,
+              "lat": 108540032,
+              "lon": 1068072991,
+              "alt": 25080,
+              "relative_alt": 14998,
+              "vx": 134,
+              "vy": 184,
+              "vz": 0,
+              "hdg": 5926
+            }
+          },
+          "home": {
+            "lat": 10.8539998,
+            "lon": 106.8069999,
+            "amsl": 10.09,
+            "horizontalDeltaM": 0.02467731355803568,
+            "amslDeltaM": 0.08999999999999986,
+            "reference": "HOME_POSITION / AMSL; simulated world only"
+          }
+        }
+      },
+      "digest": "65063b445c88ca9c84cc561515922592fe46d76a8b170c71fd9ee4589d92c767"
+    },
+    {
+      "n": 42,
+      "previous": "65063b445c88ca9c84cc561515922592fe46d76a8b170c71fd9ee4589d92c767",
+      "event": {
+        "index": 48,
+        "time": "2026-10-12T10:22:43.639Z",
+        "sessionId": "56ce3aa9-3424-4e1a-94b7-e34797994139",
+        "type": "autopilot-status",
+        "detail": {
+          "severity": 6,
+          "text": "Reached command #13"
+        },
+        "proof": {
+          "heartbeat": {
+            "ageMs": 210.44879100000253,
+            "fields": {
+              "custom_mode": 3,
+              "type": 2,
+              "autopilot": 3,
+              "base_mode": 217,
+              "system_status": 4,
+              "mavlink_version": 3
+            }
+          },
+          "landed": {
+            "ageMs": 30.232041999999637,
+            "fields": {
+              "vtol_state": 3,
+              "landed_state": 2
+            }
+          },
+          "position": {
+            "ageMs": 30.286416999999346,
+            "fields": {
+              "time_boot_ms": 20091525,
+              "lat": 108540032,
+              "lon": 1068072991,
+              "alt": 25080,
+              "relative_alt": 14998,
+              "vx": 134,
+              "vy": 184,
+              "vz": 0,
+              "hdg": 5926
+            }
+          },
+          "home": {
+            "lat": 10.8539998,
+            "lon": 106.8069999,
+            "amsl": 10.09,
+            "horizontalDeltaM": 0.02467731355803568,
+            "amslDeltaM": 0.08999999999999986,
+            "reference": "HOME_POSITION / AMSL; simulated world only"
+          }
+        }
+      },
+      "digest": "14e5229886f9ea651bdad7f3111e6e96e50a3b9ef33d581f001e8f864f1b22a3"
+    },
+    {
+      "n": 43,
+      "previous": "14e5229886f9ea651bdad7f3111e6e96e50a3b9ef33d581f001e8f864f1b22a3",
+      "event": {
+        "index": 49,
+        "time": "2026-10-12T10:22:43.639Z",
+        "sessionId": "56ce3aa9-3424-4e1a-94b7-e34797994139",
+        "type": "autopilot-status",
+        "detail": {
+          "severity": 6,
+          "text": "Mission: 14 SetCamTrigDst"
+        },
+        "proof": {
+          "heartbeat": {
+            "ageMs": 210.46666600000026,
+            "fields": {
+              "custom_mode": 3,
+              "type": 2,
+              "autopilot": 3,
+              "base_mode": 217,
+              "system_status": 4,
+              "mavlink_version": 3
+            }
+          },
+          "landed": {
+            "ageMs": 30.24962500000038,
+            "fields": {
+              "vtol_state": 3,
+              "landed_state": 2
+            }
+          },
+          "position": {
+            "ageMs": 30.303917000001093,
+            "fields": {
+              "time_boot_ms": 20091525,
+              "lat": 108540032,
+              "lon": 1068072991,
+              "alt": 25080,
+              "relative_alt": 14998,
+              "vx": 134,
+              "vy": 184,
+              "vz": 0,
+              "hdg": 5926
+            }
+          },
+          "home": {
+            "lat": 10.8539998,
+            "lon": 106.8069999,
+            "amsl": 10.09,
+            "horizontalDeltaM": 0.02467731355803568,
+            "amslDeltaM": 0.08999999999999986,
+            "reference": "HOME_POSITION / AMSL; simulated world only"
+          }
+        }
+      },
+      "digest": "58c2bc2b38cb394b19a8804d9a715eae0c434dca7a26308d77166f9b1d6dc6ec"
+    },
+    {
+      "n": 44,
+      "previous": "58c2bc2b38cb394b19a8804d9a715eae0c434dca7a26308d77166f9b1d6dc6ec",
+      "event": {
+        "index": 50,
+        "time": "2026-10-12T10:22:43.639Z",
+        "sessionId": "56ce3aa9-3424-4e1a-94b7-e34797994139",
+        "type": "autopilot-status",
+        "detail": {
+          "severity": 6,
+          "text": "Mission: 15 WP"
+        },
+        "proof": {
+          "heartbeat": {
+            "ageMs": 210.48474999999962,
+            "fields": {
+              "custom_mode": 3,
+              "type": 2,
+              "autopilot": 3,
+              "base_mode": 217,
+              "system_status": 4,
+              "mavlink_version": 3
+            }
+          },
+          "landed": {
+            "ageMs": 30.26770899999974,
+            "fields": {
+              "vtol_state": 3,
+              "landed_state": 2
+            }
+          },
+          "position": {
+            "ageMs": 30.322041999999783,
+            "fields": {
+              "time_boot_ms": 20091525,
+              "lat": 108540032,
+              "lon": 1068072991,
+              "alt": 25080,
+              "relative_alt": 14998,
+              "vx": 134,
+              "vy": 184,
+              "vz": 0,
+              "hdg": 5926
+            }
+          },
+          "home": {
+            "lat": 10.8539998,
+            "lon": 106.8069999,
+            "amsl": 10.09,
+            "horizontalDeltaM": 0.02467731355803568,
+            "amslDeltaM": 0.08999999999999986,
+            "reference": "HOME_POSITION / AMSL; simulated world only"
+          }
+        }
+      },
+      "digest": "e041e53d32dc3977584de16b0bd4a8e9d37f0e7c1bcedd087b5ca037e0c1b07d"
+    },
+    {
+      "n": 45,
+      "previous": "e041e53d32dc3977584de16b0bd4a8e9d37f0e7c1bcedd087b5ca037e0c1b07d",
+      "event": {
+        "index": 51,
+        "time": "2026-10-12T10:22:46.984Z",
+        "sessionId": "56ce3aa9-3424-4e1a-94b7-e34797994139",
+        "type": "mission-item-reached",
+        "detail": {
+          "seq": 15
+        },
+        "proof": {
+          "heartbeat": {
+            "ageMs": 207.36841699999786,
+            "fields": {
+              "custom_mode": 3,
+              "type": 2,
+              "autopilot": 3,
+              "base_mode": 217,
+              "system_status": 4,
+              "mavlink_version": 3
+            }
+          },
+          "landed": {
+            "ageMs": 34.211583000000246,
+            "fields": {
+              "vtol_state": 3,
+              "landed_state": 2
+            }
+          },
+          "position": {
+            "ageMs": 34.274750000000495,
+            "fields": {
+              "time_boot_ms": 20102527,
+              "lat": 108544112,
+              "lon": 1068073088,
+              "alt": 25090,
+              "relative_alt": 15003,
+              "vx": -13,
+              "vy": -1,
+              "vz": 0,
+              "hdg": 35963
+            }
+          },
+          "home": {
+            "lat": 10.8539998,
+            "lon": 106.8069999,
+            "amsl": 10.09,
+            "horizontalDeltaM": 0.02467731355803568,
+            "amslDeltaM": 0.08999999999999986,
+            "reference": "HOME_POSITION / AMSL; simulated world only"
+          }
+        }
+      },
+      "digest": "f3912cc0bc5c11a840532cde72b21cfc35352ffc68bc5ba436ef35c61fa17b93"
+    },
+    {
+      "n": 46,
+      "previous": "f3912cc0bc5c11a840532cde72b21cfc35352ffc68bc5ba436ef35c61fa17b93",
+      "event": {
+        "index": 52,
+        "time": "2026-10-12T10:22:46.984Z",
+        "sessionId": "56ce3aa9-3424-4e1a-94b7-e34797994139",
+        "type": "autopilot-status",
+        "detail": {
+          "severity": 6,
+          "text": "Reached command #15"
+        },
+        "proof": {
+          "heartbeat": {
+            "ageMs": 207.40999999999985,
+            "fields": {
+              "custom_mode": 3,
+              "type": 2,
+              "autopilot": 3,
+              "base_mode": 217,
+              "system_status": 4,
+              "mavlink_version": 3
+            }
+          },
+          "landed": {
+            "ageMs": 34.249832999998034,
+            "fields": {
+              "vtol_state": 3,
+              "landed_state": 2
+            }
+          },
+          "position": {
+            "ageMs": 34.31200000000172,
+            "fields": {
+              "time_boot_ms": 20102527,
+              "lat": 108544112,
+              "lon": 1068073088,
+              "alt": 25090,
+              "relative_alt": 15003,
+              "vx": -13,
+              "vy": -1,
+              "vz": 0,
+              "hdg": 35963
+            }
+          },
+          "home": {
+            "lat": 10.8539998,
+            "lon": 106.8069999,
+            "amsl": 10.09,
+            "horizontalDeltaM": 0.02467731355803568,
+            "amslDeltaM": 0.08999999999999986,
+            "reference": "HOME_POSITION / AMSL; simulated world only"
+          }
+        }
+      },
+      "digest": "1b7e92a39a7a6ea1d177bac116d9d468b529dd06e716d11139c09de7ec49ab09"
+    },
+    {
+      "n": 47,
+      "previous": "1b7e92a39a7a6ea1d177bac116d9d468b529dd06e716d11139c09de7ec49ab09",
+      "event": {
+        "index": 53,
+        "time": "2026-10-12T10:22:46.984Z",
+        "sessionId": "56ce3aa9-3424-4e1a-94b7-e34797994139",
+        "type": "autopilot-status",
+        "detail": {
+          "severity": 6,
+          "text": "Mission: 16 SetCamTrigDst"
+        },
+        "proof": {
+          "heartbeat": {
+            "ageMs": 207.43029199999728,
+            "fields": {
+              "custom_mode": 3,
+              "type": 2,
+              "autopilot": 3,
+              "base_mode": 217,
+              "system_status": 4,
+              "mavlink_version": 3
+            }
+          },
+          "landed": {
+            "ageMs": 34.27000000000044,
+            "fields": {
+              "vtol_state": 3,
+              "landed_state": 2
+            }
+          },
+          "position": {
+            "ageMs": 34.33208400000149,
+            "fields": {
+              "time_boot_ms": 20102527,
+              "lat": 108544112,
+              "lon": 1068073088,
+              "alt": 25090,
+              "relative_alt": 15003,
+              "vx": -13,
+              "vy": -1,
+              "vz": 0,
+              "hdg": 35963
+            }
+          },
+          "home": {
+            "lat": 10.8539998,
+            "lon": 106.8069999,
+            "amsl": 10.09,
+            "horizontalDeltaM": 0.02467731355803568,
+            "amslDeltaM": 0.08999999999999986,
+            "reference": "HOME_POSITION / AMSL; simulated world only"
+          }
+        }
+      },
+      "digest": "34f95769b2814d5312cc2781642fc12f9d194ef13bd98ae2a1f497e1c839d5bf"
+    },
+    {
+      "n": 48,
+      "previous": "34f95769b2814d5312cc2781642fc12f9d194ef13bd98ae2a1f497e1c839d5bf",
+      "event": {
+        "index": 54,
+        "time": "2026-10-12T10:22:46.984Z",
+        "sessionId": "56ce3aa9-3424-4e1a-94b7-e34797994139",
+        "type": "autopilot-status",
+        "detail": {
+          "severity": 6,
+          "text": "Mission: 18 RTL"
+        },
+        "proof": {
+          "heartbeat": {
+            "ageMs": 207.51966699999684,
+            "fields": {
+              "custom_mode": 3,
+              "type": 2,
+              "autopilot": 3,
+              "base_mode": 217,
+              "system_status": 4,
+              "mavlink_version": 3
+            }
+          },
+          "landed": {
+            "ageMs": 34.364832999999635,
+            "fields": {
+              "vtol_state": 3,
+              "landed_state": 2
+            }
+          },
+          "position": {
+            "ageMs": 34.428250000000844,
+            "fields": {
+              "time_boot_ms": 20102527,
+              "lat": 108544112,
+              "lon": 1068073088,
+              "alt": 25090,
+              "relative_alt": 15003,
+              "vx": -13,
+              "vy": -1,
+              "vz": 0,
+              "hdg": 35963
+            }
+          },
+          "home": {
+            "lat": 10.8539998,
+            "lon": 106.8069999,
+            "amsl": 10.09,
+            "horizontalDeltaM": 0.02467731355803568,
+            "amslDeltaM": 0.08999999999999986,
+            "reference": "HOME_POSITION / AMSL; simulated world only"
+          }
+        }
+      },
+      "digest": "76914fcb085b8c266ecebb1e017edd54a87391b3596a5da5bfcd1d41299692c6"
+    },
+    {
+      "n": 49,
+      "previous": "76914fcb085b8c266ecebb1e017edd54a87391b3596a5da5bfcd1d41299692c6",
+      "event": {
+        "index": 55,
+        "time": "2026-10-12T10:22:46.985Z",
+        "sessionId": "56ce3aa9-3424-4e1a-94b7-e34797994139",
+        "type": "autopilot-status",
+        "detail": {
+          "severity": 6,
+          "text": "Mission: 17 ImageStopCapture"
+        },
+        "proof": {
+          "heartbeat": {
+            "ageMs": 208.01133299999856,
+            "fields": {
+              "custom_mode": 3,
+              "type": 2,
+              "autopilot": 3,
+              "base_mode": 217,
+              "system_status": 4,
+              "mavlink_version": 3
+            }
+          },
+          "landed": {
+            "ageMs": 34.880582999998296,
+            "fields": {
+              "vtol_state": 3,
+              "landed_state": 2
+            }
+          },
+          "position": {
+            "ageMs": 34.9444590000021,
+            "fields": {
+              "time_boot_ms": 20102527,
+              "lat": 108544112,
+              "lon": 1068073088,
+              "alt": 25090,
+              "relative_alt": 15003,
+              "vx": -13,
+              "vy": -1,
+              "vz": 0,
+              "hdg": 35963
+            }
+          },
+          "home": {
+            "lat": 10.8539998,
+            "lon": 106.8069999,
+            "amsl": 10.09,
+            "horizontalDeltaM": 0.02467731355803568,
+            "amslDeltaM": 0.08999999999999986,
+            "reference": "HOME_POSITION / AMSL; simulated world only"
+          }
+        }
+      },
+      "digest": "6347cc20070794709bf7ff58c5cb4fac6dafc8d6fac5e83077949d3ceb1b2412"
+    },
+    {
+      "n": 50,
+      "previous": "6347cc20070794709bf7ff58c5cb4fac6dafc8d6fac5e83077949d3ceb1b2412",
+      "event": {
+        "index": 56,
+        "time": "2026-10-12T10:22:59.646Z",
+        "sessionId": "56ce3aa9-3424-4e1a-94b7-e34797994139",
+        "type": "autopilot-status",
+        "detail": {
+          "severity": 6,
+          "text": "SIM Hit ground at 0.500375 m/s"
+        },
+        "proof": {
+          "heartbeat": {
+            "ageMs": 168.7143750000032,
+            "fields": {
+              "custom_mode": 3,
+              "type": 2,
+              "autopilot": 3,
+              "base_mode": 217,
+              "system_status": 4,
+              "mavlink_version": 3
+            }
+          },
+          "landed": {
+            "ageMs": 38.416917000002286,
+            "fields": {
+              "vtol_state": 3,
+              "landed_state": 4
+            }
+          },
+          "position": {
+            "ageMs": 38.487583000001905,
+            "fields": {
+              "time_boot_ms": 20146327,
+              "lat": 108539997,
+              "lon": 1068070000,
+              "alt": 10130,
+              "relative_alt": 43,
+              "vx": 1,
+              "vy": -1,
+              "vz": 49,
+              "hdg": 35945
+            }
+          },
+          "home": {
+            "lat": 10.8539998,
+            "lon": 106.8069999,
+            "amsl": 10.09,
+            "horizontalDeltaM": 0.02467731355803568,
+            "amslDeltaM": 0.08999999999999986,
+            "reference": "HOME_POSITION / AMSL; simulated world only"
+          }
+        }
+      },
+      "digest": "230f046b61caf3f48034999c530814f96db241f2be2968ce207316f4b3873189"
+    },
+    {
+      "n": 51,
+      "previous": "230f046b61caf3f48034999c530814f96db241f2be2968ce207316f4b3873189",
+      "event": {
+        "index": 57,
+        "time": "2026-10-12T10:23:00.390Z",
+        "sessionId": "56ce3aa9-3424-4e1a-94b7-e34797994139",
+        "type": "mission-item-reached",
+        "detail": {
+          "seq": 18
+        },
+        "proof": {
+          "heartbeat": {
+            "ageMs": 192.0414579999997,
+            "fields": {
+              "custom_mode": 3,
+              "type": 2,
+              "autopilot": 3,
+              "base_mode": 217,
+              "system_status": 4,
+              "mavlink_version": 3
+            }
+          },
+          "landed": {
+            "ageMs": 0.4449590000003809,
+            "fields": {
+              "vtol_state": 3,
+              "landed_state": 1
+            }
+          },
+          "position": {
+            "ageMs": 0.5244170000005397,
+            "fields": {
+              "time_boot_ms": 20148527,
+              "lat": 108539995,
+              "lon": 1068070000,
+              "alt": 10070,
+              "relative_alt": -15,
+              "vx": 1,
+              "vy": -1,
+              "vz": 0,
+              "hdg": 35944
+            }
+          },
+          "home": {
+            "lat": 10.8539998,
+            "lon": 106.8069999,
+            "amsl": 10.09,
+            "horizontalDeltaM": 0.02467731355803568,
+            "amslDeltaM": 0.08999999999999986,
+            "reference": "HOME_POSITION / AMSL; simulated world only"
+          }
+        }
+      },
+      "digest": "03fb2cbf43e21e6faf6acdb01f5beb13077d755ee5b1023c281d853db463e605"
+    },
+    {
+      "n": 52,
+      "previous": "03fb2cbf43e21e6faf6acdb01f5beb13077d755ee5b1023c281d853db463e605",
+      "event": {
+        "index": 58,
+        "time": "2026-10-12T10:23:00.390Z",
+        "sessionId": "56ce3aa9-3424-4e1a-94b7-e34797994139",
+        "type": "autopilot-status",
+        "detail": {
+          "severity": 6,
+          "text": "Disarming motors"
+        },
+        "proof": {
+          "heartbeat": {
+            "ageMs": 192.0857079999987,
+            "fields": {
+              "custom_mode": 3,
+              "type": 2,
+              "autopilot": 3,
+              "base_mode": 217,
+              "system_status": 4,
+              "mavlink_version": 3
+            }
+          },
+          "landed": {
+            "ageMs": 0.4867919999960577,
+            "fields": {
+              "vtol_state": 3,
+              "landed_state": 1
+            }
+          },
+          "position": {
+            "ageMs": 0.565958999999566,
+            "fields": {
+              "time_boot_ms": 20148527,
+              "lat": 108539995,
+              "lon": 1068070000,
+              "alt": 10070,
+              "relative_alt": -15,
+              "vx": 1,
+              "vy": -1,
+              "vz": 0,
+              "hdg": 35944
+            }
+          },
+          "home": {
+            "lat": 10.8539998,
+            "lon": 106.8069999,
+            "amsl": 10.09,
+            "horizontalDeltaM": 0.02467731355803568,
+            "amslDeltaM": 0.08999999999999986,
+            "reference": "HOME_POSITION / AMSL; simulated world only"
+          }
+        }
+      },
+      "digest": "459a73ff9bc805de271b7a39e2755978ba77a301ae8d8d5eea0d48a8660c152e"
+    },
+    {
+      "n": 53,
+      "previous": "459a73ff9bc805de271b7a39e2755978ba77a301ae8d8d5eea0d48a8660c152e",
+      "event": {
+        "index": 59,
+        "time": "2026-10-12T10:23:00.492Z",
+        "sessionId": "56ce3aa9-3424-4e1a-94b7-e34797994139",
+        "type": "mission-execution-ended",
+        "detail": {
+          "state": "completed",
+          "reached": [
+            2,
+            3,
+            5,
+            8,
+            10,
+            13,
+            15,
+            18
+          ],
+          "groundObserved": true
+        },
+        "proof": {
+          "heartbeat": {
+            "ageMs": 0.11537500000122236,
+            "fields": {
+              "custom_mode": 3,
+              "type": 2,
+              "autopilot": 3,
+              "base_mode": 81,
+              "system_status": 3,
+              "mavlink_version": 3
+            }
+          },
+          "landed": {
+            "ageMs": 47.98554200000217,
+            "fields": {
+              "vtol_state": 3,
+              "landed_state": 1
+            }
+          },
+          "position": {
+            "ageMs": 48.04449999999633,
+            "fields": {
+              "time_boot_ms": 20148727,
+              "lat": 108539995,
+              "lon": 1068070000,
+              "alt": 10070,
+              "relative_alt": -14,
+              "vx": 1,
+              "vy": -1,
+              "vz": 0,
+              "hdg": 35944
+            }
+          },
+          "home": {
+            "lat": 10.8539998,
+            "lon": 106.8069999,
+            "amsl": 10.09,
+            "horizontalDeltaM": 0.02467731355803568,
+            "amslDeltaM": 0.08999999999999986,
+            "reference": "HOME_POSITION / AMSL; simulated world only"
+          }
+        }
+      },
+      "digest": "25bb4a25a25d09134b14b4b0d50dc7d798be59dece7a3c86807656ca94e6df65"
+    },
+    {
+      "n": 54,
+      "previous": "25bb4a25a25d09134b14b4b0d50dc7d798be59dece7a3c86807656ca94e6df65",
+      "event": {
+        "type": "attempt-close",
+        "time": "2026-10-12T10:23:00.492Z",
+        "sessionId": "56ce3aa9-3424-4e1a-94b7-e34797994139",
+        "detail": {
+          "reason": "terminal-observation"
+        },
+        "proof": {
+          "heartbeat": {
+            "ageMs": 0.11537500000122236,
+            "fields": {
+              "custom_mode": 3,
+              "type": 2,
+              "autopilot": 3,
+              "base_mode": 81,
+              "system_status": 3,
+              "mavlink_version": 3
+            }
+          },
+          "landed": {
+            "ageMs": 47.98554200000217,
+            "fields": {
+              "vtol_state": 3,
+              "landed_state": 1
+            }
+          },
+          "position": {
+            "ageMs": 48.04449999999633,
+            "fields": {
+              "time_boot_ms": 20148727,
+              "lat": 108539995,
+              "lon": 1068070000,
+              "alt": 10070,
+              "relative_alt": -14,
+              "vx": 1,
+              "vy": -1,
+              "vz": 0,
+              "hdg": 35944
+            }
+          },
+          "home": {
+            "lat": 10.8539998,
+            "lon": 106.8069999,
+            "amsl": 10.09,
+            "horizontalDeltaM": 0.02467731355803568,
+            "amslDeltaM": 0.08999999999999986,
+            "reference": "HOME_POSITION / AMSL; simulated world only"
+          }
+        }
+      },
+      "digest": "06545a61dd91bf859075a6fcc177bf1e6eaea6c8341e3c71651c1d2cfa1d6f9e"
+    }
+  ],
+  "summary": {
+    "outcome": "COMPLETED",
+    "origin": "upload",
+    "sessionId": "56ce3aa9-3424-4e1a-94b7-e34797994139",
+    "vehicle": {
+      "system": 1,
+      "component": 1
+    },
+    "firmware": "4.7.1",
+    "sourceSha256": "e09925ad35b3e744a59243447dfcf9586e7941c556f44cb9c1914c6792dd87f8",
+    "startedAt": "2026-10-12T10:22:31.825Z",
+    "closedAt": "2026-10-12T10:23:00.492Z",
+    "closeReason": "terminal-observation",
+    "readbackVerified": true,
+    "autoObserved": true,
+    "groundObserved": true,
+    "finalReached": true,
+    "reached": [
+      2,
+      3,
+      5,
+      8,
+      10,
+      13,
+      15,
+      18
+    ],
+    "missingNavigationSeqs": [
+      1
+    ],
+    "interruptions": [],
+    "timeRegression": false,
+    "heightRangeRelativeM": [
+      15,
+      15
+    ],
+    "cameraCommandCount": 9,
+    "scope": "SITL recorded observations; ACK/current index/operator review never proves execution. No physical images or signed authenticity."
+  },
+  "sha256": "19c421e97d36d7bd76743b819f10be0abec2b75b8da0dce3b69b085c9becef03"
+}

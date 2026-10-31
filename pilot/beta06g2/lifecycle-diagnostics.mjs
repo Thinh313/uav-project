@@ -1,0 +1,18 @@
+/** Redacted browser observations only. They never grant authority or prove host time. */
+export function validateLifecycleDiagnostics(q){
+ if(q===null)return null;
+ const keys=['format','seq','desiredForeground','documentHidden','nativeForeground','localSessionActive','clientEpoch','heartbeatPending','queueDepth','lastTimerLagMs','maxTimerLagMs','lastError','inflight','counts','events','generation'];
+ if(!q||typeof q!=='object'||Array.isArray(q)||Object.keys(q).some(k=>!keys.includes(k))||JSON.stringify(q).length>8192||q.format!=='aeris-beta06g2-lifecycle-diagnostic/1'||!Number.isSafeInteger(q.seq)||q.seq<0)throw Error('LIFECYCLE_DIAGNOSTIC_BOUND');
+ for(const k of['desiredForeground','documentHidden','localSessionActive','heartbeatPending'])if(typeof q[k]!=='boolean')throw Error('LIFECYCLE_DIAGNOSTIC_BOOL');
+ if(q.nativeForeground!==null&&typeof q.nativeForeground!=='boolean')throw Error('LIFECYCLE_DIAGNOSTIC_NATIVE');
+ for(const k of['clientEpoch','queueDepth','generation'])if(q[k]!==undefined&&q[k]!==null&&(!Number.isSafeInteger(q[k])||q[k]<0||q[k]>1e9))throw Error('LIFECYCLE_DIAGNOSTIC_INTEGER');
+ if(q.queueDepth>16||!['lastTimerLagMs','maxTimerLagMs'].every(k=>Number.isFinite(q[k])&&q[k]>=0&&q[k]<=1e12)||q.lastError!==null&&(typeof q.lastError!=='string'||q.lastError.length>128))throw Error('LIFECYCLE_DIAGNOSTIC_STATE');
+ if(q.inflight!==null){const i=q.inflight;if(!i||Object.keys(i).sort().join()!=='action,ageMs,deadlineMs,requestId,startedAtBrowserMs'||!Number.isSafeInteger(i.requestId)||i.requestId<1||typeof i.action!=='string'||i.action.length>32||i.deadlineMs!==1000||!['ageMs','startedAtBrowserMs'].every(k=>Number.isFinite(i[k])&&i[k]>=0))throw Error('LIFECYCLE_DIAGNOSTIC_REQUEST');}
+ if(!q.counts||Object.keys(q.counts).sort().join()!=='acknowledged,deadline,failed,started'||!Object.values(q.counts).every(v=>Number.isSafeInteger(v)&&v>=0&&v<=1e9)||!Array.isArray(q.events)||q.events.length>32)throw Error('LIFECYCLE_DIAGNOSTIC_EVENTS');
+ const eventKeys=['seq','atBrowserMs','kind','requestId','action','deadlineMs','elapsedMs','reason','queueDepth','waitMs','documentHidden','nativeForeground','lagMs','skipped','generation'];
+ for(const e of q.events){if(!e||Object.keys(e).some(k=>!eventKeys.includes(k))||!Number.isSafeInteger(e.seq)||e.seq<1||!Number.isFinite(e.atBrowserMs)||e.atBrowserMs<0||typeof e.kind!=='string'||e.kind.length>64||JSON.stringify(e).length>1024)throw Error('LIFECYCLE_DIAGNOSTIC_EVENT');for(const v of Object.values(e))if(v!==null&&!['string','number','boolean'].includes(typeof v)||typeof v==='string'&&v.length>128||typeof v==='number'&&!Number.isFinite(v))throw Error('LIFECYCLE_DIAGNOSTIC_REDACTION');}
+ return q;
+}
+export function compactLifecycleDiagnostics(q){if(!q)return null;validateLifecycleDiagnostics(q);const{events,inflight,...rest}=q;return{...rest,inflight:inflight?{action:inflight.action,requestId:inflight.requestId,ageMs:inflight.ageMs,deadlineMs:inflight.deadlineMs}:null,lastEvent:events.length?events.at(-1):null,clockDomain:'BROWSER_PERFORMANCE_NOW_NOT_HOST_CLOCK',authorityEvidence:false};}
+
+export function validateMediaReadiness(q){if(q===null)return null;if(!q||Object.keys(q).sort().join()!=='active,clockDegraded,clockMappingSampledBrowserMs,clockMappingValidUntilBrowserMs,clockSessionId,clockStatus,frameAgeMs,previewReady'||!['active','clockDegraded','previewReady'].every(k=>typeof q[k]==='boolean')||!['CALIBRATED_BOUNDS','UNKNOWN'].includes(q.clockStatus)||!['clockMappingSampledBrowserMs','clockMappingValidUntilBrowserMs','frameAgeMs'].every(k=>q[k]===null||Number.isFinite(q[k])&&q[k]>=0)||q.clockSessionId!==null&&(typeof q.clockSessionId!=='string'||q.clockSessionId.length>128))throw Error('MEDIA_READINESS_DIAGNOSTIC_BOUND');return q;}

@@ -1,0 +1,56 @@
+Herahub V2 - Commercial | Real-time Robotics | NDAA Compliant DronesSkip to content
+Defense
+Commercial
+OEM
+Training
+Partner Deals
+Sales
+About
+VITalk to SalesVIRTROBOTICS
+Invent. Build. Prove.
+Platform
+HERA Platform
+VEGA Platform
+DualSight Payload
+Compare
+Solutions
+Government & Defense
+Defense & National Security
+Law Enforcement
+Industrial Inspection
+Agriculture & Mapping
+Resources
+Partner Deal Registration
+Case Studies
+Support
+News
+Press & Media
+Company
+About
+Careers
+Partners
+Contact
+ContactUS Headquarters
+4250 Heyer Ave, Castro Valley, CA 94546R&D Center
+Lot I-4b-4.2, Saigon Hi-Tech Park, HCMC[email protected]+1 (510) 457-6280(+84) 9111 00 357NDAA §889US DesignedBlue sUAS ReadyData Secure105 TOPS AI© 2026 Real-time Robotics Inc. All rights reserved.Privacy Policy·Terms of Service·Terms of Sale·Warranty·Made in USA / VNController / HeraHub v2TARGET ACQUIREDCommercial/HeraHub v2Controller
+HeraHubv2
+Second-generation ground controller built on Qualcomm QCS8550 with integrated Adreno 740 GPU. Thinner, lighter design with 1200-nit display, Android 13 OS, 4 joysticks, and 256GB onboard storage. Hot-swappable batteries for continuous field operations.Request DemoView SpecsNext-Gen Mobile Command StationFeatures
+Key Capabilities01
+Qualcomm AI Platform
+QCS8550 with integrated Adreno 740 GPU for onboard AI processing without external hardware.02
+1200-nit Display
+Brighter sunlight-readable touchscreen for clear visibility in direct sunlight.03
+4 Precision Joysticks
+Enhanced tactile control with 4 joysticks for independent flight and payload management.04
+Android 13 Ecosystem
+Open platform with access to Android app ecosystem for mission planning and analytics.05
+1TB Expandable Storage
+256GB onboard plus upgradeable SSD to 1TB for extended mission data recording.Specifications
+Technical SpecificationsProcessorQualcomm QCS8550 Octa-core (3.2GHz)Display10.1" WUXGA, 1200 nit sunlight-readableGPUAdreno 740 (ray tracing, Vulkan 1.2)Video Streams6 simultaneous 1080pMemory / Storage16GB RAM / 256GB + 1TB SSDJoysticks4 precision joysticksOSAndroid 13Weight6.2 lbs (2.8 kg)Ecosystem
+Related Products
+HeraHub
+A Multi-payload and Multi-link GCS
+HeraSight
+240× stable zoom · Real-time edge AI
+Talk to Sales
+Connect with our solutions team for capability demonstrations and technical specifications.Contact Sales

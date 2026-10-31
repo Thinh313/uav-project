@@ -1,0 +1,7 @@
+# ADR-087 — read-only closed-generation custody bridge
+
+Accepted16/10/2026, isolated host/mock. Original ROTATE70, ARCHIVE69 and frozen source/candidate/ENDURE remain unchanged. HANDOFF71 reads control and immutable generation bytes only; it never opens source RotationManager/Store or source lock for writing. Capture requires frozen/nonselected/no-pending and stable identity/control/manifest before+after.
+
+Persist source identity/control proof and exact packageSHA, then use unchanged ArchiveManager69 in new receiver workspace. Existing69 package format does not encode ROTATE70 generation lineage, so a canonical custody sidecar binds root/generation/FREEZE/control to package69 and receiver IDs. Receiver proof validation replays saved control bytes + catalog/semantic package; it does not restore authority. Hashes prove internal consistency, not signed origin or external anti-rollback trust.
+
+An append-only fsynced bridge ledger records phases. Startup is read-only. An explicitly requested resume can reconcile already committed69 receipts (origin+hash bindings) instead of repeating mutations. A partial69 BEGIN without DONE remains HOLD because frozen69 has no generic import repair; no automatic retry, repair, deletion, alternate-recipient bypass or false completion. Quota counts both workspaces/reservations. Real independent receiver, authentication, powercut and Android qualification need later gates.

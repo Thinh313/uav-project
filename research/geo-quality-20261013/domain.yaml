@@ -1,0 +1,11 @@
+domain: geo-quality-20261013
+entity_label: Geographic and height-reference definitions
+schema:
+  type_field: null
+  fields: [home_altitude, relative_home, dsm, vertical_datum, geoid_context]
+rollup_field: null
+universe:
+  estimate: null
+  basis: Five selected definitions with three primary origins, not a complete standards denominator
+alias_map: {}
+ambiguous_clusters: []

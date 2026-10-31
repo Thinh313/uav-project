@@ -1,0 +1,13 @@
+# L2 generation02 after actual ground pixel gate
+
+22 October2026. User-authorized isolated repair continues. First host/emulator ran only on ground: no flight/mock grant, no AP request, no camera/source stream started. Source37 exact bytes archived in `generation01-source` before changes. Previous431 artifacts and original protected baselines remain immutable. Existing generation01 manifest/sourcefreeze/gates and actual negative observations remain; no overwriting those records.
+
+Actual PNG and authenticated UI observation show connect button76.3px tall within approximately54px scroll context, fullyVisible:false/unoccluded:false. No legitimate helper tap is possible. Top status stripe is partly hidden under panel. This is a real layout failure, not permission to use clipped taps. Native frame proven independently on ground: WebView[0,24][1280,740], CSS1280×716/DPR1, full PNG1280×800. Fullwindow and verbosewindows dumps expose different required fields; QA helper combines exact focusedwindow identity, not an assumed zero coordinate origin.
+
+Builder may now edit only new CLOCKVIDEO05 layout/critical DOM arrangement: move remaining fault-details summary into scroll context while reboot/cut stay in fixed dock; align connection row to its end and fix connectheight44; adjust panelpadding/gaps to reserve enough visible context; move paired panel top below status stripe. Keep blur-glass style, semantic controls, clock/authority/flight algorithms and thresholds unchanged. Retain source37 archive and generation01 manifest unchanged.
+
+Emit exclusive `flight-pins02.json` binding revised sources, same10 prior requests and cap12; new adapter/runtime loader references new manifest. No change to original cap9/cap11 or old source/candidate/ENDURE. Record normalized manifest-path-only loader differences plus UI-specific delta, preserve all failed fixtures. Independent new source/pin/layout gate required.
+
+Host01/emulator01 have closed cleanly with no AP request. Use only the second/final listening host and coldboot02. Both authorized requests11/12 run sequentially within its unchanged20min budget, separated by actual close, native processrestart/newinspectedreferences and explicit grants. At most two media sidecars, one measurement per document. No new host/coldboot, AP quota, floor, signature or implicit retry extension. First cohort's native after-store snapshot was not collected before shutdown; do not invent it. Nextcoldboot pre-store plus originalprefix/artifact verification and final restart are separate evidence.
+
+Any remaining clipped target or required unrun scenario remains NOT_CHECKED/NOT READY. Root must inspect actual revised pixels and one benign semantic tap+receipt on ground before AP connect.

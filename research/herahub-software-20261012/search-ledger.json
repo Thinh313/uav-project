@@ -1,0 +1,35 @@
+{
+  "date": "2026-10-12",
+  "mode": "Manual public web/HTTP research; no dedicated Deep Research service",
+  "queries": [
+    "\"HeraHub\" \"Real-Time Robotics\"",
+    "\"HeraLink\" robotics controller",
+    "site:rtrobotics.com HeraHub HeraLink",
+    "\"HeraHub\" Android SDK RAGAS",
+    "site:qualcomm.com \"QCS8550\" \"octa\"",
+    "site:rtrobotics.com \"HeraHub v2\"",
+    "site:rtrobotics.com \"HeraLink\" software",
+    "\"HeraHub\" SDK API joystick",
+    "site:rtrobotics.gitbook.io \"controller\" \"calibration\"",
+    "site:rtrobotics.gitbook.io \"HeraHub\" \"buttons\"",
+    "site:rtrobotics.com \"HeraLink\" \"SDK\"",
+    "site:docs.cubepilot.org Herelink system overview"
+  ],
+  "followups": [
+    "Manufacturer commercial pages → official specs",
+    "Official RAGAS README → GitBook llms index → selected manual .md pages",
+    "GitHub releases API → published Android manifest",
+    "Qualcomm silicon guide; Android, MAVLink and GStreamer official references"
+  ],
+  "excluded": [
+    "CubePilot HereLink material: different manufacturer, no RtR generation/API inference",
+    "HeraHub coworking/AI agencies, HeraLink charity/social results: unrelated",
+    "Dealer/exhibition repetitions: not counted as independent corroboration"
+  ],
+  "failures": [
+    "Initial restricted-shell DNS failures retained separately; public retry captured 44 of 45 requests",
+    "https://mavlink.io/en/services/rtk.html returned HTTP 404; common GPS_RTCM_DATA reference used instead",
+    "Web renderer could not read some markdown/index endpoints; raw HTTPS response captured"
+  ],
+  "bounded_absence": "Selected public sources do not supply current HeraHub wire-level SDK, key/axis/channel identifiers or installed firmware; this is not evidence that private SDKs do not exist."
+}

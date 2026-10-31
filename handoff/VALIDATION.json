@@ -1,0 +1,60 @@
+{
+  "format": "uav-project-public-validation",
+  "status": "SOURCE_HANDOFF_READY_PRODUCT_BETA_NOT_READY",
+  "sourceCommit": "6ea4f5027bc93d4f67e10da53c098391d9553f2f",
+  "originalSourceEntriesAccounted": 12834,
+  "publicExportEntriesBeforeNewDocs": 12511,
+  "privateEntries": 325,
+  "customerLabelAnonymizedPublicFiles": 9,
+  "oldTrackedMissingReconstructedFromGitInNewCopy": 98,
+  "sourceSymlinksVerified": 5,
+  "currentInputGraphHashesVerified": 154,
+  "syntaxWorkbench": "PASS npm run check",
+  "mocks": [
+    {
+      "suite": "VIDLIFE12 base",
+      "checks": 36,
+      "status": "PASS"
+    },
+    {
+      "suite": "bounded lifecycle",
+      "checks": 18,
+      "status": "PASS"
+    },
+    {
+      "suite": "health",
+      "checks": 4,
+      "status": "PASS"
+    },
+    {
+      "suite": "portable wait",
+      "cases": 3,
+      "status": "PASS"
+    }
+  ],
+  "broadHistoricalNpmTestInitial": {
+    "tests": 387,
+    "pass": 331,
+    "fail": 56,
+    "status": "FAIL_PRESERVED",
+    "missingFixtureCases": 15,
+    "legacyFreeSpaceGuardBlockedCases": 40,
+    "timingFailureUnresolved": 1
+  },
+  "fixtureRepair": "Explicit synthetic fixture reconstruction tool supplied; original record/spool/media hashes retained. See independent recheck below.",
+  "SITLOrAndroidStartedInHandoffTask": false,
+  "privateDataPublished": false,
+  "sourceHistoryImported": false,
+  "graphVerificationIsRuntimeAcceptance": false,
+  "qualification": "Public code/mock and declared artifact handoff only; not beta, hardware or field release",
+  "fixtureAffectedRecheck": {
+    "tests": 27,
+    "pass": 27,
+    "fail": 0,
+    "scope": "acceptance.test.mjs + geo14.test.mjs after explicit original synthetic fixture reconstruction; no claim that full387test suite passed"
+  },
+  "hostGeneratedExecutablesRetainedPrivately": 9,
+  "PDFPages": 13,
+  "PDFSHA256": "ff20632812ce1c1dc997787bb74a8f8a97c652f417d6f353efe2b6447d1ba36f",
+  "broadHistoricalNpmTestAfterFixtureRepair": "NOT_RERUN_FULL_SUITE; affected27/27passed;40legacyfloorblockedcasesand1timingfailurefromfirstfullrunremainunresolved"
+}

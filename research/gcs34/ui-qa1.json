@@ -1,0 +1,70 @@
+{
+  "status": "FAIL",
+  "checks": [
+    {
+      "name": "explicit proposed/synthetic provenance",
+      "pass": true
+    },
+    {
+      "name": "aligned stable command actions",
+      "pass": true
+    },
+    {
+      "name": "contextual warning airspace",
+      "pass": true
+    },
+    {
+      "name": "actions stable in airspace",
+      "pass": true
+    },
+    {
+      "name": "contextual warning video",
+      "pass": true
+    },
+    {
+      "name": "actions stable in video",
+      "pass": true
+    },
+    {
+      "name": "old frame visibly marked",
+      "pass": true
+    },
+    {
+      "name": "primary video also marks stale frame",
+      "pass": true
+    },
+    {
+      "name": "contextual warning link",
+      "pass": true
+    },
+    {
+      "name": "actions stable in link",
+      "pass": true
+    },
+    {
+      "name": "lost telemetry never asserts AUTO",
+      "pass": true
+    },
+    {
+      "name": "network-dependent controls blocked",
+      "pass": true
+    },
+    {
+      "name": "contextual warning battery",
+      "pass": true
+    },
+    {
+      "name": "actions stable in battery",
+      "pass": false
+    },
+    {
+      "name": "QA failure",
+      "pass": false,
+      "error": "Error: actions stable in battery\n    at check (file:///Users/os/Downloads/AI%20technique/aeris/research/gcs34/ui-qa.mjs:5:65)\n    at file:///Users/os/Downloads/AI%20technique/aeris/research/gcs34/ui-qa.mjs:12:192"
+    }
+  ],
+  "errors": [],
+  "external": [],
+  "writes": [],
+  "scope": "Interactive design illustration only, not AERIS function/flight/native48dp/operator acceptance"
+}

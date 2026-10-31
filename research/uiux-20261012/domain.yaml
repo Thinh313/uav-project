@@ -1,0 +1,22 @@
+domain: uiux-20261012
+entity_label: Official interface guidance
+schema:
+  type_field: null
+  fields:
+  - aeris-compliance
+  - color-redundancy
+  - criterion
+  - critical-visibility
+  - integrated-display
+  - human-centred-method
+  - scope-limit
+  - usability-method
+  - operator-superiority
+  - stale-data
+  - units
+rollup_field: null
+universe:
+  estimate: null
+  basis: Selected sources; no exhaustive standards or competitive coverage claimed
+alias_map: {}
+ambiguous_clusters: []

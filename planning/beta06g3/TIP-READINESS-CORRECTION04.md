@@ -1,0 +1,11 @@
+# G4 bounded readiness correction, source/mock only
+
+User outcome: repair the actual G3 false-negative SERIAL0 readiness while preserving all G3 source, pins, failed runtime bytes and protected ENDURE/source/candidate. Actual campaign G3 ended FAILED_PREPARATION; no retry or new AP/Android runtime is authorized by this correction TIP.
+
+Builder scope: add only pilot/beta06g4/flight/runtime.py and a small readiness module plus tests/receipts under planning/beta06g4 and evidence/beta06/generation04. Copy only the single G3 runtime module, not the project. It may import frozen G3 prepare_executable. Relabel owned-container/task/profile namespace G4 and evidence constraints consistently so it cannot claim G3 provenance. No new app/controller wiring, pin regeneration, runtime requests, build/sign/install or Docker execution. The new launcher is an isolated corrective source artifact, not a runnable accepted generation.
+
+Readiness: consume durable bounded stdout AND stderr from the same current attached attempt. Track each file offset and independent bounded tails. Markers can be split across chunks on their original stream. Do not concatenate arbitrary stream boundaries into invented markers. Keep attached capture SHA/counts/fsync, deadline, parent ownership, exact running CID/PID check, speedup1/cap/quotas and cleanup behavior unchanged. Record actual marker-to-stream provenance and exact retained evidence SHA before connection, including reboot start handling if it uses readiness. Presence of markers is serial-console readiness only, not telemetry, firmware, execution or flight acceptance. Dead process must not become ready from stale marker text.
+
+Checks: replay immutable actual G3 249B stdout/52B stderr to demonstrate old predicate false and new true; stdout-only, stderr-only, split chunks, crossed-stream fragments negative, incomplete marker negative, attempt reset, early exit, overflow and bounded memory. Reuse lifecycle tests against additive runtime if feasible without changing historical tests. Independent QA required. A real new campaign and full AUTO/video/payload/cut/reboot are NOT RUN and remain required.
+
+Stop at complete source/mock receipt. Do not bypass campaign failure or restore clocks. No files deleted and no need to ask user again for this in-scope isolated fix.

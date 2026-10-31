@@ -1,0 +1,1706 @@
+{
+  "format": "aeris-heramcu45-contract",
+  "schemaVersion": 1,
+  "revision": "45.2",
+  "applicability": "LEGACY_HERALINK_HYBRID_CURRENT_HERAHUB_UNCONFIRMED",
+  "source": {
+    "id": "mcu-legacy.docx",
+    "originalPath": "/Users/os/Downloads/Phân tích, xử lý giao tiếp giữa mcu chính với phần mềm.docx",
+    "sha256": "6297e99f264587d40783c132fba371f687f9f838d2244cb28718c2660875ef23",
+    "bytes": 191044,
+    "provenance": "USER_SUPPLIED_DOCUMENT_CLAIM_NOT_HARDWARE_VERIFICATION",
+    "capturedPath": "evidence/heramcu45/sources/mcu-legacy.docx"
+  },
+  "claims": [
+    {
+      "id": "C45-USB",
+      "claim": "USBVCP, baud115200, stated64bytes payload",
+      "status": "DOCUMENT_CLAIM",
+      "sourceBlocks": [
+        14,
+        15,
+        16
+      ]
+    },
+    {
+      "id": "C45-PROTOCOL",
+      "claim": "Packaged through MAVLink; missing numeric dialect",
+      "status": "DOCUMENT_CLAIM",
+      "sourceBlocks": [
+        18
+      ]
+    },
+    {
+      "id": "C45-INPUT-RANGE",
+      "claim": "raw0..4095, neutral2047; output1000..2000 neutral1500",
+      "status": "DOCUMENT_CLAIM",
+      "sourceBlocks": [
+        147,
+        148,
+        149,
+        150,
+        151,
+        152,
+        153,
+        154
+      ]
+    },
+    {
+      "id": "C45-IDENTITY",
+      "claim": "HERALINK_INFO uuid16bytes/dev4bytes/ver4bytes",
+      "status": "DOCUMENT_CLAIM",
+      "sourceBlocks": [
+        238,
+        239,
+        240,
+        241,
+        242
+      ]
+    },
+    {
+      "id": "C45-CALIBRATION",
+      "claim": "nine groups; step timeout diagram1min and save ACK",
+      "status": "DOCUMENT_CLAIM",
+      "sourceBlocks": [
+        317,
+        318,
+        319,
+        320,
+        321,
+        322,
+        323,
+        324,
+        325,
+        326
+      ]
+    },
+    {
+      "id": "C45-COEFFICIENTS",
+      "claim": "float16 x_coef and y_coef, uint16 index16",
+      "status": "DOCUMENT_CLAIM",
+      "sourceBlocks": [
+        274,
+        275,
+        276,
+        277
+      ]
+    },
+    {
+      "id": "C45-CHANNELS",
+      "claim": "CHANNELS_RAW bootclock/port/channel16",
+      "status": "DOCUMENT_CLAIM",
+      "sourceBlocks": [
+        309,
+        310,
+        311,
+        312
+      ]
+    },
+    {
+      "id": "C45-HANDSHAKE",
+      "claim": "USB plug→HERALINK_INFO→configuration→broadcast",
+      "status": "DOCUMENT_CLAIM",
+      "sourceBlocks": [
+        332,
+        333
+      ]
+    },
+    {
+      "id": "C45-CADENCE",
+      "claim": "POWER/RF1second, CHANNELS_RAW0.2second",
+      "status": "DOCUMENT_CLAIM",
+      "sourceBlocks": [
+        330,
+        331
+      ]
+    }
+  ],
+  "messageCatalog": [
+    {
+      "documentHeading": "PORT_CHANNEL_ASSIGNMessage dùng để gắn giá trị input vào các output channel",
+      "sourceBlock": 228,
+      "fields": [
+        {
+          "block": 229,
+          "literal": "port - uint8_t - RC_OUTPUT_PORTGán vào PORT nào trên tay HeraLink"
+        },
+        {
+          "block": 230,
+          "literal": "channel - uint8_t[16] - JOYSTICK_INPUTGán JOYSTICK_INPUT vào channel ‘x’ ứng với trị số của mảng theo OUTPUT_CHANNEL. channel[0] ứng với CHANNEL_1 trong OUTPUT_CHANNEL,.."
+        }
+      ],
+      "wireId": null,
+      "crcExtra": null,
+      "wireStatus": "UNKNOWN_NO_CODEC"
+    },
+    {
+      "documentHeading": "PORT_CHANNEL_MAXMIN_VALUEMessage dùng để gắn giá trị max/min cho channel",
+      "sourceBlock": 231,
+      "fields": [
+        {
+          "block": 232,
+          "literal": "port - uint8_t - RC_OUTPUT_PORTGán vào PORT nào trên tay HeraLink"
+        },
+        {
+          "block": 233,
+          "literal": "max - uint16_t[16] - JOYSTICK_INPUTGán giá trị max vào channel ‘x’ ứng với trị số của mảng theo OUTPUT_CHANNEL. channel[0] ứng với CHANNEL_1 trong OUTPUT_CHANNEL, giá trị mặc định là CHANNEL_OUTPUT_VALUE"
+        },
+        {
+          "block": 234,
+          "literal": "min - uint16_t[16] - JOYSTICK_INPUTGán giá trị min vào channel ‘x’ ứng với trị số của mảng theo OUTPUT_CHANNEL. channel[0] ứng với CHANNEL_1 trong OUTPUT_CHANNEL, giá trị mặc định là CHANNEL_OUTPUT_VALUE"
+        }
+      ],
+      "wireId": null,
+      "crcExtra": null,
+      "wireStatus": "UNKNOWN_NO_CODEC"
+    },
+    {
+      "documentHeading": "PORT_CHANNEL_TRIM_VALUEMessage dùng để gắn giá trị input vào các output channel",
+      "sourceBlock": 235,
+      "fields": [
+        {
+          "block": 236,
+          "literal": "port - uint8_t - RC_OUTPUT_PORTGán vào PORT nào trên tay HeraLink"
+        },
+        {
+          "block": 237,
+          "literal": "trim - uint8_t[16] - JOYSTICK_INPUTGán giá trị trim vào channel ‘x’ ứng với trị số của mảng theo OUTPUT_CHANNEL. channel[0] ứng với CHANNEL_1 trong OUTPUT_CHANNEL,.."
+        }
+      ],
+      "wireId": null,
+      "crcExtra": null,
+      "wireStatus": "UNKNOWN_NO_CODEC"
+    },
+    {
+      "documentHeading": "HERALINK_INFO",
+      "sourceBlock": 238,
+      "fields": [
+        {
+          "block": 239,
+          "literal": "Message chưa thông tin về số serial của tay cầm, phiên bản firmware, git commit ud."
+        },
+        {
+          "block": 240,
+          "literal": "uuid - uint8_t[16] 16 bytes UUID độc nhất với mỗi tay cầm"
+        },
+        {
+          "block": 241,
+          "literal": "dev - uint8_t[4]4 bytes cuối của mã hash ứng với commit được build"
+        },
+        {
+          "block": 242,
+          "literal": "ver - uint8_t[4]Phiên bản của firmware"
+        }
+      ],
+      "wireId": null,
+      "crcExtra": null,
+      "wireStatus": "UNKNOWN_NO_CODEC"
+    },
+    {
+      "documentHeading": "PORT_CHANNEL_INVERTMessage dùng để invert giá trị output channel",
+      "sourceBlock": 243,
+      "fields": [
+        {
+          "block": 244,
+          "literal": "port - uint8_t - RC_OUTPUT_PORTGán vào PORT nào trên tay HeraLink"
+        },
+        {
+          "block": 245,
+          "literal": "channel - uint32_tMỗi bit ứng với 1 channel. channel 1 ứng với bit thứ nhất,... bit = 0 là non-invert, bit = 1 là invert"
+        }
+      ],
+      "wireId": null,
+      "crcExtra": null,
+      "wireStatus": "UNKNOWN_NO_CODEC"
+    },
+    {
+      "documentHeading": "PORT_PROTOCOLMessage dùng để đổi protocol của OUTPUT",
+      "sourceBlock": 246,
+      "fields": [
+        {
+          "block": 247,
+          "literal": "port - uint8_t - RC_OUTPUT_PORTGán vào PORT nào trên tay HeraLink"
+        },
+        {
+          "block": 248,
+          "literal": "protocol - uint8_t - OUTPUT_PROTOCOL_TYPEprotocol sẽ được gán vào OUTPUT"
+        }
+      ],
+      "wireId": null,
+      "crcExtra": null,
+      "wireStatus": "UNKNOWN_NO_CODEC"
+    },
+    {
+      "documentHeading": "PORT_OUTPUT_FREQMessage dùng để đổi protocol của OUTPUT",
+      "sourceBlock": 249,
+      "fields": [
+        {
+          "block": 250,
+          "literal": "port - uint8_t - RC_OUTPUT_PORTGán vào PORT nào trên tay HeraLink"
+        },
+        {
+          "block": 251,
+          "literal": "freq - uint8_ttần số telemetry gửi đi (0 - 200 Hz) "
+        }
+      ],
+      "wireId": null,
+      "crcExtra": null,
+      "wireStatus": "UNKNOWN_NO_CODEC"
+    },
+    {
+      "documentHeading": "MM_BUTTON_CONFIGURATIONMessage dùng để cấu hình channel multi mode button",
+      "sourceBlock": 252,
+      "fields": [
+        {
+          "block": 253,
+          "literal": "channel - uint8_t - JOYSTICK_MMBCấu hình kênh nào của MM BUTTON"
+        },
+        {
+          "block": 254,
+          "literal": "mode - uint8_t - JOYSTICK_MMB_MODECấu hình chế độ hoạt động"
+        },
+        {
+          "block": 255,
+          "literal": "main_btn - uint8_t - JOYSTICK_SWITCH"
+        },
+        {
+          "block": 256,
+          "literal": "Cấu hình nút nhấn"
+        },
+        {
+          "block": 257,
+          "literal": "sub_btn - uint8_t - JOYSTICK_SWITCH"
+        },
+        {
+          "block": 258,
+          "literal": "Cấu hình nút nhấn"
+        },
+        {
+          "block": 259,
+          "literal": "state_value - uint16_t[3] - 0-4095 - Index JOYSTICK_MMB_STATE"
+        },
+        {
+          "block": 260,
+          "literal": "Giá trị các trạng thái"
+        },
+        {
+          "block": 261,
+          "literal": "trigger_event - uint8_t - JOYSTICK_MMB_TRIGGER_EVT"
+        },
+        {
+          "block": 262,
+          "literal": "Cấu hình kích hoạt chuyển trạng thái"
+        },
+        {
+          "block": 263,
+          "literal": "step - uint16_t - 0-4095"
+        },
+        {
+          "block": 264,
+          "literal": "Bước nhảy khi hoạt động ở mode step"
+        },
+        {
+          "block": 265,
+          "literal": "rollover - uint8_t - 0-1"
+        },
+        {
+          "block": 266,
+          "literal": "Cho phép lặp lại giá trị khi hoạt động ở mode step"
+        }
+      ],
+      "wireId": null,
+      "crcExtra": null,
+      "wireStatus": "UNKNOWN_NO_CODEC"
+    },
+    {
+      "documentHeading": "AXIS_CALIBRATION_STATUSMessage để gửi thông tin calip từng trục ",
+      "sourceBlock": 267,
+      "fields": [
+        {
+          "block": 268,
+          "literal": "axis - uin8_t - JOYSTICK_AXISTên trục"
+        },
+        {
+          "block": 269,
+          "literal": "max_value - uint16_tGiá trị raw lớn nhất của trục"
+        },
+        {
+          "block": 270,
+          "literal": "min_value - uint16_tGía trị raw nhỏ nhất của trục"
+        },
+        {
+          "block": 271,
+          "literal": "trim_value - uint16_tGía trị raw ở vị tri netrual của trục"
+        }
+      ],
+      "wireId": null,
+      "crcExtra": null,
+      "wireStatus": "UNKNOWN_NO_CODEC"
+    },
+    {
+      "documentHeading": "BUTTON_CALIBRATION_STATUSMessage để gửi thông tin calip từng nút nhấn",
+      "sourceBlock": 272,
+      "fields": [
+        {
+          "block": 273,
+          "literal": "buttons - uint8_t[4] - JOYSTICK_BUTTON_FLAGSbit ứng với button, bit = 1, button hoạt động, bit = 0, button không hoạt động."
+        }
+      ],
+      "wireId": null,
+      "crcExtra": null,
+      "wireStatus": "UNKNOWN_NO_CODEC"
+    },
+    {
+      "documentHeading": "AXIS_MAPPING_COEFMessage gửi bảng tra hệ số axis mapping",
+      "sourceBlock": 274,
+      "fields": [
+        {
+          "block": 275,
+          "literal": "x_coef - float[16]Hệ số trục X"
+        },
+        {
+          "block": 276,
+          "literal": "y_coef - float[16]Hệ số trục Y"
+        },
+        {
+          "block": 277,
+          "literal": "index - uint16_t[16]hệ số tra ứng với bảng tra"
+        }
+      ],
+      "wireId": null,
+      "crcExtra": null,
+      "wireStatus": "UNKNOWN_NO_CODEC"
+    },
+    {
+      "documentHeading": "AXIS_MAPPING_ASSIGNMessage chứa thông tin về trục cần mapping",
+      "sourceBlock": 278,
+      "fields": [
+        {
+          "block": 279,
+          "literal": "axis - uin8_t - JOYSTICK_AXISTên trục"
+        },
+        {
+          "block": 280,
+          "literal": "deadzone - uint16_tDeadzone cho giá trị raw của trục"
+        },
+        {
+          "block": 281,
+          "literal": "sat_x - uint16_tGiá trị bão hòa trục X"
+        },
+        {
+          "block": 282,
+          "literal": "sat_y - uint16_t"
+        },
+        {
+          "block": 283,
+          "literal": "Giá trị bão hòa trục Y"
+        },
+        {
+          "block": 284,
+          "literal": "max - uint16_t"
+        },
+        {
+          "block": 285,
+          "literal": "Giá trị tối đa trục X"
+        },
+        {
+          "block": 286,
+          "literal": "min - uint16_tGiá trị tối thiểu trục x"
+        }
+      ],
+      "wireId": null,
+      "crcExtra": null,
+      "wireStatus": "UNKNOWN_NO_CODEC"
+    },
+    {
+      "documentHeading": "POWER_CONFIGMessage chưa thông tin config bộ quản lý pin của tay heralink hybrid",
+      "sourceBlock": 287,
+      "fields": [
+        {
+          "block": 288,
+          "literal": "low_voltage - uint16_t - mv"
+        },
+        {
+          "block": 289,
+          "literal": "high_curent - uint16_t - ma"
+        },
+        {
+          "block": 290,
+          "literal": "buzzer - uint8_tEnable or Disable buzzer"
+        }
+      ],
+      "wireId": null,
+      "crcExtra": null,
+      "wireStatus": "UNKNOWN_NO_CODEC"
+    },
+    {
+      "documentHeading": "HERALINK_POWER_STATUSMessage chứa thông tin về nguồn của heralink hybrid",
+      "sourceBlock": 291,
+      "fields": [
+        {
+          "block": 292,
+          "literal": "bat_usage - uint8_t - BATTERY_PORTWhich battery port is used"
+        },
+        {
+          "block": 293,
+          "literal": "battery_voltage - uint16_t[2] - mvbattery voltage of each battery"
+        },
+        {
+          "block": 294,
+          "literal": "charge_current - int16_t -  ma"
+        },
+        {
+          "block": 295,
+          "literal": "system_current - int16_t - ma"
+        },
+        {
+          "block": 296,
+          "literal": "system_voltage - int16_t - ma"
+        },
+        {
+          "block": 297,
+          "literal": "adapter_voltage - uint16_t - mv"
+        },
+        {
+          "block": 298,
+          "literal": "battery_selector_mode - uint8_t - MAX1538_MODEmode of max1538"
+        },
+        {
+          "block": 299,
+          "literal": "batt_temperature - uint16_t[2] - cdegCNhiệt độ Pin"
+        },
+        {
+          "block": 300,
+          "literal": "air_temperature - uint16_t - m cdegCnhiệt độ bên trong heralink"
+        },
+        {
+          "block": 301,
+          "literal": "power_warning - uint8_t - POWER_WARNINGIndicate power status"
+        },
+        {
+          "block": 302,
+          "literal": "adapter_status - uint8_t - ADAPTER_STATUS’"
+        }
+      ],
+      "wireId": null,
+      "crcExtra": null,
+      "wireStatus": "UNKNOWN_NO_CODEC"
+    },
+    {
+      "documentHeading": "RF_STATUSMessage chứa thông tin về RF Module gắn vào Heralink",
+      "sourceBlock": 303,
+      "fields": [
+        {
+          "block": 304,
+          "literal": "port - uint8_t - RF_PORTtên port mà module RF đc cắm vào"
+        },
+        {
+          "block": 305,
+          "literal": "module - uin8_t - RF_MODULE_TYPETên module RF được gắn vào tay cầm"
+        },
+        {
+          "block": 306,
+          "literal": "status - uint8_t - RF_STATUSTình trạng RF module vào Heralink hybrid"
+        },
+        {
+          "block": 307,
+          "literal": "temperture - uint16_t - cdegC Nhiệt độ Module RF"
+        },
+        {
+          "block": 308,
+          "literal": "rssi - uint8_t - %Mức độ sóng của module RF"
+        }
+      ],
+      "wireId": null,
+      "crcExtra": null,
+      "wireStatus": "UNKNOWN_NO_CODEC"
+    },
+    {
+      "documentHeading": "CHANNELS_RAWMessage chưa thông tin telemetry được gửi đi",
+      "sourceBlock": 309,
+      "fields": [
+        {
+          "block": 310,
+          "literal": "time_boot_ms - uint32_t - mstên port mà module RF đc cắm vào"
+        },
+        {
+          "block": 311,
+          "literal": "port - uint8_t - RC_OUTPUT_PORTtên port mà module RF đc cắm vào"
+        },
+        {
+          "block": 312,
+          "literal": "channel - uint16_t[16] Giá trị các kênh RC Output"
+        }
+      ],
+      "wireId": null,
+      "crcExtra": null,
+      "wireStatus": "UNKNOWN_NO_CODEC"
+    }
+  ],
+  "unknowns": [
+    {
+      "id": "U45-01",
+      "topic": "Current HeraHub compatibility",
+      "status": "UNRESOLVED",
+      "detail": "Legacydocument0.3 dated2024-07-02; currentMCU/firmware unknown",
+      "requiredEvidence": "Firmwarebuild/hash and compatibility statement"
+    },
+    {
+      "id": "U45-02",
+      "topic": "Wire dialect",
+      "status": "UNRESOLVED",
+      "detail": "Message IDs, CRC_EXTRA, command numeric values and enum absentvalues notprovided",
+      "requiredEvidence": "Exact XML dialect/generated headers"
+    },
+    {
+      "id": "U45-03",
+      "topic": "USB binding",
+      "status": "UNRESOLVED",
+      "detail": "VID/PID, endpoints/interface, framing/VCPdriver Android integration unknown",
+      "requiredEvidence": "Descriptor dump and knownworkingcapture"
+    },
+    {
+      "id": "U45-04",
+      "topic": "64bytes meaning",
+      "status": "UNRESOLVED",
+      "detail": "AXIS_MAPPING_COEF declaredpayload160bytes conflicts with stated64bytes",
+      "requiredEvidence": "Clarify USBchunk/transfer/message payload and capture"
+    },
+    {
+      "id": "U45-05",
+      "topic": "Request command aliases",
+      "status": "UNRESOLVED",
+      "detail": "TextREQUEST_CONFIGURATION vs diagramREAD_CONFIGURATION",
+      "requiredEvidence": "Canonical deployed command definition"
+    },
+    {
+      "id": "U45-06",
+      "topic": "Message aliases",
+      "status": "UNRESOLVED",
+      "detail": "PORT_CHANNEL/PORT_INVERT/PORT_FREQ/POWER_STATUS in diagrams differ from namedmessages",
+      "requiredEvidence": "Canonical names and IDs"
+    },
+    {
+      "id": "U45-07",
+      "topic": "Trim field",
+      "status": "UNRESOLVED",
+      "detail": "Declareduint8[16], incompatible with nominal1000..2000 output trim1500 if that ismeaning",
+      "requiredEvidence": "Correct fieldtype/unit/semantics"
+    },
+    {
+      "id": "U45-08",
+      "topic": "Power units/types",
+      "status": "UNRESOLVED",
+      "detail": "system_voltage listedint16,mA; air_temperature contains m cdegC; unsignedtemp cannot representnegative",
+      "requiredEvidence": "Correct signedness and units/sentinel definitions"
+    },
+    {
+      "id": "U45-09",
+      "topic": "Enum/channel counts",
+      "status": "UNRESOLVED",
+      "detail": "CHANNEL17 listed, channel arrays16; someOUTPUT_PROTOCOLvalues absent or collide if inferred",
+      "requiredEvidence": "Explicit values and deployed channelcount"
+    },
+    {
+      "id": "U45-10",
+      "topic": "ACK correlation",
+      "status": "UNRESOLVED",
+      "detail": "ACK-to-custommessage and repeatedcommand/step correlation unspecified",
+      "requiredEvidence": "Target/source/command/error/transaction rules and captures"
+    },
+    {
+      "id": "U45-11",
+      "topic": "Calibration evidence",
+      "status": "UNRESOLVED",
+      "detail": "Exact MCU threshold/sampling/timeout/cancel behavior unverified",
+      "requiredEvidence": "Firmware implementation and testlogs"
+    },
+    {
+      "id": "U45-12",
+      "topic": "Mapping mathematics",
+      "status": "UNRESOLVED",
+      "detail": "Coefficient/index meaning, interpolation/saturation/order unknown",
+      "requiredEvidence": "Firmware mapping algorithm with referencevectors"
+    },
+    {
+      "id": "U45-13",
+      "topic": "Persistence",
+      "status": "UNRESOLVED",
+      "detail": "Flashsave atomicity/readback/reboot/error guarantees notdocumented",
+      "requiredEvidence": "Power-loss/readback semantics and observedlogs"
+    },
+    {
+      "id": "U45-14",
+      "topic": "Security/freshness",
+      "status": "UNRESOLVED",
+      "detail": "Authentication/signing/replay behavior and source rates notobserved",
+      "requiredEvidence": "Threatmodel and packet/provenance tests"
+    },
+    {
+      "id": "U45-15",
+      "topic": "Other attachment scope",
+      "status": "UNRESOLVED",
+      "detail": "thong_so3.5kg vs Hera plan16.5kg/H and no actualflightlog/paramfile",
+      "requiredEvidence": "Keep contexts separate; request actualmeasurement configuration"
+    },
+    {
+      "id": "U45-16",
+      "topic": "RF port to RC output route association",
+      "status": "UNRESOLVED",
+      "detail": "RF_PORT and RC_OUTPUT_PORT are distinct enums; deployed association/reroute/failover notspecified",
+      "requiredEvidence": "Current firmware topology and explicit RF/RC routing mapping; validate each endpoint"
+    }
+  ],
+  "wire": {
+    "mavlinkVersion": null,
+    "usbVid": null,
+    "usbPid": null,
+    "targetSystem": null,
+    "targetComponent": null,
+    "commandIds": {
+      "CALIBRATE": null,
+      "READ_CONFIGURATION": null,
+      "SAVE_CONFIGURATION": null
+    },
+    "codecPermitted": false
+  },
+  "mockPolicy": {
+    "origin": "MOCK_ONLY_HERAMCU45",
+    "handshakeDeadlineMs": 3000,
+    "commandDeadlineMs": 1500,
+    "calibrationStepDeadlineMs": 60000,
+    "channelsFreshMs": 750,
+    "statusFreshMs": 2500,
+    "configReadFreshMs": 5000,
+    "journalRows": 256,
+    "journalBytes": 262144,
+    "framerBufferBytes": 16384,
+    "envelopeBytes": 8192,
+    "proposedNotMeasured": true,
+    "mockFieldsNotOnWire": [
+      "session",
+      "boot",
+      "target",
+      "transaction",
+      "step",
+      "sequence"
+    ],
+    "normalization": "SYNTHETIC_MIN_TRIM_MAX_DEADZONE_LINEAR45_NO_COEFFICIENT_INTERPRETATION",
+    "rfRoutes": {
+      "OUTPUT_PORT_1": "RF_PORT_1",
+      "OUTPUT_PORT_2": "RF_PORT_2",
+      "status": "PROPOSED_MOCK_TOPOLOGY_NOT_OBSERVED"
+    }
+  },
+  "operational": false,
+  "hardwareObserved": false,
+  "documentEnums": [
+    {
+      "nameLiteral": "RF_STATUS",
+      "sourceBlock": 27,
+      "entries": [
+        {
+          "sourceBlock": 28,
+          "literal": "DISCONNECTED",
+          "inferredNumericValue": null
+        },
+        {
+          "sourceBlock": 29,
+          "literal": "JAMMED",
+          "inferredNumericValue": null
+        },
+        {
+          "sourceBlock": 30,
+          "literal": "CONNECTED",
+          "inferredNumericValue": null
+        },
+        {
+          "sourceBlock": 31,
+          "literal": "UNKNOWN",
+          "inferredNumericValue": null
+        }
+      ],
+      "note": "Only literal explicitnumbers are claims; no implicit enum numbering encoded."
+    },
+    {
+      "nameLiteral": "RC_OUTPUT_PORT",
+      "sourceBlock": 32,
+      "entries": [
+        {
+          "sourceBlock": 33,
+          "literal": "OUTPUT_PORT_1",
+          "inferredNumericValue": null
+        },
+        {
+          "sourceBlock": 34,
+          "literal": "OUTPUT_PORT_2",
+          "inferredNumericValue": null
+        }
+      ],
+      "note": "Only literal explicitnumbers are claims; no implicit enum numbering encoded."
+    },
+    {
+      "nameLiteral": "RF_PORT",
+      "sourceBlock": 35,
+      "entries": [
+        {
+          "sourceBlock": 36,
+          "literal": "RF_PORT_1",
+          "inferredNumericValue": null
+        },
+        {
+          "sourceBlock": 37,
+          "literal": "RF_PORT_2",
+          "inferredNumericValue": null
+        }
+      ],
+      "note": "Only literal explicitnumbers are claims; no implicit enum numbering encoded."
+    },
+    {
+      "nameLiteral": "RF_MODULE_TYPE",
+      "sourceBlock": 38,
+      "entries": [
+        {
+          "sourceBlock": 39,
+          "literal": "unknown - 0",
+          "inferredNumericValue": null
+        },
+        {
+          "sourceBlock": 40,
+          "literal": "microhard - 1",
+          "inferredNumericValue": null
+        }
+      ],
+      "note": "Only literal explicitnumbers are claims; no implicit enum numbering encoded."
+    },
+    {
+      "nameLiteral": "BATTERY_PORT",
+      "sourceBlock": 41,
+      "entries": [
+        {
+          "sourceBlock": 42,
+          "literal": "BATTERY_PORT_1",
+          "inferredNumericValue": null
+        },
+        {
+          "sourceBlock": 43,
+          "literal": "BATTERY_PORT_2",
+          "inferredNumericValue": null
+        }
+      ],
+      "note": "Only literal explicitnumbers are claims; no implicit enum numbering encoded."
+    },
+    {
+      "nameLiteral": "OUTPUT_PROTOCOL_TYPE",
+      "sourceBlock": 44,
+      "entries": [
+        {
+          "sourceBlock": 45,
+          "literal": "STANDARD_SBUS = 0",
+          "inferredNumericValue": null
+        },
+        {
+          "sourceBlock": 46,
+          "literal": "CUSTOM_SBUS = 1 ",
+          "inferredNumericValue": null
+        },
+        {
+          "sourceBlock": 47,
+          "literal": "IBUS",
+          "inferredNumericValue": null
+        },
+        {
+          "sourceBlock": 48,
+          "literal": "T30",
+          "inferredNumericValue": null
+        },
+        {
+          "sourceBlock": 49,
+          "literal": "SPEKTRUM_DSM2",
+          "inferredNumericValue": null
+        },
+        {
+          "sourceBlock": 50,
+          "literal": "SUMD = 2",
+          "inferredNumericValue": null
+        }
+      ],
+      "note": "Only literal explicitnumbers are claims; no implicit enum numbering encoded."
+    },
+    {
+      "nameLiteral": "ADAPTER_STATUS",
+      "sourceBlock": 51,
+      "entries": [
+        {
+          "sourceBlock": 52,
+          "literal": "PLUGGED",
+          "inferredNumericValue": null
+        },
+        {
+          "sourceBlock": 53,
+          "literal": "UN-PLUGGED",
+          "inferredNumericValue": null
+        }
+      ],
+      "note": "Only literal explicitnumbers are claims; no implicit enum numbering encoded."
+    },
+    {
+      "nameLiteral": "MAX1538_MODE",
+      "sourceBlock": 54,
+      "entries": [
+        {
+          "sourceBlock": 55,
+          "literal": "CHARGE_A",
+          "inferredNumericValue": null
+        },
+        {
+          "sourceBlock": 56,
+          "literal": "CHARGE_B",
+          "inferredNumericValue": null
+        },
+        {
+          "sourceBlock": 57,
+          "literal": "RELEARN_A",
+          "inferredNumericValue": null
+        },
+        {
+          "sourceBlock": 58,
+          "literal": "RELEARN_B",
+          "inferredNumericValue": null
+        },
+        {
+          "sourceBlock": 59,
+          "literal": "AC_ADAPTER",
+          "inferredNumericValue": null
+        },
+        {
+          "sourceBlock": 60,
+          "literal": "AIRLINE",
+          "inferredNumericValue": null
+        },
+        {
+          "sourceBlock": 61,
+          "literal": "DISCHARGE_A",
+          "inferredNumericValue": null
+        },
+        {
+          "sourceBlock": 62,
+          "literal": "DISCHARGE_B",
+          "inferredNumericValue": null
+        },
+        {
+          "sourceBlock": 63,
+          "literal": "IDLE",
+          "inferredNumericValue": null
+        }
+      ],
+      "note": "Only literal explicitnumbers are claims; no implicit enum numbering encoded."
+    },
+    {
+      "nameLiteral": "POWER_WARNING_FLAGS",
+      "sourceBlock": 64,
+      "entries": [
+        {
+          "sourceBlock": 65,
+          "literal": "UNDER_VOLTAGE",
+          "inferredNumericValue": null
+        },
+        {
+          "sourceBlock": 66,
+          "literal": "OVER_VOLTAGE",
+          "inferredNumericValue": null
+        },
+        {
+          "sourceBlock": 67,
+          "literal": "OVER_CURRENT",
+          "inferredNumericValue": null
+        },
+        {
+          "sourceBlock": 68,
+          "literal": "OVER_TEMPERATURE",
+          "inferredNumericValue": null
+        },
+        {
+          "sourceBlock": 69,
+          "literal": "UNDER_TEMPERATURE",
+          "inferredNumericValue": null
+        }
+      ],
+      "note": "Only literal explicitnumbers are claims; no implicit enum numbering encoded."
+    },
+    {
+      "nameLiteral": "JOYSTICK_INPUTĐịnh nghĩa tên các loại input vào tay cầm",
+      "sourceBlock": 70,
+      "entries": [
+        {
+          "sourceBlock": 71,
+          "literal": "None = 0",
+          "inferredNumericValue": null
+        },
+        {
+          "sourceBlock": 72,
+          "literal": "LB = 1(F7)",
+          "inferredNumericValue": null
+        },
+        {
+          "sourceBlock": 73,
+          "literal": "LW = 2(LW)",
+          "inferredNumericValue": null
+        },
+        {
+          "sourceBlock": 74,
+          "literal": "LD = 3(LD)",
+          "inferredNumericValue": null
+        },
+        {
+          "sourceBlock": 75,
+          "literal": "LS2 = 4(S2)",
+          "inferredNumericValue": null
+        },
+        {
+          "sourceBlock": 76,
+          "literal": "LS1 = 5(S1)",
+          "inferredNumericValue": null
+        },
+        {
+          "sourceBlock": 77,
+          "literal": "LJX = 6(AX)",
+          "inferredNumericValue": null
+        },
+        {
+          "sourceBlock": 78,
+          "literal": "LJY = 7(AY)",
+          "inferredNumericValue": null
+        },
+        {
+          "sourceBlock": 79,
+          "literal": "RS2 = 8(S4)",
+          "inferredNumericValue": null
+        },
+        {
+          "sourceBlock": 80,
+          "literal": "RS1 = 9(S3)",
+          "inferredNumericValue": null
+        },
+        {
+          "sourceBlock": 81,
+          "literal": "RJX = 10(BX)",
+          "inferredNumericValue": null
+        },
+        {
+          "sourceBlock": 82,
+          "literal": "RJY = 11(BY)",
+          "inferredNumericValue": null
+        },
+        {
+          "sourceBlock": 83,
+          "literal": "RB = 12(F8)",
+          "inferredNumericValue": null
+        },
+        {
+          "sourceBlock": 84,
+          "literal": "RW = 13(RW)",
+          "inferredNumericValue": null
+        },
+        {
+          "sourceBlock": 85,
+          "literal": "RD = 14(RD)",
+          "inferredNumericValue": null
+        },
+        {
+          "sourceBlock": 86,
+          "literal": "LMJX = 15 (CX)",
+          "inferredNumericValue": null
+        },
+        {
+          "sourceBlock": 87,
+          "literal": "LMJY = 16(CY)",
+          "inferredNumericValue": null
+        },
+        {
+          "sourceBlock": 88,
+          "literal": "LB1 = 17(F1)",
+          "inferredNumericValue": null
+        },
+        {
+          "sourceBlock": 89,
+          "literal": "LB2 = 18(F2)",
+          "inferredNumericValue": null
+        },
+        {
+          "sourceBlock": 90,
+          "literal": "LB3 = 19(F3)",
+          "inferredNumericValue": null
+        },
+        {
+          "sourceBlock": 91,
+          "literal": "RMJX = 20(DX)",
+          "inferredNumericValue": null
+        },
+        {
+          "sourceBlock": 92,
+          "literal": "RMJY = 21(DY)",
+          "inferredNumericValue": null
+        },
+        {
+          "sourceBlock": 93,
+          "literal": "RB1 = 22(F4)",
+          "inferredNumericValue": null
+        },
+        {
+          "sourceBlock": 94,
+          "literal": "RB2 = 23(F5)",
+          "inferredNumericValue": null
+        },
+        {
+          "sourceBlock": 95,
+          "literal": "RB3 = 24(F6)",
+          "inferredNumericValue": null
+        },
+        {
+          "sourceBlock": 96,
+          "literal": "LAND = 25(AUX)",
+          "inferredNumericValue": null
+        },
+        {
+          "sourceBlock": 97,
+          "literal": "LMJB = 26(LMJ)",
+          "inferredNumericValue": null
+        },
+        {
+          "sourceBlock": 98,
+          "literal": "RMJB = 27(RMJ)",
+          "inferredNumericValue": null
+        },
+        {
+          "sourceBlock": 99,
+          "literal": "MMB1 = 28",
+          "inferredNumericValue": null
+        },
+        {
+          "sourceBlock": 100,
+          "literal": "MMB2 = 29",
+          "inferredNumericValue": null
+        },
+        {
+          "sourceBlock": 101,
+          "literal": "MMB3 = 30",
+          "inferredNumericValue": null
+        },
+        {
+          "sourceBlock": 102,
+          "literal": "MMB4 = 31",
+          "inferredNumericValue": null
+        },
+        {
+          "sourceBlock": 103,
+          "literal": "MMB5 = 32",
+          "inferredNumericValue": null
+        },
+        {
+          "sourceBlock": 104,
+          "literal": "MMB6 = 33",
+          "inferredNumericValue": null
+        }
+      ],
+      "note": "Only literal explicitnumbers are claims; no implicit enum numbering encoded."
+    },
+    {
+      "nameLiteral": "JOYSTICK_SWITCH",
+      "sourceBlock": 105,
+      "entries": [
+        {
+          "sourceBlock": 106,
+          "literal": "LB",
+          "inferredNumericValue": null
+        },
+        {
+          "sourceBlock": 107,
+          "literal": "RB",
+          "inferredNumericValue": null
+        },
+        {
+          "sourceBlock": 108,
+          "literal": "LB1",
+          "inferredNumericValue": null
+        },
+        {
+          "sourceBlock": 109,
+          "literal": "LB2",
+          "inferredNumericValue": null
+        },
+        {
+          "sourceBlock": 110,
+          "literal": "LB3",
+          "inferredNumericValue": null
+        },
+        {
+          "sourceBlock": 111,
+          "literal": "RB1",
+          "inferredNumericValue": null
+        },
+        {
+          "sourceBlock": 112,
+          "literal": "RB2",
+          "inferredNumericValue": null
+        },
+        {
+          "sourceBlock": 113,
+          "literal": "RB3",
+          "inferredNumericValue": null
+        },
+        {
+          "sourceBlock": 114,
+          "literal": "AUX",
+          "inferredNumericValue": null
+        },
+        {
+          "sourceBlock": 115,
+          "literal": "LS1_UP",
+          "inferredNumericValue": null
+        },
+        {
+          "sourceBlock": 116,
+          "literal": "LS1_DOWN",
+          "inferredNumericValue": null
+        },
+        {
+          "sourceBlock": 117,
+          "literal": "LS2_UP",
+          "inferredNumericValue": null
+        },
+        {
+          "sourceBlock": 118,
+          "literal": "LS2_DOWN",
+          "inferredNumericValue": null
+        },
+        {
+          "sourceBlock": 119,
+          "literal": "RS1_UP",
+          "inferredNumericValue": null
+        },
+        {
+          "sourceBlock": 120,
+          "literal": "RS1_DOWN",
+          "inferredNumericValue": null
+        },
+        {
+          "sourceBlock": 121,
+          "literal": "RS2_UP",
+          "inferredNumericValue": null
+        },
+        {
+          "sourceBlock": 122,
+          "literal": "RS2_DOWN",
+          "inferredNumericValue": null
+        },
+        {
+          "sourceBlock": 123,
+          "literal": "LMJB",
+          "inferredNumericValue": null
+        },
+        {
+          "sourceBlock": 124,
+          "literal": "RMJB",
+          "inferredNumericValue": null
+        }
+      ],
+      "note": "Only literal explicitnumbers are claims; no implicit enum numbering encoded."
+    },
+    {
+      "nameLiteral": "JOYSTICK_MMB",
+      "sourceBlock": 125,
+      "entries": [
+        {
+          "sourceBlock": 126,
+          "literal": "MMB1",
+          "inferredNumericValue": null
+        },
+        {
+          "sourceBlock": 127,
+          "literal": "MMB2",
+          "inferredNumericValue": null
+        },
+        {
+          "sourceBlock": 128,
+          "literal": "MMB3",
+          "inferredNumericValue": null
+        },
+        {
+          "sourceBlock": 129,
+          "literal": "MMB4",
+          "inferredNumericValue": null
+        },
+        {
+          "sourceBlock": 130,
+          "literal": "MMB5",
+          "inferredNumericValue": null
+        },
+        {
+          "sourceBlock": 131,
+          "literal": "MMB6",
+          "inferredNumericValue": null
+        }
+      ],
+      "note": "Only literal explicitnumbers are claims; no implicit enum numbering encoded."
+    },
+    {
+      "nameLiteral": "JOYSTICK_MMB_MODE",
+      "sourceBlock": 132,
+      "entries": [
+        {
+          "sourceBlock": 133,
+          "literal": "BISTATE",
+          "inferredNumericValue": null
+        },
+        {
+          "sourceBlock": 134,
+          "literal": "TRISTATE",
+          "inferredNumericValue": null
+        },
+        {
+          "sourceBlock": 135,
+          "literal": "STEP",
+          "inferredNumericValue": null
+        }
+      ],
+      "note": "Only literal explicitnumbers are claims; no implicit enum numbering encoded."
+    },
+    {
+      "nameLiteral": "JOYSTICK_MMB_TRIGGER_EVT",
+      "sourceBlock": 136,
+      "entries": [
+        {
+          "sourceBlock": 137,
+          "literal": "PRESS = 1",
+          "inferredNumericValue": null
+        },
+        {
+          "sourceBlock": 138,
+          "literal": "DOUBLE_PRESS = 2",
+          "inferredNumericValue": null
+        },
+        {
+          "sourceBlock": 139,
+          "literal": "TRIPLE_PRESS = 3",
+          "inferredNumericValue": null
+        },
+        {
+          "sourceBlock": 140,
+          "literal": "HOLD = 4",
+          "inferredNumericValue": null
+        },
+        {
+          "sourceBlock": 141,
+          "literal": "HOLD_2S = 5",
+          "inferredNumericValue": null
+        },
+        {
+          "sourceBlock": 142,
+          "literal": "HOLD_5S = 6",
+          "inferredNumericValue": null
+        }
+      ],
+      "note": "Only literal explicitnumbers are claims; no implicit enum numbering encoded."
+    },
+    {
+      "nameLiteral": "JOYSTICK_MMB_STATE",
+      "sourceBlock": 143,
+      "entries": [
+        {
+          "sourceBlock": 144,
+          "literal": "FIRST = 1",
+          "inferredNumericValue": null
+        },
+        {
+          "sourceBlock": 145,
+          "literal": "SECOND = 2",
+          "inferredNumericValue": null
+        },
+        {
+          "sourceBlock": 146,
+          "literal": "THIRD = 3",
+          "inferredNumericValue": null
+        }
+      ],
+      "note": "Only literal explicitnumbers are claims; no implicit enum numbering encoded."
+    },
+    {
+      "nameLiteral": "JOYSTICK_INPUT_VALUE",
+      "sourceBlock": 147,
+      "entries": [
+        {
+          "sourceBlock": 148,
+          "literal": "MAX = 4095",
+          "inferredNumericValue": null
+        },
+        {
+          "sourceBlock": 149,
+          "literal": "MIN = 0",
+          "inferredNumericValue": null
+        },
+        {
+          "sourceBlock": 150,
+          "literal": "NEUTRAL = 2047",
+          "inferredNumericValue": null
+        }
+      ],
+      "note": "Only literal explicitnumbers are claims; no implicit enum numbering encoded."
+    },
+    {
+      "nameLiteral": "CHANNEL_OUTPUT_VALUE",
+      "sourceBlock": 151,
+      "entries": [
+        {
+          "sourceBlock": 152,
+          "literal": "MAX = 2000",
+          "inferredNumericValue": null
+        },
+        {
+          "sourceBlock": 153,
+          "literal": "MIN = 1000",
+          "inferredNumericValue": null
+        },
+        {
+          "sourceBlock": 154,
+          "literal": "NEUTRAL = 1500",
+          "inferredNumericValue": null
+        }
+      ],
+      "note": "Only literal explicitnumbers are claims; no implicit enum numbering encoded."
+    },
+    {
+      "nameLiteral": "JOYSTICK_BUTTON_FLAGS",
+      "sourceBlock": 155,
+      "entries": [
+        {
+          "sourceBlock": 156,
+          "literal": "LB = 1",
+          "inferredNumericValue": null
+        },
+        {
+          "sourceBlock": 157,
+          "literal": "LS2 = 2",
+          "inferredNumericValue": null
+        },
+        {
+          "sourceBlock": 158,
+          "literal": "LS1 = 4",
+          "inferredNumericValue": null
+        },
+        {
+          "sourceBlock": 159,
+          "literal": "RS2 = 8",
+          "inferredNumericValue": null
+        },
+        {
+          "sourceBlock": 160,
+          "literal": "RS1 = 16",
+          "inferredNumericValue": null
+        },
+        {
+          "sourceBlock": 161,
+          "literal": "RB = 32",
+          "inferredNumericValue": null
+        },
+        {
+          "sourceBlock": 162,
+          "literal": "LB1 = 64",
+          "inferredNumericValue": null
+        },
+        {
+          "sourceBlock": 163,
+          "literal": "LB2 = 128",
+          "inferredNumericValue": null
+        },
+        {
+          "sourceBlock": 164,
+          "literal": "LB3 = 256",
+          "inferredNumericValue": null
+        },
+        {
+          "sourceBlock": 165,
+          "literal": "RB1 = 512",
+          "inferredNumericValue": null
+        },
+        {
+          "sourceBlock": 166,
+          "literal": "RB2 = 1024",
+          "inferredNumericValue": null
+        },
+        {
+          "sourceBlock": 167,
+          "literal": "RB3 = 2048",
+          "inferredNumericValue": null
+        },
+        {
+          "sourceBlock": 168,
+          "literal": "LAND = 4096",
+          "inferredNumericValue": null
+        },
+        {
+          "sourceBlock": 169,
+          "literal": "LMJB = 8192",
+          "inferredNumericValue": null
+        },
+        {
+          "sourceBlock": 170,
+          "literal": "RMJB = 16384",
+          "inferredNumericValue": null
+        }
+      ],
+      "note": "Only literal explicitnumbers are claims; no implicit enum numbering encoded."
+    },
+    {
+      "nameLiteral": "JOYSTICK_AXIS",
+      "sourceBlock": 171,
+      "entries": [
+        {
+          "sourceBlock": 172,
+          "literal": "LD",
+          "inferredNumericValue": null
+        },
+        {
+          "sourceBlock": 173,
+          "literal": "RD",
+          "inferredNumericValue": null
+        },
+        {
+          "sourceBlock": 174,
+          "literal": "LW",
+          "inferredNumericValue": null
+        },
+        {
+          "sourceBlock": 175,
+          "literal": "RW",
+          "inferredNumericValue": null
+        },
+        {
+          "sourceBlock": 176,
+          "literal": "LJ_X = 6",
+          "inferredNumericValue": null
+        },
+        {
+          "sourceBlock": 177,
+          "literal": "LJ_Y = 7",
+          "inferredNumericValue": null
+        },
+        {
+          "sourceBlock": 178,
+          "literal": "RJ_X = 10",
+          "inferredNumericValue": null
+        },
+        {
+          "sourceBlock": 179,
+          "literal": "RJ_Y = 11",
+          "inferredNumericValue": null
+        },
+        {
+          "sourceBlock": 180,
+          "literal": "RMJ_X = 20",
+          "inferredNumericValue": null
+        },
+        {
+          "sourceBlock": 181,
+          "literal": "RMJ_Y = 21",
+          "inferredNumericValue": null
+        },
+        {
+          "sourceBlock": 182,
+          "literal": "LMJ_X = 15",
+          "inferredNumericValue": null
+        },
+        {
+          "sourceBlock": 183,
+          "literal": "LMJ_Y = 16",
+          "inferredNumericValue": null
+        }
+      ],
+      "note": "Only literal explicitnumbers are claims; no implicit enum numbering encoded."
+    },
+    {
+      "nameLiteral": "OUTPUT_CHANNEL",
+      "sourceBlock": 184,
+      "entries": [
+        {
+          "sourceBlock": 185,
+          "literal": "CHANNEL_1  = 0",
+          "inferredNumericValue": null
+        },
+        {
+          "sourceBlock": 186,
+          "literal": "CHANNEL_2",
+          "inferredNumericValue": null
+        },
+        {
+          "sourceBlock": 187,
+          "literal": "CHANNEL_3",
+          "inferredNumericValue": null
+        },
+        {
+          "sourceBlock": 188,
+          "literal": "CHANNEL_4",
+          "inferredNumericValue": null
+        },
+        {
+          "sourceBlock": 189,
+          "literal": "CHANNEL_5",
+          "inferredNumericValue": null
+        },
+        {
+          "sourceBlock": 190,
+          "literal": "CHANNEL_6",
+          "inferredNumericValue": null
+        },
+        {
+          "sourceBlock": 191,
+          "literal": "CHANNEL_7",
+          "inferredNumericValue": null
+        },
+        {
+          "sourceBlock": 192,
+          "literal": "CHANNEL_8",
+          "inferredNumericValue": null
+        },
+        {
+          "sourceBlock": 193,
+          "literal": "CHANNEL_9",
+          "inferredNumericValue": null
+        },
+        {
+          "sourceBlock": 194,
+          "literal": "CHANNEL_10",
+          "inferredNumericValue": null
+        },
+        {
+          "sourceBlock": 195,
+          "literal": "CHANNEL_11",
+          "inferredNumericValue": null
+        },
+        {
+          "sourceBlock": 196,
+          "literal": "CHANNEL_12",
+          "inferredNumericValue": null
+        },
+        {
+          "sourceBlock": 197,
+          "literal": "CHANNEL_13",
+          "inferredNumericValue": null
+        },
+        {
+          "sourceBlock": 198,
+          "literal": "CHANNEL_14",
+          "inferredNumericValue": null
+        },
+        {
+          "sourceBlock": 199,
+          "literal": "CHANNEL_15",
+          "inferredNumericValue": null
+        },
+        {
+          "sourceBlock": 200,
+          "literal": "CHANNEL_16",
+          "inferredNumericValue": null
+        },
+        {
+          "sourceBlock": 201,
+          "literal": "CHANNEL_17",
+          "inferredNumericValue": null
+        }
+      ],
+      "note": "Only literal explicitnumbers are claims; no implicit enum numbering encoded."
+    },
+    {
+      "nameLiteral": "OUTPUT_CHANNEL_FLAGS",
+      "sourceBlock": 202,
+      "entries": [
+        {
+          "sourceBlock": 203,
+          "literal": "CHANNEL_1  = 1",
+          "inferredNumericValue": null
+        },
+        {
+          "sourceBlock": 204,
+          "literal": "CHANNEL_2 = 2",
+          "inferredNumericValue": null
+        },
+        {
+          "sourceBlock": 205,
+          "literal": "CHANNEL_3 = 4",
+          "inferredNumericValue": null
+        },
+        {
+          "sourceBlock": 206,
+          "literal": "CHANNEL_4 = 8",
+          "inferredNumericValue": null
+        },
+        {
+          "sourceBlock": 207,
+          "literal": "CHANNEL_5 = 16",
+          "inferredNumericValue": null
+        },
+        {
+          "sourceBlock": 208,
+          "literal": "CHANNEL_6 = 32",
+          "inferredNumericValue": null
+        },
+        {
+          "sourceBlock": 209,
+          "literal": "CHANNEL_7 = 64",
+          "inferredNumericValue": null
+        },
+        {
+          "sourceBlock": 210,
+          "literal": "CHANNEL_8 = 128",
+          "inferredNumericValue": null
+        },
+        {
+          "sourceBlock": 211,
+          "literal": "CHANNEL_9 = 256",
+          "inferredNumericValue": null
+        },
+        {
+          "sourceBlock": 212,
+          "literal": "CHANNEL_10 = 512",
+          "inferredNumericValue": null
+        },
+        {
+          "sourceBlock": 213,
+          "literal": "CHANNEL_11",
+          "inferredNumericValue": null
+        },
+        {
+          "sourceBlock": 214,
+          "literal": "CHANNEL_12",
+          "inferredNumericValue": null
+        },
+        {
+          "sourceBlock": 215,
+          "literal": "CHANNEL_13",
+          "inferredNumericValue": null
+        },
+        {
+          "sourceBlock": 216,
+          "literal": "CHANNEL_14",
+          "inferredNumericValue": null
+        },
+        {
+          "sourceBlock": 217,
+          "literal": "CHANNEL_15",
+          "inferredNumericValue": null
+        },
+        {
+          "sourceBlock": 218,
+          "literal": "CHANNEL_16",
+          "inferredNumericValue": null
+        },
+        {
+          "sourceBlock": 219,
+          "literal": "CHANNEL_17",
+          "inferredNumericValue": null
+        }
+      ],
+      "note": "Only literal explicitnumbers are claims; no implicit enum numbering encoded."
+    }
+  ]
+}

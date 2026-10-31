@@ -1,0 +1,31 @@
+"""Bounded current-source verifier; no app writer/listener/AP/Android. SOURCE_MOCK_NO_RUNTIME."""
+from pathlib import Path
+import ast,hashlib,json,subprocess,os
+R=Path(__file__).resolve().parents[2];E=R/'evidence/beta06/generation17';sha=lambda b:hashlib.sha256(b).hexdigest();rows=[]
+v=os.statvfs(R);assert v.f_bavail*v.f_frsize>=20*2**30
+def ns(s):
+ for a,b in [('beta06g15','beta06g17'),('generation15','generation17'),('G15','G17'),('g15_','g17_'),('aeris.g15.','aeris.g17.'),('host-app15','host-app17')]:s=s.replace(a,b)
+ return s
+for n in ['flight/runtime.py','flight/handoff.mjs','flight/receive-flight.mjs','flight/qualified/profile.mjs','flight/qualified/link.mjs','flight/qualified/mock.mjs','flight/qualified/verify-profile.mjs','workspace-lineage.mjs','quota.py','proof-writer.mjs']:
+ a=(R/'pilot/beta06g15'/n).read_text();b=(R/'pilot/beta06g17'/n).read_text();assert ns(a)==b,n;rows.append({'case':'EXACT_QUALIFIED_NAMESPACE_ONLY','path':'pilot/beta06g17/'+n,'sha256':sha(b.encode())})
+a=json.loads((R/'pilot/beta06g15/quota-policy.json').read_bytes());b=json.loads((R/'pilot/beta06g17/quota-policy.json').read_bytes());a.pop('history');b.pop('history');a['schema']=a['schema'].replace('G15','G17');assert a==b
+rows.append({'case':'ALL_POLICY_NUMBERS_UNCHANGED'})
+history=json.loads((E/'qa-history-inventory01.json').read_bytes());assert history['totals']['entries']==8527 and history['totals']['bytes']==314139839
+worker=(R/'pilot/stability16/quota-worker.mjs').read_text().replace("'../beta06g15/quota.mjs'","'./quota.mjs'");assert worker==(R/'pilot/beta06g17/quota-worker.mjs').read_text()
+scanner=(R/'pilot/stability16/quota-scanner.mjs').read_text().replace('G15','G17').replace("'../beta06g15/quota.mjs'","'./quota.mjs'").replace('ba44574878be3d060710657c5a37a60053f34ecff419ba8c03291b2ce9c51c1e',sha((R/'pilot/beta06g17/quota-policy.json').read_bytes())).replace('ca8416cd0e09c4dcdd1e27482724fcc7b942294f0208b45fdf15e4a3dd74e89e',sha((E/'qa-history-inventory01.json').read_bytes())).replace('historicalEntries:8385,historicalBytes:306022057','historicalEntries:8527,historicalBytes:314139839');assert scanner==(R/'pilot/beta06g17/quota-scanner.mjs').read_text()
+resource=(R/'pilot/stability16/quota-resource.mjs').read_text().replace("../beta06g15/quota.mjs","./quota.mjs").replace('NOT_WIRED_G15','G17_EFFECTIVE_RESOURCE').replace('frozen G15','G17');assert resource==(R/'pilot/beta06g17/resource.mjs').read_text()
+rows.append({'case':'EXACT_S16_WORKER_SCANNER_RESOURCE_BODY_WITH_FRESH_TUPLE_IMPORT_ONLY','tuple':[8527,314139839]})
+program=r"""import fs from'node:fs';import assert from'node:assert/strict';import{transform as previous}from'./pilot/beta06g15/overlay.mjs';import{transform,RECIPES,STABILITY_ROWS,sha}from'./pilot/beta06g17/overlay.mjs';import{scan,decide,POLICY,policySha256}from'./pilot/beta06g17/quota.mjs';function ns(s){for(const[a,b]of[['beta06g15','beta06g17'],['generation15','generation17'],['G15','G17'],['g15_','g17_'],['aeris.g15.','aeris.g17.'],['host-app15','host-app17']])s=s.split(a).join(b);return s;}const compiled=[];for(const p of Object.keys(RECIPES)){const source=fs.readFileSync(p,'utf8');let expected=ns(previous(p,source));if(p==='pilot/beta06g5/app.mjs'){expected=expected.replace('../beta06g17/sealed-history.mjs','../beta06g15/sealed-history.mjs').replace('../beta06g17/lifecycle-phases.mjs','../beta06g15/lifecycle-phases.mjs').replace("req.url==='/field-bootstrap.mjs'?path.join(R,'pilot/beta06g17')","req.url==='/field-bootstrap.mjs'?path.join(R,'pilot/beta06g15')");for(const r of STABILITY_ROWS){assert.equal(expected.split(r.from).length-1,r.count,r.from);expected=expected.split(r.from).join(r.to);}}const actual=transform(p,source);assert.equal(actual,expected,p);compiled.push({path:p,sha256:sha(actual),bytes:Buffer.byteLength(actual)});}const usage=await scan(),sim=decide(usage,{phase:'before-host',remaining_ap:4,remaining_hosts:2,freeBytes:40*2**30}),future=Object.values(sim.futureRecipe).reduce((n,r)=>n+r.entries,0);assert(usage.aggregateEntries+1+future+4<=POLICY.scanner.maxEntries);console.log(JSON.stringify({compiled,policySha256,historySha256:POLICY.history.sha256,usage:{newEntries:usage.newEntries,newBytes:usage.newBytes,historicalEntries:usage.historicalEntries},futureEntries:future,globalProjectedWith4:usage.aggregateEntries+1+future+4,globalCeiling:POLICY.scanner.maxEntries,simulatedFreeBytesOnly:40*2**30}));"""
+p=subprocess.run(['node','--input-type=module','-e',program],cwd=R,capture_output=True,text=True,timeout=20);assert p.returncode==0,p.stderr;binding=json.loads(p.stdout);rows.append({'case':'EXACT_FIVE_EFFECTIVE_TRANSFORMS_AND_FINITE_ENTRY_PROJECTION','result':binding})
+cli=[]
+for phase in ['guard','before-host']:
+ p=subprocess.run(['node','pilot/beta06g17/quota.mjs',json.dumps({'phase':phase})],cwd=R,capture_output=True,text=True,timeout=15)
+ assert p.returncode==1 and json.loads(p.stderr)['error']=='PHYSICAL_FLOOR_RESERVATION',(phase,p.returncode,p.stderr)
+ cli.append({'phase':phase,'exit':p.returncode,'result':json.loads(p.stderr),'fullSHA':phase=='before-host'})
+rows.append({'case':'ACTUAL_DIRECT_CLI_OWNED_WORKER_COMPLETE_THEN_UNCHANGED_PHYSICAL_REFUSAL','results':cli,'retainedCycleCounterexample':'builder-quota-cli-cycle01.json'})
+for p in (R/'pilot/beta06g17').rglob('*'):
+ if p.suffix in ['.mjs','.js']:subprocess.run(['node','--check',str(p)],capture_output=True,check=True)
+ elif p.suffix=='.py':ast.parse(p.read_text())
+report={'status':'PASS_CURRENT_G17_SOURCE_BINDING_SOURCE_MOCK_NO_RUNTIME','rows':rows,'groups':len(rows),'policySha256':binding['policySha256'],'historySha256':binding['historySha256'],'currentEffectiveCompiled':binding['compiled'],'pristinePreparedFork':not(E/'workspace-first-writer01.json').exists()and not(E/'workspace01/writer.lock').exists(),'actualG17AP':0,'sourceInputs':{str(p.relative_to(R)):sha(p.read_bytes()) for p in (R/'pilot/beta06g17').rglob('*')if p.is_file()},'oldWrites':False,'signatureBuildOrInstall':False}
+with(E/'builder-source-tests01.json').open('x')as f:json.dump(report,f,indent=2);f.write('\n');f.flush();os.fsync(f.fileno())
+print(json.dumps({'status':'PASS','groups':len(rows),'globalProjected':binding['globalProjectedWith4'],'actualCLI':cli}))

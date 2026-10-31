@@ -1,0 +1,7 @@
+# ADR-020 · raw streaming with separate recipient commit
+
+Accepted locally within owner request 2026-10-12. Keep HANDOFF09 v1 JSON unchanged. Add independent dataset associations with bounded chunked raw intake; large datasets do not consume flight-journal queue/capacity or alter outcomes. Content-addressed blobs, append-only revisions and exclusive store writers reuse fsync/no-overwrite primitive. Quota includes partial/orphan files; no evidence auto-deletion.
+
+V2 transport: fixed magic, 32-bit header byte length, UTF-8 manifest header, raw ordered files, fixed end magic plus 64 ASCII SHA-256 of prefix/header/all payload. Header semantics bind execution/spool/legacy/data/reviews/inventory. Immutable snapshot timestamps make unchanged export deterministic. Per-file and terminal digest verification prevents a sender/receiver from finalizing a truncated or changed stream. A checksum is not signed origin.
+
+Receiver saves exact header/footer and raw bytes under generated stage paths, then atomically publishes a digest-bound commit pointer. Stage existence is never a verified receipt. Reads recompute file/global integrity, preserving malformed bytes and visible failed stage state. Source and recipient roots have separate budget/locks; imported records stay read-only and never become command authority. UI uses native File fetch/download streaming; portable CLI uses fs streams. Remote auth, transfer resume, native storage lifecycle and forensic capture/quality correlation remain open gates.

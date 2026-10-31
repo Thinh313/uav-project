@@ -1,0 +1,3 @@
+# PACK15 · payload and redistribution scope
+
+Internal engineering distribution only. Runtime inventory explicitly includes AERIS source/static assets, pinned geodata and QGC corpus; excludes captured mission evidence, research/BOM, SDK/Android diagnostic binary, simulator/runtime executables, dependencies and private keys. Node is external. This inventory is not a legal SBOM or redistribution approval. Bundled IBM Plex font retains app/assets/OFL-IBMPlexSans.txt; source/derived geographic/QGC assets retain existing provenance; distribution/licensing clearance is NOT_CHECKED for external release. No dependency or third-party binary is newly downloaded into the payload.

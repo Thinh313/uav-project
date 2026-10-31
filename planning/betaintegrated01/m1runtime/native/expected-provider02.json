@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "mode": "CANDIDATE_EXTERNAL",
+  "profileId": "M1-EXTERNAL-NO-MEDIA-01",
+  "binarySHA256": "77344f3c6f715cb326b99356815e8315769e9331dcb1e4c88bc4076804cb0d53",
+  "modelSHA256": "4975959c968582cabd0057d9166601919c31968d69cc92fde303c1f66c7b4808",
+  "configSHA256": "d3514969141eaa4780d9531a0214a0e4fd0a7f380812faccf5d47877232b0b13",
+  "endpoint": "tcp://10.0.2.2:5961",
+  "firmware": "4.7.1",
+  "durationSeconds": 120,
+  "manualCapability": false,
+  "capabilityProfile": "NO_MEDIA_M1_RUNTIME"
+}

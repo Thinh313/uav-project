@@ -1,0 +1,221 @@
+{
+  "schema": 1,
+  "kind": "Fixture recipes and retained corpus, not newly executed RAGAS tests",
+  "retained": [
+    {
+      "id": "QGC-desktop-aeris-simple-qgc-saved",
+      "path": "app/fixtures/qgc/desktop/aeris-simple-qgc-saved.plan",
+      "sha256": "509feaacd40613b19e143fa4880a156c786e6e96d6f9dce334f94ba71943ad9d",
+      "expected": "509feaacd40613b19e143fa4880a156c786e6e96d6f9dce334f94ba71943ad9d",
+      "matches": true,
+      "producer": "Actual QGC5.1.5 desktop serialization",
+      "scope": "Opened AERIS fixture; Save As via actual QGC UI; Home7 and camera stop immediate flags changed"
+    },
+    {
+      "id": "QGC-desktop-aeris-cached-survey-qgc-saved",
+      "path": "app/fixtures/qgc/desktop/aeris-cached-survey-qgc-saved.plan",
+      "sha256": "2b8285af81f89b20796747cc395d7e658561138a123e4c05c71cfc227c75632a",
+      "expected": "2b8285af81f89b20796747cc395d7e658561138a123e4c05c71cfc227c75632a",
+      "matches": true,
+      "producer": "Actual QGC5.1.5 desktop serialization",
+      "scope": "Opened fixture in QGC; Save As; generated cached Items changed without intentional grid edit"
+    },
+    {
+      "id": "QGC-desktop-qgc-survey-angle35",
+      "path": "app/fixtures/qgc/desktop/qgc-survey-angle35.plan",
+      "sha256": "712b50e40162c38fdeea4baa5ff59a8f13364d686662d2b850bcbc6a4538dc92",
+      "expected": "712b50e40162c38fdeea4baa5ff59a8f13364d686662d2b850bcbc6a4538dc92",
+      "matches": true,
+      "producer": "Actual QGC5.1.5 desktop serialization",
+      "scope": "Actual QGC editor angle changed0→35; QGC regenerated route from retained polygon; Save As"
+    },
+    {
+      "id": "QGC-desktop-qgc-created-simple",
+      "path": "app/fixtures/qgc/desktop/qgc-created-simple.plan",
+      "sha256": "0883338619dcf0c140104d3928c8d0c0137cb056574e57dbc84213f545923978",
+      "expected": "0883338619dcf0c140104d3928c8d0c0137cb056574e57dbc84213f545923978",
+      "matches": true,
+      "producer": "Actual QGC5.1.5 desktop serialization",
+      "scope": "Clear saved draft; map Home; No Template; takeoff15; four clicked waypoints default50; RTL; Save As"
+    },
+    {
+      "id": "QGC-desktop-qgc-created-geofence",
+      "path": "app/fixtures/qgc/desktop/qgc-created-geofence.plan",
+      "sha256": "dd93486b1577c8fa809450400835354cc2cc69ec9c887006afaf6d6ab9d45f48",
+      "expected": "dd93486b1577c8fa809450400835354cc2cc69ec9c887006afaf6d6ab9d45f48",
+      "matches": true,
+      "producer": "Actual QGC5.1.5 desktop serialization",
+      "scope": "Actual QGC Circular Fence96.8m inclusion; Save As"
+    },
+    {
+      "id": "QGC-desktop-qgc-created-amsl-fence",
+      "path": "app/fixtures/qgc/desktop/qgc-created-amsl-fence.plan",
+      "sha256": "1c3af83915cb273da2ff6395224f74486c291ce8a27a6ca9eec2401b342134bd",
+      "expected": "1c3af83915cb273da2ff6395224f74486c291ce8a27a6ca9eec2401b342134bd",
+      "matches": true,
+      "producer": "Actual QGC5.1.5 desktop serialization",
+      "scope": "Defaults Mixed; first waypoint Alt Frame AMSL; Save As"
+    },
+    {
+      "id": "QGC-desktop-qgc-reopened-simple",
+      "path": "app/fixtures/qgc/desktop/qgc-reopened-simple.plan",
+      "sha256": "509feaacd40613b19e143fa4880a156c786e6e96d6f9dce334f94ba71943ad9d",
+      "expected": "509feaacd40613b19e143fa4880a156c786e6e96d6f9dce334f94ba71943ad9d",
+      "matches": true,
+      "producer": "Actual QGC5.1.5 desktop serialization",
+      "scope": "Opened saved plan again; Save As; no intentional item edits"
+    },
+    {
+      "id": "QGC-roundtrip03-camera-pair-qgc-saved",
+      "path": "app/fixtures/qgc/roundtrip03/camera-pair-qgc-saved.plan",
+      "sha256": "7b083bf82168d8a5f51052ef3e35b73194fe3776f6bdf56d0e44ff2707529c6b",
+      "expected": "7b083bf82168d8a5f51052ef3e35b73194fe3776f6bdf56d0e44ff2707529c6b",
+      "matches": true,
+      "producer": "Actual QGroundControl5.1.5 desktop",
+      "scope": "Open and Save As; first experiment with numeric reserved fields"
+    },
+    {
+      "id": "QGC-roundtrip03-simple-relative-qgc-saved",
+      "path": "app/fixtures/qgc/roundtrip03/simple-relative-qgc-saved.plan",
+      "sha256": "fe244563ad5c75965219b28e6d8c0c29d2c7fa1161231494cff3f62805937772",
+      "expected": "fe244563ad5c75965219b28e6d8c0c29d2c7fa1161231494cff3f62805937772",
+      "matches": true,
+      "producer": "Actual QGroundControl5.1.5 desktop",
+      "scope": "Open and Save As; no intended edits"
+    },
+    {
+      "id": "QGC-roundtrip03-survey-absolute-qgc-saved",
+      "path": "app/fixtures/qgc/roundtrip03/survey-absolute-qgc-saved.plan",
+      "sha256": "2dc02f3d2e24fb9f4021b365215583f1d14a888eec4cc298108abe842b741230",
+      "expected": "2dc02f3d2e24fb9f4021b365215583f1d14a888eec4cc298108abe842b741230",
+      "matches": true,
+      "producer": "Actual QGroundControl5.1.5 desktop",
+      "scope": "Open flattened stored snapshot and Save As; no intended edits"
+    },
+    {
+      "id": "QGC-roundtrip03-simple-relative-qgc-reopened",
+      "path": "app/fixtures/qgc/roundtrip03/simple-relative-qgc-reopened.plan",
+      "sha256": "fe244563ad5c75965219b28e6d8c0c29d2c7fa1161231494cff3f62805937772",
+      "expected": "fe244563ad5c75965219b28e6d8c0c29d2c7fa1161231494cff3f62805937772",
+      "matches": true,
+      "producer": "Actual QGroundControl5.1.5 desktop",
+      "scope": "Reopen QGC output and Save As; no intended edits"
+    }
+  ],
+  "synthetic_recipes": [
+    {
+      "id": "S-AREA",
+      "status": "RECIPE_NOT_EXECUTED",
+      "frame": "local planar meters",
+      "vertices": [
+        [
+          0,
+          0
+        ],
+        [
+          100,
+          0
+        ],
+        [
+          100,
+          100
+        ],
+        [
+          0,
+          100
+        ]
+      ],
+      "expected": {
+        "area_m2": 10000,
+        "area_ha": 1
+      },
+      "not_geographic_fixture": true
+    },
+    {
+      "id": "S-TIME",
+      "status": "RECIPE_NOT_EXECUTED",
+      "distance_m": 1000,
+      "cruise_mps": 6,
+      "acceleration_model": "constant-speed synthetic",
+      "expected_seconds": 166.66666666666666
+    },
+    {
+      "id": "S-TRIGGER",
+      "status": "RECIPE_NOT_EXECUTED",
+      "footprint_along_m": 40,
+      "front_overlap": 0.8,
+      "transect_lengths_m": [
+        32,
+        32
+      ],
+      "expected_spacing_m": 8,
+      "expected_count": null,
+      "count_basis": "Populate from pinned QGC output after explicit entry/exit policy; do not guess count."
+    },
+    {
+      "id": "S-CADENCE",
+      "status": "RECIPE_NOT_EXECUTED",
+      "spacing_m": 8,
+      "velocity_mps": 10,
+      "camera_min_period_s": 1,
+      "expected_period_s": 0.8,
+      "expected_feasible": false
+    },
+    {
+      "id": "S-ALT",
+      "status": "RECIPE_NOT_EXECUTED",
+      "home_amsl_m": 100,
+      "relative_m": 50,
+      "terrain_amsl_m": 120,
+      "agl_m": 50,
+      "ellipsoid_m": 150,
+      "geoid_N_m": 30,
+      "N_definition": "ellipsoid minus orthometric height",
+      "expected": {
+        "relative_as_amsl_m": 150,
+        "terrain_as_amsl_m": 170,
+        "ellipsoid_as_amsl_m": 120
+      }
+    },
+    {
+      "id": "S-RIDGE",
+      "status": "RECIPE_NOT_EXECUTED",
+      "terrain_amsl_m": [
+        120,
+        180,
+        120
+      ],
+      "planned_amsl_m": 150,
+      "expected_clearance_m": [
+        30,
+        -30,
+        30
+      ]
+    },
+    {
+      "id": "S-COORD",
+      "status": "RECIPE_NOT_EXECUTED",
+      "lat_deg": 10.854,
+      "lon_deg": 106.807,
+      "expected_mavlink_int_xy": [
+        108540000,
+        1068070000
+      ]
+    },
+    {
+      "id": "S-FAILURES",
+      "status": "RECIPE_NOT_EXECUTED",
+      "cases": [
+        "no-data DEM",
+        "HTTP timeout",
+        "wrong-camera ACK",
+        "duplicate capture",
+        "boot/session change",
+        "unknown datum",
+        "partial cache",
+        "mission mutation after review"
+      ]
+    }
+  ],
+  "new_runtime_results": "NOT_CHECKED"
+}

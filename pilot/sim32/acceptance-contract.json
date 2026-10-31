@@ -1,0 +1,132 @@
+{
+  "format": "aeris-sim32-acceptance-contract",
+  "version": 1,
+  "at": "2026-10-13T13:21:11.928305+00:00",
+  "status": "REQUIREMENTS_BASELINED_ONLY",
+  "ownerDecision": "Strict algorithm/performance/graphics/simulation quality; competitive product aiming to exceed DJI",
+  "ownerDecisionIsPerformanceEvidence": false,
+  "qualityStandard": {
+    "path": "docs/AERIS-PRODUCT-QUALITY-STANDARD.md",
+    "sha256": "a3c7efbd3ec559a35137375cb2cf08833e6fb6bada658b62375f2b6589b5d536"
+  },
+  "tip": {
+    "path": "delivery/TIP-SIM32.md",
+    "sha256": "f0e63007281ed320031240d750f8d4bbdc597832cb4534a48f941f5467667534"
+  },
+  "requirements": [
+    {
+      "id": "SIM32-01",
+      "status": "NOT_CHECKED",
+      "evidence": []
+    },
+    {
+      "id": "SIM32-02",
+      "status": "NOT_CHECKED",
+      "evidence": []
+    },
+    {
+      "id": "SIM32-03",
+      "status": "NOT_CHECKED",
+      "evidence": []
+    },
+    {
+      "id": "SIM32-04",
+      "status": "NOT_CHECKED",
+      "evidence": []
+    },
+    {
+      "id": "SIM32-05",
+      "status": "NOT_CHECKED",
+      "evidence": []
+    },
+    {
+      "id": "SIM32-06",
+      "status": "NOT_CHECKED",
+      "evidence": []
+    },
+    {
+      "id": "SIM32-07",
+      "status": "NOT_CHECKED",
+      "evidence": []
+    },
+    {
+      "id": "SIM32-08",
+      "status": "NOT_CHECKED",
+      "evidence": []
+    },
+    {
+      "id": "SIM32-09",
+      "status": "NOT_CHECKED",
+      "evidence": []
+    }
+  ],
+  "engineeringTargets": {
+    "status": "PROPOSED_NOT_MEASURED_NOT_OWNER_APPROVED_NUMERICAL_THRESHOLDS",
+    "referenceConfiguration": null,
+    "render": {
+      "nominalFps": 60,
+      "widthPx": 1280,
+      "heightPx": 800,
+      "p95FrameMs": 16.7,
+      "p99FrameMs": 33.3,
+      "measured": null
+    },
+    "localUiFeedback": {
+      "p95Ms": 100,
+      "measured": null
+    },
+    "physics": {
+      "realtimeFactorMinimumAt1x": 1,
+      "convergenceSteps": [
+        "dt",
+        "dt/2",
+        "dt/4"
+      ],
+      "calibratedTolerance": null,
+      "measured": null
+    },
+    "missionControlVideoBudgets": null
+  },
+  "comparisons": {
+    "ragas": {
+      "status": "NOT_CHECKED",
+      "configuration": null,
+      "binaryHash": null,
+      "measurements": null,
+      "winner": null,
+      "method": "Same supported hardware/configuration when feasible"
+    },
+    "dji": {
+      "status": "NOT_CHECKED",
+      "platform": null,
+      "controller": null,
+      "softwareVersion": null,
+      "payload": null,
+      "measurements": null,
+      "winner": null,
+      "method": "Equivalent systems/tasks/environment/output requirements; record hardware and other confounders"
+    }
+  },
+  "resourcePolicy": {
+    "minimumHostFreeBytes": 21474836480,
+    "budget": "Peak archives+full uncompressed output+runtime+AVD+evidence+host margin",
+    "largeInstallAtCurrentCapacity": "NOT_AUTHORIZED_USER_RETAINED_CAPACITY",
+    "priorIncident": "evidence/native31/resource-attempt01.json"
+  },
+  "isolation": {
+    "allowedModule": "pilot/sim32",
+    "frozenSourceEdits": false,
+    "ENDUREMutation": false,
+    "softwareReleaseSigning": false,
+    "physicalFlightCommands": false,
+    "inspectorReplayAsControl": false
+  },
+  "readiness": {
+    "closedLoopRuntime": "NOT_CHECKED",
+    "physicsCalibration": "NOT_CHECKED",
+    "visualAudioRuntime": "NOT_CHECKED",
+    "androidHeraHub": "NOT_CHECKED",
+    "competitiveSuperiority": "NOT_CHECKED"
+  },
+  "review": "Single-agent requirements preparation, not runtime or independent audit"
+}

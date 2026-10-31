@@ -1,0 +1,41 @@
+{
+  "name": "AERIS Beta05 host companion workspace kit",
+  "version": "0.5-engineering",
+  "platformVerified": "macOS arm64, retained checkout and cached tools only",
+  "workspaceBound": true,
+  "standaloneCleanMachineInstaller": false,
+  "sourcePinIndex": "evidence/betaworkbench05/flight-pins06.json",
+  "entrypoints": [
+    "Doctor.command",
+    "Start Beta.command",
+    "Android.command",
+    "Status.command",
+    "Stop Beta.command",
+    "Start Mock.command",
+    "Start Mock Android.command",
+    "Verify Package.command"
+  ],
+  "policy": {
+    "version": 1,
+    "admissionBytes": 21474836480,
+    "hardFloorBytes": 10737418240,
+    "writeReserveBytes": 268435456,
+    "stabilitySamples": 31,
+    "stabilityDurationMs": 30000,
+    "maxDeclineBytes": 268435456,
+    "forecastSeconds": 15,
+    "pollMs": 250,
+    "runtimeSeconds": 2700,
+    "evidenceBudgetBytes": 1073741824,
+    "origin": "USER_EXPLICIT_CHANGE_2026-10-24_20_ENTRY_10_FLOOR",
+    "historicalPolicyUnchanged": true
+  },
+  "apk": {
+    "source": "native/betaworkbench05/dist/aeris-beta05-development02.apk",
+    "sha256": "0a364ba3723887dbe9cdcabdc2c2d6beb6a33c5a1cf7bf09e44576479fba8ea8",
+    "developmentOnly": true
+  },
+  "softwareSignature": false,
+  "productionSignature": false,
+  "physicalHardwareQualified": false
+}

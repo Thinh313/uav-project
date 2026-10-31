@@ -1,0 +1,5 @@
+# ADR-021 · immutable wire chunks and checkpoint chain
+
+Accepted for RESUME11 under user's explicit resume/restart request. Keep STREAM10 v2 packet and old receipts. Add a separate resumable receiver intake. Each checkpoint commits one immutable chunk, prefix hash, absolute offset, previous checkpoint hash and transfer identity. Never mutate an acknowledged file or checkpoint. On reconnect reconstruct hashes from retained bytes rather than serializing process-local hash contexts. Before final receipt, replay the complete virtual wire through the existing semantic/file inspectors and footer/EOF gate.
+
+Accepted chunks remain the canonical receiver packet. Re-export and file download use bounded range streams over them; no second 8 GiB copy or quota regression. An orphan chunk after a kill stays visible/counts toward quota but is not used. Sender range export scans/verifies skipped bytes and compares the receiver prefix hash before yielding a suffix. Continuation is explicit, uses current server token and exact cursor. No changes to flight commands, journal or physical-capture authority.

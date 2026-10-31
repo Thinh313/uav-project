@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark light">
+  <title>RtR AERIS · Mission Studio</title><link rel="icon" href="data:,">
+  <link rel="stylesheet" href="/style.css"><script type="module" src="/app.mjs"></script>
+</head>
+<body>
+  <svg class="icon-library" aria-hidden="true"><defs>
+    <symbol id="i-plan" viewBox="0 0 24 24"><path d="M4 6h16M4 18h16M6 6v12m6-12v12m6-12v12"/><circle cx="6" cy="6" r="2"/><circle cx="18" cy="18" r="2"/></symbol>
+    <symbol id="i-fly" viewBox="0 0 24 24"><path d="m12 3 8 17-8-4-8 4 8-17Zm0 0v13"/></symbol>
+    <symbol id="i-sensor" viewBox="0 0 24 24"><rect x="3" y="6" width="18" height="13" rx="2"/><circle cx="12" cy="12.5" r="3.5"/><path d="M8 6V3h8v3"/></symbol>
+    <symbol id="i-review" viewBox="0 0 24 24"><path d="M7 3h10v18H7zM10 7h4m-4 4h4m-4 4h4"/></symbol>
+    <symbol id="i-chevron" viewBox="0 0 24 24"><path d="m9 5 7 7-7 7"/></symbol>
+    <symbol id="i-close" viewBox="0 0 24 24"><path d="m6 6 12 12M6 18 18 6"/></symbol>
+    <symbol id="i-fit" viewBox="0 0 24 24"><path d="M8 3H3v5m13-5h5v5M3 16v5h5m13-5v5h-5"/><rect x="8" y="8" width="8" height="8"/></symbol>
+    <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+    <symbol id="i-minus" viewBox="0 0 24 24"><path d="M5 12h14"/></symbol>
+    <symbol id="i-files" viewBox="0 0 24 24"><path d="M3 5h7l2 3h9v12H3z"/></symbol>
+    <symbol id="i-download" viewBox="0 0 24 24"><path d="M12 3v12m-5-5 5 5 5-5M4 16v5h16v-5"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></symbol>
+    <symbol id="i-warning" viewBox="0 0 24 24"><path d="m12 3 10 18H2L12 3Zm0 6v5m0 3v1"/></symbol>
+    <symbol id="i-tune" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/><circle cx="8" cy="6" r="2"/><circle cx="16" cy="12" r="2"/><circle cx="10" cy="18" r="2"/></symbol>
+  </defs></svg>
+  <div class="shell">
+    <aside class="rail">
+      <a class="brand" href="/" aria-label="RtR AERIS trang đầu">RtR<span class="brand-mark"></span></a>
+      <nav aria-label="Không gian làm việc">
+        <button class="nav-button active" data-workspace="plan" aria-current="page"><svg class="icon"><use href="#i-plan"/></svg><span>Plan</span></button>
+        <button class="nav-button" data-workspace="fly"><svg class="icon"><use href="#i-fly"/></svg><span>Fly</span></button>
+        <button class="nav-button" data-workspace="inspect"><svg class="icon"><use href="#i-sensor"/></svg><span>Inspect</span></button>
+        <button class="nav-button" data-workspace="review"><svg class="icon"><use href="#i-review"/></svg><span>Review</span></button>
+        <a class="nav-button" href="/sitl.html">SITL</a>
+      </nav>
+      <span class="rail-version">AERIS<br>0.4</span>
+    </aside>
+    <main>
+      <header class="topbar">
+        <div class="workspace-heading"><span class="product-name">AERIS <span class="product-divider">/</span> Field</span><h1 id="workspace-title">Mission Studio</h1></div>
+        <div class="rehearsal-banner"><span class="sim-tag">SIM</span><span>Dữ liệu giả lập<span class="simulation-detail"> · Chưa kết nối drone</span></span></div>
+        <div class="session"><span class="status-dot" id="link-dot"></span><div><strong>SIM-001</strong><span id="link-label">Telemetry diễn tập</span></div></div>
+      </header>
+      <div id="notice" role="status" aria-live="polite"></div>
+      <section id="workspace-plan" class="workspace">
+        <div class="plan-layout">
+          <div class="plot-column">
+            <div class="plot-toolbar"><div class="mission-title"><span class="mission-index">01</span><div><strong>Khảo sát mẫu 01</strong><span id="site-description">Polygon WGS84 · khu vực mẫu</span></div></div><div class="plot-actions"><button id="open-mission-menu" class="tool-button" aria-expanded="false" aria-controls="mission-menu"><svg class="icon"><use href="#i-files"/></svg><span>Nhiệm vụ</span><span class="menu-caret">⌄</span></button><button id="open-plan-settings" class="tool-button settings-toggle" aria-expanded="false" aria-controls="plan-inspector"><svg class="icon"><use href="#i-tune"/></svg><span>Thông số</span></button></div></div>
+            <div id="mission-menu" class="file-menu" hidden aria-label="Tệp nhiệm vụ"><button id="save-mission">Lưu trên thiết bị<span>Giữ bản hiện tại</span></button><button id="load-mission">Đọc bản đã lưu<span>Tính lại từ thông số gốc</span></button><button id="export-mission">Xuất nhiệm vụ<span>AERIS .json</span></button><button id="import-mission">Nhập nhiệm vụ<span>AERIS v2</span></button><input id="mission-file" type="file" accept=".json" hidden></div>
+            <div class="map-stage">
+              <div class="map-context"><span class="coordinate-mark">WGS84</span><span>Polygon địa lý<span class="context-secondary">Chưa có nền bản đồ / địa hình</span></span></div>
+              <div id="mission-map" class="mission-map" tabindex="0" role="group" aria-label="Sơ đồ tuyến khảo sát; dùng dấu cộng, trừ để zoom, phím 0 để vừa khung"></div>
+              <div class="area-tools"><button id="draw-area" class="tool-button">Vẽ khu vực</button><button id="complete-area" class="tool-button" hidden>Kết thúc vẽ</button><button id="edit-coordinates" class="tool-button">Tọa độ</button></div><div class="map-view-tools" aria-label="Điều khiển khung nhìn"><button id="zoom-in" class="icon-button" aria-label="Phóng to sơ đồ" title="Phóng to (+)"><svg class="icon"><use href="#i-plus"/></svg></button><button id="zoom-out" class="icon-button" aria-label="Thu nhỏ sơ đồ" title="Thu nhỏ (-)"><svg class="icon"><use href="#i-minus"/></svg></button><button id="fit-map" class="icon-button" aria-label="Vừa khung sơ đồ" title="Vừa khung (0)"><svg class="icon"><use href="#i-fit"/></svg></button></div>
+              <div class="plot-orientation" aria-hidden="true"><span>N</span><i></i><span>E</span></div>
+              <div class="transect-dock"><div><span>Tuyến đang xem</span><strong id="selected-transect-label">01 / 16</strong></div><div class="transect-controls"><button id="previous-transect" class="icon-button" aria-label="Xem tuyến trước"><svg class="icon reversed"><use href="#i-chevron"/></svg></button><button id="next-transect" class="icon-button" aria-label="Xem tuyến tiếp theo"><svg class="icon"><use href="#i-chevron"/></svg></button></div><button id="toggle-footprint" class="coverage-button" aria-pressed="false">Vùng chụp</button></div>
+              <span id="map-scale" class="map-scale"></span>
+            </div>
+            <div class="summary-strip" id="mission-summary"></div>
+            <div class="plot-footer"><span><i class="legend-line"></i> Tuyến chọn</span><span>Thời gian dự kiến chưa gồm cất/hạ cánh, gió và quay đầu.</span></div>
+          </div>
+          <aside id="plan-inspector" class="inspector" aria-label="Thông số nhiệm vụ">
+            <div class="inspector-heading"><div><h2>Thiết lập khảo sát</h2><span>Polygon WGS84 · camera mẫu</span></div><button id="close-plan-settings" class="icon-button light settings-toggle" aria-label="Đóng thông số"><svg class="icon"><use href="#i-close"/></svg></button></div>
+            <div class="inspector-scroll">
+              <form id="mission-form">
+                <fieldset><legend>Nhiệm vụ</legend><label>Tên nhiệm vụ<div class="input-shell"><input name="name" type="text" maxlength="80" value="Khảo sát mẫu 01" required></div></label><p class="field-note" id="area-description">Kéo các đỉnh trên bản đồ hoặc nhập tọa độ.</p></fieldset>
+                <fieldset><legend>Đường bay</legend><div class="field-pair"><label>Độ cao<div class="input-shell"><input name="altitude" type="number" min="5" max="120" step="any" value="60" required><span>m</span></div></label><label>Tốc độ<div class="input-shell"><input name="speed" type="number" min="0.5" max="20" step="0.1" value="6" required><span>m/s</span></div></label><label>Hướng tuyến<div class="input-shell"><input name="heading" type="number" min="0" max="179.9" step="1" value="0" required><span>° / Bắc</span></div></label><label>GSD mục tiêu<div class="input-shell"><input name="targetGsdCm" type="number" min="0.1" max="20" step="0.1" placeholder="—"><span>cm/px</span></div></label></div><label class="frame-label">Mốc độ cao<select name="altitudeFrame"><option value="flat-reference">Mặt phẳng tham chiếu · diễn tập</option><option value="relative-launch">Tương đối điểm cất cánh</option><option value="terrain">Theo địa hình · cần DEM</option><option value="amsl">AMSL · cần cao độ nền</option></select></label><p class="field-note" id="altitude-note">Camera nadir; chưa phải cao độ bay theo địa hình.</p></fieldset>
+                <fieldset><legend>Chồng ảnh</legend><div class="field-pair"><label>Ngang<div class="input-shell"><input name="sideOverlap" type="number" min="0" max="95" step="1" value="80" required><span>%</span></div></label><label>Dọc<div class="input-shell"><input name="frontOverlap" type="number" min="0" max="95" step="1" value="80" required><span>%</span></div></label></div></fieldset>
+                <details class="camera-details"><summary><svg class="icon"><use href="#i-sensor"/></svg>Camera và chu kỳ chụp<span class="disclosure-mark">+</span></summary><label>Profile camera<select name="cameraProfile"><option value="demo">Camera mẫu · chưa hiệu chuẩn</option><option value="custom">Camera tùy chỉnh · operator nhập</option><option value="none">Chưa có thông số camera</option></select></label><p>Profile mẫu không đại diện payload Hera. Thông số tùy chỉnh cần được hiệu chuẩn trước khi bay.</p><div class="field-pair"><label>Cảm biến ngang<div class="input-shell"><input name="sensorWidth" type="number" min="1" max="100" step="0.1" value="13.2" required><span>mm</span></div></label><label>Cảm biến dọc<div class="input-shell"><input name="sensorHeight" type="number" min="1" max="100" step="0.1" value="8.8" required><span>mm</span></div></label><label>Tiêu cự<div class="input-shell"><input name="focalLength" type="number" min="1" max="200" step="0.1" value="8.8" required><span>mm</span></div></label><label>Ảnh ngang<div class="input-shell"><input name="imageWidth" type="number" min="100" max="20000" step="1" value="5472" required><span>px</span></div></label><label>Chu kỳ tối thiểu<div class="input-shell"><input name="minInterval" type="number" min="0.05" max="60" step="0.05" value="1" required><span>s</span></div></label></div></details>
+                
+              </form>
+              <div class="optics-summary" id="optics-summary"></div>
+            </div>
+            <div class="inspector-bottom"><button class="secondary full recalculate" type="submit" form="mission-form"><svg class="icon"><use href="#i-check"/></svg>Tính lại tuyến khảo sát</button><div id="mission-validation" class="validation" aria-live="polite"></div><button id="open-fly" class="primary full">Nạp vào mô hình<svg class="icon"><use href="#i-chevron"/></svg></button><span class="inspector-footnote">Lưu local riêng với mission đã nạp · chưa kết nối autopilot</span></div>
+          </aside>
+        </div>
+      </section>
+      <section id="workspace-fly" class="workspace" hidden>
+        <div class="fly-layout">
+          <div class="flight-workspace"><div class="instrument-heading"><div><span>Chế độ phương tiện</span><strong id="flight-mode">HOLD</strong></div><div class="flight-context">SIM-001<span>Chưa có vị trí phương tiện</span></div><button id="open-test-console" class="tool-button" aria-expanded="false" aria-controls="test-console"><svg class="icon"><use href="#i-tune"/></svg><span>Điều kiện diễn tập</span></button></div>
+            <div class="flight-plot"><div id="flight-map" class="flight-map" role="img" aria-label="Tuyến khảo sát đã lập; chưa có dữ liệu vị trí phương tiện"></div><div class="video-empty"><svg class="icon"><use href="#i-sensor"/></svg><span>Video chưa kết nối</span></div></div>
+            <div class="telemetry-grid" id="telemetry-values"></div>
+            <div class="mission-session-panel"><div class="mission-session-heading"><strong id="onboard-name">Chưa nạp nhiệm vụ</strong><span id="mission-session-state" aria-live="polite">Bản nháp</span></div><p id="mission-session-detail">Lưu local không tự nạp vào mô hình.</p><div class="mission-run-controls"><button id="mission-start">Chạy diễn tập</button><button id="mission-pause">Tạm dừng</button><button id="mission-abort">Kết thúc phiên</button></div></div><div class="command-panel"><div class="command-heading"><span>Điều khiển chế độ <small>Mô hình cục bộ</small></span><div id="command-state" class="command-state" aria-live="polite">Chưa có lệnh.</div></div><div class="command-flow" aria-hidden="true"><span data-command-stage="sent">Gửi yêu cầu</span><i></i><span data-command-stage="accepted">Nhận ACK</span><i></i><span data-command-stage="observed">Xác nhận trạng thái</span></div><div class="command-buttons"><button data-mode="AUTO" class="primary"><svg class="icon"><use href="#i-fly"/></svg>Diễn tập AUTO</button><button data-mode="HOLD">Diễn tập HOLD</button><button data-mode="RTL">Diễn tập RTL</button></div><span id="command-availability" class="command-availability"></span></div>
+          </div>
+          <aside id="test-console" class="test-console" hidden><div class="drawer-heading"><h2>Điều kiện diễn tập</h2><button id="close-test-console" class="icon-button" aria-label="Đóng điều kiện diễn tập"><svg class="icon"><use href="#i-close"/></svg></button></div><p>Mọi phản hồi bên dưới được bơm vào mô hình cục bộ.</p><div class="control-stack"><button id="pause-telemetry">Tạm dừng telemetry</button><button id="toggle-video">Mô phỏng mất video</button></div><fieldset><legend>Phản hồi cho lệnh đang chờ</legend><button id="ack-accepted">Bơm ACK accepted</button><button id="ack-rejected">Bơm ACK rejected</button><button id="observe-mode">Bơm telemetry xác nhận chế độ</button></fieldset><fieldset><legend>Mission · phản hồi mô hình</legend><button id="mission-ack">Bơm ACK upload</button><button id="mission-readback">Bơm readback khớp</button><button id="mission-advance">Hoàn tất một tuyến giả lập</button></fieldset><div id="fly-checks" class="check-list"></div><p class="small-note">Chờ lệnh: 5 giây. Telemetry cũ: 3 giây.</p><button id="reset-rehearsal" class="full">Bắt đầu phiên diễn tập mới</button></aside>
+        </div>
+      </section>
+      <section id="workspace-inspect" class="workspace" hidden><div class="empty-workspace"><div class="sensor-frame"><svg class="icon"><use href="#i-sensor"/></svg></div><span class="empty-code">Payload / Chưa kết nối</span><h2>Chưa có nguồn hình</h2><p>Kết nối camera và cấu hình payload để mở không gian quan sát. Prototype hiện lập tuyến trên polygon tọa độ; camera và telemetry vẫn là dữ liệu diễn tập.</p><div id="video-status" class="validation">Kênh video diễn tập sẵn sàng; chưa có luồng hình.</div><button id="inspect-fly">Mở bàn diễn tập lỗi kênh<svg class="icon"><use href="#i-chevron"/></svg></button></div></section>
+      <section id="workspace-review" class="workspace" hidden><div class="review-heading"><div><span class="empty-code">Phiên diễn tập hiện tại</span><h2>Nhật ký sự kiện</h2><p>Truy lại yêu cầu, phản hồi và trạng thái đã quan sát.</p></div><button id="export-events"><svg class="icon"><use href="#i-download"/></svg>Xuất nhật ký JSON</button></div><div class="table-scroll"><table><thead><tr><th>STT</th><th>Thời gian phiên</th><th>Sự kiện</th><th>Chi tiết</th></tr></thead><tbody id="event-rows"></tbody></table></div><p class="small-note">2.000 sự kiện gần nhất trong bộ nhớ. Xuất để giữ chứng cứ trước khi bắt đầu phiên mới.</p></section>
+    </main>
+  </div>
+  <dialog id="new-session-dialog"><form method="dialog"><div class="dialog-heading"><svg class="icon"><use href="#i-review"/></svg><h2>Bắt đầu phiên mới?</h2></div><p>Nhật ký hiện tại sẽ rời bộ nhớ. Xuất nhật ký trước nếu cần giữ chứng cứ.</p><div class="dialog-actions"><button value="cancel">Giữ phiên hiện tại</button><button id="export-before-reset" type="button">Xuất nhật ký</button><button id="confirm-reset" value="reset" class="primary">Bắt đầu phiên mới</button></div></form></dialog>
+<dialog id="coordinates-dialog"><form method="dialog"><div class="dialog-heading"><h2>Ranh giới khảo sát</h2><button class="icon-button light" value="cancel" aria-label="Đóng tọa độ"><svg class="icon"><use href="#i-close"/></svg></button></div><p>Mỗi dòng: latitude, longitude (WGS84). 3–64 đỉnh, không lặp lại đỉnh đầu. Khu vực mẫu chưa phải site bay được duyệt.</p><textarea id="coordinates-input" rows="8" spellcheck="false" aria-label="Các đỉnh polygon WGS84"></textarea><p id="coordinates-error" role="alert"></p><div class="dialog-actions"><button value="cancel">Hủy</button><button id="apply-coordinates" type="button" class="primary">Áp dụng và tính tuyến</button></div></form></dialog>
+<dialog id="library-dialog"><form method="dialog"><div class="dialog-heading"><h2>Nhiệm vụ đã lưu</h2><button class="icon-button light" value="cancel" aria-label="Đóng thư viện"><svg class="icon"><use href="#i-close"/></svg></button></div><p>Lưu trên trình duyệt này. Chọn một bản để mở và tính lại; mission trên mô hình vẫn giữ nguyên.</p><div id="mission-library-list"></div></form></dialog>
+</body>
+</html>

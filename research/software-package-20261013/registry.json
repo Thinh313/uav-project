@@ -1,0 +1,82 @@
+{
+  "aggregates": {
+    "cells_by_state": {
+      "sourced": 3
+    },
+    "coverage_pct": null,
+    "n_entities": 1,
+    "rollup": {},
+    "rollup_field": null,
+    "universe_estimate": null
+  },
+  "registry": {
+    "Signed software package definitions": {
+      "entity_type": null,
+      "fields": {
+        "independent_trust": {
+          "claims": [
+            {
+              "capture": {
+                "fetched_at": "2026-10-13T02:13:29.849859+00:00",
+                "origin_id": "tuf-spec",
+                "sha256": "f20fda0dda7128f3b9cc1f12f3d90301b0f6e163576ba285bfe485d1671e8def",
+                "snapshot": "tuf-spec.html",
+                "source": "tuf-spec",
+                "url": "https://theupdateframework.github.io/specification/latest/"
+              },
+              "evidence_span": "trusted keys",
+              "extraction": "normalized",
+              "source": "tuf-spec",
+              "tier": "A",
+              "value": "TUF defines trusted keys and roles; PACK15 uses only a separately supplied engineering trust anchor and is not TUF-compliant"
+            }
+          ],
+          "state": "sourced",
+          "value": "TUF defines trusted keys and roles; PACK15 uses only a separately supplied engineering trust anchor and is not TUF-compliant"
+        },
+        "signature_algorithm": {
+          "claims": [
+            {
+              "capture": {
+                "fetched_at": "2026-10-13T02:13:28.319936+00:00",
+                "origin_id": "node-crypto",
+                "sha256": "15075fdeec2d16f9c1dc13fb594ef3022c22594cf3ab2c758425e4d8dea9a2b5",
+                "snapshot": "node-crypto.html",
+                "source": "node-crypto",
+                "url": "https://nodejs.org/download/release/v24.14.1/docs/api/crypto.html"
+              },
+              "evidence_span": "Ed25519",
+              "extraction": "normalized",
+              "source": "node-crypto",
+              "tier": "A",
+              "value": "Node crypto supports Ed25519; implementation uses null algorithm with Ed25519 keys"
+            }
+          ],
+          "state": "sourced",
+          "value": "Node crypto supports Ed25519; implementation uses null algorithm with Ed25519 keys"
+        },
+        "version_freshness": {
+          "claims": [
+            {
+              "capture": {
+                "fetched_at": "2026-10-13T02:13:29.849859+00:00",
+                "origin_id": "tuf-spec",
+                "sha256": "f20fda0dda7128f3b9cc1f12f3d90301b0f6e163576ba285bfe485d1671e8def",
+                "snapshot": "tuf-spec.html",
+                "source": "tuf-spec",
+                "url": "https://theupdateframework.github.io/specification/latest/"
+              },
+              "evidence_span": "Rollback attacks.",
+              "extraction": "normalized",
+              "source": "tuf-spec",
+              "tier": "A",
+              "value": "TUF addresses rollback attacks; PACK15 only enforces caller minimum sequence, expiry and an independent expected digest"
+            }
+          ],
+          "state": "sourced",
+          "value": "TUF addresses rollback attacks; PACK15 only enforces caller minimum sequence, expiry and an independent expected digest"
+        }
+      }
+    }
+  }
+}

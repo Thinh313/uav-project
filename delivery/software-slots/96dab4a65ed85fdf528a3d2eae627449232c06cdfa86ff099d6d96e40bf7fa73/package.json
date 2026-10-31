@@ -1,0 +1,39 @@
+{
+  "name": "rtr-aeris-workbench",
+  "version": "1.10.0",
+  "private": true,
+  "type": "module",
+  "description": "Independent RtR GCS workbench and real loopback ArduPilot SITL adapter",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "start": "node --max-semi-space-size=1 tools/server.mjs",
+    "test": "node --test tests/*.test.mjs && npm run test:controls",
+    "check": "node --check app/app.mjs && node --check app/core/mission.mjs && node --check app/core/flight.mjs && node --check app/core/survey.mjs && node --check app/core/session.mjs && node --check app/core/device.mjs && node --check tools/server.mjs && node --check app/core/compiler.mjs && node --check services/mavlink.mjs && node --check services/sitl.mjs && node --check app/sitl-ui.mjs && node --check app/survey-ui.mjs && node --check app/core/geodata.mjs && node --check app/core/offline.mjs && node --check services/geodata.mjs && node --check app/offline-sw.mjs && node --check app/native-ui.mjs && node --check app/core/native-capture.mjs && node --check app/core/qgc.mjs && node --check app/qgc-ui.mjs && node --check app/core/execution-record.mjs && node --check services/execution-archive.mjs && node --check app/review-ui.mjs && node --check app/core/vehicle-profile.mjs && node --check app/profile-ui.mjs && node --check tools/control_layout_qa.mjs && node --check app/core/benchmark.mjs && node --check app/benchmark-ui.mjs && node --check tools/bench06_sitl_qa.mjs && node --check tools/bench06_freeze.mjs && node --check tools/bench06_browser_qa.mjs && node --check app/core/recovery.mjs && node --check app/recovery-ui.mjs && node --check tools/recovery07_sitl_qa.mjs && node --check services/archive-store.mjs && node --check tools/journal08_qa.mjs && node --check tools/journal08_sitl_qa.mjs && node --check app/core/handoff.mjs && node --check app/handoff-ui.mjs && node --check services/survey-results.mjs && node --check tools/handoff09_sitl_qa.mjs && node --check tools/handoff09_browser_qa.mjs && node --check tools/handoff09_fault_qa.mjs && node --check tools/handoff09_worker.mjs && node --check app/core/stream-handoff.mjs && node --check app/stream-ui.mjs && node --check services/stream-io.mjs && node --check services/data-store.mjs && node --check services/datasets.mjs && node --check services/recipient.mjs && node --check tools/stream_handoff.mjs && node --check tools/stream10_worker.mjs && node --check tools/stream10_browser_qa.mjs && node --check tools/stream10_fault_qa.mjs && node --check tools/stream10_freeze.mjs && node --check services/transfer-resume.mjs && node --check services/data-lifecycle.mjs && node --check app/storage-ui.mjs && node --check app/core/recipient-acceptance.mjs && node --check services/recipient-acceptance.mjs && node --check app/acceptance-ui.mjs && node --check app/core/geo-policy.mjs && node --check app/core/geo-quality.mjs && node --check app/geography-ui.mjs && node --check app/core/deployment.mjs && node --check services/software-release.mjs && node --check tools/release.mjs && node --check tools/deploy-launch.mjs && node --check services/deployment-status.mjs && node --check app/deployment-ui.mjs && node --check services/deployment-runtime.mjs",
+    "start:sitl": "AERIS_ENABLE_SITL=1 node --max-semi-space-size=1 tools/server.mjs",
+    "test:sitl": "AERIS_EVIDENCE_DIR=evidence/profile05/flight-regression node tools/sitl_qa.mjs",
+    "build:native": "python3 -B tools/build_native.py",
+    "test:qgc": "AERIS_EVIDENCE_DIR=evidence/profile05/qgc-regression node tools/qgc_sitl_qa.mjs",
+    "test:review": "AERIS_EVIDENCE_DIR=evidence/profile05/review-regression node tools/review04_sitl_qa.mjs",
+    "test:profile": "node tools/profile05_sitl_qa.mjs",
+    "test:controls": "node tools/control_layout_qa.mjs",
+    "bench:corpus": "node tools/build_bench06_suite.mjs",
+    "test:benchmark": "node tools/bench06_sitl_qa.mjs",
+    "test:benchmark:browser": "node tools/bench06_browser_qa.mjs",
+    "test:recovery": "node tools/recovery07_sitl_qa.mjs",
+    "test:recovery:browser": "node tools/recovery07_browser_qa.mjs",
+    "test:journal": "node tools/journal08_qa.mjs",
+    "test:journal:sitl": "node tools/journal08_sitl_qa.mjs",
+    "test:handoff:browser": "node tools/handoff09_browser_qa.mjs",
+    "test:handoff:sitl": "node tools/handoff09_sitl_qa.mjs",
+    "test:handoff:fault": "node tools/handoff09_fault_qa.mjs",
+    "test:stream:browser": "node tools/stream10_browser_qa.mjs",
+    "test:stream:fault": "node tools/stream10_fault_qa.mjs",
+    "test:lifecycle": "node tools/lifecycle12_campaign.mjs",
+    "test:lifecycle:browser": "node tools/lifecycle12_browser_qa.mjs",
+    "test:acceptance": "node tools/accept13_campaign.mjs",
+    "test:acceptance:browser": "node tools/accept13_browser_qa.mjs",
+    "release": "node tools/release.mjs"
+  }
+}

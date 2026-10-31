@@ -1,0 +1,8 @@
+.source87{display:flex;gap:4px;align-items:center;flex:none}.source87 a{display:grid;place-items:center;min-height:48px;padding:8px 10px;border:1px solid var(--glass-rule);border-radius:10px;font-size:13px;color:var(--glass-ink);text-decoration:none}.source87 a[aria-current]{border-color:#c6a631;background:#c6a63120}.topbar .aircraft{min-width:0}.topbar .concept-mark{display:none}.topbar .authority-chip{min-width:150px;max-width:180px}#fileops87{border-top:1px solid var(--glass-rule);margin-top:16px;padding-top:12px}#operations87 article{padding:12px 0;border-bottom:1px solid var(--glass-rule)}#operations87 p{font-size:13px;overflow-wrap:anywhere}#operations87 small{display:block;margin:8px 0}body[data-source87=sitl] #task-pane,body[data-source87=sitl] #review-panel,body[data-source87=sitl] #native-fly-controls{display:none!important}.source87 a:focus-visible{outline:2px solid #d9b631;outline-offset:2px}@media(max-width:1150px){.source87 a{font-size:12px;padding:6px}.topbar .satellite{display:none}.topbar .authority-chip{min-width:120px}.topbar .aircraft{display:none}}
+
+@media(min-width:1151px) and (max-width:1450px){.topbar .satellite{display:none}.topbar .authority-chip{min-width:180px;max-width:190px}}
+
+button,button *,nav a,summary{-webkit-user-select:none;user-select:none}input,textarea{-webkit-user-select:text;user-select:text}
+
+/* Simulator observations never share the illustrative mission/camera background in any view. */
+body[data-source87=sitl] #camera-scene,body[data-source87=sitl] #map-scene,body[data-source87=sitl] .reticle,body[data-source87=sitl] #swap,body[data-source87=sitl] #camera-meta,body[data-source87=sitl] .scene-top .camera-chip{display:none!important}

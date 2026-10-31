@@ -1,0 +1,35 @@
+package vn.rtr.aeris.phone06;
+import java.util.*;import java.nio.file.*;import java.io.*;
+public final class Policy06Test{
+ static boolean targeted=false;static List<String>ok=new ArrayList<>();interface Work{void run()throws Exception;}static void check(boolean b)throws Exception{if(!b)throw new Exception("ASSERTION");}static void reject(Work w)throws Exception{boolean hit=false;try{w.run();}catch(IOException e){hit=true;}check(hit);}static void test(String id,Work w)throws Exception{if(targeted&&!id.startsWith("T25")&&!id.startsWith("T26"))return;w.run();ok.add(id);System.out.println("PASS "+id);}static ManualPolicy06 ready()throws Exception{ManualPolicy06 p=new ManualPolicy06();p.observe(5,true,0);p.acquire("g",0,true,true,0,0,500,0);return p;}static String token(ManualPolicy06 p){return(String)p.snapshot(0).get("lease");}static void neutral(ManualPolicy06 p)throws Exception{String t=token(p);p.pointer("g",t,"left",1,0);p.sample("g",t,1,0,0,1,-1,0,0,500,0);}
+ static Map<String,Object>response(Map<String,Object>q){Map<String,Object>r=new LinkedHashMap<>(q);r.putAll(Data97.m("format","aeris-phone06-admission","ok",true,"remainingDurationMs",900000L,"simulationOnly",true,"hardwareAuthenticated",false,"manualActualQualified",false,"neutralProbeAllowed",false));return r;}static Map<String,Object>challenge(PhoneAdmission06 a)throws Exception{return a.challenge06(Data97.m("run","s00000000000000000000","containerId","a"),"source");}
+ public static void main(String[]args)throws Exception{targeted=args.length>1;Path root=Paths.get(args[0]);Files.createDirectory(root);
+ test("M01_READY_NO_ACTUATION",()->{ManualPolicy06 p=ready();check(p.enabled()&&!p.active()&&!p.expired(1000)&&!p.neutralRequired());});
+ test("M02_FIRST_NONNEUTRAL",()->{ManualPolicy06 p=ready();String t=token(p);p.pointer("g",t,"left",1,0);reject(()->p.sample("g",t,1,0,0,1,-1,0,0,500,10));check(!p.enabled());});
+ test("M03_NEUTRAL_THEN_NEW_AXES",()->{ManualPolicy06 p=ready();neutral(p);String t=token(p);p.approveWire("g",t,0,true);p.sample("g",t,2,100,100,1,-1,0,0,600,80);p.approveWire("g",t,100,true);check(p.axes()[2]==600&&p.neutralRequired());});
+ test("M04_REPLAY_SEQ",()->{ManualPolicy06 p=ready();neutral(p);reject(()->p.sample("g",token(p),1,50,50,1,-1,0,0,500,0));});
+ test("M05_FUTURE_SAMPLE",()->{ManualPolicy06 p=ready();p.pointer("g",token(p),"left",1,0);reject(()->p.sample("g",token(p),1,1,0,1,-1,0,0,500,0));});
+ test("M06_151MS_SAMPLE",()->{ManualPolicy06 p=ready();p.pointer("g",token(p),"left",1,0);reject(()->p.sample("g",token(p),1,0,151,1,-1,0,0,500,0));});
+ test("M07_250MS_NATIVE_CUTOFF",()->{ManualPolicy06 p=ready();neutral(p);check(p.expired(250));reject(()->p.approveWire("g",token(p),250,true));});
+ test("M08_49MS_WIRE_PACE",()->{ManualPolicy06 p=ready();neutral(p);String t=token(p);p.approveWire("g",t,0,true);p.sample("g",t,2,49,49,1,-1,0,0,500,0);reject(()->p.approveWire("g",t,49,true));});
+ test("M09_WRONG_POINTER",()->{ManualPolicy06 p=ready();p.pointer("g",token(p),"left",1,0);reject(()->p.sample("g",token(p),1,0,0,2,-1,0,0,500,0));});
+ test("M10_REVOKE_RETAINS_NEUTRAL_DEBT",()->{ManualPolicy06 p=ready();neutral(p);p.approveWire("g",token(p),0,true);p.revoke("cancel");check(!p.enabled()&&p.neutralRequired());p.approveNeutral(100,true);p.neutralWritten();check(!p.neutralRequired());});
+ test("M11_MODE_OBSERVED_1499",()->{ManualPolicy06 p=new ManualPolicy06();p.observe(3,true,0);p.requestMode(5,0);p.observe(5,true,1499);check(p.takenOver()&&!p.pending());});
+ test("M12_MODE_TIMEOUT_1501",()->{ManualPolicy06 p=new ManualPolicy06();p.observe(3,true,0);p.requestMode(5,0);reject(()->p.observe(5,true,1501));});
+ test("M13_UNEXPECTED_MODE",()->{ManualPolicy06 p=new ManualPolicy06();p.observe(3,true,0);p.requestMode(5,0);reject(()->p.observe(4,true,100));});
+ test("M14_WRONG_GENERATION",()->{ManualPolicy06 p=ready();reject(()->p.pointer("old",token(p),"left",1,0));});
+ test("M15_STALE_HEALTH",()->{ManualPolicy06 p=ready();neutral(p);reject(()->p.approveWire("g",token(p),50,false));});
+ test("M16_NO_LONG_WRAP",()->reject(()->DirectTransport95.integer06(Data97.m("x",4294967296L),"x",-1000,1000)));
+ test("M17_ACTUAL_JSON_SERIALIZATION",()->check(Data97.json(ready().snapshot(0)).contains("NEUTRAL_READY_NO_ACTUATION")));
+ test("W18_ACTUAL_POST_WAL_OWNER_LOSS",()->{try(NativeFixture06 f=new NativeFixture06(root.resolve("owner"))){String t=f.enable();f.transport.crewGuard02=(wire,n)->{throw new IOException("FIXTURE_OWNER_LOST_AFTER_WAL");};reject(()->f.transport.manual06(f.input(t)));check(f.wire.size()==0&&!f.transport.isOpen());check(Files.readString(f.root.resolve("raw.jsonl")).contains("TX_INTENT"));}});
+ test("W19_ACTUAL_POST_WAL_SAMPLE_AGE",()->{try(NativeFixture06 f=new NativeFixture06(root.resolve("age"))){String t=f.enable();f.transport.crewGuard02=(wire,n)->f.now=151;reject(()->f.transport.manual06(f.input(t)));check(f.wire.size()==0&&!f.transport.isOpen());}});
+ long[]clock={100};PhoneAdmission06 a=new PhoneAdmission06(()->clock[0]);
+ test("A20_BOUND_RTT_LOCAL_LEASE",()->{Map<String,Object>q=challenge(a);a.accept(response(q),q,0,100);check(((Number)a.snapshot().get("phoneExpiresAtMs")).longValue()==900000);});
+ test("A21_WRONG_NONCE",()->{Map<String,Object>q=challenge(a),r=response(q);r.put("nonce","wrong");reject(()->a.accept(r,q,100,100));reject(()->a.require("s00000000000000000000",false));});
+ test("A22_EXACT_EXPIRY",()->{Map<String,Object>q=challenge(a);a.accept(response(q),q,100,100);clock[0]=900100;reject(()->a.require("s00000000000000000000",false));});
+ test("A23_SUPERSEDED_RESPONSE",()->{clock[0]=100;PhoneAdmission06 fresh=new PhoneAdmission06(()->100);Map<String,Object>old=challenge(fresh);challenge(fresh);fresh.clear();reject(()->fresh.accept(response(old),old,100,100));});
+ test("T24_VALIDATED_PUBLIC_COMMIT",()->{Path p=Files.createDirectory(root.resolve("trust"));Map<String,Object>r=PhoneTrust06.install(p,"{}".getBytes(),b->StrictJson02.parse(b));check(Boolean.TRUE.equals(r.get("ok")));});
+ test("T25_EXISTING_POLICY_DURABLY_CONFIRMED",()->{Path p=Files.createDirectory(root.resolve("repeat"));PhoneTrust06.install(p,"{}".getBytes(),b->StrictJson02.parse(b));check(Boolean.TRUE.equals(PhoneTrust06.install(p,"{}".getBytes(),b->StrictJson02.parse(b)).get("alreadyCommitted")));});
+ test("T26_COMMIT_FAILURE_RETAINED_NO_FALSE_SUCCESS",()->{Path p=Files.createDirectory(root.resolve("fault"));reject(()->PhoneTrust06.install(p,"{}".getBytes(),b->{},(tmp,dest,bytes)->{Files.write(dest,bytes);throw new IOException("INJECTED_DIRECTORY_FSYNC_BOUNDARY_FAILURE");}));check(Files.exists(p.resolve("admin-trust.json")));reject(()->PhoneTrust06.install(p,"{}".getBytes(),b->{},new PhoneTrust06.Commit(){public void commit(Path a,Path d,byte[]x)throws Exception{throw new IOException("UNUSED");}public void confirmExisting(Path d)throws Exception{throw new IOException("INJECTED_CONFIRM_FSYNC_FAILURE");}}));});
+ System.out.println(Data97.json(Data97.m("status","PASS_HOST_FIXTURES_NOT_ANDROID_OR_REAL_AP","inputIds",ok,"distinctInputs",ok.size(),"fixtures","SYNTHETIC_NATIVE_STATE_NO_NETWORK_NO_AP")));}
+}

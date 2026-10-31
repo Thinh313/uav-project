@@ -1,0 +1,7 @@
+# ADR-085 — archive whole JOURNAL68 snapshot generations
+
+Accepted in isolated mock scope, 16/10/2026. Catalog68 CREATE contains digest of preceding run SHA/status; removing an individual WAL invalidates subsequent recovery. JOURNAL68 remains frozen. ARCHIVE69 therefore owns small read-only snapshot generations, exported and receiver-verified as complete units, and can reclaim only its own hot replica after explicit digest-bound confirmation. Original68, immutable snapshots, exported packages, receiver copies and operation receipts are outside deletion scope. This does not make live68 quota reusable; applying it to live runtime needs controlled rotation/migration later.
+
+Use existing pinned68 parser/Arbiter read-only for semantic verification, stdlib OS lock, canonical bounded package, no new dependency. Each receiver import creates new identity and historical-only inspection; no session or authority restoration. Commit receipts via exclusive files + fsync directory, retain PENDING operations after restart. Cleanup journal precedes deletion; interruption is visibly HOLD, never auto-resumed. A new plan must recheck remaining bytes against full archived manifest and exact new confirmation.
+
+Capacity accounting includes audit, packages and imports; export reserves for receiver copy and receipt headroom. No automatic eviction and no claim that moving hot data into another directory frees disk. Actual device powercut, authentication, external signature/anchor and Android storage semantics need separate qualification.

@@ -1,0 +1,13 @@
+domain: protocol22
+entity_label: Official protocol specifications
+schema:
+  type_field: null
+  fields: [addressing, authority, ack_scope, serialization]
+rollup_field: null
+universe:
+  estimate: null
+  basis: Bounded official references, no exhaustive population or distribution
+refresh_days:
+  default: 14
+alias_map: {}
+ambiguous_clusters: []

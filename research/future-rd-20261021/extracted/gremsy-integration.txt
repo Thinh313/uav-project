@@ -1,0 +1,285 @@
+AIRPIXEL ENTIRE SET INSTALLATION FOR CUBE PILOT/PIXHAWK | GREMSY DOCUMENTATION
+GREMSY DOCUMENTATION
+⌘
+Ctrl
+k
+✧ Support
+✧ Github
+✧ RMA Service
+More
+GREMSY DOCUMENTATION
+GREMSY PRODUCT SUPPORT
+GREMSY DOCUMENTATION
+Payloads
+GENERAL
+ORUS-L
+ZIO
+VIO
+GREMSY TINY SERIES
+LYNX
+Tiny Gimbal
+G-HADRON
+GIMBALS
+GENERAL
+Pixy LR S-Port V1
+Pixy LR S-Port V2
+Pixy LR
+FAQ
+GETTING STARTED
+Connection Diagram
+Set up with PX4
+Setup with Ardupilot
+Setup with Cube Pilot & Herelink
+Set up with Airpeak
+AIRPIXEL ENTIRE SET INSTALLATION FOR CUBE PILOT/PIXHAWK
+SETUP CAMERA STRINGER
+Pixy LR TWO-AXIS
+MIO
+MIO TWO-AXIS
+PIXY WE
+PIXY U
+Pixy S
+GREMSY T3V3
+GREMSY TWO-AXIS T3V3
+GREMSY T3PE
+GREMSY T7
+AEVO
+GIMBALS FOR M300/M350
+GENERAL
+PIXY SM
+PIXY MR
+GREMSY APP
+PAYLOAD PLUS
+GTUNE DESKTOP
+GREMSY FLASH TOOLS
+PAYLOAD ASSISTANT DESKTOP
+PAYLOAD SETTING APP
+ACCESSORIES
+QUICK RELEASE
+DAMPING
+SMART DOVERTAIL ADAPTER
+gPort
+Powered by GitBook
+On this page
+For the complete documentation index, see
+llms.txt
+. This page is also available as
+Markdown
+.
+ChatGPT
+On this page
+GREMSY PRODUCT SUPPORT
+GIMBALS
+Pixy LR
+AIRPIXEL ENTIRE SET INSTALLATION FOR CUBE PILOT/PIXHAWK
+Table of Contents
+Installation basics
+Mount Sony ILX-LR1 to Pixy-LR gimbal
+Installation of the ENTIRE with Pixy-LR wiring set
+USB configuration for EXIF geotagging
+WiFi configuration for control
+Installation basics
+Here is a list of cables you will need for connection of Sony ILX-LR1 mounted on Pixy-LR gimbal together with the Pixhawk / Ardupilot / Cube flight controller for geotagging and control of the camera.
+COM4-MavLink cable
+Pixy-LR connection harness:
+uBEC with power cables:
+Mount Sony ILX-LR1 to Pixy-LR gimbal
+STEP 1
+Mount the camera per Gremsy manual.
+Process is very easy:
+Use included screws to mount the camera body
+Attach box with USB & HDMI connector and mount by srew
+Aach cable to Molex 6 pin connector
+Installation of the ENTIRE with Pixy-LR wiring set
+STEP 1
+Use Pixy-LR connection harness cable and connect 7pin connector to CTRL port on gimbal quickrelease.
+STEP 2
+Connect the USB-C end of the harness to USB-C port of the gimbal.
+Connector is bent in 90 deg and should be oriented to the top.
+STEP 3
+Connect other end of the harness to the ENTIRE
+9 pin connector to the ENTIRE USBMULTI connector
+3 pin connector to the ENTIRE EXT port
+STEP 4
+Use COM4-MavLink cable (photo on the top) and connect to the gimbal Quick Release
+STEP 5
+Other end of COM4-MavLink cable connect to the ENITRE UNI-C port
+STEP 6
+Use pre-connected uBEC set and connect JST SH 2pin end of the set and connect to the ENTIRE PWR port
+STEP 7
+At this point we have almost all important connections between the Pixy-LR and the ENTIRE ready
+STEP 8
+Connect MavLink end of Pixy-LR connection harness to PixHawk flight controller.
+STEP 9
+Connect power to the ENTIRE and Pixy-LR gimbal.
+Check polarity!
+ENTIRE and the gimbal needs separate power connections. ENTIRE’s uBEC accepts 7 – 23V and needs at least 1 Amp of current available.
+More information here
+.
+For Pixy-LR power requirements please follow gimbal manual.
+STEP 10
+You have two options how to use our system in cooperation with Gremsy:
+You will use ENTIRE & MavCam only control tilt / yaw of the gimbal via HereLink hw wheel / on-screen joystick.
+In this case is setting simple:
+SERIAL1_PROTOCOL: “Mavlink2”
+SERIAL1_BAUD: “921600“
+MNT1_TYPE: “0”
+MNT2_TYPE: “0
+Use new Ardupilot gimbal control fatures (like point gimbal automatically)
+In this case, gimbal will be controlled by the Cube and ENTIRE & MavCam will command Cube directly to control attitude of the gimbal. For this case you have to set:
+SERIAL1_PROTOCOL: “Mavlink2”
+SERIAL1_BAUD: “921600“
+MNT1_DEFLT_MODE: “3”
+MNT1_TYPE: “6”
+RC6_OPTION: “214”
+RC7_OPTION: “212”
+RC8_OPTION: “213”
+MNT1_RC_RATE: “90”
+For newest Ardupilot firmwares you need to set:
+CAM1_TYPE: “5”
+If you do not have this option in your Ardupilot firmware parameters, ENTIRE will work by default.
+(IF YOU USED TELEM2, USE SERIAL2 | MNT2)
+Baudrate!Use SERIALx_BAUD 921600 in all cases, even if Gremsy manual suggest lower value, use 921600bps. It is because ENTIRE transfers lots of additional information via communication line so bandwidth is important.Other configuration!Configuration may change over time, please check Gremsy manuals for more information.
+STEP 11
+Connect your gimbal to gTune app in your phone or PC
+Navigate to SETTINGS->CONTROLS->MAVLINK
+Configure COM2 baudrate to 921600bps (used for connection to Cube)
+Configure COM4 baudrate to 230400bps (used for ENTIRE connection)
+STEP 12
+Navigate to SETTINGS->CONTROLS->MAVLINK
+Configure COM4 baudrate to 230400bps (used for ENTIRE connection)
+Make sure you clicked
+REBOOT
+after each change
+STEP 13
+Open Entire’s configuration page (
+how to
+)
+Open ENTIRE’s MENU web page and set UNI-C port to
+MavLink mode
+230400 bps
+STEP 14
+If all configuration was done properly, you will get UNI-C “online” and see
+GPS information update speed
+ATTI information update speed
+Gimbal angle readings (P-pitch / Y-yaw)
+(YAW information is absolute heading)
+If port C is not “online”, do not use other baudrates or other port modes. Re-check baudrate settings in the gimbal and the ENTIRE, reboot all systems.
+STEP 15
+Open MENU -> (geotagging) Settings
+From the list select “GPS data preview”
+In the popup you should get similar data if the GPS / RTK has enough signal.
+Data preview popup is real-time and should change as drone / gimbal moves.
+USB configuration for EXIF geotagging
+STEP 1
+ENTIRE needs to be set to “
+USB Control
+” mode and updated to the latest firmware to have this procedure working.
+Navigate to
+MENU->Capture detection
+and set to “
+Hotshoe sync
+” – important for high acurracy and reliability!
+STEP 2
+Enable GeoTagging via ENTIRE
+MENU->Logging mode-> Direct EXIF
+STEP 3
+Select camera mount mode to fixed mount depending on your mount of the camer in the drone
+FIXED TOP
+Camera top is aiming top and lens is looking in direction of the flight
+FIXED FORWARD
+Camera top is aiming in direction of the flight and lens is looking straight down
+FIXED LEFT/RIGHT
+Camera top is aiming left or right and the lens is looking straight down
+STEP 4
+Select camera Pitch / Yaw offset if camera is not fixed in 90degree offset steps
+This step is optional and usually can be skipped
+STEP 5
+pen the MENU -> (Geotagging) Settings
+Scroll down to Other features
+And insert X, Y, Z offsets.
+When
+GPS
+is used, offset is counted from body center (if correct offset is configured in the FC). If your flight controller does not have configured antennas offsets, configure offset from the camera to the antenna.
+When
+RTK
+is used, offset is counted from body center (if correct offset is configured in the FC). If your flight controller does not have configured antennas offsets, configure offset from the camera to the
+antenna A
+.
+Offsets are in millimeters!
+STEP 6
+Open camera MENU and navigate to:
+SETUP->USB->USB Connection Mode->MassStorage
+STEP 7
+Open camera MENU and navigate to:
+NETWORK->Cnct./PC Remote->PC Remote Function->OFF
+STEP 8 – GEOTAGGING TEST
+Your setup is ready to be used for geotsagging at this point
+ENTIRE has Self-Test routines for GeoTagging to easily check if all wiring is working well
+Make sure that all equipment is turned ON and camera is set to MASS STORAGE MODE
+Click to MENU->Configuration test and let the Entire to do a self-test
+At the beginning of the test, one photo will be triggered
+Entire will check if HotShoe sensor has properly recognized trigger
+Entire will check all necessary input data connections
+In case of any problems, result will provide hints to solve the issue
+Test photo will not be geotagged in the test method!
+WiFi configuration for control
+STEP 1
+Open camera MENU and navigate to
+NETWORK->Network Option->Access Authen. Settings
+Open this item and in submenu DISABLE authentication
+Confirm all warnings OK
+Access Authen. Settings should be
+OFF
+STEP 2
+Navigate to:
+NETWORK->Wi-Fi->Access Point Set
+And enter item
+Wait for scan of available accesspoints
+STEP 3
+From the list of networks, select Accesspoint of the ENTIRE
+Entire_xxxx
+Confirm OK
+STEP 4
+Camera will connect the ENTIRE via WiFi now
+Once done,
+confirm OK for return to the list
+STEP 5
+Click right (MANUAL SETTINGS) on the ENTIRE’s WiFi item to enter manual IP settings
+Scroll to IP Address settings “Auto” and change to “Manual”
+STEP 6
+Fill IP addresses and masks:
+192.168.122.1
+255.255.0.0
+192.168.10.1
+Confirm OK
+Camera will now re-connect the ENTIRE
+STEP 7
+Once connection is done, scroll up to
+“Wi-Fi Connect” and turn it ON
+STEP 8
+Navigate to:
+NETWORK->Cnct./PC Remote->PC Remote Function->ON
+STEP 9
+Now scroll to
+PAIRING
+and enter item
+Wait for initialization
+Once pairing confirmation for the ENTIRE shows, confirm OK
+*** YOU HAVE TO REPEAT THIS STEP AFTER EACH UPDATE OF THE ENTIRE FIRMWARE ***
+STEP 10 – EXPOSURE CONTROL TEST
+WiFi control should be now available together with the geotagging via USB. You can control exposure values via MavCam / ENTIRE’s web page, AIR Commander Link or MissionPlanner plugin.
+Remember to turn the camera OFF by power off switch! DO NOT DISCONNECT POWER otherwise all setings will be lost and you will have to start over!Firmware updatePairing needs to be done again after ENTIRE's firmware update!Info!WiFi connection is not initiated by the ENTIRE, camera is responsible for re-connection after reboot. ENTIRE is only "available" for camera connection. Thanks to this is connection stable and does not break ENTIRE's hotspot presence during setup.
+Previous
+Set up with Airpeak
+Next
+SETUP CAMERA STRINGER
+Last updated
+2 years ago
+Was this helpful?
+Installation basics
+Mount Sony ILX-LR1 to Pixy-LR gimbal
+Installation of the ENTIRE with Pixy-LR wiring set
+USB configuration for EXIF geotagging
+WiFi configuration for control
+Was this helpful?

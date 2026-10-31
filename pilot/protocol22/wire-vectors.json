@@ -1,0 +1,262 @@
+{
+  "format": "aeris-protocol22-corpus",
+  "version": 1,
+  "origin": "SYNTHETIC_REFERENCE_C_PACKETS",
+  "headerCommit": "8c63a49fe35aead7f9ef14031381c5e076ff743a",
+  "hardwareCapture": false,
+  "causalExecutionProven": false,
+  "vectors": [
+    {
+      "id": 0,
+      "fields": {
+        "type": 30,
+        "autopilot": 8,
+        "mavlink_version": 3
+      },
+      "nonFiniteFields": [],
+      "meta": {
+        "system": 1,
+        "component": 100,
+        "seq": 42
+      },
+      "rawHex": "fd0900002a0164000000000000001e08000003f4e4"
+    },
+    {
+      "id": 76,
+      "fields": {
+        "target_system": 1,
+        "target_component": 100,
+        "command": 531,
+        "param1": 2,
+        "param2": 40,
+        "param4": null
+      },
+      "nonFiniteFields": [
+        "param4"
+      ],
+      "meta": {
+        "system": 1,
+        "component": 100,
+        "seq": 42
+      },
+      "rawHex": "fd2000002a01644c00000000004000002042000000000000c07f00000000000000000000000013020164837d"
+    },
+    {
+      "id": 77,
+      "fields": {
+        "command": 531,
+        "result": 0,
+        "target_system": 255,
+        "target_component": 190
+      },
+      "nonFiniteFields": [],
+      "meta": {
+        "system": 1,
+        "component": 100,
+        "seq": 42
+      },
+      "rawHex": "fd0a00002a01644d00001302000000000000ffbef74c"
+    },
+    {
+      "id": 259,
+      "fields": {
+        "time_boot_ms": 1000,
+        "flags": 450,
+        "resolution_h": 1920,
+        "resolution_v": 1080,
+        "gimbal_device_id": 1
+      },
+      "nonFiniteFields": [],
+      "meta": {
+        "system": 1,
+        "component": 100,
+        "seq": 42
+      },
+      "rawHex": "fdec00002a0164030100e803000000000000000000000000000000000000c20100008007380400000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001f69a"
+    },
+    {
+      "id": 260,
+      "fields": {
+        "time_boot_ms": 1000,
+        "mode_id": 0,
+        "zoomLevel": 40,
+        "focusLevel": 50
+      },
+      "nonFiniteFields": [],
+      "meta": {
+        "system": 1,
+        "component": 100,
+        "seq": 42
+      },
+      "rawHex": "fd0d00002a0164040100e80300000000002042000048420d9e"
+    },
+    {
+      "id": 262,
+      "fields": {
+        "time_boot_ms": 1000,
+        "image_count": 10,
+        "available_capacity": 2048
+      },
+      "nonFiniteFields": [],
+      "meta": {
+        "system": 1,
+        "component": 100,
+        "seq": 42
+      },
+      "rawHex": "fd1300002a0164060100e803000000000000000000000000004500000a2cae"
+    },
+    {
+      "id": 263,
+      "fields": {
+        "time_boot_ms": 1000,
+        "time_utc": "9007199254740993",
+        "image_index": 10,
+        "capture_result": 1,
+        "q": [
+          1,
+          0,
+          0,
+          0
+        ],
+        "file_url": "corpus://synthetic/10"
+      },
+      "nonFiniteFields": [],
+      "meta": {
+        "system": 1,
+        "component": 100,
+        "seq": 42
+      },
+      "rawHex": "fd4700002a01640701000100000000002000e8030000000000000000000000000000000000000000803f0000000000000000000000000a0000000001636f727075733a2f2f73796e7468657469632f3130307a"
+    },
+    {
+      "id": 269,
+      "fields": {
+        "stream_id": 1,
+        "count": 1,
+        "flags": 1,
+        "framerate": 30,
+        "resolution_h": 1920,
+        "resolution_v": 1080,
+        "uri": "rtsp://example.invalid/synthetic",
+        "camera_device_id": 0,
+        "vfov": 4500
+      },
+      "nonFiniteFields": [],
+      "meta": {
+        "system": 1,
+        "component": 100,
+        "seq": 42
+      },
+      "rawHex": "fdd900002a01640d01000000f04100000000010080073804000000000101000000000000000000000000000000000000000000000000000000000000000000727473703a2f2f6578616d706c652e696e76616c69642f73796e746865746963000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000009411354c"
+    },
+    {
+      "id": 270,
+      "fields": {
+        "stream_id": 1,
+        "flags": 1,
+        "framerate": 30
+      },
+      "nonFiniteFields": [],
+      "meta": {
+        "system": 1,
+        "component": 100,
+        "seq": 42
+      },
+      "rawHex": "fd1300002a01640e01000000f0410000000001000000000000000000019182"
+    },
+    {
+      "id": 280,
+      "fields": {
+        "time_boot_ms": 1000,
+        "cap_flags": 288,
+        "gimbal_device_id": 1,
+        "pitch_min": -1.5707963267948966,
+        "pitch_max": 0.5235987755982988,
+        "yaw_min": -3.141592653589793,
+        "yaw_max": 3.141592653589793
+      },
+      "nonFiniteFields": [],
+      "meta": {
+        "system": 1,
+        "component": 1,
+        "seq": 42
+      },
+      "rawHex": "fd2100002a0101180100e8030000200100000000000000000000db0fc9bf920a063fdb0f49c0db0f4940017e61"
+    },
+    {
+      "id": 281,
+      "fields": {
+        "time_boot_ms": 1000,
+        "gimbal_device_id": 1,
+        "primary_control_sysid": 255,
+        "primary_control_compid": 190
+      },
+      "nonFiniteFields": [],
+      "meta": {
+        "system": 1,
+        "component": 1,
+        "seq": 42
+      },
+      "rawHex": "fd0b00002a0101190100e80300000000000001ffbe05a4"
+    },
+    {
+      "id": 285,
+      "fields": {
+        "time_boot_ms": 1000,
+        "flags": 32,
+        "gimbal_device_id": 1,
+        "q": [
+          0.9238795325112867,
+          0,
+          -0.3826834323650898,
+          0
+        ],
+        "target_system": 255,
+        "target_component": 190
+      },
+      "nonFiniteFields": [],
+      "meta": {
+        "system": 1,
+        "component": 1,
+        "seq": 42
+      },
+      "rawHex": "fd3100002a01011d0100e80300005e836c3f0000000015efc3be00000000000000000000000000000000000000002000ffbe000000000000000001e954"
+    },
+    {
+      "id": 287,
+      "fields": {
+        "target_system": 1,
+        "target_component": 1,
+        "gimbal_device_id": 1,
+        "pitch": -0.7853981633974483,
+        "yaw": 0,
+        "pitch_rate": null,
+        "yaw_rate": null
+      },
+      "nonFiniteFields": [
+        "pitch_rate",
+        "yaw_rate"
+      ],
+      "meta": {
+        "system": 1,
+        "component": 100,
+        "seq": 42
+      },
+      "rawHex": "fd1700002a01641f010000000000db0f49bf000000000000c07f0000c07f010101a7c9"
+    },
+    {
+      "id": 260,
+      "fields": {
+        "time_boot_ms": 1000,
+        "mode_id": 0
+      },
+      "nonFiniteFields": [],
+      "meta": {
+        "system": 1,
+        "component": 100,
+        "seq": 43
+      },
+      "rawHex": "fd0200002b0164040100e8035ac0"
+    }
+  ]
+}

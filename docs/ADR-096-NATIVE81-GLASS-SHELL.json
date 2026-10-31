@@ -1,0 +1,10 @@
+{
+  "decision": "Derive isolated Android WebView shell; reuse byte-pinned workflow44 and native79 opaque Java journal in a new package; port reviewed cockpit80 assets with a controller adapter. No in-place patch to old modules.",
+  "package": "vn.rtr.aeris.cockpit81",
+  "origin": "https://native81.aeris.invalid",
+  "permissions": [],
+  "persistenceFormat": "aeris-native44-workspace v1 retained, semantic replay and false operational/authorityRestorable flags",
+  "render": "Reviewed glass UI uses same CSS/SVG/image/font assets, viewport fallbacks. Target performance remains unverified.",
+  "surveyScope": "Polygon survey compiler; corridor compile not silently substituted; actual camera model is synthetic uncalibrated DEMO_CAMERA, not Phase One qualification.",
+  "unsignedGate": "Unsigned package can compile/inspect, cannot install new code on ordinary Android. Host browser+Java persistence evidence is not Android/ART evidence."
+}

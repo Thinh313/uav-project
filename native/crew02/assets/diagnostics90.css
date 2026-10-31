@@ -1,0 +1,25 @@
+/* Same material and typography as the reviewed cockpit; one bounded dialog. */
+#diagnostics90[hidden],#source90[hidden]{display:none!important}
+#diagnostics90{position:fixed;inset:calc(var(--top) + 12px) 24px calc(var(--bottom) + 12px) calc(var(--rail) + 24px);z-index:65;display:flex;flex-direction:column;border-radius:22px;overflow:hidden;background:var(--glass-dense);color:var(--glass-ink)}
+#diagnostics90>header{display:flex;justify-content:space-between;align-items:center;padding:16px 24px;gap:20px;border-bottom:1px solid var(--glass-rule);flex:none}
+#diagnostics90 h1{font:600 26px/1.15 Barlow;margin:4px 0 0}#diagnostics90 header span{font:500 14px Barlow;color:var(--glass-muted)}
+.diagnostic-body90{display:grid;grid-template-columns:1fr 1fr;gap:24px;overflow:auto;padding:20px 24px;min-height:0}.diagnostic-body90>section{min-width:0}.diagnostic-body90 h2,#review-diagnostic90 h2{display:flex;align-items:center;gap:10px;font:600 20px/1.3 Barlow;margin:0 0 12px}.diagnostic-body90 p{font:500 16px/1.5 Barlow;color:var(--glass-muted);margin:10px 0;max-width:60ch}.journal-section90{grid-column:1/-1;border-top:1px solid var(--glass-rule);padding-top:18px}
+#diagnostics90 button,#review-diagnostic90 button{min-height:48px;min-width:48px;padding:10px 14px;display:flex;align-items:center;justify-content:center;gap:8px;border:1px solid var(--glass-edge);border-radius:12px;background:rgba(255,255,255,.06);color:var(--glass-ink);font:600 16px/1.25 Barlow}
+.actions90{display:flex;flex-wrap:wrap;gap:10px}.actions90 button{flex:1 1 160px}.actions90 #play90{border-color:#edc83c80;color:#ffe58a;background:#edc83c12}#keys90[aria-pressed=true]{border-color:#edc83c;color:#ffe58a}#diagnostics90 output{display:block;font:600 16px/1.4 Barlow;margin-top:16px;overflow-wrap:anywhere}#diagnostics90 button:focus-visible,#source90 button:focus-visible{outline:2px solid #edc83c;outline-offset:2px}
+#source90{position:absolute;left:calc(var(--rail) + 24px);top:calc(var(--top) + 60px);z-index:4;border-radius:14px;display:flex;align-items:stretch;max-width:calc(100% - var(--rail) - var(--dock-width) - 80px);overflow:hidden}
+#source90 button{display:flex;align-items:center;justify-content:center;gap:10px;padding:10px 14px;min-height:56px;min-width:56px;font:600 16px Barlow;background:transparent;color:var(--glass-ink)}#source90 span{display:flex;flex-direction:column;gap:4px;align-items:flex-start}#source90 small{font:500 13px Barlow;color:var(--glass-muted)}#fly-play90{border-left:1px solid var(--glass-rule)}
+body:not([data-view=fly]) #source90{display:none}body[data-view=fly] .camera-chip,body[data-local-video90=true] .heading,body[data-local-video90=true] .reticle,body[data-local-video90=true] .camera-meta,body[data-local-video90=true] .gimbal-angle{visibility:hidden}
+#local-video90{width:100%;height:100%;object-fit:contain;background:#080a09;pointer-events:none}body[data-local-video90=true] #camera-scene{background:#080a09;transform:none!important}body[data-local-video90=true] #camera-scene:after{display:none}
+body[data-diagnostic90=true] .cockpit{pointer-events:none}#review-diagnostic90{margin-top:20px;padding-top:20px;border-top:1px solid var(--glass-rule)}#review-diagnostic90 p{font:500 15px/1.4 Barlow;overflow-wrap:anywhere}
+@media(max-width:1050px){.diagnostic-body90{grid-template-columns:1fr;gap:20px}#diagnostics90{inset:calc(var(--top) + 8px) 16px calc(var(--bottom) + 8px) calc(var(--rail) + 16px)}#diagnostics90>header{padding:12px 20px}.diagnostic-body90{padding:16px 20px}}
+body[data-theme=day] .actions90 #play90,body[data-theme=day] #keys90[aria-pressed=true]{color:#544208}
+
+body[data-alert=true] #source90{top:calc(var(--top) + 60px + var(--alert-height) + 16px)}
+/* Status length must never move the adjacent play target. */
+#source90{width:360px}#source-open90{flex:1;min-width:0!important;justify-content:flex-start!important}#source90 span{min-width:0}#source90 small{max-width:100%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}#fly-play90{flex:0 0 56px}
+
+#media-stage91{display:none}body[data-source87=sitl][data-local-video90=true] #media-stage91{display:block;position:absolute;left:calc(var(--rail) + 24px);top:calc(var(--top) + 132px);width:320px;height:180px;z-index:2;border:1px solid var(--glass-edge);border-radius:12px;overflow:hidden;background:#080a09}body[data-source87=sitl] #source90{z-index:5}#operations91 p{overflow-wrap:anywhere}#saf91 input{width:100%;min-width:0}#saf91 .fields83{flex-wrap:wrap}#saf91 label{flex:1;min-width:180px}
+
+/* Separate telemetry identity from synthetic-media island in SITL. */
+body[data-source87=sitl] .map-note84{left:auto;right:calc(var(--dock-width) + 42px);top:calc(var(--top) + 60px);max-width:min(360px,30vw);box-sizing:border-box}
+body[data-source87=sitl][data-alert=true] .map-note84{top:calc(var(--top) + 60px + var(--alert-height) + 16px)}

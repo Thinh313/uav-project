@@ -1,0 +1,26 @@
+/** Exact G17 effective handler with explicit source/mock-only physical/transport seams. */
+import fs from'node:fs';import path from'node:path';import{registerHooks}from'node:module';import{pathToFileURL}from'node:url';import{createHash}from'node:crypto';
+import{transform}from'../../pilot/beta06g17/overlay.mjs';
+const ROOT=path.resolve('.'),E='evidence/beta06/generation17/',url=p=>pathToFileURL(path.join(ROOT,p)).href,sources=new Map(),contexts=new Map();let seq=0;
+registerHooks({resolve(u,c,next){if(sources.has(u))return{url:u,shortCircuit:true};return next(u,c);},load(u,c,next){if(sources.has(u))return{format:'module',source:sources.get(u),shortCircuit:true};return next(u,c);}});
+function replace(s,a,b){if(s.split(a).length!==2)throw Error('EXACT_G17_FIXTURE:'+a);return s.replace(a,b);}
+function absolute(s,base,overrides={}){return s.replace(/(from\s*|import\()(['"])(\.[^'"]+)\2/g,(m,p,q,n)=>p+q+(overrides[n]??new URL(n,url(base)).href)+q);}
+export const fixtureResource=id=>contexts.get(id).resourceFactory;
+export const fixtureLauncher=id=>(value,parent)=>{const c=contexts.get(id);c.events.push({kind:'launcher',remainingMs:value.remainingMs,at:performance.now()});if(value.controllerPid!==parent||!Number.isSafeInteger(value.remainingMs)||value.remainingMs<=0||value.remainingMs>2700000)throw Error('FIXTURE_PARENT_DURATION_REFUSED');};
+export async function createAppFixture({out,resourceFactory=null,network=false,parentHostRemainingMs=30000}={}){
+ out=path.resolve(out);if(!['builder-','qa-','nativebuilder-'].some(n=>out.startsWith(path.join(ROOT,E,n))))throw Error('EXCLUSIVE_G17_FIXTURE_OUTPUT');const id=++seq,events=[],ownURLs=[];
+ const appURL=url('planning/beta06g17/effective-app.mjs')+'?'+id,mediaURL=url('planning/beta06g17/media/effective-server.mjs')+'?'+id,resourceURL=url('planning/beta06g17/effective-resource.mjs')+'?'+id,launcherURL=url('planning/beta06g17/effective-launcher.mjs')+'?'+id;
+ const compiled=transform('pilot/beta06g5/app.mjs',fs.readFileSync('pilot/beta06g5/app.mjs','utf8'));let s=compiled;
+ s=replace(s,'FlightBeta06G17 as Flight01','FlightFixture as Flight01');s=replace(s,"evidenceRoot:path.join(R,'evidence/beta06/generation17/flight')","evidenceRoot:path.join(out,'fixture-flight')");
+ s=replace(s,"const admission=fs.statfsSync(R);if(admission.bavail*admission.bsize<29*2**30)throw Error('ADMISSION_BELOW_29GIB');","const admission={fixtureOnly:true}; /* SOURCE_MOCK_NO_RUNTIME: physical constructor facade only */");
+ s=replace(s,'return{startupReady:','return{uiTimingForFixture:uiTiming,historyReaderForFixture:historyReader,startupReady:');
+ const resource=resourceFactory??(async()=>({tick(){events.push({kind:'resource.tick',at:performance.now()});},async close(){events.push({kind:'resource.close',at:performance.now()});return{closed:true,terminationCode:0,fixtureOnly:true};}}));
+ contexts.set(id,{resourceFactory:async options=>{events.push({kind:'resource.begin',at:performance.now()});const guard=await resource(options);events.push({kind:'resource.ready',at:performance.now()});return guard;},events});
+ sources.set(resourceURL,`import{fixtureResource}from${JSON.stringify(import.meta.url)};export const createResourceGuard=fixtureResource(${id});`);
+ sources.set(launcherURL,`import{fixtureLauncher}from${JSON.stringify(import.meta.url)};export const validateRootLauncher=fixtureLauncher(${id});export{launcherFromEnv}from${JSON.stringify(url('pilot/beta06g4/launcher.mjs'))};`);
+ let media=absolute(transform('pilot/beta06g5/media/server.mjs',fs.readFileSync('pilot/beta06g5/media/server.mjs','utf8')),'pilot/beta06g5/media/server.mjs');sources.set(mediaURL,media);
+ s=absolute(s,'pilot/beta06g5/app.mjs',{'./close-index.mjs':url('pilot/beta06g5r1/mode-index.mjs'),'./workspace-lineage.mjs':url('pilot/beta06g17/workspace-lineage.mjs'),'./flight/adapter.mjs':url('pilot/heartbeat13fix/flight-fixture.mjs'),'./media/server.mjs':mediaURL,'./flight/handoff.mjs':url('pilot/beta06g17/flight/handoff.mjs'),'../beta06/resource.mjs':resourceURL,'../beta06g4/launcher.mjs':launcherURL});sources.set(appURL,s);ownURLs.push(appURL,mediaURL,resourceURL,launcherURL);
+ let app;try{app=await(await import(appURL)).createBeta06G5({out,rootControllerPid:process.ppid,parentHostRemainingMs});app.media.listen=async()=>{events.push({kind:'media.listen',at:performance.now()});};const actualListen=app.server.listen.bind(app.server);app.server.listen=(...args)=>{events.push({kind:'host.listen',at:performance.now()});if(network)return actualListen(0,'127.0.0.1',args.at(-1));queueMicrotask(()=>args.at(-1)());return app.server;};
+  return{...app,fixture:{productionCompiledSHA256:createHash('sha256').update(compiled).digest('hex'),fixtureCompiledSHA256:createHash('sha256').update(s).digest('hex'),events,resourceMocked:resourceFactory===null,physicalConstructorFacade:true,launcherMocked:true,flightTransport:'REJECTING_FIXTURE',listeners:network?'EPHEMERAL_HTTP_ONLY_NO_MEDIA':'NO_SOCKETS'},async close(reason){try{return await app.close(reason);}finally{for(const u of ownURLs)sources.delete(u);contexts.delete(id);}}};
+ }catch(error){try{await app?.close('FIXTURE_CONSTRUCTION_FAILED');}finally{for(const u of ownURLs)sources.delete(u);contexts.delete(id);}throw error;}
+}

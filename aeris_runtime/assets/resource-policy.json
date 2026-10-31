@@ -1,0 +1,156 @@
+{
+  "format": "aeris-flat-resource-policy",
+  "version": 1,
+  "diskGuardPolicy": {
+    "version": 2,
+    "entryBytes": 10737418240,
+    "floorBytes": 10737418240,
+    "reserveBytes": 268435456,
+    "horizonNs": 15000000000,
+    "samplePeriodNs": 100000000,
+    "maximumCheckGapNs": 2000000000,
+    "maximumSamples": 192,
+    "requiresRealPriming": true,
+    "sampling": "CADENCE_CAPPED_KEEP_WINDOW_BOUNDARY_PREDECESSOR",
+    "perWriteFloorAndForecast": true
+  },
+  "cases": {
+    "180": {
+      "mainJournal": {
+        "segment_bytes": 8388608,
+        "quota_bytes": 402653184,
+        "max_record_bytes": 2048,
+        "max_segments": 64,
+        "termination_reserve_bytes": 16384
+      },
+      "clockJournal": {
+        "segment_bytes": 1048576,
+        "quota_bytes": 67108864,
+        "max_record_bytes": 2048,
+        "max_segments": 544,
+        "termination_reserve_bytes": 32768
+      },
+      "transportJournal": {
+        "segment_bytes": 1048576,
+        "quota_bytes": 33554432,
+        "max_record_bytes": 16384,
+        "max_segments": 40,
+        "termination_reserve_bytes": 32768
+      },
+      "budget": {
+        "format": "aeris-clockowner02-case-budget",
+        "version": 1,
+        "maximumSeconds": 180,
+        "categories": {
+          "hostMainJournalQuota": 402653184,
+          "clockJournalQuota": 67108864,
+          "APRaw": 138240640,
+          "APMetadata": 16777216,
+          "transport": 33554432,
+          "nativeAVDAllocatedGrowth": 536870912,
+          "globalNativeExports": 201326592,
+          "globalMetadata": 67108864,
+          "globalUnit": 134217728,
+          "observerStateAndHelpersReserve": 1048576,
+          "newIsolatedAPKAndArchiveReserve": 4194304
+        },
+        "taskHardPeakBytes": 1603101312,
+        "requiredFreeBytes": 12608955008,
+        "entryBytes": 10737418240,
+        "floorBytes": 10737418240,
+        "reserveBytes": 268435456,
+        "actualFreeBytes": null,
+        "admitted": null,
+        "clockMaximumEventsIncludingPublicationsAndBinding": 23500,
+        "clockMaxRecordBytesIncludingFraming": 2048,
+        "clockWorstRecordBytes": 48128000,
+        "conditionalQuotaCompletion": true,
+        "hostRawCopyOrExport": false,
+        "nativeExportCapBytes": 24903680,
+        "freshAdmissionEachCase": true,
+        "nativeDiagnosticExportPerCaseBytes": 262144
+      },
+      "clockEvents": 23500
+    },
+    "1960": {
+      "mainJournal": {
+        "segment_bytes": 16777216,
+        "quota_bytes": 6442450944,
+        "max_record_bytes": 2048,
+        "max_segments": 448,
+        "termination_reserve_bytes": 16384
+      },
+      "clockJournal": {
+        "segment_bytes": 1048576,
+        "quota_bytes": 536870912,
+        "max_record_bytes": 2048,
+        "max_segments": 544,
+        "termination_reserve_bytes": 32768
+      },
+      "transportJournal": {
+        "segment_bytes": 1048576,
+        "quota_bytes": 268435456,
+        "max_record_bytes": 16384,
+        "max_segments": 320,
+        "termination_reserve_bytes": 32768
+      },
+      "budget": {
+        "format": "aeris-clockowner02-case-budget",
+        "version": 1,
+        "maximumSeconds": 1960,
+        "categories": {
+          "hostMainJournalQuota": 6442450944,
+          "clockJournalQuota": 536870912,
+          "APRaw": 1505280640,
+          "APMetadata": 16777216,
+          "transport": 268435456,
+          "nativeAVDAllocatedGrowth": 536870912,
+          "globalNativeExports": 201326592,
+          "globalMetadata": 67108864,
+          "globalUnit": 134217728,
+          "observerStateAndHelpersReserve": 1048576,
+          "newIsolatedAPKAndArchiveReserve": 4194304
+        },
+        "taskHardPeakBytes": 9714582144,
+        "requiredFreeBytes": 20720435840,
+        "entryBytes": 10737418240,
+        "floorBytes": 10737418240,
+        "reserveBytes": 268435456,
+        "actualFreeBytes": null,
+        "admitted": null,
+        "clockMaximumEventsIncludingPublicationsAndBinding": 237100,
+        "clockMaxRecordBytesIncludingFraming": 2048,
+        "clockWorstRecordBytes": 485580800,
+        "conditionalQuotaCompletion": true,
+        "hostRawCopyOrExport": false,
+        "nativeExportCapBytes": 175898624,
+        "freshAdmissionEachCase": true,
+        "nativeDiagnosticExportPerCaseBytes": 262144
+      },
+      "clockEvents": 237100
+    }
+  },
+  "campaign": {
+    "format": "aeris-clockowner02-campaign-hard-cap",
+    "taskHardPeakBytes": 10372916480,
+    "globalMetadataCapBytes": 67108864,
+    "globalExportCapBytes": 201326592,
+    "globalAVDPositiveGrowthBytes": 536870912,
+    "nativeOriginalParts": {
+      "shortJournalAndDiagnostic": 168034304,
+      "longJournalAndDiagnostic": 168034304,
+      "system": 200802304
+    },
+    "cases": [
+      180,
+      1960
+    ],
+    "admitted": null,
+    "freshCaseAdmissionRequired": true,
+    "retainedShortAlreadyConsumesActualDf": true,
+    "observerStateAndHelpersReserve": 1048576,
+    "newIsolatedAPKAndArchiveReserve": 4194304,
+    "resourceCampaign": "FRESH_METAVAL15"
+  },
+  "provenance": "EXACT_NUMERIC_ACCEPTED_METAVAL15_POLICY_SNAPSHOT_NOT_RUNTIME_INHERITANCE"
+}

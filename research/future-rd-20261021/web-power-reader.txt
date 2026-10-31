@@ -1,0 +1,344 @@
+Internal Error ()
+citeturn232view0 [wordlim: 200] Source: open({"ref_id":"https://www.qualcomm.com/internet-of-things/products/iq9-series/iq-9075","lineno":null}); Total lines: 1
+L0: Failed to fetch https://www.qualcomm.com/internet-of-things/products/iq9-series/iq-9075: (400) Unsupported content-type: text/markdown
+--------------------------------------------------------------------------------
+Jetson Orin Nano Series, Jetson Orin NX Series, and Jetson AGX Orin Series — NVIDIA Jetson Linux Developer Guide (https://docs.nvidia.com/jetson/archives/r39.2/DeveloperGuide/SD/PlatformPowerAndPerformance/JetsonOrinNanoSeriesJetsonOrinNxSeriesAndJetsonAgxOrinSeries.html)
+citeturn232view1 [wordlim: 200] Crawled: today; Content type: text/html; Source: open({"ref_id":"https://docs.nvidia.com/jetson/archives/r39.2/DeveloperGuide/SD/PlatformPowerAndPerformance/JetsonOrinNanoSeriesJetsonOrinNxSeriesAndJetsonAgxOrinSeries.html","lineno":null}); Total lines: 2416
+L0: cite0†Image: country_code†www.nvidia.com L1: 
+L2: Back to top
+L3: 
+L4: [Input: Search the docs ...] `Ctrl`+`K`
+L5: 
+L6: Table of Contents
+L7: 
+L8: Introduction
+L9: 
+L10:   * cite1†Welcome L11:   * cite2†Quick Start L12: 
+L13: Architecture
+L14: 
+L15:   * cite3†Jetson Software Architecture L16:   * cite4†Yocto on Jetson Platforms L17:   * cite5†Boot Architecture L18:     * cite6†Jetson AGX Orin, Orin NX, and Orin Nano Boot Flow L19:     * cite7†Jetson Thor Boot Flow L20:     * cite8†Partition Configuration L21: 
+L22: Software Feature Overview
+L23: 
+L24:   * cite9†Jetson Orin Series L25:   * cite10†Jetson Thor Series L26: Software Features in Depth
+L27:   * cite11†Flashing Support L28:   * cite12†Flashing Support for Jetson Thor L29:   * cite13†Emulation Flash Configurations L30:   * cite14†Root File System L31:   * cite15†Bootloader L32:     * cite16†T23x/T26x Boot Configuration Table L33:     * cite17†Pinmux and GPIO Configuration L34:     * cite18†Common Prod Configuration L35:     * cite19†Controller Product Configuration L36:     * cite20†Pad Voltage DT Binding L37:     * cite21†PMIC Configuration L38:     * cite22†Storage Device Configuration L39:     * cite23†UPHY Lane Configuration L40:     * cite24†OEM-FW Ratchet Configuration L41:     * cite25†BootROM Reset PMIC Configuration L42:     * cite26†Miscellaneous Configuration L43:     * cite27†SDRAM Configuration L44:     * cite28†DRAM-ECC L45:     * cite29†GPIO Interrupt Mapping Configuration L46:     * cite30†MB2 BCT Misc Configuration L47:     * cite31†Security Configuration L48:     * cite32†Platform Configuration Profile L49:     * cite33†UEFI Adaptation L50:     * cite34†Update and Redundancy L51:   * cite35†Kernel L52:     * cite36†Kernel Customization L53:     * cite37†Installing Real-Time Kernel L54:     * cite38†Bring Your Own Kernel L55:     * cite39†Generic Timestamp Engine L56:     * cite40†BMI088 IMU Driver L57:     * cite41†Enable 25 Gigabit Ethernet on QSFP Port L58:     * cite42†Kernel Boot Time Optimization L59:     * cite43†Display Configuration and Bring-Up L60:       * cite44†Common Display Configurations for All Platforms L61:       * cite45†nv-load-display-modules Service L62:       * cite46†Display Configuration for Jetson Orin L63:       * cite47†Display Configuration for Jetson Thor L64:     * cite48†I/O Customization L65:       * cite49†PWM Frequency Configuration L66:     * cite50†Kernel Debugging Tools L67:   * cite51†Multimedia L68:     * cite52†Multimedia APIs L69:     * cite53†Accelerated Decode with FFmpeg L70:     * cite54†Accelerated GStreamer L71:     * cite55†Software Encode in Orin Nano L72:   * cite56†Hardware Acceleration in the WebRTC Framework L73:   * cite57†Graphics L74:     * cite58†Graphics APIs L75:     * cite59†Graphics Programming L76:       * cite60†Binary Shader Program Management L77:       * cite61†GLSLC Shader Program Compiler L78:       * cite62†OpenGL ES Programming Tips L79:     * cite63†EGLStream L80:     * cite64†EGLDevice L81:     * cite65†Sample Applications L82:     * cite66†OpenWFD L83:     * cite67†Vulkan SC L84:     * cite68†Vulkan SC Samples L85:   * cite69†Windowing Systems L86:     * cite70†Weston (Wayland) L87:     * cite71†X Window System L88:   * cite72†Camera Development L89:     * cite73†Camera Support Matrix L90:     * cite74†Argus Framework L91:       * cite75†Camera Software Development Solution L92:       * cite76†Sensor Software Driver Programming L93:       * cite77†Jetson Virtual Channel with GMSL Camera Framework L94:       * cite78†Argus NvRaw Tool L95:       * cite79†Camera Driver Porting L96:       * cite80†Sensor Software Troubleshooting L97:     * cite81†SIPL Framework L98:       * cite82†Introduction to SIPL L99:       * cite83†Camera Hardware Abstraction Layer (HAL) L100:       * cite84†Camera HAL Driver Discovery L101:       * cite85†UDDF L102:         * cite86†HSL and UDDF Overview L103:         * cite87†Guide to Writing UDDF Drivers L104:         * cite88†PyHSL L105:         * cite89†Integrating UDDF Drivers with SIPL L106:         * cite90†Release Notes L107:         * cite91†FAQ L108:       * cite92†GMSL Camera Development Guide L109:         * cite93†GMSL Architecture Overview L110:         * cite94†Directory Layout and Build L111:         * cite95†Guide to Writing GMSL UDDF Drivers L112:         * cite96†Integrating GMSL UDDF Drivers with SIPL L113:       * cite97†CoE Camera Development Guide L114:         * cite98†Camera Software Development Solution for Jetson Thor L115:         * cite99†Camera-over-Ethernet Overview L116:         * cite100†Holoscan Sensor Bridge (HSB) L117:       * cite101†JetPack 7.2 SIPL Migration Guide L118:       * cite102†SIPL Query JSON Guide L119:       * cite103†SIPL Camera Application Developer Guide L120:       * cite104†SIPL Query Sample L121:       * cite105†SIPL Image Formats L122:       * cite106†Camera SIPL Notifications L123:       * cite107†Runtime Interfaces and Sensor Characterization L124:       * cite108†SIPL Stereo Pipeline L125:   * cite109†Security L126:     * cite110†Secure Boot L127:       * cite111†Quick Start Guide to Enable Secure Boot for Jetson Thor L128:       * cite112†Quick Start Guide to Enable Secure Boot for Jetson Orin L129:       * cite113†Fuse Configuration File L130:       * cite114†Key Preparation L131:       * cite115†Fuse Operations L132:       * cite116†Sign and Flash Secured Images L133:       * cite117†PKC Key Revocation L134:       * cite118†UEFI Secure Boot L135:       * cite119†UEFI Payload Encryption L136:       * cite120†UEFI Variable Protection L137:       * cite121†UEFI Platform Vendor Key Feature L138:       * cite122†Kernel Module Signing L139:     * cite123†Factory Secure Key and Expansion Key Provisioning L140:     * cite124†Hafnium Secure Partition Manager L141:     * cite125†OP-TEE: Open Portable Trusted Execution Environment L142:       * cite126†Architecture L143:       * cite127†Trusted Application and Client Application Development L144:       * cite128†EKB: Encrypted Key Blob L145:       * cite129†Sample Applications L146:       * cite130†PKCS #11 Support in OP-TEE L147:     * cite131†Disk Encryption L148:       * cite132†Disk Encryption Concepts L149:       * cite133†Partition Layout L150:       * cite134†Encrypting the Rootfs L151:       * cite135†Dynamic Partition Encryption L152:       * cite136†Manufacturing L153:     * cite137†Secure Storage L154:     * cite138†Firmware TPM L155:       * cite139†Software Architecture L156:       * cite140†fTPM Boot Flow L157:       * cite141†fTPM Provisioning L158:       * cite142†Production Workflow L159:       * cite143†Device-Side Operations L160:       * cite144†fTPM Turnkey Solution for Ecosystem Partners L161:     * cite145†Rollback Protection L162:     * cite146†Memory Encryption L163:     * cite147†PVA Authentication L164:     * cite148†Security Keys List L165:   * cite149†Communications L166:     * cite150†PCIe Endpoint Mode L167:     * cite151†Enabling Bluetooth Audio L168:     * cite152†Audio Setup and Development L169:   * cite153†CUDA Instrumentation Methods L170:   * cite154†Multi-Instance GPU (MIG) L171:   * cite155†Platform Power and Performance L172:     * cite156†Jetson Orin Nano Series, Jetson Orin NX Series, and Jetson AGX Orin Series L173:     * cite157†Jetson Thor Product Family L174:   * cite158†Software Packages and the Update Mechanism L175:   * cite159†Boot Time Optimization L176:   * cite160†Working With Sources L177:   * cite161†Test Plan and Validation L178: Hardware References
+L179: 
+L180:   * cite162†Jetson Developer Kit Setup L181:   * cite163†Jetson EEPROM Layout L182:   * cite164†Jetson Module Adaptation and Bring-Up L183:     * cite165†Jetson Thor Adaptation and Bring-Up L184:     * cite166†Jetson AGX Orin Series L185:     * cite167†Jetson Orin NX and Nano Series L186:     * cite168†Checklists L187:   * cite169†Configuring the Jetson Expansion Headers L188:   * cite170†Controller Area Network (CAN) L189: 
+L190: Applications and Tools
+L191:   * cite171†Board Automation L192:   * cite172†Jetson Linux Toolchain L193:   * cite173†Jetson Linux Development Tools L194:     * cite174†Debugging on Jetson Platforms L195:     * cite175†Performance Monitoring L196:     * cite176†Tegrastats Utility L197:     * cite177†Tegra Combined UART L198:   * cite178†How to Submit a Bug Report L199: 
+L200: Reference Material
+L201: 
+L202:   * cite179†Package Manifest L203:   * cite180†Related Documentation L204:   * cite181†Legal Information L205: # Jetson Orin Nano Series, Jetson Orin NX Series, and Jetson AGX Orin Seriescite182†# L206: 
+L207: This topic describes power and performance management features of NVIDIA^{®} Jetson Orin™ Nano series, Jetson Orin™ NX series, and NVIDIA^{®} Jetson AGX Orin™ series devices. It describes the power, thermal, and electrical management features visible to software, as well as some tools and related techniques.
+L208: 
+L209: Note
+L210: The power management features of these devices are very similar, and most of this document applies equally to all. For convenience, the text often refers to them by the shorter name Jetson Orin. This term is used solely for convenience and is not a product name.
+L211: Jetson Orin, Jetson Orin NX, Jetson Orin Nano, and NVIDIA^{®} Jetson™ Board Support Package (BSP) provide many features related to power management, thermal management, and electrical management. These features deliver the best user experience possible given the constraints of a particular platform. They help to create a user experience of:
+L212: 
+L213:   * Uniformly high performance
+L214: 
+L215:   * Excellent battery life
+L216: 
+L217:   * Perfect stability
+L218: 
+L219:   * Cool operation (the device is comfortable to touch)
+L220: ## Interacting Featurescite183†# L221: 
+L222: Power, thermal, and electrical management features place dynamic constraints on many operational settings (“knobs”), such as:
+L223: 
+L224:   * Clock gate settings
+L225: 
+L226:   * Clock frequencies
+L227: 
+L228:   * Power gate (or regulator enable) settings
+L229: 
+L230:   * Voltages
+L231: 
+L232:   * Processor power state (i.e., which idle state is selected for the CPU)
+L233: 
+L234:   * Peripheral power state (i.e., which idle state is selected for an I/O controller)
+L235: 
+L236:   * Chipset power state
+L237: 
+L238:   * Availability of CPU cores to the OS
+L239: Some of these knobs are constrained by more than one feature. For example, `cpufreq` implements load-based scaling, which adjusts the CPU frequency according to how busy the CPU is. CPU thermal management, however, can override the target frequency of `cpufreq`. Consequently, before you attempt to debug power, performance, thermal, or electrical problems, you must familiarize yourself with all of the power, thermal, and electrical management features in BSP.
+L240: ## Kernel Space Power Saving Featurescite184†# L241: 
+L242: This section describes BSP features that save power and extend battery life. Many of these features are implemented by the Linux kernel, with support from firmware and hardware, and without significant involvement from the user space.
+L243: ### Chipset Power Statescite185†# L244: 
+L245: The supported power states are listed in order of increasing flexibility or configurability:
+L246: 
+L247:   * Off: There is only one way for a system to be off.
+L248: 
+L249:   * Deep Sleep (SC7) offers a small amount of configurability. For example, before entering Deep Sleep, the software can select which hardware wake events can wake the chip from Deep Sleep.
+L250:   * Active state is extraordinarily flexible in terms of power and performance. It encompasses activity levels from low-power audio playback through peak performance. Power consumption in the Active state can range from tens of milliwatts to several watts.
+L251: #### Supported Power Statescite186†# L252: 
+L253: The supported power states are:
+L254: Power State  | Characteristics
+L255: --- | ---
+L256: Off  | Power rails: None of the power rails supplying the SoC and DRAM are powered. State: No state is maintained in the SoC or DRAM. Exiting: Into Active state via cold boot.
+L257: Deep Sleep (SC7)  | Power rails: `VDD_RTC`, `VDDIO_DDR`, `VDDIO_SYS`, and DRAM power rails are powered on. VDD_CORE and VDD_CPU are powered off. State: The SoC maintains a small amount of state information in the PMC block. DRAM maintains the state. Exiting: Into Active state via a predefined set of wake events.
+L258: Active  | Power rails: `VDD_RTC`, `VDDIO_DDR`, `VDDIO_SYS`, `VDD_CORE`, and DRAM rails are powered on. Other power rails, including `VDD_CPU`, may be powered on. State: Software actively manages the power states of the devices that make up the SoC. Exiting: Software can initiate a transition from Active to any other power state.
+L259: #### Power State Mapping to Linuxcite187†# L260: 
+L261: BSP maps chipset power states to Linux power states as follows.
+L262: 
+L263: Chipset power state  | Linux power state  | Comments
+L264: --- | --- | ---
+L265: Off  | Off  | —
+L266: Deep Sleep (SC7)  | Suspend to RAM  | The software can choose whether to enter Deep Sleep before the OS enters Suspend.
+L267: Active  | Running/Idle (display on or off)  | Many SoC devices may be idle or disabled under driver control. For example, `VDD_GPU` may be powered off and the companion GPU may be power-gated.
+L268: #### Deep Sleep (SC7)cite188†# L269: 
+L270: If the systemd init system is being used, you can initiate deep sleep from the user space with the following command:
+L271: 
+L272:     $ sudo systemctl suspend
+L273: 
+L274: 
+L275: You can also use the following command:
+L276: 
+L277:     $ sudo bash -c "echo mem > /sys/power/state"
+L278: 
+L279: 
+L280: The first method of entering deep sleep is preferred because it cooperates better with systemd, which maintains the Linux runlevel. If your system is not running systemd, use the second method.
+L281: The system can be awakened from deep sleep by common wake sources available on Jetson platforms:
+L282: 
+L283: Wake source  | Usage
+L284: --- | ---
+L285: Power button  | Press and release the power button on the Jetson device. If the power button is not available, connect and disconnect the power button pin and ground.
+L286: RTC alarm  | Before entering low power state, program the RTC alarm with the following command:
+L287: 
+L288:     $ sudo bash -c "echo +10 > /sys/class/rtc/rtc<x>/wakealarm"
+L289: where `<x>` is the RTC ID. The `rtc<x>` indicates the RTC used by system and can be found with the following command:
+L290: 
+L291:     $ find /sys/class/rtc/* -maxdepth 0 -printf "%f:" -exec bash -c \
+L292:                "cat {}/hctosys" \; | grep :1 | cut -d: -f1 | head -n1
+L293: USB type-C cable hotplug  | To flash the device, connect or disconnect a USB cable to the USB type-C port.
+L294: USB remote  | Press any key on a USB keyboard connected to the device.
+L295: Wake on LAN  | On another machine on the same LAN, enter:
+L296: 
+L297:     $ sudo etherwake -i <interface> <MAC_address_of_target>
+L298: 
+L299: 
+L300: SD card detection  | Insert or remove SD card.
+L301: ## Clock and Voltage Managementcite189†# L302: 
+L303: Because clock frequency is proportional to voltage, dynamic voltage scaling is closely related to frequency scaling. For example, higher clock frequencies require higher voltages and vice versa.
+L304: Most clock register manipulation on Jetson Orin is handled by the Boot and Power Management (BPMP) firmware, which runs on the BPMP processor. A Linux kernel driver on the CPU exposes a somewhat simplified view of the physical clock tree to software on the main CPU via the Linux Common Clock Framework.
+L305: 
+L306: Each of the significant clock domains on the chip has its own dedicated clock source, known as a Noise Aware Frequency Lock Loop (NAFLL).
+L307: ### Regulator Frameworkcite190†# L308: 
+L309: The Linux regulator framework provides an abstraction that allows regulator consumer drivers to dynamically adjust voltage or current regulators at runtime, without knowledge of the underlying hardware power tree.
+L310: 
+L311: The framework provides a mechanism that platform initialization code can use to declare a power tree topology and assign a driver that provides regulators for each node in the hardware power tree. Such a driver is called a regulator provider driver.
+L312: BSP configures the platform power tree appropriately for Jetson Orin. Additionally, drivers within BSP act as regulator consumers, where appropriate.
+L313: 
+L314: When you port BSP to a new platform, you must ensure that:
+L315: 
+L316:   * The platform power tree is configured to match the underlying hardware.
+L317: 
+L318:   * All drivers for peripheral devices use the regulator consumer APIs correctly.
+L319:   * The device tree and board configuration file information for your new platform avoid conflicts between functions using the same I/O pads. BSP drivers registering as regulator consumers can cause I/O pads on the chip to be unavailable for other functions.
+L320: 
+L321: The SoC core power rails (`VDD_CORE`, `VDD_CPU`, `VDD_GPU`, and `VDD_CV`) are under the direct control of the BPMP firmware. They are configured via the BPMP device tree blob (which is distinct from the Linux device tree blob).
+L322: ## CPU Power Managementcite191†# L323: 
+L324: The CPU power management strategy uses dynamic frequency scaling (DFS) with dynamic voltage scaling, idle power states, and core management tuned for the Jetson Orin architecture.
+L325: ### Frequency Management with cpufreqcite192†# L326: 
+L327: BSP implements CPU dynamic frequency scaling with the Linux `cpufreq` subsystem. The cpufreq subsystem comprises:
+L328: 
+L329:   * Platform drivers to implement the clock adjustment mechanism
+L330: 
+L331:   * Governors to implement frequency scaling policies
+L332: 
+L333:   * A core framework to connect governors to platform drivers
+L334: 
+L335: The policy for frequency scaling depends on which `cpufreq` governor is selected at runtime.
+L336: For details, see the information at:
+L337: 
+L338:     <top>/kernel/3rdparty/canonical/linux-jammy/kernel-source/Documentation/admin-guide/pm/cpufreq.rst
+L339: 
+L340: 
+L341: For each Jetson platform, NVIDIA selects a `cpufreq` governor and tunes it to achieve a balance between power and performance.
+L342: 
+L343: When a governor requests a CPU frequency change, the `cpufreq` platform driver reconciles that request with constraints imposed by thermal or electrical limits, and updates the CPU clock speed.
+L344: Jetson Orin uses an NAFLL to clock each CPU. The NAFLLs are configured for Adaptive Voltage and Frequency Scaling (AVFS). Hardware, with the assistance of the BPMP firmware, ensures that the CPU voltage is appropriate for the NAFLL to deliver requested CPU frequencies.
+L345: ### Idle Management with cpuidlecite193†# L346: 
+L347: The Linux `cpuidle` infrastructure supports the implementation of SoC-specific idle states for each CPU core. `cpuidle` lacks direct support for idle states that are applicable to an entire CPU cluster or that extend beyond a CPU cluster.
+L348: 
+L349: For more information about the Linux `cpuidle` infrastructure, see:
+L350: 
+L351:     <top>/kernel/3rdparty/canonical/linux-jammy/kernel-source/Documentation/admin-guide/pm/cpuidle.rst
+L352: #### CPU Idlecite194†# L353: 
+L354: NVIDIA uses the generic upstream `psci_idle` driver that plugs into the `cpuidle` framework to enable CPU idle power management.
+L355: 
+L356: For each core there is an idle task that is scheduled when no other runnable tasks are left in that core’s run queue. This task places the core in a low-power state selected by the `cpuidle` governor. The core stays in that state until an interrupt wakes it up to process more work.
+L357: When the last active core in a CPU cluster goes into an idle or offline state, the idle task puts the entire CPU cluster in a low-power state.
+L358: #### Idle Statescite195†# L359: 
+L360: The following table summarizes the supported CPU cores and the cluster idle states that are available on Jetson Orin and the BSP software.
+L361: 
+L362: Core states are denoted as Cx states, and cluster states are denoted as CCx states.
+L363: 
+L364: Type of state  | State  | Meaning  | Software support?
+L365: --- | --- | --- | ---
+L366: Core state  | WFI  | Wait For Interrupt  | Yes
+L367: C7  | Core Power gating  | Yes
+L368: Cluster state  | CC7  | Cluster Power gating  | Yes
+L369: #### Enabling CPU idlecite196†# L370: 
+L371: To enable CPU idle you must enable the appropriate kernel configuration option and the appropriate device tree node. Enabling either one alone is not effective.
+L372: 
+L373:   * To enable CPU idle in the configuration file, set these options:
+L374: 
+L375:     CONFIG_CPU_IDLE=y
+L376:     CONFIG_CPU_IDLE_MULTIPLE_DRIVERS=y
+L377:     CONFIG_CPU_IDLE_GOV_MENU=y
+L378:     CONFIG_DT_IDLE_STATES=y
+L379:     CONFIG_ARM_CPUIDLE=y
+L380:     CONFIG_ARM_PSCI_CPUIDLE=y
+L381:     CONFIG_ARM_PSCI_CPUIDLE_DOMAIN=y
+L382: #### Disabling cpuidle at boot timecite197†# L383: 
+L384:   * Disable the device tree node `psci`:
+L385: 
+L386:     psci {
+L387:         compatible = "arm,psci-1.0";
+L388:         method = "smc";
+L389:         cpu_off = <0x84000002>;
+L390:         cpu_on = <0xc4000003>;
+L391:         cpu_suspend = <0xc4000001>;
+L392:         status = "disable";
+L393:     };
+L394: #### Displaying the CPU idle Statuscite198†# L395: 
+L396:   * Enter these commands to determine whether CPU idle is enabled by sysfs:
+L397: 
+L398:     $ cat /sys/devices/system/cpu/cpuidle/current_driver
+L399: 
+L400: 
+L401: If CPU idle is enabled, the command displays:
+L402: 
+L403:     psci_idle
+L404: #### Enabling or Disabling a Core Power State at Boot Timecite199†# L405: 
+L406:   * To enable a core power state, set the following properties of the appropriate core state node:
+L407: 
+L408:     * status to `"okay"`
+L409: 
+L410:     * `min-residency-us` to a reasonable value
+L411: For example, to enable power state C7 with `min-residency-us` = 5000:
+L412: 
+L413:     c7 {
+L414:         compatible = "arm,idle-state";
+L415:         state-name = "Core powergate";
+L416:         wakeup-latency-us = <0x1388>;
+L417:         min-residency-us = <5000>;
+L418:         arm,psci-suspend-param = <0x40000007>;
+L419:         status = "okay";
+L420:         phandle = <0x83>;
+L421:     };
+L422: 
+L423: 
+L424:   * To disable a core power state, use either of the following procedures.
+L425: 
+L426:     * Remove or disable the appropriate core state node.
+L427: 
+L428: or
+L429:     * Modify the appropriate core state node by setting the `min-residency-us` property to a high value, e.g., `0xffffffff`.
+L430: 
+L431: For example, to disable power state C7:
+L432: 
+L433:     c7 {
+L434:         compatible = "arm,idle-state";
+L435:         state-name = "Core powergate";
+L436:         wakeup-latency-us = <0x1388>;
+L437:         min-residency-us = <0xffffffff>;
+L438:         arm,psci-suspend-param = <0x40000007>;
+L439:         status = "okay";
+L440:         phandle = <0x83>;
+L441:     };
+L442: #### Getting and Setting the Power State of a CPU Corecite200†# L443: 
+L444: The pathnames of the nodes that represent core power states are:
+L445: 
+L446:     /sys/devices/system/cpu/cpu<x>/cpuidle/state<y>
+L447: 
+L448: 
+L449: Where:
+L450: 
+L451:   * `<x>` is a core ID.
+L452: 
+L453:   * `<y>` is the index of the core power state: 0 for WFI or 1 for C7.
+L454: 
+L455: Note
+L456: 
+L457: A core power state’s status is 1 if the state is disabled, and 0 if it is enabled—the reverse of the usual Boolean sense of 0 and 1.
+L458: To get the status of core power state `<y>` on core `<x>`, read the appropriate node. To set the status, write an ASCII 0 to 1 to the node.
+L459: 
+L460: Here are several useful commands for getting and setting the core power state:
+L461: 
+L462:   * To display the name of the core power state with index `<y>`, enter the command:
+L463: 
+L464:     $ cat /sys/devices/system/cpu/cpu<x>/cpuidle/state<y>/name
+L465: 
+L466: 
+L467: For example, this command displays the name of state0:
+L468: 
+L469:     $ cat /sys/devices/system/cpu/cpu<x>/cpuidle/state0/name
+L470:   * To get the status of core power state with index `<y>` on core `<x>`:
+L471: 
+L472:     $ cat /sys/devices/system/cpu/cpu<x>/cpuidle/state<y>/disable
+L473: 
+L474: 
+L475:   * To change the status of core power state with index `<y>` on CPU core `<x>`:
+L476: 
+L477:     $ echo <b> > /sys/devices/system/cpu/cpu<x>/cpuidle/state<y>/disable
+L478: #### Getting the State Usage Statistics for a Corecite201†# L479: 
+L480:   * To get the number of times the kernel requested a specified core to enter a specified state, read this node:
+L481: 
+L482:     $ cat /sys/devices/system/cpu/cpu<x>/cpuidle/state<y>/usage
+L483: 
+L484: 
+L485:   * To get the number of times a specified core actually entered a specified state, enter the command:
+L486: 
+L487:     $ cat /sys/kernel/debug/tegra_mce/cstats
+L488: For example, to get the number of times that core 2 has entered power state1, enter the command:
+L489: 
+L490:     $ cat /sys/devices/system/cpu/cpu2/cpuidle/state1/usage
+L491: 
+L492: 
+L493:   * To get the total time in microseconds that a specified core has spent in a specified state since boot, read the following device:
+L494: 
+L495:     $ cat /sys/devices/system/cpu/cpu<x>/cpuidle/state<y>/time
+L496: ## Memory Power Managementcite202†# L497: 
+L498: NVIDIA SoC chipsets include power saving features whose operation is largely invisible to software at runtime. Most of those features are statically enabled at boot, according to settings in the boot configuration table (BCT).
+L499: Additionally, BSP implements Dynamic Voltage and frequency scaling for the memory controller (EMC/MC) and DRAM to save power. The EMC BCT and DVFS table are specific to the board design. The EMC DVFS table is included in the platform BPMP device tree file.
+L500: ### EMC Frequency Scaling Policycite203†# L501: The following diagram illustrates the high-level memory interconnect topology from a hardware perspective:
+L502: 
+L503:     Memory interconnect topology:
+L504: 
+L505:                   +----+
+L506:     +--------+    |    |
+L507:     | TEXSRD +--->+    |
+L508:     +--------+    |    |
+L509:                   |    |    +-----+    +------+
+L510:        ...        | MC +--->+ EMC +--->+ EMEM |
+L511:                   |    |    +-----+    +------+
+L512:     +--------+    |    |
+L513:     | DISP.. +--->+    |
+L514:     +--------+    |    |
+L515:                   +----+
+L516: Based on this topology, the kernel maintains a mirrored memory topology from a software perspective. The kernel adheres to the Linux Interconnect (ICC) framework, aggregates the memory bandwidth requirements from the clients, and transmits these requests to the BPMP to centrally manage the EMC frequency.
+L517: 
+L518: To inspect the requests made by individual clients, examine the following debugfs node:
+L519: 
+L520:     $ cat /sys/kernel/debug/interconnect/interconnect_summary
+L521: The BPMP will collectively assess all requests from the clients and determine the most suitable EMC frequency to fulfill the Quality of Service (QoS) requirements.
+L522: 
+L523: For example, on the Concord platform, the CPU requests a minimum bandwidth requirement of 42,560,000 KBs, and the GPU requests a minimum bandwidth requirement of 136,512,000 KBs. To fulfill the demands of these two clients, the BPMP will select the highest converted EMC frequency that was derived from the bandwidth requirements.
+L524: For the CPU, here is the converted EMC frequency from the bandwidth requirements:
+L525: 
+L526:     665 (MHz) = 42560000 (KB's) / 64 (BPC) / 1000
+L527: 
+L528: 
+L529: For the GPU, here is the converted EMC frequency from the bandwidth requirements:
+L530: 
+L531:     2133 (MHz) = 136512000 (KB's) / 64 (BPC) / 1000
+L532: 
+L533: 
+L534: The final EMC frequency will be 2133 MHz.
+L535: In addition to the ICC requests input from the kernel, the BPMP will also factor in the current memory bandwidth usage information from the central actmon hardware. This information is crucial to determine whether the EMC frequency should be adjusted by scaling up or down. This process is referred to as central actmon DFS.
+L536: Internally, the BPMP will compare the current memory bandwidth usage value against the boost-up threshold and the boost-down threshold. These threshold values are configured in the BPMP device tree file:
+L537: 
+L538:     bwmgr {
+L539:             enabled = <0x1>;
+L540: 
+

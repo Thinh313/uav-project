@@ -1,0 +1,81 @@
+{
+  "format": "aeris-engineering-key-lifecycle",
+  "version": 1,
+  "initialRootSha256": "5f94bae4f45736f578344ab3cd064e467bfae117bb1dc438eba94a8614820191",
+  "currentRootSha256": "9b44691952faf9b228a98260c793971b51ec88d877d839751b083aef500df110",
+  "entries": [
+    {
+      "keyId": "3e896f93352efe965b6598b54e5396587e7c23041f65cc5ea99a2c4fbe5d6cca",
+      "generation": 1,
+      "role": "approval",
+      "status": "REMOVED_FROM_CURRENT_ROOT",
+      "privateCustody": "Retained locally mode0600 for engineering; not packaged",
+      "officialOwner": "NOT_CHECKED",
+      "humanIndependence": "NOT_CHECKED"
+    },
+    {
+      "keyId": "3191e3783d3033fec941fabb64fb936d3003222e529e1d1f157734dde23f772b",
+      "generation": 1,
+      "role": "release",
+      "status": "REMOVED_FROM_CURRENT_ROOT",
+      "privateCustody": "Retained locally mode0600 for engineering; not packaged",
+      "officialOwner": "NOT_CHECKED",
+      "humanIndependence": "NOT_CHECKED"
+    },
+    {
+      "keyId": "3f4be8460e5138b7d7d6fe04506deb7755b8c1c128f999f02a5c9ae4ffbbece0",
+      "generation": 1,
+      "role": "root",
+      "status": "REMOVED_FROM_CURRENT_ROOT",
+      "privateCustody": "Retained locally mode0600 for engineering; not packaged",
+      "officialOwner": "NOT_CHECKED",
+      "humanIndependence": "NOT_CHECKED"
+    },
+    {
+      "keyId": "8f298f5c1eb1fa418e1332ff0dac6062c7ac809d45e0b960bce2514d5a4a853e",
+      "generation": 1,
+      "role": "root",
+      "status": "REMOVED_FROM_CURRENT_ROOT",
+      "privateCustody": "Retained locally mode0600 for engineering; not packaged",
+      "officialOwner": "NOT_CHECKED",
+      "humanIndependence": "NOT_CHECKED"
+    },
+    {
+      "keyId": "3f7a861f517e0d824510a969489fc29dd8d1a259ddc2f9d075793fb642b6f8b6",
+      "generation": 2,
+      "role": "approval",
+      "status": "ACTIVE",
+      "privateCustody": "Retained locally mode0600 for engineering; not packaged",
+      "officialOwner": "NOT_CHECKED",
+      "humanIndependence": "NOT_CHECKED"
+    },
+    {
+      "keyId": "95f096d823ad8c261c53724d8882e7a4e9ede4895fad179548e9130ef75067bf",
+      "generation": 2,
+      "role": "release",
+      "status": "ACTIVE",
+      "privateCustody": "Retained locally mode0600 for engineering; not packaged",
+      "officialOwner": "NOT_CHECKED",
+      "humanIndependence": "NOT_CHECKED"
+    },
+    {
+      "keyId": "1702d4c0ffecc879ab3f635bd1134269850ce26a45c84efa5acb3f62ac723ee9",
+      "generation": 2,
+      "role": "root",
+      "status": "ACTIVE",
+      "privateCustody": "Retained locally mode0600 for engineering; not packaged",
+      "officialOwner": "NOT_CHECKED",
+      "humanIndependence": "NOT_CHECKED"
+    },
+    {
+      "keyId": "d5a1136c5ae5cf82dbf7823a9e265b4688c47b6366a9549d0476a4de177fe4bc",
+      "generation": 2,
+      "role": "root",
+      "status": "ACTIVE",
+      "privateCustody": "Retained locally mode0600 for engineering; not packaged",
+      "officialOwner": "NOT_CHECKED",
+      "humanIndependence": "NOT_CHECKED"
+    }
+  ],
+  "scope": "Derived public inventory bound to signed roots; no private material/production owner or real offline custody attestation"
+}

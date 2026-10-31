@@ -1,0 +1,138 @@
+{
+  "format": "aeris-cockpit66-derivation",
+  "version": 1,
+  "entries": [
+    {
+      "source": "native/preflight44/preflight/sha256.mjs",
+      "destination": "native/cockpit66/portable/sha256.mjs",
+      "sourceSha256": "55188f633120c1178e27e454411bf1fe71537352c38e0c0c58b5f00cd62b0395",
+      "derivedSha256": "55188f633120c1178e27e454411bf1fe71537352c38e0c0c58b5f00cd62b0395",
+      "substitutions": []
+    },
+    {
+      "source": "pilot/cyber65/authority.mjs",
+      "destination": "native/cockpit66/portable/cyber65/authority.mjs",
+      "sourceSha256": "d1c76236d083fc9b234759b84d07698c4591bfc07069accf4be7293eff8c61cc",
+      "derivedSha256": "d1c76236d083fc9b234759b84d07698c4591bfc07069accf4be7293eff8c61cc",
+      "substitutions": []
+    },
+    {
+      "source": "pilot/cyber65/contracts.mjs",
+      "destination": "native/cockpit66/portable/cyber65/contracts.mjs",
+      "sourceSha256": "cef9741bec67011c2d5ec485bc4758ae88b1770e2fc915db8238ca449e05bbae",
+      "derivedSha256": "33f2b7c73f41832bcca86338b1499a0491482ce0c4c1d01daca119a7cd9f50b8",
+      "substitutions": [
+        [
+          "import {createHash} from 'node:crypto';",
+          "import {sha256Text} from '../sha256.mjs';"
+        ],
+        [
+          "export const sha=x=>createHash('sha256').update(typeof x==='string'?x:canonical(x)).digest('hex');",
+          "export const sha=x=>sha256Text(typeof x==='string'?x:canonical(x));"
+        ]
+      ]
+    },
+    {
+      "source": "pilot/cyber65/session.mjs",
+      "destination": "native/cockpit66/portable/cyber65/session.mjs",
+      "sourceSha256": "e3064a5a5c205dd7b2437346038db7892b9dd05c04cc1d7f579de9db8163f42a",
+      "derivedSha256": "b0fbb7acca4d5e78e0877b10ab5ad28077ec47d0a804101d4d64b29fbdc23380",
+      "substitutions": [
+        [
+          "Buffer.byteLength(text)",
+          "new TextEncoder().encode(text).length"
+        ]
+      ]
+    },
+    {
+      "source": "pilot/cyber65/replay.mjs",
+      "destination": "native/cockpit66/portable/cyber65/replay.mjs",
+      "sourceSha256": "0fdc38791af07db106509e8fd31e870355780995516bc596a3063e7486c8540c",
+      "derivedSha256": "b812557aaa26935d3f155c1c2a850c6b207c1c92851b06dd5a67714817e86f59",
+      "substitutions": [
+        [
+          "import {readFile} from 'node:fs/promises';",
+          "async function readFile(url){const r=await fetch(url);if(!r.ok)throw Error('BUNDLED_CORPUS_UNAVAILABLE');return r.text();}"
+        ]
+      ]
+    },
+    {
+      "source": "pilot/cyber65/corpus.json",
+      "destination": "native/cockpit66/portable/cyber65/corpus.json",
+      "sourceSha256": "c670b423e95744d8ee535599a975079ebbb02cf4e6ee5a922315fbe2fda70ee0",
+      "derivedSha256": "c670b423e95744d8ee535599a975079ebbb02cf4e6ee5a922315fbe2fda70ee0",
+      "substitutions": []
+    },
+    {
+      "source": "pilot/protocol22/wire.mjs",
+      "destination": "native/cockpit66/portable/protocol22/wire.mjs",
+      "sourceSha256": "145e3c35e53d724e172814d2428776d286e75cbd67b3a7c7e7c201c1ddd9f39b",
+      "derivedSha256": "145e3c35e53d724e172814d2428776d286e75cbd67b3a7c7e7c201c1ddd9f39b",
+      "substitutions": []
+    },
+    {
+      "source": "pilot/protocol22/definitions.mjs",
+      "destination": "native/cockpit66/portable/protocol22/definitions.mjs",
+      "sourceSha256": "b61df39ef5976950b2198e4e51d7dd7a4f9d4c3cc600aa6fc9741967f46ed1a2",
+      "derivedSha256": "b61df39ef5976950b2198e4e51d7dd7a4f9d4c3cc600aa6fc9741967f46ed1a2",
+      "substitutions": []
+    },
+    {
+      "source": "pilot/protocol22/session.mjs",
+      "destination": "native/cockpit66/portable/protocol22/session.mjs",
+      "sourceSha256": "10a1a2a09df785f3d6f76fbe9cb14527b6d50f2d8b817e9b96e3f206d9ee7e2c",
+      "derivedSha256": "10a1a2a09df785f3d6f76fbe9cb14527b6d50f2d8b817e9b96e3f206d9ee7e2c",
+      "substitutions": []
+    },
+    {
+      "source": "pilot/transport25/broker.mjs",
+      "destination": "native/cockpit66/portable/transport25/broker.mjs",
+      "sourceSha256": "09ded91d4f1bf47a4b0f787bccebd657e0e51152af8fdf79cead6ff96300dcdb",
+      "derivedSha256": "09ded91d4f1bf47a4b0f787bccebd657e0e51152af8fdf79cead6ff96300dcdb",
+      "substitutions": []
+    },
+    {
+      "source": "pilot/transport25/config.mjs",
+      "destination": "native/cockpit66/portable/transport25/config.mjs",
+      "sourceSha256": "cae77d55d775a525e03650a5dce2b55e5da86b09bd6627f3e427d02097a367ea",
+      "derivedSha256": "cae77d55d775a525e03650a5dce2b55e5da86b09bd6627f3e427d02097a367ea",
+      "substitutions": []
+    },
+    {
+      "source": "pilot/transport25/mock.mjs",
+      "destination": "native/cockpit66/portable/transport25/mock.mjs",
+      "sourceSha256": "7ea404a030e9dc046177c717894d58d6293ad762d32501e2b686857ea50e0459",
+      "derivedSha256": "7ea404a030e9dc046177c717894d58d6293ad762d32501e2b686857ea50e0459",
+      "substitutions": []
+    },
+    {
+      "source": "pilot/transport25/fixtures.mjs",
+      "destination": "native/cockpit66/portable/transport25/fixtures.mjs",
+      "sourceSha256": "7c6807593a162f1bf3431af2811b51d5dd0fe8254f28751a7b1bd8f852ee8bef",
+      "derivedSha256": "7c6807593a162f1bf3431af2811b51d5dd0fe8254f28751a7b1bd8f852ee8bef",
+      "substitutions": []
+    },
+    {
+      "source": "pilot/visual56/assets/fonts/Barlow-Medium.ttf",
+      "destination": "native/cockpit66/assets/Barlow-Medium.ttf",
+      "sourceSha256": "f8906f762cb73dca441da034bc363b2d8e2e68bc10d5c05e58717646c20cc4b4",
+      "derivedSha256": "f8906f762cb73dca441da034bc363b2d8e2e68bc10d5c05e58717646c20cc4b4",
+      "substitutions": []
+    },
+    {
+      "source": "pilot/visual56/assets/fonts/Barlow-SemiBold.ttf",
+      "destination": "native/cockpit66/assets/Barlow-SemiBold.ttf",
+      "sourceSha256": "86577cb32f8abe3673db53ca0f4221e6856751a4f6730c867e00f720f8bb1fc5",
+      "derivedSha256": "86577cb32f8abe3673db53ca0f4221e6856751a4f6730c867e00f720f8bb1fc5",
+      "substitutions": []
+    },
+    {
+      "source": "pilot/visual56/assets/fonts/Barlow-Bold.ttf",
+      "destination": "native/cockpit66/assets/Barlow-Bold.ttf",
+      "sourceSha256": "84e6a4d61e7c3e21f3c50ea6a4f7e5303a3467864c038be6ea3759bab8d547f9",
+      "derivedSha256": "84e6a4d61e7c3e21f3c50ea6a4f7e5303a3467864c038be6ea3759bab8d547f9",
+      "substitutions": []
+    }
+  ],
+  "scope": "Explicit portable substitutions; originals read-only, no SDK/build"
+}

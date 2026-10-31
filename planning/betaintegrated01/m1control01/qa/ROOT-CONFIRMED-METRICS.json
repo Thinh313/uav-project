@@ -1,0 +1,29 @@
+{
+  "format": "aeris-m1control01-preactual-metric-confirmation",
+  "source": "Contractor /root message received before actual control runs",
+  "humanSemanticReviewClaim": false,
+  "takeoffRelativeHomeM": 3,
+  "takeoffToleranceM": 0.75,
+  "hoverMinSeconds": 1,
+  "hoverMaxHorizontalSpeedMS": 0.5,
+  "manualNonzeroHoldMinSeconds": 1,
+  "manualHorizontalDisplacementMinM": 0.3,
+  "manualEffectiveInputAbsMax": 0.25,
+  "initialHorizontalEnvelopeM": 10,
+  "maximumRelativeAltitudeM": 5,
+  "groundMaxAbsRelativeAltitudeM": 0.4,
+  "groundDisarmedMinIndependentFreshObservations": 2,
+  "firmwareParameters": {
+    "nominalRC_OVERRIDE_TIME": 0.5,
+    "linkLossRC_OVERRIDE_TIME": 6,
+    "FS_GCS_ENABLE": 5,
+    "FS_GCS_TIMEOUT": 5,
+    "FS_OPTIONS": 0,
+    "RC_OPTIONS": 32,
+    "ARMING_SKIPCHK": 0
+  },
+  "BRAKE17": "Finite predeclared safety de-escalation only; observe mode17 before RCneutral/release. Unknown/stale observation closes native FD and leaves AP GCSLAND for passive observation.",
+  "externalFault": "Transparent native-MAVLink path CUT, keeping AP/FDM/clock/passive observer alive",
+  "passiveObserver": "Zero application-layer MAVLink payload TX; TCP handshake/ACK packets are not flight-authority traffic",
+  "notClaimed": ["DJI superiority", "real Hera calibration", "ACRO", "physical HID", "actual airborne AP reboot"]
+}

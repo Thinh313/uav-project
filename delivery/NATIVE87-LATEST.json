@@ -1,0 +1,10 @@
+{
+  "milestone": "NATIVE87",
+  "status": "PASS_SCOPED_ANDROID_SITL_WITH_DOCUMENTED_UI_OBSERVATION",
+  "completion": "delivery/COMPLETION-NATIVE87.html",
+  "verification": "evidence/native87/verification.json",
+  "apk": "native/native87/dist/aeris-native87-development07.apk",
+  "apkSha256": "f3ccd593cab839fb32da8c00e57c55f7f483435311e419182fcdbf47b6ec55e4",
+  "completionSha256": "8606069225888c6f500864b1e8ce82b2edc7f307ffb5efd87ff6e1833ba9287f",
+  "productionReady": false
+}

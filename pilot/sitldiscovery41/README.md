@@ -1,0 +1,11 @@
+# SITLDISCOVERY41
+
+Actual disarmed readonly ArduPilot4.7.1 discovery over localhost5794 in an exact owned container, using immutable APSTREAM40 full framing/codec. Separate from frozen app/candidate/ENDURE. Outbound whitelist: GCSheartbeat, REQUEST_MESSAGE512 for148, eight known named readonly parameter requests. No ARM/mode/mission/parameter-write/flight or firmware reboot command. Reboot is exact owned Docker restart.
+
+New observer binds a locally verified simulator manifest(binarySHA/CID/PID/start/version/build); zeroUID is allowed only there. Hardware identity/authentication/flightAuthority always false. Parameter snapshots never become operationally valid config or restored authority. Narrow1024-byte initial printable boot preamble requires the reviewed banner; original preamble bytes remain. Subsequent MAVLink framing/CRC stays unchanged. No generic corruption bypass.
+
+`observer.mjs`: pure observed-session/loss/version/typed state and weak nonrestorable witnesses. `client.mjs`: only fixed127.0.0.1:5794 TCP, bounded raw capture with fsync, actual TX intent/write return. `qa.mjs`: owned network/loss/reboot driver, only already authorized lifecycle operations. `replay.mjs`: cold actual-byte/typed replay; `tests.mjs`: unit faults using actual version fixture, no network. `lifecycle.py`: verified owned CID/image/mount/CPU/memory process lifecycle; no pull/build. `guard.py`/`verify.py`: before/after protected checks and source-bound cold checks.
+
+Accepted evidence is run03/attempt02 +unit1/raw-replay1/verification1. Prior launches/QA failure and AP40 actual-byte UID0 refusal retained. Do not rerun qa/lifecycle blindly: receipts are exclusive, runtime must be newly scoped/admitted and none remains running. Further actual commands need explicit task authorization. Hardware/SITLflight/native/full preflight/enforcement/endurance/release are NOT_CHECKED here.
+
+Source association uses exact existing public binary metadata and observed announcement; sourceBuildReproduced:false. UID2 container hostname is not an aircraft serial. Old runtime-tree/captured XML differences remain in APSTREAM40 overlap evidence. No software signature or actual radio authentication is introduced.

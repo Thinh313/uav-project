@@ -1,0 +1,13 @@
+{
+  "at": "2026-10-20T10:57:23.673753+07:00",
+  "milestone": "M1 Integrated Operational Alpha",
+  "overallStatus": "NOT READY",
+  "scopeStatus": "READY_SCOPED_OFFLINE_LIFECYCLE",
+  "disposition": "Offline slice complete. Keep runtime05 separate, no automatic launch if disk frees. Explicit user change to mock-only scope plus fresh real resource/source gates required before Android-SITL. See M1-ACCEPTANCE-SEQUENCE05.md.",
+  "sourceId": "bc50dfa5bdca8bcdd8de1f8a82bdbbfc128defc6ac7ef559dd90facd0f4c503d",
+  "report": "delivery/COMPLETION-M1-LIFECYCLE05.md",
+  "qa": "evidence/integration03-lifecycle05/qa/verification-final01.json",
+  "actualRuntimeAuthorized": false,
+  "supersedesForCurrentDecisionOnly": "M1-PROGRESS.json retained historical artifact; current user mock-only scope takes precedence",
+  "newSignature": false
+}

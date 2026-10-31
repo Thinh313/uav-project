@@ -1,0 +1,5755 @@
+{
+  "at": "2026-10-17T12:45:33.690Z",
+  "status": "PASS_BROWSER_UI_SCOPED",
+  "sourceManifest": "ui-admission-pins02.json",
+  "sourceManifestSHA256": "6e66510c4094155460e10e4ef8e410b17c8a3e99a22846d32daaccc127633435",
+  "sourceCount": 52,
+  "scenarioReceipts": 306,
+  "checks": [
+    {
+      "name": "release-main- exact coverage 32",
+      "pass": true
+    },
+    {
+      "name": "release-main-1024-day-fly.json geometry",
+      "pass": true
+    },
+    {
+      "name": "release-main-1024-day-fly.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "release-main-1024-day-fly.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "release-main-1024-day-fly-text.json",
+      "pass": true
+    },
+    {
+      "name": "release-main-1024-day-plan.json geometry",
+      "pass": true
+    },
+    {
+      "name": "release-main-1024-day-plan.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "release-main-1024-day-plan.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "release-main-1024-day-plan-text.json",
+      "pass": true
+    },
+    {
+      "name": "release-main-1024-day-preflight.json geometry",
+      "pass": true
+    },
+    {
+      "name": "release-main-1024-day-preflight.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "release-main-1024-day-preflight.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "release-main-1024-day-preflight-text.json",
+      "pass": true
+    },
+    {
+      "name": "release-main-1024-day-review.json geometry",
+      "pass": true
+    },
+    {
+      "name": "release-main-1024-day-review.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "release-main-1024-day-review-text.json",
+      "pass": true
+    },
+    {
+      "name": "release-main-1024-night-fly.json geometry",
+      "pass": true
+    },
+    {
+      "name": "release-main-1024-night-fly.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "release-main-1024-night-fly.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "release-main-1024-night-fly-text.json",
+      "pass": true
+    },
+    {
+      "name": "release-main-1024-night-plan.json geometry",
+      "pass": true
+    },
+    {
+      "name": "release-main-1024-night-plan.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "release-main-1024-night-plan.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "release-main-1024-night-plan-text.json",
+      "pass": true
+    },
+    {
+      "name": "release-main-1024-night-preflight.json geometry",
+      "pass": true
+    },
+    {
+      "name": "release-main-1024-night-preflight.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "release-main-1024-night-preflight.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "release-main-1024-night-preflight-text.json",
+      "pass": true
+    },
+    {
+      "name": "release-main-1024-night-review.json geometry",
+      "pass": true
+    },
+    {
+      "name": "release-main-1024-night-review.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "release-main-1024-night-review-text.json",
+      "pass": true
+    },
+    {
+      "name": "release-main-1280-day-fly.json geometry",
+      "pass": true
+    },
+    {
+      "name": "release-main-1280-day-fly.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "release-main-1280-day-fly.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "release-main-1280-day-fly-text.json",
+      "pass": true
+    },
+    {
+      "name": "release-main-1280-day-plan.json geometry",
+      "pass": true
+    },
+    {
+      "name": "release-main-1280-day-plan.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "release-main-1280-day-plan.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "release-main-1280-day-plan-text.json",
+      "pass": true
+    },
+    {
+      "name": "release-main-1280-day-preflight.json geometry",
+      "pass": true
+    },
+    {
+      "name": "release-main-1280-day-preflight.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "release-main-1280-day-preflight.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "release-main-1280-day-preflight-text.json",
+      "pass": true
+    },
+    {
+      "name": "release-main-1280-day-review.json geometry",
+      "pass": true
+    },
+    {
+      "name": "release-main-1280-day-review.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "release-main-1280-day-review-text.json",
+      "pass": true
+    },
+    {
+      "name": "release-main-1280-night-fly.json geometry",
+      "pass": true
+    },
+    {
+      "name": "release-main-1280-night-fly.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "release-main-1280-night-fly.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "release-main-1280-night-fly-text.json",
+      "pass": true
+    },
+    {
+      "name": "release-main-1280-night-plan.json geometry",
+      "pass": true
+    },
+    {
+      "name": "release-main-1280-night-plan.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "release-main-1280-night-plan.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "release-main-1280-night-plan-text.json",
+      "pass": true
+    },
+    {
+      "name": "release-main-1280-night-preflight.json geometry",
+      "pass": true
+    },
+    {
+      "name": "release-main-1280-night-preflight.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "release-main-1280-night-preflight.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "release-main-1280-night-preflight-text.json",
+      "pass": true
+    },
+    {
+      "name": "release-main-1280-night-review.json geometry",
+      "pass": true
+    },
+    {
+      "name": "release-main-1280-night-review.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "release-main-1280-night-review-text.json",
+      "pass": true
+    },
+    {
+      "name": "release-main-1366-day-fly.json geometry",
+      "pass": true
+    },
+    {
+      "name": "release-main-1366-day-fly.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "release-main-1366-day-fly.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "release-main-1366-day-fly-text.json",
+      "pass": true
+    },
+    {
+      "name": "release-main-1366-day-plan.json geometry",
+      "pass": true
+    },
+    {
+      "name": "release-main-1366-day-plan.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "release-main-1366-day-plan.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "release-main-1366-day-plan-text.json",
+      "pass": true
+    },
+    {
+      "name": "release-main-1366-day-preflight.json geometry",
+      "pass": true
+    },
+    {
+      "name": "release-main-1366-day-preflight.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "release-main-1366-day-preflight.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "release-main-1366-day-preflight-text.json",
+      "pass": true
+    },
+    {
+      "name": "release-main-1366-day-review.json geometry",
+      "pass": true
+    },
+    {
+      "name": "release-main-1366-day-review.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "release-main-1366-day-review-text.json",
+      "pass": true
+    },
+    {
+      "name": "release-main-1366-night-fly.json geometry",
+      "pass": true
+    },
+    {
+      "name": "release-main-1366-night-fly.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "release-main-1366-night-fly.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "release-main-1366-night-fly-text.json",
+      "pass": true
+    },
+    {
+      "name": "release-main-1366-night-plan.json geometry",
+      "pass": true
+    },
+    {
+      "name": "release-main-1366-night-plan.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "release-main-1366-night-plan.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "release-main-1366-night-plan-text.json",
+      "pass": true
+    },
+    {
+      "name": "release-main-1366-night-preflight.json geometry",
+      "pass": true
+    },
+    {
+      "name": "release-main-1366-night-preflight.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "release-main-1366-night-preflight.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "release-main-1366-night-preflight-text.json",
+      "pass": true
+    },
+    {
+      "name": "release-main-1366-night-review.json geometry",
+      "pass": true
+    },
+    {
+      "name": "release-main-1366-night-review.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "release-main-1366-night-review-text.json",
+      "pass": true
+    },
+    {
+      "name": "release-main-1920-day-fly.json geometry",
+      "pass": true
+    },
+    {
+      "name": "release-main-1920-day-fly.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "release-main-1920-day-fly.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "release-main-1920-day-fly-text.json",
+      "pass": true
+    },
+    {
+      "name": "release-main-1920-day-plan.json geometry",
+      "pass": true
+    },
+    {
+      "name": "release-main-1920-day-plan.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "release-main-1920-day-plan.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "release-main-1920-day-plan-text.json",
+      "pass": true
+    },
+    {
+      "name": "release-main-1920-day-preflight.json geometry",
+      "pass": true
+    },
+    {
+      "name": "release-main-1920-day-preflight.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "release-main-1920-day-preflight.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "release-main-1920-day-preflight-text.json",
+      "pass": true
+    },
+    {
+      "name": "release-main-1920-day-review.json geometry",
+      "pass": true
+    },
+    {
+      "name": "release-main-1920-day-review.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "release-main-1920-day-review-text.json",
+      "pass": true
+    },
+    {
+      "name": "release-main-1920-night-fly.json geometry",
+      "pass": true
+    },
+    {
+      "name": "release-main-1920-night-fly.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "release-main-1920-night-fly.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "release-main-1920-night-fly-text.json",
+      "pass": true
+    },
+    {
+      "name": "release-main-1920-night-plan.json geometry",
+      "pass": true
+    },
+    {
+      "name": "release-main-1920-night-plan.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "release-main-1920-night-plan.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "release-main-1920-night-plan-text.json",
+      "pass": true
+    },
+    {
+      "name": "release-main-1920-night-preflight.json geometry",
+      "pass": true
+    },
+    {
+      "name": "release-main-1920-night-preflight.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "release-main-1920-night-preflight.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "release-main-1920-night-preflight-text.json",
+      "pass": true
+    },
+    {
+      "name": "release-main-1920-night-review.json geometry",
+      "pass": true
+    },
+    {
+      "name": "release-main-1920-night-review.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "release-main-1920-night-review-text.json",
+      "pass": true
+    },
+    {
+      "name": "accept-popup- exact coverage 144",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1024-day-aircraft-bottom.json geometry",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1024-day-aircraft-bottom.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1024-day-aircraft-bottom.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1024-day-aircraft.json geometry",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1024-day-aircraft.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1024-day-aircraft.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1024-day-aircraft-text.json",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1024-day-authority-bottom.json geometry",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1024-day-authority-bottom.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1024-day-authority-bottom.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1024-day-authority.json geometry",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1024-day-authority.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1024-day-authority.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1024-day-authority-text.json",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1024-day-battery-bottom.json geometry",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1024-day-battery-bottom.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1024-day-battery-bottom.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1024-day-battery.json geometry",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1024-day-battery.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1024-day-battery.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1024-day-battery-text.json",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1024-day-camera-meta-bottom.json geometry",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1024-day-camera-meta-bottom.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1024-day-camera-meta-bottom.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1024-day-camera-meta.json geometry",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1024-day-camera-meta.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1024-day-camera-meta.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1024-day-camera-meta-text.json",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1024-day-camera-settings-bottom.json geometry",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1024-day-camera-settings-bottom.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1024-day-camera-settings-bottom.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1024-day-camera-settings.json geometry",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1024-day-camera-settings.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1024-day-camera-settings.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1024-day-camera-settings-text.json",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1024-day-concept-bottom.json geometry",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1024-day-concept-bottom.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1024-day-concept-bottom.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1024-day-concept.json geometry",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1024-day-concept.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1024-day-concept.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1024-day-concept-text.json",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1024-day-input-bottom.json geometry",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1024-day-input-bottom.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1024-day-input-bottom.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1024-day-input.json geometry",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1024-day-input.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1024-day-input.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1024-day-input-text.json",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1024-day-link-bottom.json geometry",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1024-day-link-bottom.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1024-day-link-bottom.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1024-day-link.json geometry",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1024-day-link.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1024-day-link.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1024-day-link-text.json",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1024-day-payload-bottom.json geometry",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1024-day-payload-bottom.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1024-day-payload-bottom.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1024-day-payload.json geometry",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1024-day-payload.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1024-day-payload.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1024-day-payload-text.json",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1024-night-aircraft-bottom.json geometry",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1024-night-aircraft-bottom.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1024-night-aircraft-bottom.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1024-night-aircraft.json geometry",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1024-night-aircraft.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1024-night-aircraft.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1024-night-aircraft-text.json",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1024-night-authority-bottom.json geometry",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1024-night-authority-bottom.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1024-night-authority-bottom.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1024-night-authority.json geometry",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1024-night-authority.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1024-night-authority.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1024-night-authority-text.json",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1024-night-battery-bottom.json geometry",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1024-night-battery-bottom.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1024-night-battery-bottom.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1024-night-battery.json geometry",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1024-night-battery.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1024-night-battery.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1024-night-battery-text.json",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1024-night-camera-meta-bottom.json geometry",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1024-night-camera-meta-bottom.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1024-night-camera-meta-bottom.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1024-night-camera-meta.json geometry",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1024-night-camera-meta.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1024-night-camera-meta.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1024-night-camera-meta-text.json",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1024-night-camera-settings-bottom.json geometry",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1024-night-camera-settings-bottom.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1024-night-camera-settings-bottom.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1024-night-camera-settings.json geometry",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1024-night-camera-settings.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1024-night-camera-settings.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1024-night-camera-settings-text.json",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1024-night-concept-bottom.json geometry",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1024-night-concept-bottom.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1024-night-concept-bottom.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1024-night-concept.json geometry",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1024-night-concept.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1024-night-concept.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1024-night-concept-text.json",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1024-night-input-bottom.json geometry",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1024-night-input-bottom.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1024-night-input-bottom.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1024-night-input.json geometry",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1024-night-input.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1024-night-input.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1024-night-input-text.json",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1024-night-link-bottom.json geometry",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1024-night-link-bottom.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1024-night-link-bottom.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1024-night-link.json geometry",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1024-night-link.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1024-night-link.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1024-night-link-text.json",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1024-night-payload-bottom.json geometry",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1024-night-payload-bottom.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1024-night-payload-bottom.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1024-night-payload.json geometry",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1024-night-payload.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1024-night-payload.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1024-night-payload-text.json",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1280-day-aircraft-bottom.json geometry",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1280-day-aircraft-bottom.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1280-day-aircraft-bottom.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1280-day-aircraft.json geometry",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1280-day-aircraft.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1280-day-aircraft.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1280-day-aircraft-text.json",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1280-day-authority-bottom.json geometry",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1280-day-authority-bottom.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1280-day-authority-bottom.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1280-day-authority.json geometry",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1280-day-authority.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1280-day-authority.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1280-day-authority-text.json",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1280-day-battery-bottom.json geometry",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1280-day-battery-bottom.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1280-day-battery-bottom.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1280-day-battery.json geometry",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1280-day-battery.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1280-day-battery.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1280-day-battery-text.json",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1280-day-camera-meta-bottom.json geometry",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1280-day-camera-meta-bottom.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1280-day-camera-meta-bottom.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1280-day-camera-meta.json geometry",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1280-day-camera-meta.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1280-day-camera-meta.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1280-day-camera-meta-text.json",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1280-day-camera-settings-bottom.json geometry",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1280-day-camera-settings-bottom.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1280-day-camera-settings-bottom.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1280-day-camera-settings.json geometry",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1280-day-camera-settings.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1280-day-camera-settings.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1280-day-camera-settings-text.json",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1280-day-concept-bottom.json geometry",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1280-day-concept-bottom.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1280-day-concept-bottom.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1280-day-concept.json geometry",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1280-day-concept.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1280-day-concept.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1280-day-concept-text.json",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1280-day-input-bottom.json geometry",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1280-day-input-bottom.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1280-day-input-bottom.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1280-day-input.json geometry",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1280-day-input.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1280-day-input.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1280-day-input-text.json",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1280-day-link-bottom.json geometry",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1280-day-link-bottom.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1280-day-link-bottom.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1280-day-link.json geometry",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1280-day-link.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1280-day-link.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1280-day-link-text.json",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1280-day-payload-bottom.json geometry",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1280-day-payload-bottom.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1280-day-payload-bottom.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1280-day-payload.json geometry",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1280-day-payload.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1280-day-payload.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1280-day-payload-text.json",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1280-night-aircraft-bottom.json geometry",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1280-night-aircraft-bottom.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1280-night-aircraft-bottom.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1280-night-aircraft.json geometry",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1280-night-aircraft.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1280-night-aircraft.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1280-night-aircraft-text.json",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1280-night-authority-bottom.json geometry",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1280-night-authority-bottom.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1280-night-authority-bottom.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1280-night-authority.json geometry",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1280-night-authority.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1280-night-authority.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1280-night-authority-text.json",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1280-night-battery-bottom.json geometry",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1280-night-battery-bottom.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1280-night-battery-bottom.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1280-night-battery.json geometry",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1280-night-battery.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1280-night-battery.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1280-night-battery-text.json",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1280-night-camera-meta-bottom.json geometry",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1280-night-camera-meta-bottom.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1280-night-camera-meta-bottom.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1280-night-camera-meta.json geometry",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1280-night-camera-meta.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1280-night-camera-meta.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1280-night-camera-meta-text.json",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1280-night-camera-settings-bottom.json geometry",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1280-night-camera-settings-bottom.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1280-night-camera-settings-bottom.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1280-night-camera-settings.json geometry",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1280-night-camera-settings.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1280-night-camera-settings.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1280-night-camera-settings-text.json",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1280-night-concept-bottom.json geometry",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1280-night-concept-bottom.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1280-night-concept-bottom.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1280-night-concept.json geometry",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1280-night-concept.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1280-night-concept.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1280-night-concept-text.json",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1280-night-input-bottom.json geometry",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1280-night-input-bottom.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1280-night-input-bottom.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1280-night-input.json geometry",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1280-night-input.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1280-night-input.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1280-night-input-text.json",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1280-night-link-bottom.json geometry",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1280-night-link-bottom.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1280-night-link-bottom.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1280-night-link.json geometry",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1280-night-link.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1280-night-link.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1280-night-link-text.json",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1280-night-payload-bottom.json geometry",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1280-night-payload-bottom.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1280-night-payload-bottom.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1280-night-payload.json geometry",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1280-night-payload.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1280-night-payload.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1280-night-payload-text.json",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1366-day-aircraft-bottom.json geometry",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1366-day-aircraft-bottom.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1366-day-aircraft-bottom.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1366-day-aircraft.json geometry",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1366-day-aircraft.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1366-day-aircraft.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1366-day-aircraft-text.json",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1366-day-authority-bottom.json geometry",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1366-day-authority-bottom.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1366-day-authority-bottom.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1366-day-authority.json geometry",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1366-day-authority.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1366-day-authority.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1366-day-authority-text.json",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1366-day-battery-bottom.json geometry",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1366-day-battery-bottom.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1366-day-battery-bottom.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1366-day-battery.json geometry",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1366-day-battery.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1366-day-battery.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1366-day-battery-text.json",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1366-day-camera-meta-bottom.json geometry",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1366-day-camera-meta-bottom.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1366-day-camera-meta-bottom.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1366-day-camera-meta.json geometry",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1366-day-camera-meta.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1366-day-camera-meta.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1366-day-camera-meta-text.json",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1366-day-camera-settings-bottom.json geometry",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1366-day-camera-settings-bottom.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1366-day-camera-settings-bottom.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1366-day-camera-settings.json geometry",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1366-day-camera-settings.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1366-day-camera-settings.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1366-day-camera-settings-text.json",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1366-day-concept-bottom.json geometry",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1366-day-concept-bottom.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1366-day-concept-bottom.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1366-day-concept.json geometry",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1366-day-concept.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1366-day-concept.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1366-day-concept-text.json",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1366-day-input-bottom.json geometry",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1366-day-input-bottom.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1366-day-input-bottom.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1366-day-input.json geometry",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1366-day-input.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1366-day-input.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1366-day-input-text.json",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1366-day-link-bottom.json geometry",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1366-day-link-bottom.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1366-day-link-bottom.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1366-day-link.json geometry",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1366-day-link.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1366-day-link.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1366-day-link-text.json",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1366-day-payload-bottom.json geometry",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1366-day-payload-bottom.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1366-day-payload-bottom.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1366-day-payload.json geometry",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1366-day-payload.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1366-day-payload.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1366-day-payload-text.json",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1366-night-aircraft-bottom.json geometry",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1366-night-aircraft-bottom.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1366-night-aircraft-bottom.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1366-night-aircraft.json geometry",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1366-night-aircraft.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1366-night-aircraft.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1366-night-aircraft-text.json",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1366-night-authority-bottom.json geometry",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1366-night-authority-bottom.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1366-night-authority-bottom.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1366-night-authority.json geometry",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1366-night-authority.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1366-night-authority.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1366-night-authority-text.json",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1366-night-battery-bottom.json geometry",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1366-night-battery-bottom.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1366-night-battery-bottom.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1366-night-battery.json geometry",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1366-night-battery.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1366-night-battery.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1366-night-battery-text.json",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1366-night-camera-meta-bottom.json geometry",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1366-night-camera-meta-bottom.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1366-night-camera-meta-bottom.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1366-night-camera-meta.json geometry",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1366-night-camera-meta.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1366-night-camera-meta.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1366-night-camera-meta-text.json",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1366-night-camera-settings-bottom.json geometry",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1366-night-camera-settings-bottom.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1366-night-camera-settings-bottom.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1366-night-camera-settings.json geometry",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1366-night-camera-settings.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1366-night-camera-settings.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1366-night-camera-settings-text.json",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1366-night-concept-bottom.json geometry",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1366-night-concept-bottom.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1366-night-concept-bottom.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1366-night-concept.json geometry",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1366-night-concept.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1366-night-concept.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1366-night-concept-text.json",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1366-night-input-bottom.json geometry",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1366-night-input-bottom.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1366-night-input-bottom.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1366-night-input.json geometry",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1366-night-input.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1366-night-input.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1366-night-input-text.json",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1366-night-link-bottom.json geometry",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1366-night-link-bottom.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1366-night-link-bottom.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1366-night-link.json geometry",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1366-night-link.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1366-night-link.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1366-night-link-text.json",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1366-night-payload-bottom.json geometry",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1366-night-payload-bottom.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1366-night-payload-bottom.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1366-night-payload.json geometry",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1366-night-payload.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1366-night-payload.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1366-night-payload-text.json",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1920-day-aircraft-bottom.json geometry",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1920-day-aircraft-bottom.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1920-day-aircraft-bottom.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1920-day-aircraft.json geometry",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1920-day-aircraft.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1920-day-aircraft.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1920-day-aircraft-text.json",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1920-day-authority-bottom.json geometry",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1920-day-authority-bottom.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1920-day-authority-bottom.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1920-day-authority.json geometry",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1920-day-authority.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1920-day-authority.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1920-day-authority-text.json",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1920-day-battery-bottom.json geometry",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1920-day-battery-bottom.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1920-day-battery-bottom.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1920-day-battery.json geometry",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1920-day-battery.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1920-day-battery.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1920-day-battery-text.json",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1920-day-camera-meta-bottom.json geometry",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1920-day-camera-meta-bottom.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1920-day-camera-meta-bottom.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1920-day-camera-meta.json geometry",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1920-day-camera-meta.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1920-day-camera-meta.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1920-day-camera-meta-text.json",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1920-day-camera-settings-bottom.json geometry",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1920-day-camera-settings-bottom.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1920-day-camera-settings-bottom.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1920-day-camera-settings.json geometry",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1920-day-camera-settings.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1920-day-camera-settings.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1920-day-camera-settings-text.json",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1920-day-concept-bottom.json geometry",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1920-day-concept-bottom.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1920-day-concept-bottom.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1920-day-concept.json geometry",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1920-day-concept.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1920-day-concept.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1920-day-concept-text.json",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1920-day-input-bottom.json geometry",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1920-day-input-bottom.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1920-day-input-bottom.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1920-day-input.json geometry",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1920-day-input.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1920-day-input.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1920-day-input-text.json",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1920-day-link-bottom.json geometry",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1920-day-link-bottom.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1920-day-link-bottom.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1920-day-link.json geometry",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1920-day-link.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1920-day-link.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1920-day-link-text.json",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1920-day-payload-bottom.json geometry",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1920-day-payload-bottom.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1920-day-payload-bottom.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1920-day-payload.json geometry",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1920-day-payload.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1920-day-payload.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1920-day-payload-text.json",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1920-night-aircraft-bottom.json geometry",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1920-night-aircraft-bottom.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1920-night-aircraft-bottom.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1920-night-aircraft.json geometry",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1920-night-aircraft.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1920-night-aircraft.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1920-night-aircraft-text.json",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1920-night-authority-bottom.json geometry",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1920-night-authority-bottom.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1920-night-authority-bottom.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1920-night-authority.json geometry",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1920-night-authority.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1920-night-authority.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1920-night-authority-text.json",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1920-night-battery-bottom.json geometry",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1920-night-battery-bottom.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1920-night-battery-bottom.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1920-night-battery.json geometry",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1920-night-battery.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1920-night-battery.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1920-night-battery-text.json",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1920-night-camera-meta-bottom.json geometry",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1920-night-camera-meta-bottom.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1920-night-camera-meta-bottom.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1920-night-camera-meta.json geometry",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1920-night-camera-meta.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1920-night-camera-meta.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1920-night-camera-meta-text.json",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1920-night-camera-settings-bottom.json geometry",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1920-night-camera-settings-bottom.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1920-night-camera-settings-bottom.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1920-night-camera-settings.json geometry",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1920-night-camera-settings.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1920-night-camera-settings.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1920-night-camera-settings-text.json",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1920-night-concept-bottom.json geometry",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1920-night-concept-bottom.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1920-night-concept-bottom.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1920-night-concept.json geometry",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1920-night-concept.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1920-night-concept.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1920-night-concept-text.json",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1920-night-input-bottom.json geometry",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1920-night-input-bottom.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1920-night-input-bottom.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1920-night-input.json geometry",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1920-night-input.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1920-night-input.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1920-night-input-text.json",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1920-night-link-bottom.json geometry",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1920-night-link-bottom.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1920-night-link-bottom.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1920-night-link.json geometry",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1920-night-link.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1920-night-link.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1920-night-link-text.json",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1920-night-payload-bottom.json geometry",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1920-night-payload-bottom.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1920-night-payload-bottom.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1920-night-payload.json geometry",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1920-night-payload.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1920-night-payload.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "accept-popup-1920-night-payload-text.json",
+      "pass": true
+    },
+    {
+      "name": "accept-panel- exact coverage 32",
+      "pass": true
+    },
+    {
+      "name": "accept-panel-1024-day-live.json geometry",
+      "pass": true
+    },
+    {
+      "name": "accept-panel-1024-day-live.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "accept-panel-1024-day-live.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "accept-panel-1024-day-live-text.json",
+      "pass": true
+    },
+    {
+      "name": "accept-panel-1024-day-plan.json geometry",
+      "pass": true
+    },
+    {
+      "name": "accept-panel-1024-day-plan.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "accept-panel-1024-day-plan.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "accept-panel-1024-day-plan-text.json",
+      "pass": true
+    },
+    {
+      "name": "accept-panel-1024-day-review.json geometry",
+      "pass": true
+    },
+    {
+      "name": "accept-panel-1024-day-review.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "accept-panel-1024-day-review.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "accept-panel-1024-day-review-text.json",
+      "pass": true
+    },
+    {
+      "name": "accept-panel-1024-day-workspace.json geometry",
+      "pass": true
+    },
+    {
+      "name": "accept-panel-1024-day-workspace.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "accept-panel-1024-day-workspace.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "accept-panel-1024-day-workspace-text.json",
+      "pass": true
+    },
+    {
+      "name": "accept-panel-1024-night-live.json geometry",
+      "pass": true
+    },
+    {
+      "name": "accept-panel-1024-night-live.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "accept-panel-1024-night-live.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "accept-panel-1024-night-live-text.json",
+      "pass": true
+    },
+    {
+      "name": "accept-panel-1024-night-plan.json geometry",
+      "pass": true
+    },
+    {
+      "name": "accept-panel-1024-night-plan.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "accept-panel-1024-night-plan.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "accept-panel-1024-night-plan-text.json",
+      "pass": true
+    },
+    {
+      "name": "accept-panel-1024-night-review.json geometry",
+      "pass": true
+    },
+    {
+      "name": "accept-panel-1024-night-review.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "accept-panel-1024-night-review.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "accept-panel-1024-night-review-text.json",
+      "pass": true
+    },
+    {
+      "name": "accept-panel-1024-night-workspace.json geometry",
+      "pass": true
+    },
+    {
+      "name": "accept-panel-1024-night-workspace.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "accept-panel-1024-night-workspace.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "accept-panel-1024-night-workspace-text.json",
+      "pass": true
+    },
+    {
+      "name": "accept-panel-1280-day-live.json geometry",
+      "pass": true
+    },
+    {
+      "name": "accept-panel-1280-day-live.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "accept-panel-1280-day-live.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "accept-panel-1280-day-live-text.json",
+      "pass": true
+    },
+    {
+      "name": "accept-panel-1280-day-plan.json geometry",
+      "pass": true
+    },
+    {
+      "name": "accept-panel-1280-day-plan.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "accept-panel-1280-day-plan.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "accept-panel-1280-day-plan-text.json",
+      "pass": true
+    },
+    {
+      "name": "accept-panel-1280-day-review.json geometry",
+      "pass": true
+    },
+    {
+      "name": "accept-panel-1280-day-review.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "accept-panel-1280-day-review.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "accept-panel-1280-day-review-text.json",
+      "pass": true
+    },
+    {
+      "name": "accept-panel-1280-day-workspace.json geometry",
+      "pass": true
+    },
+    {
+      "name": "accept-panel-1280-day-workspace.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "accept-panel-1280-day-workspace.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "accept-panel-1280-day-workspace-text.json",
+      "pass": true
+    },
+    {
+      "name": "accept-panel-1280-night-live.json geometry",
+      "pass": true
+    },
+    {
+      "name": "accept-panel-1280-night-live.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "accept-panel-1280-night-live.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "accept-panel-1280-night-live-text.json",
+      "pass": true
+    },
+    {
+      "name": "accept-panel-1280-night-plan.json geometry",
+      "pass": true
+    },
+    {
+      "name": "accept-panel-1280-night-plan.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "accept-panel-1280-night-plan.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "accept-panel-1280-night-plan-text.json",
+      "pass": true
+    },
+    {
+      "name": "accept-panel-1280-night-review.json geometry",
+      "pass": true
+    },
+    {
+      "name": "accept-panel-1280-night-review.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "accept-panel-1280-night-review.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "accept-panel-1280-night-review-text.json",
+      "pass": true
+    },
+    {
+      "name": "accept-panel-1280-night-workspace.json geometry",
+      "pass": true
+    },
+    {
+      "name": "accept-panel-1280-night-workspace.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "accept-panel-1280-night-workspace.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "accept-panel-1280-night-workspace-text.json",
+      "pass": true
+    },
+    {
+      "name": "accept-panel-1366-day-live.json geometry",
+      "pass": true
+    },
+    {
+      "name": "accept-panel-1366-day-live.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "accept-panel-1366-day-live.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "accept-panel-1366-day-live-text.json",
+      "pass": true
+    },
+    {
+      "name": "accept-panel-1366-day-plan.json geometry",
+      "pass": true
+    },
+    {
+      "name": "accept-panel-1366-day-plan.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "accept-panel-1366-day-plan.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "accept-panel-1366-day-plan-text.json",
+      "pass": true
+    },
+    {
+      "name": "accept-panel-1366-day-review.json geometry",
+      "pass": true
+    },
+    {
+      "name": "accept-panel-1366-day-review.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "accept-panel-1366-day-review.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "accept-panel-1366-day-review-text.json",
+      "pass": true
+    },
+    {
+      "name": "accept-panel-1366-day-workspace.json geometry",
+      "pass": true
+    },
+    {
+      "name": "accept-panel-1366-day-workspace.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "accept-panel-1366-day-workspace.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "accept-panel-1366-day-workspace-text.json",
+      "pass": true
+    },
+    {
+      "name": "accept-panel-1366-night-live.json geometry",
+      "pass": true
+    },
+    {
+      "name": "accept-panel-1366-night-live.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "accept-panel-1366-night-live.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "accept-panel-1366-night-live-text.json",
+      "pass": true
+    },
+    {
+      "name": "accept-panel-1366-night-plan.json geometry",
+      "pass": true
+    },
+    {
+      "name": "accept-panel-1366-night-plan.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "accept-panel-1366-night-plan.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "accept-panel-1366-night-plan-text.json",
+      "pass": true
+    },
+    {
+      "name": "accept-panel-1366-night-review.json geometry",
+      "pass": true
+    },
+    {
+      "name": "accept-panel-1366-night-review.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "accept-panel-1366-night-review.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "accept-panel-1366-night-review-text.json",
+      "pass": true
+    },
+    {
+      "name": "accept-panel-1366-night-workspace.json geometry",
+      "pass": true
+    },
+    {
+      "name": "accept-panel-1366-night-workspace.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "accept-panel-1366-night-workspace.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "accept-panel-1366-night-workspace-text.json",
+      "pass": true
+    },
+    {
+      "name": "accept-panel-1920-day-live.json geometry",
+      "pass": true
+    },
+    {
+      "name": "accept-panel-1920-day-live.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "accept-panel-1920-day-live.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "accept-panel-1920-day-live-text.json",
+      "pass": true
+    },
+    {
+      "name": "accept-panel-1920-day-plan.json geometry",
+      "pass": true
+    },
+    {
+      "name": "accept-panel-1920-day-plan.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "accept-panel-1920-day-plan.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "accept-panel-1920-day-plan-text.json",
+      "pass": true
+    },
+    {
+      "name": "accept-panel-1920-day-review.json geometry",
+      "pass": true
+    },
+    {
+      "name": "accept-panel-1920-day-review.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "accept-panel-1920-day-review.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "accept-panel-1920-day-review-text.json",
+      "pass": true
+    },
+    {
+      "name": "accept-panel-1920-day-workspace.json geometry",
+      "pass": true
+    },
+    {
+      "name": "accept-panel-1920-day-workspace.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "accept-panel-1920-day-workspace.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "accept-panel-1920-day-workspace-text.json",
+      "pass": true
+    },
+    {
+      "name": "accept-panel-1920-night-live.json geometry",
+      "pass": true
+    },
+    {
+      "name": "accept-panel-1920-night-live.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "accept-panel-1920-night-live.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "accept-panel-1920-night-live-text.json",
+      "pass": true
+    },
+    {
+      "name": "accept-panel-1920-night-plan.json geometry",
+      "pass": true
+    },
+    {
+      "name": "accept-panel-1920-night-plan.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "accept-panel-1920-night-plan.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "accept-panel-1920-night-plan-text.json",
+      "pass": true
+    },
+    {
+      "name": "accept-panel-1920-night-review.json geometry",
+      "pass": true
+    },
+    {
+      "name": "accept-panel-1920-night-review.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "accept-panel-1920-night-review.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "accept-panel-1920-night-review-text.json",
+      "pass": true
+    },
+    {
+      "name": "accept-panel-1920-night-workspace.json geometry",
+      "pass": true
+    },
+    {
+      "name": "accept-panel-1920-night-workspace.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "accept-panel-1920-night-workspace.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "accept-panel-1920-night-workspace-text.json",
+      "pass": true
+    },
+    {
+      "name": "accept-return- exact coverage 8",
+      "pass": true
+    },
+    {
+      "name": "accept-return-1024-day.json geometry",
+      "pass": true
+    },
+    {
+      "name": "accept-return-1024-day.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "accept-return-1024-day.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "accept-return-1024-day-text.json",
+      "pass": true
+    },
+    {
+      "name": "accept-return-1024-night.json geometry",
+      "pass": true
+    },
+    {
+      "name": "accept-return-1024-night.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "accept-return-1024-night.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "accept-return-1024-night-text.json",
+      "pass": true
+    },
+    {
+      "name": "accept-return-1280-day.json geometry",
+      "pass": true
+    },
+    {
+      "name": "accept-return-1280-day.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "accept-return-1280-day.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "accept-return-1280-day-text.json",
+      "pass": true
+    },
+    {
+      "name": "accept-return-1280-night.json geometry",
+      "pass": true
+    },
+    {
+      "name": "accept-return-1280-night.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "accept-return-1280-night.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "accept-return-1280-night-text.json",
+      "pass": true
+    },
+    {
+      "name": "accept-return-1366-day.json geometry",
+      "pass": true
+    },
+    {
+      "name": "accept-return-1366-day.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "accept-return-1366-day.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "accept-return-1366-day-text.json",
+      "pass": true
+    },
+    {
+      "name": "accept-return-1366-night.json geometry",
+      "pass": true
+    },
+    {
+      "name": "accept-return-1366-night.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "accept-return-1366-night.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "accept-return-1366-night-text.json",
+      "pass": true
+    },
+    {
+      "name": "accept-return-1920-day.json geometry",
+      "pass": true
+    },
+    {
+      "name": "accept-return-1920-day.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "accept-return-1920-day.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "accept-return-1920-day-text.json",
+      "pass": true
+    },
+    {
+      "name": "accept-return-1920-night.json geometry",
+      "pass": true
+    },
+    {
+      "name": "accept-return-1920-night.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "accept-return-1920-night.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "accept-return-1920-night-text.json",
+      "pass": true
+    },
+    {
+      "name": "release-alert- exact coverage 56",
+      "pass": true
+    },
+    {
+      "name": "release-alert-1024-day-battery.json geometry",
+      "pass": true
+    },
+    {
+      "name": "release-alert-1024-day-battery.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "release-alert-1024-day-battery.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "release-alert-1024-day-battery-text.json",
+      "pass": true
+    },
+    {
+      "name": "release-alert-1024-day-critical.json geometry",
+      "pass": true
+    },
+    {
+      "name": "release-alert-1024-day-critical.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "release-alert-1024-day-critical.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "release-alert-1024-day-critical-text.json",
+      "pass": true
+    },
+    {
+      "name": "release-alert-1024-day-healthy.json geometry",
+      "pass": true
+    },
+    {
+      "name": "release-alert-1024-day-healthy.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "release-alert-1024-day-healthy.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "release-alert-1024-day-healthy-text.json",
+      "pass": true
+    },
+    {
+      "name": "release-alert-1024-day-link.json geometry",
+      "pass": true
+    },
+    {
+      "name": "release-alert-1024-day-link.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "release-alert-1024-day-link.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "release-alert-1024-day-link-text.json",
+      "pass": true
+    },
+    {
+      "name": "release-alert-1024-day-reboot.json geometry",
+      "pass": true
+    },
+    {
+      "name": "release-alert-1024-day-reboot.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "release-alert-1024-day-reboot.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "release-alert-1024-day-reboot-text.json",
+      "pass": true
+    },
+    {
+      "name": "release-alert-1024-day-telemetry.json geometry",
+      "pass": true
+    },
+    {
+      "name": "release-alert-1024-day-telemetry.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "release-alert-1024-day-telemetry.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "release-alert-1024-day-telemetry-text.json",
+      "pass": true
+    },
+    {
+      "name": "release-alert-1024-day-video.json geometry",
+      "pass": true
+    },
+    {
+      "name": "release-alert-1024-day-video.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "release-alert-1024-day-video.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "release-alert-1024-day-video-text.json",
+      "pass": true
+    },
+    {
+      "name": "release-alert-1024-night-battery.json geometry",
+      "pass": true
+    },
+    {
+      "name": "release-alert-1024-night-battery.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "release-alert-1024-night-battery.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "release-alert-1024-night-battery-text.json",
+      "pass": true
+    },
+    {
+      "name": "release-alert-1024-night-critical.json geometry",
+      "pass": true
+    },
+    {
+      "name": "release-alert-1024-night-critical.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "release-alert-1024-night-critical.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "release-alert-1024-night-critical-text.json",
+      "pass": true
+    },
+    {
+      "name": "release-alert-1024-night-healthy.json geometry",
+      "pass": true
+    },
+    {
+      "name": "release-alert-1024-night-healthy.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "release-alert-1024-night-healthy.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "release-alert-1024-night-healthy-text.json",
+      "pass": true
+    },
+    {
+      "name": "release-alert-1024-night-link.json geometry",
+      "pass": true
+    },
+    {
+      "name": "release-alert-1024-night-link.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "release-alert-1024-night-link.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "release-alert-1024-night-link-text.json",
+      "pass": true
+    },
+    {
+      "name": "release-alert-1024-night-reboot.json geometry",
+      "pass": true
+    },
+    {
+      "name": "release-alert-1024-night-reboot.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "release-alert-1024-night-reboot.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "release-alert-1024-night-reboot-text.json",
+      "pass": true
+    },
+    {
+      "name": "release-alert-1024-night-telemetry.json geometry",
+      "pass": true
+    },
+    {
+      "name": "release-alert-1024-night-telemetry.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "release-alert-1024-night-telemetry.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "release-alert-1024-night-telemetry-text.json",
+      "pass": true
+    },
+    {
+      "name": "release-alert-1024-night-video.json geometry",
+      "pass": true
+    },
+    {
+      "name": "release-alert-1024-night-video.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "release-alert-1024-night-video.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "release-alert-1024-night-video-text.json",
+      "pass": true
+    },
+    {
+      "name": "release-alert-1280-day-battery.json geometry",
+      "pass": true
+    },
+    {
+      "name": "release-alert-1280-day-battery.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "release-alert-1280-day-battery.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "release-alert-1280-day-battery-text.json",
+      "pass": true
+    },
+    {
+      "name": "release-alert-1280-day-critical.json geometry",
+      "pass": true
+    },
+    {
+      "name": "release-alert-1280-day-critical.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "release-alert-1280-day-critical.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "release-alert-1280-day-critical-text.json",
+      "pass": true
+    },
+    {
+      "name": "release-alert-1280-day-healthy.json geometry",
+      "pass": true
+    },
+    {
+      "name": "release-alert-1280-day-healthy.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "release-alert-1280-day-healthy.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "release-alert-1280-day-healthy-text.json",
+      "pass": true
+    },
+    {
+      "name": "release-alert-1280-day-link.json geometry",
+      "pass": true
+    },
+    {
+      "name": "release-alert-1280-day-link.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "release-alert-1280-day-link.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "release-alert-1280-day-link-text.json",
+      "pass": true
+    },
+    {
+      "name": "release-alert-1280-day-reboot.json geometry",
+      "pass": true
+    },
+    {
+      "name": "release-alert-1280-day-reboot.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "release-alert-1280-day-reboot.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "release-alert-1280-day-reboot-text.json",
+      "pass": true
+    },
+    {
+      "name": "release-alert-1280-day-telemetry.json geometry",
+      "pass": true
+    },
+    {
+      "name": "release-alert-1280-day-telemetry.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "release-alert-1280-day-telemetry.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "release-alert-1280-day-telemetry-text.json",
+      "pass": true
+    },
+    {
+      "name": "release-alert-1280-day-video.json geometry",
+      "pass": true
+    },
+    {
+      "name": "release-alert-1280-day-video.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "release-alert-1280-day-video.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "release-alert-1280-day-video-text.json",
+      "pass": true
+    },
+    {
+      "name": "release-alert-1280-night-battery.json geometry",
+      "pass": true
+    },
+    {
+      "name": "release-alert-1280-night-battery.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "release-alert-1280-night-battery.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "release-alert-1280-night-battery-text.json",
+      "pass": true
+    },
+    {
+      "name": "release-alert-1280-night-critical.json geometry",
+      "pass": true
+    },
+    {
+      "name": "release-alert-1280-night-critical.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "release-alert-1280-night-critical.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "release-alert-1280-night-critical-text.json",
+      "pass": true
+    },
+    {
+      "name": "release-alert-1280-night-healthy.json geometry",
+      "pass": true
+    },
+    {
+      "name": "release-alert-1280-night-healthy.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "release-alert-1280-night-healthy.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "release-alert-1280-night-healthy-text.json",
+      "pass": true
+    },
+    {
+      "name": "release-alert-1280-night-link.json geometry",
+      "pass": true
+    },
+    {
+      "name": "release-alert-1280-night-link.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "release-alert-1280-night-link.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "release-alert-1280-night-link-text.json",
+      "pass": true
+    },
+    {
+      "name": "release-alert-1280-night-reboot.json geometry",
+      "pass": true
+    },
+    {
+      "name": "release-alert-1280-night-reboot.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "release-alert-1280-night-reboot.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "release-alert-1280-night-reboot-text.json",
+      "pass": true
+    },
+    {
+      "name": "release-alert-1280-night-telemetry.json geometry",
+      "pass": true
+    },
+    {
+      "name": "release-alert-1280-night-telemetry.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "release-alert-1280-night-telemetry.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "release-alert-1280-night-telemetry-text.json",
+      "pass": true
+    },
+    {
+      "name": "release-alert-1280-night-video.json geometry",
+      "pass": true
+    },
+    {
+      "name": "release-alert-1280-night-video.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "release-alert-1280-night-video.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "release-alert-1280-night-video-text.json",
+      "pass": true
+    },
+    {
+      "name": "release-alert-1366-day-battery.json geometry",
+      "pass": true
+    },
+    {
+      "name": "release-alert-1366-day-battery.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "release-alert-1366-day-battery.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "release-alert-1366-day-battery-text.json",
+      "pass": true
+    },
+    {
+      "name": "release-alert-1366-day-critical.json geometry",
+      "pass": true
+    },
+    {
+      "name": "release-alert-1366-day-critical.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "release-alert-1366-day-critical.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "release-alert-1366-day-critical-text.json",
+      "pass": true
+    },
+    {
+      "name": "release-alert-1366-day-healthy.json geometry",
+      "pass": true
+    },
+    {
+      "name": "release-alert-1366-day-healthy.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "release-alert-1366-day-healthy.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "release-alert-1366-day-healthy-text.json",
+      "pass": true
+    },
+    {
+      "name": "release-alert-1366-day-link.json geometry",
+      "pass": true
+    },
+    {
+      "name": "release-alert-1366-day-link.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "release-alert-1366-day-link.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "release-alert-1366-day-link-text.json",
+      "pass": true
+    },
+    {
+      "name": "release-alert-1366-day-reboot.json geometry",
+      "pass": true
+    },
+    {
+      "name": "release-alert-1366-day-reboot.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "release-alert-1366-day-reboot.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "release-alert-1366-day-reboot-text.json",
+      "pass": true
+    },
+    {
+      "name": "release-alert-1366-day-telemetry.json geometry",
+      "pass": true
+    },
+    {
+      "name": "release-alert-1366-day-telemetry.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "release-alert-1366-day-telemetry.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "release-alert-1366-day-telemetry-text.json",
+      "pass": true
+    },
+    {
+      "name": "release-alert-1366-day-video.json geometry",
+      "pass": true
+    },
+    {
+      "name": "release-alert-1366-day-video.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "release-alert-1366-day-video.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "release-alert-1366-day-video-text.json",
+      "pass": true
+    },
+    {
+      "name": "release-alert-1366-night-battery.json geometry",
+      "pass": true
+    },
+    {
+      "name": "release-alert-1366-night-battery.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "release-alert-1366-night-battery.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "release-alert-1366-night-battery-text.json",
+      "pass": true
+    },
+    {
+      "name": "release-alert-1366-night-critical.json geometry",
+      "pass": true
+    },
+    {
+      "name": "release-alert-1366-night-critical.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "release-alert-1366-night-critical.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "release-alert-1366-night-critical-text.json",
+      "pass": true
+    },
+    {
+      "name": "release-alert-1366-night-healthy.json geometry",
+      "pass": true
+    },
+    {
+      "name": "release-alert-1366-night-healthy.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "release-alert-1366-night-healthy.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "release-alert-1366-night-healthy-text.json",
+      "pass": true
+    },
+    {
+      "name": "release-alert-1366-night-link.json geometry",
+      "pass": true
+    },
+    {
+      "name": "release-alert-1366-night-link.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "release-alert-1366-night-link.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "release-alert-1366-night-link-text.json",
+      "pass": true
+    },
+    {
+      "name": "release-alert-1366-night-reboot.json geometry",
+      "pass": true
+    },
+    {
+      "name": "release-alert-1366-night-reboot.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "release-alert-1366-night-reboot.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "release-alert-1366-night-reboot-text.json",
+      "pass": true
+    },
+    {
+      "name": "release-alert-1366-night-telemetry.json geometry",
+      "pass": true
+    },
+    {
+      "name": "release-alert-1366-night-telemetry.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "release-alert-1366-night-telemetry.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "release-alert-1366-night-telemetry-text.json",
+      "pass": true
+    },
+    {
+      "name": "release-alert-1366-night-video.json geometry",
+      "pass": true
+    },
+    {
+      "name": "release-alert-1366-night-video.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "release-alert-1366-night-video.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "release-alert-1366-night-video-text.json",
+      "pass": true
+    },
+    {
+      "name": "release-alert-1920-day-battery.json geometry",
+      "pass": true
+    },
+    {
+      "name": "release-alert-1920-day-battery.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "release-alert-1920-day-battery.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "release-alert-1920-day-battery-text.json",
+      "pass": true
+    },
+    {
+      "name": "release-alert-1920-day-critical.json geometry",
+      "pass": true
+    },
+    {
+      "name": "release-alert-1920-day-critical.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "release-alert-1920-day-critical.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "release-alert-1920-day-critical-text.json",
+      "pass": true
+    },
+    {
+      "name": "release-alert-1920-day-healthy.json geometry",
+      "pass": true
+    },
+    {
+      "name": "release-alert-1920-day-healthy.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "release-alert-1920-day-healthy.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "release-alert-1920-day-healthy-text.json",
+      "pass": true
+    },
+    {
+      "name": "release-alert-1920-day-link.json geometry",
+      "pass": true
+    },
+    {
+      "name": "release-alert-1920-day-link.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "release-alert-1920-day-link.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "release-alert-1920-day-link-text.json",
+      "pass": true
+    },
+    {
+      "name": "release-alert-1920-day-reboot.json geometry",
+      "pass": true
+    },
+    {
+      "name": "release-alert-1920-day-reboot.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "release-alert-1920-day-reboot.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "release-alert-1920-day-reboot-text.json",
+      "pass": true
+    },
+    {
+      "name": "release-alert-1920-day-telemetry.json geometry",
+      "pass": true
+    },
+    {
+      "name": "release-alert-1920-day-telemetry.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "release-alert-1920-day-telemetry.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "release-alert-1920-day-telemetry-text.json",
+      "pass": true
+    },
+    {
+      "name": "release-alert-1920-day-video.json geometry",
+      "pass": true
+    },
+    {
+      "name": "release-alert-1920-day-video.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "release-alert-1920-day-video.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "release-alert-1920-day-video-text.json",
+      "pass": true
+    },
+    {
+      "name": "release-alert-1920-night-battery.json geometry",
+      "pass": true
+    },
+    {
+      "name": "release-alert-1920-night-battery.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "release-alert-1920-night-battery.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "release-alert-1920-night-battery-text.json",
+      "pass": true
+    },
+    {
+      "name": "release-alert-1920-night-critical.json geometry",
+      "pass": true
+    },
+    {
+      "name": "release-alert-1920-night-critical.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "release-alert-1920-night-critical.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "release-alert-1920-night-critical-text.json",
+      "pass": true
+    },
+    {
+      "name": "release-alert-1920-night-healthy.json geometry",
+      "pass": true
+    },
+    {
+      "name": "release-alert-1920-night-healthy.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "release-alert-1920-night-healthy.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "release-alert-1920-night-healthy-text.json",
+      "pass": true
+    },
+    {
+      "name": "release-alert-1920-night-link.json geometry",
+      "pass": true
+    },
+    {
+      "name": "release-alert-1920-night-link.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "release-alert-1920-night-link.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "release-alert-1920-night-link-text.json",
+      "pass": true
+    },
+    {
+      "name": "release-alert-1920-night-reboot.json geometry",
+      "pass": true
+    },
+    {
+      "name": "release-alert-1920-night-reboot.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "release-alert-1920-night-reboot.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "release-alert-1920-night-reboot-text.json",
+      "pass": true
+    },
+    {
+      "name": "release-alert-1920-night-telemetry.json geometry",
+      "pass": true
+    },
+    {
+      "name": "release-alert-1920-night-telemetry.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "release-alert-1920-night-telemetry.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "release-alert-1920-night-telemetry-text.json",
+      "pass": true
+    },
+    {
+      "name": "release-alert-1920-night-video.json geometry",
+      "pass": true
+    },
+    {
+      "name": "release-alert-1920-night-video.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "release-alert-1920-night-video.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "release-alert-1920-night-video-text.json",
+      "pass": true
+    },
+    {
+      "name": "release-history- exact coverage 24",
+      "pass": true
+    },
+    {
+      "name": "release-history-1024-day-0.json geometry",
+      "pass": true
+    },
+    {
+      "name": "release-history-1024-day-0.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "release-history-1024-day-0-text.json",
+      "pass": true
+    },
+    {
+      "name": "release-history-1024-day-2.json geometry",
+      "pass": true
+    },
+    {
+      "name": "release-history-1024-day-2.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "release-history-1024-day-2-text.json",
+      "pass": true
+    },
+    {
+      "name": "release-history-1024-day-4.json geometry",
+      "pass": true
+    },
+    {
+      "name": "release-history-1024-day-4.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "release-history-1024-day-4-text.json",
+      "pass": true
+    },
+    {
+      "name": "release-history-1024-night-0.json geometry",
+      "pass": true
+    },
+    {
+      "name": "release-history-1024-night-0.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "release-history-1024-night-0-text.json",
+      "pass": true
+    },
+    {
+      "name": "release-history-1024-night-2.json geometry",
+      "pass": true
+    },
+    {
+      "name": "release-history-1024-night-2.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "release-history-1024-night-2-text.json",
+      "pass": true
+    },
+    {
+      "name": "release-history-1024-night-4.json geometry",
+      "pass": true
+    },
+    {
+      "name": "release-history-1024-night-4.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "release-history-1024-night-4-text.json",
+      "pass": true
+    },
+    {
+      "name": "release-history-1280-day-0.json geometry",
+      "pass": true
+    },
+    {
+      "name": "release-history-1280-day-0.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "release-history-1280-day-0-text.json",
+      "pass": true
+    },
+    {
+      "name": "release-history-1280-day-2.json geometry",
+      "pass": true
+    },
+    {
+      "name": "release-history-1280-day-2.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "release-history-1280-day-2-text.json",
+      "pass": true
+    },
+    {
+      "name": "release-history-1280-day-4.json geometry",
+      "pass": true
+    },
+    {
+      "name": "release-history-1280-day-4.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "release-history-1280-day-4-text.json",
+      "pass": true
+    },
+    {
+      "name": "release-history-1280-night-0.json geometry",
+      "pass": true
+    },
+    {
+      "name": "release-history-1280-night-0.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "release-history-1280-night-0-text.json",
+      "pass": true
+    },
+    {
+      "name": "release-history-1280-night-2.json geometry",
+      "pass": true
+    },
+    {
+      "name": "release-history-1280-night-2.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "release-history-1280-night-2-text.json",
+      "pass": true
+    },
+    {
+      "name": "release-history-1280-night-4.json geometry",
+      "pass": true
+    },
+    {
+      "name": "release-history-1280-night-4.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "release-history-1280-night-4-text.json",
+      "pass": true
+    },
+    {
+      "name": "release-history-1366-day-0.json geometry",
+      "pass": true
+    },
+    {
+      "name": "release-history-1366-day-0.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "release-history-1366-day-0-text.json",
+      "pass": true
+    },
+    {
+      "name": "release-history-1366-day-2.json geometry",
+      "pass": true
+    },
+    {
+      "name": "release-history-1366-day-2.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "release-history-1366-day-2-text.json",
+      "pass": true
+    },
+    {
+      "name": "release-history-1366-day-4.json geometry",
+      "pass": true
+    },
+    {
+      "name": "release-history-1366-day-4.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "release-history-1366-day-4-text.json",
+      "pass": true
+    },
+    {
+      "name": "release-history-1366-night-0.json geometry",
+      "pass": true
+    },
+    {
+      "name": "release-history-1366-night-0.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "release-history-1366-night-0-text.json",
+      "pass": true
+    },
+    {
+      "name": "release-history-1366-night-2.json geometry",
+      "pass": true
+    },
+    {
+      "name": "release-history-1366-night-2.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "release-history-1366-night-2-text.json",
+      "pass": true
+    },
+    {
+      "name": "release-history-1366-night-4.json geometry",
+      "pass": true
+    },
+    {
+      "name": "release-history-1366-night-4.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "release-history-1366-night-4-text.json",
+      "pass": true
+    },
+    {
+      "name": "release-history-1920-day-0.json geometry",
+      "pass": true
+    },
+    {
+      "name": "release-history-1920-day-0.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "release-history-1920-day-0-text.json",
+      "pass": true
+    },
+    {
+      "name": "release-history-1920-day-2.json geometry",
+      "pass": true
+    },
+    {
+      "name": "release-history-1920-day-2.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "release-history-1920-day-2-text.json",
+      "pass": true
+    },
+    {
+      "name": "release-history-1920-day-4.json geometry",
+      "pass": true
+    },
+    {
+      "name": "release-history-1920-day-4.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "release-history-1920-day-4-text.json",
+      "pass": true
+    },
+    {
+      "name": "release-history-1920-night-0.json geometry",
+      "pass": true
+    },
+    {
+      "name": "release-history-1920-night-0.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "release-history-1920-night-0-text.json",
+      "pass": true
+    },
+    {
+      "name": "release-history-1920-night-2.json geometry",
+      "pass": true
+    },
+    {
+      "name": "release-history-1920-night-2.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "release-history-1920-night-2-text.json",
+      "pass": true
+    },
+    {
+      "name": "release-history-1920-night-4.json geometry",
+      "pass": true
+    },
+    {
+      "name": "release-history-1920-night-4.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "release-history-1920-night-4-text.json",
+      "pass": true
+    },
+    {
+      "name": "release-background- exact coverage 6",
+      "pass": true
+    },
+    {
+      "name": "release-background-day-bright.json geometry",
+      "pass": true
+    },
+    {
+      "name": "release-background-day-bright.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "release-background-day-bright.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "release-background-day-busy.json geometry",
+      "pass": true
+    },
+    {
+      "name": "release-background-day-busy.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "release-background-day-busy.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "release-background-day-dark.json geometry",
+      "pass": true
+    },
+    {
+      "name": "release-background-day-dark.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "release-background-day-dark.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "release-background-night-bright.json geometry",
+      "pass": true
+    },
+    {
+      "name": "release-background-night-bright.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "release-background-night-bright.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "release-background-night-busy.json geometry",
+      "pass": true
+    },
+    {
+      "name": "release-background-night-busy.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "release-background-night-busy.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "release-background-night-dark.json geometry",
+      "pass": true
+    },
+    {
+      "name": "release-background-night-dark.json aligned within 1px",
+      "pass": true
+    },
+    {
+      "name": "release-background-night-dark.json theme glyph",
+      "pass": true
+    },
+    {
+      "name": "release-journey-fly.json",
+      "pass": true
+    },
+    {
+      "name": "release-journey-review.json",
+      "pass": true
+    },
+    {
+      "name": "release-journey-after-reload.json",
+      "pass": true
+    },
+    {
+      "name": "release-sitl-disconnected.json",
+      "pass": true
+    },
+    {
+      "name": "before 76px mismatch retained",
+      "pass": true
+    },
+    {
+      "name": "alignment negative control bites",
+      "pass": true
+    },
+    {
+      "name": "overflow negative control bites",
+      "pass": true
+    },
+    {
+      "name": "video recovery map visible",
+      "pass": true
+    },
+    {
+      "name": "panel closes and returns focus",
+      "pass": true
+    },
+    {
+      "name": "reduced material tested",
+      "pass": true
+    },
+    {
+      "name": "only final video recovery CSS changed after popup matrix",
+      "pass": true
+    },
+    {
+      "name": "archived source SHA",
+      "pass": true
+    },
+    {
+      "name": "archive body SHA 5bd4263b2590c47f9438663faf7c2f6167c9ded68000b8c36cfab86896d36c35",
+      "pass": true
+    },
+    {
+      "name": "archive body SHA 80a3cf8f025a73e0aaabe308cac07541afa52588b63f733f620ddcfedd0f01da",
+      "pass": true
+    },
+    {
+      "name": "archive body SHA 5a8d094d5c0e4d4372c438d0ffbbfdf0d744317da4a93162cd7d8c928b6300e2",
+      "pass": true
+    },
+    {
+      "name": "archive body SHA 2b6aef265d4826da5c07762ce691e0a14368f24ad644391ecfa6f2fa38a6ce2b",
+      "pass": true
+    },
+    {
+      "name": "archive body SHA 6982d4c3e3a5bf66232630b41215a9109d536abf3a613aa359f12f953a88bc27",
+      "pass": true
+    },
+    {
+      "name": "all five archive records semantic verified",
+      "pass": true
+    },
+    {
+      "name": "controls-regression.json",
+      "pass": true
+    },
+    {
+      "name": "model-regression.json",
+      "pass": true
+    },
+    {
+      "name": "workflow-qa-r01.json",
+      "pass": true
+    },
+    {
+      "name": "no console errors in final browser session",
+      "pass": true
+    }
+  ],
+  "receipts": [
+    {
+      "file": "release-main-1024-day-fly.json",
+      "sha256": "ec8e8593fdcd7f5e8ae86a0264aaa3505946e8fa1b8a406551304247e7c0152d"
+    },
+    {
+      "file": "release-main-1024-day-plan.json",
+      "sha256": "693040714583d0c0fd36b92ac518fa03987494e5ec74930de88ef3ebeeb49126"
+    },
+    {
+      "file": "release-main-1024-day-preflight.json",
+      "sha256": "417f6a6a65c698e6a2d43ba7a1c1b78e274cf221b0c07300127b2579c73e60e2"
+    },
+    {
+      "file": "release-main-1024-day-review.json",
+      "sha256": "36305901630adde142176d4f77a44692117c7e374790d81e536ff2e41fed1d85"
+    },
+    {
+      "file": "release-main-1024-night-fly.json",
+      "sha256": "6f7dbeb8ca50b470df3c182bcc34403b14ae45050be179c5f24928ba7b44a64c"
+    },
+    {
+      "file": "release-main-1024-night-plan.json",
+      "sha256": "12992158d73fa72f32cb7296cf560b28b81ffc11f8b1f0062331f7bf8d1aa41f"
+    },
+    {
+      "file": "release-main-1024-night-preflight.json",
+      "sha256": "2b9017235ee5bc0d23d84058930fe030d8715de6aaf9926e3227583973d6e128"
+    },
+    {
+      "file": "release-main-1024-night-review.json",
+      "sha256": "22853268aa8c1fbdfa6cfd10df33056ef336c64102a618be9fd815bc73470347"
+    },
+    {
+      "file": "release-main-1280-day-fly.json",
+      "sha256": "2131d50668f67998375c7ea6d9d17addbd8e45618e5d159da9ef58075d33d16c"
+    },
+    {
+      "file": "release-main-1280-day-plan.json",
+      "sha256": "81b2e5ae3379c234767ba2ae367be08ad9ddf4a7ede589b0b91dfec54a43b745"
+    },
+    {
+      "file": "release-main-1280-day-preflight.json",
+      "sha256": "3fcd2ace137645905b5622a2d9481820c4798e3a0230f31df054d7f935b01a27"
+    },
+    {
+      "file": "release-main-1280-day-review.json",
+      "sha256": "53c7143e1c428cb4f9a4d30e5fef8040ca5d9f14f6815e55805658b0b99e0605"
+    },
+    {
+      "file": "release-main-1280-night-fly.json",
+      "sha256": "d2ab532611761f1634fdb4b9dd13bde01691323189ca15cb7bd664f1e7b227aa"
+    },
+    {
+      "file": "release-main-1280-night-plan.json",
+      "sha256": "61e656ae28a122fbf0e1317034ffe431432b4d3db5e871cbf281e2a124fca51a"
+    },
+    {
+      "file": "release-main-1280-night-preflight.json",
+      "sha256": "849bb6aebe50483d517c58f14ae61da0c01f79e901597c1ad26a01def60b2f79"
+    },
+    {
+      "file": "release-main-1280-night-review.json",
+      "sha256": "3c4fd3b662754354f933f94fca77fa2b145333a4522edbbb67141296d2b4d2ef"
+    },
+    {
+      "file": "release-main-1366-day-fly.json",
+      "sha256": "797f8413b02998012788f7754cbaa20979a1fad68eff7c811ec0e23b50d3c599"
+    },
+    {
+      "file": "release-main-1366-day-plan.json",
+      "sha256": "56102b74e557cf20f3666e7efabf5d76b412d370e26fa12ee307309e17859885"
+    },
+    {
+      "file": "release-main-1366-day-preflight.json",
+      "sha256": "bc3e58f56cef3487114da27edbc545bb31f2cea5444f95e623b36d779037be0e"
+    },
+    {
+      "file": "release-main-1366-day-review.json",
+      "sha256": "9ab2cef15be57c6fceb17c4ba4a93b348367128059f42d87a3d21d963fcba9f2"
+    },
+    {
+      "file": "release-main-1366-night-fly.json",
+      "sha256": "f96850b9419a00def104c16d1b3291185479152759beada21681868a30abe7c6"
+    },
+    {
+      "file": "release-main-1366-night-plan.json",
+      "sha256": "f383726b353f8751467f73271c7edb73498de7ad6df005e127ea98998d4a6540"
+    },
+    {
+      "file": "release-main-1366-night-preflight.json",
+      "sha256": "bfdc815ad6780a201fe879749fe199ae69e7a420cfa42b8bf7274f0f4757c369"
+    },
+    {
+      "file": "release-main-1366-night-review.json",
+      "sha256": "09f1d316cb7b39ab9af8211b19bd2374637217019b01f75cf9210e6dc721f84b"
+    },
+    {
+      "file": "release-main-1920-day-fly.json",
+      "sha256": "986cd3ba0381e8e360520fb50096960280aed6ffabae051e0ea26872a062eab2"
+    },
+    {
+      "file": "release-main-1920-day-plan.json",
+      "sha256": "ce004b7a5f28804cdb7561dd9bcebfe00d42f28870c74ef6368da643998d429d"
+    },
+    {
+      "file": "release-main-1920-day-preflight.json",
+      "sha256": "e9cbdcec2315a5650f1bad61483843ab3225848bf1da8aef5c754dd9dfc069bb"
+    },
+    {
+      "file": "release-main-1920-day-review.json",
+      "sha256": "05f0d3978548a183aa2ecc0ecec19655de1f8695b669e6dee41d46584108db82"
+    },
+    {
+      "file": "release-main-1920-night-fly.json",
+      "sha256": "a30b99cdfe063605601d295f79a1aec936082787a9c4b32721c8448bd41940b7"
+    },
+    {
+      "file": "release-main-1920-night-plan.json",
+      "sha256": "61d1890e20cda2405e5fa8902f123ddbeedbb9260437757e06b6ffcbfcb9242d"
+    },
+    {
+      "file": "release-main-1920-night-preflight.json",
+      "sha256": "2131a9c5a218a478f1ad3477299824c6624cdef237c95108b6a5b3ef45c48d9f"
+    },
+    {
+      "file": "release-main-1920-night-review.json",
+      "sha256": "30d6847cef40912de874de77e9753f033f5ef2ed1b95864ba4ab96cb10fb11b8"
+    },
+    {
+      "file": "accept-popup-1024-day-aircraft-bottom.json",
+      "sha256": "9bb9a8db752cf63cae0b2d785f3984608e24c5fd2fcdfaced74159c5eb8ef595"
+    },
+    {
+      "file": "accept-popup-1024-day-aircraft.json",
+      "sha256": "68afcfe333e2aa63b802017247bfe8d3087f4fde42543127833cf40e880bc41c"
+    },
+    {
+      "file": "accept-popup-1024-day-authority-bottom.json",
+      "sha256": "c678499280549f1352e8e4e11ff92268395f8ddc6bcae502756859c3922cdb34"
+    },
+    {
+      "file": "accept-popup-1024-day-authority.json",
+      "sha256": "520be738973ccb5e5b065fe5d60477953fadbd7d7cc3352bf99adbb711aa5906"
+    },
+    {
+      "file": "accept-popup-1024-day-battery-bottom.json",
+      "sha256": "c081d597c4531c9f535a955cb039917ee84193acf5c2194a46434492f21bb9e8"
+    },
+    {
+      "file": "accept-popup-1024-day-battery.json",
+      "sha256": "5deabfe574d12f6bcf2c512ef166d6d1901a7aa11b45650ffa48dba0da19b4d6"
+    },
+    {
+      "file": "accept-popup-1024-day-camera-meta-bottom.json",
+      "sha256": "d7155aa0b964bd512c39feeade4d7ce0367570036e2f686bf5c9675c78ac28ff"
+    },
+    {
+      "file": "accept-popup-1024-day-camera-meta.json",
+      "sha256": "610bd6049ab8f1c49e476de06fa159758e2044ac7a3953fa4dc14b279c80e1d9"
+    },
+    {
+      "file": "accept-popup-1024-day-camera-settings-bottom.json",
+      "sha256": "72acaab412feb633655df8b573694e7cfc7f4145d01e285121f129904a4f29a2"
+    },
+    {
+      "file": "accept-popup-1024-day-camera-settings.json",
+      "sha256": "4433f82aacd51de792b9f1ba117310d0001c8158c064b19f78cc3fb43d91d2ea"
+    },
+    {
+      "file": "accept-popup-1024-day-concept-bottom.json",
+      "sha256": "bd85c6d3b157d0dd52cfca996810aa0300a5b5d7429ca520ec58f49ad4921755"
+    },
+    {
+      "file": "accept-popup-1024-day-concept.json",
+      "sha256": "58b5b78984d85f3ea23307df1721e791d6fa93ac40991723d3650f8df3594a44"
+    },
+    {
+      "file": "accept-popup-1024-day-input-bottom.json",
+      "sha256": "5a95c19c406d15ab45af715b2fd2622e0caec99c2e21a0b6548367e2c081e41c"
+    },
+    {
+      "file": "accept-popup-1024-day-input.json",
+      "sha256": "882ff7632e05787d734660c904da9126a111479e52fe43f4d5a3921972348ea8"
+    },
+    {
+      "file": "accept-popup-1024-day-link-bottom.json",
+      "sha256": "6237927ff63c2b9404a3fd623a08db6ea763d33248df478ee9f2a1cdb4c08cba"
+    },
+    {
+      "file": "accept-popup-1024-day-link.json",
+      "sha256": "d883e2574973a9e9e6349b348ebb353838946948baa95e1692bfe7f3b7e49760"
+    },
+    {
+      "file": "accept-popup-1024-day-payload-bottom.json",
+      "sha256": "41438675f95385e39e7b6cfa03a3be0851a59977016ca0eea22b4d90d23e60c6"
+    },
+    {
+      "file": "accept-popup-1024-day-payload.json",
+      "sha256": "5e595c0d40050771b2a826e9adfc2e497a99c95c9669bf2bbac22875c0e3df25"
+    },
+    {
+      "file": "accept-popup-1024-night-aircraft-bottom.json",
+      "sha256": "d491881b41f99c83a7e29de41fc3d6da26ba33c07a0282deb3c569d514179963"
+    },
+    {
+      "file": "accept-popup-1024-night-aircraft.json",
+      "sha256": "cf8262e98494eb1812825caab7db30715029c3f55f5a30f4adc12ccf9e067dce"
+    },
+    {
+      "file": "accept-popup-1024-night-authority-bottom.json",
+      "sha256": "88cfa58a0fe141755ce5585aa5bcaee65a2549cf0d147004f292dddfaa5552bb"
+    },
+    {
+      "file": "accept-popup-1024-night-authority.json",
+      "sha256": "1993b58ed9ef285e8111e1d16674e76a081c3ed34a62acb96843dfb2c84ac552"
+    },
+    {
+      "file": "accept-popup-1024-night-battery-bottom.json",
+      "sha256": "2162adac858bd6af860513319e6dd13fb4e34ed4ff9b9fbc7004942021254234"
+    },
+    {
+      "file": "accept-popup-1024-night-battery.json",
+      "sha256": "d1266323a3aea910458b04a2489ee791bda177e4f469e11125b2bb72bca3a843"
+    },
+    {
+      "file": "accept-popup-1024-night-camera-meta-bottom.json",
+      "sha256": "6984acff4600f194a649a6a7e355dc9263f2a9976c56b9f4d0451a6c0107c6ec"
+    },
+    {
+      "file": "accept-popup-1024-night-camera-meta.json",
+      "sha256": "47689a80b5315f01e3cd7fe45029b3d15d571c9466cde91831b65a1548d39307"
+    },
+    {
+      "file": "accept-popup-1024-night-camera-settings-bottom.json",
+      "sha256": "f19bf984ea99a634fffdd9475b61299c8c4543d45bea1db648364ff0e31c8270"
+    },
+    {
+      "file": "accept-popup-1024-night-camera-settings.json",
+      "sha256": "cf1a59d46483c501be9cf08487280d37abc37fa2230159e4f1ff823be294552b"
+    },
+    {
+      "file": "accept-popup-1024-night-concept-bottom.json",
+      "sha256": "7c4a5423ff015d9ad17e98406c20017ff68ea0806dbfd58d4414d162c56f6904"
+    },
+    {
+      "file": "accept-popup-1024-night-concept.json",
+      "sha256": "4ce88a3f12f09c582870bb9e64330f213a3c9c68c431e1dba8fbdf62f99faed3"
+    },
+    {
+      "file": "accept-popup-1024-night-input-bottom.json",
+      "sha256": "e11cecdff7c3b80d7bbbae7a16b07424e60f9d4fa9dcce237e8bf43dfa608ab0"
+    },
+    {
+      "file": "accept-popup-1024-night-input.json",
+      "sha256": "5ed6c493bc3bc92a4a16cc344f6925fbd0f153ed8a605803bb698ffe1b6b10da"
+    },
+    {
+      "file": "accept-popup-1024-night-link-bottom.json",
+      "sha256": "9d3b38b746cc765d34c1d82d43ba8209fce9342f79ab37ec04d1e78e39bec5a8"
+    },
+    {
+      "file": "accept-popup-1024-night-link.json",
+      "sha256": "a94a21f2109bcda30666ba170ec005f95359394af28db82e2e07ff670bcb8c03"
+    },
+    {
+      "file": "accept-popup-1024-night-payload-bottom.json",
+      "sha256": "78cf471f2f3d41810e3744c0610fa7e37b6fdd058924c6820ed8d310c4643d7d"
+    },
+    {
+      "file": "accept-popup-1024-night-payload.json",
+      "sha256": "f3b8d7d922495bdf39438d4c47847ff46093282fd1096db684cdcacad4cbbf53"
+    },
+    {
+      "file": "accept-popup-1280-day-aircraft-bottom.json",
+      "sha256": "8bec4ceed820ca41968f4351914374a3610475218ae00b80d4fd141c964dda4f"
+    },
+    {
+      "file": "accept-popup-1280-day-aircraft.json",
+      "sha256": "28b2e63f0371b3a57619a4e6781fd4a8c93ac4b712dbf64fa353584d962fe8e1"
+    },
+    {
+      "file": "accept-popup-1280-day-authority-bottom.json",
+      "sha256": "e46cb6cf0f661642eca8d0475038097595397ab6ba2aaad1f120069ad4397274"
+    },
+    {
+      "file": "accept-popup-1280-day-authority.json",
+      "sha256": "a602bb5acb3b294966a19ae22b9d1b8e2b40d2c8a3c615a95001d39e438842b8"
+    },
+    {
+      "file": "accept-popup-1280-day-battery-bottom.json",
+      "sha256": "73c713497ebe60c9f16af11f951c63c0e9ddb5b8aa0f90fd953a08326d0ab314"
+    },
+    {
+      "file": "accept-popup-1280-day-battery.json",
+      "sha256": "0e7cc43e05ef676ce9327750b25576fe47378f0f0d75cdf5d4c20a0eefc15f64"
+    },
+    {
+      "file": "accept-popup-1280-day-camera-meta-bottom.json",
+      "sha256": "44065c0273d5203e607dd281bba4b5b092274a055c382028f5a9e14da42c6d48"
+    },
+    {
+      "file": "accept-popup-1280-day-camera-meta.json",
+      "sha256": "ddd8c9af08a5b3d3e91dde0e47fe1fe859efb7bc033ab248adc8a1bb71f52b37"
+    },
+    {
+      "file": "accept-popup-1280-day-camera-settings-bottom.json",
+      "sha256": "6098e5cb27cfa411c32d3973feb4aae5d1d1e2c8f13e009205002468ce944344"
+    },
+    {
+      "file": "accept-popup-1280-day-camera-settings.json",
+      "sha256": "3cfc450d8c7e5605c0666ef94f99d3fffd1040cb42e76add1e7fdd9d5b055408"
+    },
+    {
+      "file": "accept-popup-1280-day-concept-bottom.json",
+      "sha256": "2ce2b0b3763398c876a8e758b3184205e1425ed21128a75adf623b74f601c338"
+    },
+    {
+      "file": "accept-popup-1280-day-concept.json",
+      "sha256": "1058c98ec1f56fbbf3936e86e7ad827c323a063329889050538fab7f0384e549"
+    },
+    {
+      "file": "accept-popup-1280-day-input-bottom.json",
+      "sha256": "ec0a45224e9a0cd5f01db450520d2f1813ef29e6e8aeafdd999337dab6150dca"
+    },
+    {
+      "file": "accept-popup-1280-day-input.json",
+      "sha256": "fe316d2f87adba30b04b8e296934dbc5a7e8bc6d6eff1a78ad901aa3785de523"
+    },
+    {
+      "file": "accept-popup-1280-day-link-bottom.json",
+      "sha256": "ba82e0ee54dce2d5e5c1bba0de60e9f6c2f912f8915c6c860aa7bd6449720c1a"
+    },
+    {
+      "file": "accept-popup-1280-day-link.json",
+      "sha256": "4030212c6436b529873486bff64d7df70d504ac4ce8034d9273645d97b4ad95f"
+    },
+    {
+      "file": "accept-popup-1280-day-payload-bottom.json",
+      "sha256": "544fcbe5997541710c5c84e31dc694ed59a76cbe30a6a87d53fea28502f83873"
+    },
+    {
+      "file": "accept-popup-1280-day-payload.json",
+      "sha256": "8114f56b8a027e16445b14d013cf9aee8232f348d54f55f9dab17487f3dd016a"
+    },
+    {
+      "file": "accept-popup-1280-night-aircraft-bottom.json",
+      "sha256": "ff4f3dbc5e5d66851470aa18f91075e7688c3951f1f7c40217edb101db15ee5f"
+    },
+    {
+      "file": "accept-popup-1280-night-aircraft.json",
+      "sha256": "ca0757c077260dc471011948a402d49480d3cded11f9b12adb9b3b32a3723dbf"
+    },
+    {
+      "file": "accept-popup-1280-night-authority-bottom.json",
+      "sha256": "9ed1374cd50ed3fb96487ba4aa2f613806e2f8488b47717504d616433fc4ff96"
+    },
+    {
+      "file": "accept-popup-1280-night-authority.json",
+      "sha256": "8925796de93fdeebfc0f2c97fa1468782e9d4c13c0edbd4e334e0fefab4df47c"
+    },
+    {
+      "file": "accept-popup-1280-night-battery-bottom.json",
+      "sha256": "2e67f79a6a9cee3f38509d53afde61b8a38f536298fa1ff9abfcfd7f01354fb8"
+    },
+    {
+      "file": "accept-popup-1280-night-battery.json",
+      "sha256": "0a87b3d90b41d97530717fb4b291398364f0417e947eb5d12b46f8f64c314892"
+    },
+    {
+      "file": "accept-popup-1280-night-camera-meta-bottom.json",
+      "sha256": "3dff75482fc74656167027c54206cf64de4aad60fe38994e5487e4b925073411"
+    },
+    {
+      "file": "accept-popup-1280-night-camera-meta.json",
+      "sha256": "9087589c456f670c6a2fa80c9feea39c2c52e33ac0491cb2a4fb686e796c9177"
+    },
+    {
+      "file": "accept-popup-1280-night-camera-settings-bottom.json",
+      "sha256": "a8ccd1768a06111347c2cd8ce2027b55410aba855273ab088b2238329e41d893"
+    },
+    {
+      "file": "accept-popup-1280-night-camera-settings.json",
+      "sha256": "392cb124bd2abac76c5893151f7514d3614b94864b3ae537f091ef72d162b5fe"
+    },
+    {
+      "file": "accept-popup-1280-night-concept-bottom.json",
+      "sha256": "98c4ec20ae24a6c920c9fe0eb495c3e5405ff7010e6d36f93ceba8143f1e3b4e"
+    },
+    {
+      "file": "accept-popup-1280-night-concept.json",
+      "sha256": "27d04f77028e9671924b7e6696d45200caa7809720cb91323f66f8873451f9d1"
+    },
+    {
+      "file": "accept-popup-1280-night-input-bottom.json",
+      "sha256": "79655f5589eddd6e3fda68f05de16b8f874e66aea29f1046cbda6eb2029bfdf4"
+    },
+    {
+      "file": "accept-popup-1280-night-input.json",
+      "sha256": "f45c604f78ce1da4cd89077fe17af762fbcde3310d1eed8ffcda4df4b17f9aab"
+    },
+    {
+      "file": "accept-popup-1280-night-link-bottom.json",
+      "sha256": "d6fc3bae7c02394268e8db3db3b30491a656561806000c3574a96422b7a2d587"
+    },
+    {
+      "file": "accept-popup-1280-night-link.json",
+      "sha256": "d9fd28c99ea5143a6d0d321894a14d1e36aff77a473a06b0907c98ea8413ef7f"
+    },
+    {
+      "file": "accept-popup-1280-night-payload-bottom.json",
+      "sha256": "ce2c43384d16be9ca64eabcfe1796df9a43f04c18d538cc8afcc7391421116d7"
+    },
+    {
+      "file": "accept-popup-1280-night-payload.json",
+      "sha256": "7d2be8320c4bf0e28968ae8f309ecae5dc25ad5cb31b70085b5844ad40a13a46"
+    },
+    {
+      "file": "accept-popup-1366-day-aircraft-bottom.json",
+      "sha256": "68dc88d6b74856f41345177c4931011f229733af7ea28022821e5a92ae3f7f54"
+    },
+    {
+      "file": "accept-popup-1366-day-aircraft.json",
+      "sha256": "1cb60a91f7176a2f06babf36469ea232525fdb4fb9e559799c935704a2a3d316"
+    },
+    {
+      "file": "accept-popup-1366-day-authority-bottom.json",
+      "sha256": "e68d317f771c042684aa71b4109e627803d970861c5f85f2f85446d7899092cf"
+    },
+    {
+      "file": "accept-popup-1366-day-authority.json",
+      "sha256": "2dcac042912bb197855af408b448cb56a29d5a8f75c4db9149b1d22d4854bf68"
+    },
+    {
+      "file": "accept-popup-1366-day-battery-bottom.json",
+      "sha256": "c739f6415a6b2e25522ed13011e549949a66c3e14873b6a37f8fae828f092a13"
+    },
+    {
+      "file": "accept-popup-1366-day-battery.json",
+      "sha256": "f683a036b98fe0b215069079b0e51a09a27f63fb954898856dd431a065abb8ca"
+    },
+    {
+      "file": "accept-popup-1366-day-camera-meta-bottom.json",
+      "sha256": "37feb31e9d75a8cb4503ead9ef5fa9df577e7c2ceed3510bd629e50d08c57dcb"
+    },
+    {
+      "file": "accept-popup-1366-day-camera-meta.json",
+      "sha256": "722aeb3881dd8f6a2692a0e60aef3df7f046d517e2a95ddc1136c3296018723c"
+    },
+    {
+      "file": "accept-popup-1366-day-camera-settings-bottom.json",
+      "sha256": "2b1dbb84378b16123a51e342a91d863e92f8ebd246c1d5d3c9086da8092a50b5"
+    },
+    {
+      "file": "accept-popup-1366-day-camera-settings.json",
+      "sha256": "93ab214141d7fc3a928c36d85aec8d1fb2d8085098f68349e817463e43b08d92"
+    },
+    {
+      "file": "accept-popup-1366-day-concept-bottom.json",
+      "sha256": "695e6bca7250a9e2bb5da40d4a64e6213f2931b46fef947ad5fd2b34d8bb733d"
+    },
+    {
+      "file": "accept-popup-1366-day-concept.json",
+      "sha256": "cb81582ca0e76e122c8cdae2843e60a2a0e52f55c4895beffa0b904580dfa6e9"
+    },
+    {
+      "file": "accept-popup-1366-day-input-bottom.json",
+      "sha256": "e17648af65561aecfb35647a1092f283b62515b690bd2cdbecbf0cc3f190c266"
+    },
+    {
+      "file": "accept-popup-1366-day-input.json",
+      "sha256": "bc5b450001c5c81461118bd14fbaaf887359123dc6ebabc5c37c43b17e222489"
+    },
+    {
+      "file": "accept-popup-1366-day-link-bottom.json",
+      "sha256": "b16028856219abecae02249aec3a00b5035b2f9c7c0b3d6e1634d13cb5d5e166"
+    },
+    {
+      "file": "accept-popup-1366-day-link.json",
+      "sha256": "45ee08567b5587ba32239569fffd800538fef1f522f42e2a2635cf51ad900237"
+    },
+    {
+      "file": "accept-popup-1366-day-payload-bottom.json",
+      "sha256": "381cafd7a66921146ddbdbdd05414a16a808f0003807d4b88c35f6da11aacfdd"
+    },
+    {
+      "file": "accept-popup-1366-day-payload.json",
+      "sha256": "2b9146ae5f08805f53c909f58c2baa4afa8b4e0cc6073525278ff83e97547d87"
+    },
+    {
+      "file": "accept-popup-1366-night-aircraft-bottom.json",
+      "sha256": "c317b2e02ee095939e6af3ef5b467f4d89799f99abe62eefb3bee1fcf7c2b3c3"
+    },
+    {
+      "file": "accept-popup-1366-night-aircraft.json",
+      "sha256": "64b4dc0b72db6cd5511530d2c0a948eb75bb62c8ca67d2c4a968500e4be8a372"
+    },
+    {
+      "file": "accept-popup-1366-night-authority-bottom.json",
+      "sha256": "53b3ab98bbd8d705a327a7451b86724835cc2965a9de3ab54bd9d7f5cadd056d"
+    },
+    {
+      "file": "accept-popup-1366-night-authority.json",
+      "sha256": "3344bb60f0e86724d64f93166b6afc4aff1f9ebfe00d35a4117237129e7b7fbe"
+    },
+    {
+      "file": "accept-popup-1366-night-battery-bottom.json",
+      "sha256": "f1b5937157d8597b299265def31544a1032ee73d632b9496945023cafe5e3c36"
+    },
+    {
+      "file": "accept-popup-1366-night-battery.json",
+      "sha256": "22e7ead3a0a447a770a51555f853728c34eec2053c9bef336a5d82c86979d1bc"
+    },
+    {
+      "file": "accept-popup-1366-night-camera-meta-bottom.json",
+      "sha256": "0e3a89d6a6fca9d4724cfcaa0381eeec8af67ac668f65d2eedab6482cdfcd50c"
+    },
+    {
+      "file": "accept-popup-1366-night-camera-meta.json",
+      "sha256": "b5262479bbce3ac360c9ffd9db9d497417af6790d43a50f4655d59a79799cd1d"
+    },
+    {
+      "file": "accept-popup-1366-night-camera-settings-bottom.json",
+      "sha256": "7f2201cfdc9324928935f4a0311bed5601445c755656795917f0a39b6e9090de"
+    },
+    {
+      "file": "accept-popup-1366-night-camera-settings.json",
+      "sha256": "1ed24fd233e14b7d3389a8bae566e2d16a210d1dfd76f6e126e4bd73fbc0e15c"
+    },
+    {
+      "file": "accept-popup-1366-night-concept-bottom.json",
+      "sha256": "41218e3172d8167b7683d654107eb07d25ad6ebffc1d83c8e0b7933c5a472784"
+    },
+    {
+      "file": "accept-popup-1366-night-concept.json",
+      "sha256": "6d1c30aefdf8f4f8501bd42d3edf66be92b746b7c53ee58d356be855886afcdc"
+    },
+    {
+      "file": "accept-popup-1366-night-input-bottom.json",
+      "sha256": "ee3a7d862460df0be3ea1dd51b06a6cea9ee603d9d1e05bf3dabb83359a8d7e0"
+    },
+    {
+      "file": "accept-popup-1366-night-input.json",
+      "sha256": "11653d5c88927ef8ecacf1b6826e3b50a7be4228ad40ace74e634b772477d249"
+    },
+    {
+      "file": "accept-popup-1366-night-link-bottom.json",
+      "sha256": "178863fa31ee6fede0d9bbbcf7d51d302a533dcf0b803b27be4d5ff92c26f1b2"
+    },
+    {
+      "file": "accept-popup-1366-night-link.json",
+      "sha256": "da0f3c45441beea9c33bfe62be726b3de50f3bb11533f478ef551f12b8d508f2"
+    },
+    {
+      "file": "accept-popup-1366-night-payload-bottom.json",
+      "sha256": "db979a8663506c7dfaf17025d6b39a57f65c23f0ce8a6649cb12f56cead5bc52"
+    },
+    {
+      "file": "accept-popup-1366-night-payload.json",
+      "sha256": "90ceeff9100504e6331396ccb8422c174d74669d4edd9056bf03e6f2e5afd19f"
+    },
+    {
+      "file": "accept-popup-1920-day-aircraft-bottom.json",
+      "sha256": "5799d7e77d7c628485ba736755ad74734877089cf6d311a65718522812936392"
+    },
+    {
+      "file": "accept-popup-1920-day-aircraft.json",
+      "sha256": "c89b9b6777deed5d98f83c8e1e1d6e443a8a438d5e2abafa308102256f479ad7"
+    },
+    {
+      "file": "accept-popup-1920-day-authority-bottom.json",
+      "sha256": "fd12742540d8fb16e13301eb00306ba84b783dd3cf02fa0878c6e7b3e7d800b0"
+    },
+    {
+      "file": "accept-popup-1920-day-authority.json",
+      "sha256": "d981530ab8689b4d75ea1f8edcaefc7e8eee3205fb2298c5331119919a7108fe"
+    },
+    {
+      "file": "accept-popup-1920-day-battery-bottom.json",
+      "sha256": "82280d383d6bcb1ae60ad798a44ca938dbe083936da69142ced942f1154d2d9a"
+    },
+    {
+      "file": "accept-popup-1920-day-battery.json",
+      "sha256": "89be699c4618012192497c1d7e61e4878a01d31ac4e960164648bcb92838585f"
+    },
+    {
+      "file": "accept-popup-1920-day-camera-meta-bottom.json",
+      "sha256": "b3700ad9cf91cb8fad11629074d0adc27ec93ef22bd810263690f172cc043e2e"
+    },
+    {
+      "file": "accept-popup-1920-day-camera-meta.json",
+      "sha256": "3f4be980502674c5823c442f29bc9c6c03238924136fbaf71af648c396c0003c"
+    },
+    {
+      "file": "accept-popup-1920-day-camera-settings-bottom.json",
+      "sha256": "8e705381a85889418f67d9491c2dbf91ddfca678070254939a917b1c9b53993b"
+    },
+    {
+      "file": "accept-popup-1920-day-camera-settings.json",
+      "sha256": "a734bea3a66c90afeac745504bb528c75210aa874b61262d9f627c9e165f0d20"
+    },
+    {
+      "file": "accept-popup-1920-day-concept-bottom.json",
+      "sha256": "69c80774d0fe004706b405d3e9a8901a57f67b539c4ecfef255d321155b63a48"
+    },
+    {
+      "file": "accept-popup-1920-day-concept.json",
+      "sha256": "81bd90e1f95751cc9c175d4fa1a0664cd93385dff34f81f62c09496de406105d"
+    },
+    {
+      "file": "accept-popup-1920-day-input-bottom.json",
+      "sha256": "d7412d67f0a738dcb28c92bd83ebdd984f27bc987d01e873bb3b4d33ea6986be"
+    },
+    {
+      "file": "accept-popup-1920-day-input.json",
+      "sha256": "492bc39d3fded2c5f6b6a443352e927a20b2524c450bd1caaf74aae107b413a8"
+    },
+    {
+      "file": "accept-popup-1920-day-link-bottom.json",
+      "sha256": "984a265d3067ebbac0f3854a4e4cb5e342d56265c6fedb02c90a8e3cc0fbf82d"
+    },
+    {
+      "file": "accept-popup-1920-day-link.json",
+      "sha256": "51c61e799c5ea1f79764ed384565a3ac6550e02d40aa4025fbcb8411903fcbef"
+    },
+    {
+      "file": "accept-popup-1920-day-payload-bottom.json",
+      "sha256": "a1a16e32d60fa916c460b8a868a1c3a9b78e87666966232663906d78d014f7e7"
+    },
+    {
+      "file": "accept-popup-1920-day-payload.json",
+      "sha256": "14c1dd154b18795ff96f3b2ea731dd1a1f79e6a9d24998373c7c5d8b87839f7d"
+    },
+    {
+      "file": "accept-popup-1920-night-aircraft-bottom.json",
+      "sha256": "64ada761a8a88d2591a592b0f272fa5ac6b1a62990842b1ccee445101e81a3cb"
+    },
+    {
+      "file": "accept-popup-1920-night-aircraft.json",
+      "sha256": "9fd14de52abb5c81488635fa1d0eb425276be4959f946339006984aba1bf13fd"
+    },
+    {
+      "file": "accept-popup-1920-night-authority-bottom.json",
+      "sha256": "957a054f1ed008bcc094ce3152680422e92b78a17f96a02983bf86906d882ec3"
+    },
+    {
+      "file": "accept-popup-1920-night-authority.json",
+      "sha256": "c790c333e7e79710ddfca99fbdc388d71df9175497634a3a0fac828ea9380a40"
+    },
+    {
+      "file": "accept-popup-1920-night-battery-bottom.json",
+      "sha256": "dc915a068dfedb626393c82dfb157cb4182631e319e1adc6f17f4699a2b4fc38"
+    },
+    {
+      "file": "accept-popup-1920-night-battery.json",
+      "sha256": "5d8a931e87cfcfb2e29294d428392ac8291240d18bf05d1bc7798dc3e8dbb029"
+    },
+    {
+      "file": "accept-popup-1920-night-camera-meta-bottom.json",
+      "sha256": "cee9bc5c81fa3b05a5638c1186474405fb4a85d414b566301e0b78156c0e5152"
+    },
+    {
+      "file": "accept-popup-1920-night-camera-meta.json",
+      "sha256": "009b313877c8d5f28a6430b1402438da6d8affe81380eec8bebb96633ec9378f"
+    },
+    {
+      "file": "accept-popup-1920-night-camera-settings-bottom.json",
+      "sha256": "9c9825a03279780b94fcedc1caf1f97f3cb980c4abd006ae6f1287c48066e5cb"
+    },
+    {
+      "file": "accept-popup-1920-night-camera-settings.json",
+      "sha256": "6e1536d59567d79c95c8f0899c56850ffd58d8f2a696455b4d4bdcd45be2892d"
+    },
+    {
+      "file": "accept-popup-1920-night-concept-bottom.json",
+      "sha256": "79ae155863f9458071766a11de167ca9c02f24c4b658a98724ce60a0539565f6"
+    },
+    {
+      "file": "accept-popup-1920-night-concept.json",
+      "sha256": "b67c6f85ce9649f41a3a81dbbc110610aa49b0a959bbda070ae3d9b403eac187"
+    },
+    {
+      "file": "accept-popup-1920-night-input-bottom.json",
+      "sha256": "8cf056cc0e5f2670247e3cba1bb011c6c162a870d96ef39b2299b8b70d6fadf4"
+    },
+    {
+      "file": "accept-popup-1920-night-input.json",
+      "sha256": "20ed436b285192553fd02e5e6eba3cd99c1aebfe448c49562259b9814d92bca5"
+    },
+    {
+      "file": "accept-popup-1920-night-link-bottom.json",
+      "sha256": "24bd3176056f00cbf2032204870db61f6163af32d5b27d408a01d7b0a0477355"
+    },
+    {
+      "file": "accept-popup-1920-night-link.json",
+      "sha256": "1a7f47feb35e17d2c31a91b52f723888ed17ff715a1eccf5e9a26afdb2c72c68"
+    },
+    {
+      "file": "accept-popup-1920-night-payload-bottom.json",
+      "sha256": "aaf207a22e8e3faafdeec316378d03a776376d2bba209a6bf1622166ce0d34d4"
+    },
+    {
+      "file": "accept-popup-1920-night-payload.json",
+      "sha256": "c7f79a324cb9bb418b7e9f2b305245d75eeec8e56149512f0846e64eb80abf3d"
+    },
+    {
+      "file": "accept-panel-1024-day-live.json",
+      "sha256": "754bb9429174ea5018367e7a01ead3257782afd60d29104debee3ea8f339f734"
+    },
+    {
+      "file": "accept-panel-1024-day-plan.json",
+      "sha256": "1da7bd58dece78811f9c2ab9553c5fcb7d4b8bf69c781f11a5fdc2bc01042bcb"
+    },
+    {
+      "file": "accept-panel-1024-day-review.json",
+      "sha256": "e37181919cd3022d91a048ed9fdf89269a4661c3dfdfef551ae318014a62cc34"
+    },
+    {
+      "file": "accept-panel-1024-day-workspace.json",
+      "sha256": "aa3ad1ab8ec474469c3138c5c6814b00e154ee16f05ec7108a10da1f5b161edf"
+    },
+    {
+      "file": "accept-panel-1024-night-live.json",
+      "sha256": "4446f2d9f8e85a20dd09d995f200edd13ba3900c86065631dd8d5c8d64ea274a"
+    },
+    {
+      "file": "accept-panel-1024-night-plan.json",
+      "sha256": "cb31fd74f7c8140b1c5b0f28c69c63ce8f966e292749752f5011a7467f04cd7f"
+    },
+    {
+      "file": "accept-panel-1024-night-review.json",
+      "sha256": "70f48a8b5033c0e2c049299e7f0171833509b7e051a6d1020aa7a52ab367ebbf"
+    },
+    {
+      "file": "accept-panel-1024-night-workspace.json",
+      "sha256": "38c657fdcacb4ba73a37a53f5d09176d06d54a839272f2b117a56b69cb94ddff"
+    },
+    {
+      "file": "accept-panel-1280-day-live.json",
+      "sha256": "72aac475b93909f8db6fe993d4ac43d691c1584ecc4ccfbd02b7f75af30c6b93"
+    },
+    {
+      "file": "accept-panel-1280-day-plan.json",
+      "sha256": "f56d01cd53255e51bc77d0961fb81b6bf6a0a2d7171070a71d7f82a9e3594002"
+    },
+    {
+      "file": "accept-panel-1280-day-review.json",
+      "sha256": "0ab926fc97b2802762bb4bbcd4f77a6b00ddf228670af5464837ea6791cc8387"
+    },
+    {
+      "file": "accept-panel-1280-day-workspace.json",
+      "sha256": "a156a3f61c42a2e02663259f1a2694b082a21135331f3033d352e5755427e7e4"
+    },
+    {
+      "file": "accept-panel-1280-night-live.json",
+      "sha256": "d6bbae2aae2f2cef689ba9dbf2c5cf58a39f7bcc4414919fddf31993784f32c4"
+    },
+    {
+      "file": "accept-panel-1280-night-plan.json",
+      "sha256": "25c436c3a63edcef397cc839bad7a284a1101eb8b358a5a0c38a417041a9fa1f"
+    },
+    {
+      "file": "accept-panel-1280-night-review.json",
+      "sha256": "c11562ed3043cee31b18dda428988f6fa878b45dfe5e96a0bb14e7dd20b718b3"
+    },
+    {
+      "file": "accept-panel-1280-night-workspace.json",
+      "sha256": "860110c9ce6cbfdb638078f46fb9574c52e71933f4ecbd1d22a607f2cb3f2f99"
+    },
+    {
+      "file": "accept-panel-1366-day-live.json",
+      "sha256": "2ea96db5f903c71f18f4b58b6e60eb036b4a23843e1e47c7f12cc604a67e1676"
+    },
+    {
+      "file": "accept-panel-1366-day-plan.json",
+      "sha256": "c9f92a3ffc1f1ee9db2cfc0622de7999707f60cfdb1396cdf1ea8b5a3b318569"
+    },
+    {
+      "file": "accept-panel-1366-day-review.json",
+      "sha256": "a3cecf1417b58f011170ead278ff65d15cd41f23a624701739c9f50a43f56a78"
+    },
+    {
+      "file": "accept-panel-1366-day-workspace.json",
+      "sha256": "9fcb303745c801ce057fdd404f13efd6828b82916f62728ac9f0966d48a62bb1"
+    },
+    {
+      "file": "accept-panel-1366-night-live.json",
+      "sha256": "e3fe38a5c9d7ecb98b473f9582bacb2a6e42c441ab4732744414bd067d8e2e09"
+    },
+    {
+      "file": "accept-panel-1366-night-plan.json",
+      "sha256": "835ac5813fabbdbbc582a78fbb0f278c5aaf33847120f9e52593ef89b24e00e0"
+    },
+    {
+      "file": "accept-panel-1366-night-review.json",
+      "sha256": "504e9841ab096431db91a1be2ae7264b9691162b3d1b6e54a4749ac3040ebf51"
+    },
+    {
+      "file": "accept-panel-1366-night-workspace.json",
+      "sha256": "e37f77599d81029083834b501be175aa30d1ec69816cf63f2b36fe1018fad892"
+    },
+    {
+      "file": "accept-panel-1920-day-live.json",
+      "sha256": "7f5e41e7087a1e4a4b36f79aad3bf7a06ae9a86dba93f5d179a4f2304a99ed82"
+    },
+    {
+      "file": "accept-panel-1920-day-plan.json",
+      "sha256": "aa97d0b1ff805352e479b3144d4c1a9ee528506bc4ba82755188af42908596f0"
+    },
+    {
+      "file": "accept-panel-1920-day-review.json",
+      "sha256": "4b6a9ce8f8a1245a582eb1c1defdee6a66745fdd1513a03a8b489af3d2aef432"
+    },
+    {
+      "file": "accept-panel-1920-day-workspace.json",
+      "sha256": "6525f052383b04506eb413194413c43d0416691670bd3313a549f066bffd3c5e"
+    },
+    {
+      "file": "accept-panel-1920-night-live.json",
+      "sha256": "3df30561de34974470eb30b8c086ed23ed49447d255d45f12abc672a06c7e9dc"
+    },
+    {
+      "file": "accept-panel-1920-night-plan.json",
+      "sha256": "1533586ee314854585de4de0bb6747084be7ab5e6c2c77a7fa85be3eae1bbdab"
+    },
+    {
+      "file": "accept-panel-1920-night-review.json",
+      "sha256": "f0fe827193affd34d988c4a6f75361e0f20184983d75f8f2e0556a93d547df59"
+    },
+    {
+      "file": "accept-panel-1920-night-workspace.json",
+      "sha256": "df0dbca0aa4b569d701f85d378416e06290e4a56d924317809b34873c1064524"
+    },
+    {
+      "file": "accept-return-1024-day.json",
+      "sha256": "6a229d90d27cc1c1e4d2468667381da06beaf45000e7485d800b0adb3078b9a0"
+    },
+    {
+      "file": "accept-return-1024-night.json",
+      "sha256": "4474b52147f197804f8bef730e07fcfce42efbd9393c4ecf5b208e7e2c565cd0"
+    },
+    {
+      "file": "accept-return-1280-day.json",
+      "sha256": "c04794237d7c3836eb9e53dc8a39ab2364517748ed21b0167550e93a33a9a94a"
+    },
+    {
+      "file": "accept-return-1280-night.json",
+      "sha256": "da68d500ac6dc0c91d1b3e82c1e0a7794bd5ec79cb2a5c85893e3e9e1ae8073d"
+    },
+    {
+      "file": "accept-return-1366-day.json",
+      "sha256": "46060c8bbc9604e72e12151a1e4c6c9510a545c03d418ab97aab18d946b0f1ce"
+    },
+    {
+      "file": "accept-return-1366-night.json",
+      "sha256": "850e9a8e313c55ff5af55017b42d04d3ff1424506766d544346716487d5aa92a"
+    },
+    {
+      "file": "accept-return-1920-day.json",
+      "sha256": "3d317ea735603d9dc399c2b53d22402b7eec4c8e3914a090dfaef342bfed2605"
+    },
+    {
+      "file": "accept-return-1920-night.json",
+      "sha256": "6e1d3d3f95a38d279a5692d79b9afa4352cb0d28bb6f27ebb99dca0371ac30e2"
+    },
+    {
+      "file": "release-alert-1024-day-battery.json",
+      "sha256": "da2bfdce314876293f9184597b5e4004979902c4bb5651f37712113711477c64"
+    },
+    {
+      "file": "release-alert-1024-day-critical.json",
+      "sha256": "bedfd1c7583734a25d835949db47b6f5643d161b55239c1e8c5fca2f6c36e016"
+    },
+    {
+      "file": "release-alert-1024-day-healthy.json",
+      "sha256": "f0154f8f6d472ebd0b4ef3777df885e7d09313284eefb3b0fa445db633b7ac07"
+    },
+    {
+      "file": "release-alert-1024-day-link.json",
+      "sha256": "6ceaa9b06072abba7a283bbd9233a52eb9b0f7f96889911b8a5d0f4d17f03e1b"
+    },
+    {
+      "file": "release-alert-1024-day-reboot.json",
+      "sha256": "3c622d3f7f1b97fb3e8b077d91b5aa688c369e6d352822155f05dd8ff3d1f7a9"
+    },
+    {
+      "file": "release-alert-1024-day-telemetry.json",
+      "sha256": "31308482fee4e41408c786c6550d2e5aa1116b353acff4946e2ed3db0bc7365c"
+    },
+    {
+      "file": "release-alert-1024-day-video.json",
+      "sha256": "b07d8ff9341b1b66b0d9996b0b2748045a49f0f52ef708ab4e1c97947fa4e1aa"
+    },
+    {
+      "file": "release-alert-1024-night-battery.json",
+      "sha256": "96164d4da5fea73d95ab5345f9f5b9e3f7dc851de25551afccee97c951a5d4cf"
+    },
+    {
+      "file": "release-alert-1024-night-critical.json",
+      "sha256": "ca9a4b9dec1fecb8e7df3d54b0407345775f8debe8eb11b415c7607c2cb6fffa"
+    },
+    {
+      "file": "release-alert-1024-night-healthy.json",
+      "sha256": "3cc27fc4989b94812326be6ed11bbd69b759b6fd6a264b054bb9cba72aee14ec"
+    },
+    {
+      "file": "release-alert-1024-night-link.json",
+      "sha256": "08da61677a44861d3aeeb40405bdfd741942f6c520c45e75086a0599dda6e917"
+    },
+    {
+      "file": "release-alert-1024-night-reboot.json",
+      "sha256": "be58e46ad09771c1d348dcadea77782db3133c6d06a85bd2845d3ad1a24806fe"
+    },
+    {
+      "file": "release-alert-1024-night-telemetry.json",
+      "sha256": "0fdc69b56e6fd9872e381fc64d4c0c381977ae79c2b163d56f56739f6ced5eee"
+    },
+    {
+      "file": "release-alert-1024-night-video.json",
+      "sha256": "2dcf4ed66af01db821c44f90642ff2ce6f979db24f589cee34a3cc36f5ce5fb6"
+    },
+    {
+      "file": "release-alert-1280-day-battery.json",
+      "sha256": "b1d3aea0fe0d0a888dc47424d025cf77280c0b34e952d590db56e445f843380c"
+    },
+    {
+      "file": "release-alert-1280-day-critical.json",
+      "sha256": "bc9df106c76e2ae2b4d0e09e0a3c32160f9eb1f627adcfecd5485cc6daca251b"
+    },
+    {
+      "file": "release-alert-1280-day-healthy.json",
+      "sha256": "a2e0ebb1a87bc1bee813203c232a5264566137b1bfe4ac4035ef7cae129a3b4d"
+    },
+    {
+      "file": "release-alert-1280-day-link.json",
+      "sha256": "0ba92937fa0f305c64a15a64886d43b4eab88dd453245a82dd47e4ac3579b878"
+    },
+    {
+      "file": "release-alert-1280-day-reboot.json",
+      "sha256": "5a62e72d691e1b1a3fe6358c44721b33663232291aebe793307b7effefec0644"
+    },
+    {
+      "file": "release-alert-1280-day-telemetry.json",
+      "sha256": "346daa1b457e6be60c14df63a914aa4e0d2ecb06f43d4879fa607a5519ff5757"
+    },
+    {
+      "file": "release-alert-1280-day-video.json",
+      "sha256": "8b78829df6d72c61fa46e656c6c45e8220022859b8c7014b7fe4440ba6795460"
+    },
+    {
+      "file": "release-alert-1280-night-battery.json",
+      "sha256": "96fc2ce49fd5eb29f42808814881793d2d3d99e5ea86b40171391232839ec3f6"
+    },
+    {
+      "file": "release-alert-1280-night-critical.json",
+      "sha256": "f0ec9173f2df8504555470b08432025d4ad19f0c536b55fa4d3ff8e6d3bd74fc"
+    },
+    {
+      "file": "release-alert-1280-night-healthy.json",
+      "sha256": "fc9f38557e11cb0571295b0d53259df6ee20586e1dfc2673cc3fc0c06babac84"
+    },
+    {
+      "file": "release-alert-1280-night-link.json",
+      "sha256": "1d88104d4a1f26621a6332517f01eeae6897e03b059f6c19541680e0191cfb38"
+    },
+    {
+      "file": "release-alert-1280-night-reboot.json",
+      "sha256": "a72b798f473501781c8f27a2d8eb27257de6be04ae809954a3874e011996feb7"
+    },
+    {
+      "file": "release-alert-1280-night-telemetry.json",
+      "sha256": "06f9e47ccc2df22369b5cccaba1ba8ce86d30eb321ee2dcddf4f5b958811fb91"
+    },
+    {
+      "file": "release-alert-1280-night-video.json",
+      "sha256": "82efa6aaa4ba896fbd8959bea20eb3203d508e7be3a29bbd7f31fed2f58a2217"
+    },
+    {
+      "file": "release-alert-1366-day-battery.json",
+      "sha256": "c867b8703f6ebcda1bc8419e633e61f2b49f64670049fdcc2948b1ef3e29e542"
+    },
+    {
+      "file": "release-alert-1366-day-critical.json",
+      "sha256": "3533a5590e35ebddc3925599aac95781e59420344b5cfd0273b384948a216c05"
+    },
+    {
+      "file": "release-alert-1366-day-healthy.json",
+      "sha256": "bde36d545a8d5d0cf9818ed7da928cf4d8be8a7373c17c4bc275c49f8c864896"
+    },
+    {
+      "file": "release-alert-1366-day-link.json",
+      "sha256": "7413dbf05440510d1a70a42d557c3a91d44f63ff293f99b43705f99689a540bd"
+    },
+    {
+      "file": "release-alert-1366-day-reboot.json",
+      "sha256": "7e69ea171b4c49b8e2b65f24266f01b3b14ac76bb7b484b0ae197c4b9825cfbe"
+    },
+    {
+      "file": "release-alert-1366-day-telemetry.json",
+      "sha256": "e9e56b67acfd040a9859a6c0d4c13ed5d043dad295902a05f32166f4bf32928c"
+    },
+    {
+      "file": "release-alert-1366-day-video.json",
+      "sha256": "927492e78ed970d315acce897926ec1ecfb930ce4262f82d4114d4f6cff7a4dd"
+    },
+    {
+      "file": "release-alert-1366-night-battery.json",
+      "sha256": "70cd20a194f98adbd42cad53895947ae0303b76e61e4185963e8477da8b4c831"
+    },
+    {
+      "file": "release-alert-1366-night-critical.json",
+      "sha256": "e457fb16b36c9e1cedcfc5d56e6620251c119ba201fa2c8bda6943e9b7b499ad"
+    },
+    {
+      "file": "release-alert-1366-night-healthy.json",
+      "sha256": "3045023b9a1cd39ff86ec4718658d345325555aef92b4fc2d71a3d7e4907ae1c"
+    },
+    {
+      "file": "release-alert-1366-night-link.json",
+      "sha256": "0f2d78b0e2be3c616b6bed61c44483add2faa05d9072d130e01de2314818936b"
+    },
+    {
+      "file": "release-alert-1366-night-reboot.json",
+      "sha256": "ff77b7e3de16938a5d9e7033fb4124893667a1f4e873c25c9bc612e1356079ff"
+    },
+    {
+      "file": "release-alert-1366-night-telemetry.json",
+      "sha256": "e72432d14f9973ce2428bcf8e2817c62180f513cf4be7e4ee166033d5d551457"
+    },
+    {
+      "file": "release-alert-1366-night-video.json",
+      "sha256": "c3da246423f7da38b930bdba3677bcec02c0e5993a41552a6a3c2b035f63aa36"
+    },
+    {
+      "file": "release-alert-1920-day-battery.json",
+      "sha256": "2e47877f3f05799892c2dde5d61e8ca4ea745ce541a85bc53263304b2114e8a3"
+    },
+    {
+      "file": "release-alert-1920-day-critical.json",
+      "sha256": "d4e61f56a7aeafd13e7cced422e882dcf3204b85a7ac0f6d44425a6a62d9a1b3"
+    },
+    {
+      "file": "release-alert-1920-day-healthy.json",
+      "sha256": "7d62d2ea6da5e882e1b686b3f654f7113c3969a5c9e1cede04888bd3b81f54ff"
+    },
+    {
+      "file": "release-alert-1920-day-link.json",
+      "sha256": "cde20d2c197a2ffef3067c6e3b174c159055f10361024a56f31aa9145b1fe9da"
+    },
+    {
+      "file": "release-alert-1920-day-reboot.json",
+      "sha256": "89f92e206253fa725ecf22ec796f602afe02204730bad4d39fca3f5d681376d8"
+    },
+    {
+      "file": "release-alert-1920-day-telemetry.json",
+      "sha256": "d8385894f1d640f28f95022667180f844ef39ac1eaabf6014e9bde18c5539e47"
+    },
+    {
+      "file": "release-alert-1920-day-video.json",
+      "sha256": "06e43c548438f98ba8c1eda5a57b77e1ff5afe30d23eaf304d86b183fcb755e1"
+    },
+    {
+      "file": "release-alert-1920-night-battery.json",
+      "sha256": "ead89a87d28f39d8cc56e7681081d9abac76ce00fbd88fecaf06784888221e0c"
+    },
+    {
+      "file": "release-alert-1920-night-critical.json",
+      "sha256": "79e725e422fc8bcd08e98630743b051c954281163f6924660e1158e629be0b91"
+    },
+    {
+      "file": "release-alert-1920-night-healthy.json",
+      "sha256": "5239b991f6beee055fe2165b4e14a9838e131312eaf60512eaefafd93d38c307"
+    },
+    {
+      "file": "release-alert-1920-night-link.json",
+      "sha256": "eb77004204995aacd7b49b792e11f4f9b6c57f1db781cea9cfa7deff2d46d299"
+    },
+    {
+      "file": "release-alert-1920-night-reboot.json",
+      "sha256": "60ead8f046222e582f09a8175732dedd41db30bc72b48683174de5deac54bae6"
+    },
+    {
+      "file": "release-alert-1920-night-telemetry.json",
+      "sha256": "25fc76cb6c1fd462034ae4b745d86ac0a4336b1028b57214c4d56f2ea0dcc467"
+    },
+    {
+      "file": "release-alert-1920-night-video.json",
+      "sha256": "46ab00f7ca756398947166501e5bc49964e496c5168b6e5264d144a6bfdeba06"
+    },
+    {
+      "file": "release-history-1024-day-0.json",
+      "sha256": "23a67249ad98c64c4c3e0b51ef8c43c0913c68e65e1c38dfad4cbf51a240eb8e"
+    },
+    {
+      "file": "release-history-1024-day-2.json",
+      "sha256": "de4ef529b66ee4487740be31c898923b9ce871a3fb554df4eb45cc511d92ea5d"
+    },
+    {
+      "file": "release-history-1024-day-4.json",
+      "sha256": "981dbb89de2cf5ab73f134cd892b38ed51c811330aba1445fa12da0280cfbc7b"
+    },
+    {
+      "file": "release-history-1024-night-0.json",
+      "sha256": "3d3c926da2e62a8a4dcb0346b96c8f80d4a03e185c5a6ce5b47fca96232d443e"
+    },
+    {
+      "file": "release-history-1024-night-2.json",
+      "sha256": "1efd839c7157dbb3fefc481f50c28c9b9253f9cf728935f8fc5d113a2299d804"
+    },
+    {
+      "file": "release-history-1024-night-4.json",
+      "sha256": "d6082d93f5eec6e91dd07e05c1a10a9a8c6eac4ade8ee9a3763274e04513d533"
+    },
+    {
+      "file": "release-history-1280-day-0.json",
+      "sha256": "f9b593115230cdc26b66a61a40fe938d7068cb98ad2aa1aced4a6f07e06afe0b"
+    },
+    {
+      "file": "release-history-1280-day-2.json",
+      "sha256": "c64898ca13fca9f8db353a14e30d93e7721d1fac06c6d0717dd571762f483028"
+    },
+    {
+      "file": "release-history-1280-day-4.json",
+      "sha256": "a0c7ab450fa2ba7b8fd692e89ceb9033e2995c5caf0018244a197c3e58918041"
+    },
+    {
+      "file": "release-history-1280-night-0.json",
+      "sha256": "6cc9f041a1a9d5d4684c781e4a3507529842f1182de7105b4303b40dbfe96342"
+    },
+    {
+      "file": "release-history-1280-night-2.json",
+      "sha256": "e9a01921af15610baa53fd2e949978825f9c757bdccde6a752bf1af8874cf4da"
+    },
+    {
+      "file": "release-history-1280-night-4.json",
+      "sha256": "70a97f9982f9124585d4aaa1d91d25a75c98458b73621a8e957ca7c3562ae274"
+    },
+    {
+      "file": "release-history-1366-day-0.json",
+      "sha256": "b43b058af71d3b6bbca75ce73a4b2772e4fcf5b117dd987f42df57202d38d9d8"
+    },
+    {
+      "file": "release-history-1366-day-2.json",
+      "sha256": "3d60510772ad3980c85913e765c99b678ba76a8835d97822ef1ac5020ee683db"
+    },
+    {
+      "file": "release-history-1366-day-4.json",
+      "sha256": "127214a46ed2631b89e2c426e436394074607f4421880ebbfef473cbafc9a720"
+    },
+    {
+      "file": "release-history-1366-night-0.json",
+      "sha256": "c2ecae41c0bf1601e510b27893ac58999a2431e8afb7b9f8eaa1608d4e45df25"
+    },
+    {
+      "file": "release-history-1366-night-2.json",
+      "sha256": "36a541dd0a3f0d99a6a810fe3cec10f08cc2f06f862dba53690b775bb8abef2d"
+    },
+    {
+      "file": "release-history-1366-night-4.json",
+      "sha256": "60d3c2b55b700a4ae780d952077a451f2182530483addd981d93db84f3560218"
+    },
+    {
+      "file": "release-history-1920-day-0.json",
+      "sha256": "e7360ac68ae45c1929edc0b9ea0c7f6998d2f2617623a6b92d3e71df476b7510"
+    },
+    {
+      "file": "release-history-1920-day-2.json",
+      "sha256": "005f464ce7d9189eef4601cfcb1287d54fd53203f15848850f2732772cae94c0"
+    },
+    {
+      "file": "release-history-1920-day-4.json",
+      "sha256": "2ac7c44a205df07ef1c5a8bb7dd8cb9de2d38cedf98110715f2540644081969f"
+    },
+    {
+      "file": "release-history-1920-night-0.json",
+      "sha256": "692a043f9a2e4e5a8a7b654012c454cdb4305e5b7a5d3de6d81ac1ebc08d845e"
+    },
+    {
+      "file": "release-history-1920-night-2.json",
+      "sha256": "108ca050265797472cd34aa45bfb40d119597ab5bc85964f8a660ae8d24296b7"
+    },
+    {
+      "file": "release-history-1920-night-4.json",
+      "sha256": "9316614c2967cc84c42b7358c2b2cbbddbbaa45ee6809d66e4cd8564c9dbe533"
+    },
+    {
+      "file": "release-background-day-bright.json",
+      "sha256": "300e01272f16341fe45dc14a00cb33a2ee06207a583bba364a480afe61e46bc6"
+    },
+    {
+      "file": "release-background-day-busy.json",
+      "sha256": "64e0dccc486eff646f64d67bffeb129733af7ded6b09579cf4507a3868f2b84d"
+    },
+    {
+      "file": "release-background-day-dark.json",
+      "sha256": "c5bd79bad4c396334b37c9afff0782179ea3e655e6cdbb8cd2a21bcbfd2dfe71"
+    },
+    {
+      "file": "release-background-night-bright.json",
+      "sha256": "ae7579eb343f7b14f730e97919a002f94d420b66c635ac5afef385496dc44493"
+    },
+    {
+      "file": "release-background-night-busy.json",
+      "sha256": "9cca491d68eaca09c5fad816b499ced7865b9e80c7adcd90d02e58dd3e2b26f3"
+    },
+    {
+      "file": "release-background-night-dark.json",
+      "sha256": "01b7117f0724548bf9f19c3d9c24748726afcce89cd73a8101ace2f59c454b55"
+    },
+    {
+      "file": "release-journey-fly.json",
+      "sha256": "d360b9b88453650950965b0eee0501153423203aaeabd50181e0f89470f871df"
+    },
+    {
+      "file": "release-journey-review.json",
+      "sha256": "7e583a101e1eee312c451ae2fec9aaeeb8aba43a63ed986af137233bd49eaf4f"
+    },
+    {
+      "file": "release-journey-after-reload.json",
+      "sha256": "538ddc8ad57faf6a76546f52bb948a689d4378e297a724480508ab6a1715922e"
+    },
+    {
+      "file": "release-sitl-disconnected.json",
+      "sha256": "70f1996c8a4cf2d1cb3f4366bad5c388c4886f587eb255830b34aa378586550f"
+    }
+  ],
+  "scopedReuse": "Popup/panel/return matrix predates final CSS loss-only correction. Exact diff checked; latest full main/alert/history and actual map recovery cover that correction.",
+  "notChecked": [
+    "Android APK85/emulator",
+    "HeraHub physical touch/HID/video",
+    "Android SAF/IME/system dialogs",
+    "Portrait/below 1024px",
+    "OS reduced-motion preference switching",
+    "GPU/compositor cost",
+    "New SITL flight"
+  ],
+  "scope": "Browser UI + host JVM mock replay. No flight, APK or production signature; no DJI/Apple certification."
+}

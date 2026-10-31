@@ -1,0 +1,161 @@
+{
+  "repository": "https://github.com/mavlink/c_library_v2",
+  "commit": "8c63a49fe35aead7f9ef14031381c5e076ff743a",
+  "files": [
+    {
+      "path": "reference/protocol22/c/checksum.h",
+      "url": "https://raw.githubusercontent.com/mavlink/c_library_v2/8c63a49fe35aead7f9ef14031381c5e076ff743a/checksum.h",
+      "bytes": 2291,
+      "sha256": "8d6cac8dee37e6d619f5aee9fdbbe83b837b8e05a645c5d44b0578ba45a09924",
+      "fetchedAt": "2026-10-13T06:51:52.053999+00:00"
+    },
+    {
+      "path": "reference/protocol22/c/mavlink_conversions.h",
+      "url": "https://raw.githubusercontent.com/mavlink/c_library_v2/8c63a49fe35aead7f9ef14031381c5e076ff743a/mavlink_conversions.h",
+      "bytes": 6571,
+      "sha256": "374fcaae7eba6314bef2ab97a2394707f92925f4c899172ed3f9ad65c8d44765",
+      "fetchedAt": "2026-10-13T06:51:52.053999+00:00"
+    },
+    {
+      "path": "reference/protocol22/c/mavlink_get_info.h",
+      "url": "https://raw.githubusercontent.com/mavlink/c_library_v2/8c63a49fe35aead7f9ef14031381c5e076ff743a/mavlink_get_info.h",
+      "bytes": 2199,
+      "sha256": "d64af08c57384019a6b1bad3940928717a60f18a13f627dc849d638b40ec08ee",
+      "fetchedAt": "2026-10-13T06:51:52.053999+00:00"
+    },
+    {
+      "path": "reference/protocol22/c/mavlink_helpers.h",
+      "url": "https://raw.githubusercontent.com/mavlink/c_library_v2/8c63a49fe35aead7f9ef14031381c5e076ff743a/mavlink_helpers.h",
+      "bytes": 41948,
+      "sha256": "1218b3b8802d61fb9144937bb6e818850d854300881c94825b627cd3eedce565",
+      "fetchedAt": "2026-10-13T06:51:52.053999+00:00"
+    },
+    {
+      "path": "reference/protocol22/c/mavlink_sha256.h",
+      "url": "https://raw.githubusercontent.com/mavlink/c_library_v2/8c63a49fe35aead7f9ef14031381c5e076ff743a/mavlink_sha256.h",
+      "bytes": 8107,
+      "sha256": "2f9e6610227896776a4414127c22cf4f3a579e51055c95b6dea65afa32ad8340",
+      "fetchedAt": "2026-10-13T06:51:52.053999+00:00"
+    },
+    {
+      "path": "reference/protocol22/c/mavlink_types.h",
+      "url": "https://raw.githubusercontent.com/mavlink/c_library_v2/8c63a49fe35aead7f9ef14031381c5e076ff743a/mavlink_types.h",
+      "bytes": 13580,
+      "sha256": "4ed80d00c174ea2b91e9169b1557d6c600fa28a93294a62cea0313f857b423a9",
+      "fetchedAt": "2026-10-13T06:51:52.053999+00:00"
+    },
+    {
+      "path": "reference/protocol22/c/protocol.h",
+      "url": "https://raw.githubusercontent.com/mavlink/c_library_v2/8c63a49fe35aead7f9ef14031381c5e076ff743a/protocol.h",
+      "bytes": 15846,
+      "sha256": "97c339428f02583b105caab5cd7f601d2a4844cd5cfa130dd9004b4b327c0679",
+      "fetchedAt": "2026-10-13T06:51:52.053999+00:00"
+    },
+    {
+      "path": "reference/protocol22/c/minimal/mavlink_msg_heartbeat.h",
+      "url": "https://raw.githubusercontent.com/mavlink/c_library_v2/8c63a49fe35aead7f9ef14031381c5e076ff743a/minimal/mavlink_msg_heartbeat.h",
+      "bytes": 18157,
+      "sha256": "da07ddf1f5cc9b414a48d34749f57cd4f57e31180405743394c6e677c1f1a367",
+      "fetchedAt": "2026-10-13T06:51:52.053999+00:00"
+    },
+    {
+      "path": "reference/protocol22/c/common/mavlink_msg_command_long.h",
+      "url": "https://raw.githubusercontent.com/mavlink/c_library_v2/8c63a49fe35aead7f9ef14031381c5e076ff743a/common/mavlink_msg_command_long.h",
+      "bytes": 25083,
+      "sha256": "af927d7242ca5eddde47dcb1d8e1c040caf2a303e0635f939b09a11de981305b",
+      "fetchedAt": "2026-10-13T06:51:52.053999+00:00"
+    },
+    {
+      "path": "reference/protocol22/c/common/mavlink_msg_command_ack.h",
+      "url": "https://raw.githubusercontent.com/mavlink/c_library_v2/8c63a49fe35aead7f9ef14031381c5e076ff743a/common/mavlink_msg_command_ack.h",
+      "bytes": 21123,
+      "sha256": "bf1997e2a224e450e05bc39bb37f9c6d4c3ec48ba7b0b9e74a49dbf33bd69252",
+      "fetchedAt": "2026-10-13T06:51:52.053999+00:00"
+    },
+    {
+      "path": "reference/protocol22/c/common/mavlink_msg_camera_information.h",
+      "url": "https://raw.githubusercontent.com/mavlink/c_library_v2/8c63a49fe35aead7f9ef14031381c5e076ff743a/common/mavlink_msg_camera_information.h",
+      "bytes": 40226,
+      "sha256": "2c6bf5b0f7246c72280f1e81c7d97ca5be4d6c0095eb40e06837a866107c47b8",
+      "fetchedAt": "2026-10-13T06:51:52.053999+00:00"
+    },
+    {
+      "path": "reference/protocol22/c/common/mavlink_msg_camera_settings.h",
+      "url": "https://raw.githubusercontent.com/mavlink/c_library_v2/8c63a49fe35aead7f9ef14031381c5e076ff743a/common/mavlink_msg_camera_settings.h",
+      "bytes": 17700,
+      "sha256": "2e164835e4ae8ca4ffe38f08f56a1d963f5d5fa444e40537acb3a8179e3ac8cc",
+      "fetchedAt": "2026-10-13T06:51:52.053999+00:00"
+    },
+    {
+      "path": "reference/protocol22/c/common/mavlink_msg_camera_capture_status.h",
+      "url": "https://raw.githubusercontent.com/mavlink/c_library_v2/8c63a49fe35aead7f9ef14031381c5e076ff743a/common/mavlink_msg_camera_capture_status.h",
+      "bytes": 25698,
+      "sha256": "c5a53053c0d801335cd8b4f5d71f14db53d84eef7a4f4193a2b94682ad6e4d90",
+      "fetchedAt": "2026-10-13T06:51:52.053999+00:00"
+    },
+    {
+      "path": "reference/protocol22/c/common/mavlink_msg_camera_image_captured.h",
+      "url": "https://raw.githubusercontent.com/mavlink/c_library_v2/8c63a49fe35aead7f9ef14031381c5e076ff743a/common/mavlink_msg_camera_image_captured.h",
+      "bytes": 28743,
+      "sha256": "213a39db6fa477e7ecdb86a18a78a4486dbec15767a644d771cd083c1ec3a8cd",
+      "fetchedAt": "2026-10-13T06:51:52.053999+00:00"
+    },
+    {
+      "path": "reference/protocol22/c/common/mavlink_msg_video_stream_information.h",
+      "url": "https://raw.githubusercontent.com/mavlink/c_library_v2/8c63a49fe35aead7f9ef14031381c5e076ff743a/common/mavlink_msg_video_stream_information.h",
+      "bytes": 33369,
+      "sha256": "0317deab622bcc06b0576c8c82f247578a9fd137ec47045afad2818808d5f972",
+      "fetchedAt": "2026-10-13T06:51:52.053999+00:00"
+    },
+    {
+      "path": "reference/protocol22/c/common/mavlink_msg_video_stream_status.h",
+      "url": "https://raw.githubusercontent.com/mavlink/c_library_v2/8c63a49fe35aead7f9ef14031381c5e076ff743a/common/mavlink_msg_video_stream_status.h",
+      "bytes": 24582,
+      "sha256": "08b7a4dea0317c2c8f90c96557e534577d9ddb53092f7da19fc141a193acd378",
+      "fetchedAt": "2026-10-13T06:51:52.053999+00:00"
+    },
+    {
+      "path": "reference/protocol22/c/common/mavlink_msg_gimbal_manager_information.h",
+      "url": "https://raw.githubusercontent.com/mavlink/c_library_v2/8c63a49fe35aead7f9ef14031381c5e076ff743a/common/mavlink_msg_gimbal_manager_information.h",
+      "bytes": 26187,
+      "sha256": "ab0f563ccd177d2ee0b7a3448a9d2844db8968b4ff0d722179808df12da63098",
+      "fetchedAt": "2026-10-13T06:51:52.053999+00:00"
+    },
+    {
+      "path": "reference/protocol22/c/common/mavlink_msg_gimbal_manager_status.h",
+      "url": "https://raw.githubusercontent.com/mavlink/c_library_v2/8c63a49fe35aead7f9ef14031381c5e076ff743a/common/mavlink_msg_gimbal_manager_status.h",
+      "bytes": 23911,
+      "sha256": "4268499a40e4449d1a3da10879651f095941553869b9638ea99b17baf894160c",
+      "fetchedAt": "2026-10-13T06:51:52.053999+00:00"
+    },
+    {
+      "path": "reference/protocol22/c/common/mavlink_msg_gimbal_device_attitude_status.h",
+      "url": "https://raw.githubusercontent.com/mavlink/c_library_v2/8c63a49fe35aead7f9ef14031381c5e076ff743a/common/mavlink_msg_gimbal_device_attitude_status.h",
+      "bytes": 36426,
+      "sha256": "20500a031f5ca51866872484900857a6ad814c7d7d00aac5999d12e8d012a957",
+      "fetchedAt": "2026-10-13T06:51:52.053999+00:00"
+    },
+    {
+      "path": "reference/protocol22/c/common/mavlink_msg_gimbal_manager_set_pitchyaw.h",
+      "url": "https://raw.githubusercontent.com/mavlink/c_library_v2/8c63a49fe35aead7f9ef14031381c5e076ff743a/common/mavlink_msg_gimbal_manager_set_pitchyaw.h",
+      "bytes": 25185,
+      "sha256": "c1abf27780283d25d62a6199fd4cab3c187844e1a135cca4c72a87603aba3135",
+      "fetchedAt": "2026-10-13T06:51:52.053999+00:00"
+    },
+    {
+      "path": "reference/protocol22/minimal.xml",
+      "url": "https://raw.githubusercontent.com/mavlink/c_library_v2/8c63a49fe35aead7f9ef14031381c5e076ff743a/message_definitions/minimal.xml",
+      "sha256": "d4c7c7346432814348bb858cbab8cee7a17b23e37937c1574e2018148cbfb785",
+      "bytes": 48495,
+      "fetchedAt": "2026-10-13T06:53:46.699395+00:00"
+    },
+    {
+      "path": "reference/protocol22/common.xml",
+      "url": "https://raw.githubusercontent.com/mavlink/c_library_v2/8c63a49fe35aead7f9ef14031381c5e076ff743a/message_definitions/common.xml",
+      "sha256": "4194171608d0641cbf9a646ebf440b174a3bd5842e41e5b87a43c540c584b280",
+      "bytes": 697333,
+      "fetchedAt": "2026-10-13T06:53:47.946044+00:00"
+    }
+  ],
+  "scope": "Pinned selected official C headers; serializer QA oracle, not application runtime"
+}

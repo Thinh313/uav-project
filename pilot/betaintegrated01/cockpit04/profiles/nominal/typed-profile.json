@@ -1,0 +1,231 @@
+{
+  "RCFallbackMeaning": "SITLreceiverRC3defaults1000;nominalexpiry.5maydescendinLOITER;loss6keepsremoteoverrideuntilGCS5LANDclearsit",
+  "actualReadbackRequired": true,
+  "armingPreconditions": {
+    "actualPostArmHomeConfirmation": true,
+    "forceArm": false,
+    "freshAPBatteryMilliVoltMinimum": 21000,
+    "skipChecks": 0
+  },
+  "firmwareRequired": "ArduCopter4.7.1",
+  "format": "aeris-m1-control-typed-profile",
+  "id": "M1-CONTROL01-NOMINAL",
+  "parameters": {
+    "ARMING_SKIPCHK": {
+      "float32Hex": "00000000",
+      "mavType": 6,
+      "value": 0
+    },
+    "AUTO_OPTIONS": {
+      "float32Hex": "00004040",
+      "mavType": 6,
+      "value": 3
+    },
+    "BATT_AMP_PERVLT": {
+      "float32Hex": "00008841",
+      "mavType": 9,
+      "value": 17.0
+    },
+    "BATT_ARM_VOLT": {
+      "float32Hex": "0000a841",
+      "mavType": 9,
+      "value": 21.0
+    },
+    "BATT_MONITOR": {
+      "float32Hex": "00008040",
+      "mavType": 2,
+      "value": 4
+    },
+    "BATT_VOLT_MULT": {
+      "float32Hex": "9a992141",
+      "mavType": 9,
+      "value": 10.1
+    },
+    "CAM1_TYPE": {
+      "float32Hex": "0000803f",
+      "mavType": 2,
+      "value": 1
+    },
+    "FENCE_ACTION": {
+      "float32Hex": "0000803f",
+      "mavType": 2,
+      "value": 1
+    },
+    "FENCE_ALT_MAX_TP": {
+      "float32Hex": "0000803f",
+      "mavType": 2,
+      "value": 1
+    },
+    "FENCE_ENABLE": {
+      "float32Hex": "0000803f",
+      "mavType": 2,
+      "value": 1
+    },
+    "FENCE_MARGIN": {
+      "float32Hex": "00000040",
+      "mavType": 9,
+      "value": 2.0
+    },
+    "FENCE_RADIUS": {
+      "float32Hex": "00001643",
+      "mavType": 9,
+      "value": 150.0
+    },
+    "FENCE_TYPE": {
+      "float32Hex": "00000040",
+      "mavType": 2,
+      "value": 2
+    },
+    "FS_GCS_ENABLE": {
+      "float32Hex": "0000a040",
+      "mavType": 2,
+      "value": 5
+    },
+    "FS_GCS_TIMEOUT": {
+      "float32Hex": "0000a040",
+      "mavType": 9,
+      "value": 5.0
+    },
+    "FS_OPTIONS": {
+      "float32Hex": "00000000",
+      "mavType": 6,
+      "value": 0
+    },
+    "GPS_HDOP_GOOD": {
+      "float32Hex": "00004843",
+      "mavType": 4,
+      "value": 200
+    },
+    "MAV2_EXTRA1": {
+      "float32Hex": "00008040",
+      "mavType": 4,
+      "value": 4
+    },
+    "MAV2_EXTRA2": {
+      "float32Hex": "00008040",
+      "mavType": 4,
+      "value": 4
+    },
+    "MAV2_EXTRA3": {
+      "float32Hex": "00008040",
+      "mavType": 4,
+      "value": 4
+    },
+    "MAV2_EXT_STAT": {
+      "float32Hex": "00000040",
+      "mavType": 4,
+      "value": 2
+    },
+    "MAV2_POSITION": {
+      "float32Hex": "00008040",
+      "mavType": 4,
+      "value": 4
+    },
+    "MAV2_RC_CHAN": {
+      "float32Hex": "00008040",
+      "mavType": 4,
+      "value": 4
+    },
+    "MAV_GCS_SYSID": {
+      "float32Hex": "00007f43",
+      "mavType": 4,
+      "value": 255
+    },
+    "MAV_GCS_SYSID_HI": {
+      "float32Hex": "00000000",
+      "mavType": 4,
+      "value": 0
+    },
+    "MAV_SYSID": {
+      "float32Hex": "00002842",
+      "mavType": 4,
+      "value": 42
+    },
+    "RCMAP_PITCH": {
+      "float32Hex": "00000040",
+      "mavType": 2,
+      "value": 2
+    },
+    "RCMAP_ROLL": {
+      "float32Hex": "0000803f",
+      "mavType": 2,
+      "value": 1
+    },
+    "RCMAP_THROTTLE": {
+      "float32Hex": "00004040",
+      "mavType": 2,
+      "value": 3
+    },
+    "RCMAP_YAW": {
+      "float32Hex": "00008040",
+      "mavType": 2,
+      "value": 4
+    },
+    "RC_OPTIONS": {
+      "float32Hex": "00000042",
+      "mavType": 6,
+      "value": 32
+    },
+    "RC_OVERRIDE_TIME": {
+      "float32Hex": "0000003f",
+      "mavType": 9,
+      "value": 0.5
+    },
+    "RTL_ALT_FINAL_M": {
+      "float32Hex": "00000000",
+      "mavType": 9,
+      "value": 0.0
+    },
+    "RTL_ALT_M": {
+      "float32Hex": "00002041",
+      "mavType": 9,
+      "value": 10.0
+    },
+    "RTL_ALT_TYPE": {
+      "float32Hex": "00000000",
+      "mavType": 2,
+      "value": 0
+    },
+    "RTL_LOIT_TIME": {
+      "float32Hex": "00007a44",
+      "mavType": 6,
+      "value": 1000
+    },
+    "SERIAL0_PROTOCOL": {
+      "float32Hex": "00000040",
+      "mavType": 2,
+      "value": 2
+    },
+    "SERIAL1_PROTOCOL": {
+      "float32Hex": "00000040",
+      "mavType": 2,
+      "value": 2
+    },
+    "WP_SPD": {
+      "float32Hex": "00000040",
+      "mavType": 9,
+      "value": 2.0
+    }
+  },
+  "sourcePins": {
+    "runtime/sim32-instrument01-build/ardupilot/ArduCopter/Parameters.cpp": "4a4248b8395b16dc17551819206add0dc38c1badab585099c3b5374288458fe0",
+    "runtime/sim32-instrument01-build/ardupilot/ArduCopter/Parameters.h": "ced7e879058e687167b3a3bda6ceda5b2f46f279abc59bf22802171ebf6cd1b2",
+    "runtime/sim32-instrument01-build/ardupilot/ArduCopter/defines.h": "916d2aca9b3407aa6af2b47fd508a153228d257b28be840162c843e20a8ef151",
+    "runtime/sim32-instrument01-build/ardupilot/ArduCopter/events.cpp": "217070ca162fcc2e2206f32b90b0d0c66de7e71c3644bd0c7e857bbb43f8743d",
+    "runtime/sim32-instrument01-build/ardupilot/libraries/AP_Arming/AP_Arming.cpp": "45c543394639f72bc53e87ccb725bfe3f481b6a2f428f58c359eb09ccbd23a93",
+    "runtime/sim32-instrument01-build/ardupilot/libraries/AP_BattMonitor/AP_BattMonitor_Analog.cpp": "c2335c68cee67873e690cac354e3c62a804e033094c6fc54e031050033be929b",
+    "runtime/sim32-instrument01-build/ardupilot/libraries/AP_BattMonitor/AP_BattMonitor_Analog.h": "97d9bd12809ce61233084cd376eb285831637ab97b9206a1c46db0929cf59a73",
+    "runtime/sim32-instrument01-build/ardupilot/libraries/AP_HAL_SITL/SITL_State_common.cpp": "a04054be3dc894412f3157185182aabc8af44db1db55227b8ee01d819dda2242",
+    "runtime/sim32-instrument01-build/ardupilot/libraries/AP_RCMapper/AP_RCMapper.cpp": "0f7f5ab94291ce23351ecb2bee906a68a1a41e2dcee2394e5bb9a334520ddc0e",
+    "runtime/sim32-instrument01-build/ardupilot/libraries/AP_RCMapper/AP_RCMapper.h": "d239a7d4153825496a172e154326b8e4fe28adbb23d0c78309358c16d983d56b",
+    "runtime/sim32-instrument01-build/ardupilot/libraries/AP_RCProtocol/AP_RCProtocol_UDP.cpp": "a6f6c838b1b3bfbc02ee4c025f3f10532f1692ee783dbbf69fbfec809683c29b",
+    "runtime/sim32-instrument01-build/ardupilot/libraries/GCS_MAVLink/GCS.cpp": "551f42adbfe57862806cdd6fccd04cc52c4cca48cee1aeafc26f093f4fc06163",
+    "runtime/sim32-instrument01-build/ardupilot/libraries/GCS_MAVLink/GCS.h": "b0f1881302ede5430afa28edea6f8bc4df0be60a5c43e60bf8d083d61d3d2633",
+    "runtime/sim32-instrument01-build/ardupilot/libraries/GCS_MAVLink/GCS_MAVLink_Parameters.cpp": "beab49720f851695f114a0c548780fe9ee3bd29c2fd15cffe911d47dd03b9a38",
+    "runtime/sim32-instrument01-build/ardupilot/libraries/RC_Channel/RC_Channel.h": "ec2d53912ffff04a516e15444ce4f48b21087b21116d474845548605dcc75244",
+    "runtime/sim32-instrument01-build/ardupilot/libraries/RC_Channel/RC_Channels_VarInfo.h": "8ebebfb28ad7c971500d8cbfb9ddf5c8296d4b318d5a4b205586d40540125e34",
+    "runtime/sim32-instrument01-build/ardupilot/libraries/SITL/SIM_JSON.cpp": "322313b9e17b31e65a54beeaa08f62763fe330ae84747c6ec7a2286189e73563",
+    "runtime/sim32-instrument01-build/ardupilot/libraries/SITL/SIM_JSON.h": "ba8f86c7a6602beff867e37260088a7dc03b6e4b6b67c06837512c877dc25c33"
+  },
+  "version": 1
+}

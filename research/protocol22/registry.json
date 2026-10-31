@@ -1,0 +1,163 @@
+{
+  "aggregates": {
+    "cells_by_state": {
+      "null": 12,
+      "sourced": 4
+    },
+    "coverage_pct": null,
+    "n_entities": 4,
+    "rollup": {},
+    "rollup_field": null,
+    "universe_estimate": null
+  },
+  "registry": {
+    "Camera v2": {
+      "entity_type": null,
+      "fields": {
+        "ack_scope": {
+          "state": "null",
+          "value": null
+        },
+        "addressing": {
+          "claims": [
+            {
+              "capture": {
+                "fetched_at": "2026-10-13T06:51:52.053999+00:00",
+                "origin_id": "mavlink-official-docs",
+                "snapshot": "camera.html",
+                "source": "camera",
+                "url": "https://mavlink.io/en/services/camera.html"
+              },
+              "evidence_span": "identified and addressed by their system and component id.",
+              "extraction": "normalized",
+              "source": "camera",
+              "tier": "A",
+              "value": "System/component plus explicit autopilot proxy device identity"
+            }
+          ],
+          "state": "sourced",
+          "value": "System/component plus explicit autopilot proxy device identity"
+        },
+        "authority": {
+          "state": "null",
+          "value": null
+        },
+        "serialization": {
+          "state": "null",
+          "value": null
+        }
+      }
+    },
+    "Command": {
+      "entity_type": null,
+      "fields": {
+        "ack_scope": {
+          "claims": [
+            {
+              "capture": {
+                "fetched_at": "2026-10-13T06:51:52.053999+00:00",
+                "origin_id": "mavlink-official-docs",
+                "snapshot": "command.html",
+                "source": "command",
+                "url": "https://mavlink.io/en/services/command.html"
+              },
+              "evidence_span": "from commands to indicate command arrival, and result.",
+              "extraction": "normalized",
+              "source": "command",
+              "tier": "A",
+              "value": "Published command ACK arrival/result semantics"
+            }
+          ],
+          "state": "sourced",
+          "value": "Published command ACK arrival/result semantics"
+        },
+        "addressing": {
+          "state": "null",
+          "value": null
+        },
+        "authority": {
+          "state": "null",
+          "value": null
+        },
+        "serialization": {
+          "state": "null",
+          "value": null
+        }
+      }
+    },
+    "Gimbal v2": {
+      "entity_type": null,
+      "fields": {
+        "ack_scope": {
+          "state": "null",
+          "value": null
+        },
+        "addressing": {
+          "state": "null",
+          "value": null
+        },
+        "authority": {
+          "claims": [
+            {
+              "capture": {
+                "fetched_at": "2026-10-13T06:51:52.053999+00:00",
+                "origin_id": "mavlink-official-docs",
+                "snapshot": "gimbal.html",
+                "source": "gimbal",
+                "url": "https://mavlink.io/en/services/gimbal_v2.html"
+              },
+              "evidence_span": "ignore any gimbal controls which come from MAVLink components that are not explicitly set to &quot;in control&quot;.",
+              "extraction": "normalized",
+              "source": "gimbal",
+              "tier": "A",
+              "value": "Primary/secondary control requires manager status and explicit owner"
+            }
+          ],
+          "state": "sourced",
+          "value": "Primary/secondary control requires manager status and explicit owner"
+        },
+        "serialization": {
+          "state": "null",
+          "value": null
+        }
+      }
+    },
+    "MAVLink2": {
+      "entity_type": null,
+      "fields": {
+        "ack_scope": {
+          "state": "null",
+          "value": null
+        },
+        "addressing": {
+          "state": "null",
+          "value": null
+        },
+        "authority": {
+          "state": "null",
+          "value": null
+        },
+        "serialization": {
+          "claims": [
+            {
+              "capture": {
+                "fetched_at": "2026-10-13T06:51:52.053999+00:00",
+                "origin_id": "mavlink-official-docs",
+                "snapshot": "serialization.html",
+                "source": "serialization",
+                "url": "https://mavlink.io/en/guide/serialization.html"
+              },
+              "evidence_span": "CRC_EXTRA",
+              "extraction": "normalized",
+              "source": "serialization",
+              "tier": "A",
+              "value": "Published CRC_EXTRA framing mechanism"
+            }
+          ],
+          "state": "sourced",
+          "value": "Published CRC_EXTRA framing mechanism"
+        }
+      }
+    }
+  }
+}

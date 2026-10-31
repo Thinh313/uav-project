@@ -1,0 +1,15 @@
+import assert from'node:assert/strict';import fs from'node:fs';
+let time=1000,gen=0,calls=[],acks=[],ackOK=true,delayOpen=false,waiting=null;
+globalThis.window={direct95Connecting:{session:'mock'},Native82Bridge:{elapsedRealtime:()=>time,ack95:(g,s)=>{acks.push({g,s});return JSON.stringify({ok:ackOK});},request:(id,action,expected,body)=>{calls.push({action,body:JSON.parse(body)});const reply=()=>window.native82Result(id,JSON.stringify({ok:true,generation:'g'+gen}));if(action==='direct95:open'){gen++;if(delayOpen){waiting=reply;return;}}queueMicrotask(reply);}}};
+globalThis.Native82Bridge=window.Native82Bridge;
+const net=(await import('./assets/direct95/socket.mjs')).default,checks=[];const sleep=()=>new Promise(r=>setTimeout(r,10));
+async function open(){const s=net.createConnection({host:'127.0.0.1',port:5907}),errors=[];s.on('error',e=>errors.push(e.message));await new Promise(r=>s.once('connect',r));await sleep();return{s,errors};}
+function data(s,sequence,extra={}){window.native95Event(JSON.stringify({kind:'DATA',generation:s.generation,receiptMs:time,sequence,hex:'fd09',...extra}));}
+let {s,errors}=await open(),received=[];s.on('data',b=>received.push([...b]));data(s,1);assert.deepEqual(received,[[253,9]]);assert.deepEqual(acks.at(-1),{g:s.generation,s:1});checks.push('selected generation delivered and explicitly acknowledged');
+data(s,2,{generation:'old'});assert.equal(received.length,1);checks.push('old generation ignored');
+time=3000;data(s,2,{receiptMs:1000});await sleep();assert(s.closed&&errors.includes('NATIVE_DELIVERY_STALE'));checks.push('stale delivery closes without reconnect');
+({s,errors}=await open());const start=calls.length;window.native95Event(JSON.stringify({kind:'CLOSED',generation:s.generation,reason:'NATIVE_BACKGROUND_REVOKE_NO_RESTORE'}));await sleep();assert(s.closed&&errors.includes('NATIVE_BACKGROUND_REVOKE_NO_RESTORE')&&calls.slice(start).every(x=>x.action!=='direct95:open'));checks.push('native background close does not reconnect or restore');
+({s,errors}=await open());ackOK=false;data(s,3);await sleep();assert(s.closed);ackOK=true;checks.push('native ack refusal closes');
+delayOpen=true;const q=net.createConnection({host:'127.0.0.1',port:5907});q.on('error',()=>{});await sleep();for(let i=0;i<65;i++)window.native95Event(JSON.stringify({kind:'DATA',generation:'g'+gen,receiptMs:time,sequence:i,hex:'fd09'}));assert(q.closed);waiting();delayOpen=false;await sleep();assert(!q.writable,'CLOSED_PENDING_OPEN_MUST_NOT_BECOME_WRITABLE');checks.push('pre-open RX queue bounded, closes without frame discard claim');
+let refused=false;try{net.createConnection({host:'example.com',port:5907});}catch(e){refused=e.message==='FIXED_OWNED_SITL_ENDPOINT';}assert(refused);checks.push('arbitrary endpoint refused');
+const result={status:'PASS',checks:checks.length,cases:checks,scope:'MOCK_RPC_SOCKET_ADAPTER_NOT_ANDROID_NATIVE_IO_FAULT_ACCEPTANCE'};fs.writeFileSync('evidence/native95/socket-mock95.json',JSON.stringify(result,null,2),{flag:'wx'});console.log(result);

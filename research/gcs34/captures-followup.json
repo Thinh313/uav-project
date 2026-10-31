@@ -1,0 +1,38 @@
+{
+  "sources": [
+    {
+      "id": "vn-airspace",
+      "url": "https://xaydungchinhsach.chinhphu.vn/huong-dan-thuc-hien-thu-tuc-cap-phep-bay-doi-voi-tau-bay-khong-nguoi-lai-va-cac-phuong-tien-bay-khac-119250616123043064.htm",
+      "status": "CAPTURED_PRIMARY_HTML",
+      "fetchedAt": "2026-10-14T05:31:58.831439+00:00",
+      "sha256": "3781622e470aaa25a88ee4810d249240571b96e8dd3351fecf5a5132b65c0f42",
+      "bytes": 517599,
+      "contentEncoding": "gzip",
+      "httpWireSha256": "8d2625387f1198f88fc02a27fd897396011673b0d4fac1c5f4483e30af4b95d1",
+      "httpWireBytes": 78158
+    },
+    {
+      "id": "rtr-ragas",
+      "url": "https://www.rtrobotics.com/defense/ragas",
+      "status": "CAPTURED_PRIMARY_HTML",
+      "fetchedAt": "2026-10-14T05:32:00.307414+00:00",
+      "sha256": "cdffeb81ef21b20c1cdba620d057afced6e0babc1d4ab669d5ecb469d6747446",
+      "bytes": 79151,
+      "contentEncoding": "",
+      "httpWireSha256": "cdffeb81ef21b20c1cdba620d057afced6e0babc1d4ab669d5ecb469d6747446",
+      "httpWireBytes": 79151
+    },
+    {
+      "id": "rtr-herahub",
+      "url": "https://www.rtrobotics.com/commercial/herahub",
+      "status": "CAPTURED_PRIMARY_HTML",
+      "fetchedAt": "2026-10-14T05:32:02.376509+00:00",
+      "sha256": "fb978cfc7a9869f801f584e7217c3f3514b202a94ee6fcc5801dd6c4e6bfb693",
+      "bytes": 80590,
+      "contentEncoding": "",
+      "httpWireSha256": "fb978cfc7a9869f801f584e7217c3f3514b202a94ee6fcc5801dd6c4e6bfb693",
+      "httpWireBytes": 80590
+    }
+  ],
+  "incident": "Initial VN capture decoded compressed bytes as UTF-8 and failed; original captures.json remains unchanged. New bounded content-encoding handling; no page execution."
+}

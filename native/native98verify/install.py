@@ -1,0 +1,3 @@
+from android_qa import *
+import sys
+owned();attempt=sys.argv[1];b=json.loads((E/('build'+attempt+'.json')).read_text());apk=R/b['apk'];assert hashlib.sha256(apk.read_bytes()).hexdigest()==b['sha256'];adb('shell','am','force-stop',P);adb('install','-r',apk,timeout=60);p=adb('shell','pm','path',P).decode().strip()[8:];assert p.startswith('/data/app/')and hashlib.sha256(adb('exec-out','cat',p)).hexdigest()==b['sha256'];(E/('installed'+attempt+'.json')).open('x').write(json.dumps({'status':'PASS','apk':b['apk'],'apkSha256':b['sha256'],'sourceId':b['sourceId'],'package':P,'serial':S},indent=2));print('INSTALLED_EXACT_SHA_'+attempt)

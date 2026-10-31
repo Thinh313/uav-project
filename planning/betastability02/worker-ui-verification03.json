@@ -1,0 +1,32 @@
+{
+  "atUTC": "2026-10-26T02:01:34.557937+00:00",
+  "status": "MOCK_VERIFIED_NOT_ANDROID_SITL",
+  "panelRPC": "planning/betastability02/panel-rpc-tests.json",
+  "staticAndShutdownQA": "planning/betastability02/worker-route-tests.json",
+  "groupsPassed": 8,
+  "newBoundHostStarts": 0,
+  "newPublisherProcesses": 0,
+  "newAPConnections": 0,
+  "builds": 0,
+  "syntax": "PASS",
+  "priorInputPreservation": [
+    {
+      "file": "pilot/betastability02/media-panel.mjs",
+      "pins05BytesPreserved": true
+    },
+    {
+      "file": "pilot/betastability02/server.mjs",
+      "pins05BytesPreserved": true
+    },
+    {
+      "file": "pilot/betastability02/media-projection.mjs",
+      "pins05BytesPreserved": true
+    },
+    {
+      "file": "pilot/betastability02/beta-client.mjs",
+      "pins05BytesPreserved": true
+    }
+  ],
+  "scope": "NEW_SUCCESSOR_ONLY_AUTONOMOUS_WORKER_RPC_PRESENTATION_ADAPTER",
+  "limits": "No changed FPS/latency/frame/cap/clock/disk/SAF/authority floors; visual and actualAndroid worker capability remain NOT_CHECKED until parent livecampaign."
+}

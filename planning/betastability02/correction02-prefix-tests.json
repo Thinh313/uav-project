@@ -1,0 +1,78 @@
+{
+  "format": "aeris-correction02-prefix-design-test",
+  "version": 1,
+  "at": "2026-10-26T01:34:52.604Z",
+  "status": "PASS",
+  "results": [
+    {
+      "case": "NEW_FRAMES_DURING_FLUSH_AND_DURABILITY",
+      "status": "PASS",
+      "fence": {
+        "format": "aeris-betastability02-trace-prefix",
+        "version": 1,
+        "traceId": "5d6fb6e0-f4ac-4d2c-90aa-b2f0f7de327a",
+        "configId": "c",
+        "serverBoot": "b",
+        "requiredThrough": 12,
+        "ackThrough": 12,
+        "durable": {
+          "complete": true,
+          "fatal": null,
+          "hostThrough": 18,
+          "hostHead": "1111111111111111111111111111111111111111111111111111111111111111",
+          "receiptSha256": "2222222222222222222222222222222222222222222222222222222222222222",
+          "receiptFile": "trace-barrier-00001.json"
+        },
+        "currentLiveAccepted": 18,
+        "currentLiveAcknowledged": 12,
+        "currentLivePending": 6,
+        "fatal": null,
+        "scope": "DURABLE_REQUIRED_PREFIX_ONLY_LIVE_PRODUCER_CONTINUES"
+      }
+    },
+    {
+      "case": "LIVE_PENDING_IS_NOT_MISSING_REQUIRED_PREFIX",
+      "status": "PASS"
+    },
+    {
+      "case": "MISSING_REQUIRED_TAIL",
+      "status": "PASS",
+      "reject": "REQUIRED_SEQUENCE_MISSING"
+    },
+    {
+      "case": "MISSING_REQUIRED_MIDDLE",
+      "status": "PASS",
+      "reject": "PRODUCER_SEQUENCE_GAP"
+    },
+    {
+      "case": "SAMPLE_BEYOND_PREFIX",
+      "status": "PASS",
+      "reject": "SAMPLE_OUTSIDE_TRACE_PREFIX"
+    },
+    {
+      "case": "WRONG_PRODUCER",
+      "status": "PASS",
+      "reject": "SAMPLE_OUTSIDE_TRACE_PREFIX"
+    },
+    {
+      "case": "WRONG_DURABLE_ANCHOR",
+      "status": "PASS",
+      "reject": "DURABLE_PREFIX_NOT_IN_RANGE"
+    },
+    {
+      "case": "ACK_BELOW_REQUIRED",
+      "status": "PASS",
+      "reject": "PREFIX_FENCE"
+    },
+    {
+      "case": "COUNTER_FORGERY",
+      "status": "PASS",
+      "reject": "LIVE_COUNTERS"
+    },
+    {
+      "case": "MISSING_ACK_NO_PROGRESS_FAILS_BOUNDED",
+      "status": "PASS"
+    }
+  ],
+  "scope": "MOCK_PROPOSAL_ONLY_NOT_PINNED_RUNTIME_OR_ANDROID_ACCEPTANCE"
+}

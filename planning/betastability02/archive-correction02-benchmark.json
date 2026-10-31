@@ -1,0 +1,74 @@
+{
+  "source": "READ_ONLY_SEPARATE_PROCESS_ACTUAL_PACKAGE_NOT_LIVE_LOOP_CAUSAL_ATTRIBUTION",
+  "package": "/Users/os/Downloads/AI technique/aeris/evidence/betastability02/history01/sc5180d878e4c44169552.json",
+  "bytes": 24131969,
+  "sha256": "8ee17fb0fb0946c45e511719d88c69e01fa0e633ee7ce11cbb60f4a6ea8fd9da",
+  "unchanged": true,
+  "rows": [
+    {
+      "operation": "verifyPackage1",
+      "milliseconds": 1707.0185,
+      "run": "sc5180d878e4c44169552",
+      "traceEvents": 92010,
+      "traceCoverage": "FAIL"
+    },
+    {
+      "operation": "history.read1",
+      "milliseconds": 1609.7999579999998,
+      "run": null,
+      "traceEvents": null,
+      "traceCoverage": null
+    },
+    {
+      "operation": "history.list1",
+      "milliseconds": 1538.654458,
+      "run": null,
+      "traceEvents": null,
+      "traceCoverage": null
+    },
+    {
+      "operation": "verifyPackage2",
+      "milliseconds": 1613.4595830000007,
+      "run": "sc5180d878e4c44169552",
+      "traceEvents": 92010,
+      "traceCoverage": "FAIL"
+    },
+    {
+      "operation": "history.read2",
+      "milliseconds": 1579.9130419999992,
+      "run": null,
+      "traceEvents": null,
+      "traceCoverage": null
+    },
+    {
+      "operation": "history.list2",
+      "milliseconds": 1530.4405419999994,
+      "run": null,
+      "traceEvents": null,
+      "traceCoverage": null
+    },
+    {
+      "operation": "verifyPackage3",
+      "milliseconds": 1460.7005420000005,
+      "run": "sc5180d878e4c44169552",
+      "traceEvents": 92010,
+      "traceCoverage": "FAIL"
+    },
+    {
+      "operation": "history.read3",
+      "milliseconds": 1513.5459589999991,
+      "run": null,
+      "traceEvents": null,
+      "traceCoverage": null
+    },
+    {
+      "operation": "history.list3",
+      "milliseconds": 1485.1484170000003,
+      "run": null,
+      "traceEvents": null,
+      "traceCoverage": null
+    }
+  ],
+  "pid": 21745,
+  "atUTC": "2026-10-26T01:36:02.407Z"
+}

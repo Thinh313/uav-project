@@ -1,0 +1,72 @@
+[
+  {
+    "id": "camera-section",
+    "url": "https://raw.githubusercontent.com/mavlink/qgroundcontrol/3a67d31f0c36bf3fe38ec52970d250a89d0aaf67/src/MissionManager/CameraSection.cc",
+    "snapshot": "camera-section.txt",
+    "origin_id": "qgc-upstream",
+    "fetched_at": "2026-10-12T08:40:45.567149+00:00",
+    "http_status": 200,
+    "final_url": "https://raw.githubusercontent.com/mavlink/qgroundcontrol/3a67d31f0c36bf3fe38ec52970d250a89d0aaf67/src/MissionManager/CameraSection.cc",
+    "content_type": "text/plain; charset=utf-8",
+    "status": "captured",
+    "sha256": "04cfceccc69e124d18df208c1e5e0bb2da471380da02895baa355b7c6030cc82",
+    "bytes": 26035,
+    "capture_format": "Raw HTTP response bytes"
+  },
+  {
+    "id": "ap-mission",
+    "url": "https://raw.githubusercontent.com/ArduPilot/ardupilot/Copter-4.7.1/libraries/AP_Mission/AP_Mission.cpp",
+    "snapshot": "ap-mission.txt",
+    "origin_id": "ardupilot-upstream",
+    "fetched_at": "2026-10-12T08:40:45.567612+00:00",
+    "http_status": 200,
+    "final_url": "https://raw.githubusercontent.com/ArduPilot/ardupilot/Copter-4.7.1/libraries/AP_Mission/AP_Mission.cpp",
+    "content_type": "text/plain; charset=utf-8",
+    "status": "captured",
+    "sha256": "1e9115fe299dea50351ab65228e9336484310c3ca7b8ed80d24788dc855618f8",
+    "bytes": 121224,
+    "capture_format": "Raw HTTP response bytes"
+  },
+  {
+    "id": "ap-mission-commands",
+    "url": "https://raw.githubusercontent.com/ArduPilot/ardupilot/Copter-4.7.1/libraries/AP_Mission/AP_Mission_Commands.cpp",
+    "snapshot": "ap-mission-commands.txt",
+    "origin_id": "ardupilot-upstream",
+    "fetched_at": "2026-10-12T08:40:45.567772+00:00",
+    "http_status": 200,
+    "final_url": "https://raw.githubusercontent.com/ArduPilot/ardupilot/Copter-4.7.1/libraries/AP_Mission/AP_Mission_Commands.cpp",
+    "content_type": "text/plain; charset=utf-8",
+    "status": "captured",
+    "sha256": "52ded5856557718047c6bac239ca559bd90a5fd46178ebb8501bfe9845512e22",
+    "bytes": 14561,
+    "capture_format": "Raw HTTP response bytes"
+  },
+  {
+    "id": "ap-camera",
+    "url": "https://raw.githubusercontent.com/ArduPilot/ardupilot/Copter-4.7.1/libraries/AP_Camera/AP_Camera.cpp",
+    "snapshot": "ap-camera.txt",
+    "origin_id": "ardupilot-upstream",
+    "fetched_at": "2026-10-12T08:40:45.567895+00:00",
+    "http_status": 200,
+    "final_url": "https://raw.githubusercontent.com/ArduPilot/ardupilot/Copter-4.7.1/libraries/AP_Camera/AP_Camera.cpp",
+    "content_type": "text/plain; charset=utf-8",
+    "status": "captured",
+    "sha256": "41d4822f9b3cb32078e4148f5e99648330c83895dac32d4fb2f7ab02cc6d164f",
+    "bytes": 34222,
+    "capture_format": "Raw HTTP response bytes"
+  },
+  {
+    "id": "mission-settings",
+    "url": "https://raw.githubusercontent.com/mavlink/qgroundcontrol/3a67d31f0c36bf3fe38ec52970d250a89d0aaf67/src/MissionManager/MissionSettingsItem.cc",
+    "snapshot": "mission-settings.txt",
+    "origin_id": "qgc-upstream",
+    "fetched_at": "2026-10-12T08:40:47.119700+00:00",
+    "http_status": 200,
+    "final_url": "https://raw.githubusercontent.com/mavlink/qgroundcontrol/3a67d31f0c36bf3fe38ec52970d250a89d0aaf67/src/MissionManager/MissionSettingsItem.cc",
+    "content_type": "text/plain; charset=utf-8",
+    "status": "captured",
+    "sha256": "fd37a832a8288d81ae4cd442cd9737e5e755a4fb473cc8a10e73e61a99845974",
+    "bytes": 9967,
+    "capture_format": "Raw HTTP response bytes"
+  }
+]

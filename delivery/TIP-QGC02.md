@@ -1,0 +1,12 @@
+# TIP-QGC02 · M2 actual QGC corpus / in-flight failsafe
+
+Owner 2026-10-12 explicitly authorizes QGC-exported corpus, application open/save compatibility and in-flight SITL failsafe without HeraHub SDK/device. Contractor→Builder→Verify in one agent; no independent-review claim. Keep QGC01 receipts immutable and no RAGAS application code.
+
+AC01 pin official QGC5.1.5 desktop release artifact/checksum/signature and recorded runtime settings origin (non-destructive user namespace); record app execution and no physical vehicle endpoint. Use actual QGC UI/serialization for corpus, never rename hand-authored fixture as QGC export.
+AC02 corpus includes fresh QGC-created simple survey-like route, QGC-generated complex Survey from a source-bound polygon, AERIS-exported SimpleItems opened/saved in QGC, and unsupported altitude/fence patterns. Capture actual actions/output and source/config hashes.
+AC03 compare original versus QGC saved plan semantics (not byte formatting): ordered commands, coordinates/frame/height, speed/camera, Home, polygon/camera/complex cached items. Review any change, block unsupported execution, keep roundtrip lineage.
+AC04 repair independent parser/exporter only where real corpus/source/evidence supports it; golden/negative fixtures and exact normalization rules, no silent loss or fabricated equivalence.
+AC05 freeze simulator FS_GCS_ENABLE/FS_GCS_TIMEOUT/FS_OPTIONS configuration, read observed parameters, explicit airborne failure scenarios. Separate inbound telemetry black-out with GCS heartbeats continuing from outbound GCS-heartbeat loss and full duplex loss.
+AC06 actual airborne observations before fault; fresh-vs-stale UI and command blocks; autopilot RTL/failsafe/land/disarm evidence, independent passive monitoring/logs when link blind. Reconnect/read-only mission recovery must not auto-resume or certify interrupted mission completion.
+AC07 repeat critical airborne heartbeat-loss case, test recover while armed and mismatching recovery; verify no automatic command in recovery and no AUTO without deliberate review. No in-flight simulator restart masquerading as failsafe test.
+AC08 retain application/corpus/runtime/journals/DataFlash and negative/unit/browser/evidence/SOT gates; completion coverage and cleanup. QGC UI unavailable gates remain NOT_CHECKED, not silently substituted with source-only tests. No physical flight/HIL or RAGAS A/B claim.

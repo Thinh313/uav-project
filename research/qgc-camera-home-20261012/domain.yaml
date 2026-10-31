@@ -1,0 +1,11 @@
+domain: qgc-camera-home-20261012
+entity_label: Pinned camera and vertical-reference behavior
+schema:
+  type_field: null
+  fields: [stop_pair, reserved_nulls, stop_capture, immediate_trigger, stored_stop_fields, home_terrain]
+rollup_field: null
+universe:
+  estimate: null
+  basis: Selected pinned mission semantics, no universal compatibility denominator
+alias_map: {}
+ambiguous_clusters: []

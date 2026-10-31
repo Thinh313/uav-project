@@ -1,0 +1,7 @@
+# ADR078 — explicit post-arm Home review
+
+b4 passed preflight and full16-item upload/readback, then arm updated Home from(108539999,1068070000,10100mm) to(108539998,1068070001,10090mm). Disarmed PREFLIGHT43 correctly invalidated its inspection at the Home change; no AUTO was sent. Raw/abort/closure remain FAIL, no forced success.
+
+PREFLIGHT43 stays immutable and disarmed/readonly. v5 seals that inspection immediately before ARM; a separate full-stream FlightGuard continues CRC/target/firmware/typed-config/boot/freshness and locks Home after post-arm review. ARM requires the original READY and readback; it does not itself start AUTO. After ACK+armed GUIDED+fresh updated Home+ground, download/readback again (read only), validate against fresh Home and unchanged camera/NAV content, retain both Home/readback snapshots. User must explicitly confirm the SHA-bound post-arm Home in the same session/boot within10s while still armed/ground/GUIDED. No Home change is silently ignored or normalized away; later changes block. No automatic re-arm after expiry/disarm. Bench fixture supplies an explicit scoped confirmation as a separate POST.
+
+Mock intentionally updates Home on arm and tests the new confirmation barrier. Fifth fresh qualification attempt budget includes every previous failure. Same physical resource gate,1200Hz internal source, speedup1, gyro/prearm checks, fixed scope and no new signature/ENDURE changes.

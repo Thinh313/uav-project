@@ -1,0 +1,28 @@
+{
+  "id": "NATIVE81-DEV01",
+  "authorized": "User 17/10: development sign NATIVE81 and test emulator journey/persistence. Prior no-sign constraint superseded only for this separate development artifact.",
+  "scope": "Sign exact unsigned03, no source change. Independent API33 AOSP ARM64 emulator-5582, isolated AVD. No Hera hardware/SITL/new release selection.",
+  "requirements": {
+    "REQ81D-01": "Exact unsigned payload parity and accepted dedicated development cert; no release identity",
+    "REQ81D-02": "Android launch/WebView no crash, glass UI and survey edit/save/compile",
+    "REQ81D-03": "Preflight profile freshness/Home/datum/route and mock control ownership gates",
+    "REQ81D-04": "Fly mock ACK does not advance, explicit points/landing, review actual journal",
+    "REQ81D-05": "Force-stop/app restart and emulator restart retain exact records, no restored authority",
+    "REQ81D-06": "Interrupted running prefix preserved, no false completion",
+    "REQ81D-07": "Protected byte integrity and >=20GiB disk floor, clean owned emulator/runtime"
+  },
+  "decisions": [
+    "User request provides authorization; no extra signing permission needed.",
+    "One agent changes roles in sequence; review is not independent.",
+    "Use CUA first for UI; prior explicit ADB/UIAutomator authorization applies only to owned emulator-5582.",
+    "Root access only to owned AOSP emulator package files if needed to independently verify non-debuggable APK journal.",
+    "No build/source modifications to native81; source fixes, if required, must be derived into isolated follow-up, with original bytes preserved."
+  ],
+  "bounds": {
+    "admissionGiB": 32,
+    "stopGiB": 21,
+    "floorGiB": 20,
+    "runtimeDeadlineSec": 2700,
+    "runtimeCleanup": "Remove only this task downloaded archives and extracted SDK after stop; preserve AVD state and journal evidence."
+  }
+}

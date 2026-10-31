@@ -1,0 +1,66 @@
+{
+  "format": "aeris-geodata",
+  "version": 1,
+  "id": "rtr-aeris-home-20261012",
+  "createdAt": "2026-10-12T05:16:59.817260+00:00",
+  "coverage": [
+    106.799,
+    10.846,
+    106.815,
+    10.862
+  ],
+  "coordinateSystem": "WGS84",
+  "verticalDatum": "EGM2008",
+  "model": "DSM",
+  "operational": false,
+  "assets": {
+    "basemap.json": {
+      "sha256": "c07a1461ef770de45da4edfd90a8876223d5d60a3fb232506d0f847dac2e447c",
+      "bytes": 200396
+    },
+    "dsm.json": {
+      "sha256": "1bd4e95dba60c6219c6b88d999747b7f786aa09fc9ea27abcad67d1b1a305615",
+      "bytes": 26541
+    }
+  },
+  "sources": [
+    {
+      "path": "geodata/sources/copernicus-N10-E106.tif",
+      "url": "https://copernicus-dem-30m.s3.amazonaws.com/Copernicus_DSM_COG_10_N10_00_E106_00_DEM/Copernicus_DSM_COG_10_N10_00_E106_00_DEM.tif",
+      "query": null,
+      "fetched_at": "2026-10-12T05:15:28.577347+00:00",
+      "sha256": "37e5afce5979cf5d73da47f770d143dd8dfb8bc4e3f34caeb09d7fab3cbebd0c",
+      "bytes": 46642401,
+      "content_type": "image/tiff",
+      "final_url": "https://copernicus-dem-30m.s3.amazonaws.com/Copernicus_DSM_COG_10_N10_00_E106_00_DEM/Copernicus_DSM_COG_10_N10_00_E106_00_DEM.tif"
+    },
+    {
+      "path": "geodata/sources/osm-extract.json",
+      "url": "https://overpass-api.de/api/interpreter",
+      "query": "[out:json][timeout:40];(way[highway](10.846,106.799,10.862,106.815);way[building](10.846,106.799,10.862,106.815);way[waterway](10.846,106.799,10.862,106.815);way[natural=water](10.846,106.799,10.862,106.815);way[landuse](10.846,106.799,10.862,106.815););out geom;",
+      "fetched_at": "2026-10-12T05:15:15.085759+00:00",
+      "sha256": "bdee8bbf106a7f278696b96be19af042db449e2ff02db91b2ca1a3e13fb58dff",
+      "bytes": 464396,
+      "content_type": "application/json",
+      "final_url": "https://overpass-api.de/api/interpreter"
+    }
+  ],
+  "osmTimestamp": "2026-10-12T05:14:04Z",
+  "attributions": [
+    {
+      "label": "© OpenStreetMap contributors · ODbL",
+      "url": "https://www.openstreetmap.org/copyright"
+    },
+    {
+      "label": "Copernicus DEM GLO-30 / DSM · EGM2008",
+      "url": "https://registry.opendata.aws/copernicus-dem/"
+    }
+  ],
+  "copernicusNotice": "produced using Copernicus WorldDEM-30 © DLR e.V. 2010-2014 and © Airbus Defence and Space GmbH 2014-2018 provided under COPERNICUS by the European Union and ESA; all rights reserved",
+  "limitations": [
+    "DSM includes surface objects; not surveyed bare ground",
+    "No current obstacle/airspace/flight authorization",
+    "No operational launch reference or EGM2008↔autopilot geoid mapping verified",
+    "Per-pixel uncertainty and exact acquisition date unknown"
+  ]
+}

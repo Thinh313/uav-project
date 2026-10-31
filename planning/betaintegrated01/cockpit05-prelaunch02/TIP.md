@@ -1,0 +1,7 @@
+# COCKPIT05 continuation: prelaunch verification
+
+User requests continuation of entry10 Android–SITL30minute qualification. Actual observation at entry:16.46GiB free, battery14%, noAC. Existing full budget needs18.79252684GiB and power≥30% orAC, live battery stop20%; do not launch emulator/AP, weaken guards, automatically retry, delete logs or modify frozen source/candidate/ENDURE.
+
+Small bounded useful scope while physical gates fail: read-only Doctor verifying current disk/power,178 selected source pins and385-file previous handoff; correct operator commands from actual module filenames without editing sealed RUNNER.md. Exercise admission refusal behavior with controlled test inputs and denied process/socket/thread/Path.mkdir surfaces. Prove below-budget refusal occurs before case/guardian process creation, and battery refusal occurs before realprime/ADB; sufficient nominal capacity alone does not admit a case without genuine UI baseline. No mocked input becomes actual admission or real priming evidence.
+
+Builder works only here and `evidence/betaintegrated01-cockpit05-prelaunch02`; Root independently runs the small final tests/Doctor and compares outputs. No product changes, new APK/signature, build, dependencies, network or runtime. Maximum5minutes preparation/128KiB artifacts; stop if existing source or evidence drifts. Do not restate old mock counts as new acceptance, or claim30minutes from the earlier2-synthetic-frame host I/O check. Final scope remains NOT_RUN unless physical and all execution gates actually pass.

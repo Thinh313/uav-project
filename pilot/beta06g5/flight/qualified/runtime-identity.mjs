@@ -1,0 +1,7 @@
+import path from'node:path';import{QUALIFIED_IMAGE,QUALIFIED_BINARY_PATH}from'./verify-profile.mjs';
+/** Exact owned runtime configuration, additional to existing PID/start/port/binary checks. */
+export function assertNativeRuntimeIdentity(i,root){
+ const a=i?.Config?.Cmd,h=i?.HostConfig,env=i?.Config?.Env;if(i?.Image!==QUALIFIED_IMAGE||!Array.isArray(a)||(i.Config.Entrypoint!==null&&(!Array.isArray(i.Config.Entrypoint)||i.Config.Entrypoint.length!==0))||a[0]!=='/aeris/arducopter'||!Array.isArray(env)||env.filter(x=>x.startsWith('AERIS_DIRECT_TRACE=')).join()!=='AERIS_DIRECT_TRACE=0'||env.some(x=>/^(LD_PRELOAD|AERIS_AP_TRACE|AERIS_INSTRUMENT)=/.test(x)))throw Error('QUALIFIED_LIVE_ENTRY_OR_ENV');
+ const at=flag=>a[a.indexOf(flag)+1];if(at('--model')!=='quad'||at('--speedup')!=='1'||a.some(x=>/entry\.sh|clockprobe/.test(x))||h?.AutoRemove!==false||h?.Privileged!==false||(h.CapAdd!==null&&(!Array.isArray(h.CapAdd)||h.CapAdd.length!==0))||h.NanoCpus!==1000000000||h.Memory!==268435456||!Array.isArray(h.CapDrop)||h.CapDrop.length!==1||h.CapDrop[0].toUpperCase()!=='ALL'||!h.SecurityOpt?.some(x=>x==='no-new-privileges'||x==='no-new-privileges=true')||h.NetworkMode!=='bridge')throw Error('QUALIFIED_LIVE_RESOURCES');
+ const mounts=i.Mounts?.filter(x=>x.Destination==='/aeris/arducopter');if(mounts?.length!==1||mounts[0].Type!=='bind'||mounts[0].RW!==false||path.resolve(mounts[0].Source)!==path.join(root,QUALIFIED_BINARY_PATH))throw Error('QUALIFIED_LIVE_BINARY_MOUNT');return true;
+}

@@ -1,0 +1,12 @@
+{
+  "format": "aeris-correction02-compact-reply-design-test",
+  "version": 1,
+  "at": "2026-10-26T01:36:02.649Z",
+  "status": "PASS",
+  "manifestBytes": 3913018,
+  "replyBytes": 380,
+  "ackCapturedBeforeFsync": 12,
+  "liveAcknowledgedAfterFsync": 99,
+  "retainedOriginalManifestBlocks": 12000,
+  "scope": "MOCK_PROPOSAL_ONLY_NOT_RUNTIME_OR_ANDROID_ACCEPTANCE"
+}

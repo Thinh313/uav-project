@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="vi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>AERIS · Simulator Workspace</title><link rel="stylesheet" href="/style.css"></head>
+<body data-pane="fly">
+<header><a class="brand" href="/" aria-label="AERIS simulator"><b>RtR</b><span></span><strong>AERIS <small>Simulator</small></strong></a><nav role="tablist" aria-label="Hành trình AERIS"><button role="tab" data-tab="mission" aria-selected="false">Nhiệm vụ</button><button role="tab" data-tab="preflight" aria-selected="false">Preflight</button><button role="tab" data-tab="fly" aria-selected="true">Fly</button><button role="tab" data-tab="review" aria-selected="false">Review</button><button role="tab" data-tab="capabilities" aria-selected="false">Năng lực</button></nav><div class="header-end"><span id="connection">Chưa có phiên</span><button id="land" disabled>LAND</button></div></header>
+<main><canvas id="world" tabindex="0" aria-label="Cảnh3D nhận pose từ vật lý SITL; kéo để xoay, cuộn để zoom"></canvas>
+<div id="loading"><span></span><p>Đang nạp cảnh3D</p></div>
+<div class="flight-state"><span class="source-label" id="source">Simulator / chờ phiên</span><strong id="observed-mode">Chưa kết nối</strong><span id="live-state">Không có dữ liệu bay live</span></div>
+<div id="stale" role="status" hidden>Dữ liệu không còn mới · giữ hình cuối · input bị khóa</div>
+
+<section class="pane mission-pane" data-pane="mission" hidden aria-label="Biên tập nhiệm vụ">
+<div class="pane-heading"><div><span class="eyebrow">Chuẩn bị khảo sát</span><h1>Nhiệm vụ</h1></div><span class="tag">Kế hoạch offline</span></div>
+<div class="subtabs"><button id="show-kml" aria-pressed="true">KML / corridor</button><button id="show-qgc" aria-pressed="false">Đối chiếu QGC</button></div>
+<div id="kml-editor"><div class="inline"><button id="sample-polygon">Mẫu vùng</button><button id="sample-corridor">Mẫu tuyến</button><label class="file-button">Nhập KML<input id="kml-file" type="file" accept=".kml,application/vnd.google-earth.kml+xml"></label></div>
+<label for="kml">Nguồn KML / WGS84</label><textarea id="kml" spellcheck="false" rows="4" placeholder="Chọn mẫu hoặc nhập file KML"></textarea><button id="inspect-kml">Đọc đối tượng KML</button>
+<label for="feature">Đối tượng cần lập kế hoạch</label><select id="feature"><option value="">Chọn sau khi đọc KML</option></select>
+<div class="form-grid"><label>AGL giả định (m)<input id="plan-alt" type="number" min="10" max="120" value="60"></label><label>Tốc độ (m/s)<input id="plan-speed" type="number" min="0.5" max="15" step="0.5" value="4"></label><label>Chồng ảnh dọc (%)<input id="front-overlap" type="number" min="50" max="90" value="80"></label><label>Chồng ảnh ngang (%)<input id="side-overlap" type="number" min="50" max="90" value="75"></label><label>Hướng tuyến (°)<input id="heading" type="number" min="0" max="179.9" value="0"></label><label>Bề rộng corridor (m)<input id="corridor-width" type="number" min="5" max="200" value="100"></label></div>
+<label class="check"><input id="flat-ack" type="checkbox">Tôi xác nhận địa hình phẳng giả định; chưa kiểm transit, vật cản hay vùng cấm.</label>
+<button id="compile" class="primary">Lưu và tính kế hoạch</button><p id="plan-state" class="muted">Kế hoạch chưa được lưu. Không có thao tác upload hoặc AUTO ở bước này.</p>
+<svg id="plan-map" viewBox="0 0 440 240" role="img" aria-label="Sơ đồ tuyến và vùng nhiệm vụ, không phải bản đồ địa hình"></svg><dl id="plan-metrics" class="metrics compact"></dl><p class="small">Camera mẫu35mm /6000×4000, chưa hiệu chuẩn thực. Số ảnh là dự kiến lệnh, không phải file ảnh.</p></div>
+<div id="qgc-editor" hidden><p class="muted">Đối chiếu nội dung thực thi, camera, Home và chuẩn cao độ bằng oracle MISSION55.</p><button id="qgc-example">Nạp ca camera placeholder</button><label for="qgc-before">Nhiệm vụ trước<input id="qgc-before-file" type="file" accept=".plan,.json"></label><textarea id="qgc-before" rows="4" spellcheck="false"></textarea><label for="qgc-after">Nhiệm vụ sau<input id="qgc-after-file" type="file" accept=".plan,.json"></label><textarea id="qgc-after" rows="4" spellcheck="false"></textarea><button id="compare" class="primary">Đối chiếu semantic</button><p id="semantic-verdict" role="status">Chưa đối chiếu.</p><pre id="semantic-report"></pre></div>
+</section>
+
+<section class="pane preflight-pane" data-pane="preflight" hidden aria-label="Chuẩn bị phiên bay">
+<div class="pane-heading"><div><span class="eyebrow">Kiểm trước bay</span><h1>Preflight</h1></div><span class="tag">ArduPilot4.7.1</span></div>
+<p class="muted">Tạo một phiên giả lập riêng. Không kết nối radio hay drone thật; không tự arm.</p>
+<label for="load">Payload vật lý tham chiếu</label><select id="load"><option value="empty">Không tải · 3kg</option><option value="central">Tải giữa1kg · tổng4kg</option><option value="offset">Tải lệch1kg · tổng4kg</option></select><label for="wind">Môi trường</label><select id="wind"><option value="calm">Lặng gió</option><option value="gust">Gió giật · seed32</option></select>
+<button id="start" class="primary">Mở phiên SITL mới</button><p id="capacity" class="small">Đang đọc ngân sách tài nguyên…</p><ul id="preflight"><li>Chưa có telemetry để kiểm.</li></ul><button id="refresh" disabled>Đọc lại cấu hình</button><p class="small">Cần EKF/GPS/Home sẵn sàng và4 tham số đúng kiểu, còn mới. Không bỏ qua pre-arm.</p><button id="takeoff" class="primary" disabled>Cất cánh & nhận quyền · 5m</button><p id="preflight-note" class="muted">Thao tác này cất cánh GUIDED5m, quan sát LOITER rồi nhận quyền input trung tính ngay. Giữ focus cửa sổ; mất focus sẽ thu hồi quyền.</p>
+</section>
+
+<section class="pane fly-pane" data-pane="fly" aria-label="Thông số và điều khiển bay">
+<div class="pane-heading"><h1>Điều khiển</h1><span class="tag" id="armed">Disarmed / chưa xác nhận</span></div>
+<button id="prepare-link" class="primary">Chuẩn bị phiên</button><dl class="metrics"><div><dt>Độ cao Home</dt><dd><b id="alt">—</b><span>m</span></dd></div><div><dt>Vận tốc</dt><dd><b id="speed">—</b><span>m/s</span></dd></div><div><dt>Khối lượng</dt><dd><b id="mass">—</b><span>kg</span></dd></div><div><dt>RPM ước tính</dt><dd><b id="rpm">—</b><span>rpm</span></dd></div></dl>
+<div class="rule"></div><p id="input-state">Chưa có quyền điều khiển.</p><div class="inline"><button id="claim" disabled>Nhận quyền input</button><button id="release" disabled>Nhả quyền</button></div>
+<div class="sticks" aria-label="Vị trí input"><span><i id="left-stick"></i></span><span><i id="right-stick"></i></span></div><p class="keys">W/S tiến–lùi · A/D trái–phải<br>↑/↓ nâng–hạ · ←/→ yaw</p>
+<p class="small">Bàn phím huấn luyện. Mất focus, đổi panel hoặc stale200ms sẽ nhả quyền. Chuột chỉ điều khiển camera nhìn.</p><button id="end" disabled>Kết thúc sau hạ cánh</button>
+<details><summary>Chẩn đoán phiên</summary><dl class="diagnostics"><dt>Run</dt><dd id="run">—</dd><dt>Snapshot</dt><dd id="age">—</dd><dt>Frame</dt><dd id="frame">—</dd><dt>G1 / Hera</dt><dd>Chưa nghiệm thu đầy đủ</dd></dl></details>
+</section>
+
+<section class="pane review-pane" data-pane="review" hidden aria-label="Review hồ sơ bay">
+<div class="pane-heading"><div><span class="eyebrow">Sau nhiệm vụ</span><h1>Review</h1></div><span class="tag">Bằng chứng giữ lại</span></div>
+<p id="review-status" class="muted">Chọn một hồ sơ đã đóng để kiểm raw và xem kết quả.</p><button id="reload-history">Làm mới hồ sơ</button><label for="history">Hồ sơ SIMTRAIN53 giữ sau restart</label><select id="history"><option value="">Chọn hồ sơ</option></select><button id="verify-history" class="primary">Đọc và kiểm SHA raw</button>
+<dl class="metrics compact" id="review-metrics"></dl><p class="small">Đối chiếu SHA với readback đã giữ. Không phải xác minh chữ ký, nghiệm thu Hera hoặc kết luận ảnh thực.</p><details><summary>Raw / timing / phạm vi</summary><pre id="review-report">Chưa đọc hồ sơ.</pre></details>
+<div class="rule"></div><h2>Workspace nhiệm vụ</h2><p id="workspace-status" class="small">Đang đọc journal.</p><button id="export-workspace">Xuất journal kế hoạch</button><p class="small">Workspace giữ kế hoạch sau restart. Hồ sơ không phục hồi quyền điều khiển.</p>
+</section>
+
+<section class="pane capability-pane" data-pane="capabilities" hidden aria-label="Năng lực đã xây dựng">
+<div class="pane-heading"><div><span class="eyebrow">AERIS engineering</span><h1>Năng lực đã xây dựng</h1></div><button id="cap-close">Về Fly</button></div><p class="muted">Các module có nguồn và hồ sơ riêng. Phạm vi kiểm được hiển thị theo từng module; chưa có kết luận sản phẩm sẵn sàng thay Ragas trên Hera.</p><div id="cap-list">Đang đọc hồ sơ module…</div><dialog id="report-dialog"><button id="close-report">Đóng hồ sơ</button><h2 id="report-name"></h2><p id="report-sha" class="small"></p><pre id="report-text"></pre></dialog>
+</section>
+
+<div class="camera-tools" role="group" aria-label="Góc nhìn"><button data-camera="hero" class="active">Cận cảnh</button><button data-camera="chase">Theo UAV</button><button data-camera="range">Toàn cảnh</button><button id="audio">Âm RPM · Tắt</button></div><span id="fps" class="fps">WebGL2</span>
+</main>
+<footer><span id="message" role="status">Sẵn sàng chuẩn bị phiên. Không tự khởi động SITL.</span><strong id="deadline">Simulator only</strong></footer><div class="legal"><span>Quad tham chiếu · chưa hiệu chỉnh Hera · ảnh thực0</span><a href="/credits.html" target="_blank" rel="noopener">Model / font / giấy phép</a></div>
+<script type="module" src="/ui.mjs"></script></body></html>

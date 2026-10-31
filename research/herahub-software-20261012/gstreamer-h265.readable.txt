@@ -1,0 +1,333 @@
+
+
+
+
+
+
+
+
+rtph265depay
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Toggle navigation
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        API References
+
+
+
+
+GStreamer core
+
+
+
+GStreamer Libraries
+
+
+
+GStreamer Plugins
+
+
+
+
+
+Application manual
+
+
+
+Tutorials
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+rtph265depay
+
+Extracts H265 video from RTP packets (RFC 7798)
+
+
+
+Hierarchy
+
+
+
+GObject
+    ╰──GInitiallyUnowned
+        ╰──GstObject
+            ╰──GstElement
+                ╰──GstRTPBaseDepayload
+                    ╰──rtph265depay
+
+
+
+
+Factory details
+
+
+Authors: – Jurgen Slowack 
+
+Classification: – Codec/Depayloader/Network/RTP
+
+Rank – secondary
+
+Plugin – rtp
+
+Package – GStreamer Good Plug-ins
+
+
+
+Pad Templates
+
+
+sink
+
+application/x-rtp:
+          media: video
+     clock-rate: 90000
+  encoding-name: H265
+
+
+
+Presence – always
+
+Direction – sink
+
+Object type – GstPad
+
+
+
+
+
+
+src
+
+video/x-h265:
+  stream-format: hvc1
+      alignment: au
+video/x-h265:
+  stream-format: byte-stream
+      alignment: { (string)nal, (string)au }
+
+
+
+Presence – always
+
+Direction – src
+
+Object type – GstPad
+
+
+
+
+
+Properties
+
+
+
+max-fragmentation-unit-size
+
+
+“max-fragmentation-unit-size” guint
+
+
+Maximum size in bytes for a fragmentation unit. Larger units
+will be dropped to prevent excessive memory usage.
+
+Use 0 for automatic.
+
+
+	Flags :	
+	
+		
+				Read
+			
+				/		
+				Write
+			
+
+
+
+	Default value :	33554432
+
+
+
+Since			: 1.28.6
+		
+
+
+
+
+
+request-keyframe
+
+
+“request-keyframe” gboolean
+
+
+Request new keyframe when packet loss is detected.
+
+
+	Flags :	
+	
+		
+				Read
+			
+				/		
+				Write
+			
+
+
+
+	Default value :	false
+
+
+
+Since			: 1.26
+		
+
+
+
+
+
+wait-for-keyframe
+
+
+“wait-for-keyframe” gboolean
+
+
+Wait for the next keyframe after packet loss.
+
+Note: currently this only has an effect if outputting access units.
+
+
+	Flags :	
+	
+		
+				Read
+			
+				/		
+				Write
+			
+
+
+
+	Default value :	false
+
+
+
+Since			: 1.26
+		
+
+
+
+
+
+The results of the search are
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

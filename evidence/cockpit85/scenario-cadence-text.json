@@ -1,0 +1,32 @@
+{
+  "checkedTextNodes": 15,
+  "failures": [
+    {
+      "button": {
+        "bottom": 59.5,
+        "h": 56,
+        "right": 736.421875,
+        "w": 180,
+        "x": 556.421875,
+        "y": 3.5
+      },
+      "id": "authority",
+      "kind": "BUTTON_TEXT_CONTAINER_SPILL",
+      "text": "Bay: chưa cấp · P1: chưa cấp",
+      "textBox": {
+        "bottom": 51,
+        "h": 17,
+        "right": 738.8828125,
+        "w": 169.4609375,
+        "x": 569.421875,
+        "y": 34
+      }
+    }
+  ],
+  "theme": "night",
+  "view": "preflight",
+  "viewport": {
+    "height": 600,
+    "width": 1024
+  }
+}

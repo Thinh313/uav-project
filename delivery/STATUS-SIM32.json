@@ -1,0 +1,25 @@
+{
+  "at": "2026-10-13T15:35:41.767571+00:00",
+  "status": "REFERENCE_FUNCTIONAL_VERIFIED_WITH_OPEN_PRODUCT_GATES",
+  "preview": "http://127.0.0.1:8796/",
+  "report": "delivery/COMPLETION-SIM32.md",
+  "contract": "pilot/sim32/acceptance-contract-v2.json",
+  "verification": "evidence/sim32/verification-runtime03.json",
+  "completionCheck": "evidence/sim32/completion-check.json",
+  "canonicalSotEdited": false,
+  "protectedRestore": "22missing paths restored exactSHA; incident retained; no continuous-path claim",
+  "next": [
+    "Physics>=1x with preserved oracle/raw",
+    "Repeated payload transaction/authority and encoded mock video",
+    "Android runtime then SDK/calibration/HIL/flight",
+    "Matched Ragas/DJI comparison"
+  ],
+  "gatesOpen": [
+    "physical calibration",
+    "native Android/Hera",
+    "video",
+    "local feedback timing",
+    "restart/overload corpus",
+    "competitive superiority"
+  ]
+}

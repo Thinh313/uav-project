@@ -1,0 +1,62 @@
+{
+  "at": "2026-10-22T07:55:42.433980+00:00",
+  "scope": "BUILDER_OFFLINE_ONLY",
+  "status": "OFFLINE_CONTRACT_PASS_ACTUAL_G3_UNTESTED_BETA_NOT_READY",
+  "tests": {
+    "command": "python3 -B pilot/beta06g3/test_launch_contract.py",
+    "groups": 10,
+    "passed": 10,
+    "failed": 0,
+    "elapsedSecondsReportedByUnittest": 0.006,
+    "provenance": "BUILDER_UNIT_MOCK_REAL_FILES_NOT_RUNTIME_OR_INDEPENDENT_QA"
+  },
+  "files": {
+    "pilot/beta06g3/launch_contract.py": {
+      "sha256": "f51d1a17b4c32a78c4557656d894c38ac850fa8111a05543a250b5607146465a",
+      "bytes": 3191,
+      "mode": "0o644"
+    },
+    "pilot/beta06g3/test_launch_contract.py": {
+      "sha256": "e7cafc1dcb0f89fd97ef7c8d8365449c068780e1432d59bf52152b14d3700c65",
+      "bytes": 4944,
+      "mode": "0o644"
+    },
+    "planning/beta06g3/LAUNCH-DIAGNOSTIC-TIP.md": {
+      "sha256": "f2a0525664e43ceef4f372418628b76491da37354da42807b49111f46d0a4b9c",
+      "bytes": 6810,
+      "mode": "0o644"
+    },
+    "evidence/sim32-instrument01/direct-uncorrected-source/arducopter": {
+      "sha256": "1d3479f1fd2b9c6d85c95f38eeb8c105e6735ea1dc372736ddc07efd5162fc41",
+      "bytes": 7172336,
+      "mode": "0o644"
+    },
+    "pilot/beta06g2/flight/runtime.py": {
+      "sha256": "c768ae096ecf0f60d44cf17cbbde3fd80cd15cac1c18552dc470b83dac5a7d01",
+      "bytes": 8943,
+      "mode": "0o644"
+    },
+    "pilot/field02/flight/sitl.parm": {
+      "sha256": "6283de8cc20569a60f617caf68adb44ffe1ae97d8abbb39032fdfac38272410c",
+      "bytes": 489,
+      "mode": "0o644"
+    },
+    "runtime/sitl/copter.parm": {
+      "sha256": "5e01345b45d1c6190b28bece5638bbdd4cf1cce35e05bbbf480ab24d2b51aa0e",
+      "bytes": 1957,
+      "mode": "0o644"
+    }
+  },
+  "actualRuntimeStarted": false,
+  "dockerCommandsCalled": false,
+  "executableArtifactPrepared": false,
+  "archiveModified": false,
+  "scratchRemaining": [],
+  "actualG2Exit255Cause": "UNKNOWN;NO_DURABLE_OCI_ERROR_RETAINED",
+  "concreteDefect": "DIRECT_EXEC_ARCHIVED_BINARY_MODE0644_NO_EXECUTE_BITS",
+  "futureL2Required": [
+    "EXECUTABLE_ARTIFACT_OWNED_COPY_METADATA_QUALIFICATION",
+    "DURABLE_CREATE_NO_AUTOREMOVE_CONTAINER_RETENTION_CLEANUP",
+    "HOST_BOOT_AP_BUDGET_ACTUAL_RUNTIME_DECISION"
+  ]
+}

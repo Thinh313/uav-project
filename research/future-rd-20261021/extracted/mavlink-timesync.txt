@@ -1,0 +1,220 @@
+Time Synchronization Protocol v2 | MAVLink Guide
+Skip to content
+Search
+K
+Main Navigation
+Messages
+FAQ
+Implementations
+ArduPilot
+PX4
+Other
+Languages
+C (mavgen)
+Python (Pymavlink)
+Rust (rust-mavlink)
+Other
+Support
+English
+中文 (Chinese)
+한국어 (Korean)
+English
+中文 (Chinese)
+한국어 (Korean)
+Appearance
+Menu
+Return to top
+Sidebar Navigation
+Introduction
+Overview
+FAQ
+Implementations
+Getting Started
+Install MAVLink
+Generate MAVLink Libraries
+Generate Source Files for ROS
+Using MAVLink Libraries
+C (mavgen)
+Message Signing
+Examples
+UART Interface (C)
+UDP Example (C)
+C++ 11 (mavgen)
+Examples
+UDP Example (C++)
+Pymavlink (Python-mavgen)
+How to Request Messages/Set Message Rates
+Message Signing
+Examples
+Guide
+MAVLink Versions
+MAVLink 2
+Message Signing
+Serialization
+Routing
+Redundancy/Message De-duplication
+Packet Loss Calculation
+General Telemetry
+Message Rates
+File Formats
+UAVCAN Interaction
+Scripts
+MAVLink XML Schema
+Defining XML Enums/Messages
+MAVLink CRC
+Debugging with Wireshark
+Standard Messages/Commands
+✔ common.xml
+standard.xml
+minimal.xml
+development.xml
+Microservices
+Heartbeat/Connection Protocol
+Mission Protocol
+Parameter Protocol
+Parameters over MAVLink FTP
+Extended Parameter Protocol
+Command Protocol
+Manual Control (Joystick) Protocol
+Camera Protocol v2
+Camera Definition Files
+Camera Protocol v1 (Simple Trigger Protocol)
+Gimbal Protocol v2
+Gimbal Protocol v1 (superseded)
+Arm Authorization Protocol
+Illuminator Protocol
+Image Transmission Protocol
+Offboard Control Protocol
+File Transfer Protocol (FTP)
+Landing Target Protocol
+Ping Protocol
+Battery Protocol
+Terrain Protocol
+Tunnel Protocol
+Open Drone ID Protocol
+High Latency Protocol
+Component Metadata Protocol
+MAVLink Id Assignment (sysid, compid)
+Payload Protocols
+Traffic Management (UTM/ADS-B)
+Events Interface
+Standard Flight Modes
+Time Synchronization
+Dialects & Tests
+ardupilotmega.xml
+ASLUAV.xml
+AVSSUAS.xml
+csAirLink.xml
+cubepilot.xml
+icarous.xml
+loweheiser.xml
+marsh.xml
+paparazzi.xml
+storm32.xml
+stemstudios.xml
+uAvionix.xml
+all.xml
+python_array_test.xml
+test.xml
+Contributing
+Support
+On this page
+Time Synchronization Protocol v2
+​
+This protocol is used to synchronize clocks on MAVLink components by estimating their time offset.
+The protocol uses just one message
+TIMESYNC
+, which has two
+int64_t
+fields:
+tc1
+and
+ts1
+. A component that wants to synchronize clocks sends out a
+TIMESYNC
+request with its current timestamp in
+ts1
+. A remote system that supports the protocol sends a
+TIMESYNC
+response, including both the original timestamp and its own timestamp. The original system can use this information to determine the round-trip time, and estimate the timestamp offset.
+This sequence is run multiple times and filtered/averaged to reduce the transient effects of the channel and processor usage on the offset calculation.
+INFO
+This version replaces
+Time Synchronization Protocol v1
+.
+Message/Enum Summary
+​
+Message
+Description
+TIMESYNC
+Time synchronization message.
+Sequences
+​
+The sequence is:
+A component that needs time synchronization sends a
+TIMESYNC
+request that includes its current nanosecond timestamp in
+ts1
+(and
+tc1 = 0
+, indicating it is a request). This message may be broadcast, or targeted to a particular component.
+A component that receives a
+TIMESYNC
+request (
+TIMESYNC.tc1 == 0
+) responds with a
+TIMESYNC
+response (
+tc1 ≠ 0
+) that includes the original timestamp from the request in
+ts1
+(mirrored), and its own timestamp in
+tc1
+.
+When the synchronizing component gets a
+TIMESYNC
+response with its own
+target_system
+and
+target_component
+it knows it is a reply to a timesync request that it sent.
+From the message the system can:
+determine the round trip time (by comparing its current timestamp with the original stamp that was returned in the message in
+ts1
+).
+estimate the offset between system timestamps, using the round trip time and the timestamp sent back by the remote system.
+INFO
+TIMESYNC` responses to the broadcast address indicate that the remote system supports
+Time Synchronization Protocol v1
+. Synchronization may be unreliable if there are multiple synchronising components on the network (report/log an error and upgrade the remote system). The component should ignore responses to all other addresses.
+The offset is an estimate because the time spent, both inbound and outbound, will change over time based on things like link congestion and processing time. Therefore the above sequence might be run a significant number of times, and filtering used to remove outlying estimates.
+A graph showing the "noise" when estimating the offset is given below (from PX4).
+Time Synchronization Protocol v1
+​
+Version 1 of the timesync protocol uses the same message and sequences as version 2.
+The difference is the
+TIMESYNC
+message in version 1 did not have
+target_system
+and
+target_component
+fields, and so the message was always broadcast. This could result in unreliable timesync if there are multiple synchronizing components on the network, because there is no way for a component to know whether a
+TIMESYNC
+response is to its request.
+INFO
+ArduPilot encodes the system id in
+TIMESYNC.ts1
+of the request. This allows filtering of the response to a particular system (but not component), reducing the risk of clashes.
+INFO
+Version 2 adds the target address, so a syncing system can filter on just the responses to its requests.
+Implementations
+​
+PX4:
+/src/modules/mavlink/mavlink_timesync.cpp
+Edit on GitHub
+Last updated:
+Pager
+Previous page
+Standard Flight Modes
+Next page
+Dialects & Tests

@@ -1,0 +1,262 @@
+{
+  "aggregates": {
+    "cells_by_state": {
+      "null": 24,
+      "sourced": 6
+    },
+    "coverage_pct": null,
+    "n_entities": 5,
+    "rollup": {},
+    "rollup_field": null,
+    "universe_estimate": null
+  },
+  "registry": {
+    "Android build": {
+      "entity_type": null,
+      "fields": {
+        "callbacks": {
+          "state": "null",
+          "value": null
+        },
+        "enumeration": {
+          "state": "null",
+          "value": null
+        },
+        "hotplug": {
+          "state": "null",
+          "value": null
+        },
+        "inventory": {
+          "state": "null",
+          "value": null
+        },
+        "signing": {
+          "claims": [
+            {
+              "capture": {
+                "fetched_at": "2026-10-12T06:31:22.997188+00:00",
+                "origin_id": "android-docs",
+                "sha256": "9b8c4f3a361d3a83cda82c8514249172475c9ce019234a4ed6a16a1426646297",
+                "snapshot": "apksigner.html",
+                "source": "apksigner",
+                "url": "https://developer.android.com/tools/apksigner"
+              },
+              "evidence_span": "verify",
+              "extraction": "normalized",
+              "source": "apksigner",
+              "tier": "A",
+              "value": "apksigner supports APK signature verification"
+            }
+          ],
+          "state": "sourced",
+          "value": "apksigner supports APK signature verification"
+        },
+        "storage": {
+          "state": "null",
+          "value": null
+        }
+      }
+    },
+    "Android codecs": {
+      "entity_type": null,
+      "fields": {
+        "callbacks": {
+          "state": "null",
+          "value": null
+        },
+        "enumeration": {
+          "claims": [
+            {
+              "capture": {
+                "fetched_at": "2026-10-12T06:31:20.133874+00:00",
+                "origin_id": "android-docs",
+                "sha256": "e0ea1c5866a7d89357c79657413763335c449f1654d922fada501524c621ac9d",
+                "snapshot": "codec-list.html",
+                "source": "codec-list",
+                "url": "https://developer.android.com/reference/android/media/MediaCodecList"
+              },
+              "evidence_span": "ALL_CODECS",
+              "extraction": "normalized",
+              "source": "codec-list",
+              "tier": "A",
+              "value": "MediaCodecList enumerates codec info; not measured live concurrency"
+            }
+          ],
+          "state": "sourced",
+          "value": "MediaCodecList enumerates codec info; not measured live concurrency"
+        },
+        "hotplug": {
+          "state": "null",
+          "value": null
+        },
+        "inventory": {
+          "state": "null",
+          "value": null
+        },
+        "signing": {
+          "state": "null",
+          "value": null
+        },
+        "storage": {
+          "state": "null",
+          "value": null
+        }
+      }
+    },
+    "Android export": {
+      "entity_type": null,
+      "fields": {
+        "callbacks": {
+          "state": "null",
+          "value": null
+        },
+        "enumeration": {
+          "state": "null",
+          "value": null
+        },
+        "hotplug": {
+          "state": "null",
+          "value": null
+        },
+        "inventory": {
+          "state": "null",
+          "value": null
+        },
+        "signing": {
+          "state": "null",
+          "value": null
+        },
+        "storage": {
+          "claims": [
+            {
+              "capture": {
+                "fetched_at": "2026-10-12T06:31:20.133940+00:00",
+                "origin_id": "android-docs",
+                "sha256": "24eb58133bcd5dc95dfc155369f25d27f49d5ab6608b777f6cd03e042e99f892",
+                "snapshot": "saf.html",
+                "source": "saf",
+                "url": "https://developer.android.com/training/data-storage/shared/documents-files"
+              },
+              "evidence_span": "ACTION_CREATE_DOCUMENT",
+              "extraction": "normalized",
+              "source": "saf",
+              "tier": "A",
+              "value": "ACTION_CREATE_DOCUMENT uses user-selected document destination"
+            }
+          ],
+          "state": "sourced",
+          "value": "ACTION_CREATE_DOCUMENT uses user-selected document destination"
+        }
+      }
+    },
+    "Android input": {
+      "entity_type": null,
+      "fields": {
+        "callbacks": {
+          "state": "null",
+          "value": null
+        },
+        "enumeration": {
+          "state": "null",
+          "value": null
+        },
+        "hotplug": {
+          "claims": [
+            {
+              "capture": {
+                "fetched_at": "2026-10-12T06:31:20.133780+00:00",
+                "origin_id": "android-docs",
+                "sha256": "b802e974bd98c30950599f09f26278da930fef4e71a9960cd42bf21324064062",
+                "snapshot": "input-manager.html",
+                "source": "input-manager",
+                "url": "https://developer.android.com/reference/android/hardware/input/InputManager"
+              },
+              "evidence_span": "registerInputDeviceListener",
+              "extraction": "normalized",
+              "source": "input-manager",
+              "tier": "A",
+              "value": "Input listener supports added/removed/changed observations"
+            }
+          ],
+          "state": "sourced",
+          "value": "Input listener supports added/removed/changed observations"
+        },
+        "inventory": {
+          "claims": [
+            {
+              "capture": {
+                "fetched_at": "2026-10-12T06:31:20.133385+00:00",
+                "origin_id": "android-docs",
+                "sha256": "401b0be98ba147e08bdf97a4278ad2244290adf6a6467f969fbe1d31c07d06a5",
+                "snapshot": "input-device.html",
+                "source": "input-device",
+                "url": "https://developer.android.com/reference/android/view/InputDevice"
+              },
+              "evidence_span": "The motion ranges for the device.",
+              "extraction": "normalized",
+              "source": "input-device",
+              "tier": "A",
+              "value": "Motion range/device enumeration through InputDevice"
+            }
+          ],
+          "state": "sourced",
+          "value": "Motion range/device enumeration through InputDevice"
+        },
+        "signing": {
+          "state": "null",
+          "value": null
+        },
+        "storage": {
+          "state": "null",
+          "value": null
+        }
+      }
+    },
+    "Android lifecycle": {
+      "entity_type": null,
+      "fields": {
+        "callbacks": {
+          "claims": [
+            {
+              "capture": {
+                "fetched_at": "2026-10-12T06:31:22.221866+00:00",
+                "origin_id": "android-docs",
+                "sha256": "ea3e67ae0a6a157cae8e75a716b1dec3d15727b40ecbfea4d2ef4b177e0e142c",
+                "snapshot": "lifecycle.html",
+                "source": "lifecycle",
+                "url": "https://developer.android.com/guide/components/activities/activity-lifecycle"
+              },
+              "evidence_span": "onPause",
+              "extraction": "normalized",
+              "source": "lifecycle",
+              "tier": "A",
+              "value": "onPause is a lifecycle callback; not proof our APK behaves correctly"
+            }
+          ],
+          "state": "sourced",
+          "value": "onPause is a lifecycle callback; not proof our APK behaves correctly"
+        },
+        "enumeration": {
+          "state": "null",
+          "value": null
+        },
+        "hotplug": {
+          "state": "null",
+          "value": null
+        },
+        "inventory": {
+          "state": "null",
+          "value": null
+        },
+        "signing": {
+          "state": "null",
+          "value": null
+        },
+        "storage": {
+          "state": "null",
+          "value": null
+        }
+      }
+    }
+  }
+}

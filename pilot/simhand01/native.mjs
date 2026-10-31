@@ -1,0 +1,6 @@
+let seq=0;const pending=new Map();
+export const nativeAvailable=()=>typeof globalThis.SimNative?.environment==='function'&&typeof globalThis.SimNative?.request==='function';
+export function nativeRequest(action,args={}){if(!nativeAvailable())return Promise.reject(Error('ANDROID_SAF_NOT_AVAILABLE'));let env;try{env=JSON.parse(SimNative.environment());}catch{return Promise.reject(Error('NATIVE_ENVIRONMENT_INVALID'));}const id=env.instance+':'+(++seq);return new Promise((resolve,reject)=>{const timer=setTimeout(()=>{pending.delete(id);reject(Error('NATIVE_RECEIPT_TIMEOUT'));},120000);pending.set(id,{env,resolve,reject,timer});try{SimNative.request(JSON.stringify({version:1,id,instance:env.instance,session:env.session,action,args}));}catch(e){clearTimeout(timer);pending.delete(id);reject(e);}});}
+export function receiveNative(q){if(typeof q==='string')q=JSON.parse(q);const p=pending.get(q?.id);if(!p)return;if(q.instance!==p.env.instance||q.session!==p.env.session)return;clearTimeout(p.timer);pending.delete(q.id);q.ok===true?p.resolve(q.result):p.reject(Error(q.error??'NATIVE_REJECTED'));}
+if(typeof window!=='undefined')window.simNativeReply=receiveNative;
+export const sha256=async text=>[...new Uint8Array(await crypto.subtle.digest('SHA-256',new TextEncoder().encode(text)))].map(x=>x.toString(16).padStart(2,'0')).join('');

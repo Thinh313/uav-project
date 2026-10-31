@@ -1,0 +1,5 @@
+package vn.rtr.aeris.native95;
+import java.nio.file.*;import java.util.*;import java.io.*;
+public final class GateReplay95Test{
+ public static void main(String[]args)throws Exception{List<String>rows=Files.readAllLines(Paths.get(args[0]));List<byte[]>items=new ArrayList<>();for(String line:rows)if(line.startsWith("ITEM\t"))items.add(DirectTransport95.unhex(line.split("\t")[1]));WireGate95 g=new WireGate95(items.toArray(new byte[0][]));int rx=0,tx=0,grant=0;long last=0;for(String line:rows){String[]a=line.split("\t");if(a[0].equals("ITEM"))continue;long t=Long.parseLong(a[1]);last=t;try{if(a[0].equals("RX")){g.receive(DirectTransport95.unhex(a[2]),t);rx++;}if(a[0].equals("TX")){g.transmit(DirectTransport95.unhex(a[2]),t);tx++;}if(a[0].equals("GRANT")){g.grant(t);grant++;}}catch(Exception e){throw new AssertionError("at rx="+rx+" tx="+tx+" "+line.substring(0,Math.min(80,line.length())),e);}}if(!g.safeComplete(last))throw new AssertionError(g.status(last));System.out.println("{\"status\":\"PASS\",\"rxChunks\":"+rx+",\"txFrames\":"+tx+",\"grants\":"+grant+",\"complete\":true}");}
+}

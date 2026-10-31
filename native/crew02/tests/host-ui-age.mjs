@@ -1,0 +1,17 @@
+import fs from 'node:fs';import vm from 'node:vm';import assert from 'node:assert/strict';
+const src=fs.readFileSync(new URL('../host/client.mjs',import.meta.url),'utf8');
+let now=0,gets=0,posts=0,hang=false,resolvePending,tick;const els=new Map(),listeners={};const el=id=>{if(!els.has(id))els.set(id,{value:'',disabled:false,textContent:'',innerHTML:''});return els.get(id);};
+const payload={id:'center',cameraOwnerSid:'s-b',gimbalOwnerSid:'s-b',flags:194,imageIndex:7,gimbalDevice:2,managerFresh:true,managerPrimary:true,settingsFresh:true,poseFresh:true,pitchDeg:-30,yawDeg:0};
+const info=()=>({connected:true,authenticated:true,responseAgeMs:100,csrf:'test',pid:2,boot:'01234567',state:{open:true,apFresh:true,apArmed:true,self:{session:'b',alive:true,joined:true},stations:[{session:'b',coreSid:'s-b',principal:'payload-b'}],payloads:[payload]}});
+const document={hidden:false,querySelector:el,addEventListener:(n,f)=>listeners[n]=f};
+const fetch=async(url,opts)=>{if(opts?.method==='POST'){posts++;return{ok:true,json:async()=>info()};}gets++;if(hang)return new Promise(r=>{resolvePending=()=>r({ok:true,json:async()=>info()});});return{ok:true,json:async()=>info()};};
+const ctx={document,fetch,performance:{now:()=>now},setInterval:f=>{tick=f;},console};ctx.globalThis=ctx;
+await vm.runInNewContext(`(async()=>{${src}\nglobalThis.probe={own,action,refresh};})()`,ctx);
+assert.equal(el('#capture').disabled,false);assert.equal(ctx.probe.own('camera'),true);
+hang=true;tick();await Promise.resolve();const started=gets;now=1600;tick();tick();
+assert.equal(gets,started);for(const id of['claim','release','transfer','accept','decline','capture','send-zoom','send-focus','gimbal','authority'])assert.equal(el('#'+id).disabled,true,id);
+assert.equal(el('#armed').textContent,'UNKNOWN');assert.equal(el('#owners').textContent,'Camera: UNKNOWN · Gimbal: UNKNOWN');assert.equal(ctx.probe.own('camera'),false);
+await assert.rejects(ctx.probe.action('capture'),/STATE_RECEIPT_STALE/);assert.equal(posts,0);
+document.hidden=true;listeners.visibilitychange();document.hidden=false;listeners.visibilitychange();resolvePending();await new Promise(setImmediate);
+assert.equal(el('#capture').disabled,true,'pre-visibility receipt cannot revive controls');hang=false;await ctx.probe.refresh();assert.equal(el('#capture').disabled,false);assert.equal(posts,0);
+console.log(JSON.stringify({status:'PASS',outcomes:6,checks:['fresh receipt ownership','hanging GET browser expiry and one inflight','all stateful controls UNKNOWN','stale direct action no POST','visibility epoch rejects old receipt','explicit fresh read restores presentation only'],scope:'actual browser module mocked DOM/clock/fetch, no Android or network'}));

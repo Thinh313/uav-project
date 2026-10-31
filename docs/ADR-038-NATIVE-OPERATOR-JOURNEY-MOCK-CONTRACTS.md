@@ -1,0 +1,7 @@
+# ADR038 · Native operator journey over compiled survey contracts
+
+Accepted within owner13/10 scope. Native24 was illustrative Plan/Fly/Review; N29 adds shared Plan/Preflight/Fly/Review workflow and session evidence model. Reuse immutable compiled contracts from existing JS core rather than porting geometry inconsistently or introducing WebView/live transport. Catalog selection only; arbitrary native AOI/parameter authoring remains a later planner-runtime decision. Core source/candidate stays pinned and read-only.
+
+Native Java controls explicit plan revision/digest, synthetic Home/config/readback/freshness, focus, mock mission progress/landing and exclusive input ownership. Pause on lost UI focus means UI suspension, not an aircraft mode change. Faults retain uncertain history; reconnect creates new generation, no automatic resume. Review is historical evidence of simulation; video/render callbacks and camera ACK never imply flight/capture completion.
+
+Use Android Views/MediaPlayer for compiled shell, existing N24 pure input/video models as read-only dependencies. Existing synthetic VP8 asset shared read-only. Build unsigned APK (no release or development key access) because current user forbids new signature. No Android runtime claims without install/emulator/device; host Java and browser walkthrough acceptance are separate. Bounded immutable SHA history has no automatic deletion; storage errors refuse publication. No Fly/app/services/compiler/trust/candidate/ENDURE mutation or software selection.

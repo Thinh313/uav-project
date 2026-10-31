@@ -1,0 +1,78 @@
+{
+  "version": 1,
+  "release": "v5.1.5",
+  "runtime_pin": "evidence/qgc02/desktop/runtime-pin.json",
+  "scope": "Local editor-only test exports; no vehicle connected, no physical flight; files unchanged after Save As. Synthetic origin where AERIS fixture seeded polygon. No blanket compatibility claim.",
+  "fixtures": [
+    {
+      "file": "aeris-simple-qgc-saved.plan",
+      "label": "AERIS SimpleItems → QGC lưu",
+      "sha256": "509feaacd40613b19e143fa4880a156c786e6e96d6f9dce334f94ba71943ad9d",
+      "bytes": 7553,
+      "origin": "Actual QGC5.1.5 desktop serialization",
+      "source": "app/fixtures/qgc/aeris-simple.plan",
+      "source_sha256": "58c94a6aa8d363619e19d04fabdf11bdcc2e43f597bba1e88431a9153d0df66b",
+      "observed_action": "Opened AERIS fixture; Save As via actual QGC UI; Home7 and camera stop immediate flags changed"
+    },
+    {
+      "file": "aeris-cached-survey-qgc-saved.plan",
+      "label": "AERIS Survey → QGC tái sinh",
+      "sha256": "2b8285af81f89b20796747cc395d7e658561138a123e4c05c71cfc227c75632a",
+      "bytes": 11819,
+      "origin": "Actual QGC5.1.5 desktop serialization",
+      "source": "app/fixtures/qgc/aeris-cached-survey.plan",
+      "source_sha256": "0c7e69d9f5eccd31c0e672614a0f7374db686c1b6913ea71e864bddf713b962d",
+      "observed_action": "Opened fixture in QGC; Save As; generated cached Items changed without intentional grid edit"
+    },
+    {
+      "file": "qgc-survey-angle35.plan",
+      "label": "QGC Survey góc 35°",
+      "sha256": "712b50e40162c38fdeea4baa5ff59a8f13364d686662d2b850bcbc6a4538dc92",
+      "bytes": 14549,
+      "origin": "Actual QGC5.1.5 desktop serialization",
+      "source": "app/fixtures/qgc/desktop/aeris-cached-survey-qgc-saved.plan",
+      "source_sha256": "2b8285af81f89b20796747cc395d7e658561138a123e4c05c71cfc227c75632a",
+      "observed_action": "Actual QGC editor angle changed0→35; QGC regenerated route from retained polygon; Save As"
+    },
+    {
+      "file": "qgc-created-simple.plan",
+      "label": "QGC tạo mới · Takeoff / 4 WP / RTL",
+      "sha256": "0883338619dcf0c140104d3928c8d0c0137cb056574e57dbc84213f545923978",
+      "bytes": 3689,
+      "origin": "Actual QGC5.1.5 desktop serialization",
+      "source": null,
+      "source_sha256": null,
+      "observed_action": "Clear saved draft; map Home; No Template; takeoff15; four clicked waypoints default50; RTL; Save As"
+    },
+    {
+      "file": "qgc-created-geofence.plan",
+      "label": "QGC tạo circular geofence",
+      "sha256": "dd93486b1577c8fa809450400835354cc2cc69ec9c887006afaf6d6ab9d45f48",
+      "bytes": 4018,
+      "origin": "Actual QGC5.1.5 desktop serialization",
+      "source": "app/fixtures/qgc/desktop/qgc-created-simple.plan",
+      "source_sha256": "0883338619dcf0c140104d3928c8d0c0137cb056574e57dbc84213f545923978",
+      "observed_action": "Actual QGC Circular Fence96.8m inclusion; Save As"
+    },
+    {
+      "file": "qgc-created-amsl-fence.plan",
+      "label": "QGC waypoint AMSL + geofence",
+      "sha256": "1c3af83915cb273da2ff6395224f74486c291ce8a27a6ca9eec2401b342134bd",
+      "bytes": 4018,
+      "origin": "Actual QGC5.1.5 desktop serialization",
+      "source": "app/fixtures/qgc/desktop/qgc-created-geofence.plan",
+      "source_sha256": "dd93486b1577c8fa809450400835354cc2cc69ec9c887006afaf6d6ab9d45f48",
+      "observed_action": "Defaults Mixed; first waypoint Alt Frame AMSL; Save As"
+    },
+    {
+      "file": "qgc-reopened-simple.plan",
+      "label": "QGC mở/lưu lại · lượt 2",
+      "sha256": "509feaacd40613b19e143fa4880a156c786e6e96d6f9dce334f94ba71943ad9d",
+      "bytes": 7553,
+      "origin": "Actual QGC5.1.5 desktop serialization",
+      "source": "app/fixtures/qgc/desktop/aeris-simple-qgc-saved.plan",
+      "source_sha256": "509feaacd40613b19e143fa4880a156c786e6e96d6f9dce334f94ba71943ad9d",
+      "observed_action": "Opened saved plan again; Save As; no intentional item edits"
+    }
+  ]
+}

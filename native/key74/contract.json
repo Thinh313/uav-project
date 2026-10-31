@@ -1,0 +1,46 @@
+{
+  "format": "key74-contract/1",
+  "assurance": "MOCK_ONLY_NOT_AUTHENTICATED",
+  "productionAuthenticated": false,
+  "newSoftwareSignature": false,
+  "keyMaterial": "Mock keyId/fixtureRef/validity descriptors only; no private/public cryptographic key generation",
+  "identity": {
+    "kinds": ["SOURCE", "RECEIVER"],
+    "states": ["ENROLLED", "REVOKED"],
+    "binding": ["realm", "principal", "issuer", "registryId", "sourceRoots", "physicalReceiverIds", "keyId", "keyVersion"],
+    "enrollment": "Volatile pairing nonce/boot/TTL plus admin authorization and subject-possession fixture",
+    "scopeExpansion": "REFUSED",
+    "reenrollmentAfterRevocation": "REFUSED"
+  },
+  "keys": {
+    "states": ["STAGED", "ACTIVE", "RETIRED", "REVOKED", "CANCELLED"],
+    "rotation": "Explicit STAGE then ACTIVATE with readiness ACK from every current receiver in immutable scope",
+    "revocation": "Terminal; active-key revocation cancels staging and permits no fallback",
+    "reuse": "Key IDs and fixture references are never reused within a registry, including cancelled/retired/revoked entries",
+    "validityUnit": "ms in injected mock clock"
+  },
+  "auth73": {
+    "oldModule": "UNCHANGED",
+    "policyChange": "Explicit new generation; old policy/logs are never rewritten",
+    "securityEpoch": "Enrollment/activation/revocation advance epoch; staging/cancel do not silently activate",
+    "replayFrontier": "Registry keeps sequence and used challenge nonce per source principal/receiver/direction across key changes",
+    "commitOrder": "Validate claim, reserve registry frontier and anchor, then AUTH73 side effect",
+    "reserveGap": "Consumed frontier cannot be retried; explicit fresh nonce/higher sequence after recovery",
+    "historicalReceipt": "Preserved bytes and proof consistency, never interpreted as current authentication after epoch/key changes"
+  },
+  "storage": {
+    "appendOnly": true,
+    "recordBytes": 65536,
+    "registryBytes": 1048576,
+    "maxEvents": 256,
+    "maxSubjects": 8,
+    "maxKeysPerSubject": 4,
+    "maxPendingPairingsPerBoot": 8,
+    "floorGiB": 20,
+    "anchor": "Separate same-host mock frontier; mismatch HOLD without repair",
+    "cleanup": "NONE"
+  },
+  "notChecked": ["real PKI/TLS/key storage", "root CA rollover and all-keys-lost recovery", "real trusted clock/external anchor/joint rollback protection", "multi-host enrollment/replication", "Android/HeraHub/SDK/Fly/release"],
+  "authorityRestored": false,
+  "actualImages": 0
+}

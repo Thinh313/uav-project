@@ -1,0 +1,16 @@
+"""Bind observed A results to fixture/runtime/build bytes; leave B unmeasured."""
+from pathlib import Path
+import json,hashlib,datetime
+R=Path(__file__).resolve().parents[1];E=R/'evidence/survey02';hashfile=lambda p:hashlib.sha256(p.read_bytes()).hexdigest()
+session=json.loads((E/'browser-session.json').read_text());j=session['journal'];request=json.loads((E/'ab02-request.json').read_text());assert j['expectedRequest']==request
+assert j['observed']['mission']['execution']['state']=='completed' and j['observed']['armed'] is False and j['observed']['mission']['readbackMatches']
+checks={n:json.loads((E/n).read_text()) for n in ['browser-qa.json','fault-qa.json']}
+assert all(c['pass'] for v in checks.values() for c in v['checks'])
+events=j['events'];by_type=lambda name:[e for e in events if e['type']==name]
+latest_upload=by_type('mission-upload-request')[-1];latest_rb=[e for e in by_type('mission-readback') if e['time']>=latest_upload['time']][0]
+duration=(datetime.datetime.fromisoformat(latest_rb['time'].replace('Z','+00:00'))-datetime.datetime.fromisoformat(latest_upload['time'].replace('Z','+00:00'))).total_seconds()*1000
+files=[R/'package.json',*(R/'app').rglob('*'),*(R/'services').rglob('*'),R/'runtime/sitl/arducopter',R/'runtime/sitl/copter.parm',R/'runtime/sitl/aeris.parm']
+hashes={str(p.relative_to(R)):hashfile(p) for p in files if p.is_file()}
+z=[i['z'] for i in j['mission']['readback'] if i['seq']>0 and i['command'] in [16,22]]
+bundle={'scenario':'AB02-geographic-survey-v1','recorded_at':datetime.datetime.now(datetime.timezone.utc).isoformat(),'hash_record_phase':'post-run audit; future comparisons must freeze these bytes before executing either arm','fixture':{'path':'evidence/survey02/ab02-request.json','sha256':hashfile(E/'ab02-request.json'),'extent':'45×45 m WGS84 square at fixed SITL Home','camera':'demo / not calibrated Hera payload','height_policy':'sim-dsm-offset','nominal_height_m':15,'speed_mps':6,'side_overlap_percent':30,'front_overlap_percent':30},'runtime':{'autopilot':'ArduCopter4.7.1','world':j['world'],'docker_platform':'linux/amd64 on macOS ARM','speedup':5,'pinned_inputs':'evidence/flight01/public-inputs.json','params':['runtime/sitl/copter.parm','runtime/sitl/aeris.parm']},'build_files_sha256':hashes,'A':{'status':'PASS_LOCAL_SITL','build':'0.5.0-SURVEY02','mission_items':len(j['mission']['readback']),'readback_matches':True,'mission_complete_observed':True,'upload_to_first_matching_readback_ms':duration,'readback_NAV_altitude_range_m':[min(z),max(z)],'browser_checks':len(checks['browser-qa.json']['checks']),'fault_checks':len(checks['fault-qa.json']['checks']),'native_latency_ms':None,'operator_task_time_ms':None,'operator_usability_score':None,'physical_images':0},'B':{'product':'RAGAS installed binary, black-box only','status':'NOT_CHECKED','apk_hash':None,'version':None,'results':None},'comparison':'NO_COMPARATIVE_RESULT','evidence_sha256':{n:hashfile(E/n) for n in ['ab02-request.json','browser-session.json','browser-qa.json','fault-qa.json','camera-log.json']},'scope':'Mac/Docker simulator correctness and controlled fault evidence; not HeraHub performance/physical flight/operational terrain evidence'}
+(E/'ab02-bundle.json').write_text(json.dumps(bundle,ensure_ascii=False,indent=2)+'\n');print(json.dumps(bundle['A']))

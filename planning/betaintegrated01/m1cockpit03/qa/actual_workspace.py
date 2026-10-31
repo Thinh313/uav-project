@@ -1,0 +1,11 @@
+from pathlib import Path
+import json,sys,tarfile,hashlib,importlib.util
+sys.dont_write_bytecode=True
+R=Path(__file__).resolve().parents[4];case=sys.argv[1];C=R/'evidence/betaintegrated01-m1cockpit03'/case/'control';O=R/'evidence/betaintegrated01-m1cockpit03/qa'/('workspace-'+case);O.mkdir();D=json.loads((C/'native-confirmation-descriptor.json').read_text());A=json.loads((C/'external-anchors.json').read_text());B=json.loads((C/'launch-binding.json').read_text());K=json.loads((R/('evidence/betaintegrated01-m1cockpit03/native/build-'+(sys.argv[2]if len(sys.argv)>2 else '03')+'.json')).read_text());files=O/'files';files.mkdir();selected=('files/workspace03/','files/review-links/','files/control-runs/'+B['run']+'/');total=0;entries=[]
+with tarfile.open(D['nativeTarPath'])as t:
+ for m in t:
+  if not any(m.name.startswith(p)for p in selected):continue
+  assert not m.issym()and not m.islnk();assert m.isdir()or m.isfile()
+  if not m.isfile():continue
+  parts=Path(m.name).parts;assert parts[0]=='files'and all(p not in('..','.')for p in parts);data=t.extractfile(m).read();assert len(data)<=8*2**20;total+=len(data);assert total<=32*2**20;p=O/Path(m.name);p.parent.mkdir(parents=True,exist_ok=True);p.open('xb').write(data);entries.append(dict(path=m.name,bytes=len(data),sha256=hashlib.sha256(data).hexdigest()))
+s=importlib.util.spec_from_file_location('cold',Path(__file__).with_name('cold_workspace.py'));m=importlib.util.module_from_spec(s);s.loader.exec_module(m);out=m.verify_workspace(files,{B['run']:B},{B['run']:A['nativeClosedCheckpoint']['journal']['commitAnchor']},K['sourceSHA256']);assert any(v['run']==B['run'] and v['independentGroundGroups']>=2 and v['terminalFreshGround'] for v in out['records']);r=dict(status=out['status'],workspace=out,tarSHA256=hashlib.sha256(Path(D['nativeTarPath']).read_bytes()).hexdigest(),externalAnchorsSHA256=hashlib.sha256((C/'external-anchors.json').read_bytes()).hexdigest(),extractedEntries=entries,scope='Current actual cockpit workspace/native closed chain +root-bound draft/provider/source/hash; flight execution separately full accepted host/AP/native authority oracle');(O/'results.json').open('x').write(json.dumps(r,indent=2));print(json.dumps(dict(status=r['status'],bytes=total,reviews=out['reviews'],records=out['records'])))

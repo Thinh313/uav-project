@@ -1,0 +1,16 @@
+{
+  "previewCommand": "node native/cockpit81/server.mjs",
+  "previewUrl": "http://127.0.0.1:8841/",
+  "hostWorkspace": ".local/native81/preview",
+  "unsignedApk": "native/cockpit81/dist/aeris-native81-unsigned03.apk",
+  "doNotInstall": "Unsigned APK is not installable until a separately authorized signing step.",
+  "journey": [
+    "Nhiệm vụ: edit name/altitude/speed/polygon, Lưu khảo sát, Compile nhiệm vụ",
+    "Quyền: explicitly grant mock flight role to session A; never restored by load",
+    "Trước bay: read ready replay profile, confirm Home/datum/route before freshness deadline",
+    "Bay: start Fly mock, ACK does not advance, observe all points then landing",
+    "Hồ sơ: read persisted record; export host only"
+  ],
+  "repeatSafety": "Prior build/QA attempt outputs are refused before overwrite. For a future authorized run choose a new run identifier and review budgets. Keep evidence; do not delete pending/locks.",
+  "notFlight": "No connection to vehicle, SDK, live commands or installed Android runtime."
+}

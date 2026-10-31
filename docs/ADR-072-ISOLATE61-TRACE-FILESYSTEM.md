@@ -1,0 +1,7 @@
+# ADR072 — isolate diagnostic trace filesystem without moving durable WAL
+
+Accepted scoped experiment authorized by user. Same AP byte image; trace mmap in bind or tmpfs. AP runs as supervised child in both modes, guest observer reads per-task schedstat (runtime/runqueue-wait/timeslices) plus stat and kernel pressure; all claims bound to availability. Host rusage is process aggregate, not exclusive runnable wait. Fixed2-run1GiB envelope supports22.5GiB admission with20GiB+768MiB stop, unlike old4-run gate; no silent gate edit in frozen code. Stop AP child/observer before archive, then verify live immutable source SHA through mount-namespace exec stdout against host copy. On archive failure keep container running and raw state, fail/ask only if no valid safe completion. Never stop tmpfs container before verified export. Disk-backed host WAL still fsyncs every frame. Tmpfs counts against fixed384MiB memory and can swap, not a power-loss persistence mechanism.
+
+Primary references: https://www.kernel.org/doc/html/latest/scheduler/sched-stats.html ; https://docs.docker.com/engine/storage/tmpfs/ ; https://docs.docker.com/reference/cli/docker/container/cp/ . Local empirical mock gates required before use; docs are not runtime evidence.
+
+Decision before SITL: Docker cp did not export tmpfs in the mock. Source/container were retained and recovered through docker exec cat plus independent source SHA; fresh bind/tmpfs mocks verify this path. No volatile teardown before export.

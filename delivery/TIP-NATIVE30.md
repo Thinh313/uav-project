@@ -1,0 +1,17 @@
+# NATIVE30 · Android runtime, editable survey and draft persistence
+
+Owner authorization:13/10, isolated continuation; no SDK/HeraHub/new signature. MethodBox Contractor/Builder/Verify sequential by one agent. Existing source/candidate/controllers/ENDURE/N24/N29/AP28/SOT are read-only. Android SDK here means Google's emulator/build tools, not RtR integration SDK.
+
+Architecture: isolated Android Activity/WebView offline asset interception, same bounded editor/core ES modules on browser and Android; Java immutable versioned draft journal via narrow async bridge. Read-only copied survey/compiler modules preserve exact SHA and original licensing; not a whole-project copy or another geometry implementation. Existing N29/native24 sources reused only read-only for regression/runtime comparisons. Native30 compiled unsigned. No package/OS signature bypass. Existing signed N24 artifact may be installed unchanged in owned emulator; new N30 core/draft journal may execute as unsigned DEX under shell app_process, distinct from installed Activity/UI execution. Full new UI install is pending signature authorization; no key read/signature is permitted in this task.
+
+|REQ|Acceptance|
+|---|---|
+|N30-01|Editable WGS84 AOI vertices, name, altitude/speed/heading/overlap; bounded validation using frozen compiler; invalid edits invalidate compiled/preflight/run gates. Flat-world simulation only, no terrain/calibrated camera claims.|
+|N30-02|Draft revision/body/source SHA and compiled raw bytes bound to current input; mock preflight explicit Home/datum; active-run edit refused, ACK not progress/completion; restart returns draft/no authority.|
+|N30-03|Java byte journal atomic committed head + immutable chained revisions, compare-and-save token/file lock, quota/symlink/tamper/partial crash rejection. No automatic deletion. Orphan revisions retained; pending head blocks new writes. Restart loads committed historical bytes only.|
+|N30-04|Unsigned APK built using existing tools; zero sign/key operations; narrow bounded single-worker native bridge/own-origin offline WebView, no network permission/device/flight transport.|
+|N30-05|Actual Android13 arm64 emulator when provisionable under20GiB floor; record boot/binary/config/runtime and unchanged signed N24 install separately. Run N30 Java journal tests under ART, cross-process restart/fault on owned emulator. New N30 Activity/UI install NOT_CHECKED unless already signed; no bypass.|
+|N30-06|Browser editor/invalid polygons/parameter edits/new compile/restart/tamper/conflict/layout tests; original core parity, N29 regressions read-only. Native UI/SAF/physical input/Hera/field remain separately gated.|
+|N30-07|Original frozen/module/ENDURE receipts exact; emulator/temp SDK/AVD/build scratch removed after tests, stopped owned emulator, no whole-project copy. Keep small runtime traces/hashes/screenshots.|
+
+Decision: complete authorized compiler/editor/persistence/ART runtime preparation; do not reinterpret no-new-signature as permission for a development signature. Distinguish Java Android filesystem execution, legacy installed Activity and new unsigned shell UI acceptance. No24h restart/Fly integration/software release authorized. Emulator system image is AOSP API33 arm64 using already accepted Android SDK license, scoped scratch cleanup; no new license acceptance. If downloads/capacity/runtime fail, retain cause and mark required tests NOT_CHECKED.

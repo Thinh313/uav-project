@@ -1,0 +1,18 @@
+{
+  "status": "PASS",
+  "results": [
+    {
+      "name": "Same-origin module worker bytes/MIME/CSP self route",
+      "status": "PASS"
+    },
+    {
+      "name": "Shutdown metadata bounded/deduplicated; wrong receiver and9th record refused; overflow retained",
+      "status": "PASS"
+    },
+    {
+      "name": "Owned media engine route exact bytes/MIME/CORS for8896 module worker",
+      "status": "PASS"
+    }
+  ],
+  "scope": "HTTP_HANDLER_MOCK_NO_BOUND_PORTS_NO_NEW_HOST_START_NO_ANDROID_AP_OR_PUBLISHER"
+}

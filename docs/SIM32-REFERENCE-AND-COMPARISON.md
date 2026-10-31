@@ -1,0 +1,28 @@
+# SIM32 — reference domain and competitive measurement
+
+SIM32 is an isolated reference implementation, not a calibrated Hera twin or an operational aircraft release. Preserve the original version1 requirements contract and ENDURE/candidate. AERIS controls the existing pinned ArduCopter4.7.1 binary through MAVLink; the binary closes the loop against the JSON physics backend. The viewer is a consumer of timestamped physics. Payload peers are synthetic, routed through actual AP SERIAL1/2. No hardware endpoints or new software signature.
+
+## Model and trace
+
+Versioned profile, seed32, SI; earth NED/body FRD; quaternion wxyz body→NED. Position/virtual IMU at combined CG. Reference quad-X3kg, central/off-center1kg payload; inertia through parallel-axis composition. RK4 rigid body, exact actuator transition, quadratic RPM thrust, provisional drag/battery. Ground constrains level support, not an impact model. Wind is deterministic constant or sine-gust, not a calibrated turbulence spectrum. Only flat virtual Home10.854/106.807/AMSL10m is physical ground. Scene landmarks have no collision; no geodata/DEM authenticity claim. Planned coordinates come from the existing WGS84/ENU compiler; actual vehicle pose comes exclusively from the physics backend. NED→scene[east,-down,-north], with basis-transformed body rotation and CG correction.
+
+Physics1200Hz is driven by actual servo count/rate, not wall/render FPS. First400Hz trial did not meet ArduPilot gyro prearm requirements and remains failed. Initial profile used obsolete RTL/WPNAV/LAND names: flight07–09 proved functional flight but not intended profile. Current profile uses actual4.7 SI names and reads nine values before acceptance. Reference source for the migration is the pinned [RTL definition](https://github.com/ArduPilot/ardupilot/blob/dbe792162d06cab66c3475fd5556bf7a120f119e/ArduCopter/mode_rtl.cpp), [LAND definition](https://github.com/ArduPilot/ardupilot/blob/dbe792162d06cab66c3475fd5556bf7a120f119e/ArduCopter/mode_land.cpp) and [WP definition](https://github.com/ArduPilot/ardupilot/blob/dbe792162d06cab66c3475fd5556bf7a120f119e/libraries/AC_WPNav/AC_WPNav.cpp). Readback on the actual binary, not these documents alone, is the runtime gate.
+
+Full compressed servo/sensor records preserve model timestamps, host monotonic time and SHA; MAVLink raw records preserve request bytes, incoming chunks and observed frames. Exact-model replay verifies implementation/trace consistency, not an independent physical oracle. Analytic freefall/hover/inertia/actuator/energy and dt convergence tests are separate. Source iterations of failed/changed implementations remain archived; do not use current source hashes as proof of previous byte versions.
+
+Viewer replay is decimated from recorded1200Hz to60Hz for inspection; it sends no commands. Vehicle pose is never interpolated into a claim of real flight. Rotor visual phase follows model timestamp increments. Synthesized2-blade rotor harmonics use estimated RPM and engineering distance attenuation, muted by default/focus loss/stale data; not measured SPL, Hera recordings or Doppler/acoustic propagation fidelity. Payload view is a viewpoint on the synthetic scene; no native video decoder, encoded stream, camera sensor rendering or real image file is implied.
+
+## Reference workloads
+
+Declare each combination before collection: empty/calm; central1kg/crosswind3m/s; offset1kg/gust(seed32), same6m/1.5m/s/12m-square survey and compiler/camera assumptions. UI scenario edits altitude to7m; it is a distinct workload. Log actual Home/firmware, all9simulator parameters, source/container/image/binary fingerprints, payload identities, mission readback, observed progress, landing/disarm, compute and wire-clock metrics, resource and renderer mode. Keep failed/aborted/truncated samples. A functional PASS is not flight accuracy, hard real-time, release or physical-camera acceptance.
+
+Remaining physics experiments: calibrated Hera mass/inertia/actuator/drag/battery, step-response and flight-path reference error; motor-fault/contact/propwash/slung-load models; sensor noise/bias/delay and environmental dataset; qualified airframes beyond this quad-X. Do not silently relabel the generic model Hera.
+
+## Comparison protocol (prepared, not executed)
+
+1. Freeze named AERIS/Ragas/DJI versions, hashes, aircraft/controller/firmware/payload/radio/camera/environment and operator experience. Ragas runs same Hera hardware where possible. DJI comparison uses a named equivalent platform/controller/Pilot workflow; hardware differences remain confounders, not attributed to software alone.
+2. Matched tasks: plan a region with Home/datum constraints; preflight/parameter mismatch; multi-payload selection/authority; survey execution; link interruption/review/resume; post-flight evidence/media handoff. No reproduction of another product's proprietary source.
+3. Before collection, approve physical-error tolerances, workload/reference hardware, sample count/power analysis and non-inferiority constraints for critical faults. Counterbalance order, stratify operator experience, preserve unsuccessful tasks in the denominator. Time/task success/severe error, command/frame age, recovery, coverage/GSD/blur/geographic quality, integrity and resources are distinct metrics.
+4. Report paired results with uncertainty and hardware limits. Simulator/backend compute and headless software renderer results cannot prove Hera-native60FPS or superiority over DJI. No global winner or percentage of product readiness from test counts.
+
+Resource/ENDURE restrictions remain binding. Browser/host simulation is permitted; Hera SDK/HIL/controlled-flight/native-video/Android acceptance and ENDURE24h stay separate gates.

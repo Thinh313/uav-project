@@ -1,0 +1,201 @@
+{
+  "created_at": "2026-10-15T06:37:22.112557+00:00",
+  "scope": "Read-only hash/lineage validation of retained AERIS/QGC evidence, no new application run",
+  "historical_qgc03": {
+    "result": "DONE_FOR_SCOPED_CAMERA_EXPORT_HOME_REVIEW_DESKTOP_AND_SITL_AC01_TO_AC08",
+    "strict_universal_Home_roundtrip": "OPEN_QGC_HOME10_TO7_OBSERVED",
+    "camera_navigation_roundtrip": "PASS_FOR_TWO_NULL_RESERVED_DERIVATIVES_QGC5.1.5",
+    "actual_SITL_flights": 2,
+    "simulated_CAM_events": 30,
+    "CMD_scope": "Two mission inventory dumps, not execution timestamps",
+    "limits": [
+      "SITL ONLY; no SDK/HeraHub/HIL/physical camera/field flight/RAGAS A/B acceptance.",
+      "Raw QGC files stay execution-blocked until explicit Home/height and sequence-label review.",
+      "Survey derivative is stored SimpleItems snapshot, not editable complex regeneration.",
+      "Single-agent verification, no independent-review claim."
+    ]
+  },
+  "receipt_checks": [
+    {
+      "path": "evidence/qgc03/desktop/corpus-qa.json",
+      "expected": "7373a04e3bc2fbd846b0889d51ea0c127bc3581e557e7ab3f7e2c5ab3026d574",
+      "actual": "7373a04e3bc2fbd846b0889d51ea0c127bc3581e557e7ab3f7e2c5ab3026d574",
+      "matches": true,
+      "historical_passed": 24,
+      "historical_failed": 0,
+      "rerun": false
+    },
+    {
+      "path": "evidence/qgc03/sitl/qa.json",
+      "expected": "ef9da1b3c75c82b4908f36084958ccf0cac6d0f45a57d504daca034f32b69a29",
+      "actual": "ef9da1b3c75c82b4908f36084958ccf0cac6d0f45a57d504daca034f32b69a29",
+      "matches": true,
+      "historical_passed": 18,
+      "historical_failed": 0,
+      "rerun": false
+    },
+    {
+      "path": "evidence/qgc03/browser-qa.json",
+      "expected": "1d5e83d9c5a11df334f4b9c02cde6da93872a8714b1d3eed6dd79a99a299f90d",
+      "actual": "1d5e83d9c5a11df334f4b9c02cde6da93872a8714b1d3eed6dd79a99a299f90d",
+      "matches": true,
+      "historical_passed": 19,
+      "historical_failed": 0,
+      "rerun": false
+    },
+    {
+      "path": "evidence/qgc03/browser-regression-qa.json",
+      "expected": "ba69ccb152a617fc249b548283194a65d5ba62042ae81aacfd2a2056aabe98a6",
+      "actual": "ba69ccb152a617fc249b548283194a65d5ba62042ae81aacfd2a2056aabe98a6",
+      "matches": true,
+      "historical_passed": 23,
+      "historical_failed": 0,
+      "rerun": false
+    },
+    {
+      "path": "evidence/qgc03/qgc02-browser-qa.json",
+      "expected": "29c49bcfe472f6b6358502cb13ee56297fdf484a56c7abd4f80c4687d8c6ea81",
+      "actual": "29c49bcfe472f6b6358502cb13ee56297fdf484a56c7abd4f80c4687d8c6ea81",
+      "matches": true,
+      "historical_passed": 22,
+      "historical_failed": 0,
+      "rerun": false
+    },
+    {
+      "path": "evidence/qgc03/operator-qa.json",
+      "expected": "3b2e8906d551400a26a04f75880864436e0c51763af99cc1ac898b223815c31a",
+      "actual": "3b2e8906d551400a26a04f75880864436e0c51763af99cc1ac898b223815c31a",
+      "matches": true,
+      "historical_passed": 9,
+      "historical_failed": 0,
+      "rerun": false
+    },
+    {
+      "path": "evidence/qgc03/receipt-integrity.json",
+      "expected": "b984f58c06471d4bd0cca71518c3c7157a5a8624869048adf1bb065c9c5114ef",
+      "actual": "b984f58c06471d4bd0cca71518c3c7157a5a8624869048adf1bb065c9c5114ef",
+      "matches": true,
+      "historical_passed": 20,
+      "historical_failed": 0,
+      "rerun": false
+    }
+  ],
+  "fixtures": [
+    {
+      "id": "QGC-desktop-aeris-simple-qgc-saved",
+      "path": "app/fixtures/qgc/desktop/aeris-simple-qgc-saved.plan",
+      "sha256": "509feaacd40613b19e143fa4880a156c786e6e96d6f9dce334f94ba71943ad9d",
+      "expected": "509feaacd40613b19e143fa4880a156c786e6e96d6f9dce334f94ba71943ad9d",
+      "matches": true,
+      "producer": "Actual QGC5.1.5 desktop serialization",
+      "scope": "Opened AERIS fixture; Save As via actual QGC UI; Home7 and camera stop immediate flags changed"
+    },
+    {
+      "id": "QGC-desktop-aeris-cached-survey-qgc-saved",
+      "path": "app/fixtures/qgc/desktop/aeris-cached-survey-qgc-saved.plan",
+      "sha256": "2b8285af81f89b20796747cc395d7e658561138a123e4c05c71cfc227c75632a",
+      "expected": "2b8285af81f89b20796747cc395d7e658561138a123e4c05c71cfc227c75632a",
+      "matches": true,
+      "producer": "Actual QGC5.1.5 desktop serialization",
+      "scope": "Opened fixture in QGC; Save As; generated cached Items changed without intentional grid edit"
+    },
+    {
+      "id": "QGC-desktop-qgc-survey-angle35",
+      "path": "app/fixtures/qgc/desktop/qgc-survey-angle35.plan",
+      "sha256": "712b50e40162c38fdeea4baa5ff59a8f13364d686662d2b850bcbc6a4538dc92",
+      "expected": "712b50e40162c38fdeea4baa5ff59a8f13364d686662d2b850bcbc6a4538dc92",
+      "matches": true,
+      "producer": "Actual QGC5.1.5 desktop serialization",
+      "scope": "Actual QGC editor angle changed0→35; QGC regenerated route from retained polygon; Save As"
+    },
+    {
+      "id": "QGC-desktop-qgc-created-simple",
+      "path": "app/fixtures/qgc/desktop/qgc-created-simple.plan",
+      "sha256": "0883338619dcf0c140104d3928c8d0c0137cb056574e57dbc84213f545923978",
+      "expected": "0883338619dcf0c140104d3928c8d0c0137cb056574e57dbc84213f545923978",
+      "matches": true,
+      "producer": "Actual QGC5.1.5 desktop serialization",
+      "scope": "Clear saved draft; map Home; No Template; takeoff15; four clicked waypoints default50; RTL; Save As"
+    },
+    {
+      "id": "QGC-desktop-qgc-created-geofence",
+      "path": "app/fixtures/qgc/desktop/qgc-created-geofence.plan",
+      "sha256": "dd93486b1577c8fa809450400835354cc2cc69ec9c887006afaf6d6ab9d45f48",
+      "expected": "dd93486b1577c8fa809450400835354cc2cc69ec9c887006afaf6d6ab9d45f48",
+      "matches": true,
+      "producer": "Actual QGC5.1.5 desktop serialization",
+      "scope": "Actual QGC Circular Fence96.8m inclusion; Save As"
+    },
+    {
+      "id": "QGC-desktop-qgc-created-amsl-fence",
+      "path": "app/fixtures/qgc/desktop/qgc-created-amsl-fence.plan",
+      "sha256": "1c3af83915cb273da2ff6395224f74486c291ce8a27a6ca9eec2401b342134bd",
+      "expected": "1c3af83915cb273da2ff6395224f74486c291ce8a27a6ca9eec2401b342134bd",
+      "matches": true,
+      "producer": "Actual QGC5.1.5 desktop serialization",
+      "scope": "Defaults Mixed; first waypoint Alt Frame AMSL; Save As"
+    },
+    {
+      "id": "QGC-desktop-qgc-reopened-simple",
+      "path": "app/fixtures/qgc/desktop/qgc-reopened-simple.plan",
+      "sha256": "509feaacd40613b19e143fa4880a156c786e6e96d6f9dce334f94ba71943ad9d",
+      "expected": "509feaacd40613b19e143fa4880a156c786e6e96d6f9dce334f94ba71943ad9d",
+      "matches": true,
+      "producer": "Actual QGC5.1.5 desktop serialization",
+      "scope": "Opened saved plan again; Save As; no intentional item edits"
+    },
+    {
+      "id": "QGC-roundtrip03-camera-pair-qgc-saved",
+      "path": "app/fixtures/qgc/roundtrip03/camera-pair-qgc-saved.plan",
+      "sha256": "7b083bf82168d8a5f51052ef3e35b73194fe3776f6bdf56d0e44ff2707529c6b",
+      "expected": "7b083bf82168d8a5f51052ef3e35b73194fe3776f6bdf56d0e44ff2707529c6b",
+      "matches": true,
+      "producer": "Actual QGroundControl5.1.5 desktop",
+      "scope": "Open and Save As; first experiment with numeric reserved fields"
+    },
+    {
+      "id": "QGC-roundtrip03-simple-relative-qgc-saved",
+      "path": "app/fixtures/qgc/roundtrip03/simple-relative-qgc-saved.plan",
+      "sha256": "fe244563ad5c75965219b28e6d8c0c29d2c7fa1161231494cff3f62805937772",
+      "expected": "fe244563ad5c75965219b28e6d8c0c29d2c7fa1161231494cff3f62805937772",
+      "matches": true,
+      "producer": "Actual QGroundControl5.1.5 desktop",
+      "scope": "Open and Save As; no intended edits"
+    },
+    {
+      "id": "QGC-roundtrip03-survey-absolute-qgc-saved",
+      "path": "app/fixtures/qgc/roundtrip03/survey-absolute-qgc-saved.plan",
+      "sha256": "2dc02f3d2e24fb9f4021b365215583f1d14a888eec4cc298108abe842b741230",
+      "expected": "2dc02f3d2e24fb9f4021b365215583f1d14a888eec4cc298108abe842b741230",
+      "matches": true,
+      "producer": "Actual QGroundControl5.1.5 desktop",
+      "scope": "Open flattened stored snapshot and Save As; no intended edits"
+    },
+    {
+      "id": "QGC-roundtrip03-simple-relative-qgc-reopened",
+      "path": "app/fixtures/qgc/roundtrip03/simple-relative-qgc-reopened.plan",
+      "sha256": "fe244563ad5c75965219b28e6d8c0c29d2c7fa1161231494cff3f62805937772",
+      "expected": "fe244563ad5c75965219b28e6d8c0c29d2c7fa1161231494cff3f62805937772",
+      "matches": true,
+      "producer": "Actual QGroundControl5.1.5 desktop",
+      "scope": "Reopen QGC output and Save As; no intended edits"
+    }
+  ],
+  "additional_receipts": [
+    {
+      "path": "delivery/COMPLETION-GEO14.md",
+      "sha256": "da28d7ea323f2b983c696f4c5c260a8e0e0350bf956200edcd720bd508f69393",
+      "scope": "Retained-model datum/terrain/quality and five SITL trials; no field certification"
+    },
+    {
+      "path": "delivery/COMPLETION-MAPPING51.md",
+      "sha256": "63e898dcd2abd3eaedea680a45d8e9759c0f8b43b5a10ec3c5cae953e0534a68",
+      "scope": "Mock KML/corridor/camera/RTK/PPK readiness; no actual image delivery"
+    },
+    {
+      "path": "docs/RAGAS-REPLACEMENT-GAPS-20261013.md",
+      "sha256": "cd60b6f284647eb8630ee786beb68cf71d36424f4639503da38c094af6b4ed3c",
+      "scope": "Historical gap priority, not current application acceptance"
+    }
+  ]
+}

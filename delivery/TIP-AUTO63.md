@@ -1,0 +1,14 @@
+# AUTO63 — integrated KML to AUTO mission and review
+
+Authorized isolated web engineering application, immutable imports from prior modules, no frozen app/candidate/ENDURE edits or signature. Single agent specifies/builds/verifies sequentially.
+
+REQ/AC:
+1. Explicit KML feature and confirmed synthetic-flat Home mapping; polygon/corridor via mapping51 compiler, no automatic relocation, absolute/KMZ/holes/DEM refused. Bound100m from fixed SITL Home, max64 mission items/120s nominal, relative10–30m. Preserve source SHA, mission SHA, camera provenance and source Z.
+2. Same application planning→readonly typed preflight→upload/readback→explicit AUTO→observed end→review. Readonly PREFLIGHT43 reused with task-qualified radius150m /FS_OPTIONS16 profile. Separate AUTO_OPTIONS/CAM1_TYPE/WP_SPD observations. Readonly readiness alone never grants real flight permission.
+3. Fixed target42/1 and GCS255/190, owned loopback5880 ArduPilot4.7.1/internal quad, session/boot/hash binding. User confirms Home/datum and exact mission; ARM/AUTO requires fresh checks and verified readback. No HTTP mutation retry, no automatic resume/authority restoration. Reboot/loss/stale/wrong target/modified plan/readback mismatch fail closed. Protocol duplicate requests bounded and logged, no timer-based upload retransmit.
+4. Raw duplex capture durable before parsing/command publication, bounded16MiB; complete mission items/camera fields independently compared. ACK not execution or actual images. Completion requires AUTO observed, all required navigation reached, expected terminal RTL, fresh ground/disarm near Home. Changed mode/loss/unknown never accepted from landing alone.
+5. Mock protocol integration + negative cases + journal restart/corruption and browser full journey before live. SITL internal physics separate from SIM32 external1200Hz/pacing; speedup1 unchanged. No performance/Hera/calibration/real-media claims.
+6. Resource gate: floor20GiB +1GiB headroom +256MiB run forecast (21.25GiB); host state≤64MiB, raw16MiB, 240s hard deadline, memory256MiB, fixed existing image/no install. Supervision stops owned simulator on free<20.5GiB or quota. Budget is for this smaller mission capture, not a reduction of prior22.5GiB external-physics gate. Mock before actual; max2 actual attempts, every attempt retained.
+7. Hash-chain workspace/review restart persistence, uncertainty retained, GET read only, no evidence deletion. No restored live session after restart. Full protected cumulative SHA before/after.
+
+UI plan: RtR white #fff, graphite #20242a, muted #66717b, yellow #d6ad2c for primary action/status only, red #a53030 for failures. Existing Barlow font and PBR drone scene reused. Slim header, five sequential workflow tabs, route/scene occupy main canvas, fixed aligned control rail; source/provenance details in expandable review. Native/SDK not part of this increment.

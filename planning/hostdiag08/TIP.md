@@ -1,0 +1,11 @@
+# HOSTDIAG08: available-space attribution, unchanged guards
+
+User request 22 October 2026: diagnose host space variation, preserve guards, frozen source/candidate/ENDURE and 20 GiB floor; a new Android–SITL campaign only after admission passes.
+
+Root performs a bounded read-only 180-second observation: one-second statvfs samples for repo, root and Data; five-second per-PID disk I/O/logical-write counters and swap statistics; ten-second APFS container/volume allocation observations. Local SDK resource.h defines the libproc layout. Keep process identity/start time, denied observations and clock intervals explicit. Do not collect command arguments, file contents, credentials, or a full user-directory inventory. Output at most 16 MiB in a new evidence namespace, no dependencies/builds/copies/cleanup of user files. No process stops or system setting changes.
+
+Hypotheses: unrelated retained file growth; swap allocation under memory pressure; APFS accounting/release/background allocation. A write counter alone does not attribute free-space ownership. Historical G7 causality stays UNKNOWN unless historical evidence supports a narrower conclusion. Report measured associations separately from explanations.
+
+Reuse frozen G7 budget_decision without edits to classify the three predeclared, disjoint observation windows at seconds 30–60, 90–120 and 150–180. These are diagnostic observations, never actual admission or retries of G7. No search for a convenient passing interval. A later, fresh campaign still runs original 31 samples/30 seconds/29 GiB/maximum256MiB decline gate and runtime guard28GiB/15-second forecast20GiB. Never relax a gate or restart a failed old campaign.
+
+If host observation supports preparation, authorize a new G8 namespace with exact namespace/attempt-only changes, independent normalization and new source pins. Attempts16 and persistence-only17, fresh original Python anchors, max2 hosts/4AP/2700s. Existing signed APK and ARM image/binary reused. Builder/QA effects remain zero; Root alone operates actual runtime after current gate. Preserve all historical receipts and all G7 bytes, including failures. Completion records diagnostics, unknowns, admission, actual scenario coverage and cleanup.

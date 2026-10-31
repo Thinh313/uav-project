@@ -1,0 +1,826 @@
+{
+  "body": {
+    "format": "aeris-dual67-corpus",
+    "version": 1,
+    "origin": "ENGINEERING_SYNTHETIC_FIXTURE",
+    "actualImages": 0,
+    "cases": [
+      {
+        "id": "independent-payload-claims",
+        "steps": [
+          {
+            "type": "action",
+            "actor": "pilot-a",
+            "intent": {
+              "kind": "claim",
+              "payload": "front"
+            },
+            "expect": "OK"
+          },
+          {
+            "type": "action",
+            "actor": "payload-b",
+            "intent": {
+              "kind": "claim",
+              "payload": "rear"
+            },
+            "expect": "OK"
+          }
+        ],
+        "final": {
+          "owners": [
+            "pilot-a",
+            "pilot-a",
+            "payload-b"
+          ],
+          "transactions": 0
+        }
+      },
+      {
+        "id": "same-revision-claim-race",
+        "steps": [
+          {
+            "type": "action",
+            "actor": "payload-b",
+            "intent": {
+              "kind": "claim",
+              "payload": "front"
+            },
+            "expect": "OK"
+          },
+          {
+            "type": "action",
+            "actor": "pilot-a",
+            "intent": {
+              "kind": "claim",
+              "payload": "front"
+            },
+            "expect": "REVISION_CONFLICT",
+            "revision": "initial"
+          }
+        ],
+        "final": {
+          "owners": [
+            "payload-b",
+            "payload-b"
+          ]
+        }
+      },
+      {
+        "id": "pending-freezes-source",
+        "steps": [
+          {
+            "type": "action",
+            "actor": "payload-b",
+            "intent": {
+              "kind": "claim",
+              "payload": "front"
+            },
+            "expect": "OK"
+          },
+          {
+            "type": "action",
+            "actor": "payload-b",
+            "intent": {
+              "kind": "transfer",
+              "payload": "front",
+              "to": "pilot-a"
+            },
+            "expect": "OK"
+          },
+          {
+            "type": "action",
+            "actor": "payload-b",
+            "intent": {
+              "kind": "command",
+              "payload": "front",
+              "operation": "capture",
+              "value": null,
+              "reply": "normal"
+            },
+            "expect": "EXCLUSIVE_ACTIVE_OWNER_REQUIRED"
+          }
+        ],
+        "final": {
+          "owners": [
+            "payload-b",
+            "payload-b"
+          ],
+          "pendingTo": "pilot-a",
+          "transactions": 0
+        }
+      },
+      {
+        "id": "recipient-consents",
+        "steps": [
+          {
+            "type": "action",
+            "actor": "payload-b",
+            "intent": {
+              "kind": "claim",
+              "payload": "front"
+            },
+            "expect": "OK"
+          },
+          {
+            "type": "action",
+            "actor": "payload-b",
+            "intent": {
+              "kind": "transfer",
+              "payload": "front",
+              "to": "pilot-a"
+            },
+            "expect": "OK"
+          },
+          {
+            "type": "action",
+            "actor": "pilot-a",
+            "intent": {
+              "kind": "accept",
+              "proposalId": "$lastProposal"
+            },
+            "expect": "OK"
+          },
+          {
+            "type": "action",
+            "actor": "pilot-a",
+            "intent": {
+              "kind": "command",
+              "payload": "front",
+              "operation": "capture",
+              "value": null,
+              "reply": "normal"
+            },
+            "expect": "OK"
+          }
+        ],
+        "final": {
+          "owners": [
+            "pilot-a",
+            "pilot-a"
+          ],
+          "pendingTo": null,
+          "states": [
+            "OBSERVATION_CONSISTENT_UNATTRIBUTED"
+          ]
+        }
+      },
+      {
+        "id": "wrong-recipient",
+        "steps": [
+          {
+            "type": "action",
+            "actor": "payload-b",
+            "intent": {
+              "kind": "claim",
+              "payload": "front"
+            },
+            "expect": "OK"
+          },
+          {
+            "type": "action",
+            "actor": "payload-b",
+            "intent": {
+              "kind": "transfer",
+              "payload": "front",
+              "to": "pilot-a"
+            },
+            "expect": "OK"
+          },
+          {
+            "type": "action",
+            "actor": "payload-b",
+            "intent": {
+              "kind": "accept",
+              "proposalId": "$lastProposal"
+            },
+            "expect": "CURRENT_RECIPIENT_PROPOSAL_REQUIRED"
+          }
+        ],
+        "final": {
+          "owners": [
+            "payload-b",
+            "payload-b"
+          ],
+          "pendingTo": "pilot-a"
+        }
+      },
+      {
+        "id": "decline-revokes",
+        "steps": [
+          {
+            "type": "action",
+            "actor": "payload-b",
+            "intent": {
+              "kind": "claim",
+              "payload": "front"
+            },
+            "expect": "OK"
+          },
+          {
+            "type": "action",
+            "actor": "payload-b",
+            "intent": {
+              "kind": "transfer",
+              "payload": "front",
+              "to": "pilot-a"
+            },
+            "expect": "OK"
+          },
+          {
+            "type": "action",
+            "actor": "pilot-a",
+            "intent": {
+              "kind": "decline",
+              "proposalId": "$lastProposal"
+            },
+            "expect": "OK"
+          }
+        ],
+        "final": {
+          "owners": [],
+          "pendingTo": null
+        }
+      },
+      {
+        "id": "source-disconnect-pending",
+        "steps": [
+          {
+            "type": "action",
+            "actor": "payload-b",
+            "intent": {
+              "kind": "claim",
+              "payload": "front"
+            },
+            "expect": "OK"
+          },
+          {
+            "type": "action",
+            "actor": "payload-b",
+            "intent": {
+              "kind": "transfer",
+              "payload": "front",
+              "to": "pilot-a"
+            },
+            "expect": "OK"
+          },
+          {
+            "type": "disconnect",
+            "actor": "payload-b"
+          },
+          {
+            "type": "action",
+            "actor": "pilot-a",
+            "intent": {
+              "kind": "accept",
+              "proposalId": "$lastProposal"
+            },
+            "expect": "CURRENT_RECIPIENT_PROPOSAL_REQUIRED"
+          }
+        ],
+        "final": {
+          "owners": [],
+          "pendingTo": null
+        }
+      },
+      {
+        "id": "recipient-silence-pending",
+        "steps": [
+          {
+            "type": "action",
+            "actor": "payload-b",
+            "intent": {
+              "kind": "claim",
+              "payload": "front"
+            },
+            "expect": "OK"
+          },
+          {
+            "type": "action",
+            "actor": "payload-b",
+            "intent": {
+              "kind": "transfer",
+              "payload": "front",
+              "to": "pilot-a"
+            },
+            "expect": "OK"
+          },
+          {
+            "type": "heartbeat",
+            "actor": "payload-b",
+            "atMs": 2900
+          },
+          {
+            "type": "tick",
+            "atMs": 3002
+          }
+        ],
+        "final": {
+          "owners": [],
+          "pendingTo": null
+        }
+      },
+      {
+        "id": "source-silence-owner",
+        "steps": [
+          {
+            "type": "action",
+            "actor": "payload-b",
+            "intent": {
+              "kind": "claim",
+              "payload": "front"
+            },
+            "expect": "OK"
+          },
+          {
+            "type": "heartbeat",
+            "actor": "pilot-a",
+            "atMs": 2900
+          },
+          {
+            "type": "tick",
+            "atMs": 3100
+          }
+        ],
+        "final": {
+          "owners": [],
+          "pendingTo": null
+        }
+      },
+      {
+        "id": "outer-expiry-independent-clock",
+        "steps": [
+          {
+            "type": "action",
+            "actor": "payload-b",
+            "intent": {
+              "kind": "claim",
+              "payload": "front"
+            },
+            "expect": "OK"
+          },
+          {
+            "type": "action",
+            "actor": "payload-b",
+            "intent": {
+              "kind": "transfer",
+              "payload": "front",
+              "to": "pilot-a"
+            },
+            "expect": "OK"
+          },
+          {
+            "type": "heartbeat",
+            "actor": "pilot-a",
+            "atMs": 2000
+          },
+          {
+            "type": "heartbeat",
+            "actor": "payload-b",
+            "atMs": 2000
+          },
+          {
+            "type": "heartbeat",
+            "actor": "pilot-a",
+            "atMs": 4000
+          },
+          {
+            "type": "heartbeat",
+            "actor": "payload-b",
+            "atMs": 4000
+          },
+          {
+            "type": "heartbeat",
+            "actor": "pilot-a",
+            "atMs": 6000
+          },
+          {
+            "type": "heartbeat",
+            "actor": "payload-b",
+            "atMs": 6000
+          },
+          {
+            "type": "heartbeat",
+            "actor": "pilot-a",
+            "atMs": 8000
+          },
+          {
+            "type": "heartbeat",
+            "actor": "payload-b",
+            "atMs": 8000
+          },
+          {
+            "type": "tick",
+            "atMs": 8100
+          }
+        ],
+        "final": {
+          "owners": [],
+          "pendingTo": null
+        }
+      },
+      {
+        "id": "sequence-replay",
+        "steps": [
+          {
+            "type": "action",
+            "actor": "payload-b",
+            "intent": {
+              "kind": "claim",
+              "payload": "front"
+            },
+            "expect": "OK"
+          },
+          {
+            "type": "action",
+            "actor": "payload-b",
+            "intent": {
+              "kind": "release",
+              "payload": "front"
+            },
+            "expect": "SEQUENCE_FENCE",
+            "seq": 1
+          }
+        ],
+        "final": {
+          "owners": [
+            "payload-b",
+            "payload-b"
+          ]
+        }
+      },
+      {
+        "id": "old-boot",
+        "steps": [
+          {
+            "type": "action",
+            "actor": "payload-b",
+            "intent": {
+              "kind": "claim",
+              "payload": "front"
+            },
+            "expect": "BOOT_FENCE",
+            "bootId": "old-boot"
+          }
+        ],
+        "final": {
+          "owners": []
+        }
+      },
+      {
+        "id": "release-invalidates-proposal",
+        "steps": [
+          {
+            "type": "action",
+            "actor": "payload-b",
+            "intent": {
+              "kind": "claim",
+              "payload": "front"
+            },
+            "expect": "OK"
+          },
+          {
+            "type": "action",
+            "actor": "payload-b",
+            "intent": {
+              "kind": "transfer",
+              "payload": "front",
+              "to": "pilot-a"
+            },
+            "expect": "OK"
+          },
+          {
+            "type": "action",
+            "actor": "payload-b",
+            "intent": {
+              "kind": "release",
+              "payload": "front"
+            },
+            "expect": "OK"
+          },
+          {
+            "type": "action",
+            "actor": "pilot-a",
+            "intent": {
+              "kind": "accept",
+              "proposalId": "$lastProposal"
+            },
+            "expect": "CURRENT_RECIPIENT_PROPOSAL_REQUIRED"
+          }
+        ],
+        "final": {
+          "owners": [],
+          "pendingTo": null
+        }
+      },
+      {
+        "id": "phaseone-ack-only",
+        "steps": [
+          {
+            "type": "action",
+            "actor": "payload-b",
+            "intent": {
+              "kind": "claim",
+              "payload": "front"
+            },
+            "expect": "OK"
+          },
+          {
+            "type": "action",
+            "actor": "payload-b",
+            "intent": {
+              "kind": "command",
+              "payload": "front",
+              "operation": "capture",
+              "value": null,
+              "reply": "ack-only"
+            },
+            "expect": "OK"
+          }
+        ],
+        "final": {
+          "owners": [
+            "payload-b",
+            "payload-b"
+          ],
+          "states": [
+            "ACK_ACCEPTED"
+          ]
+        }
+      },
+      {
+        "id": "thermal-wrong-target",
+        "steps": [
+          {
+            "type": "action",
+            "actor": "payload-b",
+            "intent": {
+              "kind": "claim",
+              "payload": "center"
+            },
+            "expect": "OK"
+          },
+          {
+            "type": "action",
+            "actor": "payload-b",
+            "intent": {
+              "kind": "command",
+              "payload": "center",
+              "operation": "capture",
+              "value": null,
+              "reply": "wrong-target"
+            },
+            "expect": "OK"
+          }
+        ],
+        "final": {
+          "owners": [
+            "payload-b",
+            "payload-b"
+          ],
+          "states": [
+            "REQUESTED"
+          ]
+        }
+      },
+      {
+        "id": "thermal-capture-gimbal",
+        "steps": [
+          {
+            "type": "action",
+            "actor": "payload-b",
+            "intent": {
+              "kind": "claim",
+              "payload": "center"
+            },
+            "expect": "OK"
+          },
+          {
+            "type": "action",
+            "actor": "payload-b",
+            "intent": {
+              "kind": "command",
+              "payload": "center",
+              "operation": "capture",
+              "value": null,
+              "reply": "normal"
+            },
+            "expect": "OK"
+          },
+          {
+            "type": "action",
+            "actor": "payload-b",
+            "intent": {
+              "kind": "command",
+              "payload": "center",
+              "operation": "gimbalAngle",
+              "value": {
+                "pitchDeg": -30,
+                "yawDeg": 15
+              },
+              "reply": "normal"
+            },
+            "expect": "OK"
+          }
+        ],
+        "final": {
+          "owners": [
+            "payload-b",
+            "payload-b"
+          ],
+          "states": [
+            "OBSERVATION_CONSISTENT_UNATTRIBUTED",
+            "OBSERVATION_CONSISTENT_UNATTRIBUTED"
+          ]
+        }
+      },
+      {
+        "id": "fixed-corona",
+        "steps": [
+          {
+            "type": "action",
+            "actor": "payload-b",
+            "intent": {
+              "kind": "claim",
+              "payload": "rear"
+            },
+            "expect": "OK"
+          },
+          {
+            "type": "action",
+            "actor": "payload-b",
+            "intent": {
+              "kind": "command",
+              "payload": "rear",
+              "operation": "capture",
+              "value": null,
+              "reply": "normal"
+            },
+            "expect": "OK"
+          }
+        ],
+        "final": {
+          "owners": [
+            "payload-b"
+          ],
+          "states": [
+            "OBSERVATION_CONSISTENT_UNATTRIBUTED"
+          ]
+        }
+      },
+      {
+        "id": "link-reset-no-grants",
+        "steps": [
+          {
+            "type": "action",
+            "actor": "payload-b",
+            "intent": {
+              "kind": "claim",
+              "payload": "front"
+            },
+            "expect": "OK"
+          },
+          {
+            "type": "action",
+            "actor": "pilot-a",
+            "intent": {
+              "kind": "linkLoss"
+            },
+            "expect": "OK"
+          },
+          {
+            "type": "action",
+            "actor": "pilot-a",
+            "intent": {
+              "kind": "resetTransport"
+            },
+            "expect": "OK"
+          }
+        ],
+        "final": {
+          "owners": [],
+          "pendingTo": null,
+          "transportEpoch": 2
+        }
+      },
+      {
+        "id": "unsupported-lidar",
+        "steps": [
+          {
+            "type": "action",
+            "actor": "payload-b",
+            "intent": {
+              "kind": "claim",
+              "payload": "lidar"
+            },
+            "expect": "PAYLOAD_UNSUPPORTED"
+          }
+        ],
+        "final": {
+          "owners": [],
+          "transactions": 0
+        }
+      },
+      {
+        "id": "percent-unit-bound",
+        "steps": [
+          {
+            "type": "action",
+            "actor": "payload-b",
+            "intent": {
+              "kind": "claim",
+              "payload": "front"
+            },
+            "expect": "OK"
+          },
+          {
+            "type": "action",
+            "actor": "payload-b",
+            "intent": {
+              "kind": "command",
+              "payload": "front",
+              "operation": "zoomPercent",
+              "value": 101,
+              "reply": "normal"
+            },
+            "expect": "PERCENT_RANGE"
+          }
+        ],
+        "final": {
+          "owners": [
+            "payload-b",
+            "payload-b"
+          ],
+          "transactions": 0
+        }
+      },
+      {
+        "id": "nonowner-cannot-dispatch",
+        "steps": [
+          {
+            "type": "action",
+            "actor": "payload-b",
+            "intent": {
+              "kind": "command",
+              "payload": "front",
+              "operation": "capture",
+              "value": null,
+              "reply": "normal"
+            },
+            "expect": "EXCLUSIVE_ACTIVE_OWNER_REQUIRED"
+          }
+        ],
+        "final": {
+          "owners": [],
+          "transactions": 0
+        }
+      },
+      {
+        "id": "core-quarantine-no-retry",
+        "steps": [
+          {
+            "type": "action",
+            "actor": "payload-b",
+            "intent": {
+              "kind": "claim",
+              "payload": "front"
+            },
+            "expect": "OK"
+          },
+          {
+            "type": "action",
+            "actor": "payload-b",
+            "intent": {
+              "kind": "command",
+              "payload": "front",
+              "operation": "capture",
+              "value": null,
+              "reply": "normal"
+            },
+            "expect": "OK"
+          },
+          {
+            "type": "action",
+            "actor": "payload-b",
+            "intent": {
+              "kind": "command",
+              "payload": "front",
+              "operation": "capture",
+              "value": null,
+              "reply": "normal"
+            },
+            "expect": "ACK key fenced until explicit new generation"
+          }
+        ],
+        "final": {
+          "owners": [
+            "payload-b",
+            "payload-b"
+          ],
+          "transactions": 1
+        }
+      }
+    ]
+  },
+  "sha256": "0bda4fa72e3f70ce179b7e135a7c6e3dc98b48117559b1456e4bf27c01ec0381"
+}

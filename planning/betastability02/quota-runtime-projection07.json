@@ -1,0 +1,8 @@
+{
+  "status": "PASS",
+  "scope": "COMPILE_ONLY_RETAINED_RUNTIME_PROJECTION_NO_EXECUTION_OR_AP",
+  "entryCheckDirectlyBeforeCreate": true,
+  "quotaScanCadenceSeconds": 15,
+  "projectedSourceSha256": "5d5d94d75a91da979b1abd23bdb6a926e28e2f4896d7ad82af55fc1e74d6e20c",
+  "NoRuntimeCallsExecuted": true
+}

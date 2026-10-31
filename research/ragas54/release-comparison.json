@@ -1,0 +1,856 @@
+{
+  "method": "Exact published bullet labels, manually scoped to each case; not an implementation diff",
+  "cases": [
+    {
+      "id": "RG54-00",
+      "feature": "Định danh phiên bản và gói A/B",
+      "presence": {
+        "v4.0.14-b111": {
+          "matched_labels": [],
+          "status": "ADDITIONAL_REQUIREMENT",
+          "not_mentioned_does_not_mean_unsupported": true
+        },
+        "v4.0.10-b111": {
+          "matched_labels": [],
+          "status": "ADDITIONAL_REQUIREMENT",
+          "not_mentioned_does_not_mean_unsupported": true
+        },
+        "v4.0.8-b110": {
+          "matched_labels": [],
+          "status": "ADDITIONAL_REQUIREMENT",
+          "not_mentioned_does_not_mean_unsupported": true
+        },
+        "v4.0.5-b109": {
+          "matched_labels": [],
+          "status": "ADDITIONAL_REQUIREMENT",
+          "not_mentioned_does_not_mean_unsupported": true
+        },
+        "v4.0.4-b108": {
+          "matched_labels": [],
+          "status": "ADDITIONAL_REQUIREMENT",
+          "not_mentioned_does_not_mean_unsupported": true
+        }
+      }
+    },
+    {
+      "id": "RG54-01",
+      "feature": "Lệnh camera giữ nguyên qua upload/readback",
+      "presence": {
+        "v4.0.14-b111": {
+          "matched_labels": [
+            "Camera Commands Reach the Autopilot",
+            "Camera Commands on a Waypoint"
+          ],
+          "status": "MENTIONED",
+          "not_mentioned_does_not_mean_unsupported": true
+        },
+        "v4.0.10-b111": {
+          "matched_labels": [],
+          "status": "NOT_MENTIONED_IN_MATCHED_BULLETS",
+          "not_mentioned_does_not_mean_unsupported": true
+        },
+        "v4.0.8-b110": {
+          "matched_labels": [],
+          "status": "NOT_MENTIONED_IN_MATCHED_BULLETS",
+          "not_mentioned_does_not_mean_unsupported": true
+        },
+        "v4.0.5-b109": {
+          "matched_labels": [],
+          "status": "NOT_MENTIONED_IN_MATCHED_BULLETS",
+          "not_mentioned_does_not_mean_unsupported": true
+        },
+        "v4.0.4-b108": {
+          "matched_labels": [],
+          "status": "NOT_MENTIONED_IN_MATCHED_BULLETS",
+          "not_mentioned_does_not_mean_unsupported": true
+        }
+      }
+    },
+    {
+      "id": "RG54-02",
+      "feature": "Thực thi camera khác ACK và khác file ảnh",
+      "presence": {
+        "v4.0.14-b111": {
+          "matched_labels": [
+            "Camera Commands Reach the Autopilot",
+            "Photos Taken vs Planned"
+          ],
+          "status": "MENTIONED",
+          "not_mentioned_does_not_mean_unsupported": true
+        },
+        "v4.0.10-b111": {
+          "matched_labels": [],
+          "status": "NOT_MENTIONED_IN_MATCHED_BULLETS",
+          "not_mentioned_does_not_mean_unsupported": true
+        },
+        "v4.0.8-b110": {
+          "matched_labels": [],
+          "status": "NOT_MENTIONED_IN_MATCHED_BULLETS",
+          "not_mentioned_does_not_mean_unsupported": true
+        },
+        "v4.0.5-b109": {
+          "matched_labels": [],
+          "status": "NOT_MENTIONED_IN_MATCHED_BULLETS",
+          "not_mentioned_does_not_mean_unsupported": true
+        },
+        "v4.0.4-b108": {
+          "matched_labels": [],
+          "status": "NOT_MENTIONED_IN_MATCHED_BULLETS",
+          "not_mentioned_does_not_mean_unsupported": true
+        }
+      }
+    },
+    {
+      "id": "RG54-03",
+      "feature": "Camera nhiều payload và quyền điều khiển",
+      "presence": {
+        "v4.0.14-b111": {
+          "matched_labels": [
+            "Cameras Found Automatically"
+          ],
+          "status": "MENTIONED",
+          "not_mentioned_does_not_mean_unsupported": true
+        },
+        "v4.0.10-b111": {
+          "matched_labels": [],
+          "status": "NOT_MENTIONED_IN_MATCHED_BULLETS",
+          "not_mentioned_does_not_mean_unsupported": true
+        },
+        "v4.0.8-b110": {
+          "matched_labels": [],
+          "status": "NOT_MENTIONED_IN_MATCHED_BULLETS",
+          "not_mentioned_does_not_mean_unsupported": true
+        },
+        "v4.0.5-b109": {
+          "matched_labels": [],
+          "status": "NOT_MENTIONED_IN_MATCHED_BULLETS",
+          "not_mentioned_does_not_mean_unsupported": true
+        },
+        "v4.0.4-b108": {
+          "matched_labels": [],
+          "status": "NOT_MENTIONED_IN_MATCHED_BULLETS",
+          "not_mentioned_does_not_mean_unsupported": true
+        }
+      }
+    },
+    {
+      "id": "RG54-04",
+      "feature": "TriggerDistance0 và số ảnh chưa biết",
+      "presence": {
+        "v4.0.14-b111": {
+          "matched_labels": [
+            "Photos Taken vs Planned",
+            "Trigger Distance 0 in Manual"
+          ],
+          "status": "MENTIONED",
+          "not_mentioned_does_not_mean_unsupported": true
+        },
+        "v4.0.10-b111": {
+          "matched_labels": [],
+          "status": "NOT_MENTIONED_IN_MATCHED_BULLETS",
+          "not_mentioned_does_not_mean_unsupported": true
+        },
+        "v4.0.8-b110": {
+          "matched_labels": [],
+          "status": "NOT_MENTIONED_IN_MATCHED_BULLETS",
+          "not_mentioned_does_not_mean_unsupported": true
+        },
+        "v4.0.5-b109": {
+          "matched_labels": [],
+          "status": "NOT_MENTIONED_IN_MATCHED_BULLETS",
+          "not_mentioned_does_not_mean_unsupported": true
+        },
+        "v4.0.4-b108": {
+          "matched_labels": [],
+          "status": "NOT_MENTIONED_IN_MATCHED_BULLETS",
+          "not_mentioned_does_not_mean_unsupported": true
+        }
+      }
+    },
+    {
+      "id": "RG54-05",
+      "feature": "Lưới khảo sát tương thích QGC",
+      "presence": {
+        "v4.0.14-b111": {
+          "matched_labels": [
+            "Surveys Laid Out the Way QGC Lays Them"
+          ],
+          "status": "MENTIONED",
+          "not_mentioned_does_not_mean_unsupported": true
+        },
+        "v4.0.10-b111": {
+          "matched_labels": [
+            "Surveys Laid Out the Way QGC Lays Them"
+          ],
+          "status": "MENTIONED",
+          "not_mentioned_does_not_mean_unsupported": true
+        },
+        "v4.0.8-b110": {
+          "matched_labels": [],
+          "status": "NOT_MENTIONED_IN_MATCHED_BULLETS",
+          "not_mentioned_does_not_mean_unsupported": true
+        },
+        "v4.0.5-b109": {
+          "matched_labels": [],
+          "status": "NOT_MENTIONED_IN_MATCHED_BULLETS",
+          "not_mentioned_does_not_mean_unsupported": true
+        },
+        "v4.0.4-b108": {
+          "matched_labels": [],
+          "status": "NOT_MENTIONED_IN_MATCHED_BULLETS",
+          "not_mentioned_does_not_mean_unsupported": true
+        }
+      }
+    },
+    {
+      "id": "RG54-06",
+      "feature": "Nhập xuất giữ ý đồ và thuộc tính",
+      "presence": {
+        "v4.0.14-b111": {
+          "matched_labels": [
+            "Each Waypoint Its Own Altitude Mode",
+            "Layout Settings Survive a Round Trip"
+          ],
+          "status": "MENTIONED",
+          "not_mentioned_does_not_mean_unsupported": true
+        },
+        "v4.0.10-b111": {
+          "matched_labels": [
+            "Layout Settings Survive a Round Trip"
+          ],
+          "status": "PARTIAL_MENTION",
+          "not_mentioned_does_not_mean_unsupported": true
+        },
+        "v4.0.8-b110": {
+          "matched_labels": [],
+          "status": "NOT_MENTIONED_IN_MATCHED_BULLETS",
+          "not_mentioned_does_not_mean_unsupported": true
+        },
+        "v4.0.5-b109": {
+          "matched_labels": [],
+          "status": "NOT_MENTIONED_IN_MATCHED_BULLETS",
+          "not_mentioned_does_not_mean_unsupported": true
+        },
+        "v4.0.4-b108": {
+          "matched_labels": [],
+          "status": "NOT_MENTIONED_IN_MATCHED_BULLETS",
+          "not_mentioned_does_not_mean_unsupported": true
+        }
+      }
+    },
+    {
+      "id": "RG54-07",
+      "feature": "Home và nguồn mốc cao độ",
+      "presence": {
+        "v4.0.14-b111": {
+          "matched_labels": [
+            "Each Waypoint Its Own Altitude Mode"
+          ],
+          "status": "MENTIONED",
+          "not_mentioned_does_not_mean_unsupported": true
+        },
+        "v4.0.10-b111": {
+          "matched_labels": [],
+          "status": "NOT_MENTIONED_IN_MATCHED_BULLETS",
+          "not_mentioned_does_not_mean_unsupported": true
+        },
+        "v4.0.8-b110": {
+          "matched_labels": [],
+          "status": "NOT_MENTIONED_IN_MATCHED_BULLETS",
+          "not_mentioned_does_not_mean_unsupported": true
+        },
+        "v4.0.5-b109": {
+          "matched_labels": [],
+          "status": "NOT_MENTIONED_IN_MATCHED_BULLETS",
+          "not_mentioned_does_not_mean_unsupported": true
+        },
+        "v4.0.4-b108": {
+          "matched_labels": [],
+          "status": "NOT_MENTIONED_IN_MATCHED_BULLETS",
+          "not_mentioned_does_not_mean_unsupported": true
+        }
+      }
+    },
+    {
+      "id": "RG54-08",
+      "feature": "Diện tích và đổi đơn vị",
+      "presence": {
+        "v4.0.14-b111": {
+          "matched_labels": [
+            "Correct Area, Time and Photos"
+          ],
+          "status": "MENTIONED",
+          "not_mentioned_does_not_mean_unsupported": true
+        },
+        "v4.0.10-b111": {
+          "matched_labels": [
+            "Correct Area, Time and Photos"
+          ],
+          "status": "MENTIONED",
+          "not_mentioned_does_not_mean_unsupported": true
+        },
+        "v4.0.8-b110": {
+          "matched_labels": [],
+          "status": "NOT_MENTIONED_IN_MATCHED_BULLETS",
+          "not_mentioned_does_not_mean_unsupported": true
+        },
+        "v4.0.5-b109": {
+          "matched_labels": [],
+          "status": "NOT_MENTIONED_IN_MATCHED_BULLETS",
+          "not_mentioned_does_not_mean_unsupported": true
+        },
+        "v4.0.4-b108": {
+          "matched_labels": [],
+          "status": "NOT_MENTIONED_IN_MATCHED_BULLETS",
+          "not_mentioned_does_not_mean_unsupported": true
+        }
+      }
+    },
+    {
+      "id": "RG54-09",
+      "feature": "Thời gian và tổng nhiều pattern",
+      "presence": {
+        "v4.0.14-b111": {
+          "matched_labels": [
+            "Correct Area, Time and Photos",
+            "Takeoff Placed by Tap Counts"
+          ],
+          "status": "MENTIONED",
+          "not_mentioned_does_not_mean_unsupported": true
+        },
+        "v4.0.10-b111": {
+          "matched_labels": [
+            "Correct Area, Time and Photos",
+            "Takeoff Placed by Tap Counts"
+          ],
+          "status": "MENTIONED",
+          "not_mentioned_does_not_mean_unsupported": true
+        },
+        "v4.0.8-b110": {
+          "matched_labels": [],
+          "status": "NOT_MENTIONED_IN_MATCHED_BULLETS",
+          "not_mentioned_does_not_mean_unsupported": true
+        },
+        "v4.0.5-b109": {
+          "matched_labels": [],
+          "status": "NOT_MENTIONED_IN_MATCHED_BULLETS",
+          "not_mentioned_does_not_mean_unsupported": true
+        },
+        "v4.0.4-b108": {
+          "matched_labels": [],
+          "status": "NOT_MENTIONED_IN_MATCHED_BULLETS",
+          "not_mentioned_does_not_mean_unsupported": true
+        }
+      }
+    },
+    {
+      "id": "RG54-10",
+      "feature": "Khoảng chụp và số ảnh",
+      "presence": {
+        "v4.0.14-b111": {
+          "matched_labels": [
+            "More Capture Options",
+            "Photo Counts You Can Trust"
+          ],
+          "status": "MENTIONED",
+          "not_mentioned_does_not_mean_unsupported": true
+        },
+        "v4.0.10-b111": {
+          "matched_labels": [
+            "Photo Counts You Can Trust"
+          ],
+          "status": "PARTIAL_MENTION",
+          "not_mentioned_does_not_mean_unsupported": true
+        },
+        "v4.0.8-b110": {
+          "matched_labels": [],
+          "status": "NOT_MENTIONED_IN_MATCHED_BULLETS",
+          "not_mentioned_does_not_mean_unsupported": true
+        },
+        "v4.0.5-b109": {
+          "matched_labels": [],
+          "status": "NOT_MENTIONED_IN_MATCHED_BULLETS",
+          "not_mentioned_does_not_mean_unsupported": true
+        },
+        "v4.0.4-b108": {
+          "matched_labels": [],
+          "status": "NOT_MENTIONED_IN_MATCHED_BULLETS",
+          "not_mentioned_does_not_mean_unsupported": true
+        }
+      }
+    },
+    {
+      "id": "RG54-11",
+      "feature": "Nhịp chụp và tính khả thi camera",
+      "presence": {
+        "v4.0.14-b111": {
+          "matched_labels": [
+            "Warned Before It Is Too Fast"
+          ],
+          "status": "MENTIONED",
+          "not_mentioned_does_not_mean_unsupported": true
+        },
+        "v4.0.10-b111": {
+          "matched_labels": [],
+          "status": "NOT_MENTIONED_IN_MATCHED_BULLETS",
+          "not_mentioned_does_not_mean_unsupported": true
+        },
+        "v4.0.8-b110": {
+          "matched_labels": [],
+          "status": "NOT_MENTIONED_IN_MATCHED_BULLETS",
+          "not_mentioned_does_not_mean_unsupported": true
+        },
+        "v4.0.5-b109": {
+          "matched_labels": [],
+          "status": "NOT_MENTIONED_IN_MATCHED_BULLETS",
+          "not_mentioned_does_not_mean_unsupported": true
+        },
+        "v4.0.4-b108": {
+          "matched_labels": [],
+          "status": "NOT_MENTIONED_IN_MATCHED_BULLETS",
+          "not_mentioned_does_not_mean_unsupported": true
+        }
+      }
+    },
+    {
+      "id": "RG54-12",
+      "feature": "Tọa độ, thứ tự trục và đơn vị",
+      "presence": {
+        "v4.0.14-b111": {
+          "matched_labels": [
+            "Type the Exact Position"
+          ],
+          "status": "MENTIONED",
+          "not_mentioned_does_not_mean_unsupported": true
+        },
+        "v4.0.10-b111": {
+          "matched_labels": [],
+          "status": "NOT_MENTIONED_IN_MATCHED_BULLETS",
+          "not_mentioned_does_not_mean_unsupported": true
+        },
+        "v4.0.8-b110": {
+          "matched_labels": [],
+          "status": "NOT_MENTIONED_IN_MATCHED_BULLETS",
+          "not_mentioned_does_not_mean_unsupported": true
+        },
+        "v4.0.5-b109": {
+          "matched_labels": [],
+          "status": "NOT_MENTIONED_IN_MATCHED_BULLETS",
+          "not_mentioned_does_not_mean_unsupported": true
+        },
+        "v4.0.4-b108": {
+          "matched_labels": [],
+          "status": "NOT_MENTIONED_IN_MATCHED_BULLETS",
+          "not_mentioned_does_not_mean_unsupported": true
+        }
+      }
+    },
+    {
+      "id": "RG54-13",
+      "feature": "Cao độ từng waypoint và MAV_FRAME",
+      "presence": {
+        "v4.0.14-b111": {
+          "matched_labels": [
+            "Each Waypoint Its Own Altitude Mode"
+          ],
+          "status": "MENTIONED",
+          "not_mentioned_does_not_mean_unsupported": true
+        },
+        "v4.0.10-b111": {
+          "matched_labels": [],
+          "status": "NOT_MENTIONED_IN_MATCHED_BULLETS",
+          "not_mentioned_does_not_mean_unsupported": true
+        },
+        "v4.0.8-b110": {
+          "matched_labels": [],
+          "status": "NOT_MENTIONED_IN_MATCHED_BULLETS",
+          "not_mentioned_does_not_mean_unsupported": true
+        },
+        "v4.0.5-b109": {
+          "matched_labels": [],
+          "status": "NOT_MENTIONED_IN_MATCHED_BULLETS",
+          "not_mentioned_does_not_mean_unsupported": true
+        },
+        "v4.0.4-b108": {
+          "matched_labels": [],
+          "status": "NOT_MENTIONED_IN_MATCHED_BULLETS",
+          "not_mentioned_does_not_mean_unsupported": true
+        }
+      }
+    },
+    {
+      "id": "RG54-14",
+      "feature": "Datum DEM, geoid và chất lượng nguồn",
+      "presence": {
+        "v4.0.14-b111": {
+          "matched_labels": [
+            "Above Terrain, Calculated for You"
+          ],
+          "status": "MENTIONED",
+          "not_mentioned_does_not_mean_unsupported": true
+        },
+        "v4.0.10-b111": {
+          "matched_labels": [],
+          "status": "NOT_MENTIONED_IN_MATCHED_BULLETS",
+          "not_mentioned_does_not_mean_unsupported": true
+        },
+        "v4.0.8-b110": {
+          "matched_labels": [],
+          "status": "NOT_MENTIONED_IN_MATCHED_BULLETS",
+          "not_mentioned_does_not_mean_unsupported": true
+        },
+        "v4.0.5-b109": {
+          "matched_labels": [],
+          "status": "NOT_MENTIONED_IN_MATCHED_BULLETS",
+          "not_mentioned_does_not_mean_unsupported": true
+        },
+        "v4.0.4-b108": {
+          "matched_labels": [],
+          "status": "NOT_MENTIONED_IN_MATCHED_BULLETS",
+          "not_mentioned_does_not_mean_unsupported": true
+        }
+      }
+    },
+    {
+      "id": "RG54-15",
+      "feature": "DEM thiếu, lỗi và thay nguồn",
+      "presence": {
+        "v4.0.14-b111": {
+          "matched_labels": [
+            "Above Terrain, Calculated for You",
+            "Quick to Come Back To"
+          ],
+          "status": "MENTIONED",
+          "not_mentioned_does_not_mean_unsupported": true
+        },
+        "v4.0.10-b111": {
+          "matched_labels": [],
+          "status": "NOT_MENTIONED_IN_MATCHED_BULLETS",
+          "not_mentioned_does_not_mean_unsupported": true
+        },
+        "v4.0.8-b110": {
+          "matched_labels": [],
+          "status": "NOT_MENTIONED_IN_MATCHED_BULLETS",
+          "not_mentioned_does_not_mean_unsupported": true
+        },
+        "v4.0.5-b109": {
+          "matched_labels": [],
+          "status": "NOT_MENTIONED_IN_MATCHED_BULLETS",
+          "not_mentioned_does_not_mean_unsupported": true
+        },
+        "v4.0.4-b108": {
+          "matched_labels": [],
+          "status": "NOT_MENTIONED_IN_MATCHED_BULLETS",
+          "not_mentioned_does_not_mean_unsupported": true
+        }
+      }
+    },
+    {
+      "id": "RG54-16",
+      "feature": "Độ hở địa hình toàn đoạn bay",
+      "presence": {
+        "v4.0.14-b111": {
+          "matched_labels": [
+            "Ground Clearance Chart"
+          ],
+          "status": "MENTIONED",
+          "not_mentioned_does_not_mean_unsupported": true
+        },
+        "v4.0.10-b111": {
+          "matched_labels": [],
+          "status": "NOT_MENTIONED_IN_MATCHED_BULLETS",
+          "not_mentioned_does_not_mean_unsupported": true
+        },
+        "v4.0.8-b110": {
+          "matched_labels": [],
+          "status": "NOT_MENTIONED_IN_MATCHED_BULLETS",
+          "not_mentioned_does_not_mean_unsupported": true
+        },
+        "v4.0.5-b109": {
+          "matched_labels": [],
+          "status": "NOT_MENTIONED_IN_MATCHED_BULLETS",
+          "not_mentioned_does_not_mean_unsupported": true
+        },
+        "v4.0.4-b108": {
+          "matched_labels": [],
+          "status": "NOT_MENTIONED_IN_MATCHED_BULLETS",
+          "not_mentioned_does_not_mean_unsupported": true
+        }
+      }
+    },
+    {
+      "id": "RG54-17",
+      "feature": "Sửa nhiệm vụ trong terrain3D",
+      "presence": {
+        "v4.0.14-b111": {
+          "matched_labels": [
+            "Plan On the Surface"
+          ],
+          "status": "MENTIONED",
+          "not_mentioned_does_not_mean_unsupported": true
+        },
+        "v4.0.10-b111": {
+          "matched_labels": [
+            "Plan On the Surface"
+          ],
+          "status": "MENTIONED",
+          "not_mentioned_does_not_mean_unsupported": true
+        },
+        "v4.0.8-b110": {
+          "matched_labels": [],
+          "status": "NOT_MENTIONED_IN_MATCHED_BULLETS",
+          "not_mentioned_does_not_mean_unsupported": true
+        },
+        "v4.0.5-b109": {
+          "matched_labels": [],
+          "status": "NOT_MENTIONED_IN_MATCHED_BULLETS",
+          "not_mentioned_does_not_mean_unsupported": true
+        },
+        "v4.0.4-b108": {
+          "matched_labels": [],
+          "status": "NOT_MENTIONED_IN_MATCHED_BULLETS",
+          "not_mentioned_does_not_mean_unsupported": true
+        }
+      }
+    },
+    {
+      "id": "RG54-18",
+      "feature": "3D platform và hiệu suất UI",
+      "presence": {
+        "v4.0.14-b111": {
+          "matched_labels": [
+            "Where It Runs"
+          ],
+          "status": "MENTIONED",
+          "not_mentioned_does_not_mean_unsupported": true
+        },
+        "v4.0.10-b111": {
+          "matched_labels": [
+            "Where It Runs"
+          ],
+          "status": "MENTIONED",
+          "not_mentioned_does_not_mean_unsupported": true
+        },
+        "v4.0.8-b110": {
+          "matched_labels": [],
+          "status": "NOT_MENTIONED_IN_MATCHED_BULLETS",
+          "not_mentioned_does_not_mean_unsupported": true
+        },
+        "v4.0.5-b109": {
+          "matched_labels": [],
+          "status": "NOT_MENTIONED_IN_MATCHED_BULLETS",
+          "not_mentioned_does_not_mean_unsupported": true
+        },
+        "v4.0.4-b108": {
+          "matched_labels": [],
+          "status": "NOT_MENTIONED_IN_MATCHED_BULLETS",
+          "not_mentioned_does_not_mean_unsupported": true
+        }
+      }
+    },
+    {
+      "id": "RG54-19",
+      "feature": "Cache, restart và nhiệm vụ không trôi",
+      "presence": {
+        "v4.0.14-b111": {
+          "matched_labels": [
+            "Layout Settings Survive a Round Trip",
+            "Quick to Come Back To"
+          ],
+          "status": "MENTIONED",
+          "not_mentioned_does_not_mean_unsupported": true
+        },
+        "v4.0.10-b111": {
+          "matched_labels": [
+            "Layout Settings Survive a Round Trip"
+          ],
+          "status": "PARTIAL_MENTION",
+          "not_mentioned_does_not_mean_unsupported": true
+        },
+        "v4.0.8-b110": {
+          "matched_labels": [],
+          "status": "NOT_MENTIONED_IN_MATCHED_BULLETS",
+          "not_mentioned_does_not_mean_unsupported": true
+        },
+        "v4.0.5-b109": {
+          "matched_labels": [],
+          "status": "NOT_MENTIONED_IN_MATCHED_BULLETS",
+          "not_mentioned_does_not_mean_unsupported": true
+        },
+        "v4.0.4-b108": {
+          "matched_labels": [],
+          "status": "NOT_MENTIONED_IN_MATCHED_BULLETS",
+          "not_mentioned_does_not_mean_unsupported": true
+        }
+      }
+    },
+    {
+      "id": "RG54-20",
+      "feature": "Resume không bỏ sót tuyến",
+      "presence": {
+        "v4.0.14-b111": {
+          "matched_labels": [
+            "Resume Where It Stopped"
+          ],
+          "status": "MENTIONED",
+          "not_mentioned_does_not_mean_unsupported": true
+        },
+        "v4.0.10-b111": {
+          "matched_labels": [],
+          "status": "NOT_MENTIONED_IN_MATCHED_BULLETS",
+          "not_mentioned_does_not_mean_unsupported": true
+        },
+        "v4.0.8-b110": {
+          "matched_labels": [],
+          "status": "NOT_MENTIONED_IN_MATCHED_BULLETS",
+          "not_mentioned_does_not_mean_unsupported": true
+        },
+        "v4.0.5-b109": {
+          "matched_labels": [],
+          "status": "NOT_MENTIONED_IN_MATCHED_BULLETS",
+          "not_mentioned_does_not_mean_unsupported": true
+        },
+        "v4.0.4-b108": {
+          "matched_labels": [],
+          "status": "NOT_MENTIONED_IN_MATCHED_BULLETS",
+          "not_mentioned_does_not_mean_unsupported": true
+        }
+      }
+    },
+    {
+      "id": "RG54-21",
+      "feature": "Takeoff và thay điểm khởi hành",
+      "presence": {
+        "v4.0.14-b111": {
+          "matched_labels": [
+            "Choose How It Takes Off",
+            "Takeoff Placed by Tap Counts"
+          ],
+          "status": "MENTIONED",
+          "not_mentioned_does_not_mean_unsupported": true
+        },
+        "v4.0.10-b111": {
+          "matched_labels": [
+            "Takeoff Placed by Tap Counts"
+          ],
+          "status": "PARTIAL_MENTION",
+          "not_mentioned_does_not_mean_unsupported": true
+        },
+        "v4.0.8-b110": {
+          "matched_labels": [],
+          "status": "NOT_MENTIONED_IN_MATCHED_BULLETS",
+          "not_mentioned_does_not_mean_unsupported": true
+        },
+        "v4.0.5-b109": {
+          "matched_labels": [],
+          "status": "NOT_MENTIONED_IN_MATCHED_BULLETS",
+          "not_mentioned_does_not_mean_unsupported": true
+        },
+        "v4.0.4-b108": {
+          "matched_labels": [],
+          "status": "NOT_MENTIONED_IN_MATCHED_BULLETS",
+          "not_mentioned_does_not_mean_unsupported": true
+        }
+      }
+    },
+    {
+      "id": "RG54-22",
+      "feature": "GSD/footprint theo camera của nhiệm vụ",
+      "presence": {
+        "v4.0.14-b111": {
+          "matched_labels": [
+            "GSD You Can Rely On",
+            "Photos Taken vs Planned"
+          ],
+          "status": "MENTIONED",
+          "not_mentioned_does_not_mean_unsupported": true
+        },
+        "v4.0.10-b111": {
+          "matched_labels": [],
+          "status": "NOT_MENTIONED_IN_MATCHED_BULLETS",
+          "not_mentioned_does_not_mean_unsupported": true
+        },
+        "v4.0.8-b110": {
+          "matched_labels": [],
+          "status": "NOT_MENTIONED_IN_MATCHED_BULLETS",
+          "not_mentioned_does_not_mean_unsupported": true
+        },
+        "v4.0.5-b109": {
+          "matched_labels": [],
+          "status": "NOT_MENTIONED_IN_MATCHED_BULLETS",
+          "not_mentioned_does_not_mean_unsupported": true
+        },
+        "v4.0.4-b108": {
+          "matched_labels": [],
+          "status": "NOT_MENTIONED_IN_MATCHED_BULLETS",
+          "not_mentioned_does_not_mean_unsupported": true
+        }
+      }
+    },
+    {
+      "id": "RG54-23",
+      "feature": "Fence quanh Home, reboot và trạng thái mới",
+      "presence": {
+        "v4.0.14-b111": {
+          "matched_labels": [
+            "Circle Fence Around Home",
+            "Reboot the Aircraft From RAGAS"
+          ],
+          "status": "MENTIONED",
+          "not_mentioned_does_not_mean_unsupported": true
+        },
+        "v4.0.10-b111": {
+          "matched_labels": [],
+          "status": "NOT_MENTIONED_IN_MATCHED_BULLETS",
+          "not_mentioned_does_not_mean_unsupported": true
+        },
+        "v4.0.8-b110": {
+          "matched_labels": [],
+          "status": "NOT_MENTIONED_IN_MATCHED_BULLETS",
+          "not_mentioned_does_not_mean_unsupported": true
+        },
+        "v4.0.5-b109": {
+          "matched_labels": [],
+          "status": "NOT_MENTIONED_IN_MATCHED_BULLETS",
+          "not_mentioned_does_not_mean_unsupported": true
+        },
+        "v4.0.4-b108": {
+          "matched_labels": [],
+          "status": "NOT_MENTIONED_IN_MATCHED_BULLETS",
+          "not_mentioned_does_not_mean_unsupported": true
+        }
+      }
+    },
+    {
+      "id": "RG54-24",
+      "feature": "Độ chính xác sản phẩm mapping thực",
+      "presence": {
+        "v4.0.14-b111": {
+          "matched_labels": [],
+          "status": "ADDITIONAL_REQUIREMENT",
+          "not_mentioned_does_not_mean_unsupported": true
+        },
+        "v4.0.10-b111": {
+          "matched_labels": [],
+          "status": "ADDITIONAL_REQUIREMENT",
+          "not_mentioned_does_not_mean_unsupported": true
+        },
+        "v4.0.8-b110": {
+          "matched_labels": [],
+          "status": "ADDITIONAL_REQUIREMENT",
+          "not_mentioned_does_not_mean_unsupported": true
+        },
+        "v4.0.5-b109": {
+          "matched_labels": [],
+          "status": "ADDITIONAL_REQUIREMENT",
+          "not_mentioned_does_not_mean_unsupported": true
+        },
+        "v4.0.4-b108": {
+          "matched_labels": [],
+          "status": "ADDITIONAL_REQUIREMENT",
+          "not_mentioned_does_not_mean_unsupported": true
+        }
+      }
+    }
+  ]
+}

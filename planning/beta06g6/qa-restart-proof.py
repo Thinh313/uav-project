@@ -1,0 +1,39 @@
+"""Readonly managed-restart evidence gate. Exact actual replay inputs, never command authority."""
+from pathlib import Path
+import hashlib,json,re
+R=Path(__file__).resolve().parents[2];E=R/'evidence/beta06/generation06'
+def blob(path,bound=96*2**20):
+ p=Path(path);assert p.resolve().is_relative_to(E.resolve())and p.is_file()and not p.is_symlink()and p.stat().st_size<=bound,'RESTART_PROOF_OWN_BOUNDED_INPUT';return p.read_bytes()
+def report(path,status):
+ b=blob(path,2*2**20);p=Path(path);assert p.name.startswith('qa'),'INDEPENDENT_QA_REPORT_REQUIRED';v=json.loads(b);assert v.get('status')==status and not v.get('errors')and re.fullmatch('s[a-f0-9]{20}',v.get('run','')),'EXACT_ACTUAL_REPLAY_PASS_REQUIRED';return v,hashlib.sha256(b).hexdigest()
+def exact_run_inputs(v):
+ run=v['run'];base=E/'flight/runs'/run
+ for name in ['raw.jsonl','review.json','request.json','closure.json']:
+  b=blob(base/name);proof=v['input'][name];assert proof['bytes']==len(b)and proof['sha256']==hashlib.sha256(b).hexdigest(),'REPLAY_INPUT_CHANGED_OR_WRONG_RUN'
+ raw=blob(base/'raw.jsonl');assert raw.endswith(b'\n'),'RESTART_RAW_TORN';rows=[];head=''
+ for line in raw.splitlines():
+  r=json.loads(line);m=re.search(br',"sha256":"([a-f0-9]{64})"}$',line);assert m and hashlib.sha256(line[:m.start()]+b'}').hexdigest()==r['sha256']and r['n']==len(rows)+1 and r['previous']==head,'RESTART_RAW_CHAIN';rows.append(r);head=r['sha256']
+ review=json.loads(blob(base/'review.json'));request=json.loads(blob(base/'request.json'));closure=json.loads(blob(base/'closure.json'));binding=request.get('binding')or{};assert all(binding.get(k)==review.get(k)and binding.get(k)is not None for k in ['documentSha256','missionSha256','modelRevision','modelSha256','planSha256']),'RESTART_REQUEST_REVIEW_BINDING';assert request.get('run')==run and request.get('mode')=='sitl'and review.get('run')==run and review.get('mode')=='sitl'and review['rawHead']==head and review['rawRecords']==len(rows),'RESTART_ACTUAL_RUN_BINDING';assert closure.get('stopped')is True and closure.get('error')is None,'RESTART_ACTUAL_CLOSED_RUN_REQUIRED';return review,rows
+
+def sealed_index_proofs(wal_bytes,runs):
+ assert len(wal_bytes)<=96*2**20 and wal_bytes.endswith(b'\n'),'RESTART_INDEX_WAL_BOUND_OR_TORN';rows=[];head='0'*64
+ for line in wal_bytes.splitlines():
+  row=json.loads(line);pattern=b',"hash":"'+str(row.get('hash','')).encode()+b'"';assert line.count(pattern)==1,'RESTART_INDEX_EXACT_HASH_FIELD';body=line.replace(pattern,b'',1);assert hashlib.sha256(body).hexdigest()==row['hash']and row['seq']==len(rows)+1 and row['previousHash']==head,'RESTART_INDEX_WAL_CHAIN';head=row['hash'];rows.append(row)
+ proofs=[]
+ for run in runs:
+  matches=[row for row in rows if row.get('kind')=='FLIGHT_REVIEW_SEALED_REF'and(row.get('data',{}).get('reviewRef')or{}).get('run')==run];assert len(matches)==1,'ONE_DURABLE_SEALED_INDEX_PER_ACCEPTED_SCENARIO_REQUIRED';row=matches[0];data=row['data'];ref=data['reviewRef'];base=E/'flight/runs'/run;rb=blob(base/'review.json',256*2**10);cb=blob(base/'closure.json',64*2**10);review=json.loads(rb);closure=json.loads(cb)
+  assert data.get('authorityRestored')is False and ref.get('format')=='aeris-sealed-flight-review-reference'and ref.get('version')==1 and ref.get('authorityRestorable')is False,'RESTART_COMPACT_SEALED_INDEX_REQUIRED'
+  for key in ['run','accepted','aborted','closedAt','modelSha256','planSha256','documentSha256','missionSha256','rawHead','rawRecords','execution','failure','writerError']:assert ref.get(key)==review.get(key),'RESTART_SEALED_INDEX_SEMANTICS_CHANGED:'+key
+  assert ref.get('review')=={'path':'flight/runs/'+run+'/review.json','bytes':len(rb),'sha256':hashlib.sha256(rb).hexdigest()},'RESTART_SEALED_REVIEW_BYTES_CHANGED'
+  assert ref.get('closure')=={'path':'flight/runs/'+run+'/closure.json','bytes':len(cb),'sha256':hashlib.sha256(cb).hexdigest(),'containerId':closure.get('containerId'),'stopped':True}and closure.get('stopped')is True and closure.get('error')is None,'RESTART_SEALED_CLOSURE_BYTES_CHANGED'
+  assert 'filesSha256'not in ref,'RESTART_FULL_REVIEW_MAP_IN_INDEX_REFUSED';sidecar=E/'host-app06'/('close-index-'+run+'.json');sidebytes=blob(sidecar,32*2**10);outcome=json.loads(sidebytes);assert outcome.get('status')=='CLOSED_REVIEW_INDEXED'and outcome.get('reviewIndexStatus')=='INDEXED'and outcome.get('effectStatus')=='SEALED_OWNED_CLOSED'and outcome.get('reviewRef')==ref and outcome.get('receipt')=={'seq':row['seq'],'hash':row['hash']}and outcome.get('error')is None,'RESTART_SEALED_INDEX_OUTCOME_UNKNOWN_OR_PENDING';proofs.append({'run':run,'indexOutcome':str(sidecar),'indexOutcomeSha256':hashlib.sha256(sidebytes).hexdigest(),'indexSequence':row['seq'],'indexHash':row['hash'],'reviewSha256':ref['review']['sha256'],'closureSha256':ref['closure']['sha256']})
+ return proofs
+
+def authorize(nominal_path,fault_path):
+ nominal,ns=report(nominal_path,'PASS_ACTUAL_RAW_NOMINAL_EXECUTION_GENERIC_SITL');fault,fs=report(fault_path,'PASS_ACTUAL_TCP_CUT_DURABLE_LIVE_LEASE_INVALIDATION_INCOMPLETE_FLIGHT');assert nominal['run']!=fault['run'],'DISTINCT_NOMINAL_AND_DELIBERATE_CUT_REQUIRED';n,nraw=exact_run_inputs(nominal);f,fraw=exact_run_inputs(fault);actual=[]
+ for path in(E/'flight/runs').glob('*/request.json'):
+  q=json.loads(blob(path))
+  if q.get('mode')=='sitl':actual.append(q['run'])
+ assert len(actual)==2 and set(actual)=={nominal['run'],fault['run']},'ONLY_ACCEPTED_N1_AND_CLOSED_F1_BEFORE_RESTART_NO_LATER_FAILURE_RETRY';nr=json.loads(blob(E/'flight/runs'/nominal['run']/'request.json'));fr=json.loads(blob(E/'flight/runs'/fault['run']/'request.json'));nb=nr.get('binding')or{};fb=fr.get('binding')or{};assert all(nb.get(k)and nb[k]==fb.get(k)for k in ['modelSha256','planSha256']),'RESTART_SAME_CANONICAL_MODEL_PLAN_REQUIRED';assert int(nraw[-1]['hostNs'])<=int(fraw[0]['hostNs']),'NOMINAL_BEFORE_F1_NODE_CHRONOLOGY_REQUIRED';assert n.get('accepted')is True and n.get('aborted')is False and(n.get('execution')or{}).get('complete')is True,'ACCEPTED_ACTUAL_NOMINAL_REQUIRED';nc=nominal.get('independentChecks')or{};chron=nc.get('chronology')or{};assert(nominal.get('canonicalSharedReplay')or{}).get('executionVerified')is True and chron.get('actualArmedAutoHeartbeats',0)>0 and chron.get('autoCommandRecords')and chron.get('lastHeartbeatArmed')is False and chron.get('lastGroundState')==1 and(nc.get('wire')or{}).get('parameterWrites')==0 and(nc.get('wire')or{}).get('readbackCommandsExact')is True,'INDEPENDENT_RAW_NOMINAL_CHRONOLOGY_REQUIRED';assert f.get('accepted')is False and f.get('aborted')is True and(f.get('execution')or{}).get('complete')is False and f.get('failure')=='INJECTED_CUT_NO_AUTHORITY_RESTORE','CLOSED_DELIBERATE_CUT_NOT_FAILED_PREPARATION_REQUIRED'
+ intents=[x for x in fraw if x['kind']=='FIELD01_INTENT'and x.get('data',{}).get('route')=='cut'];cuts=[x for x in fraw if x['kind']=='FIELD02_C2_SOCKET_CUT'];assert len(intents)==1 and len(cuts)==1 and(intents[0]['data'].get('request')or{}).get('confirmSimulation')is True and cuts[0]['data'].get('actualTCPDisconnect')is True and cuts[0]['n']>intents[0]['n'],'DELIBERATE_ACTUAL_CUT_RAW_INTENT_REQUIRED';checks=fault.get('checks')or{};assert checks.get('liveLeaseProofs')and checks.get('afterCutWireRecords')==0 and checks.get('laterLeaseRegains')==0 and checks.get('laterOldRunCommandIntents')==0,'DURABLE_LIVE_LEASE_FAULT_REPLAY_REQUIRED';w=fault['input']['wal'];wb=blob(R/w['path']);assert len(wb)==w['bytes']and hashlib.sha256(wb).hexdigest()==w['sha256'],'FAULT_WAL_CHANGED_AFTER_REPLAY';indexProofs=sealed_index_proofs(wb,[nominal['run'],fault['run']])
+ return {'nominalRun':nominal['run'],'faultRun':fault['run'],'nominalReport':str(nominal_path),'nominalReportSha256':ns,'faultReport':str(fault_path),'faultReportSha256':fs,'modelSha256':nb['modelSha256'],'planSha256':nb['planSha256'],'faultKind':'ACTUAL_DELIBERATE_TCP_CUT','noAuthorityGranted':True,'noHostOrClockReset':True,'sealedIndexProofs':indexProofs}

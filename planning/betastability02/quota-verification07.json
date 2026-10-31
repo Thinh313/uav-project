@@ -1,0 +1,57 @@
+{
+  "atUTC": "2026-10-26T02:18:51.706338+00:00",
+  "status": "MOCK_VERIFIED_NOT_NEW_ANDROID_SITL",
+  "cause": "CHILD_INHERITED5000_VS_COMPANION_ALREADY_DECLARED12000_WHOLE_TASK_FILE_LIMIT",
+  "source": [
+    {
+      "path": "pilot/betastability02/resource-policy.json",
+      "currentSha256": "9d1dbcb4da75d76a475a6bd82a6f57aaae5134e2024ea6c89b59f3f0a8505517",
+      "pins06InputRetained": true
+    },
+    {
+      "path": "pilot/betastability02/resource.mjs",
+      "currentSha256": "56304ae9cfecc3ed7f3d09dfb330d2e3d4ae60d868f13055273fcd40f6877053",
+      "pins06InputRetained": true
+    },
+    {
+      "path": "pilot/betastability02/runtime.py",
+      "currentSha256": "73a2c0e6bb10a9cee0d8ad6e09bf885afa58fe68fab43610f4f919eb16ad1da7",
+      "pins06InputRetained": true
+    },
+    {
+      "path": "pilot/betastability02/companion.py",
+      "currentSha256": "f6efc3d8aab908b6e0da8a37c51f0fc5a568d4443e66c5275c74a6c806209e29",
+      "pins06InputRetained": true
+    }
+  ],
+  "nodeTests": 7,
+  "pythonTests": 7,
+  "projectionCompile": "PASS",
+  "actualWholeNamespaceAtTests": {
+    "files": 5748,
+    "bytes": 437840287,
+    "symlinks": []
+  },
+  "entryCaseReserve": {
+    "files": 1000,
+    "bytes": 67108864
+  },
+  "unchanged": {
+    "entryGiB": 20,
+    "floorGiB": 10,
+    "closureReserveMiB": 256,
+    "evidenceBytes": 2147483648,
+    "maxEvidenceFiles": 12000,
+    "samples": 31,
+    "diskTrendLimitMiB": 256,
+    "forecastSeconds": 15,
+    "APSeconds": 540,
+    "videoFloors": "UNCHANGED"
+  },
+  "excludedScopes": [],
+  "runtimeStarts": 0,
+  "APAllocations": 0,
+  "builds": 0,
+  "campaign": "planning/betastability02/final-campaign04.py",
+  "pins": "source-pins07.json"
+}

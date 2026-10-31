@@ -1,0 +1,176 @@
+Mesh Rider Radios: Nano², Mini, OEM, Wearable | Doodle Labs (https://doodlelabs.com/products/)
+citeturn230view2 [wordlim: 200] Crawled: 2 days ago; Content type: text/html; Source: open({"ref_id":"https://doodlelabs.com/products/","lineno":null}); Redirected to URL: https://doodlelabs.com/products/radios; Total lines: 422
+L0: cite0†Google Tag Manager†www.googletagmanager.com L1: 
+L2: cite1†Technology L3: 
+L4: cite2†Solutions L5: 
+L6: cite3†Products L7: 
+L8: cite4†Resources L9: 
+L10: cite5†About L11: 
+L12: cite6†Tech Library†kb.doodlelabs.com cite7†Contact Us→ L13: 
+L14: [Button: ☰]
+L15: 
+L16: ## cite1†Mesh Rider L17: 
+L18: Explore the technology behind every connection.
+L19: 
+L20:   * cite1†Why Mesh Rider L21: 
+L22: ## cite8†Capabilities L23: 
+L24: Connectivity across range, spectrum and changing conditions.
+L25: 
+L26:   * cite9†Long Range L27:   * cite10†Electronic Warfare L28:   * cite11†Mesh L29:   * cite12†Supply Chain L30:   * cite13†High Throughput L31:   * cite14†Multiband L32: ## cite15†Patents L33: 
+L34: Explore our innovations and the latest software releases.
+L35: 
+L36:   * cite15†Patents L37: 
+L38: cite16†BlogIntroducing Mesh Rider® Dual Radio: Two independent bands. One unbreakable link. L39: 
+L40: ## cite2†Domain L41: 
+L42: Connect platforms across air, land and sea.
+L43: 
+L44:   * cite17†Air L45:   * cite18†Land L46:   * cite19†Sea L47:   * cite2†All domains L48: ## cite2†Industry L49: 
+L50: Find the right communications for your mission.
+L51: 
+L52:   * cite20†Defense L53:   * cite21†Commercial L54:   * cite22†Public Safety L55: 
+L56: cite16†BlogIntroducing Mesh Rider® Dual Radio: Two independent bands. One unbreakable link. cite23†EventJoin Doodle Labs at AUSA 2026 October 12-14 in DC L57: 
+L58: ## cite24†Radios L59: 
+L60: Find a Mesh Rider radio for your platform.
+L61: 
+L62:   * cite25†Nano² L63:   * cite26†Mini L64:   * cite27†OEM L65:   * cite28†Wearable L66:   * cite29†Accessories L67: 
+L68: ## cite30†Amplifiers L69: 
+L70: Extend the reach of your Mesh Rider radio.
+L71: 
+L72:   * cite31†Boost L73: ## cite32†Software L74: 
+L75: Manage, monitor and optimize your network.
+L76: 
+L77:   * cite33†Sense EW L78:   * cite34†TacOps L79:   * cite35†NMS L80: 
+L81: cite16†BlogIntroducing Mesh Rider® Dual Radio: Two independent bands. One unbreakable link. L82: ## cite4†Explore resources L83: 
+L84: The latest stories, insights and events from Doodle Labs.
+L85: 
+L86:   * cite36†Blog L87:   * cite37†Events L88:   * cite38†Webinars L89:   * cite39†Case Studies L90:   * cite40†Podcasts L91:   * cite4†All resources L92: 
+L93: cite16†BlogIntroducing Mesh Rider® Dual Radio: Two independent bands. One unbreakable link. cite23†EventJoin Doodle Labs at AUSA 2026 October 12-14 in DC cite41†BlogNano²: A Full-MIMO Radio Built for SWaP-Constrained Drones L94: 
+L95: cite1†Technology L96: ## cite1†Mesh Rider L97: 
+L98: Explore the technology behind every connection.
+L99: 
+L100:   * cite1†Why Mesh Rider L101: 
+L102: ## cite8†Capabilities L103: 
+L104: Connectivity across range, spectrum and changing conditions.
+L105: 
+L106:   * cite9†Long Range L107:   * cite10†Electronic Warfare L108:   * cite11†Mesh L109:   * cite12†Supply Chain L110:   * cite13†High Throughput L111:   * cite14†Multiband L112: 
+L113: ## cite15†Patents L114: 
+L115: Explore our innovations and the latest software releases.
+L116: 
+L117:   * cite15†Patents L118: 
+L119: cite16†BlogIntroducing Mesh Rider® Dual Radio: Two independent bands. One unbreakable link. L120: 
+L121: cite2†Solutions L122: ## cite2†Domain L123: 
+L124: Connect platforms across air, land and sea.
+L125: 
+L126:   * cite17†Air L127:   * cite18†Land L128:   * cite19†Sea L129:   * cite2†All domains L130: 
+L131: ## cite2†Industry L132: 
+L133: Find the right communications for your mission.
+L134: 
+L135:   * cite20†Defense L136:   * cite21†Commercial L137:   * cite22†Public Safety L138: 
+L139: cite16†BlogIntroducing Mesh Rider® Dual Radio: Two independent bands. One unbreakable link. cite23†EventJoin Doodle Labs at AUSA 2026 October 12-14 in DC L140: 
+L141: cite3†Products L142: ## cite24†Radios L143: 
+L144: Find a Mesh Rider radio for your platform.
+L145: 
+L146:   * cite25†Nano² L147:   * cite26†Mini L148:   * cite27†OEM L149:   * cite28†Wearable L150:   * cite29†Accessories L151: 
+L152: ## cite30†Amplifiers L153: 
+L154: Extend the reach of your Mesh Rider radio.
+L155: 
+L156:   * cite31†Boost L157: 
+L158: ## cite32†Software L159: 
+L160: Manage, monitor and optimize your network.
+L161: 
+L162:   * cite33†Sense EW L163:   * cite34†TacOps L164:   * cite35†NMS L165: 
+L166: cite16†BlogIntroducing Mesh Rider® Dual Radio: Two independent bands. One unbreakable link. L167: 
+L168: cite4†Resources L169: ## cite4†Explore resources L170: 
+L171: The latest stories, insights and events from Doodle Labs.
+L172: 
+L173:   * cite36†Blog L174:   * cite37†Events L175:   * cite38†Webinars L176:   * cite39†Case Studies L177:   * cite40†Podcasts L178:   * cite4†All resources L179: 
+L180: cite16†BlogIntroducing Mesh Rider® Dual Radio: Two independent bands. One unbreakable link. cite23†EventJoin Doodle Labs at AUSA 2026 October 12-14 in DC cite41†BlogNano²: A Full-MIMO Radio Built for SWaP-Constrained Drones L181: 
+L182: cite5†About L183: 
+L184: cite6†Tech Library†kb.doodlelabs.com cite7†Contact Us → L185: cite42†Image: Mesh Rider radio hardware in several form factors†d7sub498lvig0fx2.public.blob.vercel-storage.com L186: 
+L187: Our products
+L188: # Mesh Rider® Radios
+L189: 
+L190: High-performance mesh radios built for advanced robotics in demanding environments, available in five form factors across an exceptionally wide range of frequencies and built to integrate easily into existing platforms.
+L191: 
+L192: cite43†Learn more↓ L193: 
+L194: Our products
+L195: ## Find your perfect RF product
+L196: 
+L197: cite44†Image: Nano² Mesh Rider product†d7sub498lvig0fx2.public.blob.vercel-storage.com L198: 
+L199: Nano²⌄
+L200: 
+L201: Full Mesh Rider® performance in a small form factor. Nano² packs full Mesh Rider throughput, range, and mesh networking into a footprint built for space-constrained platforms.
+L202: 
+L203: Weight: 41 g Dimensions: 46.9 × 35 × 20.7 mm
+L204: 
+L205: cite25†See more cite7†Contact sales L206: 
+L207: Mini⌄
+L208: Built to embed, field-proven at scale. Mini packs full Mesh Rider throughput, range, and mesh networking into a radio built for OEM integration and production at scale.
+L209: 
+L210: Weight: 34 g Dimensions: 46 x 51 x 6.5 mm
+L211: 
+L212: cite26†See more cite7†Contact sales L213: 
+L214: OEM⌄
+L215: 
+L216: Built with the broadest integration options. OEM gives system designers the broadest frequency coverage in the Mesh Rider line, built to integrate into a larger vehicle or aircraft.
+L217: 
+L218: Weight: 102 g Dimensions: 57 × 86 × 13 mm
+L219: 
+L220: cite27†See more cite7†Contact sales L221: Boost⌄
+L222: 
+L223: Boost strengthens the transmit and receive sides of the link, extending range and holding up in difficult RF environments across NATO-C, Federal, M1-M6 hex bands, and ISM spectrum.
+L224: 
+L225: RF Output: 4 W Operating Range: 100 km
+L226: 
+L227: cite30†See more cite7†Contact sales L228: 
+L229: Wearable⌄
+L230: 
+L231: Bring the operator onto the network. Wearable puts secure voice, video, and data in the operator's hands, on the same mesh network used by drones and vehicles in the field.
+L232: 
+L233: Weight: 311 g Dimensions: 134.3 × 63 × 17 mm
+L234: cite28†See more cite7†Contact sales L235: 
+L236: Antennas⌄
+L237: 
+L238: Doodle Labs works with trusted antenna partners, offering accessories tested and selected for compatibility with Mesh Rider radios for a complete, field-ready system.
+L239: 
+L240: cite29†See more cite7†Contact sales L241: 
+L242: cite3†All Products ↗ L243: 
+L244: Doodle Labs
+L245: ## Product Index
+L246: 
+L247: Dark Light
+L248: 
+L249: Government Bandscite45†Image L250: Government Bands
+L251: Frequency  | cite46†Image†d7sub498lvig0fx2.public.blob.vercel-storage.com Nano²  | cite47†Image†d7sub498lvig0fx2.public.blob.vercel-storage.com Mini  | cite48†Image†d7sub498lvig0fx2.public.blob.vercel-storage.com OEM  | cite49†Image†d7sub498lvig0fx2.public.blob.vercel-storage.com Wearable  | cite50†Image†d7sub498lvig0fx2.public.blob.vercel-storage.com Boost
+L252: --- | --- | --- | --- | --- | ---
+L253: 255 + 2245 + 2350 + 2450 MHz Quad Band  |  | cite51†RM-1300-42M3†doodlelabs.filecloudonline.com | cite52†RM-1300-4203†doodlelabs.filecloudonline.com | RM-1300-42W3  |
+L254: 455 + 2245 + 2350 + 2450 MHz Quad Band  |  | cite53†RM-1400-42M3†doodlelabs.filecloudonline.com | cite54†RM-1400-4203†doodlelabs.filecloudonline.com | cite55†RM-1400-42W3†doodlelabs.filecloudonline.com |
+L255: 1625 – 2500 MHz S-Band · M1–M6 Hex  | cite56†RM-2025-62S3†doodlelabs.filecloudonline.com RM-2025-62S4  | cite57†RM-2025-62M3†doodlelabs.filecloudonline.com RM-2025-62M4  | cite58†RM-2025-6203†doodlelabs.filecloudonline.com | cite59†RM-2025-62W3†doodlelabs.filecloudonline.com | cite60†BDA-1625-04-1200†doodlelabs.filecloudonline.com L256: 1350–1390 + 2200–2510 MHz L + S Band  | cite61†RM-2100-42S3†doodlelabs.filecloudonline.com | cite62†RM-2100-42M3†doodlelabs.filecloudonline.com RM-2100-42M4  | cite63†RM-2100-4203†doodlelabs.filecloudonline.com | cite64†RM-2100-42W3†doodlelabs.filecloudonline.com |
+L257: 4940 – 5895 MHz Public Safety + ISM  |  |  | cite65†RM-5400-2203†doodlelabs.filecloudonline.com | cite66†RM-1300-22W3†doodlelabs.filecloudonline.com |
+L258: 4400 – 5925 MHz C-Band Extended  |  |  | cite67†RM-5200-9203†doodlelabs.filecloudonline.com | cite68†RM-1300-92W3†doodlelabs.filecloudonline.com |
+L259: 4400 – 6400 MHz C-Band (Boost)  |  |  |  |  | cite69†BDA-4464-04-2202†doodlelabs.filecloudonline.com L260: Unlicensed Frequency Bandscite45†Image L261: Unlicensed Frequency Bands
+L262: Frequency  | cite46†Image†d7sub498lvig0fx2.public.blob.vercel-storage.com Nano²  | cite47†Image†d7sub498lvig0fx2.public.blob.vercel-storage.com Mini  | cite48†Image†d7sub498lvig0fx2.public.blob.vercel-storage.com OEM  | cite49†Image†d7sub498lvig0fx2.public.blob.vercel-storage.com Wearable  | cite50†Image†d7sub498lvig0fx2.public.blob.vercel-storage.com Boost
+L263: --- | --- | --- | --- | --- | ---
+L264: 2400 – 2482 MHz 2.4 GHz Wi-Fi  | cite70†RM-2450-12S3†doodlelabs.filecloudonline.com | cite71†RM-2450-12M3†doodlelabs.filecloudonline.com RM-2450-12M4  |  |  |
+L265: 900 MHz + 2.4 GHz Dual-Band ISM  | cite72†RM-1700-22S3†doodlelabs.filecloudonline.com | cite73†RM-1700-22M3†doodlelabs.filecloudonline.com RM-1700-22M4  | cite74†RM-1700-2203†doodlelabs.filecloudonline.com | cite75†RM-1700-22W3†doodlelabs.filecloudonline.com |
+L266: 5150 – 5895 MHz 5 GHz Wi-Fi  |  |  | RM-5600-2203  | cite76†RM-5600-12W3†doodlelabs.filecloudonline.com |
+L267: Specialcite45†Image L268: Special
+L269: Frequency  | cite46†Image†d7sub498lvig0fx2.public.blob.vercel-storage.com Nano²  | cite47†Image†d7sub498lvig0fx2.public.blob.vercel-storage.com Mini  | cite48†Image†d7sub498lvig0fx2.public.blob.vercel-storage.com OEM  | cite49†Image†d7sub498lvig0fx2.public.blob.vercel-storage.com Wearable  | cite50†Image†d7sub498lvig0fx2.public.blob.vercel-storage.com Boost
+L270: --- | --- | --- | --- | --- | ---
+L271: 5650 – 5755 MHz Japan Robotics  |  | cite77†RM-5700-2LSX-SA-ST†doodlelabs.filecloudonline.com |  | cite78†RM-5700-12W3†doodlelabs.filecloudonline.com |
+L272: cite7†Talk to Sales→ L273: 
+L274: Solutions
+L275: ## Stay connected in any domain
+L276: 
+L277: Solutions
+L278: ### One network that moves with the mission.
+L279: 
+L280: Traditional radios and fixed infrastructure struggle to keep people, drones, vehicles, and other autonomous systems connected as conditions change and environments become contested.
+L281: 
+L282: Doodle Labs delivers one network that keeps them connected in battlefield environments.
+L283: 
+L284: cite1†Learn more cite3†Products→ L285: 
+L286: cite79†Image: One network that moves with the mission. mesh networking†d7sub498lvig0fx2.public.blob.vercel-storage.com L287: 
+L288: Solutions
+L289: ### Air
+L290:

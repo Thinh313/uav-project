@@ -1,0 +1,77 @@
+{
+  "format": "aeris-exact-source-overlay",
+  "version": 1,
+  "sourceRecipient": ".local/simstability03/receiver03",
+  "sourceManifestSHA256": "df3eb4ec961e2fc83116440ec017796593b36847f2e1a601e7dd0a8b11ec5c8f",
+  "qualification": "NOT READY",
+  "changes": [
+    {
+      "path": "pilot/simhand01/api.mjs",
+      "sha256": "fc020334d250e2efc125923c542bbc4bb23666a075df1f962fa66151c59cfc97",
+      "bytes": 4290,
+      "mode": 420,
+      "baseCheckoutSHA256": "f9291ff0bd151e129dd9f6eabc3c2f1b4c83ce220e01f3951a9f18d0d3aaf2aa"
+    },
+    {
+      "path": "pilot/simhand01/budget.mjs",
+      "sha256": "36d77fc190c84f8932ea049431510cd3a009bb2465fea315df48202a7e1851ca",
+      "bytes": 1994,
+      "mode": 420,
+      "baseCheckoutSHA256": "18c5ef10f6c589f888a5b5eb40eec686b08cdbaa38c4fcab006617b1712aa7a8"
+    },
+    {
+      "path": "pilot/simhand01/cockpit.mjs",
+      "sha256": "629fd0b1836c38b30c839014267a497c66529c30f7987ccdfa7055bfa36097bb",
+      "bytes": 17677,
+      "mode": 420,
+      "baseCheckoutSHA256": "b00c11637170f3e2f139b54f919e104ff864e64299cdeb643ab43ee3ab5dd59f"
+    },
+    {
+      "path": "pilot/simhand01/evidence.mjs",
+      "sha256": "900890949f79eae4dd9ac43de32049b3f7bde3060c1d97d686f89ac627b091f7",
+      "bytes": 4931,
+      "mode": 420,
+      "baseCheckoutSHA256": "c53badd12a1f39cc3c60db035a69221bdc3c925c44aa36105bd1c875eacfcb6c"
+    },
+    {
+      "path": "pilot/simhand01/link.mjs",
+      "sha256": "ee382e25a8dcb1e3534a34b34975a21d53b72daba9e6bd9364296f40518e229e",
+      "bytes": 9311,
+      "mode": 420,
+      "baseCheckoutSHA256": "8e12480cdbab49c02c3eb26563a06f7104381019b79a2bd659b6794158d54f23"
+    },
+    {
+      "path": "pilot/simhand01/observer.mjs",
+      "sha256": "16e1a2047a61f918cadfee58d8236938d002289b8a4a0ba389a76ba49c95381a",
+      "bytes": 7126,
+      "mode": 420,
+      "baseCheckoutSHA256": "242923c8f502eefea4d3eccece8faa0fd194fb44c91cc4cbcc284452c75ac73a"
+    },
+    {
+      "path": "pilot/simhand01/projection.py",
+      "sha256": "e06137cd1b541c531d3b6027df941cf21f2d120a9027d6d0b624e115842afa4a",
+      "bytes": 7858,
+      "mode": 420,
+      "baseCheckoutSHA256": "75d787ea516e4f901ea7a8a88af78c4c4a7451d9d6e3bb1b8e5f557d5309865a"
+    },
+    {
+      "path": "pilot/simhand01/server.mjs",
+      "sha256": "a77f46c829a681edbe3949267ceb71918b56e28eb4b4fc470b34e80c3bbd1226",
+      "bytes": 24869,
+      "mode": 420,
+      "baseCheckoutSHA256": "902f06d3995c498cf74a1064c679f3971f4a9e68947254e33a85bd283d0891bd"
+    },
+    {
+      "path": "planning/simhand01/dependencies.json",
+      "sha256": "02d91d5855cb6490cfae270a55c2ed38b8dbe2a3f10ba4da767acff46168fa62",
+      "bytes": 20083,
+      "mode": 420,
+      "baseCheckoutSHA256": "86ff0e6d7c46b4f0a318c18492da0dd55e9e6e31dbc3c9ba03c64ab66e594bcc"
+    }
+  ],
+  "selectionAutomatic": false,
+  "standaloneInstaller": false,
+  "APKIncluded": false,
+  "runtimeAndRawIncluded": false,
+  "newSignature": false
+}

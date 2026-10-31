@@ -1,0 +1,15 @@
+import{readFile,writeFile}from'node:fs/promises';import{createHash}from'node:crypto';import{Decoder,unhex}from'../protocol22/wire.mjs';import{validateCommand,decodeChunkHex}from'./bridge.mjs';
+const E=new URL('../../evidence/transport26/',import.meta.url);const raw=await readFile(new URL('network-corpus.json',E)),corpus=JSON.parse(raw),checks=[];
+function check(name,pass,detail={}){checks.push({name,pass:!!pass,...detail});if(!pass)throw Error(name);}
+for(const scenario of corpus.scenarios){const s=scenario.review;const decoders=new Map(),observed=new Set();let last=-1,rx=0,tx=0;
+ check(scenario.id+' ordered bounded raw receipt journal',s.network.length<=2048&&s.network.every((x,i)=>{const ok=x.n===i+1&&x.atMs>=last;last=x.atMs;return ok;}));
+ for(const row of s.network){
+  if(row.kind==='TCP_RX'){const key=row.epoch+'/'+row.role;if(!decoders.has(key))decoders.set(key,new Decoder());const bytes=decodeChunkHex(row.rawHex);rx+=bytes.length;for(const f of decoders.get(key).push(bytes))observed.add(row.role+'/'+f.rawHex);}
+  if(row.kind==='BROKER_DELIVERY')check(scenario.id+' exact received frame has original TCP bytes',observed.has(row.role+'/'+row.rawHex));
+  if(row.kind==='TCP_TX_ATTEMPT'){tx++;const bytes=unhex(row.rawHex);validateCommand(bytes,row,row.context);check(scenario.id+' dispatched exact raw SHA/peer receipt',createHash('sha256').update(bytes).digest('hex')===row.sha256&&scenario.peerReceipts.filter(x=>x.rawHex===row.rawHex).length===1&&row.role==='payload');const t=s.broker.transactions.find(x=>x.id===row.transactionId);check(scenario.id+' immutable transaction target/context match',!!t&&t.bindingId===row.bindingId&&t.protocol.rawCommandHex===row.rawHex&&t.generation===row.context.generation);}
+ }
+ check(scenario.id+' only disarmed actual heartbeat/no AP writes/no real media',s.aircraft.system===42&&s.aircraft.component===1&&!(s.aircraft.fields.base_mode&128)&&s.aircraft.origin==='ACTUAL_LOOPBACK_ARDUCOPTER_HEARTBEAT'&&s.aircraftWrites===0&&s.automaticRetries===0&&s.automaticReconnects===0&&!s.physicalMediaVerified&&!s.causalExecutionProven&&s.broker.transactions.every(x=>!x.physicalMediaVerified&&!x.causalExecutionProven));
+ check(scenario.id+' incomplete evidence is disclosed',scenario.id==='network-evidence-bound'?!s.networkEvidenceComplete&&s.evidenceStop.reason==='NETWORK_RECEIPT_BOUND':s.networkEvidenceComplete);
+ check(scenario.id+' scenario has raw network and explicit dispatch',rx>0&&tx>0,{rxBytes:rx,dispatches:tx});
+}
+await writeFile(new URL('raw-replay.json',E),JSON.stringify({status:checks.every(x=>x.pass)?'PASS':'FAIL',corpusSha256:createHash('sha256').update(raw).digest('hex'),scenarios:corpus.scenarios.length,checks,scope:'Raw framing/SHA/target/peer receipt replay with same pinned codec, not independent protocol oracle; incomplete journal never claims complete receipt history. No causal/physical/hardware inference.'},null,2)+'\n');console.log('Raw evidence replay',corpus.scenarios.length,'scenarios',checks.length,'receipt assertions PASS; separate from canonical functional tests');

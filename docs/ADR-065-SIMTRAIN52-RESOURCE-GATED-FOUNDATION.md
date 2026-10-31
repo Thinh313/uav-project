@@ -1,0 +1,7 @@
+# ADR065 Resource gated simulator foundation
+
+Accepted for isolated implementation15/10/2026 under new user instruction. Strategic priority is SIMTRAIN52 live council demonstration. Current host lacks admitted headroom for fullAP/backend trace/media workload, so implement reusable input/authority and scene/recorded-model inspection while live execution remains gated. This is prospective scope sequencing, not a replacement of G1 pacing or claimed completion of the product.
+
+Reuse pinned Three.js/WebGL2 read-only, no stack migration for a static art benchmark. Renderer observes supplied timestamped snapshots; replay never routes input to physical/drone/AP. Separate mock input monitor, recorded reference state and future live transport; no mode button can move the aircraft from UI. Inherit existing speedup1/cap500ms/oracle requirements for futureSITL, do not launch original runtime or unfreeze source. Fourrotor reference mesh labeled as such; no Hera fidelity assertion. Once live admission and pacing are accepted, integrate a new adapter after tests, not by unlocking front-end flags.
+
+Host machine inventory is observed, actual projector/device gamepad unknown. Resource calculations retain pessimistic peak raw/WAL/media/export plus margin, not compression assumptions. Standalone foundation test budget32MiB can proceed only above actual20GiB+reserve. All historical planning documents unchanged. User resource question pending does not authorize deletions or relaxing floor.

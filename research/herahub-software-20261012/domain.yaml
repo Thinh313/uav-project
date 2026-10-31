@@ -1,0 +1,97 @@
+domain: herahub-software-20261012
+entity_label: Version-scoped software integration evidence
+schema:
+  type_field: null
+  fields:
+  - abi
+  - aircraft-battery
+  - api-endpoints
+  - api-family
+  - background-start
+  - calibration
+  - camera-upload
+  - capability-ui
+  - capture-observation
+  - channel-feedback
+  - connection-example
+  - controller-battery-api
+  - controller-bsp-update
+  - cpu-topology
+  - current-channel-map
+  - decoder-limit
+  - device-sdk-url
+  - flight-authority
+  - forwarding
+  - gpu
+  - h265-depayload
+  - historical-name
+  - input-events
+  - installed-build
+  - installed-codec-limits
+  - installed-radio
+  - joystick-count
+  - legacy-control-example
+  - link-statistics
+  - live-video-codec
+  - low-latency
+  - manual-axis
+  - manual-version
+  - measured-latency
+  - mission-ownership
+  - mission-patterns
+  - offline-map
+  - os
+  - package-update
+  - packet-dedup
+  - payload-ota
+  - payload-ota-guards
+  - per-link-status
+  - permission-checks
+  - platform
+  - power
+  - production-signer
+  - rc-functions
+  - resume
+  - rtcm-carrier
+  - rtk-client
+  - rtsp-source
+  - save-upload
+  - signing
+  - soc
+  - storage
+  - storage-claim
+  - survey-figures
+  - survey-grid
+  - terrain
+  - terrain-export
+  - transport
+  - version
+  - video-codec
+  - video-count
+  - vio
+rollup_field: null
+universe:
+  estimate: null
+  basis: 45 selected public capture requests, not exhaustive product/SDK coverage
+alias_map: {}
+ambiguous_clusters:
+- - RtR HeraHub (Intel public platform)
+  - RtR HeraHub v2 (Android public platform)
+- - RtR HeraLink (historical naming)
+  - CubePilot HereLink
+domain_gates:
+  no_inferred_fields:
+  - soc
+  - os
+  - abi
+  - device-sdk-url
+  - current-channel-map
+  - installed-radio
+  - installed-codec-limits
+  - measured-latency
+  - controller-battery-api
+  - controller-bsp-update
+  - production-signer
+  - installed-build
+  - live-video-codec
+  - api-endpoints

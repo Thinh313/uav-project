@@ -1,0 +1,78 @@
+{
+  "format": "aeris-beta-campaign-plan-consistency",
+  "version": 1,
+  "atUTC": "2026-10-26T16:28:19.609653+00:00",
+  "status": "PLAN_STRUCTURE_VALIDATED_NOT_PRODUCT_ACCEPTANCE",
+  "reviewer": "Sameassistant architectural/self-review; no independent human/agent flight review",
+  "counts": {
+    "milestones": 7,
+    "requirements": 28,
+    "metrics": 13,
+    "featureGroups": 48,
+    "scenarioDesigns": 48,
+    "taskPackages": 22,
+    "customerNeeds": 7,
+    "localInputsSHAchecked": 9,
+    "polygonCorridorNominalRepetitions": 18
+  },
+  "checks": [
+    "unique IDs",
+    "acyclic milestone and task dependencies",
+    "all MUST requirements covered by case designs",
+    "48 feature groups mapped with explicit scope",
+    "release gate matches all MUST and disallows required NOT_CHECKED",
+    "customer traceability",
+    "metric target/method links",
+    "historical input SHA preservation",
+    "20/10GiB and frame/fsync/speedup/cap invariants",
+    "Python AST",
+    "HTML IDs/anchors/local links",
+    "97 preexisting missing paths unchanged; no tracked source modifications"
+  ],
+  "localLinksChecked": [
+    "../planning/beta-campaign01/MASTERPLAN.md",
+    "../planning/beta-campaign01/campaign.json",
+    "../planning/beta-campaign01/TIP-M0.md",
+    "../planning/beta-campaign01/PLAN-VALIDATION.json"
+  ],
+  "files": {
+    "planning/beta-campaign01/campaign.json": {
+      "bytes": 85571,
+      "sha256": "2d266d21fc095c5ba34c9b175bf82a823a6b31f514622dd7efb03621863fe614"
+    },
+    "planning/beta-campaign01/validate_plan.py": {
+      "bytes": 6081,
+      "sha256": "40910e0d9d05f274b54e01e66f74a69a0d674c5e2c616a7450590757b42ebf2f"
+    },
+    "planning/beta-campaign01/build_plan.py": {
+      "bytes": 33250,
+      "sha256": "b716d757d85ac918e18d94453beb3b97d2a8da2dc8f34b1c501d8f82ebe60970"
+    },
+    "planning/beta-campaign01/TIP-M0.md": {
+      "bytes": 3072,
+      "sha256": "15f146c706791f9a29381a1b3ac8f53e5eae5d89970239f84e4d774f0bbfff8c"
+    },
+    "planning/beta-campaign01/README.md": {
+      "bytes": 1080,
+      "sha256": "31a638d85c1d6ecff0a4846e2ddd42d6d4bab4b856a23306e87179c29eeca269"
+    },
+    "planning/beta-campaign01/MASTERPLAN.md": {
+      "bytes": 33823,
+      "sha256": "beabce9cee0503d9c33179ecadf9c2b8e86c95057bc05de0140bbabdd737b17d"
+    },
+    "planning/beta-campaign01/render_plan.py": {
+      "bytes": 9161,
+      "sha256": "5fba9a2e3439ca100afcf9e5b5a0d796d05fef69aca77f81953cd6e0cab99831"
+    },
+    "delivery/PLAN-BETA-CAMPAIGN01.html": {
+      "bytes": 74233,
+      "sha256": "8cb4f765dee36b19b86a46d13a8ce4e50aa6177f0e06305536525f8bc751d50e"
+    }
+  },
+  "runtimeTestsRun": false,
+  "browserVisualQA": "NOT_RUN; planHTML structurally checked only",
+  "hardwareFlightOrSigning": false,
+  "planningCompleted": true,
+  "campaignExecuted": false,
+  "productStatus": "NOT_READY_BETA_UNTIL_GATES_EXECUTED"
+}

@@ -1,0 +1,12 @@
+{
+  "milestone": "NATIVE89",
+  "status": "READY_SCOPED_ANDROID_INPUT_VIDEO_BENCH_NOT_HERA_ACCEPTANCE",
+  "artifactKind": "SEPARATE_BENCH_COMPANION",
+  "apk": "native/native89/dist/aeris-native89-development02.apk",
+  "apkSha256": "2d7c8329145743c4fd8849b56c7cf92540fe19bb2677105bd94b502d3b237a1f",
+  "report": "delivery/COMPLETION-NATIVE89.html",
+  "verification": "evidence/native89/verification.json",
+  "cockpit88Changed": false,
+  "hardwareAcceptance": "NOT_CHECKED",
+  "runtime": "STOPPED"
+}

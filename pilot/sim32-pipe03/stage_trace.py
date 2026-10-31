@@ -1,0 +1,1 @@
+../sim32-instrument01/stage_trace.py

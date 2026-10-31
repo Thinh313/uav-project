@@ -1,0 +1,14 @@
+import fs from'node:fs';import{crc}from'../../pilot/mavflight37/wire.mjs';import{DEFINITIONS}from'../../pilot/apstream40/definitions.mjs';import assert from'node:assert/strict';import{FullFramer,encodeFull,hex,unhex}from'../../pilot/apstream40/wire.mjs';import{execFileSync}from'node:child_process';
+const E='evidence/native95',all=fs.readFileSync(E+'/qualified94-stream.tsv','utf8').trim().split('\n').map(l=>l.split('\t')),items=all.filter(a=>a[0]==='ITEM'),prefix=all.filter(a=>a[0]!=='ITEM');prefix.splice(prefix.findIndex(a=>a[0]==='GRANT'));const at=+prefix.at(-1)[1];let start=false,last=null,pos=null;const framer=new FullFramer();const framed=[];
+for(const a of prefix){if(a[0]!=='RX'){framed.push(a);continue;}let raw=unhex(a[2]);if(!start){const k=raw.findIndex(x=>x===253||x===254);if(k<0)continue;raw=raw.slice(k);start=true;}for(const f of framer.push(raw,+a[1],+a[1])){if(f.system===42&&f.component===1){last=f;if(f.id===33)pos=f;}framed.push(['RX',a[1],f.rawHex]);}}
+assert(last&&pos);const seq=(last.seq+1)%256,meta={seq,system:42,component:1};
+const heartbeat=encodeFull(0,{type:2,autopilot:3,base_mode:81,custom_mode:0,system_status:4,mavlink_version:3},meta);
+const cases=[];const add=(name,rows,expected)=>{const path=E+'/fault-'+name+'.tsv';const text=[...items,...rows].map(a=>a.join('\t')).join('\n')+'\n';if(fs.existsSync(path))assert.equal(fs.readFileSync(path,'utf8'),text);else fs.writeFileSync(path,text,{flag:'wx'});const p=execFileSync;let stderr='',exit=0;try{p('/opt/homebrew/opt/openjdk/libexec/openjdk.jdk/Contents/Home/bin/java',['-cp','native/native95/.host95','vn.rtr.aeris.native95.GateReplay95Test',path],{stdio:'pipe'});}catch(e){stderr=String(e.stderr);exit=e.status;}assert(exit!==0&&stderr.includes(expected),name+':'+stderr);cases.push({name,expected,pass:true,stderr,path});};
+add('clock-regression',[...prefix,['RX',String(at-1),hex(heartbeat)]],'NATIVE_CLOCK_REGRESSION');
+add('heartbeat-stale',[...prefix,['RX',String(at+4000),hex(heartbeat)]],'NATIVE_HEARTBEAT_LOST');
+add('boot-regression',[...prefix,['RX',String(at+1),hex(encodeFull(33,{...pos.fields,time_boot_ms:0},meta))]],'NATIVE_BOOT_REGRESSION');
+add('partial-stale',[['RX','0','fd09'],['RX','1601','00']],'NATIVE_PARTIAL_STALE');
+const foreign=framed.map(a=>{if(a[0]!=='RX')return a;const f=new FullFramer().push(unhex(a[2]),0)[0];const b=unhex(f.rawHex),v2=b[0]===253,h=v2?10:6;b[v2?5:3]=43;const n=h+b[1],c=crc(b.slice(1,n),DEFINITIONS[f.id].crc);b[n]=c&255;b[n+1]=c>>8;return ['RX',a[1],hex(b)]});
+add('foreign-cannot-grant',[...foreign,['GRANT',String(at+1)]],'NATIVE_GRANT_REQUIRES_READONLY_OBSERVATIONS');
+const corrupt=structuredClone(framed);const c=corrupt.find(a=>a[0]==='RX');const b=unhex(c[2]);b[b.length-1]^=1;c[2]=hex(b);add('incoming-crc',corrupt,'NATIVE_CRC');
+fs.writeFileSync(E+'/native-faults95.json',JSON.stringify({status:'PASS',checks:cases.length,cases},null,2),{flag:'wx'});console.log({status:'PASS',checks:cases.length});

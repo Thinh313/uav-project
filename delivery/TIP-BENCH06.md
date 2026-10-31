@@ -1,0 +1,13 @@
+# TIP-BENCH06 · reproducible mission matrix and A/B preparation
+
+Owner: continuing the established roadmap, with no SDK or HeraHub device. Single agent switches Contractor → Builder → Verify. Scope is hardware-free M2 mission-pattern acceptance plus a black-box A/B preparation harness; RAGAS measurement remains unperformed. No new vehicle commands, parameter writer, RAGAS application source or field flight.
+
+AC01 deterministic, version/hash-bound corpus: narrow and rotated synthetic surveys, pinned QGC-source relative mission, and rejected concave/out-of-world/unresolved-datum/camera-rate cases. Synthetic cases never labelled QGC-authored. Existing compiler/profile authority remains unchanged.
+AC02 pre-run freeze of suite, build/source digests, autopilot binary/defaults/image/command and pinned simulator world/profile; every actual trial records a disarmed restart, session/configuration and an immutable execution record bound to the selected case.
+AC03 actual dedicated SITL: three completed patterns, one interrupted rotated pattern using HOLD/RTL, negative uploads rejected before mission writes, readback and final disarmed observations. Restarts only after observed disarmed. No force ARM or PARAM_SET. Preserve failures and clean logs.
+AC04 validated, sealed run bundle and read-only evidence UI. Derive outcomes from records, show A engineering observations, B NOT_CHECKED, operator/performance measures null and no comparative winner. Import/export retains exact case/build/runtime bindings; hashes are integrity, not signed authenticity.
+AC05 meaningful negative unit/API tests and browser import/export/corruption/offline checks; common control geometry gate includes the new page. No POST from evidence UI; missing/invalid receipts fail visibly without becoming a flight authority.
+AC06 keep prior QGC/record/profile/control semantics; run unit/API/syntax, control/layout/QGC regressions and freeze/build integrity checks. New external technical claims are unnecessary; reuse pinned sources.
+AC07 ADR/contract, source/evidence manifests and completion with REQ/AC coverage, sole canonical continuation intent via existing SOT adapter/baseline/gate; no unverified installed capability. No installs/project copies; bounded logs, fixed simulator image, prune images only.
+
+Decisions: already-authorized roadmap continuation supplies scope; no new architecture/hardware decision requires clarification. Unsafe concave connectors remain a negative case instead of weakening the planner. Formal operator A/B collection will be a later contract when both binaries/configurations are available.

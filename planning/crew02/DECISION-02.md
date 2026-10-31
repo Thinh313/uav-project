@@ -1,0 +1,3 @@
+# CREW02 L2 refinement02
+
+20/10/2026. Contractor approved Builder proposal: omit only `stations[].seenMs` from DirectTransport semantic snapshot equality, like existing snapshotAtMs. Own heartbeat500ms still refreshes native monotonic presence and PayloadCore station in memory. Actual snapshots/polls retain seenMs, all raw RX retained, JOIN/INTENT/REVOKE provenance and send-boundary presence checks retained. Authority/lease/freshness, alive/expiry, grant/proposal/revision changes must still emit meaningful durable state; no frame loss or reduced fsync-before-sensor/wire policy. This avoids four redundant full state fsyncs/second from two crew heartbeats. Decision does not change frozen TIP AC or baseline. Performance benefit remains unmeasured until runtime.

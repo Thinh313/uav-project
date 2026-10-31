@@ -1,0 +1,11 @@
+{
+  "format": "aeris-integration03-host-dependencies",
+  "version": 1,
+  "files": {
+    "native/crew02/host/companion.mjs": "2340703a0e9ea5e507d31e7304174d38d8b613eaf7b07b087bb1afb5f4533677",
+    "native/crew02/host/client.mjs": "72692848fafb953ebe6d784705a5175d8188dabccefc5f1039aa0931122fee8d",
+    "native/crew02/host/cockpit.css": "dcae5c8d4267f4f4d7fa3838f0bd6f0773c83fc50baf9bed629f1ee725b1bec5",
+    "native/crew02/host/index.html": "3da3e0ea4b748e99f95d468bf1fc5e3f41831f2f33ea5c884afae0cb27a53b2f",
+    "native/crew02/assets/fonts/Barlow-SemiBold.ttf": "86577cb32f8abe3673db53ca0f4221e6856751a4f6730c867e00f720f8bb1fc5"
+  }
+}

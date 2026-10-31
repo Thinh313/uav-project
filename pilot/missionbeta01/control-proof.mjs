@@ -1,0 +1,12 @@
+import{Decoder}from'../../services/mavlink.mjs';
+const need=(v,m)=>{if(!v)throw Error(m);};
+/** Rebuild operator mode proof from raw TX/ACK/HB; never trust mode metadata alone. */
+export function verifyControls(rows,accepted){const rx=new Decoder(),tx=new Decoder(),proofs=[];let pending=null,policy=null,authority=null;const session=rows.find(r=>r.kind==='SESSION')?.data.context;
+ for(const row of rows){const time=Number(BigInt(row.hostNs))/1e6;
+  if(row.kind==='FLIGHT_OPERATOR_GRANTED'){need(row.data.session===session?.session&&row.data.boot===session?.boot,'GRANT_SESSION');authority=row.data;}if(row.kind==='FLIGHT_OPERATOR_REVOKED')authority=null;
+  if(row.kind==='MODE_CONTROL_INTENT'){const d=row.data;need(authority&&d.operatorAuthority?.id===authority.authorityId&&d.operatorAuthority.clientId===authority.clientId&&d.operatorAuthority.clientEpoch===authority.clientEpoch&&d.session===session?.session&&d.boot===session?.boot,'MODE_OPERATOR_AUTHORITY');need(!pending&&({pause:5,resume:3,rtl:6})[d.action]===d.mode,'CONTROL_INTENT_SEQUENCE');if(d.action==='resume')need(policy&&time-policy.time>=0&&time-policy.time<=1500,'RESUME_TYPED_WIRE_FRESH');pending={action:d.action,mode:d.mode,intentRecord:row.n,intentTime:time,tx:null,ack:null,hb:null};}
+  if(row.kind==='TX_RAW')for(const m of tx.push(Buffer.from(row.data.rawHex,'hex'))){if(pending&&m.id===76&&m.fields.command===176&&m.fields.param2===pending.mode)pending.tx=row.n;}
+  if(row.kind==='RX_RAW')for(const m of rx.push(Buffer.from(row.data.rawHex,'hex'))){if(m.system!==42||m.component!==1)continue;if(m.id===22&&m.fields.param_id==='MIS_RESTART')policy=m.fields.param_type===2&&m.fields.param_value===0?{time,record:row.n}:null;if(pending&&pending.tx&&m.id===77&&m.fields.command===176&&m.fields.result===0)pending.ack=row.n;if(pending&&pending.tx&&m.id===0&&m.fields.custom_mode===pending.mode&&!!(m.fields.base_mode&128))pending.hb=row.n;}
+  if(row.kind==='MODE_CONTROL_OBSERVED'){need(pending&&pending.action===row.data.action&&pending.mode===row.data.mode&&pending.tx&&pending.ack&&pending.hb&&pending.tx>pending.intentRecord,'MODE_ACK_AND_HEARTBEAT_PROOF');proofs.push({...pending,observationRecord:row.n,ackAloneNotExecution:true});pending=null;}
+ }
+ need(!accepted||!pending,'ACCEPTED_WITH_UNOBSERVED_CONTROL');return{observed:proofs,pendingUnknown:pending,source:'RAW_TX_ACK_HEARTBEAT_TYPED_PARAMETER_RECOMPUTATION',authorityRestorable:false};}

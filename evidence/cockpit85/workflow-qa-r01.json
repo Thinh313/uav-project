@@ -1,0 +1,71 @@
+{
+  "scope": "Host JVM journal + semantic workflow replay; not Android/ART/native UI",
+  "pass": 16,
+  "fail": 0,
+  "results": [
+    {
+      "name": "Actual Java journal: survey save/compile/preflight/Fly/review",
+      "pass": true
+    },
+    {
+      "name": "Restart exact saved draft, no source or grant restored",
+      "pass": true
+    },
+    {
+      "name": "ACK is recorded without progress or fabricated completion",
+      "pass": true
+    },
+    {
+      "name": "Restart running preserves prefix and appends interrupted restart",
+      "pass": true
+    },
+    {
+      "name": "Background interruption commits and never auto resumes",
+      "pass": true
+    },
+    {
+      "name": "Profile fault blocks confirmations and start: stale",
+      "pass": true
+    },
+    {
+      "name": "Profile fault blocks confirmations and start: wrongtype",
+      "pass": true
+    },
+    {
+      "name": "Profile fault blocks confirmations and start: mismatch",
+      "pass": true
+    },
+    {
+      "name": "Profile fault blocks confirmations and start: missing",
+      "pass": true
+    },
+    {
+      "name": "Airspace gates preserved: blocked",
+      "pass": true
+    },
+    {
+      "name": "Airspace gates preserved: stale",
+      "pass": true
+    },
+    {
+      "name": "Snapshot quota preserves all proofs/prefix; attempt transition is disclosed",
+      "pass": true
+    },
+    {
+      "name": "Lost commit reply is unknown, no automatic retry",
+      "pass": true
+    },
+    {
+      "name": "Pending head refuses without deleting or retrying",
+      "pass": true
+    },
+    {
+      "name": "Tampered historical bytes block replay without overwrite",
+      "pass": true
+    },
+    {
+      "name": "Clock and ticket expiration cannot start stale mission",
+      "pass": true
+    }
+  ]
+}

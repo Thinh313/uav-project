@@ -1,0 +1,33 @@
+{
+  "at": "2026-10-20T09:01:05.248386+07:00",
+  "overallStatus": "NOT READY",
+  "reason": "RESOURCE_STOP_FINAL_ACTUAL_ACCEPTANCE_PENDING",
+  "apk": "native/integration03/dist/aeris-integration03-development03.apk",
+  "apkSha256": "bd91ac2eef7cb8c977bf613a91eb210185318c39c1baf22e40d2c9f0f5b63554",
+  "nativeSourceId": "1d7901adbc07e39a68bac86a51be1ae7d0cd1dd3e7a62ce94f7f5988c241b7dd",
+  "observerSourceId": "3894481d2de04f8be796343896bee451fdf829b85e1aecf3f5149ece808e2d1c",
+  "mandatoryAC": 10,
+  "scopedAccepted": [
+    "I02"
+  ],
+  "partiallyVerified": [
+    "I01",
+    "I04",
+    "I06",
+    "I09",
+    "I10"
+  ],
+  "finalActualNotRun": [
+    "I03",
+    "I05",
+    "I07",
+    "I08"
+  ],
+  "protectedPaths": 71158,
+  "protectedFailures": [],
+  "sourceGate": "evidence/integration03-qa/source-gate05.json",
+  "report": "delivery/COMPLETION-INTEGRATION03.md",
+  "noProductionRelease": true,
+  "noHardwareClaim": true,
+  "resourcesNeeded": "Measured>=28GiB plus freshboundedresource/runadmission; noautoretry"
+}

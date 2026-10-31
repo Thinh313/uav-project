@@ -1,0 +1,44 @@
+{
+  "format": "aeris-correction02-media-tests",
+  "version": 1,
+  "status": "PASS",
+  "at": "2026-10-26T01:38:09.464Z",
+  "prefix": {
+    "format": "aeris-betastability02-trace-prefix",
+    "version": 1,
+    "traceId": "889d475a-67c4-4ce1-908e-7ebf4898bad8",
+    "configId": "3ce2cc7d-2b54-4a4a-9f04-d66035c2c286",
+    "serverBoot": "0377340d-3ae5-4ae9-aac5-3e74b22b89d2",
+    "requiredThrough": 2,
+    "ackThrough": 2,
+    "durable": {
+      "complete": true,
+      "fatal": null,
+      "hostThrough": 34,
+      "hostHead": "ed076a31ffee12d9b48d46244170cffd83e4ca6dcc63db925a647ddc789473b0",
+      "receiptFile": "trace-barrier-00001.json",
+      "receiptSha256": "8decdf7161dd9015c1659dab20519f88aea4ba254bfc0fc917ce6297bd4f4fe7"
+    },
+    "currentLiveAccepted": 4,
+    "currentLiveAcknowledged": 2,
+    "currentLivePending": 2,
+    "fatal": null,
+    "scope": "DURABLE_REQUIRED_PREFIX_ONLY_LIVE_PRODUCER_CONTINUES"
+  },
+  "verified": {
+    "status": "PASS",
+    "events": 34,
+    "head": "ed076a31ffee12d9b48d46244170cffd83e4ca6dcc63db925a647ddc789473b0",
+    "blocks": 1,
+    "compressedBytes": 3013,
+    "receipt": "trace-barrier-00001.json",
+    "receiptSha256": "8decdf7161dd9015c1659dab20519f88aea4ba254bfc0fc917ce6297bd4f4fe7",
+    "final": false,
+    "scope": "FULL_HOST_TRACE_THROUGH_ACCEPTED_SEQUENCE"
+  },
+  "scope": "ACTUAL_LOCALHOST_MEDIA_CODE_MOCK_SOURCE_ONLY_NO_ENCODER_ANDROID_AP_OR_FLIGHT",
+  "rejections": [
+    "MISSING_REQUIRED_ACK",
+    "WRONG_CONFIG"
+  ]
+}

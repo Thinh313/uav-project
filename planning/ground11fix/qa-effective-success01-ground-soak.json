@@ -1,0 +1,3970 @@
+{
+  "clockBasis": "MACOS_CLOCK_UPTIME_RAW_NS_SAME_HOST_BOOT_V1",
+  "hostBootId": "11111111-2222-3333-4444-555555555555",
+  "status": "PASS_GROUND_INTERVAL_NOT_AP_AUTHORITY",
+  "samples": [
+    {
+      "binding": {
+        "documentId": "mock-doc",
+        "clientId": "mock-client",
+        "clientEpoch": 1,
+        "clientInstance": "mock-instance",
+        "configId": "mock-config",
+        "modelSha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "planSha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+      },
+      "counts": {
+        "started": 0,
+        "acknowledged": 0,
+        "failed": 0,
+        "deadline": 0
+      },
+      "clockSessionId": "viewer-mock-clock",
+      "seq": 1,
+      "observationAgeMs": 100,
+      "clientAgeMs": 100,
+      "frameAgeMs": 10,
+      "clockMappingSampledBrowserMs": 0,
+      "clockMappingValidUntilBrowserMs": 60000,
+      "diagnosticLastTimerLagMs": null,
+      "elapsedPythonS": 0.0
+    },
+    {
+      "binding": {
+        "documentId": "mock-doc",
+        "clientId": "mock-client",
+        "clientEpoch": 1,
+        "clientInstance": "mock-instance",
+        "configId": "mock-config",
+        "modelSha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "planSha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+      },
+      "counts": {
+        "started": 0,
+        "acknowledged": 0,
+        "failed": 0,
+        "deadline": 0
+      },
+      "clockSessionId": "viewer-mock-clock",
+      "seq": 2,
+      "observationAgeMs": 100,
+      "clientAgeMs": 100,
+      "frameAgeMs": 10,
+      "clockMappingSampledBrowserMs": 0,
+      "clockMappingValidUntilBrowserMs": 60000,
+      "diagnosticLastTimerLagMs": null,
+      "elapsedPythonS": 0.5
+    },
+    {
+      "binding": {
+        "documentId": "mock-doc",
+        "clientId": "mock-client",
+        "clientEpoch": 1,
+        "clientInstance": "mock-instance",
+        "configId": "mock-config",
+        "modelSha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "planSha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+      },
+      "counts": {
+        "started": 0,
+        "acknowledged": 0,
+        "failed": 0,
+        "deadline": 0
+      },
+      "clockSessionId": "viewer-mock-clock",
+      "seq": 3,
+      "observationAgeMs": 100,
+      "clientAgeMs": 100,
+      "frameAgeMs": 10,
+      "clockMappingSampledBrowserMs": 0,
+      "clockMappingValidUntilBrowserMs": 60000,
+      "diagnosticLastTimerLagMs": null,
+      "elapsedPythonS": 1.0
+    },
+    {
+      "binding": {
+        "documentId": "mock-doc",
+        "clientId": "mock-client",
+        "clientEpoch": 1,
+        "clientInstance": "mock-instance",
+        "configId": "mock-config",
+        "modelSha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "planSha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+      },
+      "counts": {
+        "started": 0,
+        "acknowledged": 0,
+        "failed": 0,
+        "deadline": 0
+      },
+      "clockSessionId": "viewer-mock-clock",
+      "seq": 4,
+      "observationAgeMs": 100,
+      "clientAgeMs": 100,
+      "frameAgeMs": 10,
+      "clockMappingSampledBrowserMs": 0,
+      "clockMappingValidUntilBrowserMs": 60000,
+      "diagnosticLastTimerLagMs": null,
+      "elapsedPythonS": 1.5
+    },
+    {
+      "binding": {
+        "documentId": "mock-doc",
+        "clientId": "mock-client",
+        "clientEpoch": 1,
+        "clientInstance": "mock-instance",
+        "configId": "mock-config",
+        "modelSha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "planSha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+      },
+      "counts": {
+        "started": 0,
+        "acknowledged": 0,
+        "failed": 0,
+        "deadline": 0
+      },
+      "clockSessionId": "viewer-mock-clock",
+      "seq": 5,
+      "observationAgeMs": 100,
+      "clientAgeMs": 100,
+      "frameAgeMs": 10,
+      "clockMappingSampledBrowserMs": 0,
+      "clockMappingValidUntilBrowserMs": 60000,
+      "diagnosticLastTimerLagMs": null,
+      "elapsedPythonS": 2.0
+    },
+    {
+      "binding": {
+        "documentId": "mock-doc",
+        "clientId": "mock-client",
+        "clientEpoch": 1,
+        "clientInstance": "mock-instance",
+        "configId": "mock-config",
+        "modelSha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "planSha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+      },
+      "counts": {
+        "started": 0,
+        "acknowledged": 0,
+        "failed": 0,
+        "deadline": 0
+      },
+      "clockSessionId": "viewer-mock-clock",
+      "seq": 6,
+      "observationAgeMs": 100,
+      "clientAgeMs": 100,
+      "frameAgeMs": 10,
+      "clockMappingSampledBrowserMs": 0,
+      "clockMappingValidUntilBrowserMs": 60000,
+      "diagnosticLastTimerLagMs": null,
+      "elapsedPythonS": 2.5
+    },
+    {
+      "binding": {
+        "documentId": "mock-doc",
+        "clientId": "mock-client",
+        "clientEpoch": 1,
+        "clientInstance": "mock-instance",
+        "configId": "mock-config",
+        "modelSha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "planSha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+      },
+      "counts": {
+        "started": 0,
+        "acknowledged": 0,
+        "failed": 0,
+        "deadline": 0
+      },
+      "clockSessionId": "viewer-mock-clock",
+      "seq": 7,
+      "observationAgeMs": 100,
+      "clientAgeMs": 100,
+      "frameAgeMs": 10,
+      "clockMappingSampledBrowserMs": 0,
+      "clockMappingValidUntilBrowserMs": 60000,
+      "diagnosticLastTimerLagMs": null,
+      "elapsedPythonS": 3.0
+    },
+    {
+      "binding": {
+        "documentId": "mock-doc",
+        "clientId": "mock-client",
+        "clientEpoch": 1,
+        "clientInstance": "mock-instance",
+        "configId": "mock-config",
+        "modelSha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "planSha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+      },
+      "counts": {
+        "started": 0,
+        "acknowledged": 0,
+        "failed": 0,
+        "deadline": 0
+      },
+      "clockSessionId": "viewer-mock-clock",
+      "seq": 8,
+      "observationAgeMs": 100,
+      "clientAgeMs": 100,
+      "frameAgeMs": 10,
+      "clockMappingSampledBrowserMs": 0,
+      "clockMappingValidUntilBrowserMs": 60000,
+      "diagnosticLastTimerLagMs": null,
+      "elapsedPythonS": 3.5
+    },
+    {
+      "binding": {
+        "documentId": "mock-doc",
+        "clientId": "mock-client",
+        "clientEpoch": 1,
+        "clientInstance": "mock-instance",
+        "configId": "mock-config",
+        "modelSha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "planSha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+      },
+      "counts": {
+        "started": 0,
+        "acknowledged": 0,
+        "failed": 0,
+        "deadline": 0
+      },
+      "clockSessionId": "viewer-mock-clock",
+      "seq": 9,
+      "observationAgeMs": 100,
+      "clientAgeMs": 100,
+      "frameAgeMs": 10,
+      "clockMappingSampledBrowserMs": 0,
+      "clockMappingValidUntilBrowserMs": 60000,
+      "diagnosticLastTimerLagMs": null,
+      "elapsedPythonS": 4.0
+    },
+    {
+      "binding": {
+        "documentId": "mock-doc",
+        "clientId": "mock-client",
+        "clientEpoch": 1,
+        "clientInstance": "mock-instance",
+        "configId": "mock-config",
+        "modelSha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "planSha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+      },
+      "counts": {
+        "started": 0,
+        "acknowledged": 0,
+        "failed": 0,
+        "deadline": 0
+      },
+      "clockSessionId": "viewer-mock-clock",
+      "seq": 10,
+      "observationAgeMs": 100,
+      "clientAgeMs": 100,
+      "frameAgeMs": 10,
+      "clockMappingSampledBrowserMs": 0,
+      "clockMappingValidUntilBrowserMs": 60000,
+      "diagnosticLastTimerLagMs": null,
+      "elapsedPythonS": 4.5
+    },
+    {
+      "binding": {
+        "documentId": "mock-doc",
+        "clientId": "mock-client",
+        "clientEpoch": 1,
+        "clientInstance": "mock-instance",
+        "configId": "mock-config",
+        "modelSha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "planSha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+      },
+      "counts": {
+        "started": 0,
+        "acknowledged": 0,
+        "failed": 0,
+        "deadline": 0
+      },
+      "clockSessionId": "viewer-mock-clock",
+      "seq": 11,
+      "observationAgeMs": 100,
+      "clientAgeMs": 100,
+      "frameAgeMs": 10,
+      "clockMappingSampledBrowserMs": 0,
+      "clockMappingValidUntilBrowserMs": 60000,
+      "diagnosticLastTimerLagMs": null,
+      "elapsedPythonS": 5.0
+    },
+    {
+      "binding": {
+        "documentId": "mock-doc",
+        "clientId": "mock-client",
+        "clientEpoch": 1,
+        "clientInstance": "mock-instance",
+        "configId": "mock-config",
+        "modelSha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "planSha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+      },
+      "counts": {
+        "started": 0,
+        "acknowledged": 0,
+        "failed": 0,
+        "deadline": 0
+      },
+      "clockSessionId": "viewer-mock-clock",
+      "seq": 12,
+      "observationAgeMs": 100,
+      "clientAgeMs": 100,
+      "frameAgeMs": 10,
+      "clockMappingSampledBrowserMs": 0,
+      "clockMappingValidUntilBrowserMs": 60000,
+      "diagnosticLastTimerLagMs": null,
+      "elapsedPythonS": 5.5
+    },
+    {
+      "binding": {
+        "documentId": "mock-doc",
+        "clientId": "mock-client",
+        "clientEpoch": 1,
+        "clientInstance": "mock-instance",
+        "configId": "mock-config",
+        "modelSha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "planSha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+      },
+      "counts": {
+        "started": 0,
+        "acknowledged": 0,
+        "failed": 0,
+        "deadline": 0
+      },
+      "clockSessionId": "viewer-mock-clock",
+      "seq": 13,
+      "observationAgeMs": 100,
+      "clientAgeMs": 100,
+      "frameAgeMs": 10,
+      "clockMappingSampledBrowserMs": 0,
+      "clockMappingValidUntilBrowserMs": 60000,
+      "diagnosticLastTimerLagMs": null,
+      "elapsedPythonS": 6.0
+    },
+    {
+      "binding": {
+        "documentId": "mock-doc",
+        "clientId": "mock-client",
+        "clientEpoch": 1,
+        "clientInstance": "mock-instance",
+        "configId": "mock-config",
+        "modelSha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "planSha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+      },
+      "counts": {
+        "started": 0,
+        "acknowledged": 0,
+        "failed": 0,
+        "deadline": 0
+      },
+      "clockSessionId": "viewer-mock-clock",
+      "seq": 14,
+      "observationAgeMs": 100,
+      "clientAgeMs": 100,
+      "frameAgeMs": 10,
+      "clockMappingSampledBrowserMs": 0,
+      "clockMappingValidUntilBrowserMs": 60000,
+      "diagnosticLastTimerLagMs": null,
+      "elapsedPythonS": 6.5
+    },
+    {
+      "binding": {
+        "documentId": "mock-doc",
+        "clientId": "mock-client",
+        "clientEpoch": 1,
+        "clientInstance": "mock-instance",
+        "configId": "mock-config",
+        "modelSha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "planSha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+      },
+      "counts": {
+        "started": 0,
+        "acknowledged": 0,
+        "failed": 0,
+        "deadline": 0
+      },
+      "clockSessionId": "viewer-mock-clock",
+      "seq": 15,
+      "observationAgeMs": 100,
+      "clientAgeMs": 100,
+      "frameAgeMs": 10,
+      "clockMappingSampledBrowserMs": 0,
+      "clockMappingValidUntilBrowserMs": 60000,
+      "diagnosticLastTimerLagMs": null,
+      "elapsedPythonS": 7.0
+    },
+    {
+      "binding": {
+        "documentId": "mock-doc",
+        "clientId": "mock-client",
+        "clientEpoch": 1,
+        "clientInstance": "mock-instance",
+        "configId": "mock-config",
+        "modelSha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "planSha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+      },
+      "counts": {
+        "started": 0,
+        "acknowledged": 0,
+        "failed": 0,
+        "deadline": 0
+      },
+      "clockSessionId": "viewer-mock-clock",
+      "seq": 16,
+      "observationAgeMs": 100,
+      "clientAgeMs": 100,
+      "frameAgeMs": 10,
+      "clockMappingSampledBrowserMs": 0,
+      "clockMappingValidUntilBrowserMs": 60000,
+      "diagnosticLastTimerLagMs": null,
+      "elapsedPythonS": 7.5
+    },
+    {
+      "binding": {
+        "documentId": "mock-doc",
+        "clientId": "mock-client",
+        "clientEpoch": 1,
+        "clientInstance": "mock-instance",
+        "configId": "mock-config",
+        "modelSha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "planSha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+      },
+      "counts": {
+        "started": 0,
+        "acknowledged": 0,
+        "failed": 0,
+        "deadline": 0
+      },
+      "clockSessionId": "viewer-mock-clock",
+      "seq": 17,
+      "observationAgeMs": 100,
+      "clientAgeMs": 100,
+      "frameAgeMs": 10,
+      "clockMappingSampledBrowserMs": 0,
+      "clockMappingValidUntilBrowserMs": 60000,
+      "diagnosticLastTimerLagMs": null,
+      "elapsedPythonS": 8.0
+    },
+    {
+      "binding": {
+        "documentId": "mock-doc",
+        "clientId": "mock-client",
+        "clientEpoch": 1,
+        "clientInstance": "mock-instance",
+        "configId": "mock-config",
+        "modelSha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "planSha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+      },
+      "counts": {
+        "started": 0,
+        "acknowledged": 0,
+        "failed": 0,
+        "deadline": 0
+      },
+      "clockSessionId": "viewer-mock-clock",
+      "seq": 18,
+      "observationAgeMs": 100,
+      "clientAgeMs": 100,
+      "frameAgeMs": 10,
+      "clockMappingSampledBrowserMs": 0,
+      "clockMappingValidUntilBrowserMs": 60000,
+      "diagnosticLastTimerLagMs": null,
+      "elapsedPythonS": 8.5
+    },
+    {
+      "binding": {
+        "documentId": "mock-doc",
+        "clientId": "mock-client",
+        "clientEpoch": 1,
+        "clientInstance": "mock-instance",
+        "configId": "mock-config",
+        "modelSha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "planSha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+      },
+      "counts": {
+        "started": 0,
+        "acknowledged": 0,
+        "failed": 0,
+        "deadline": 0
+      },
+      "clockSessionId": "viewer-mock-clock",
+      "seq": 19,
+      "observationAgeMs": 100,
+      "clientAgeMs": 100,
+      "frameAgeMs": 10,
+      "clockMappingSampledBrowserMs": 0,
+      "clockMappingValidUntilBrowserMs": 60000,
+      "diagnosticLastTimerLagMs": null,
+      "elapsedPythonS": 9.0
+    },
+    {
+      "binding": {
+        "documentId": "mock-doc",
+        "clientId": "mock-client",
+        "clientEpoch": 1,
+        "clientInstance": "mock-instance",
+        "configId": "mock-config",
+        "modelSha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "planSha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+      },
+      "counts": {
+        "started": 0,
+        "acknowledged": 0,
+        "failed": 0,
+        "deadline": 0
+      },
+      "clockSessionId": "viewer-mock-clock",
+      "seq": 20,
+      "observationAgeMs": 100,
+      "clientAgeMs": 100,
+      "frameAgeMs": 10,
+      "clockMappingSampledBrowserMs": 0,
+      "clockMappingValidUntilBrowserMs": 60000,
+      "diagnosticLastTimerLagMs": null,
+      "elapsedPythonS": 9.5
+    },
+    {
+      "binding": {
+        "documentId": "mock-doc",
+        "clientId": "mock-client",
+        "clientEpoch": 1,
+        "clientInstance": "mock-instance",
+        "configId": "mock-config",
+        "modelSha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "planSha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+      },
+      "counts": {
+        "started": 0,
+        "acknowledged": 0,
+        "failed": 0,
+        "deadline": 0
+      },
+      "clockSessionId": "viewer-mock-clock",
+      "seq": 21,
+      "observationAgeMs": 100,
+      "clientAgeMs": 100,
+      "frameAgeMs": 10,
+      "clockMappingSampledBrowserMs": 0,
+      "clockMappingValidUntilBrowserMs": 60000,
+      "diagnosticLastTimerLagMs": null,
+      "elapsedPythonS": 10.0
+    },
+    {
+      "binding": {
+        "documentId": "mock-doc",
+        "clientId": "mock-client",
+        "clientEpoch": 1,
+        "clientInstance": "mock-instance",
+        "configId": "mock-config",
+        "modelSha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "planSha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+      },
+      "counts": {
+        "started": 0,
+        "acknowledged": 0,
+        "failed": 0,
+        "deadline": 0
+      },
+      "clockSessionId": "viewer-mock-clock",
+      "seq": 22,
+      "observationAgeMs": 100,
+      "clientAgeMs": 100,
+      "frameAgeMs": 10,
+      "clockMappingSampledBrowserMs": 0,
+      "clockMappingValidUntilBrowserMs": 60000,
+      "diagnosticLastTimerLagMs": null,
+      "elapsedPythonS": 10.5
+    },
+    {
+      "binding": {
+        "documentId": "mock-doc",
+        "clientId": "mock-client",
+        "clientEpoch": 1,
+        "clientInstance": "mock-instance",
+        "configId": "mock-config",
+        "modelSha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "planSha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+      },
+      "counts": {
+        "started": 0,
+        "acknowledged": 0,
+        "failed": 0,
+        "deadline": 0
+      },
+      "clockSessionId": "viewer-mock-clock",
+      "seq": 23,
+      "observationAgeMs": 100,
+      "clientAgeMs": 100,
+      "frameAgeMs": 10,
+      "clockMappingSampledBrowserMs": 0,
+      "clockMappingValidUntilBrowserMs": 60000,
+      "diagnosticLastTimerLagMs": null,
+      "elapsedPythonS": 11.0
+    },
+    {
+      "binding": {
+        "documentId": "mock-doc",
+        "clientId": "mock-client",
+        "clientEpoch": 1,
+        "clientInstance": "mock-instance",
+        "configId": "mock-config",
+        "modelSha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "planSha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+      },
+      "counts": {
+        "started": 0,
+        "acknowledged": 0,
+        "failed": 0,
+        "deadline": 0
+      },
+      "clockSessionId": "viewer-mock-clock",
+      "seq": 24,
+      "observationAgeMs": 100,
+      "clientAgeMs": 100,
+      "frameAgeMs": 10,
+      "clockMappingSampledBrowserMs": 0,
+      "clockMappingValidUntilBrowserMs": 60000,
+      "diagnosticLastTimerLagMs": null,
+      "elapsedPythonS": 11.5
+    },
+    {
+      "binding": {
+        "documentId": "mock-doc",
+        "clientId": "mock-client",
+        "clientEpoch": 1,
+        "clientInstance": "mock-instance",
+        "configId": "mock-config",
+        "modelSha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "planSha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+      },
+      "counts": {
+        "started": 0,
+        "acknowledged": 0,
+        "failed": 0,
+        "deadline": 0
+      },
+      "clockSessionId": "viewer-mock-clock",
+      "seq": 25,
+      "observationAgeMs": 100,
+      "clientAgeMs": 100,
+      "frameAgeMs": 10,
+      "clockMappingSampledBrowserMs": 0,
+      "clockMappingValidUntilBrowserMs": 60000,
+      "diagnosticLastTimerLagMs": null,
+      "elapsedPythonS": 12.0
+    },
+    {
+      "binding": {
+        "documentId": "mock-doc",
+        "clientId": "mock-client",
+        "clientEpoch": 1,
+        "clientInstance": "mock-instance",
+        "configId": "mock-config",
+        "modelSha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "planSha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+      },
+      "counts": {
+        "started": 0,
+        "acknowledged": 0,
+        "failed": 0,
+        "deadline": 0
+      },
+      "clockSessionId": "viewer-mock-clock",
+      "seq": 26,
+      "observationAgeMs": 100,
+      "clientAgeMs": 100,
+      "frameAgeMs": 10,
+      "clockMappingSampledBrowserMs": 0,
+      "clockMappingValidUntilBrowserMs": 60000,
+      "diagnosticLastTimerLagMs": null,
+      "elapsedPythonS": 12.5
+    },
+    {
+      "binding": {
+        "documentId": "mock-doc",
+        "clientId": "mock-client",
+        "clientEpoch": 1,
+        "clientInstance": "mock-instance",
+        "configId": "mock-config",
+        "modelSha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "planSha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+      },
+      "counts": {
+        "started": 0,
+        "acknowledged": 0,
+        "failed": 0,
+        "deadline": 0
+      },
+      "clockSessionId": "viewer-mock-clock",
+      "seq": 27,
+      "observationAgeMs": 100,
+      "clientAgeMs": 100,
+      "frameAgeMs": 10,
+      "clockMappingSampledBrowserMs": 0,
+      "clockMappingValidUntilBrowserMs": 60000,
+      "diagnosticLastTimerLagMs": null,
+      "elapsedPythonS": 13.0
+    },
+    {
+      "binding": {
+        "documentId": "mock-doc",
+        "clientId": "mock-client",
+        "clientEpoch": 1,
+        "clientInstance": "mock-instance",
+        "configId": "mock-config",
+        "modelSha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "planSha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+      },
+      "counts": {
+        "started": 0,
+        "acknowledged": 0,
+        "failed": 0,
+        "deadline": 0
+      },
+      "clockSessionId": "viewer-mock-clock",
+      "seq": 28,
+      "observationAgeMs": 100,
+      "clientAgeMs": 100,
+      "frameAgeMs": 10,
+      "clockMappingSampledBrowserMs": 0,
+      "clockMappingValidUntilBrowserMs": 60000,
+      "diagnosticLastTimerLagMs": null,
+      "elapsedPythonS": 13.5
+    },
+    {
+      "binding": {
+        "documentId": "mock-doc",
+        "clientId": "mock-client",
+        "clientEpoch": 1,
+        "clientInstance": "mock-instance",
+        "configId": "mock-config",
+        "modelSha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "planSha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+      },
+      "counts": {
+        "started": 0,
+        "acknowledged": 0,
+        "failed": 0,
+        "deadline": 0
+      },
+      "clockSessionId": "viewer-mock-clock",
+      "seq": 29,
+      "observationAgeMs": 100,
+      "clientAgeMs": 100,
+      "frameAgeMs": 10,
+      "clockMappingSampledBrowserMs": 0,
+      "clockMappingValidUntilBrowserMs": 60000,
+      "diagnosticLastTimerLagMs": null,
+      "elapsedPythonS": 14.0
+    },
+    {
+      "binding": {
+        "documentId": "mock-doc",
+        "clientId": "mock-client",
+        "clientEpoch": 1,
+        "clientInstance": "mock-instance",
+        "configId": "mock-config",
+        "modelSha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "planSha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+      },
+      "counts": {
+        "started": 0,
+        "acknowledged": 0,
+        "failed": 0,
+        "deadline": 0
+      },
+      "clockSessionId": "viewer-mock-clock",
+      "seq": 30,
+      "observationAgeMs": 100,
+      "clientAgeMs": 100,
+      "frameAgeMs": 10,
+      "clockMappingSampledBrowserMs": 0,
+      "clockMappingValidUntilBrowserMs": 60000,
+      "diagnosticLastTimerLagMs": null,
+      "elapsedPythonS": 14.5
+    },
+    {
+      "binding": {
+        "documentId": "mock-doc",
+        "clientId": "mock-client",
+        "clientEpoch": 1,
+        "clientInstance": "mock-instance",
+        "configId": "mock-config",
+        "modelSha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "planSha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+      },
+      "counts": {
+        "started": 0,
+        "acknowledged": 0,
+        "failed": 0,
+        "deadline": 0
+      },
+      "clockSessionId": "viewer-mock-clock",
+      "seq": 31,
+      "observationAgeMs": 100,
+      "clientAgeMs": 100,
+      "frameAgeMs": 10,
+      "clockMappingSampledBrowserMs": 0,
+      "clockMappingValidUntilBrowserMs": 60000,
+      "diagnosticLastTimerLagMs": null,
+      "elapsedPythonS": 15.0
+    },
+    {
+      "binding": {
+        "documentId": "mock-doc",
+        "clientId": "mock-client",
+        "clientEpoch": 1,
+        "clientInstance": "mock-instance",
+        "configId": "mock-config",
+        "modelSha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "planSha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+      },
+      "counts": {
+        "started": 0,
+        "acknowledged": 0,
+        "failed": 0,
+        "deadline": 0
+      },
+      "clockSessionId": "viewer-mock-clock",
+      "seq": 32,
+      "observationAgeMs": 100,
+      "clientAgeMs": 100,
+      "frameAgeMs": 10,
+      "clockMappingSampledBrowserMs": 0,
+      "clockMappingValidUntilBrowserMs": 60000,
+      "diagnosticLastTimerLagMs": null,
+      "elapsedPythonS": 15.5
+    },
+    {
+      "binding": {
+        "documentId": "mock-doc",
+        "clientId": "mock-client",
+        "clientEpoch": 1,
+        "clientInstance": "mock-instance",
+        "configId": "mock-config",
+        "modelSha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "planSha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+      },
+      "counts": {
+        "started": 0,
+        "acknowledged": 0,
+        "failed": 0,
+        "deadline": 0
+      },
+      "clockSessionId": "viewer-mock-clock",
+      "seq": 33,
+      "observationAgeMs": 100,
+      "clientAgeMs": 100,
+      "frameAgeMs": 10,
+      "clockMappingSampledBrowserMs": 0,
+      "clockMappingValidUntilBrowserMs": 60000,
+      "diagnosticLastTimerLagMs": null,
+      "elapsedPythonS": 16.0
+    },
+    {
+      "binding": {
+        "documentId": "mock-doc",
+        "clientId": "mock-client",
+        "clientEpoch": 1,
+        "clientInstance": "mock-instance",
+        "configId": "mock-config",
+        "modelSha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "planSha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+      },
+      "counts": {
+        "started": 0,
+        "acknowledged": 0,
+        "failed": 0,
+        "deadline": 0
+      },
+      "clockSessionId": "viewer-mock-clock",
+      "seq": 34,
+      "observationAgeMs": 100,
+      "clientAgeMs": 100,
+      "frameAgeMs": 10,
+      "clockMappingSampledBrowserMs": 0,
+      "clockMappingValidUntilBrowserMs": 60000,
+      "diagnosticLastTimerLagMs": null,
+      "elapsedPythonS": 16.5
+    },
+    {
+      "binding": {
+        "documentId": "mock-doc",
+        "clientId": "mock-client",
+        "clientEpoch": 1,
+        "clientInstance": "mock-instance",
+        "configId": "mock-config",
+        "modelSha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "planSha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+      },
+      "counts": {
+        "started": 0,
+        "acknowledged": 0,
+        "failed": 0,
+        "deadline": 0
+      },
+      "clockSessionId": "viewer-mock-clock",
+      "seq": 35,
+      "observationAgeMs": 100,
+      "clientAgeMs": 100,
+      "frameAgeMs": 10,
+      "clockMappingSampledBrowserMs": 0,
+      "clockMappingValidUntilBrowserMs": 60000,
+      "diagnosticLastTimerLagMs": null,
+      "elapsedPythonS": 17.0
+    },
+    {
+      "binding": {
+        "documentId": "mock-doc",
+        "clientId": "mock-client",
+        "clientEpoch": 1,
+        "clientInstance": "mock-instance",
+        "configId": "mock-config",
+        "modelSha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "planSha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+      },
+      "counts": {
+        "started": 0,
+        "acknowledged": 0,
+        "failed": 0,
+        "deadline": 0
+      },
+      "clockSessionId": "viewer-mock-clock",
+      "seq": 36,
+      "observationAgeMs": 100,
+      "clientAgeMs": 100,
+      "frameAgeMs": 10,
+      "clockMappingSampledBrowserMs": 0,
+      "clockMappingValidUntilBrowserMs": 60000,
+      "diagnosticLastTimerLagMs": null,
+      "elapsedPythonS": 17.5
+    },
+    {
+      "binding": {
+        "documentId": "mock-doc",
+        "clientId": "mock-client",
+        "clientEpoch": 1,
+        "clientInstance": "mock-instance",
+        "configId": "mock-config",
+        "modelSha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "planSha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+      },
+      "counts": {
+        "started": 0,
+        "acknowledged": 0,
+        "failed": 0,
+        "deadline": 0
+      },
+      "clockSessionId": "viewer-mock-clock",
+      "seq": 37,
+      "observationAgeMs": 100,
+      "clientAgeMs": 100,
+      "frameAgeMs": 10,
+      "clockMappingSampledBrowserMs": 0,
+      "clockMappingValidUntilBrowserMs": 60000,
+      "diagnosticLastTimerLagMs": null,
+      "elapsedPythonS": 18.0
+    },
+    {
+      "binding": {
+        "documentId": "mock-doc",
+        "clientId": "mock-client",
+        "clientEpoch": 1,
+        "clientInstance": "mock-instance",
+        "configId": "mock-config",
+        "modelSha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "planSha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+      },
+      "counts": {
+        "started": 0,
+        "acknowledged": 0,
+        "failed": 0,
+        "deadline": 0
+      },
+      "clockSessionId": "viewer-mock-clock",
+      "seq": 38,
+      "observationAgeMs": 100,
+      "clientAgeMs": 100,
+      "frameAgeMs": 10,
+      "clockMappingSampledBrowserMs": 0,
+      "clockMappingValidUntilBrowserMs": 60000,
+      "diagnosticLastTimerLagMs": null,
+      "elapsedPythonS": 18.5
+    },
+    {
+      "binding": {
+        "documentId": "mock-doc",
+        "clientId": "mock-client",
+        "clientEpoch": 1,
+        "clientInstance": "mock-instance",
+        "configId": "mock-config",
+        "modelSha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "planSha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+      },
+      "counts": {
+        "started": 0,
+        "acknowledged": 0,
+        "failed": 0,
+        "deadline": 0
+      },
+      "clockSessionId": "viewer-mock-clock",
+      "seq": 39,
+      "observationAgeMs": 100,
+      "clientAgeMs": 100,
+      "frameAgeMs": 10,
+      "clockMappingSampledBrowserMs": 0,
+      "clockMappingValidUntilBrowserMs": 60000,
+      "diagnosticLastTimerLagMs": null,
+      "elapsedPythonS": 19.0
+    },
+    {
+      "binding": {
+        "documentId": "mock-doc",
+        "clientId": "mock-client",
+        "clientEpoch": 1,
+        "clientInstance": "mock-instance",
+        "configId": "mock-config",
+        "modelSha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "planSha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+      },
+      "counts": {
+        "started": 0,
+        "acknowledged": 0,
+        "failed": 0,
+        "deadline": 0
+      },
+      "clockSessionId": "viewer-mock-clock",
+      "seq": 40,
+      "observationAgeMs": 100,
+      "clientAgeMs": 100,
+      "frameAgeMs": 10,
+      "clockMappingSampledBrowserMs": 0,
+      "clockMappingValidUntilBrowserMs": 60000,
+      "diagnosticLastTimerLagMs": null,
+      "elapsedPythonS": 19.5
+    },
+    {
+      "binding": {
+        "documentId": "mock-doc",
+        "clientId": "mock-client",
+        "clientEpoch": 1,
+        "clientInstance": "mock-instance",
+        "configId": "mock-config",
+        "modelSha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "planSha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+      },
+      "counts": {
+        "started": 0,
+        "acknowledged": 0,
+        "failed": 0,
+        "deadline": 0
+      },
+      "clockSessionId": "viewer-mock-clock",
+      "seq": 41,
+      "observationAgeMs": 100,
+      "clientAgeMs": 100,
+      "frameAgeMs": 10,
+      "clockMappingSampledBrowserMs": 0,
+      "clockMappingValidUntilBrowserMs": 60000,
+      "diagnosticLastTimerLagMs": null,
+      "elapsedPythonS": 20.0
+    },
+    {
+      "binding": {
+        "documentId": "mock-doc",
+        "clientId": "mock-client",
+        "clientEpoch": 1,
+        "clientInstance": "mock-instance",
+        "configId": "mock-config",
+        "modelSha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "planSha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+      },
+      "counts": {
+        "started": 0,
+        "acknowledged": 0,
+        "failed": 0,
+        "deadline": 0
+      },
+      "clockSessionId": "viewer-mock-clock",
+      "seq": 42,
+      "observationAgeMs": 100,
+      "clientAgeMs": 100,
+      "frameAgeMs": 10,
+      "clockMappingSampledBrowserMs": 0,
+      "clockMappingValidUntilBrowserMs": 60000,
+      "diagnosticLastTimerLagMs": null,
+      "elapsedPythonS": 20.5
+    },
+    {
+      "binding": {
+        "documentId": "mock-doc",
+        "clientId": "mock-client",
+        "clientEpoch": 1,
+        "clientInstance": "mock-instance",
+        "configId": "mock-config",
+        "modelSha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "planSha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+      },
+      "counts": {
+        "started": 0,
+        "acknowledged": 0,
+        "failed": 0,
+        "deadline": 0
+      },
+      "clockSessionId": "viewer-mock-clock",
+      "seq": 43,
+      "observationAgeMs": 100,
+      "clientAgeMs": 100,
+      "frameAgeMs": 10,
+      "clockMappingSampledBrowserMs": 0,
+      "clockMappingValidUntilBrowserMs": 60000,
+      "diagnosticLastTimerLagMs": null,
+      "elapsedPythonS": 21.0
+    },
+    {
+      "binding": {
+        "documentId": "mock-doc",
+        "clientId": "mock-client",
+        "clientEpoch": 1,
+        "clientInstance": "mock-instance",
+        "configId": "mock-config",
+        "modelSha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "planSha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+      },
+      "counts": {
+        "started": 0,
+        "acknowledged": 0,
+        "failed": 0,
+        "deadline": 0
+      },
+      "clockSessionId": "viewer-mock-clock",
+      "seq": 44,
+      "observationAgeMs": 100,
+      "clientAgeMs": 100,
+      "frameAgeMs": 10,
+      "clockMappingSampledBrowserMs": 0,
+      "clockMappingValidUntilBrowserMs": 60000,
+      "diagnosticLastTimerLagMs": null,
+      "elapsedPythonS": 21.5
+    },
+    {
+      "binding": {
+        "documentId": "mock-doc",
+        "clientId": "mock-client",
+        "clientEpoch": 1,
+        "clientInstance": "mock-instance",
+        "configId": "mock-config",
+        "modelSha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "planSha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+      },
+      "counts": {
+        "started": 0,
+        "acknowledged": 0,
+        "failed": 0,
+        "deadline": 0
+      },
+      "clockSessionId": "viewer-mock-clock",
+      "seq": 45,
+      "observationAgeMs": 100,
+      "clientAgeMs": 100,
+      "frameAgeMs": 10,
+      "clockMappingSampledBrowserMs": 0,
+      "clockMappingValidUntilBrowserMs": 60000,
+      "diagnosticLastTimerLagMs": null,
+      "elapsedPythonS": 22.0
+    },
+    {
+      "binding": {
+        "documentId": "mock-doc",
+        "clientId": "mock-client",
+        "clientEpoch": 1,
+        "clientInstance": "mock-instance",
+        "configId": "mock-config",
+        "modelSha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "planSha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+      },
+      "counts": {
+        "started": 0,
+        "acknowledged": 0,
+        "failed": 0,
+        "deadline": 0
+      },
+      "clockSessionId": "viewer-mock-clock",
+      "seq": 46,
+      "observationAgeMs": 100,
+      "clientAgeMs": 100,
+      "frameAgeMs": 10,
+      "clockMappingSampledBrowserMs": 0,
+      "clockMappingValidUntilBrowserMs": 60000,
+      "diagnosticLastTimerLagMs": null,
+      "elapsedPythonS": 22.5
+    },
+    {
+      "binding": {
+        "documentId": "mock-doc",
+        "clientId": "mock-client",
+        "clientEpoch": 1,
+        "clientInstance": "mock-instance",
+        "configId": "mock-config",
+        "modelSha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "planSha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+      },
+      "counts": {
+        "started": 0,
+        "acknowledged": 0,
+        "failed": 0,
+        "deadline": 0
+      },
+      "clockSessionId": "viewer-mock-clock",
+      "seq": 47,
+      "observationAgeMs": 100,
+      "clientAgeMs": 100,
+      "frameAgeMs": 10,
+      "clockMappingSampledBrowserMs": 0,
+      "clockMappingValidUntilBrowserMs": 60000,
+      "diagnosticLastTimerLagMs": null,
+      "elapsedPythonS": 23.0
+    },
+    {
+      "binding": {
+        "documentId": "mock-doc",
+        "clientId": "mock-client",
+        "clientEpoch": 1,
+        "clientInstance": "mock-instance",
+        "configId": "mock-config",
+        "modelSha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "planSha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+      },
+      "counts": {
+        "started": 0,
+        "acknowledged": 0,
+        "failed": 0,
+        "deadline": 0
+      },
+      "clockSessionId": "viewer-mock-clock",
+      "seq": 48,
+      "observationAgeMs": 100,
+      "clientAgeMs": 100,
+      "frameAgeMs": 10,
+      "clockMappingSampledBrowserMs": 0,
+      "clockMappingValidUntilBrowserMs": 60000,
+      "diagnosticLastTimerLagMs": null,
+      "elapsedPythonS": 23.5
+    },
+    {
+      "binding": {
+        "documentId": "mock-doc",
+        "clientId": "mock-client",
+        "clientEpoch": 1,
+        "clientInstance": "mock-instance",
+        "configId": "mock-config",
+        "modelSha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "planSha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+      },
+      "counts": {
+        "started": 0,
+        "acknowledged": 0,
+        "failed": 0,
+        "deadline": 0
+      },
+      "clockSessionId": "viewer-mock-clock",
+      "seq": 49,
+      "observationAgeMs": 100,
+      "clientAgeMs": 100,
+      "frameAgeMs": 10,
+      "clockMappingSampledBrowserMs": 0,
+      "clockMappingValidUntilBrowserMs": 60000,
+      "diagnosticLastTimerLagMs": null,
+      "elapsedPythonS": 24.0
+    },
+    {
+      "binding": {
+        "documentId": "mock-doc",
+        "clientId": "mock-client",
+        "clientEpoch": 1,
+        "clientInstance": "mock-instance",
+        "configId": "mock-config",
+        "modelSha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "planSha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+      },
+      "counts": {
+        "started": 0,
+        "acknowledged": 0,
+        "failed": 0,
+        "deadline": 0
+      },
+      "clockSessionId": "viewer-mock-clock",
+      "seq": 50,
+      "observationAgeMs": 100,
+      "clientAgeMs": 100,
+      "frameAgeMs": 10,
+      "clockMappingSampledBrowserMs": 0,
+      "clockMappingValidUntilBrowserMs": 60000,
+      "diagnosticLastTimerLagMs": null,
+      "elapsedPythonS": 24.5
+    },
+    {
+      "binding": {
+        "documentId": "mock-doc",
+        "clientId": "mock-client",
+        "clientEpoch": 1,
+        "clientInstance": "mock-instance",
+        "configId": "mock-config",
+        "modelSha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "planSha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+      },
+      "counts": {
+        "started": 0,
+        "acknowledged": 0,
+        "failed": 0,
+        "deadline": 0
+      },
+      "clockSessionId": "viewer-mock-clock",
+      "seq": 51,
+      "observationAgeMs": 100,
+      "clientAgeMs": 100,
+      "frameAgeMs": 10,
+      "clockMappingSampledBrowserMs": 0,
+      "clockMappingValidUntilBrowserMs": 60000,
+      "diagnosticLastTimerLagMs": null,
+      "elapsedPythonS": 25.0
+    },
+    {
+      "binding": {
+        "documentId": "mock-doc",
+        "clientId": "mock-client",
+        "clientEpoch": 1,
+        "clientInstance": "mock-instance",
+        "configId": "mock-config",
+        "modelSha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "planSha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+      },
+      "counts": {
+        "started": 0,
+        "acknowledged": 0,
+        "failed": 0,
+        "deadline": 0
+      },
+      "clockSessionId": "viewer-mock-clock",
+      "seq": 52,
+      "observationAgeMs": 100,
+      "clientAgeMs": 100,
+      "frameAgeMs": 10,
+      "clockMappingSampledBrowserMs": 0,
+      "clockMappingValidUntilBrowserMs": 60000,
+      "diagnosticLastTimerLagMs": null,
+      "elapsedPythonS": 25.5
+    },
+    {
+      "binding": {
+        "documentId": "mock-doc",
+        "clientId": "mock-client",
+        "clientEpoch": 1,
+        "clientInstance": "mock-instance",
+        "configId": "mock-config",
+        "modelSha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "planSha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+      },
+      "counts": {
+        "started": 0,
+        "acknowledged": 0,
+        "failed": 0,
+        "deadline": 0
+      },
+      "clockSessionId": "viewer-mock-clock",
+      "seq": 53,
+      "observationAgeMs": 100,
+      "clientAgeMs": 100,
+      "frameAgeMs": 10,
+      "clockMappingSampledBrowserMs": 0,
+      "clockMappingValidUntilBrowserMs": 60000,
+      "diagnosticLastTimerLagMs": null,
+      "elapsedPythonS": 26.0
+    },
+    {
+      "binding": {
+        "documentId": "mock-doc",
+        "clientId": "mock-client",
+        "clientEpoch": 1,
+        "clientInstance": "mock-instance",
+        "configId": "mock-config",
+        "modelSha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "planSha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+      },
+      "counts": {
+        "started": 0,
+        "acknowledged": 0,
+        "failed": 0,
+        "deadline": 0
+      },
+      "clockSessionId": "viewer-mock-clock",
+      "seq": 54,
+      "observationAgeMs": 100,
+      "clientAgeMs": 100,
+      "frameAgeMs": 10,
+      "clockMappingSampledBrowserMs": 0,
+      "clockMappingValidUntilBrowserMs": 60000,
+      "diagnosticLastTimerLagMs": null,
+      "elapsedPythonS": 26.5
+    },
+    {
+      "binding": {
+        "documentId": "mock-doc",
+        "clientId": "mock-client",
+        "clientEpoch": 1,
+        "clientInstance": "mock-instance",
+        "configId": "mock-config",
+        "modelSha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "planSha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+      },
+      "counts": {
+        "started": 0,
+        "acknowledged": 0,
+        "failed": 0,
+        "deadline": 0
+      },
+      "clockSessionId": "viewer-mock-clock",
+      "seq": 55,
+      "observationAgeMs": 100,
+      "clientAgeMs": 100,
+      "frameAgeMs": 10,
+      "clockMappingSampledBrowserMs": 0,
+      "clockMappingValidUntilBrowserMs": 60000,
+      "diagnosticLastTimerLagMs": null,
+      "elapsedPythonS": 27.0
+    },
+    {
+      "binding": {
+        "documentId": "mock-doc",
+        "clientId": "mock-client",
+        "clientEpoch": 1,
+        "clientInstance": "mock-instance",
+        "configId": "mock-config",
+        "modelSha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "planSha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+      },
+      "counts": {
+        "started": 0,
+        "acknowledged": 0,
+        "failed": 0,
+        "deadline": 0
+      },
+      "clockSessionId": "viewer-mock-clock",
+      "seq": 56,
+      "observationAgeMs": 100,
+      "clientAgeMs": 100,
+      "frameAgeMs": 10,
+      "clockMappingSampledBrowserMs": 0,
+      "clockMappingValidUntilBrowserMs": 60000,
+      "diagnosticLastTimerLagMs": null,
+      "elapsedPythonS": 27.5
+    },
+    {
+      "binding": {
+        "documentId": "mock-doc",
+        "clientId": "mock-client",
+        "clientEpoch": 1,
+        "clientInstance": "mock-instance",
+        "configId": "mock-config",
+        "modelSha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "planSha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+      },
+      "counts": {
+        "started": 0,
+        "acknowledged": 0,
+        "failed": 0,
+        "deadline": 0
+      },
+      "clockSessionId": "viewer-mock-clock",
+      "seq": 57,
+      "observationAgeMs": 100,
+      "clientAgeMs": 100,
+      "frameAgeMs": 10,
+      "clockMappingSampledBrowserMs": 0,
+      "clockMappingValidUntilBrowserMs": 60000,
+      "diagnosticLastTimerLagMs": null,
+      "elapsedPythonS": 28.0
+    },
+    {
+      "binding": {
+        "documentId": "mock-doc",
+        "clientId": "mock-client",
+        "clientEpoch": 1,
+        "clientInstance": "mock-instance",
+        "configId": "mock-config",
+        "modelSha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "planSha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+      },
+      "counts": {
+        "started": 0,
+        "acknowledged": 0,
+        "failed": 0,
+        "deadline": 0
+      },
+      "clockSessionId": "viewer-mock-clock",
+      "seq": 58,
+      "observationAgeMs": 100,
+      "clientAgeMs": 100,
+      "frameAgeMs": 10,
+      "clockMappingSampledBrowserMs": 0,
+      "clockMappingValidUntilBrowserMs": 60000,
+      "diagnosticLastTimerLagMs": null,
+      "elapsedPythonS": 28.5
+    },
+    {
+      "binding": {
+        "documentId": "mock-doc",
+        "clientId": "mock-client",
+        "clientEpoch": 1,
+        "clientInstance": "mock-instance",
+        "configId": "mock-config",
+        "modelSha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "planSha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+      },
+      "counts": {
+        "started": 0,
+        "acknowledged": 0,
+        "failed": 0,
+        "deadline": 0
+      },
+      "clockSessionId": "viewer-mock-clock",
+      "seq": 59,
+      "observationAgeMs": 100,
+      "clientAgeMs": 100,
+      "frameAgeMs": 10,
+      "clockMappingSampledBrowserMs": 0,
+      "clockMappingValidUntilBrowserMs": 60000,
+      "diagnosticLastTimerLagMs": null,
+      "elapsedPythonS": 29.0
+    },
+    {
+      "binding": {
+        "documentId": "mock-doc",
+        "clientId": "mock-client",
+        "clientEpoch": 1,
+        "clientInstance": "mock-instance",
+        "configId": "mock-config",
+        "modelSha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "planSha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+      },
+      "counts": {
+        "started": 0,
+        "acknowledged": 0,
+        "failed": 0,
+        "deadline": 0
+      },
+      "clockSessionId": "viewer-mock-clock",
+      "seq": 60,
+      "observationAgeMs": 100,
+      "clientAgeMs": 100,
+      "frameAgeMs": 10,
+      "clockMappingSampledBrowserMs": 0,
+      "clockMappingValidUntilBrowserMs": 60000,
+      "diagnosticLastTimerLagMs": null,
+      "elapsedPythonS": 29.5
+    },
+    {
+      "binding": {
+        "documentId": "mock-doc",
+        "clientId": "mock-client",
+        "clientEpoch": 1,
+        "clientInstance": "mock-instance",
+        "configId": "mock-config",
+        "modelSha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "planSha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+      },
+      "counts": {
+        "started": 0,
+        "acknowledged": 0,
+        "failed": 0,
+        "deadline": 0
+      },
+      "clockSessionId": "viewer-mock-clock",
+      "seq": 61,
+      "observationAgeMs": 100,
+      "clientAgeMs": 100,
+      "frameAgeMs": 10,
+      "clockMappingSampledBrowserMs": 30000,
+      "clockMappingValidUntilBrowserMs": 90000,
+      "diagnosticLastTimerLagMs": null,
+      "elapsedPythonS": 30.0
+    },
+    {
+      "binding": {
+        "documentId": "mock-doc",
+        "clientId": "mock-client",
+        "clientEpoch": 1,
+        "clientInstance": "mock-instance",
+        "configId": "mock-config",
+        "modelSha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "planSha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+      },
+      "counts": {
+        "started": 0,
+        "acknowledged": 0,
+        "failed": 0,
+        "deadline": 0
+      },
+      "clockSessionId": "viewer-mock-clock",
+      "seq": 62,
+      "observationAgeMs": 100,
+      "clientAgeMs": 100,
+      "frameAgeMs": 10,
+      "clockMappingSampledBrowserMs": 30000,
+      "clockMappingValidUntilBrowserMs": 90000,
+      "diagnosticLastTimerLagMs": null,
+      "elapsedPythonS": 30.5
+    },
+    {
+      "binding": {
+        "documentId": "mock-doc",
+        "clientId": "mock-client",
+        "clientEpoch": 1,
+        "clientInstance": "mock-instance",
+        "configId": "mock-config",
+        "modelSha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "planSha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+      },
+      "counts": {
+        "started": 0,
+        "acknowledged": 0,
+        "failed": 0,
+        "deadline": 0
+      },
+      "clockSessionId": "viewer-mock-clock",
+      "seq": 63,
+      "observationAgeMs": 100,
+      "clientAgeMs": 100,
+      "frameAgeMs": 10,
+      "clockMappingSampledBrowserMs": 30000,
+      "clockMappingValidUntilBrowserMs": 90000,
+      "diagnosticLastTimerLagMs": null,
+      "elapsedPythonS": 31.0
+    },
+    {
+      "binding": {
+        "documentId": "mock-doc",
+        "clientId": "mock-client",
+        "clientEpoch": 1,
+        "clientInstance": "mock-instance",
+        "configId": "mock-config",
+        "modelSha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "planSha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+      },
+      "counts": {
+        "started": 0,
+        "acknowledged": 0,
+        "failed": 0,
+        "deadline": 0
+      },
+      "clockSessionId": "viewer-mock-clock",
+      "seq": 64,
+      "observationAgeMs": 100,
+      "clientAgeMs": 100,
+      "frameAgeMs": 10,
+      "clockMappingSampledBrowserMs": 30000,
+      "clockMappingValidUntilBrowserMs": 90000,
+      "diagnosticLastTimerLagMs": null,
+      "elapsedPythonS": 31.5
+    },
+    {
+      "binding": {
+        "documentId": "mock-doc",
+        "clientId": "mock-client",
+        "clientEpoch": 1,
+        "clientInstance": "mock-instance",
+        "configId": "mock-config",
+        "modelSha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "planSha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+      },
+      "counts": {
+        "started": 0,
+        "acknowledged": 0,
+        "failed": 0,
+        "deadline": 0
+      },
+      "clockSessionId": "viewer-mock-clock",
+      "seq": 65,
+      "observationAgeMs": 100,
+      "clientAgeMs": 100,
+      "frameAgeMs": 10,
+      "clockMappingSampledBrowserMs": 30000,
+      "clockMappingValidUntilBrowserMs": 90000,
+      "diagnosticLastTimerLagMs": null,
+      "elapsedPythonS": 32.0
+    },
+    {
+      "binding": {
+        "documentId": "mock-doc",
+        "clientId": "mock-client",
+        "clientEpoch": 1,
+        "clientInstance": "mock-instance",
+        "configId": "mock-config",
+        "modelSha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "planSha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+      },
+      "counts": {
+        "started": 0,
+        "acknowledged": 0,
+        "failed": 0,
+        "deadline": 0
+      },
+      "clockSessionId": "viewer-mock-clock",
+      "seq": 66,
+      "observationAgeMs": 100,
+      "clientAgeMs": 100,
+      "frameAgeMs": 10,
+      "clockMappingSampledBrowserMs": 30000,
+      "clockMappingValidUntilBrowserMs": 90000,
+      "diagnosticLastTimerLagMs": null,
+      "elapsedPythonS": 32.5
+    },
+    {
+      "binding": {
+        "documentId": "mock-doc",
+        "clientId": "mock-client",
+        "clientEpoch": 1,
+        "clientInstance": "mock-instance",
+        "configId": "mock-config",
+        "modelSha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "planSha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+      },
+      "counts": {
+        "started": 0,
+        "acknowledged": 0,
+        "failed": 0,
+        "deadline": 0
+      },
+      "clockSessionId": "viewer-mock-clock",
+      "seq": 67,
+      "observationAgeMs": 100,
+      "clientAgeMs": 100,
+      "frameAgeMs": 10,
+      "clockMappingSampledBrowserMs": 30000,
+      "clockMappingValidUntilBrowserMs": 90000,
+      "diagnosticLastTimerLagMs": null,
+      "elapsedPythonS": 33.0
+    },
+    {
+      "binding": {
+        "documentId": "mock-doc",
+        "clientId": "mock-client",
+        "clientEpoch": 1,
+        "clientInstance": "mock-instance",
+        "configId": "mock-config",
+        "modelSha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "planSha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+      },
+      "counts": {
+        "started": 0,
+        "acknowledged": 0,
+        "failed": 0,
+        "deadline": 0
+      },
+      "clockSessionId": "viewer-mock-clock",
+      "seq": 68,
+      "observationAgeMs": 100,
+      "clientAgeMs": 100,
+      "frameAgeMs": 10,
+      "clockMappingSampledBrowserMs": 30000,
+      "clockMappingValidUntilBrowserMs": 90000,
+      "diagnosticLastTimerLagMs": null,
+      "elapsedPythonS": 33.5
+    },
+    {
+      "binding": {
+        "documentId": "mock-doc",
+        "clientId": "mock-client",
+        "clientEpoch": 1,
+        "clientInstance": "mock-instance",
+        "configId": "mock-config",
+        "modelSha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "planSha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+      },
+      "counts": {
+        "started": 0,
+        "acknowledged": 0,
+        "failed": 0,
+        "deadline": 0
+      },
+      "clockSessionId": "viewer-mock-clock",
+      "seq": 69,
+      "observationAgeMs": 100,
+      "clientAgeMs": 100,
+      "frameAgeMs": 10,
+      "clockMappingSampledBrowserMs": 30000,
+      "clockMappingValidUntilBrowserMs": 90000,
+      "diagnosticLastTimerLagMs": null,
+      "elapsedPythonS": 34.0
+    },
+    {
+      "binding": {
+        "documentId": "mock-doc",
+        "clientId": "mock-client",
+        "clientEpoch": 1,
+        "clientInstance": "mock-instance",
+        "configId": "mock-config",
+        "modelSha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "planSha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+      },
+      "counts": {
+        "started": 0,
+        "acknowledged": 0,
+        "failed": 0,
+        "deadline": 0
+      },
+      "clockSessionId": "viewer-mock-clock",
+      "seq": 70,
+      "observationAgeMs": 100,
+      "clientAgeMs": 100,
+      "frameAgeMs": 10,
+      "clockMappingSampledBrowserMs": 30000,
+      "clockMappingValidUntilBrowserMs": 90000,
+      "diagnosticLastTimerLagMs": null,
+      "elapsedPythonS": 34.5
+    },
+    {
+      "binding": {
+        "documentId": "mock-doc",
+        "clientId": "mock-client",
+        "clientEpoch": 1,
+        "clientInstance": "mock-instance",
+        "configId": "mock-config",
+        "modelSha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "planSha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+      },
+      "counts": {
+        "started": 0,
+        "acknowledged": 0,
+        "failed": 0,
+        "deadline": 0
+      },
+      "clockSessionId": "viewer-mock-clock",
+      "seq": 71,
+      "observationAgeMs": 100,
+      "clientAgeMs": 100,
+      "frameAgeMs": 10,
+      "clockMappingSampledBrowserMs": 30000,
+      "clockMappingValidUntilBrowserMs": 90000,
+      "diagnosticLastTimerLagMs": null,
+      "elapsedPythonS": 35.0
+    },
+    {
+      "binding": {
+        "documentId": "mock-doc",
+        "clientId": "mock-client",
+        "clientEpoch": 1,
+        "clientInstance": "mock-instance",
+        "configId": "mock-config",
+        "modelSha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "planSha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+      },
+      "counts": {
+        "started": 0,
+        "acknowledged": 0,
+        "failed": 0,
+        "deadline": 0
+      },
+      "clockSessionId": "viewer-mock-clock",
+      "seq": 72,
+      "observationAgeMs": 100,
+      "clientAgeMs": 100,
+      "frameAgeMs": 10,
+      "clockMappingSampledBrowserMs": 30000,
+      "clockMappingValidUntilBrowserMs": 90000,
+      "diagnosticLastTimerLagMs": null,
+      "elapsedPythonS": 35.5
+    },
+    {
+      "binding": {
+        "documentId": "mock-doc",
+        "clientId": "mock-client",
+        "clientEpoch": 1,
+        "clientInstance": "mock-instance",
+        "configId": "mock-config",
+        "modelSha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "planSha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+      },
+      "counts": {
+        "started": 0,
+        "acknowledged": 0,
+        "failed": 0,
+        "deadline": 0
+      },
+      "clockSessionId": "viewer-mock-clock",
+      "seq": 73,
+      "observationAgeMs": 100,
+      "clientAgeMs": 100,
+      "frameAgeMs": 10,
+      "clockMappingSampledBrowserMs": 30000,
+      "clockMappingValidUntilBrowserMs": 90000,
+      "diagnosticLastTimerLagMs": null,
+      "elapsedPythonS": 36.0
+    },
+    {
+      "binding": {
+        "documentId": "mock-doc",
+        "clientId": "mock-client",
+        "clientEpoch": 1,
+        "clientInstance": "mock-instance",
+        "configId": "mock-config",
+        "modelSha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "planSha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+      },
+      "counts": {
+        "started": 0,
+        "acknowledged": 0,
+        "failed": 0,
+        "deadline": 0
+      },
+      "clockSessionId": "viewer-mock-clock",
+      "seq": 74,
+      "observationAgeMs": 100,
+      "clientAgeMs": 100,
+      "frameAgeMs": 10,
+      "clockMappingSampledBrowserMs": 30000,
+      "clockMappingValidUntilBrowserMs": 90000,
+      "diagnosticLastTimerLagMs": null,
+      "elapsedPythonS": 36.5
+    },
+    {
+      "binding": {
+        "documentId": "mock-doc",
+        "clientId": "mock-client",
+        "clientEpoch": 1,
+        "clientInstance": "mock-instance",
+        "configId": "mock-config",
+        "modelSha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "planSha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+      },
+      "counts": {
+        "started": 0,
+        "acknowledged": 0,
+        "failed": 0,
+        "deadline": 0
+      },
+      "clockSessionId": "viewer-mock-clock",
+      "seq": 75,
+      "observationAgeMs": 100,
+      "clientAgeMs": 100,
+      "frameAgeMs": 10,
+      "clockMappingSampledBrowserMs": 30000,
+      "clockMappingValidUntilBrowserMs": 90000,
+      "diagnosticLastTimerLagMs": null,
+      "elapsedPythonS": 37.0
+    },
+    {
+      "binding": {
+        "documentId": "mock-doc",
+        "clientId": "mock-client",
+        "clientEpoch": 1,
+        "clientInstance": "mock-instance",
+        "configId": "mock-config",
+        "modelSha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "planSha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+      },
+      "counts": {
+        "started": 0,
+        "acknowledged": 0,
+        "failed": 0,
+        "deadline": 0
+      },
+      "clockSessionId": "viewer-mock-clock",
+      "seq": 76,
+      "observationAgeMs": 100,
+      "clientAgeMs": 100,
+      "frameAgeMs": 10,
+      "clockMappingSampledBrowserMs": 30000,
+      "clockMappingValidUntilBrowserMs": 90000,
+      "diagnosticLastTimerLagMs": null,
+      "elapsedPythonS": 37.5
+    },
+    {
+      "binding": {
+        "documentId": "mock-doc",
+        "clientId": "mock-client",
+        "clientEpoch": 1,
+        "clientInstance": "mock-instance",
+        "configId": "mock-config",
+        "modelSha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "planSha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+      },
+      "counts": {
+        "started": 0,
+        "acknowledged": 0,
+        "failed": 0,
+        "deadline": 0
+      },
+      "clockSessionId": "viewer-mock-clock",
+      "seq": 77,
+      "observationAgeMs": 100,
+      "clientAgeMs": 100,
+      "frameAgeMs": 10,
+      "clockMappingSampledBrowserMs": 30000,
+      "clockMappingValidUntilBrowserMs": 90000,
+      "diagnosticLastTimerLagMs": null,
+      "elapsedPythonS": 38.0
+    },
+    {
+      "binding": {
+        "documentId": "mock-doc",
+        "clientId": "mock-client",
+        "clientEpoch": 1,
+        "clientInstance": "mock-instance",
+        "configId": "mock-config",
+        "modelSha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "planSha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+      },
+      "counts": {
+        "started": 0,
+        "acknowledged": 0,
+        "failed": 0,
+        "deadline": 0
+      },
+      "clockSessionId": "viewer-mock-clock",
+      "seq": 78,
+      "observationAgeMs": 100,
+      "clientAgeMs": 100,
+      "frameAgeMs": 10,
+      "clockMappingSampledBrowserMs": 30000,
+      "clockMappingValidUntilBrowserMs": 90000,
+      "diagnosticLastTimerLagMs": null,
+      "elapsedPythonS": 38.5
+    },
+    {
+      "binding": {
+        "documentId": "mock-doc",
+        "clientId": "mock-client",
+        "clientEpoch": 1,
+        "clientInstance": "mock-instance",
+        "configId": "mock-config",
+        "modelSha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "planSha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+      },
+      "counts": {
+        "started": 0,
+        "acknowledged": 0,
+        "failed": 0,
+        "deadline": 0
+      },
+      "clockSessionId": "viewer-mock-clock",
+      "seq": 79,
+      "observationAgeMs": 100,
+      "clientAgeMs": 100,
+      "frameAgeMs": 10,
+      "clockMappingSampledBrowserMs": 30000,
+      "clockMappingValidUntilBrowserMs": 90000,
+      "diagnosticLastTimerLagMs": null,
+      "elapsedPythonS": 39.0
+    },
+    {
+      "binding": {
+        "documentId": "mock-doc",
+        "clientId": "mock-client",
+        "clientEpoch": 1,
+        "clientInstance": "mock-instance",
+        "configId": "mock-config",
+        "modelSha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "planSha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+      },
+      "counts": {
+        "started": 0,
+        "acknowledged": 0,
+        "failed": 0,
+        "deadline": 0
+      },
+      "clockSessionId": "viewer-mock-clock",
+      "seq": 80,
+      "observationAgeMs": 100,
+      "clientAgeMs": 100,
+      "frameAgeMs": 10,
+      "clockMappingSampledBrowserMs": 30000,
+      "clockMappingValidUntilBrowserMs": 90000,
+      "diagnosticLastTimerLagMs": null,
+      "elapsedPythonS": 39.5
+    },
+    {
+      "binding": {
+        "documentId": "mock-doc",
+        "clientId": "mock-client",
+        "clientEpoch": 1,
+        "clientInstance": "mock-instance",
+        "configId": "mock-config",
+        "modelSha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "planSha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+      },
+      "counts": {
+        "started": 0,
+        "acknowledged": 0,
+        "failed": 0,
+        "deadline": 0
+      },
+      "clockSessionId": "viewer-mock-clock",
+      "seq": 81,
+      "observationAgeMs": 100,
+      "clientAgeMs": 100,
+      "frameAgeMs": 10,
+      "clockMappingSampledBrowserMs": 30000,
+      "clockMappingValidUntilBrowserMs": 90000,
+      "diagnosticLastTimerLagMs": null,
+      "elapsedPythonS": 40.0
+    },
+    {
+      "binding": {
+        "documentId": "mock-doc",
+        "clientId": "mock-client",
+        "clientEpoch": 1,
+        "clientInstance": "mock-instance",
+        "configId": "mock-config",
+        "modelSha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "planSha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+      },
+      "counts": {
+        "started": 0,
+        "acknowledged": 0,
+        "failed": 0,
+        "deadline": 0
+      },
+      "clockSessionId": "viewer-mock-clock",
+      "seq": 82,
+      "observationAgeMs": 100,
+      "clientAgeMs": 100,
+      "frameAgeMs": 10,
+      "clockMappingSampledBrowserMs": 30000,
+      "clockMappingValidUntilBrowserMs": 90000,
+      "diagnosticLastTimerLagMs": null,
+      "elapsedPythonS": 40.5
+    },
+    {
+      "binding": {
+        "documentId": "mock-doc",
+        "clientId": "mock-client",
+        "clientEpoch": 1,
+        "clientInstance": "mock-instance",
+        "configId": "mock-config",
+        "modelSha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "planSha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+      },
+      "counts": {
+        "started": 0,
+        "acknowledged": 0,
+        "failed": 0,
+        "deadline": 0
+      },
+      "clockSessionId": "viewer-mock-clock",
+      "seq": 83,
+      "observationAgeMs": 100,
+      "clientAgeMs": 100,
+      "frameAgeMs": 10,
+      "clockMappingSampledBrowserMs": 30000,
+      "clockMappingValidUntilBrowserMs": 90000,
+      "diagnosticLastTimerLagMs": null,
+      "elapsedPythonS": 41.0
+    },
+    {
+      "binding": {
+        "documentId": "mock-doc",
+        "clientId": "mock-client",
+        "clientEpoch": 1,
+        "clientInstance": "mock-instance",
+        "configId": "mock-config",
+        "modelSha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "planSha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+      },
+      "counts": {
+        "started": 0,
+        "acknowledged": 0,
+        "failed": 0,
+        "deadline": 0
+      },
+      "clockSessionId": "viewer-mock-clock",
+      "seq": 84,
+      "observationAgeMs": 100,
+      "clientAgeMs": 100,
+      "frameAgeMs": 10,
+      "clockMappingSampledBrowserMs": 30000,
+      "clockMappingValidUntilBrowserMs": 90000,
+      "diagnosticLastTimerLagMs": null,
+      "elapsedPythonS": 41.5
+    },
+    {
+      "binding": {
+        "documentId": "mock-doc",
+        "clientId": "mock-client",
+        "clientEpoch": 1,
+        "clientInstance": "mock-instance",
+        "configId": "mock-config",
+        "modelSha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "planSha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+      },
+      "counts": {
+        "started": 0,
+        "acknowledged": 0,
+        "failed": 0,
+        "deadline": 0
+      },
+      "clockSessionId": "viewer-mock-clock",
+      "seq": 85,
+      "observationAgeMs": 100,
+      "clientAgeMs": 100,
+      "frameAgeMs": 10,
+      "clockMappingSampledBrowserMs": 30000,
+      "clockMappingValidUntilBrowserMs": 90000,
+      "diagnosticLastTimerLagMs": null,
+      "elapsedPythonS": 42.0
+    },
+    {
+      "binding": {
+        "documentId": "mock-doc",
+        "clientId": "mock-client",
+        "clientEpoch": 1,
+        "clientInstance": "mock-instance",
+        "configId": "mock-config",
+        "modelSha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "planSha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+      },
+      "counts": {
+        "started": 0,
+        "acknowledged": 0,
+        "failed": 0,
+        "deadline": 0
+      },
+      "clockSessionId": "viewer-mock-clock",
+      "seq": 86,
+      "observationAgeMs": 100,
+      "clientAgeMs": 100,
+      "frameAgeMs": 10,
+      "clockMappingSampledBrowserMs": 30000,
+      "clockMappingValidUntilBrowserMs": 90000,
+      "diagnosticLastTimerLagMs": null,
+      "elapsedPythonS": 42.5
+    },
+    {
+      "binding": {
+        "documentId": "mock-doc",
+        "clientId": "mock-client",
+        "clientEpoch": 1,
+        "clientInstance": "mock-instance",
+        "configId": "mock-config",
+        "modelSha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "planSha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+      },
+      "counts": {
+        "started": 0,
+        "acknowledged": 0,
+        "failed": 0,
+        "deadline": 0
+      },
+      "clockSessionId": "viewer-mock-clock",
+      "seq": 87,
+      "observationAgeMs": 100,
+      "clientAgeMs": 100,
+      "frameAgeMs": 10,
+      "clockMappingSampledBrowserMs": 30000,
+      "clockMappingValidUntilBrowserMs": 90000,
+      "diagnosticLastTimerLagMs": null,
+      "elapsedPythonS": 43.0
+    },
+    {
+      "binding": {
+        "documentId": "mock-doc",
+        "clientId": "mock-client",
+        "clientEpoch": 1,
+        "clientInstance": "mock-instance",
+        "configId": "mock-config",
+        "modelSha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "planSha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+      },
+      "counts": {
+        "started": 0,
+        "acknowledged": 0,
+        "failed": 0,
+        "deadline": 0
+      },
+      "clockSessionId": "viewer-mock-clock",
+      "seq": 88,
+      "observationAgeMs": 100,
+      "clientAgeMs": 100,
+      "frameAgeMs": 10,
+      "clockMappingSampledBrowserMs": 30000,
+      "clockMappingValidUntilBrowserMs": 90000,
+      "diagnosticLastTimerLagMs": null,
+      "elapsedPythonS": 43.5
+    },
+    {
+      "binding": {
+        "documentId": "mock-doc",
+        "clientId": "mock-client",
+        "clientEpoch": 1,
+        "clientInstance": "mock-instance",
+        "configId": "mock-config",
+        "modelSha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "planSha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+      },
+      "counts": {
+        "started": 0,
+        "acknowledged": 0,
+        "failed": 0,
+        "deadline": 0
+      },
+      "clockSessionId": "viewer-mock-clock",
+      "seq": 89,
+      "observationAgeMs": 100,
+      "clientAgeMs": 100,
+      "frameAgeMs": 10,
+      "clockMappingSampledBrowserMs": 30000,
+      "clockMappingValidUntilBrowserMs": 90000,
+      "diagnosticLastTimerLagMs": null,
+      "elapsedPythonS": 44.0
+    },
+    {
+      "binding": {
+        "documentId": "mock-doc",
+        "clientId": "mock-client",
+        "clientEpoch": 1,
+        "clientInstance": "mock-instance",
+        "configId": "mock-config",
+        "modelSha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "planSha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+      },
+      "counts": {
+        "started": 0,
+        "acknowledged": 0,
+        "failed": 0,
+        "deadline": 0
+      },
+      "clockSessionId": "viewer-mock-clock",
+      "seq": 90,
+      "observationAgeMs": 100,
+      "clientAgeMs": 100,
+      "frameAgeMs": 10,
+      "clockMappingSampledBrowserMs": 30000,
+      "clockMappingValidUntilBrowserMs": 90000,
+      "diagnosticLastTimerLagMs": null,
+      "elapsedPythonS": 44.5
+    },
+    {
+      "binding": {
+        "documentId": "mock-doc",
+        "clientId": "mock-client",
+        "clientEpoch": 1,
+        "clientInstance": "mock-instance",
+        "configId": "mock-config",
+        "modelSha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "planSha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+      },
+      "counts": {
+        "started": 0,
+        "acknowledged": 0,
+        "failed": 0,
+        "deadline": 0
+      },
+      "clockSessionId": "viewer-mock-clock",
+      "seq": 91,
+      "observationAgeMs": 100,
+      "clientAgeMs": 100,
+      "frameAgeMs": 10,
+      "clockMappingSampledBrowserMs": 30000,
+      "clockMappingValidUntilBrowserMs": 90000,
+      "diagnosticLastTimerLagMs": null,
+      "elapsedPythonS": 45.0
+    },
+    {
+      "binding": {
+        "documentId": "mock-doc",
+        "clientId": "mock-client",
+        "clientEpoch": 1,
+        "clientInstance": "mock-instance",
+        "configId": "mock-config",
+        "modelSha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "planSha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+      },
+      "counts": {
+        "started": 0,
+        "acknowledged": 0,
+        "failed": 0,
+        "deadline": 0
+      },
+      "clockSessionId": "viewer-mock-clock",
+      "seq": 92,
+      "observationAgeMs": 100,
+      "clientAgeMs": 100,
+      "frameAgeMs": 10,
+      "clockMappingSampledBrowserMs": 30000,
+      "clockMappingValidUntilBrowserMs": 90000,
+      "diagnosticLastTimerLagMs": null,
+      "elapsedPythonS": 45.5
+    },
+    {
+      "binding": {
+        "documentId": "mock-doc",
+        "clientId": "mock-client",
+        "clientEpoch": 1,
+        "clientInstance": "mock-instance",
+        "configId": "mock-config",
+        "modelSha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "planSha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+      },
+      "counts": {
+        "started": 0,
+        "acknowledged": 0,
+        "failed": 0,
+        "deadline": 0
+      },
+      "clockSessionId": "viewer-mock-clock",
+      "seq": 93,
+      "observationAgeMs": 100,
+      "clientAgeMs": 100,
+      "frameAgeMs": 10,
+      "clockMappingSampledBrowserMs": 30000,
+      "clockMappingValidUntilBrowserMs": 90000,
+      "diagnosticLastTimerLagMs": null,
+      "elapsedPythonS": 46.0
+    },
+    {
+      "binding": {
+        "documentId": "mock-doc",
+        "clientId": "mock-client",
+        "clientEpoch": 1,
+        "clientInstance": "mock-instance",
+        "configId": "mock-config",
+        "modelSha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "planSha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+      },
+      "counts": {
+        "started": 0,
+        "acknowledged": 0,
+        "failed": 0,
+        "deadline": 0
+      },
+      "clockSessionId": "viewer-mock-clock",
+      "seq": 94,
+      "observationAgeMs": 100,
+      "clientAgeMs": 100,
+      "frameAgeMs": 10,
+      "clockMappingSampledBrowserMs": 30000,
+      "clockMappingValidUntilBrowserMs": 90000,
+      "diagnosticLastTimerLagMs": null,
+      "elapsedPythonS": 46.5
+    },
+    {
+      "binding": {
+        "documentId": "mock-doc",
+        "clientId": "mock-client",
+        "clientEpoch": 1,
+        "clientInstance": "mock-instance",
+        "configId": "mock-config",
+        "modelSha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "planSha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+      },
+      "counts": {
+        "started": 0,
+        "acknowledged": 0,
+        "failed": 0,
+        "deadline": 0
+      },
+      "clockSessionId": "viewer-mock-clock",
+      "seq": 95,
+      "observationAgeMs": 100,
+      "clientAgeMs": 100,
+      "frameAgeMs": 10,
+      "clockMappingSampledBrowserMs": 30000,
+      "clockMappingValidUntilBrowserMs": 90000,
+      "diagnosticLastTimerLagMs": null,
+      "elapsedPythonS": 47.0
+    },
+    {
+      "binding": {
+        "documentId": "mock-doc",
+        "clientId": "mock-client",
+        "clientEpoch": 1,
+        "clientInstance": "mock-instance",
+        "configId": "mock-config",
+        "modelSha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "planSha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+      },
+      "counts": {
+        "started": 0,
+        "acknowledged": 0,
+        "failed": 0,
+        "deadline": 0
+      },
+      "clockSessionId": "viewer-mock-clock",
+      "seq": 96,
+      "observationAgeMs": 100,
+      "clientAgeMs": 100,
+      "frameAgeMs": 10,
+      "clockMappingSampledBrowserMs": 30000,
+      "clockMappingValidUntilBrowserMs": 90000,
+      "diagnosticLastTimerLagMs": null,
+      "elapsedPythonS": 47.5
+    },
+    {
+      "binding": {
+        "documentId": "mock-doc",
+        "clientId": "mock-client",
+        "clientEpoch": 1,
+        "clientInstance": "mock-instance",
+        "configId": "mock-config",
+        "modelSha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "planSha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+      },
+      "counts": {
+        "started": 0,
+        "acknowledged": 0,
+        "failed": 0,
+        "deadline": 0
+      },
+      "clockSessionId": "viewer-mock-clock",
+      "seq": 97,
+      "observationAgeMs": 100,
+      "clientAgeMs": 100,
+      "frameAgeMs": 10,
+      "clockMappingSampledBrowserMs": 30000,
+      "clockMappingValidUntilBrowserMs": 90000,
+      "diagnosticLastTimerLagMs": null,
+      "elapsedPythonS": 48.0
+    },
+    {
+      "binding": {
+        "documentId": "mock-doc",
+        "clientId": "mock-client",
+        "clientEpoch": 1,
+        "clientInstance": "mock-instance",
+        "configId": "mock-config",
+        "modelSha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "planSha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+      },
+      "counts": {
+        "started": 0,
+        "acknowledged": 0,
+        "failed": 0,
+        "deadline": 0
+      },
+      "clockSessionId": "viewer-mock-clock",
+      "seq": 98,
+      "observationAgeMs": 100,
+      "clientAgeMs": 100,
+      "frameAgeMs": 10,
+      "clockMappingSampledBrowserMs": 30000,
+      "clockMappingValidUntilBrowserMs": 90000,
+      "diagnosticLastTimerLagMs": null,
+      "elapsedPythonS": 48.5
+    },
+    {
+      "binding": {
+        "documentId": "mock-doc",
+        "clientId": "mock-client",
+        "clientEpoch": 1,
+        "clientInstance": "mock-instance",
+        "configId": "mock-config",
+        "modelSha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "planSha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+      },
+      "counts": {
+        "started": 0,
+        "acknowledged": 0,
+        "failed": 0,
+        "deadline": 0
+      },
+      "clockSessionId": "viewer-mock-clock",
+      "seq": 99,
+      "observationAgeMs": 100,
+      "clientAgeMs": 100,
+      "frameAgeMs": 10,
+      "clockMappingSampledBrowserMs": 30000,
+      "clockMappingValidUntilBrowserMs": 90000,
+      "diagnosticLastTimerLagMs": null,
+      "elapsedPythonS": 49.0
+    },
+    {
+      "binding": {
+        "documentId": "mock-doc",
+        "clientId": "mock-client",
+        "clientEpoch": 1,
+        "clientInstance": "mock-instance",
+        "configId": "mock-config",
+        "modelSha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "planSha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+      },
+      "counts": {
+        "started": 0,
+        "acknowledged": 0,
+        "failed": 0,
+        "deadline": 0
+      },
+      "clockSessionId": "viewer-mock-clock",
+      "seq": 100,
+      "observationAgeMs": 100,
+      "clientAgeMs": 100,
+      "frameAgeMs": 10,
+      "clockMappingSampledBrowserMs": 30000,
+      "clockMappingValidUntilBrowserMs": 90000,
+      "diagnosticLastTimerLagMs": null,
+      "elapsedPythonS": 49.5
+    },
+    {
+      "binding": {
+        "documentId": "mock-doc",
+        "clientId": "mock-client",
+        "clientEpoch": 1,
+        "clientInstance": "mock-instance",
+        "configId": "mock-config",
+        "modelSha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "planSha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+      },
+      "counts": {
+        "started": 0,
+        "acknowledged": 0,
+        "failed": 0,
+        "deadline": 0
+      },
+      "clockSessionId": "viewer-mock-clock",
+      "seq": 101,
+      "observationAgeMs": 100,
+      "clientAgeMs": 100,
+      "frameAgeMs": 10,
+      "clockMappingSampledBrowserMs": 30000,
+      "clockMappingValidUntilBrowserMs": 90000,
+      "diagnosticLastTimerLagMs": null,
+      "elapsedPythonS": 50.0
+    },
+    {
+      "binding": {
+        "documentId": "mock-doc",
+        "clientId": "mock-client",
+        "clientEpoch": 1,
+        "clientInstance": "mock-instance",
+        "configId": "mock-config",
+        "modelSha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "planSha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+      },
+      "counts": {
+        "started": 0,
+        "acknowledged": 0,
+        "failed": 0,
+        "deadline": 0
+      },
+      "clockSessionId": "viewer-mock-clock",
+      "seq": 102,
+      "observationAgeMs": 100,
+      "clientAgeMs": 100,
+      "frameAgeMs": 10,
+      "clockMappingSampledBrowserMs": 30000,
+      "clockMappingValidUntilBrowserMs": 90000,
+      "diagnosticLastTimerLagMs": null,
+      "elapsedPythonS": 50.5
+    },
+    {
+      "binding": {
+        "documentId": "mock-doc",
+        "clientId": "mock-client",
+        "clientEpoch": 1,
+        "clientInstance": "mock-instance",
+        "configId": "mock-config",
+        "modelSha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "planSha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+      },
+      "counts": {
+        "started": 0,
+        "acknowledged": 0,
+        "failed": 0,
+        "deadline": 0
+      },
+      "clockSessionId": "viewer-mock-clock",
+      "seq": 103,
+      "observationAgeMs": 100,
+      "clientAgeMs": 100,
+      "frameAgeMs": 10,
+      "clockMappingSampledBrowserMs": 30000,
+      "clockMappingValidUntilBrowserMs": 90000,
+      "diagnosticLastTimerLagMs": null,
+      "elapsedPythonS": 51.0
+    },
+    {
+      "binding": {
+        "documentId": "mock-doc",
+        "clientId": "mock-client",
+        "clientEpoch": 1,
+        "clientInstance": "mock-instance",
+        "configId": "mock-config",
+        "modelSha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "planSha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+      },
+      "counts": {
+        "started": 0,
+        "acknowledged": 0,
+        "failed": 0,
+        "deadline": 0
+      },
+      "clockSessionId": "viewer-mock-clock",
+      "seq": 104,
+      "observationAgeMs": 100,
+      "clientAgeMs": 100,
+      "frameAgeMs": 10,
+      "clockMappingSampledBrowserMs": 30000,
+      "clockMappingValidUntilBrowserMs": 90000,
+      "diagnosticLastTimerLagMs": null,
+      "elapsedPythonS": 51.5
+    },
+    {
+      "binding": {
+        "documentId": "mock-doc",
+        "clientId": "mock-client",
+        "clientEpoch": 1,
+        "clientInstance": "mock-instance",
+        "configId": "mock-config",
+        "modelSha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "planSha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+      },
+      "counts": {
+        "started": 0,
+        "acknowledged": 0,
+        "failed": 0,
+        "deadline": 0
+      },
+      "clockSessionId": "viewer-mock-clock",
+      "seq": 105,
+      "observationAgeMs": 100,
+      "clientAgeMs": 100,
+      "frameAgeMs": 10,
+      "clockMappingSampledBrowserMs": 30000,
+      "clockMappingValidUntilBrowserMs": 90000,
+      "diagnosticLastTimerLagMs": null,
+      "elapsedPythonS": 52.0
+    },
+    {
+      "binding": {
+        "documentId": "mock-doc",
+        "clientId": "mock-client",
+        "clientEpoch": 1,
+        "clientInstance": "mock-instance",
+        "configId": "mock-config",
+        "modelSha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "planSha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+      },
+      "counts": {
+        "started": 0,
+        "acknowledged": 0,
+        "failed": 0,
+        "deadline": 0
+      },
+      "clockSessionId": "viewer-mock-clock",
+      "seq": 106,
+      "observationAgeMs": 100,
+      "clientAgeMs": 100,
+      "frameAgeMs": 10,
+      "clockMappingSampledBrowserMs": 30000,
+      "clockMappingValidUntilBrowserMs": 90000,
+      "diagnosticLastTimerLagMs": null,
+      "elapsedPythonS": 52.5
+    },
+    {
+      "binding": {
+        "documentId": "mock-doc",
+        "clientId": "mock-client",
+        "clientEpoch": 1,
+        "clientInstance": "mock-instance",
+        "configId": "mock-config",
+        "modelSha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "planSha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+      },
+      "counts": {
+        "started": 0,
+        "acknowledged": 0,
+        "failed": 0,
+        "deadline": 0
+      },
+      "clockSessionId": "viewer-mock-clock",
+      "seq": 107,
+      "observationAgeMs": 100,
+      "clientAgeMs": 100,
+      "frameAgeMs": 10,
+      "clockMappingSampledBrowserMs": 30000,
+      "clockMappingValidUntilBrowserMs": 90000,
+      "diagnosticLastTimerLagMs": null,
+      "elapsedPythonS": 53.0
+    },
+    {
+      "binding": {
+        "documentId": "mock-doc",
+        "clientId": "mock-client",
+        "clientEpoch": 1,
+        "clientInstance": "mock-instance",
+        "configId": "mock-config",
+        "modelSha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "planSha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+      },
+      "counts": {
+        "started": 0,
+        "acknowledged": 0,
+        "failed": 0,
+        "deadline": 0
+      },
+      "clockSessionId": "viewer-mock-clock",
+      "seq": 108,
+      "observationAgeMs": 100,
+      "clientAgeMs": 100,
+      "frameAgeMs": 10,
+      "clockMappingSampledBrowserMs": 30000,
+      "clockMappingValidUntilBrowserMs": 90000,
+      "diagnosticLastTimerLagMs": null,
+      "elapsedPythonS": 53.5
+    },
+    {
+      "binding": {
+        "documentId": "mock-doc",
+        "clientId": "mock-client",
+        "clientEpoch": 1,
+        "clientInstance": "mock-instance",
+        "configId": "mock-config",
+        "modelSha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "planSha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+      },
+      "counts": {
+        "started": 0,
+        "acknowledged": 0,
+        "failed": 0,
+        "deadline": 0
+      },
+      "clockSessionId": "viewer-mock-clock",
+      "seq": 109,
+      "observationAgeMs": 100,
+      "clientAgeMs": 100,
+      "frameAgeMs": 10,
+      "clockMappingSampledBrowserMs": 30000,
+      "clockMappingValidUntilBrowserMs": 90000,
+      "diagnosticLastTimerLagMs": null,
+      "elapsedPythonS": 54.0
+    },
+    {
+      "binding": {
+        "documentId": "mock-doc",
+        "clientId": "mock-client",
+        "clientEpoch": 1,
+        "clientInstance": "mock-instance",
+        "configId": "mock-config",
+        "modelSha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "planSha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+      },
+      "counts": {
+        "started": 0,
+        "acknowledged": 0,
+        "failed": 0,
+        "deadline": 0
+      },
+      "clockSessionId": "viewer-mock-clock",
+      "seq": 110,
+      "observationAgeMs": 100,
+      "clientAgeMs": 100,
+      "frameAgeMs": 10,
+      "clockMappingSampledBrowserMs": 30000,
+      "clockMappingValidUntilBrowserMs": 90000,
+      "diagnosticLastTimerLagMs": null,
+      "elapsedPythonS": 54.5
+    },
+    {
+      "binding": {
+        "documentId": "mock-doc",
+        "clientId": "mock-client",
+        "clientEpoch": 1,
+        "clientInstance": "mock-instance",
+        "configId": "mock-config",
+        "modelSha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "planSha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+      },
+      "counts": {
+        "started": 0,
+        "acknowledged": 0,
+        "failed": 0,
+        "deadline": 0
+      },
+      "clockSessionId": "viewer-mock-clock",
+      "seq": 111,
+      "observationAgeMs": 100,
+      "clientAgeMs": 100,
+      "frameAgeMs": 10,
+      "clockMappingSampledBrowserMs": 30000,
+      "clockMappingValidUntilBrowserMs": 90000,
+      "diagnosticLastTimerLagMs": null,
+      "elapsedPythonS": 55.0
+    },
+    {
+      "binding": {
+        "documentId": "mock-doc",
+        "clientId": "mock-client",
+        "clientEpoch": 1,
+        "clientInstance": "mock-instance",
+        "configId": "mock-config",
+        "modelSha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "planSha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+      },
+      "counts": {
+        "started": 0,
+        "acknowledged": 0,
+        "failed": 0,
+        "deadline": 0
+      },
+      "clockSessionId": "viewer-mock-clock",
+      "seq": 112,
+      "observationAgeMs": 100,
+      "clientAgeMs": 100,
+      "frameAgeMs": 10,
+      "clockMappingSampledBrowserMs": 30000,
+      "clockMappingValidUntilBrowserMs": 90000,
+      "diagnosticLastTimerLagMs": null,
+      "elapsedPythonS": 55.5
+    },
+    {
+      "binding": {
+        "documentId": "mock-doc",
+        "clientId": "mock-client",
+        "clientEpoch": 1,
+        "clientInstance": "mock-instance",
+        "configId": "mock-config",
+        "modelSha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "planSha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+      },
+      "counts": {
+        "started": 0,
+        "acknowledged": 0,
+        "failed": 0,
+        "deadline": 0
+      },
+      "clockSessionId": "viewer-mock-clock",
+      "seq": 113,
+      "observationAgeMs": 100,
+      "clientAgeMs": 100,
+      "frameAgeMs": 10,
+      "clockMappingSampledBrowserMs": 30000,
+      "clockMappingValidUntilBrowserMs": 90000,
+      "diagnosticLastTimerLagMs": null,
+      "elapsedPythonS": 56.0
+    },
+    {
+      "binding": {
+        "documentId": "mock-doc",
+        "clientId": "mock-client",
+        "clientEpoch": 1,
+        "clientInstance": "mock-instance",
+        "configId": "mock-config",
+        "modelSha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "planSha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+      },
+      "counts": {
+        "started": 0,
+        "acknowledged": 0,
+        "failed": 0,
+        "deadline": 0
+      },
+      "clockSessionId": "viewer-mock-clock",
+      "seq": 114,
+      "observationAgeMs": 100,
+      "clientAgeMs": 100,
+      "frameAgeMs": 10,
+      "clockMappingSampledBrowserMs": 30000,
+      "clockMappingValidUntilBrowserMs": 90000,
+      "diagnosticLastTimerLagMs": null,
+      "elapsedPythonS": 56.5
+    },
+    {
+      "binding": {
+        "documentId": "mock-doc",
+        "clientId": "mock-client",
+        "clientEpoch": 1,
+        "clientInstance": "mock-instance",
+        "configId": "mock-config",
+        "modelSha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "planSha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+      },
+      "counts": {
+        "started": 0,
+        "acknowledged": 0,
+        "failed": 0,
+        "deadline": 0
+      },
+      "clockSessionId": "viewer-mock-clock",
+      "seq": 115,
+      "observationAgeMs": 100,
+      "clientAgeMs": 100,
+      "frameAgeMs": 10,
+      "clockMappingSampledBrowserMs": 30000,
+      "clockMappingValidUntilBrowserMs": 90000,
+      "diagnosticLastTimerLagMs": null,
+      "elapsedPythonS": 57.0
+    },
+    {
+      "binding": {
+        "documentId": "mock-doc",
+        "clientId": "mock-client",
+        "clientEpoch": 1,
+        "clientInstance": "mock-instance",
+        "configId": "mock-config",
+        "modelSha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "planSha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+      },
+      "counts": {
+        "started": 0,
+        "acknowledged": 0,
+        "failed": 0,
+        "deadline": 0
+      },
+      "clockSessionId": "viewer-mock-clock",
+      "seq": 116,
+      "observationAgeMs": 100,
+      "clientAgeMs": 100,
+      "frameAgeMs": 10,
+      "clockMappingSampledBrowserMs": 30000,
+      "clockMappingValidUntilBrowserMs": 90000,
+      "diagnosticLastTimerLagMs": null,
+      "elapsedPythonS": 57.5
+    },
+    {
+      "binding": {
+        "documentId": "mock-doc",
+        "clientId": "mock-client",
+        "clientEpoch": 1,
+        "clientInstance": "mock-instance",
+        "configId": "mock-config",
+        "modelSha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "planSha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+      },
+      "counts": {
+        "started": 0,
+        "acknowledged": 0,
+        "failed": 0,
+        "deadline": 0
+      },
+      "clockSessionId": "viewer-mock-clock",
+      "seq": 117,
+      "observationAgeMs": 100,
+      "clientAgeMs": 100,
+      "frameAgeMs": 10,
+      "clockMappingSampledBrowserMs": 30000,
+      "clockMappingValidUntilBrowserMs": 90000,
+      "diagnosticLastTimerLagMs": null,
+      "elapsedPythonS": 58.0
+    },
+    {
+      "binding": {
+        "documentId": "mock-doc",
+        "clientId": "mock-client",
+        "clientEpoch": 1,
+        "clientInstance": "mock-instance",
+        "configId": "mock-config",
+        "modelSha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "planSha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+      },
+      "counts": {
+        "started": 0,
+        "acknowledged": 0,
+        "failed": 0,
+        "deadline": 0
+      },
+      "clockSessionId": "viewer-mock-clock",
+      "seq": 118,
+      "observationAgeMs": 100,
+      "clientAgeMs": 100,
+      "frameAgeMs": 10,
+      "clockMappingSampledBrowserMs": 30000,
+      "clockMappingValidUntilBrowserMs": 90000,
+      "diagnosticLastTimerLagMs": null,
+      "elapsedPythonS": 58.5
+    },
+    {
+      "binding": {
+        "documentId": "mock-doc",
+        "clientId": "mock-client",
+        "clientEpoch": 1,
+        "clientInstance": "mock-instance",
+        "configId": "mock-config",
+        "modelSha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "planSha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+      },
+      "counts": {
+        "started": 0,
+        "acknowledged": 0,
+        "failed": 0,
+        "deadline": 0
+      },
+      "clockSessionId": "viewer-mock-clock",
+      "seq": 119,
+      "observationAgeMs": 100,
+      "clientAgeMs": 100,
+      "frameAgeMs": 10,
+      "clockMappingSampledBrowserMs": 30000,
+      "clockMappingValidUntilBrowserMs": 90000,
+      "diagnosticLastTimerLagMs": null,
+      "elapsedPythonS": 59.0
+    },
+    {
+      "binding": {
+        "documentId": "mock-doc",
+        "clientId": "mock-client",
+        "clientEpoch": 1,
+        "clientInstance": "mock-instance",
+        "configId": "mock-config",
+        "modelSha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "planSha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+      },
+      "counts": {
+        "started": 0,
+        "acknowledged": 0,
+        "failed": 0,
+        "deadline": 0
+      },
+      "clockSessionId": "viewer-mock-clock",
+      "seq": 120,
+      "observationAgeMs": 100,
+      "clientAgeMs": 100,
+      "frameAgeMs": 10,
+      "clockMappingSampledBrowserMs": 30000,
+      "clockMappingValidUntilBrowserMs": 90000,
+      "diagnosticLastTimerLagMs": null,
+      "elapsedPythonS": 59.5
+    },
+    {
+      "binding": {
+        "documentId": "mock-doc",
+        "clientId": "mock-client",
+        "clientEpoch": 1,
+        "clientInstance": "mock-instance",
+        "configId": "mock-config",
+        "modelSha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "planSha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+      },
+      "counts": {
+        "started": 0,
+        "acknowledged": 0,
+        "failed": 0,
+        "deadline": 0
+      },
+      "clockSessionId": "viewer-mock-clock",
+      "seq": 121,
+      "observationAgeMs": 100,
+      "clientAgeMs": 100,
+      "frameAgeMs": 10,
+      "clockMappingSampledBrowserMs": 60000,
+      "clockMappingValidUntilBrowserMs": 120000,
+      "diagnosticLastTimerLagMs": null,
+      "elapsedPythonS": 60.0
+    },
+    {
+      "binding": {
+        "documentId": "mock-doc",
+        "clientId": "mock-client",
+        "clientEpoch": 1,
+        "clientInstance": "mock-instance",
+        "configId": "mock-config",
+        "modelSha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "planSha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+      },
+      "counts": {
+        "started": 0,
+        "acknowledged": 0,
+        "failed": 0,
+        "deadline": 0
+      },
+      "clockSessionId": "viewer-mock-clock",
+      "seq": 122,
+      "observationAgeMs": 100,
+      "clientAgeMs": 100,
+      "frameAgeMs": 10,
+      "clockMappingSampledBrowserMs": 60000,
+      "clockMappingValidUntilBrowserMs": 120000,
+      "diagnosticLastTimerLagMs": null,
+      "elapsedPythonS": 60.5
+    },
+    {
+      "binding": {
+        "documentId": "mock-doc",
+        "clientId": "mock-client",
+        "clientEpoch": 1,
+        "clientInstance": "mock-instance",
+        "configId": "mock-config",
+        "modelSha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "planSha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+      },
+      "counts": {
+        "started": 0,
+        "acknowledged": 0,
+        "failed": 0,
+        "deadline": 0
+      },
+      "clockSessionId": "viewer-mock-clock",
+      "seq": 123,
+      "observationAgeMs": 100,
+      "clientAgeMs": 100,
+      "frameAgeMs": 10,
+      "clockMappingSampledBrowserMs": 60000,
+      "clockMappingValidUntilBrowserMs": 120000,
+      "diagnosticLastTimerLagMs": null,
+      "elapsedPythonS": 61.0
+    },
+    {
+      "binding": {
+        "documentId": "mock-doc",
+        "clientId": "mock-client",
+        "clientEpoch": 1,
+        "clientInstance": "mock-instance",
+        "configId": "mock-config",
+        "modelSha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "planSha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+      },
+      "counts": {
+        "started": 0,
+        "acknowledged": 0,
+        "failed": 0,
+        "deadline": 0
+      },
+      "clockSessionId": "viewer-mock-clock",
+      "seq": 124,
+      "observationAgeMs": 100,
+      "clientAgeMs": 100,
+      "frameAgeMs": 10,
+      "clockMappingSampledBrowserMs": 60000,
+      "clockMappingValidUntilBrowserMs": 120000,
+      "diagnosticLastTimerLagMs": null,
+      "elapsedPythonS": 61.5
+    },
+    {
+      "binding": {
+        "documentId": "mock-doc",
+        "clientId": "mock-client",
+        "clientEpoch": 1,
+        "clientInstance": "mock-instance",
+        "configId": "mock-config",
+        "modelSha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "planSha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+      },
+      "counts": {
+        "started": 0,
+        "acknowledged": 0,
+        "failed": 0,
+        "deadline": 0
+      },
+      "clockSessionId": "viewer-mock-clock",
+      "seq": 125,
+      "observationAgeMs": 100,
+      "clientAgeMs": 100,
+      "frameAgeMs": 10,
+      "clockMappingSampledBrowserMs": 60000,
+      "clockMappingValidUntilBrowserMs": 120000,
+      "diagnosticLastTimerLagMs": null,
+      "elapsedPythonS": 62.0
+    },
+    {
+      "binding": {
+        "documentId": "mock-doc",
+        "clientId": "mock-client",
+        "clientEpoch": 1,
+        "clientInstance": "mock-instance",
+        "configId": "mock-config",
+        "modelSha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "planSha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+      },
+      "counts": {
+        "started": 0,
+        "acknowledged": 0,
+        "failed": 0,
+        "deadline": 0
+      },
+      "clockSessionId": "viewer-mock-clock",
+      "seq": 126,
+      "observationAgeMs": 100,
+      "clientAgeMs": 100,
+      "frameAgeMs": 10,
+      "clockMappingSampledBrowserMs": 60000,
+      "clockMappingValidUntilBrowserMs": 120000,
+      "diagnosticLastTimerLagMs": null,
+      "elapsedPythonS": 62.5
+    },
+    {
+      "binding": {
+        "documentId": "mock-doc",
+        "clientId": "mock-client",
+        "clientEpoch": 1,
+        "clientInstance": "mock-instance",
+        "configId": "mock-config",
+        "modelSha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "planSha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+      },
+      "counts": {
+        "started": 0,
+        "acknowledged": 0,
+        "failed": 0,
+        "deadline": 0
+      },
+      "clockSessionId": "viewer-mock-clock",
+      "seq": 127,
+      "observationAgeMs": 100,
+      "clientAgeMs": 100,
+      "frameAgeMs": 10,
+      "clockMappingSampledBrowserMs": 60000,
+      "clockMappingValidUntilBrowserMs": 120000,
+      "diagnosticLastTimerLagMs": null,
+      "elapsedPythonS": 63.0
+    },
+    {
+      "binding": {
+        "documentId": "mock-doc",
+        "clientId": "mock-client",
+        "clientEpoch": 1,
+        "clientInstance": "mock-instance",
+        "configId": "mock-config",
+        "modelSha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "planSha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+      },
+      "counts": {
+        "started": 0,
+        "acknowledged": 0,
+        "failed": 0,
+        "deadline": 0
+      },
+      "clockSessionId": "viewer-mock-clock",
+      "seq": 128,
+      "observationAgeMs": 100,
+      "clientAgeMs": 100,
+      "frameAgeMs": 10,
+      "clockMappingSampledBrowserMs": 60000,
+      "clockMappingValidUntilBrowserMs": 120000,
+      "diagnosticLastTimerLagMs": null,
+      "elapsedPythonS": 63.5
+    },
+    {
+      "binding": {
+        "documentId": "mock-doc",
+        "clientId": "mock-client",
+        "clientEpoch": 1,
+        "clientInstance": "mock-instance",
+        "configId": "mock-config",
+        "modelSha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "planSha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+      },
+      "counts": {
+        "started": 0,
+        "acknowledged": 0,
+        "failed": 0,
+        "deadline": 0
+      },
+      "clockSessionId": "viewer-mock-clock",
+      "seq": 129,
+      "observationAgeMs": 100,
+      "clientAgeMs": 100,
+      "frameAgeMs": 10,
+      "clockMappingSampledBrowserMs": 60000,
+      "clockMappingValidUntilBrowserMs": 120000,
+      "diagnosticLastTimerLagMs": null,
+      "elapsedPythonS": 64.0
+    },
+    {
+      "binding": {
+        "documentId": "mock-doc",
+        "clientId": "mock-client",
+        "clientEpoch": 1,
+        "clientInstance": "mock-instance",
+        "configId": "mock-config",
+        "modelSha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "planSha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+      },
+      "counts": {
+        "started": 0,
+        "acknowledged": 0,
+        "failed": 0,
+        "deadline": 0
+      },
+      "clockSessionId": "viewer-mock-clock",
+      "seq": 130,
+      "observationAgeMs": 100,
+      "clientAgeMs": 100,
+      "frameAgeMs": 10,
+      "clockMappingSampledBrowserMs": 60000,
+      "clockMappingValidUntilBrowserMs": 120000,
+      "diagnosticLastTimerLagMs": null,
+      "elapsedPythonS": 64.5
+    },
+    {
+      "binding": {
+        "documentId": "mock-doc",
+        "clientId": "mock-client",
+        "clientEpoch": 1,
+        "clientInstance": "mock-instance",
+        "configId": "mock-config",
+        "modelSha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "planSha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+      },
+      "counts": {
+        "started": 0,
+        "acknowledged": 0,
+        "failed": 0,
+        "deadline": 0
+      },
+      "clockSessionId": "viewer-mock-clock",
+      "seq": 131,
+      "observationAgeMs": 100,
+      "clientAgeMs": 100,
+      "frameAgeMs": 10,
+      "clockMappingSampledBrowserMs": 60000,
+      "clockMappingValidUntilBrowserMs": 120000,
+      "diagnosticLastTimerLagMs": null,
+      "elapsedPythonS": 65.0
+    },
+    {
+      "binding": {
+        "documentId": "mock-doc",
+        "clientId": "mock-client",
+        "clientEpoch": 1,
+        "clientInstance": "mock-instance",
+        "configId": "mock-config",
+        "modelSha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "planSha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+      },
+      "counts": {
+        "started": 0,
+        "acknowledged": 0,
+        "failed": 0,
+        "deadline": 0
+      },
+      "clockSessionId": "viewer-mock-clock",
+      "seq": 132,
+      "observationAgeMs": 100,
+      "clientAgeMs": 100,
+      "frameAgeMs": 10,
+      "clockMappingSampledBrowserMs": 60000,
+      "clockMappingValidUntilBrowserMs": 120000,
+      "diagnosticLastTimerLagMs": null,
+      "elapsedPythonS": 65.5
+    },
+    {
+      "binding": {
+        "documentId": "mock-doc",
+        "clientId": "mock-client",
+        "clientEpoch": 1,
+        "clientInstance": "mock-instance",
+        "configId": "mock-config",
+        "modelSha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "planSha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+      },
+      "counts": {
+        "started": 0,
+        "acknowledged": 0,
+        "failed": 0,
+        "deadline": 0
+      },
+      "clockSessionId": "viewer-mock-clock",
+      "seq": 133,
+      "observationAgeMs": 100,
+      "clientAgeMs": 100,
+      "frameAgeMs": 10,
+      "clockMappingSampledBrowserMs": 60000,
+      "clockMappingValidUntilBrowserMs": 120000,
+      "diagnosticLastTimerLagMs": null,
+      "elapsedPythonS": 66.0
+    },
+    {
+      "binding": {
+        "documentId": "mock-doc",
+        "clientId": "mock-client",
+        "clientEpoch": 1,
+        "clientInstance": "mock-instance",
+        "configId": "mock-config",
+        "modelSha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "planSha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+      },
+      "counts": {
+        "started": 0,
+        "acknowledged": 0,
+        "failed": 0,
+        "deadline": 0
+      },
+      "clockSessionId": "viewer-mock-clock",
+      "seq": 134,
+      "observationAgeMs": 100,
+      "clientAgeMs": 100,
+      "frameAgeMs": 10,
+      "clockMappingSampledBrowserMs": 60000,
+      "clockMappingValidUntilBrowserMs": 120000,
+      "diagnosticLastTimerLagMs": null,
+      "elapsedPythonS": 66.5
+    },
+    {
+      "binding": {
+        "documentId": "mock-doc",
+        "clientId": "mock-client",
+        "clientEpoch": 1,
+        "clientInstance": "mock-instance",
+        "configId": "mock-config",
+        "modelSha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "planSha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+      },
+      "counts": {
+        "started": 0,
+        "acknowledged": 0,
+        "failed": 0,
+        "deadline": 0
+      },
+      "clockSessionId": "viewer-mock-clock",
+      "seq": 135,
+      "observationAgeMs": 100,
+      "clientAgeMs": 100,
+      "frameAgeMs": 10,
+      "clockMappingSampledBrowserMs": 60000,
+      "clockMappingValidUntilBrowserMs": 120000,
+      "diagnosticLastTimerLagMs": null,
+      "elapsedPythonS": 67.0
+    },
+    {
+      "binding": {
+        "documentId": "mock-doc",
+        "clientId": "mock-client",
+        "clientEpoch": 1,
+        "clientInstance": "mock-instance",
+        "configId": "mock-config",
+        "modelSha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "planSha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+      },
+      "counts": {
+        "started": 0,
+        "acknowledged": 0,
+        "failed": 0,
+        "deadline": 0
+      },
+      "clockSessionId": "viewer-mock-clock",
+      "seq": 136,
+      "observationAgeMs": 100,
+      "clientAgeMs": 100,
+      "frameAgeMs": 10,
+      "clockMappingSampledBrowserMs": 60000,
+      "clockMappingValidUntilBrowserMs": 120000,
+      "diagnosticLastTimerLagMs": null,
+      "elapsedPythonS": 67.5
+    },
+    {
+      "binding": {
+        "documentId": "mock-doc",
+        "clientId": "mock-client",
+        "clientEpoch": 1,
+        "clientInstance": "mock-instance",
+        "configId": "mock-config",
+        "modelSha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "planSha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+      },
+      "counts": {
+        "started": 0,
+        "acknowledged": 0,
+        "failed": 0,
+        "deadline": 0
+      },
+      "clockSessionId": "viewer-mock-clock",
+      "seq": 137,
+      "observationAgeMs": 100,
+      "clientAgeMs": 100,
+      "frameAgeMs": 10,
+      "clockMappingSampledBrowserMs": 60000,
+      "clockMappingValidUntilBrowserMs": 120000,
+      "diagnosticLastTimerLagMs": null,
+      "elapsedPythonS": 68.0
+    },
+    {
+      "binding": {
+        "documentId": "mock-doc",
+        "clientId": "mock-client",
+        "clientEpoch": 1,
+        "clientInstance": "mock-instance",
+        "configId": "mock-config",
+        "modelSha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "planSha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+      },
+      "counts": {
+        "started": 0,
+        "acknowledged": 0,
+        "failed": 0,
+        "deadline": 0
+      },
+      "clockSessionId": "viewer-mock-clock",
+      "seq": 138,
+      "observationAgeMs": 100,
+      "clientAgeMs": 100,
+      "frameAgeMs": 10,
+      "clockMappingSampledBrowserMs": 60000,
+      "clockMappingValidUntilBrowserMs": 120000,
+      "diagnosticLastTimerLagMs": null,
+      "elapsedPythonS": 68.5
+    },
+    {
+      "binding": {
+        "documentId": "mock-doc",
+        "clientId": "mock-client",
+        "clientEpoch": 1,
+        "clientInstance": "mock-instance",
+        "configId": "mock-config",
+        "modelSha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "planSha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+      },
+      "counts": {
+        "started": 0,
+        "acknowledged": 0,
+        "failed": 0,
+        "deadline": 0
+      },
+      "clockSessionId": "viewer-mock-clock",
+      "seq": 139,
+      "observationAgeMs": 100,
+      "clientAgeMs": 100,
+      "frameAgeMs": 10,
+      "clockMappingSampledBrowserMs": 60000,
+      "clockMappingValidUntilBrowserMs": 120000,
+      "diagnosticLastTimerLagMs": null,
+      "elapsedPythonS": 69.0
+    },
+    {
+      "binding": {
+        "documentId": "mock-doc",
+        "clientId": "mock-client",
+        "clientEpoch": 1,
+        "clientInstance": "mock-instance",
+        "configId": "mock-config",
+        "modelSha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "planSha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+      },
+      "counts": {
+        "started": 0,
+        "acknowledged": 0,
+        "failed": 0,
+        "deadline": 0
+      },
+      "clockSessionId": "viewer-mock-clock",
+      "seq": 140,
+      "observationAgeMs": 100,
+      "clientAgeMs": 100,
+      "frameAgeMs": 10,
+      "clockMappingSampledBrowserMs": 60000,
+      "clockMappingValidUntilBrowserMs": 120000,
+      "diagnosticLastTimerLagMs": null,
+      "elapsedPythonS": 69.5
+    },
+    {
+      "binding": {
+        "documentId": "mock-doc",
+        "clientId": "mock-client",
+        "clientEpoch": 1,
+        "clientInstance": "mock-instance",
+        "configId": "mock-config",
+        "modelSha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "planSha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+      },
+      "counts": {
+        "started": 0,
+        "acknowledged": 0,
+        "failed": 0,
+        "deadline": 0
+      },
+      "clockSessionId": "viewer-mock-clock",
+      "seq": 141,
+      "observationAgeMs": 100,
+      "clientAgeMs": 100,
+      "frameAgeMs": 10,
+      "clockMappingSampledBrowserMs": 60000,
+      "clockMappingValidUntilBrowserMs": 120000,
+      "diagnosticLastTimerLagMs": null,
+      "elapsedPythonS": 70.0
+    },
+    {
+      "binding": {
+        "documentId": "mock-doc",
+        "clientId": "mock-client",
+        "clientEpoch": 1,
+        "clientInstance": "mock-instance",
+        "configId": "mock-config",
+        "modelSha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "planSha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+      },
+      "counts": {
+        "started": 0,
+        "acknowledged": 0,
+        "failed": 0,
+        "deadline": 0
+      },
+      "clockSessionId": "viewer-mock-clock",
+      "seq": 142,
+      "observationAgeMs": 100,
+      "clientAgeMs": 100,
+      "frameAgeMs": 10,
+      "clockMappingSampledBrowserMs": 60000,
+      "clockMappingValidUntilBrowserMs": 120000,
+      "diagnosticLastTimerLagMs": null,
+      "elapsedPythonS": 70.5
+    },
+    {
+      "binding": {
+        "documentId": "mock-doc",
+        "clientId": "mock-client",
+        "clientEpoch": 1,
+        "clientInstance": "mock-instance",
+        "configId": "mock-config",
+        "modelSha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "planSha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+      },
+      "counts": {
+        "started": 0,
+        "acknowledged": 0,
+        "failed": 0,
+        "deadline": 0
+      },
+      "clockSessionId": "viewer-mock-clock",
+      "seq": 143,
+      "observationAgeMs": 100,
+      "clientAgeMs": 100,
+      "frameAgeMs": 10,
+      "clockMappingSampledBrowserMs": 60000,
+      "clockMappingValidUntilBrowserMs": 120000,
+      "diagnosticLastTimerLagMs": null,
+      "elapsedPythonS": 71.0
+    },
+    {
+      "binding": {
+        "documentId": "mock-doc",
+        "clientId": "mock-client",
+        "clientEpoch": 1,
+        "clientInstance": "mock-instance",
+        "configId": "mock-config",
+        "modelSha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "planSha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+      },
+      "counts": {
+        "started": 0,
+        "acknowledged": 0,
+        "failed": 0,
+        "deadline": 0
+      },
+      "clockSessionId": "viewer-mock-clock",
+      "seq": 144,
+      "observationAgeMs": 100,
+      "clientAgeMs": 100,
+      "frameAgeMs": 10,
+      "clockMappingSampledBrowserMs": 60000,
+      "clockMappingValidUntilBrowserMs": 120000,
+      "diagnosticLastTimerLagMs": null,
+      "elapsedPythonS": 71.5
+    },
+    {
+      "binding": {
+        "documentId": "mock-doc",
+        "clientId": "mock-client",
+        "clientEpoch": 1,
+        "clientInstance": "mock-instance",
+        "configId": "mock-config",
+        "modelSha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "planSha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+      },
+      "counts": {
+        "started": 0,
+        "acknowledged": 0,
+        "failed": 0,
+        "deadline": 0
+      },
+      "clockSessionId": "viewer-mock-clock",
+      "seq": 145,
+      "observationAgeMs": 100,
+      "clientAgeMs": 100,
+      "frameAgeMs": 10,
+      "clockMappingSampledBrowserMs": 60000,
+      "clockMappingValidUntilBrowserMs": 120000,
+      "diagnosticLastTimerLagMs": null,
+      "elapsedPythonS": 72.0
+    },
+    {
+      "binding": {
+        "documentId": "mock-doc",
+        "clientId": "mock-client",
+        "clientEpoch": 1,
+        "clientInstance": "mock-instance",
+        "configId": "mock-config",
+        "modelSha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "planSha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+      },
+      "counts": {
+        "started": 0,
+        "acknowledged": 0,
+        "failed": 0,
+        "deadline": 0
+      },
+      "clockSessionId": "viewer-mock-clock",
+      "seq": 146,
+      "observationAgeMs": 100,
+      "clientAgeMs": 100,
+      "frameAgeMs": 10,
+      "clockMappingSampledBrowserMs": 60000,
+      "clockMappingValidUntilBrowserMs": 120000,
+      "diagnosticLastTimerLagMs": null,
+      "elapsedPythonS": 72.5
+    },
+    {
+      "binding": {
+        "documentId": "mock-doc",
+        "clientId": "mock-client",
+        "clientEpoch": 1,
+        "clientInstance": "mock-instance",
+        "configId": "mock-config",
+        "modelSha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "planSha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+      },
+      "counts": {
+        "started": 0,
+        "acknowledged": 0,
+        "failed": 0,
+        "deadline": 0
+      },
+      "clockSessionId": "viewer-mock-clock",
+      "seq": 147,
+      "observationAgeMs": 100,
+      "clientAgeMs": 100,
+      "frameAgeMs": 10,
+      "clockMappingSampledBrowserMs": 60000,
+      "clockMappingValidUntilBrowserMs": 120000,
+      "diagnosticLastTimerLagMs": null,
+      "elapsedPythonS": 73.0
+    },
+    {
+      "binding": {
+        "documentId": "mock-doc",
+        "clientId": "mock-client",
+        "clientEpoch": 1,
+        "clientInstance": "mock-instance",
+        "configId": "mock-config",
+        "modelSha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "planSha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+      },
+      "counts": {
+        "started": 0,
+        "acknowledged": 0,
+        "failed": 0,
+        "deadline": 0
+      },
+      "clockSessionId": "viewer-mock-clock",
+      "seq": 148,
+      "observationAgeMs": 100,
+      "clientAgeMs": 100,
+      "frameAgeMs": 10,
+      "clockMappingSampledBrowserMs": 60000,
+      "clockMappingValidUntilBrowserMs": 120000,
+      "diagnosticLastTimerLagMs": null,
+      "elapsedPythonS": 73.5
+    },
+    {
+      "binding": {
+        "documentId": "mock-doc",
+        "clientId": "mock-client",
+        "clientEpoch": 1,
+        "clientInstance": "mock-instance",
+        "configId": "mock-config",
+        "modelSha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "planSha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+      },
+      "counts": {
+        "started": 0,
+        "acknowledged": 0,
+        "failed": 0,
+        "deadline": 0
+      },
+      "clockSessionId": "viewer-mock-clock",
+      "seq": 149,
+      "observationAgeMs": 100,
+      "clientAgeMs": 100,
+      "frameAgeMs": 10,
+      "clockMappingSampledBrowserMs": 60000,
+      "clockMappingValidUntilBrowserMs": 120000,
+      "diagnosticLastTimerLagMs": null,
+      "elapsedPythonS": 74.0
+    },
+    {
+      "binding": {
+        "documentId": "mock-doc",
+        "clientId": "mock-client",
+        "clientEpoch": 1,
+        "clientInstance": "mock-instance",
+        "configId": "mock-config",
+        "modelSha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "planSha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+      },
+      "counts": {
+        "started": 0,
+        "acknowledged": 0,
+        "failed": 0,
+        "deadline": 0
+      },
+      "clockSessionId": "viewer-mock-clock",
+      "seq": 150,
+      "observationAgeMs": 100,
+      "clientAgeMs": 100,
+      "frameAgeMs": 10,
+      "clockMappingSampledBrowserMs": 60000,
+      "clockMappingValidUntilBrowserMs": 120000,
+      "diagnosticLastTimerLagMs": null,
+      "elapsedPythonS": 74.5
+    },
+    {
+      "binding": {
+        "documentId": "mock-doc",
+        "clientId": "mock-client",
+        "clientEpoch": 1,
+        "clientInstance": "mock-instance",
+        "configId": "mock-config",
+        "modelSha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "planSha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+      },
+      "counts": {
+        "started": 0,
+        "acknowledged": 0,
+        "failed": 0,
+        "deadline": 0
+      },
+      "clockSessionId": "viewer-mock-clock",
+      "seq": 151,
+      "observationAgeMs": 100,
+      "clientAgeMs": 100,
+      "frameAgeMs": 10,
+      "clockMappingSampledBrowserMs": 60000,
+      "clockMappingValidUntilBrowserMs": 120000,
+      "diagnosticLastTimerLagMs": null,
+      "elapsedPythonS": 75.0
+    }
+  ],
+  "clockPath": "/Users/os/Downloads/AI technique/aeris/planning/ground11fix/qa-effective-clock01.jsonl",
+  "minimumDurationS": 75,
+  "maximumDurationS": 80,
+  "noRuntimeOrControlInput": true,
+  "clockBeforeSha256": "696c6006f2d91f3b8516ed2aca42e109d5f22d58b6550be089272342fffebc0d",
+  "renewalEvidence": {
+    "viewer": [
+      6,
+      9
+    ],
+    "publisher": [
+      5,
+      8
+    ]
+  },
+  "binding": {
+    "documentId": "mock-doc",
+    "clientId": "mock-client",
+    "clientEpoch": 1,
+    "clientInstance": "mock-instance",
+    "configId": "mock-config",
+    "modelSha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "planSha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+  },
+  "serverBoot": "mock-server-boot",
+  "baselineCounts": {
+    "started": 0,
+    "acknowledged": 0,
+    "failed": 0,
+    "deadline": 0
+  },
+  "clockSessionId": "viewer-mock-clock",
+  "clockAfterSha256": "b636646d74d0af9e02aa666b3cfd2dd5c58f32389c9de0e25524e2c7103ced89",
+  "observedPythonSpanS": 75.0,
+  "lifecycleFailuresDuringInterval": 0,
+  "apStarts": 0,
+  "endedPythonMonoS": 1075.0
+}

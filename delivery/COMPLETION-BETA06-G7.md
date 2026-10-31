@@ -1,0 +1,56 @@
+# BETA06 G7: quota scope và admission trước launch
+
+Ngày 22/10/2026. **NOT READY cho nghiệm thu Android–SITL toàn luồng.** Bản sửa source/mock đã đạt gate độc lập; lượt kiểm thực tế dừng ở admission emulator, trước khi boot Android hoặc tạo nhiệm vụ ArduPilot.
+
+## Kết quả sử dụng
+
+- Tách entry/quota của lịch sử được bảo vệ khỏi ngân sách campaign mới. Kiểm usage cộng phần bằng chứng còn phải ghi trước host/Connect, cho cả chín nhóm dữ liệu.
+- Giữ giới hạn tổng 8.192 entry, 412 entry đóng an toàn, 2.228 MiB phân bổ và 256 MiB biên dự phòng khẩn cấp. Chuyển 32 slot còn dư từ Native sang SourceQA; không tăng tổng giới hạn hoặc giới hạn writer.
+- Ràng buộc output replay bằng kích thước JSON đầy đủ, số loại/tên output hữu hạn, khóa và ghi độc quyền; không cắt báo cáo để tạo PASS. Bảo toàn cơ chế fsync/frame, thời gian, quyền, Home, speedup và các giới hạn cũ.
+- Gate độc lập kiểm 817 pin, 27 helper, 18 file production, 132 file stage và năm artifact biên dịch. Các ca exact/one-short của headroom và lỗi writer đã đạt. Bằng chứng giao thức mock 947 row và bốn fixture handler được giữ riêng; không coi là bay ArduPilot hay chất lượng phần cứng.
+
+## Lượt kiểm thực tế, không cộng với lượt cũ
+
+Host đã qua admission 30 giây và khởi động với một controller TTY hữu hạn. Nguồn video tổng hợp VP8-720P30-V1 được mở rồi dừng qua UI. Chưa có Android viewer, vì helper emulator từ chối trước launch intent: `UNSTABLE_DISK_TREND`.
+
+31 mẫu trong 30.060272 giây: available từ 40,341,090,304 xuống 38,924,447,744 byte; giảm 1,416,642,560 byte (1.319 GiB), vượt ngưỡng ổn định 256 MiB. Mọi mẫu vẫn trên 29 GiB. Đây là biến động available của filesystem; tác nhân chưa xác định. Không suy ra một tiến trình đã ghi đúng lượng byte này. Toàn bộ dữ liệu G7 nhỏ hơn nhiều so với biến động quan sát.
+
+**Số emulator boot mới: 0. Số AP request mới: 0. Số lệnh ARM/AUTO/mất link/reboot: 0.** Lượt này không có kết quả FPS/cold-start, ảnh thực hoặc gimbal thực. AUTO đồng thời media/payload, fault link/reboot và persistence/restart Android đều **NOT_CHECKED**. Thành công G6 trước đây không được gộp vào nghiệm thu G7.
+
+Cả controller PID95000, host95070 và helper95145 đã thoát; các cổng8872/8873/5972/5582/5583 không còn listener. Host có closure `EXPLICIT_STOP`, không lỗi payload evidence hay close index. Controller TTY được quan sát exit0; exit số của helper không được lưu nên giữ `NOT_RECORDED`. Nguồn video đã dừng và tab tạm đã đóng. Không tự chạy lại campaign.
+
+Một invocation ban đầu nhận EOF của stdin và thoát trước mọi command/anchor/effect. Log một dòng giữ nguyên. Entry TTY riêng đã được QA đối chiếu vòng lặp byte-exact và kiểm TTY trước ghi; không khôi phục thời gian hoặc counters từ JSON.
+
+## Bảo toàn và phục hồi
+
+Theo quyền người dùng vừa cấp, đã khôi phục **125 đường dẫn, 306.190.079 byte**, từ bản sao khớp SHA gốc. Ghi độc quyền, không ghi đè đường dẫn đang có, không giả mtime cũ, không viết lại lịch sử ENDURE. Kiểm độc lập và Root đối chiếu 8.069 đường dẫn bảo vệ, gồm bảy symlink literal, đều khớp ở endpoint sau khôi phục. Nguyên nhân mất file **UNKNOWN**; không có khẳng định hiện diện liên tục.
+
+95 đường dẫn đã thiếu từ baseline trước nhiệm vụ vẫn ghi rõ là lịch sử thiếu; không đưa chúng vào 125 file mới và không tự sửa trạng thái của chúng.
+
+Đã xóa riêng thư mục staging do tác vụ tạo `evidence/beta06/generation07/codex-tmp-exact-recovery-20261022` sau phục hồi. Các fixture QA tạm sở hữu đã dọn; bằng chứng replay giữ nguyên. Docker image prune thu hồi0B; không xóa container/volume. Không build/cài APK hay ký phần mềm, không đổi source/candidate đóng băng hoặc lịch sử ENDURE.
+
+## Mức đáp ứng và việc tiếp
+
+| Yêu cầu | Kết quả |
+|---|---|
+| Scope quota và kiểm ngân sách trước effect | PASS source/mock; host admission thực đạt |
+| Kiểm headroom exact/one-short và writer lỗi | PASS trong phạm vi mock đã công bố |
+| Phục hồi đúng byte và bảo toàn lịch sử | PASS tại endpoint kiểm sau phục hồi |
+| AUTO cùng video/payload trên Android–SITL | NOT_CHECKED, emulator bị từ chối trước boot |
+| Mất link/reboot, thu hồi quyền và cold persistence | NOT_CHECKED |
+| HeraHub/payload thật, production | Ngoài phạm vi lượt này |
+
+Bước tiếp theo là xác định hoặc ổn định biến động dung lượng của host, rồi lập một lượt admission mới có ngân sách riêng. Không giảm guard để đổi failure thành PASS và không tiếp tục từ campaign đã đóng. Gate source/mock hiện tại không chứng nhận sản phẩm beta hay điều khiển Hera thật.
+
+## Bằng chứng
+
+- `evidence/beta06/generation07/qa-final-gate01.json`: source/mock và admission gate.
+- `evidence/beta06/generation07/qa-final-gate02.json`: sửa phiên TTY, không đổi core.
+- `evidence/beta06/generation07/flight-pins03.json`, `native-helper-freeze10.json`, `builder-source-freeze03.json`.
+- `evidence/beta06/generation07/android-admission14-1792675867008501000.json`: đủ 31 mẫu và lỗi.
+- `evidence/beta06/generation07/root-runtime14.txt`, `root-controller14-live.jsonl`: log gốc.
+- `evidence/beta06/generation07/qa-closure-summary01.json`, `host-app07/app-closure.json`.
+- `evidence/beta06/generation07/qa-preservation-incident-full07.json`, `root-recovery-plan07.json`, `root-recovery-operations07.jsonl`, `qa-preservation-recovery08.json`.
+- `evidence/beta06/generation07/qa-final-runtime-summary01.json`: đối chiếu độc lập cuối.
+
+Value evidence: not applicable cho benchmark LLM; đây là sửa deterministic quota và kiểm hệ thống. Chưa chứng minh chất lượng bay phần cứng, lợi thế DJI hay khả năng beta từ số test.

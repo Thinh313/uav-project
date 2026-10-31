@@ -1,0 +1,10 @@
+{
+  "missions": 1,
+  "filesPerMission": 1,
+  "maxFileBytes": 1024,
+  "journalBytesPerMission": 1048576,
+  "partialCheckpoints": 0,
+  "concurrentExports": 0,
+  "softwareBytes": 4194304,
+  "freeBytes": null
+}

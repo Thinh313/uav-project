@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="vi">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AERIS · IOCommit09</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#f5f5f2;color:#171a1b;font:16px/1.6 system-ui,sans-serif}main{max-width:1080px;margin:auto;padding:40px 28px 80px}header{display:flex;justify-content:space-between;gap:24px;border-bottom:2px solid #161a1b;padding-bottom:16px;font-weight:750}h1{font-size:clamp(32px,5vw,52px);line-height:1.12;letter-spacing:-.035em;margin:32px 0 16px}h2{font-size:24px;line-height:1.3;margin:38px 0 16px}p{max-width:86ch}small,.muted{color:#535b60}.status{display:inline-block;background:#ecd76e;padding:5px 10px;font-size:13px;font-weight:800;letter-spacing:.04em}.lead{font-size:21px;line-height:1.5}.metrics{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid #a7acae;border-bottom:1px solid #a7acae;margin:28px 0}.metrics>div{padding:20px 12px 20px 0}.metrics strong{display:block;font-size:30px;line-height:1.2}.metrics span{font-size:14px;color:#535b60}table{width:100%;border-collapse:collapse;font-size:15px}th,td{text-align:left;vertical-align:top;border-bottom:1px solid #c7ccce;padding:12px 10px 12px 0}th{font-size:13px;color:#535b60}td:first-child{width:29%;font-weight:650}a{color:inherit;text-underline-offset:3px;overflow-wrap:anywhere}code{font-size:13px;overflow-wrap:anywhere}li{margin:9px 0}.note{padding:18px 20px;background:#e9ecea}.links{display:grid;grid-template-columns:1fr 1fr;gap:10px 28px}footer{border-top:1px solid #a7acae;padding-top:20px;margin-top:40px;font-size:13px;color:#535b60}@media(max-width:650px){main{padding:24px 18px}.metrics,.links{grid-template-columns:1fr}.metrics>div{padding:12px 0}header{flex-wrap:wrap}table{font-size:13px}}
+</style>
+<main>
+<header><span>RtR / AERIS</span><span>IOCOMMIT09 · 27.10.2026</span></header>
+<h1>Commit quyền sau IO.<br>Đã kiểm chuyến bay ngắn.</h1>
+<span class="status">SHORT VERIFIED · 30 MIN NOT READY</span>
+<p class="lead">Bản sửa cô lập đã qua mock/fault injection và một lượt Android–ArduPilot SITL thực: cất cánh, điều khiển LOITER, thả cần → BRAKE, cấp quyền mới, LAND và khôi phục hồ sơ sau restart. Lượt 30 phút chưa chạy vì cả dự toán thời gian lẫn journal vượt giới hạn.</p>
+<div class="metrics"><div><strong>95.095</strong><span>frame gốc được đối chiếu đầy đủ</span></div><div><strong>687 / 687</strong><span>transaction input và consent hợp lệ</span></div><div><strong>17 / 17</strong><span>file hồ sơ giữ nguyên SHA sau restart</span></div></div>
+
+<h2>Thay đổi đã nghiệm thu ở phạm vi ngắn</h2>
+<p>Trước đây input và đề xuất gia hạn có hai lần đồng bộ đĩa riêng. Trace cũ ghi nhận một lần gia hạn vượt hạn quyền trước đó; đồng thời input/UI quá hạn vẫn bị từ chối đúng. IOCommit09 gom input và đề xuất gia hạn thành một transaction logic, giữ mọi dữ liệu gốc. Quyền chỉ được công bố sau khi đồng bộ hoàn tất và kiểm lại clock, hạn quyền cũ, tuổi input/UI, phiên, foreground và release fence.</p>
+<p>Candidate chưa có receipt không được xem là quyền đã cấp. Reader mới kiểm SHA gốc, thứ tự, thời điểm durability/decision và receipt tương ứng. Fault injection kiểm việc hết hạn trong IO, UI cũ, mất context, lỗi lưu trữ và phân biệt từ chối trước socket với gửi không rõ kết quả. Receipt/TX/rotation vẫn có barrier riêng; không tuyên bố toàn vòng lặp giảm một nửa độ trễ.</p>
+
+<table><thead><tr><th>Tiêu chí</th><th>Kết quả thực</th><th>Phạm vi</th></tr></thead><tbody>
+<tr><td>Firmware và preflight</td><td>Đúng 39 tham số có kiểu; GPS/EKF; duyệt Home sau ARM</td><td>Reference Quad-X + AP instrumented 4.7.1-dev, chưa hiệu chuẩn Hera</td></tr>
+<tr><td>Điều khiển có trợ giúp</td><td>Takeoff 3 m → LOITER → tiến 1,106 m → UP/BRAKE17 → cấp quyền mới → LAND</td><td>LOITER có AP hỗ trợ vị trí/thái độ, không phải ACRO</td></tr>
+<tr><td>Commit quyền</td><td>687 accepted, 0 refused/unknown; hạn quyền cũ còn tối thiểu 22,543 ms tại decision</td><td>Clock cục bộ gắn với source và raw đã đóng; không chứng minh mất điện hay xác thực từ xa</td></tr>
+<tr><td>Độ mới dữ liệu</td><td>Input lúc decision tối đa 126,122 ms; UI đi kèm tối đa 174,930 ms</td><td>Giữ input/UI 200 ms và frame 250 ms</td></tr>
+<tr><td>IO</td><td>Barrier transaction tối đa 105,903 ms; fsync wall tối đa 105,438 ms</td><td>Đo inclusive; chưa tách nguyên nhân filesystem với chờ lập lịch</td></tr>
+<tr><td>Transport và mô hình</td><td>95.095 frame, 765.547 sự kiện AP; 1.038 TX có kết quả ghi, 0 unknown</td><td>Raw model/AP/clock/CRC được kiểm độc lập; ACK không thay chứng cứ chuyển động</td></tr>
+<tr><td>Hạ cánh và restart</td><td>Nhóm quan sát ground/disarm độc lập; journal đóng, 17 file nguyên SHA, r1 giữ nguyên</td><td>Restart về NO_SESSION, không owner/binding/quyền được tự khôi phục</td></tr>
+<tr><td>Kiểm độc lập</td><td><code>PASS_SHORT_SCOPE_LONG_NOT_AUTHORIZED</code></td><td>Một lượt ngắn; không phải chứng nhận beta hay vận hành drone thật</td></tr>
+</tbody></table>
+
+<h2>Vì sao chưa chạy 30 phút?</h2>
+<table><thead><tr><th>Điều kiện</th><th>Đo / dự toán từ short</th><th>Giới hạn giữ nguyên</th></tr></thead><tbody>
+<tr><td>Pacing</td><td>Toàn lượt 0,966×; cửa sổ 5 giây thấp nhất 0,732×</td><td>Speedup 1, cap 500 ms, không bỏ frame</td></tr>
+<tr><td>Thời gian host</td><td>2.587,259 giây dự toán, gồm warmup và dự phòng</td><td>1.960 giây</td></tr>
+<tr><td>Thời gian native</td><td>2.569,634 giây dự toán</td><td>2.000 giây</td></tr>
+<tr><td>Journal native</td><td>421.375.643 byte dự toán; tối đa 163.166,642 byte/giây trong cửa sổ 5 giây</td><td>167.772.160 byte (160 MiB), đã tính 2 MiB dành cho đóng hồ sơ</td></tr>
+</tbody></table>
+<p class="note">Đây là dự toán bảo thủ từ short, không phải kết quả chạy 30 phút. Cửa sổ pacing xấu nhất nằm qua pha LAND/disarm và đóng phiên; chưa thể suy ra tốc độ giữ bay liên tục cũng là 0,732×. Gate vẫn được giữ nguyên, không bỏ cửa sổ này để cho qua.</p>
+
+<h2>Bước tiếp theo có căn cứ</h2>
+<ol><li><b>Journal gọn, lossless, có phiên bản:</b> đưa context lặp về manifest bất biến và mã hóa input/receipt/metadata gọn hơn. Giữ đủ từng dữ liệu, timestamp, thứ tự và barrier; decoder/hash phải tái dựng chính xác. Với cùng warmup ngay cả ở 1×, cần giảm khoảng 47% tốc độ byte xấu nhất để vừa quota.</li>
+<li><b>Đo pacing theo từng pha:</b> đối chiếu host WAL/write/fsync, AP wait và thời gian lập lịch quanh cửa sổ xấu; tối ưu đúng chỗ có chứng cứ. Mức rolling RTF cần khoảng 0,983× với warmup/dự phòng hiện tại. Chưa xác định nguyên nhân độc quyền từ các span inclusive.</li>
+<li><b>Một short mới sau sửa:</b> mock/fault injection → Android–SITL ngắn → QA raw độc lập → tính lại ngân sách thời gian/byte. Chỉ sau tất cả gate đạt mới chạy 30 phút và thử cắt link có chủ đích.</li></ol>
+
+<h2>Bảo toàn và dọn runtime</h2>
+<p>17.117 entry baseline cùng 19 seal cũ / 37.404 entry đã kiểm: không có drift mới. 165 đường dẫn thiếu từ baseline trước vẫn được ghi riêng, không khôi phục hoặc suy diễn đã hiện diện liên tục. Source/candidate và lịch sử ENDURE giữ nguyên; không cộng interval cũ.</p>
+<p>Năm package cũ và ba diagnostic giữ nguyên SHA. Emulator, guardian, container kiểm và các cổng owned đã đóng. Scratch build: đã dọn 100 file, 2.057.620 byte; không có bản sao project trong tmp. Docker image prune thu hồi 0 byte. Không xóa dữ liệu người dùng. Còn khoảng 49,46 GiB lúc kiểm cuối; việc chặn lượt dài đến từ dự toán runtime/journal, không phải thiếu dung lượng host.</p>
+<p>APK chỉ ký development trong package riêng. Chưa có nghiệm thu HeraHub/HID, payload thật, drone thật hay production. Diagnostic đã xuất và đối chiếu SHA trước restart; persistence của chính diagnostic trên thiết bị chưa được kiểm. Hai thư mục rỗng control-runs/review-links đã tạo minh bạch trước hồ sơ UI; khởi tạo thư mục tự động lần đầu của app chưa được nghiệm thu.</p>
+
+<h2>Hồ sơ kiểm chứng</h2>
+<div class="links">
+<a href="../evidence/betaintegrated01-cockpit05-iocommit09/ROOT-VERIFY01.json">Root Verify Report</a>
+<a href="../evidence/betaintegrated01-cockpit05-iocommit09/qa/short-independent01.json">QA độc lập: short và gate 30 phút</a>
+<a href="../evidence/betaintegrated01-cockpit05-iocommit09/qa/short-cold01/results.json">Đối chiếu đầy đủ raw short</a>
+<a href="../evidence/betaintegrated01-cockpit05-iocommit09/qa/duration-feasibility01.json">Dự toán thời gian / byte</a>
+<a href="../evidence/betaintegrated01-cockpit05-iocommit09/host/actual-short-analysis01.json">Phân tích trace và byte theo loại record</a>
+<a href="../evidence/betaintegrated01-cockpit05-iocommit09/preservation-after01.json">Kiểm bảo toàn cuối</a>
+<a href="../native/betaintegrated01/cockpitio09/dist/aeris-cockpitio09-development-01.apk">APK development IOCommit09</a>
+<a href="../evidence/betaintegrated01-cockpit05-iocommit09/handoff-final.json">Inventory bàn giao có SHA</a>
+</div>
+<footer>Vibecode Kit v6.3 · Contractor / Builders / QA độc lập. Source APK: <code>90bf329f…732aeb5</code>. APK SHA: <code>1db46363…6e0604</code>.<br>Quyết định bàn giao: sửa IO/commit đã kiểm ở phạm vi ngắn; chưa đạt 30 phút, chưa đạt toàn beta.</footer>
+</main>
+</html>

@@ -1,0 +1,82 @@
+{
+  "schemaVersion": 1,
+  "milestone": "SIM32-INSTRUMENT01",
+  "at": "2026-10-14T01:40:17.886003+00:00",
+  "status": "ISOLATED_PACER_V2_REFERENCE_CAPTURE_COMPLETE",
+  "coverage": [
+    {
+      "id": "REQ-I01",
+      "status": "SCOPED_PASS",
+      "evidence": [
+        "runs/ui1791935179602/direct-analysis.json",
+        "runs/ui1791936043964/direct-analysis.json",
+        "performance-and-integrity.json"
+      ],
+      "meaning": "Bounded direct AP send/receive/parse/pacer/debt/sleep, host stages and paired clock uncertainty/cgroup measurements.",
+      "limits": "Initial LD_PRELOAD AP coverage failed; native direct observer only. Offset bounds do not prove zero drift or exact one-way latency."
+    },
+    {
+      "id": "REQ-I02",
+      "status": "SCOPED_PAIR_CAPTURED",
+      "evidence": [
+        "performance-and-integrity.json",
+        "direct-uncorrected-fingerprints.json",
+        "build-final.json"
+      ],
+      "meaning": "Same rebuilt uncorrected binary on/off UI pair; actual speedup1/rate1200 readbacks and raw retained.",
+      "limits": "One pair does not estimate observer overhead statistically. ARM64 rebuild confounds comparison with historical stock amd64."
+    },
+    {
+      "id": "REQ-I03",
+      "status": "SCOPED_THREE_CASES_PASS",
+      "evidence": [
+        "performance-and-integrity.json",
+        "pacer-bookkeeping-regression.json",
+        "runs/faultV320261014/fault-qa.json",
+        "stall-final-verification.json"
+      ],
+      "meaning": "Experimental pacer v2 with explicit500ms debt and accounted clock snapshot; three UI/SITL profiles≥1 mean RTF, full raw sensor-byte oracle and unchanged authority/fault gates.",
+      "limits": "One run/profile, limited debt headroom, burst pacing; no uniform1200Hz wall-time, sustained guarantee or stock AP acceptance."
+    },
+    {
+      "id": "REQ-I04",
+      "status": "SCOPED_PASS",
+      "evidence": [
+        "preservation-before.json",
+        "preservation-after.json",
+        "cleanup-final.json",
+        "build-final.json"
+      ],
+      "meaning": "All4406 baseline file bytes match; owned writers/containers/preview stopped, floor retained, failures archived.",
+      "limits": "Point-in-time preservation, not continuous original-path availability or ENDURE PASS."
+    }
+  ],
+  "configuration": {
+    "platform": "linux/arm64",
+    "nominalSpeedup": 1,
+    "rateHz": 1200,
+    "pacerPolicy": {
+      "version": 2,
+      "maximumNegativeDebtUs": 500000,
+      "nominalSpeedup": 1,
+      "wallSnapshot": "single-accounted-clock-snapshot",
+      "catchupBurstsPossible": true,
+      "staleBackendDeadlineSeconds": 3
+    },
+    "binarySha256": "f2be1f349f84b4aedaa5912b3050f64f476f3218bc4f68b34ad4de11393c2d08"
+  },
+  "notChecked": [
+    "Repeated/randomized observer-cost estimate",
+    "Long-duration1x reliability across host power/load states",
+    "Uniform wall-time control/graphics latency budgets",
+    "Native HeraHub input/video/SDK",
+    "Hera hardware-calibrated physics/HIL/flight",
+    "Full upstream ArduPilot CI",
+    "Ragas/DJI matched comparative acceptance"
+  ],
+  "productionRelease": false,
+  "FlyIntegration": false,
+  "newSoftwareSignature": false,
+  "ENDUREAcceptanceChanged": false,
+  "auditMethod": "Sequential Contractor/Builder/Verify by one agent; not independent review"
+}

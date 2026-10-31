@@ -1,0 +1,2013 @@
+{
+  "format": "aeris-beta-m0-virtual-native-source-input-closure",
+  "version": 1,
+  "atUTC": "2026-10-26T16:57:41.322880+00:00",
+  "status": "STATIC_NATIVE_SOURCE_INPUTS_BOUND_FOR_ADAPTATION_NOT_EXECUTABLE_RELEASE",
+  "sourceCommit": "e5af80e7032738e6b3575087410e5ff0aa535b10",
+  "historicalBuildRecipe": {
+    "path": "native/native98/build.py",
+    "bytes": 5495,
+    "sha256": "6cac95a07e2e5dfea47bf3b4ff4aa557b9dd36f01d410c2ef8934c975bca517c"
+  },
+  "historicalBuildRecipeExecuted": false,
+  "selectedManifest": {
+    "path": "native/native98/AndroidManifest.xml",
+    "bytes": 917,
+    "sha256": "d98f8b0c6694bbae2a405d806fbd7598020c0affa274e6e5f2db8ea4563446d0"
+  },
+  "javaInputs": [
+    {
+      "path": "native/native98/src/vn/rtr/aeris/native98/ArchiveEdgesTest.java",
+      "bytes": 1381,
+      "sha256": "396f4aaf68ed557632ebff873ee6c1c88c13c3d51daa1457a0c357ecec0e5256",
+      "historicalBuildRole": "HOST_TEST_OR_UNSELECTED_JAVA_SOURCE",
+      "selectedForExecution": false,
+      "androidImport": false
+    },
+    {
+      "path": "native/native98/src/vn/rtr/aeris/native98/ArchiveTest91.java",
+      "bytes": 2228,
+      "sha256": "44186d5011083b4959b81dc8d1840734fcf3a114337900b53754042f659d11a6",
+      "historicalBuildRole": "HOST_TEST_OR_UNSELECTED_JAVA_SOURCE",
+      "selectedForExecution": false,
+      "androidImport": false
+    },
+    {
+      "path": "native/native98/src/vn/rtr/aeris/native98/BenchJournal89.java",
+      "bytes": 3526,
+      "sha256": "ea45180a0506b3bc721befb49efd5ce279107b4debc977244b3ca8c5c7652097",
+      "historicalBuildRole": "EXPLICIT_APK_JAVA_LIST",
+      "selectedForExecution": false,
+      "androidImport": false
+    },
+    {
+      "path": "native/native98/src/vn/rtr/aeris/native98/BundleIO88.java",
+      "bytes": 897,
+      "sha256": "016f9c129fe846273216c1cba052fea8f8fbe8ae8e58262dc32e53bddfca80c7",
+      "historicalBuildRole": "EXPLICIT_APK_JAVA_LIST",
+      "selectedForExecution": false,
+      "androidImport": false
+    },
+    {
+      "path": "native/native98/src/vn/rtr/aeris/native98/BundleIOTest88.java",
+      "bytes": 1136,
+      "sha256": "761c2e3e9016528aa49188a9e68f65e7952bea683ca153ab2b7d921f91267f21",
+      "historicalBuildRole": "HOST_TEST_OR_UNSELECTED_JAVA_SOURCE",
+      "selectedForExecution": false,
+      "androidImport": false
+    },
+    {
+      "path": "native/native98/src/vn/rtr/aeris/native98/CompositeTest87.java",
+      "bytes": 1309,
+      "sha256": "664e2348c1e44a9ae344b1ff07e5160cd381c915b69a6eb6d1f58604f7de1236",
+      "historicalBuildRole": "HOST_TEST_OR_UNSELECTED_JAVA_SOURCE",
+      "selectedForExecution": false,
+      "androidImport": false
+    },
+    {
+      "path": "native/native98/src/vn/rtr/aeris/native98/Data97.java",
+      "bytes": 947,
+      "sha256": "29ca316d53c0df288768e9f9a483cf1102f6ca57967e2b56b20d20e1181cdb29",
+      "historicalBuildRole": "EXPLICIT_APK_JAVA_LIST",
+      "selectedForExecution": false,
+      "androidImport": false
+    },
+    {
+      "path": "native/native98/src/vn/rtr/aeris/native98/DiagnosticArchive91.java",
+      "bytes": 4484,
+      "sha256": "682d8c9184d3476135f0927f6d9c0a950c115f6f0c3fba80cf54b79630ea0c5a",
+      "historicalBuildRole": "EXPLICIT_APK_JAVA_LIST",
+      "selectedForExecution": false,
+      "androidImport": false
+    },
+    {
+      "path": "native/native98/src/vn/rtr/aeris/native98/DiagnosticSaf91.java",
+      "bytes": 9928,
+      "sha256": "04d3e7be66aa359b5dbf895e8ce85385e722d2faebbd6393f91ba638f7eb5d0a",
+      "historicalBuildRole": "EXPLICIT_APK_JAVA_LIST",
+      "selectedForExecution": false,
+      "androidImport": true
+    },
+    {
+      "path": "native/native98/src/vn/rtr/aeris/native98/Diagnostics90.java",
+      "bytes": 10623,
+      "sha256": "fb3fb8a2be1fd714dbf84ddcd2c3524b3e42a058258f03522441f9d8c90bc766",
+      "historicalBuildRole": "EXPLICIT_APK_JAVA_LIST",
+      "selectedForExecution": false,
+      "androidImport": true
+    },
+    {
+      "path": "native/native98/src/vn/rtr/aeris/native98/Dialect95.java",
+      "bytes": 67621,
+      "sha256": "6c0aa29eae1ef749a407c6cb667b157cee4eedce41d4bf0e34ad8cfc9aedd754",
+      "historicalBuildRole": "EXPLICIT_APK_JAVA_LIST",
+      "selectedForExecution": false,
+      "androidImport": false
+    },
+    {
+      "path": "native/native98/src/vn/rtr/aeris/native98/DirectTransport95.java",
+      "bytes": 10165,
+      "sha256": "ee1e05ea089e161c1cf578eb31329eeb7885a01c43326c4be465a48170588173",
+      "historicalBuildRole": "EXPLICIT_APK_JAVA_LIST",
+      "selectedForExecution": false,
+      "androidImport": false
+    },
+    {
+      "path": "native/native98/src/vn/rtr/aeris/native98/DraftStore.java",
+      "bytes": 8122,
+      "sha256": "405d899570c75cc509f65f328f9466d7719e6ee72f90768f368b15cc4705b506",
+      "historicalBuildRole": "EXPLICIT_APK_JAVA_LIST",
+      "selectedForExecution": false,
+      "androidImport": false
+    },
+    {
+      "path": "native/native98/src/vn/rtr/aeris/native98/DraftStoreTest.java",
+      "bytes": 4376,
+      "sha256": "a4553f6222d080caebeef53eac1a2aea0307bd92e5fc9c5e1d485d5fd5bc2fb5",
+      "historicalBuildRole": "HOST_TEST_OR_UNSELECTED_JAVA_SOURCE",
+      "selectedForExecution": false,
+      "androidImport": false
+    },
+    {
+      "path": "native/native98/src/vn/rtr/aeris/native98/FaultMain.java",
+      "bytes": 626,
+      "sha256": "c80ed1a7853806be92c790ebcc97e8c8186538f8d18b5ae50b990784ff2a8662",
+      "historicalBuildRole": "HOST_TEST_OR_UNSELECTED_JAVA_SOURCE",
+      "selectedForExecution": false,
+      "androidImport": false
+    },
+    {
+      "path": "native/native98/src/vn/rtr/aeris/native98/FileGate91.java",
+      "bytes": 1098,
+      "sha256": "4c5d20ab1a7670425523e30158d062a9f4a44b1502355d216906918f43c387e4",
+      "historicalBuildRole": "EXPLICIT_APK_JAVA_LIST",
+      "selectedForExecution": false,
+      "androidImport": false
+    },
+    {
+      "path": "native/native98/src/vn/rtr/aeris/native98/FileGate94Test.java",
+      "bytes": 1277,
+      "sha256": "e464d10f99ca6e4d59b49a517013e0fe46fb5d777c0785b3ea9783f8d9f54a88",
+      "historicalBuildRole": "HOST_TEST_OR_UNSELECTED_JAVA_SOURCE",
+      "selectedForExecution": false,
+      "androidImport": false
+    },
+    {
+      "path": "native/native98/src/vn/rtr/aeris/native98/FileGateTest91.java",
+      "bytes": 1203,
+      "sha256": "6fc746efcd64cdc2d1b383225b4e1a4cbd0e5dce0050e1959592edd4fc779281",
+      "historicalBuildRole": "HOST_TEST_OR_UNSELECTED_JAVA_SOURCE",
+      "selectedForExecution": false,
+      "androidImport": false
+    },
+    {
+      "path": "native/native98/src/vn/rtr/aeris/native98/FileOps87.java",
+      "bytes": 4817,
+      "sha256": "899b3655466ceea66876e194adeb92763471c9009cdcff295e5dcc8cd80d8505",
+      "historicalBuildRole": "EXPLICIT_APK_JAVA_LIST",
+      "selectedForExecution": false,
+      "androidImport": false
+    },
+    {
+      "path": "native/native98/src/vn/rtr/aeris/native98/FileOpsTest87.java",
+      "bytes": 2328,
+      "sha256": "857b4172af6feb66552e28b58bd279a8e23ed95225cd351786501f312cb5d54f",
+      "historicalBuildRole": "HOST_TEST_OR_UNSELECTED_JAVA_SOURCE",
+      "selectedForExecution": false,
+      "androidImport": false
+    },
+    {
+      "path": "native/native98/src/vn/rtr/aeris/native98/GateReplay95Test.java",
+      "bytes": 1095,
+      "sha256": "270ec7935f8600e199f045c64e24cbbc2dbfa9a727e82e4f4a317ec8930f20d1",
+      "historicalBuildRole": "HOST_TEST_OR_UNSELECTED_JAVA_SOURCE",
+      "selectedForExecution": false,
+      "androidImport": false
+    },
+    {
+      "path": "native/native98/src/vn/rtr/aeris/native98/HistoryTest.java",
+      "bytes": 1784,
+      "sha256": "80f4238dab7361f10d0837987439e6183a855f1520a3e339809dd1e695f506cf",
+      "historicalBuildRole": "HOST_TEST_OR_UNSELECTED_JAVA_SOURCE",
+      "selectedForExecution": false,
+      "androidImport": false
+    },
+    {
+      "path": "native/native98/src/vn/rtr/aeris/native98/InputModel.java",
+      "bytes": 4428,
+      "sha256": "3acb1151dcaa2ea80bb48e0d51c6a31ef50bad0e8287e8eae0fdbd41fabaa7c9",
+      "historicalBuildRole": "EXPLICIT_APK_JAVA_LIST",
+      "selectedForExecution": false,
+      "androidImport": false
+    },
+    {
+      "path": "native/native98/src/vn/rtr/aeris/native98/JournalMain.java",
+      "bytes": 1030,
+      "sha256": "4d48d985885f707e955a3b17b55e80295c35f490f7abb60adfbdef9603c00676",
+      "historicalBuildRole": "EXPLICIT_APK_JAVA_LIST",
+      "selectedForExecution": false,
+      "androidImport": false
+    },
+    {
+      "path": "native/native98/src/vn/rtr/aeris/native98/JournalTest89.java",
+      "bytes": 2361,
+      "sha256": "fd779d4d8a5909c2d9c4fb0f7d8aa4bc64014b1d8849d54d8ebc954e613e6dc9",
+      "historicalBuildRole": "HOST_TEST_OR_UNSELECTED_JAVA_SOURCE",
+      "selectedForExecution": false,
+      "androidImport": false
+    },
+    {
+      "path": "native/native98/src/vn/rtr/aeris/native98/Json.java",
+      "bytes": 376,
+      "sha256": "b0364abb861c246e988848ff977692d33188e467afde5838cb85af30439e9e93",
+      "historicalBuildRole": "EXPLICIT_APK_JAVA_LIST",
+      "selectedForExecution": false,
+      "androidImport": false
+    },
+    {
+      "path": "native/native98/src/vn/rtr/aeris/native98/ModelTest89.java",
+      "bytes": 6129,
+      "sha256": "d908bbb2bd8aa4d2783ef7b4a776172e30cfd9d2867542cf335cc4ae216e593a",
+      "historicalBuildRole": "EXPLICIT_APK_JAVA_LIST",
+      "selectedForExecution": false,
+      "androidImport": false
+    },
+    {
+      "path": "native/native98/src/vn/rtr/aeris/native98/NativeJournal95Test.java",
+      "bytes": 1043,
+      "sha256": "1875eec24ad4b9812cf6716dc180c17920029fcd29ef56fa8e08f7425eb16b08",
+      "historicalBuildRole": "HOST_TEST_OR_UNSELECTED_JAVA_SOURCE",
+      "selectedForExecution": false,
+      "androidImport": false
+    },
+    {
+      "path": "native/native98/src/vn/rtr/aeris/native98/NativeSend98.java",
+      "bytes": 818,
+      "sha256": "b5d6cdcc17e78ace237307e4f1f434ec55d530a5383301216cec9edb8d79d937",
+      "historicalBuildRole": "EXPLICIT_APK_JAVA_LIST",
+      "selectedForExecution": false,
+      "androidImport": false
+    },
+    {
+      "path": "native/native98/src/vn/rtr/aeris/native98/Payload97Test.java",
+      "bytes": 7817,
+      "sha256": "edb47e7078fb873d15bccde52b1182d504a3efc51381649f5f08e7db0fbe4adb",
+      "historicalBuildRole": "HOST_TEST_OR_UNSELECTED_JAVA_SOURCE",
+      "selectedForExecution": false,
+      "androidImport": false
+    },
+    {
+      "path": "native/native98/src/vn/rtr/aeris/native98/PayloadCore97.java",
+      "bytes": 19855,
+      "sha256": "ed3d1fb455d85eb934016d00c114712413b5d547ba7c8f18d5fd7e9b13a6a2d3",
+      "historicalBuildRole": "EXPLICIT_APK_JAVA_LIST",
+      "selectedForExecution": false,
+      "androidImport": false
+    },
+    {
+      "path": "native/native98/src/vn/rtr/aeris/native98/PayloadNative97.java",
+      "bytes": 4073,
+      "sha256": "51a42b28b94239d5719a0cc4fde0758b6ba7c491d86dcf997de7ff04de9188ee",
+      "historicalBuildRole": "EXPLICIT_APK_JAVA_LIST",
+      "selectedForExecution": false,
+      "androidImport": true
+    },
+    {
+      "path": "native/native98/src/vn/rtr/aeris/native98/PolicyTest.java",
+      "bytes": 1227,
+      "sha256": "19da0fa20e8204e2175129317774bc7219d5f968c424b0255208ceed9c1a333e",
+      "historicalBuildRole": "HOST_TEST_OR_UNSELECTED_JAVA_SOURCE",
+      "selectedForExecution": false,
+      "androidImport": false
+    },
+    {
+      "path": "native/native98/src/vn/rtr/aeris/native98/Profile95.java",
+      "bytes": 1143,
+      "sha256": "70078ed2f08b45a3787693ef4b3ee0d986cc99ecbab230d1ac62cb5416d0c3a7",
+      "historicalBuildRole": "EXPLICIT_APK_JAVA_LIST",
+      "selectedForExecution": false,
+      "androidImport": false
+    },
+    {
+      "path": "native/native98/src/vn/rtr/aeris/native98/RawArchive96.java",
+      "bytes": 5392,
+      "sha256": "135c35290f970b082ff653ae09f308843478dba0909df84ad5fdcf5dae3abcb0",
+      "historicalBuildRole": "EXPLICIT_APK_JAVA_LIST",
+      "selectedForExecution": false,
+      "androidImport": false
+    },
+    {
+      "path": "native/native98/src/vn/rtr/aeris/native98/RawJournal95.java",
+      "bytes": 1965,
+      "sha256": "130d6400cf048291cad758c380af0a7d6466d6dd1a4ece2890e10fb34d767c46",
+      "historicalBuildRole": "EXPLICIT_APK_JAVA_LIST",
+      "selectedForExecution": false,
+      "androidImport": false
+    },
+    {
+      "path": "native/native98/src/vn/rtr/aeris/native98/RawSaf96.java",
+      "bytes": 9399,
+      "sha256": "89492f44033160f83bf32fa92d73f91c2d8233910b7c8f4349f289d28880d3dd",
+      "historicalBuildRole": "EXPLICIT_APK_JAVA_LIST",
+      "selectedForExecution": false,
+      "androidImport": true
+    },
+    {
+      "path": "native/native98/src/vn/rtr/aeris/native98/ResourcePolicy.java",
+      "bytes": 3517,
+      "sha256": "5226096badf31794adc80cc8255cb28bfd1c65fb74af7b939d2621dc7b7a2dbc",
+      "historicalBuildRole": "EXPLICIT_APK_JAVA_LIST",
+      "selectedForExecution": false,
+      "androidImport": false
+    },
+    {
+      "path": "native/native98/src/vn/rtr/aeris/native98/ShellActivity.java",
+      "bytes": 30756,
+      "sha256": "e2d8840de0d3be5ee443827d78abb47147f0ddecea6e1ccf6a046f69dbeeb241",
+      "historicalBuildRole": "EXPLICIT_APK_JAVA_LIST",
+      "selectedForExecution": false,
+      "androidImport": true
+    },
+    {
+      "path": "native/native98/src/vn/rtr/aeris/native98/UiJournal96.java",
+      "bytes": 2085,
+      "sha256": "215b3dc79c1b47f7f0df417585562db5af16659f83049697ec11680d2a1d2dad",
+      "historicalBuildRole": "EXPLICIT_APK_JAVA_LIST",
+      "selectedForExecution": false,
+      "androidImport": false
+    },
+    {
+      "path": "native/native98/src/vn/rtr/aeris/native98/Unified98Test.java",
+      "bytes": 6411,
+      "sha256": "cc11deb55d780aa47789a38c6d40d9b1ae29dcca5038a8447b66f38dd931b5c2",
+      "historicalBuildRole": "HOST_TEST_OR_UNSELECTED_JAVA_SOURCE",
+      "selectedForExecution": false,
+      "androidImport": false
+    },
+    {
+      "path": "native/native98/src/vn/rtr/aeris/native98/UnifiedCore98.java",
+      "bytes": 3012,
+      "sha256": "6d11da1bc9fb07fc578c7e7acde4dee2386ab7dd403fbf8ef1f1c2c0632d5dc1",
+      "historicalBuildRole": "EXPLICIT_APK_JAVA_LIST",
+      "selectedForExecution": false,
+      "androidImport": false
+    },
+    {
+      "path": "native/native98/src/vn/rtr/aeris/native98/UnifiedReplay98.java",
+      "bytes": 1288,
+      "sha256": "25c6d97833b66b1d7263eaa150187c7133f180aa8c824b24ee7220fd9c1b126d",
+      "historicalBuildRole": "HOST_TEST_OR_UNSELECTED_JAVA_SOURCE",
+      "selectedForExecution": false,
+      "androidImport": false
+    },
+    {
+      "path": "native/native98/src/vn/rtr/aeris/native98/VideoWatch89.java",
+      "bytes": 2472,
+      "sha256": "2b9883b9487062490443880bf4e474ba6ab3e0a71db93f56184690234a5fcd2c",
+      "historicalBuildRole": "EXPLICIT_APK_JAVA_LIST",
+      "selectedForExecution": false,
+      "androidImport": false
+    },
+    {
+      "path": "native/native98/src/vn/rtr/aeris/native98/WireGate95.java",
+      "bytes": 11495,
+      "sha256": "5db76e5b1a7efea1d03f093118163d5ed9de0b10fd22acb3033599ad5ed0b356",
+      "historicalBuildRole": "EXPLICIT_APK_JAVA_LIST",
+      "selectedForExecution": false,
+      "androidImport": false
+    },
+    {
+      "path": "native/native98/src/vn/rtr/aeris/native98/WorkspaceTest.java",
+      "bytes": 2257,
+      "sha256": "dcc425a1b66294d533a3399a4e00aa9ce3478b6319d456fcab49cc68924e5163",
+      "historicalBuildRole": "HOST_TEST_OR_UNSELECTED_JAVA_SOURCE",
+      "selectedForExecution": false,
+      "androidImport": false
+    },
+    {
+      "path": "native/native98/src/vn/rtr/aeris/native98/Workspaces.java",
+      "bytes": 9831,
+      "sha256": "2ec9318930cb34cdefc531421e24083d5f29b443aa3ba8ca3a1df6718a580097",
+      "historicalBuildRole": "EXPLICIT_APK_JAVA_LIST",
+      "selectedForExecution": false,
+      "androidImport": false
+    }
+  ],
+  "javaInputCount": 47,
+  "explicitHistoricalAPKJavaCount": 29,
+  "virtualAssetMap": {
+    "native/native98/assets/cockpit.css": {
+      "path": "native/native98/assets/cockpit.css",
+      "bytes": 31105,
+      "sha256": "ae3d2fc9ea05005b5cdd097d39303c86bf3d87259f7442166395a207eb93a457",
+      "bindingKind": "PRESENT_STATIC_ASSET",
+      "selectedForM1SourceAdaptation": true
+    },
+    "native/native98/assets/cockpit.mjs": {
+      "path": "native/native98/assets/cockpit.mjs",
+      "bytes": 36820,
+      "sha256": "570cee3941377a2480ee96546d62c9ef69d7c67379c393c556bc7209fdf78ee6",
+      "bindingKind": "PRESENT_STATIC_ASSET",
+      "selectedForM1SourceAdaptation": true
+    },
+    "native/native98/assets/controls82.mjs": {
+      "path": "native/native98/assets/controls82.mjs",
+      "bytes": 1489,
+      "sha256": "5d546804b550ee251d3cfd85651f0331808aed6b1724657b1f18386a191e7a37",
+      "bindingKind": "PRESENT_STATIC_ASSET",
+      "selectedForM1SourceAdaptation": true
+    },
+    "native/native98/assets/diagnostics90.css": {
+      "path": "native/native98/assets/diagnostics90.css",
+      "bytes": 4862,
+      "sha256": "a865e29f740e5408ff0a4c4beec2458f25d2fec59368378cbe9e274f552320f7",
+      "bindingKind": "PRESENT_STATIC_ASSET",
+      "selectedForM1SourceAdaptation": true
+    },
+    "native/native98/assets/diagnostics90.mjs": {
+      "path": "native/native98/assets/diagnostics90.mjs",
+      "bytes": 9934,
+      "sha256": "6ab4e65911e4774f2d178bb2f2582f180f2988d01334c61f1acdcf47a4f1f95b",
+      "bindingKind": "PRESENT_STATIC_ASSET",
+      "selectedForM1SourceAdaptation": true
+    },
+    "native/native98/assets/direct95/controller.mjs": {
+      "path": "native/native98/assets/direct95/controller.mjs",
+      "bytes": 7414,
+      "sha256": "9f141e8173a0890892bea7c7dad131663729a2ddeec489e18d1c5d475e76581c",
+      "bindingKind": "PRESENT_STATIC_ASSET",
+      "selectedForM1SourceAdaptation": true
+    },
+    "native/native98/assets/direct95/events.mjs": {
+      "path": "native/native98/assets/direct95/events.mjs",
+      "bytes": 497,
+      "sha256": "e15b2eb1389cc6b55c9ac51d1a4f2b4def23583b20bee6616f6a247736e25bbe",
+      "bindingKind": "PRESENT_STATIC_ASSET",
+      "selectedForM1SourceAdaptation": true
+    },
+    "native/native98/assets/direct95/lineage.json": {
+      "path": "native/native98/assets/direct95/lineage.json",
+      "bytes": 3456,
+      "sha256": "c189e583113330a59a2ea78433d93eb83cab7d4c39f8521641dfaa30c2fc4059",
+      "bindingKind": "PRESENT_STATIC_ASSET",
+      "selectedForM1SourceAdaptation": true
+    },
+    "native/native98/assets/direct95/socket.mjs": {
+      "path": "native/native98/assets/direct95/socket.mjs",
+      "bytes": 2855,
+      "sha256": "5f3e927e7f6966f4e56ed6a85136489330f21ab3232904547c27e0b6def57f35",
+      "bindingKind": "PRESENT_STATIC_ASSET",
+      "selectedForM1SourceAdaptation": true
+    },
+    "native/native98/assets/direct95/vendor/app/core/compiler.mjs": {
+      "path": "native/native98/assets/direct95/vendor/app/core/compiler.mjs",
+      "bytes": 3416,
+      "sha256": "f30223bb98d493a36012676edf24d8220e04fcf799ab0f15481e018ff63b5557",
+      "bindingKind": "PRESENT_STATIC_ASSET",
+      "selectedForM1SourceAdaptation": true
+    },
+    "native/native98/assets/direct95/vendor/app/core/geo-pins.mjs": {
+      "path": "native/native98/assets/direct95/vendor/app/core/geo-pins.mjs",
+      "bytes": 521,
+      "sha256": "d55b0139b877390ecb746c43104f6944d262aed298e7777673ea767ffcb6ce3f",
+      "bindingKind": "PRESENT_STATIC_ASSET",
+      "selectedForM1SourceAdaptation": true
+    },
+    "native/native98/assets/direct95/vendor/app/core/geo-policy.mjs": {
+      "path": "native/native98/assets/direct95/vendor/app/core/geo-policy.mjs",
+      "bytes": 1122,
+      "sha256": "37ee82b38648bd82e59b2ca526d91de41207e2fea22bc5549a1a34002a246e66",
+      "bindingKind": "PRESENT_STATIC_ASSET",
+      "selectedForM1SourceAdaptation": true
+    },
+    "native/native98/assets/direct95/vendor/app/core/geo-quality.mjs": {
+      "path": "native/native98/assets/direct95/vendor/app/core/geo-quality.mjs",
+      "bytes": 12015,
+      "sha256": "4233a94a29d3661b724542e35b4e177b0b4c9e14f6d34c8cc7d98f6867ec27ae",
+      "bindingKind": "PRESENT_STATIC_ASSET",
+      "selectedForM1SourceAdaptation": true
+    },
+    "native/native98/assets/direct95/vendor/app/core/geodata.mjs": {
+      "path": "native/native98/assets/direct95/vendor/app/core/geodata.mjs",
+      "bytes": 7710,
+      "sha256": "4745f0b7b4ebe002cf5bb728e835078a3424796162712219761a32a1472e1059",
+      "bindingKind": "PRESENT_STATIC_ASSET",
+      "selectedForM1SourceAdaptation": true
+    },
+    "native/native98/assets/direct95/vendor/app/core/qgc.mjs": {
+      "path": "native/native98/assets/direct95/vendor/app/core/qgc.mjs",
+      "bytes": 18764,
+      "sha256": "d2de74f83d5bef53530f88203cfbb9d232689b324023107ce67e3bcaddbe09d8",
+      "bindingKind": "PRESENT_STATIC_ASSET",
+      "selectedForM1SourceAdaptation": true
+    },
+    "native/native98/assets/direct95/vendor/app/core/survey.mjs": {
+      "path": "native/native98/assets/direct95/vendor/app/core/survey.mjs",
+      "bytes": 12132,
+      "sha256": "c41beb843a59400aaaf88a9efe7e6bb67f4e5ac3547e0504f1ae433f4801033e",
+      "bindingKind": "PRESENT_STATIC_ASSET",
+      "selectedForM1SourceAdaptation": true
+    },
+    "native/native98/assets/direct95/vendor/app/core/vehicle-profile.mjs": {
+      "path": "native/native98/assets/direct95/vendor/app/core/vehicle-profile.mjs",
+      "bytes": 6796,
+      "sha256": "7981c969ab27bb0086d5c081ac88a81882b7935b68b40408131d558c26f1df0e",
+      "bindingKind": "PRESENT_STATIC_ASSET",
+      "selectedForM1SourceAdaptation": true
+    },
+    "native/native98/assets/direct95/vendor/native/native94/display-link84.mjs": {
+      "path": "native/native98/assets/direct95/vendor/native/native94/display-link84.mjs",
+      "bytes": 499,
+      "sha256": "ff6e231a2823c3a09af65318d36e69dc95ef4ad643669a872691f7247c8b10c4",
+      "bindingKind": "PRESENT_STATIC_ASSET",
+      "selectedForM1SourceAdaptation": true
+    },
+    "native/native98/assets/direct95/vendor/native/native94/link83.mjs": {
+      "path": "native/native98/assets/direct95/vendor/native/native94/link83.mjs",
+      "bytes": 1428,
+      "sha256": "88f67347d4eb1a421b6abd7073510cf3db56f282c16038a1021ad6b7fa5fb1fe",
+      "bindingKind": "PRESENT_STATIC_ASSET",
+      "selectedForM1SourceAdaptation": true
+    },
+    "native/native98/assets/direct95/vendor/native/native94/takeoff83.mjs": {
+      "path": "native/native98/assets/direct95/vendor/native/native94/takeoff83.mjs",
+      "bytes": 1163,
+      "sha256": "a40c5857c166f8ae543bb557c7f2ad58c4b52a631c9d6d748ac897958f1d8bc1",
+      "bindingKind": "PRESENT_STATIC_ASSET",
+      "selectedForM1SourceAdaptation": true
+    },
+    "native/native98/assets/direct95/vendor/native/native94/telemetry84.mjs": {
+      "path": "native/native98/assets/direct95/vendor/native/native94/telemetry84.mjs",
+      "bytes": 1423,
+      "sha256": "90d0753ca80d94fea095d6f21a3f29580308a6f4ec1ed80ba2e6aee8fd5cd8c9",
+      "bindingKind": "PRESENT_STATIC_ASSET",
+      "selectedForM1SourceAdaptation": true
+    },
+    "native/native98/assets/direct95/vendor/pilot/aeris57/domain.mjs": {
+      "path": "native/native98/assets/direct95/vendor/pilot/aeris57/domain.mjs",
+      "bytes": 50,
+      "sha256": "6673ed60c2a289eb27f9786fb4f07e0a018b7bd57f27c86a83416e7b7de82e20",
+      "bindingKind": "PRESENT_STATIC_ASSET",
+      "selectedForM1SourceAdaptation": true
+    },
+    "native/native98/assets/direct95/vendor/pilot/apflight36/types.mjs": {
+      "path": "native/native98/assets/direct95/vendor/pilot/apflight36/types.mjs",
+      "bytes": 1651,
+      "sha256": "03c950a61db5b17ec96f92b8e082bc7dddd5db755d63558f3c6ce4a1187d2ea6",
+      "bindingKind": "PRESENT_STATIC_ASSET",
+      "selectedForM1SourceAdaptation": true
+    },
+    "native/native98/assets/direct95/vendor/pilot/apflight36/vendor/common.mjs": {
+      "path": "native/native98/assets/direct95/vendor/pilot/apflight36/vendor/common.mjs",
+      "bytes": 1248,
+      "sha256": "2c4437d77352884692b8a7cc102543106f88d13fb58e38d432b7c7cbf659e16f",
+      "bindingKind": "PRESENT_STATIC_ASSET",
+      "selectedForM1SourceAdaptation": true
+    },
+    "native/native98/assets/direct95/vendor/pilot/apstream40/wire.mjs": {
+      "path": "native/native98/assets/direct95/vendor/pilot/apstream40/wire.mjs",
+      "bytes": 6381,
+      "sha256": "767978351266d6489abd88ac86c41f9353dc6b92004890cc1c33439e21ae998f",
+      "bindingKind": "PRESENT_STATIC_ASSET",
+      "selectedForM1SourceAdaptation": true
+    },
+    "native/native98/assets/direct95/vendor/pilot/auto63/compiler.mjs": {
+      "path": "native/native98/assets/direct95/vendor/pilot/auto63/compiler.mjs",
+      "bytes": 48,
+      "sha256": "e9052a829248b8f77ddc4b6093f023f32ea74f9fb423ddc53c111c23cd2ad2d4",
+      "bindingKind": "PRESENT_STATIC_ASSET",
+      "selectedForM1SourceAdaptation": true
+    },
+    "native/native98/assets/direct95/vendor/pilot/auto63/flight-guard.mjs": {
+      "path": "native/native98/assets/direct95/vendor/pilot/auto63/flight-guard.mjs",
+      "bytes": 1777,
+      "sha256": "fdf769521879217df0c5ed1e446b4924bf5957bfe5756987d78ff3736513d5f4",
+      "bindingKind": "PRESENT_STATIC_ASSET",
+      "selectedForM1SourceAdaptation": true
+    },
+    "native/native98/assets/direct95/vendor/pilot/auto63/link-v5.mjs": {
+      "path": "native/native98/assets/direct95/vendor/pilot/auto63/link-v5.mjs",
+      "bytes": 12393,
+      "sha256": "a1d7de78ead8593825a57c6d34acad987b0f805c0f5e1ccb61f891eaf385c2b1",
+      "bindingKind": "PRESENT_STATIC_ASSET",
+      "selectedForM1SourceAdaptation": true
+    },
+    "native/native98/assets/direct95/vendor/pilot/firmware38/version-schema.mjs": {
+      "path": "native/native98/assets/direct95/vendor/pilot/firmware38/version-schema.mjs",
+      "bytes": 1702,
+      "sha256": "c431a7de007ee2e828d99c7ce7645e92ea04c69a9605233841910c0ee9425397",
+      "bindingKind": "PRESENT_STATIC_ASSET",
+      "selectedForM1SourceAdaptation": true
+    },
+    "native/native98/assets/direct95/vendor/pilot/firmware38/wire.mjs": {
+      "path": "native/native98/assets/direct95/vendor/pilot/firmware38/wire.mjs",
+      "bytes": 4286,
+      "sha256": "aaaa483c4311fe1bc08a5974c7ff297efd662378f802a72d974839faae843956",
+      "bindingKind": "PRESENT_STATIC_ASSET",
+      "selectedForM1SourceAdaptation": true
+    },
+    "native/native98/assets/direct95/vendor/pilot/mapping51/common.mjs": {
+      "path": "native/native98/assets/direct95/vendor/pilot/mapping51/common.mjs",
+      "bytes": 1942,
+      "sha256": "1be6074bad5c70972a29c5b666f6ab7b8c6ece12e3a7a021f715c78572286b12",
+      "bindingKind": "PRESENT_STATIC_ASSET",
+      "selectedForM1SourceAdaptation": true
+    },
+    "native/native98/assets/direct95/vendor/pilot/mapping51/fixtures.mjs": {
+      "path": "native/native98/assets/direct95/vendor/pilot/mapping51/fixtures.mjs",
+      "bytes": 1031,
+      "sha256": "411d47393f00454abf3a566590031adfa2642e3a5e684c3645bc4ec49e1fbb91",
+      "bindingKind": "PRESENT_STATIC_ASSET",
+      "selectedForM1SourceAdaptation": true
+    },
+    "native/native98/assets/direct95/vendor/pilot/mapping51/planner.mjs": {
+      "path": "native/native98/assets/direct95/vendor/pilot/mapping51/planner.mjs",
+      "bytes": 7226,
+      "sha256": "1873c09ce7d35788078ecb61a5827381f9c7e7a8edc32706c9545664ac1d49d5",
+      "bindingKind": "PRESENT_STATIC_ASSET",
+      "selectedForM1SourceAdaptation": true
+    },
+    "native/native98/assets/direct95/vendor/pilot/mavflight37/definitions.mjs": {
+      "path": "native/native98/assets/direct95/vendor/pilot/mavflight37/definitions.mjs",
+      "bytes": 39517,
+      "sha256": "171efcad793fa2d6863d412a583428d2fc809d464a1aae1053e1949b69f24350",
+      "bindingKind": "PRESENT_STATIC_ASSET",
+      "selectedForM1SourceAdaptation": true
+    },
+    "native/native98/assets/direct95/vendor/pilot/mavflight37/wire.mjs": {
+      "path": "native/native98/assets/direct95/vendor/pilot/mavflight37/wire.mjs",
+      "bytes": 6035,
+      "sha256": "ff27a8fea7daef01f44748ef51985c3cd353f1efb2adf1947969fa8392261fc6",
+      "bindingKind": "PRESENT_STATIC_ASSET",
+      "selectedForM1SourceAdaptation": true
+    },
+    "native/native98/assets/direct95/vendor/pilot/preflight43/adapter.mjs": {
+      "path": "native/native98/assets/direct95/vendor/pilot/preflight43/adapter.mjs",
+      "bytes": 16221,
+      "sha256": "67a8f49d7a3586bbee34157e832db31432d49e0611e5c3bbe9fe5e0e4c4f7979",
+      "bindingKind": "PRESENT_STATIC_ASSET",
+      "selectedForM1SourceAdaptation": true
+    },
+    "native/native98/assets/direct95/vendor/pilot/preflight43/profile.mjs": {
+      "path": "native/native98/assets/direct95/vendor/pilot/preflight43/profile.mjs",
+      "bytes": 3731,
+      "sha256": "3114d03ad54db1eb8cdcb137da5a4b77d1c94ce812dd9ae9d6e28b6475825c0e",
+      "bindingKind": "PRESENT_STATIC_ASSET",
+      "selectedForM1SourceAdaptation": true
+    },
+    "native/native98/assets/direct95/vendor/services/mavlink-definitions.mjs": {
+      "path": "native/native98/assets/direct95/vendor/services/mavlink-definitions.mjs",
+      "bytes": 22597,
+      "sha256": "04b6be6960843b4473d67f84701ceca3521e8ade3f7a8f0514b417d1d0ebcaaf",
+      "bindingKind": "PRESENT_STATIC_ASSET",
+      "selectedForM1SourceAdaptation": true
+    },
+    "native/native98/assets/direct95/vendor/services/mavlink.mjs": {
+      "path": "native/native98/assets/direct95/vendor/services/mavlink.mjs",
+      "bytes": 1517,
+      "sha256": "8469fcac09eeaf77ec2b05ea710e882ecacee39f3e63309ccce95dec40ece524",
+      "bindingKind": "PRESENT_STATIC_ASSET",
+      "selectedForM1SourceAdaptation": true
+    },
+    "native/native98/assets/direct95/vendor/services/sitl.mjs": {
+      "path": "native/native98/assets/direct95/vendor/services/sitl.mjs",
+      "bytes": 29515,
+      "sha256": "a27ef12945ab96a3076b7ed3da62388eddecc5d78916cbc6357187b7530cd7de",
+      "bindingKind": "PRESENT_STATIC_ASSET",
+      "selectedForM1SourceAdaptation": true
+    },
+    "native/native98/assets/fly-model84.mjs": {
+      "path": "native/native98/assets/fly-model84.mjs",
+      "bytes": 6958,
+      "sha256": "113094ca457d55803f130f92b2216c3071247e9cb7f566d312ceeaeb3ff48074",
+      "bindingKind": "PRESENT_STATIC_ASSET",
+      "selectedForM1SourceAdaptation": true
+    },
+    "native/native98/assets/fly84.css": {
+      "path": "native/native98/assets/fly84.css",
+      "bytes": 3698,
+      "sha256": "4bf3dd3b32d2cec70a539e609ba5b4bcc8952c99cfb39a9eda771d9c8f2ea1cb",
+      "bindingKind": "PRESENT_STATIC_ASSET",
+      "selectedForM1SourceAdaptation": true
+    },
+    "native/native98/assets/fly84.mjs": {
+      "path": "native/native98/assets/fly84.mjs",
+      "bytes": 13220,
+      "sha256": "12923e263d7c6cd71b0bb90892d4043d86b36b60b176a9f7f0c3f9458cfb0d40",
+      "bindingKind": "PRESENT_STATIC_ASSET",
+      "selectedForM1SourceAdaptation": true
+    },
+    "native/native98/assets/fly87.mjs": {
+      "path": "native/native98/assets/fly87.mjs",
+      "bytes": 14027,
+      "sha256": "e249f92edf177aa38ca7b4bc891c02024d185acfb3f3bbfaf20d517267e4bb9e",
+      "bindingKind": "PRESENT_STATIC_ASSET",
+      "selectedForM1SourceAdaptation": true
+    },
+    "native/native98/assets/glass.css": {
+      "path": "native/native98/assets/glass.css",
+      "bytes": 34719,
+      "sha256": "2e82ecac23341064a3b2307b8298b22008951cb445bc85f80bde2eb90335f1e7",
+      "bindingKind": "PRESENT_STATIC_ASSET",
+      "selectedForM1SourceAdaptation": true
+    },
+    "native/native98/assets/index.html": {
+      "path": "native/native98/assets/index.html",
+      "bytes": 28426,
+      "sha256": "3437996eec4fa967c41c89a54b2933832ca8bc6bf281305065c0c4471a7f3c5e",
+      "bindingKind": "PRESENT_STATIC_ASSET",
+      "selectedForM1SourceAdaptation": true
+    },
+    "native/native98/assets/islands82.css": {
+      "path": "native/native98/assets/islands82.css",
+      "bytes": 8050,
+      "sha256": "dce032e0feaadad56b2070f613616183a8519a12fc1fa60168a315644f6fa095",
+      "bindingKind": "PRESENT_STATIC_ASSET",
+      "selectedForM1SourceAdaptation": true
+    },
+    "native/native98/assets/layout85.css": {
+      "path": "native/native98/assets/layout85.css",
+      "bytes": 11517,
+      "sha256": "c53a70a19457282c0abaee329f1daa7d74ec88748cef42ca8023f01989bf71bc",
+      "bindingKind": "PRESENT_STATIC_ASSET",
+      "selectedForM1SourceAdaptation": true
+    },
+    "native/native98/assets/layout85.mjs": {
+      "path": "native/native98/assets/layout85.mjs",
+      "bytes": 2317,
+      "sha256": "849f1faf6f341fd066f3c555855f3ec2d48f5de7d6294d60bb849894b3b6dd09",
+      "bindingKind": "PRESENT_STATIC_ASSET",
+      "selectedForM1SourceAdaptation": true
+    },
+    "native/native98/assets/layout86.css": {
+      "path": "native/native98/assets/layout86.css",
+      "bytes": 1934,
+      "sha256": "0ebe887920d22fbfa7f7725c5c74bb2677dc07e850d53d5b5a87569941659b28",
+      "bindingKind": "PRESENT_STATIC_ASSET",
+      "selectedForM1SourceAdaptation": true
+    },
+    "native/native98/assets/layout86.mjs": {
+      "path": "native/native98/assets/layout86.mjs",
+      "bytes": 5437,
+      "sha256": "5bd00b1c303b242a70b2f4035357589fde89ee1188370eb87ac3359a0d84529f",
+      "bindingKind": "PRESENT_STATIC_ASSET",
+      "selectedForM1SourceAdaptation": true
+    },
+    "native/native98/assets/mission-fixtures92.mjs": {
+      "path": "native/native98/assets/mission-fixtures92.mjs",
+      "bytes": 1565,
+      "sha256": "255f5d9aa92ea6f198e299d17526bb0904e6a9326284b86b922ff3ed060251e0",
+      "bindingKind": "PRESENT_STATIC_ASSET",
+      "selectedForM1SourceAdaptation": true
+    },
+    "native/native98/assets/mission92.css": {
+      "path": "native/native98/assets/mission92.css",
+      "bytes": 1386,
+      "sha256": "df64e9aa6506febdb9f2750c04ac221bee0f37e430be93431eeaacdc105c247d",
+      "bindingKind": "PRESENT_STATIC_ASSET",
+      "selectedForM1SourceAdaptation": true
+    },
+    "native/native98/assets/mission92.mjs": {
+      "path": "native/native98/assets/mission92.mjs",
+      "bytes": 4569,
+      "sha256": "16c24b7c51657b66b9bdb4e86f9faa8772218716e75e59602a9c1990ecb20090",
+      "bindingKind": "PRESENT_STATIC_ASSET",
+      "selectedForM1SourceAdaptation": true
+    },
+    "native/native98/assets/mock-model.mjs": {
+      "path": "native/native98/assets/mock-model.mjs",
+      "bytes": 7327,
+      "sha256": "1d9291357537a09e857666b15e78d86a5ef6e43ef1bce20a4955fd5c24db1acf",
+      "bindingKind": "PRESENT_STATIC_ASSET",
+      "selectedForM1SourceAdaptation": true
+    },
+    "native/native98/assets/native82.css": {
+      "path": "native/native98/assets/native82.css",
+      "bytes": 3317,
+      "sha256": "82f205976c93bb0e5e74252a2f6e3c1b3972e43ed4ca67a99775b5dd6c310504",
+      "bindingKind": "PRESENT_STATIC_ASSET",
+      "selectedForM1SourceAdaptation": true
+    },
+    "native/native98/assets/native84.css": {
+      "path": "native/native98/assets/native84.css",
+      "bytes": 2233,
+      "sha256": "f3a7770c4de97b3b2df122db3a3dc8c0543984ab0a5ecc31ed196afda4e8a378",
+      "bindingKind": "PRESENT_STATIC_ASSET",
+      "selectedForM1SourceAdaptation": true
+    },
+    "native/native98/assets/native84.mjs": {
+      "path": "native/native98/assets/native84.mjs",
+      "bytes": 9776,
+      "sha256": "c21210f7d269aaef64c5823b2f0159953472d8c718ee76f426bd5bd6ef84c0b6",
+      "bindingKind": "PRESENT_STATIC_ASSET",
+      "selectedForM1SourceAdaptation": true
+    },
+    "native/native98/assets/native87.css": {
+      "path": "native/native98/assets/native87.css",
+      "bytes": 2512,
+      "sha256": "dc646ba9c617d8f6219554f37a919c79b0ae361e29fbd092dda78eb33c6129cb",
+      "bindingKind": "PRESENT_STATIC_ASSET",
+      "selectedForM1SourceAdaptation": true
+    },
+    "native/native98/assets/offline94/auto.mjs": {
+      "path": "native/native98/assets/offline94/auto.mjs",
+      "bytes": 4389,
+      "sha256": "d870ec3781da61219a3a75584802c39272928f44806f25a998964211b945f82a",
+      "bindingKind": "PRESENT_STATIC_ASSET",
+      "selectedForM1SourceAdaptation": true
+    },
+    "native/native98/assets/offline94/common.mjs": {
+      "path": "native/native98/assets/offline94/common.mjs",
+      "bytes": 1936,
+      "sha256": "f9fbe31c34b1be11e4e183f04db79835a506ec41c21bc05af737561beba23427",
+      "bindingKind": "PRESENT_STATIC_ASSET",
+      "selectedForM1SourceAdaptation": true
+    },
+    "native/native98/assets/offline94/compiler.mjs": {
+      "path": "native/native98/assets/offline94/compiler.mjs",
+      "bytes": 3416,
+      "sha256": "f30223bb98d493a36012676edf24d8220e04fcf799ab0f15481e018ff63b5557",
+      "bindingKind": "PRESENT_STATIC_ASSET",
+      "selectedForM1SourceAdaptation": true
+    },
+    "native/native98/assets/offline94/domain.mjs": {
+      "path": "native/native98/assets/offline94/domain.mjs",
+      "bytes": 541,
+      "sha256": "6a4bb52cf6cea37c28c9400571795a50b70edff04a45a68fc03638ae8c576e41",
+      "bindingKind": "PRESENT_STATIC_ASSET",
+      "selectedForM1SourceAdaptation": true
+    },
+    "native/native98/assets/offline94/kml.mjs": {
+      "path": "native/native98/assets/offline94/kml.mjs",
+      "bytes": 8663,
+      "sha256": "546711f59ebbc3be9f79f65b4200956a450a83755bb2e37f705ff92b5c6f4fe7",
+      "bindingKind": "PRESENT_STATIC_ASSET",
+      "selectedForM1SourceAdaptation": true
+    },
+    "native/native98/assets/offline94/planner.mjs": {
+      "path": "native/native98/assets/offline94/planner.mjs",
+      "bytes": 7213,
+      "sha256": "cd4c73f065235e9ee4a7f7c3536793804de568c656ff2f1d465dafb233a48085",
+      "bindingKind": "PRESENT_STATIC_ASSET",
+      "selectedForM1SourceAdaptation": true
+    },
+    "native/native98/assets/offline94/qgc.mjs": {
+      "path": "native/native98/assets/offline94/qgc.mjs",
+      "bytes": 18764,
+      "sha256": "d2de74f83d5bef53530f88203cfbb9d232689b324023107ce67e3bcaddbe09d8",
+      "bindingKind": "PRESENT_STATIC_ASSET",
+      "selectedForM1SourceAdaptation": true
+    },
+    "native/native98/assets/offline94/survey.mjs": {
+      "path": "native/native98/assets/offline94/survey.mjs",
+      "bytes": 12132,
+      "sha256": "c41beb843a59400aaaf88a9efe7e6bb67f4e5ac3547e0504f1ae433f4801033e",
+      "bindingKind": "PRESENT_STATIC_ASSET",
+      "selectedForM1SourceAdaptation": true
+    },
+    "native/native98/assets/offline94.mjs": {
+      "path": "native/native98/assets/offline94.mjs",
+      "bytes": 1381,
+      "sha256": "d72ec6d312c35e2ffc1e3ec17655053e82cdee402a360df65bbdce6bc4bb2956",
+      "bindingKind": "PRESENT_STATIC_ASSET",
+      "selectedForM1SourceAdaptation": true
+    },
+    "native/native98/assets/operations88.mjs": {
+      "path": "native/native98/assets/operations88.mjs",
+      "bytes": 1840,
+      "sha256": "bcd4e190c5bfe1674984c639c14d653e60798ea141d7266664b94c447002f681",
+      "bindingKind": "PRESENT_STATIC_ASSET",
+      "selectedForM1SourceAdaptation": true
+    },
+    "native/native98/assets/payload97.css": {
+      "path": "native/native98/assets/payload97.css",
+      "bytes": 1885,
+      "sha256": "6322674ae82ac9d9a771af942febdef032873f8a3004c03e2547bf09875fce94",
+      "bindingKind": "PRESENT_STATIC_ASSET",
+      "selectedForM1SourceAdaptation": true
+    },
+    "native/native98/assets/payload97.mjs": {
+      "path": "native/native98/assets/payload97.mjs",
+      "bytes": 7540,
+      "sha256": "673240cb18db2d79dfb78cfe0b9de32c163bee60a8d91abeaa9ee1deb857b7c2",
+      "bindingKind": "PRESENT_STATIC_ASSET",
+      "selectedForM1SourceAdaptation": true
+    },
+    "native/native98/assets/raw96.mjs": {
+      "path": "native/native98/assets/raw96.mjs",
+      "bytes": 4073,
+      "sha256": "e59ba68fb2dacbbd0fdb89b73b14d06e17c14bad457f0c606f32976eb1fc7817",
+      "bindingKind": "PRESENT_STATIC_ASSET",
+      "selectedForM1SourceAdaptation": true
+    },
+    "native/native98/assets/runtime82.mjs": {
+      "path": "native/native98/assets/runtime82.mjs",
+      "bytes": 13279,
+      "sha256": "8b6c37400cfb274313b8c25f91945b968a9addac55a3ef1b7c0ac98ac1d23bca",
+      "bindingKind": "PRESENT_STATIC_ASSET",
+      "selectedForM1SourceAdaptation": true
+    },
+    "native/native98/assets/saf91.mjs": {
+      "path": "native/native98/assets/saf91.mjs",
+      "bytes": 3075,
+      "sha256": "a4975a00ad501f1bf435a1e94616776f14896789459fcf97894a0221a5ac1a32",
+      "bindingKind": "PRESENT_STATIC_ASSET",
+      "selectedForM1SourceAdaptation": true
+    },
+    "native/native98/assets/sitl.html": {
+      "path": "native/native98/assets/sitl.html",
+      "bytes": 28426,
+      "sha256": "ca4730f3e56423f815de3b93c3c265ea59afaeec37ed6026b45e49fc8f588db6",
+      "bindingKind": "PRESENT_STATIC_ASSET",
+      "selectedForM1SourceAdaptation": true
+    },
+    "native/native98/assets/synthetic.webm": {
+      "path": "native/native98/assets/synthetic.webm",
+      "bytes": 23137,
+      "sha256": "317747904d0dba4d52afd987b92f19acab70d99766ac0db1f8d2134b8acd9a18",
+      "bindingKind": "PRESENT_STATIC_ASSET",
+      "selectedForM1SourceAdaptation": true
+    },
+    "native/native98/assets/transport82.mjs": {
+      "path": "native/native98/assets/transport82.mjs",
+      "bytes": 2120,
+      "sha256": "7b550e20f15d306ef81d93f98fb3cb5a8a94749b5982119e489b4ec81bb32bc1",
+      "bindingKind": "PRESENT_STATIC_ASSET",
+      "selectedForM1SourceAdaptation": true
+    },
+    "native/native98/assets/workflow/binding.mjs": {
+      "path": "native/native98/assets/workflow/binding.mjs",
+      "bytes": 2154,
+      "sha256": "e01e05c18b81f17975c8b64496a53bb56aa6c4e112c215476584e69cb84f2eea",
+      "bindingKind": "PRESENT_STATIC_ASSET",
+      "selectedForM1SourceAdaptation": true
+    },
+    "native/native98/assets/workflow/capsule.mjs": {
+      "path": "native/native98/assets/workflow/capsule.mjs",
+      "bytes": 7524,
+      "sha256": "6ada0e376367b8e545d7ffdb9fe42d82684d33ccdaa8e7276ce65a19453c2d91",
+      "bindingKind": "PRESENT_STATIC_ASSET",
+      "selectedForM1SourceAdaptation": true
+    },
+    "native/native98/assets/workflow/core/airspace.mjs": {
+      "path": "native/native98/assets/workflow/core/airspace.mjs",
+      "bytes": 11209,
+      "sha256": "41d53595bee7bc3eb8928f909a07537ae74518fd30b0a3741eecc4360551cdf6",
+      "bindingKind": "PRESENT_STATIC_ASSET",
+      "selectedForM1SourceAdaptation": true
+    },
+    "native/native98/assets/workflow/core/common.mjs": {
+      "path": "native/native98/assets/workflow/core/common.mjs",
+      "bytes": 1248,
+      "sha256": "2c4437d77352884692b8a7cc102543106f88d13fb58e38d432b7c7cbf659e16f",
+      "bindingKind": "PRESENT_STATIC_ASSET",
+      "selectedForM1SourceAdaptation": true
+    },
+    "native/native98/assets/workflow/core/geometry.mjs": {
+      "path": "native/native98/assets/workflow/core/geometry.mjs",
+      "bytes": 4928,
+      "sha256": "8cf283829b7f561b0aef86b84f457cc59667a46e95fb678de8d89e33443923f6",
+      "bindingKind": "PRESENT_STATIC_ASSET",
+      "selectedForM1SourceAdaptation": true
+    },
+    "native/native98/assets/workflow/editor.mjs": {
+      "path": "native/native98/assets/workflow/editor.mjs",
+      "bytes": 8454,
+      "sha256": "c1101196216654127cfcdff2e4342bcfc8a490be572b70acfc96ccac56928898",
+      "bindingKind": "PRESENT_STATIC_ASSET",
+      "selectedForM1SourceAdaptation": true
+    },
+    "native/native98/assets/workflow/fixture.mjs": {
+      "path": "native/native98/assets/workflow/fixture.mjs",
+      "bytes": 2091,
+      "sha256": "8f9eb86bc0d5be5ad0180da610f610f45568c4a548cb68269c481df30b1cae3f",
+      "bindingKind": "PRESENT_STATIC_ASSET",
+      "selectedForM1SourceAdaptation": true
+    },
+    "native/native98/assets/workflow/journey.mjs": {
+      "path": "native/native98/assets/workflow/journey.mjs",
+      "bytes": 13762,
+      "sha256": "205e12a6ddf4bf420144a96c8ed56bd53691203363299f241878a15eacc3a74c",
+      "bindingKind": "PRESENT_STATIC_ASSET",
+      "selectedForM1SourceAdaptation": true
+    },
+    "native/native98/assets/workflow/mock.mjs": {
+      "path": "native/native98/assets/workflow/mock.mjs",
+      "bytes": 5155,
+      "sha256": "16a9553cde958199b146cf87e89dec3f47a976605101966d837b7eca43a7e8de",
+      "bindingKind": "PRESENT_STATIC_ASSET",
+      "selectedForM1SourceAdaptation": true
+    },
+    "native/native98/assets/workflow/pins.mjs": {
+      "path": "native/native98/assets/workflow/pins.mjs",
+      "bytes": 328,
+      "sha256": "6bcefaa78cf7cede86a90c2e0a91cd17d6acf1547da3a03a426b28dc2fce9b8b",
+      "bindingKind": "PRESENT_STATIC_ASSET",
+      "selectedForM1SourceAdaptation": true
+    },
+    "native/native98/assets/workflow/preflight/adapter.mjs": {
+      "path": "native/native98/assets/workflow/preflight/adapter.mjs",
+      "bytes": 16202,
+      "sha256": "b5a83d3527198175f4e5147e70a2b6e9cc7355577d89eba46b2feb78c63ce861",
+      "bindingKind": "PRESENT_STATIC_ASSET",
+      "selectedForM1SourceAdaptation": true
+    },
+    "native/native98/assets/workflow/preflight/bytes.mjs": {
+      "path": "native/native98/assets/workflow/preflight/bytes.mjs",
+      "bytes": 555,
+      "sha256": "84490d30d0b84502306e4ff372862b578abe915e1064316e55f684c4466f9a1e",
+      "bindingKind": "PRESENT_STATIC_ASSET",
+      "selectedForM1SourceAdaptation": true
+    },
+    "native/native98/assets/workflow/preflight/parameter.mjs": {
+      "path": "native/native98/assets/workflow/preflight/parameter.mjs",
+      "bytes": 1297,
+      "sha256": "37716655a3809392d203270bb9c1c68ad2f4289abe501bc93cb60bb2b566d9cd",
+      "bindingKind": "PRESENT_STATIC_ASSET",
+      "selectedForM1SourceAdaptation": true
+    },
+    "native/native98/assets/workflow/preflight/profile.mjs": {
+      "path": "native/native98/assets/workflow/preflight/profile.mjs",
+      "bytes": 3705,
+      "sha256": "077924ec2e39ea203cc2aebdb66d5a9ebd97c4f5e283f2fef2d22bf6e097a9d2",
+      "bindingKind": "PRESENT_STATIC_ASSET",
+      "selectedForM1SourceAdaptation": true
+    },
+    "native/native98/assets/workflow/preflight/sha256.mjs": {
+      "path": "native/native98/assets/workflow/preflight/sha256.mjs",
+      "bytes": 1922,
+      "sha256": "55188f633120c1178e27e454411bf1fe71537352c38e0c0c58b5f00cd62b0395",
+      "bindingKind": "PRESENT_STATIC_ASSET",
+      "selectedForM1SourceAdaptation": true
+    },
+    "native/native98/assets/workflow/preflight/wire.mjs": {
+      "path": "native/native98/assets/workflow/preflight/wire.mjs",
+      "bytes": 6275,
+      "sha256": "a1f2fcaa3f04a79b035cbf42bed0b8831a0e1b95cb943fca2acf7c76902b73fb",
+      "bindingKind": "PRESENT_STATIC_ASSET",
+      "selectedForM1SourceAdaptation": true
+    },
+    "native/native98/assets/workflow/route.mjs": {
+      "path": "native/native98/assets/workflow/route.mjs",
+      "bytes": 2251,
+      "sha256": "b55794497eb004d951f5d1bde05f91818c4ce722465024b3dc25b84e962f2026",
+      "bindingKind": "PRESENT_STATIC_ASSET",
+      "selectedForM1SourceAdaptation": true
+    },
+    "native/native98/assets/workflow/vendor/compiler.mjs": {
+      "path": "native/native98/assets/workflow/vendor/compiler.mjs",
+      "bytes": 3416,
+      "sha256": "f30223bb98d493a36012676edf24d8220e04fcf799ab0f15481e018ff63b5557",
+      "bindingKind": "PRESENT_STATIC_ASSET",
+      "selectedForM1SourceAdaptation": true
+    },
+    "native/native98/assets/workflow/vendor/survey.mjs": {
+      "path": "native/native98/assets/workflow/vendor/survey.mjs",
+      "bytes": 12132,
+      "sha256": "c41beb843a59400aaaf88a9efe7e6bb67f4e5ac3547e0504f1ae433f4801033e",
+      "bindingKind": "PRESENT_STATIC_ASSET",
+      "selectedForM1SourceAdaptation": true
+    },
+    "native/native98/assets/workflow/workflow.mjs": {
+      "path": "native/native98/assets/workflow/workflow.mjs",
+      "bytes": 6441,
+      "sha256": "68c307358414c6d4727c0a2fbd7b61dcdb81520bf63b89c9eb46fd694b87f76b",
+      "bindingKind": "PRESENT_STATIC_ASSET",
+      "selectedForM1SourceAdaptation": true
+    },
+    "native/native98/assets/workspace87.mjs": {
+      "path": "native/native98/assets/workspace87.mjs",
+      "bytes": 4367,
+      "sha256": "1bb942d211bdfbccba8e9f4eda307afb22ddb07da4e96c43a903e6618c737895",
+      "bindingKind": "PRESENT_STATIC_ASSET",
+      "selectedForM1SourceAdaptation": true
+    },
+    "native/native98/assets/direct95/vendor/pilot/apstream40/definitions.mjs": {
+      "path": "native/native98/assets/direct95/vendor/pilot/apstream40/definitions.mjs",
+      "bytes": 300461,
+      "sha256": "b881e15a33e92634ded232fc25b43693e558b662a36dd82571300899d261da7d",
+      "inputPath": "planning/betaintegrated01/m0/dependencies/intake/pilot/apstream40/definitions.mjs",
+      "expectedSHA256": "b881e15a33e92634ded232fc25b43693e558b662a36dd82571300899d261da7d",
+      "bindingKind": "EXACT_GIT_INTAKE_FOR_MISSING_HISTORICAL_PROJECTION",
+      "selectedForM1SourceAdaptation": true
+    },
+    "native/native98/assets/workflow/preflight/definitions.mjs": {
+      "path": "native/native98/assets/workflow/preflight/definitions.mjs",
+      "bytes": 300461,
+      "sha256": "b881e15a33e92634ded232fc25b43693e558b662a36dd82571300899d261da7d",
+      "inputPath": "planning/betaintegrated01/m0/dependencies/intake/pilot/apstream40/definitions.mjs",
+      "expectedSHA256": "b881e15a33e92634ded232fc25b43693e558b662a36dd82571300899d261da7d",
+      "bindingKind": "EXACT_GIT_INTAKE_FOR_MISSING_HISTORICAL_PROJECTION",
+      "selectedForM1SourceAdaptation": true
+    },
+    "native/native98/assets/assets/camera-concept.png": {
+      "path": "native/native98/assets/assets/camera-concept.png",
+      "bytes": 2876179,
+      "sha256": "30711d10afa3661c75c6e589f1930466765604cb2a426eb3288f80662c67f39d",
+      "inputPath": "planning/betaintegrated01/m0/dependencies/intake/native/cockpit85/assets/assets/camera-concept.png",
+      "expectedSHA256": "30711d10afa3661c75c6e589f1930466765604cb2a426eb3288f80662c67f39d",
+      "bindingKind": "EXACT_GIT_INTAKE_FOR_MISSING_HISTORICAL_ASSET",
+      "selectedForM1SourceAdaptation": true
+    },
+    "native/native98/assets/fonts/Barlow-Bold.ttf": {
+      "path": "native/native98/assets/fonts/Barlow-Bold.ttf",
+      "bytes": 108220,
+      "sha256": "84e6a4d61e7c3e21f3c50ea6a4f7e5303a3467864c038be6ea3759bab8d547f9",
+      "inputPath": "planning/betaintegrated01/m0/dependencies/intake/pilot/visual56/assets/fonts/Barlow-Bold.ttf",
+      "expectedSHA256": "84e6a4d61e7c3e21f3c50ea6a4f7e5303a3467864c038be6ea3759bab8d547f9",
+      "bindingKind": "EXACT_GIT_INTAKE_FOR_MISSING_HISTORICAL_ASSET",
+      "selectedForM1SourceAdaptation": true
+    },
+    "native/native98/assets/fonts/Barlow-Medium.ttf": {
+      "path": "native/native98/assets/fonts/Barlow-Medium.ttf",
+      "bytes": 103536,
+      "sha256": "f8906f762cb73dca441da034bc363b2d8e2e68bc10d5c05e58717646c20cc4b4",
+      "inputPath": "planning/betaintegrated01/m0/dependencies/intake/pilot/visual56/assets/fonts/Barlow-Medium.ttf",
+      "expectedSHA256": "f8906f762cb73dca441da034bc363b2d8e2e68bc10d5c05e58717646c20cc4b4",
+      "bindingKind": "EXACT_GIT_INTAKE_FOR_MISSING_HISTORICAL_ASSET",
+      "selectedForM1SourceAdaptation": true
+    },
+    "native/native98/assets/fonts/Barlow-SemiBold.ttf": {
+      "path": "native/native98/assets/fonts/Barlow-SemiBold.ttf",
+      "bytes": 108348,
+      "sha256": "86577cb32f8abe3673db53ca0f4221e6856751a4f6730c867e00f720f8bb1fc5",
+      "inputPath": "planning/betaintegrated01/m0/dependencies/intake/pilot/visual56/assets/fonts/Barlow-SemiBold.ttf",
+      "expectedSHA256": "86577cb32f8abe3673db53ca0f4221e6856751a4f6730c867e00f720f8bb1fc5",
+      "bindingKind": "EXACT_GIT_INTAKE_FOR_MISSING_HISTORICAL_ASSET",
+      "selectedForM1SourceAdaptation": true
+    }
+  },
+  "virtualAssetCount": 104,
+  "exactBindingsForMissingAssets": {
+    "native/native98/assets/direct95/vendor/pilot/apstream40/definitions.mjs": {
+      "inputPath": "planning/betaintegrated01/m0/dependencies/intake/pilot/apstream40/definitions.mjs",
+      "expectedSHA256": "b881e15a33e92634ded232fc25b43693e558b662a36dd82571300899d261da7d",
+      "bindingKind": "EXACT_GIT_INTAKE_FOR_MISSING_HISTORICAL_PROJECTION"
+    },
+    "native/native98/assets/workflow/preflight/definitions.mjs": {
+      "inputPath": "planning/betaintegrated01/m0/dependencies/intake/pilot/apstream40/definitions.mjs",
+      "expectedSHA256": "b881e15a33e92634ded232fc25b43693e558b662a36dd82571300899d261da7d",
+      "bindingKind": "EXACT_GIT_INTAKE_FOR_MISSING_HISTORICAL_PROJECTION"
+    },
+    "native/native98/assets/assets/camera-concept.png": {
+      "inputPath": "planning/betaintegrated01/m0/dependencies/intake/native/cockpit85/assets/assets/camera-concept.png",
+      "expectedSHA256": "30711d10afa3661c75c6e589f1930466765604cb2a426eb3288f80662c67f39d",
+      "bindingKind": "EXACT_GIT_INTAKE_FOR_MISSING_HISTORICAL_ASSET"
+    },
+    "native/native98/assets/fonts/Barlow-Bold.ttf": {
+      "inputPath": "planning/betaintegrated01/m0/dependencies/intake/pilot/visual56/assets/fonts/Barlow-Bold.ttf",
+      "expectedSHA256": "84e6a4d61e7c3e21f3c50ea6a4f7e5303a3467864c038be6ea3759bab8d547f9",
+      "bindingKind": "EXACT_GIT_INTAKE_FOR_MISSING_HISTORICAL_ASSET"
+    },
+    "native/native98/assets/fonts/Barlow-Medium.ttf": {
+      "inputPath": "planning/betaintegrated01/m0/dependencies/intake/pilot/visual56/assets/fonts/Barlow-Medium.ttf",
+      "expectedSHA256": "f8906f762cb73dca441da034bc363b2d8e2e68bc10d5c05e58717646c20cc4b4",
+      "bindingKind": "EXACT_GIT_INTAKE_FOR_MISSING_HISTORICAL_ASSET"
+    },
+    "native/native98/assets/fonts/Barlow-SemiBold.ttf": {
+      "inputPath": "planning/betaintegrated01/m0/dependencies/intake/pilot/visual56/assets/fonts/Barlow-SemiBold.ttf",
+      "expectedSHA256": "86577cb32f8abe3673db53ca0f4221e6856751a4f6730c867e00f720f8bb1fc5",
+      "bindingKind": "EXACT_GIT_INTAKE_FOR_MISSING_HISTORICAL_ASSET"
+    }
+  },
+  "staticAssetEdges": [
+    {
+      "from": "native/native98/assets/cockpit.css",
+      "line": 4,
+      "target": "native/native98/assets/assets/camera-concept.png",
+      "kind": "CSS_STATIC_RESOURCE",
+      "status": "BOUND_EXACT_BYTES"
+    },
+    {
+      "from": "native/native98/assets/cockpit.css",
+      "line": 4,
+      "target": "native/native98/assets/assets/camera-concept.png",
+      "kind": "CSS_STATIC_RESOURCE",
+      "status": "BOUND_EXACT_BYTES"
+    },
+    {
+      "from": "native/native98/assets/cockpit.css",
+      "line": 8,
+      "target": "native/native98/assets/assets/camera-concept.png",
+      "kind": "CSS_STATIC_RESOURCE",
+      "status": "BOUND_EXACT_BYTES"
+    },
+    {
+      "from": "native/native98/assets/cockpit.mjs",
+      "line": 1,
+      "target": "native/native98/assets/controls82.mjs",
+      "kind": "DIRECT_STATIC_ESM",
+      "status": "BOUND_EXACT_BYTES"
+    },
+    {
+      "from": "native/native98/assets/cockpit.mjs",
+      "line": 2,
+      "target": "native/native98/assets/runtime82.mjs",
+      "kind": "DIRECT_STATIC_ESM",
+      "status": "BOUND_EXACT_BYTES"
+    },
+    {
+      "from": "native/native98/assets/cockpit.mjs",
+      "line": 4,
+      "target": "native/native98/assets/mock-model.mjs",
+      "kind": "DIRECT_STATIC_ESM",
+      "status": "BOUND_EXACT_BYTES"
+    },
+    {
+      "from": "native/native98/assets/direct95/vendor/app/core/compiler.mjs",
+      "line": 1,
+      "target": "native/native98/assets/direct95/vendor/app/core/survey.mjs",
+      "kind": "DIRECT_STATIC_ESM",
+      "status": "BOUND_EXACT_BYTES"
+    },
+    {
+      "from": "native/native98/assets/direct95/vendor/app/core/geo-quality.mjs",
+      "line": 1,
+      "target": "native/native98/assets/direct95/vendor/app/core/geodata.mjs",
+      "kind": "DIRECT_STATIC_ESM",
+      "status": "BOUND_EXACT_BYTES"
+    },
+    {
+      "from": "native/native98/assets/direct95/vendor/app/core/geo-quality.mjs",
+      "line": 2,
+      "target": "native/native98/assets/direct95/vendor/app/core/survey.mjs",
+      "kind": "DIRECT_STATIC_ESM",
+      "status": "BOUND_EXACT_BYTES"
+    },
+    {
+      "from": "native/native98/assets/direct95/vendor/app/core/geo-quality.mjs",
+      "line": 2,
+      "target": "native/native98/assets/direct95/vendor/app/core/compiler.mjs",
+      "kind": "DIRECT_STATIC_ESM",
+      "status": "BOUND_EXACT_BYTES"
+    },
+    {
+      "from": "native/native98/assets/direct95/vendor/app/core/geo-quality.mjs",
+      "line": 2,
+      "target": "native/native98/assets/direct95/vendor/app/core/geo-policy.mjs",
+      "kind": "DIRECT_STATIC_ESM",
+      "status": "BOUND_EXACT_BYTES"
+    },
+    {
+      "from": "native/native98/assets/direct95/vendor/app/core/geodata.mjs",
+      "line": 1,
+      "target": "native/native98/assets/direct95/vendor/app/core/geo-policy.mjs",
+      "kind": "DIRECT_STATIC_ESM",
+      "status": "BOUND_EXACT_BYTES"
+    },
+    {
+      "from": "native/native98/assets/direct95/vendor/app/core/geodata.mjs",
+      "line": 2,
+      "target": "native/native98/assets/direct95/vendor/app/core/geo-pins.mjs",
+      "kind": "DIRECT_STATIC_ESM",
+      "status": "BOUND_EXACT_BYTES"
+    },
+    {
+      "from": "native/native98/assets/direct95/vendor/app/core/geodata.mjs",
+      "line": 3,
+      "target": "native/native98/assets/direct95/vendor/app/core/survey.mjs",
+      "kind": "DIRECT_STATIC_ESM",
+      "status": "BOUND_EXACT_BYTES"
+    },
+    {
+      "from": "native/native98/assets/direct95/vendor/app/core/geodata.mjs",
+      "line": 4,
+      "target": "native/native98/assets/direct95/vendor/app/core/compiler.mjs",
+      "kind": "DIRECT_STATIC_ESM",
+      "status": "BOUND_EXACT_BYTES"
+    },
+    {
+      "from": "native/native98/assets/direct95/vendor/app/core/qgc.mjs",
+      "line": 1,
+      "target": "native/native98/assets/direct95/vendor/app/core/compiler.mjs",
+      "kind": "DIRECT_STATIC_ESM",
+      "status": "BOUND_EXACT_BYTES"
+    },
+    {
+      "from": "native/native98/assets/direct95/vendor/app/core/qgc.mjs",
+      "line": 2,
+      "target": "native/native98/assets/direct95/vendor/app/core/survey.mjs",
+      "kind": "DIRECT_STATIC_ESM",
+      "status": "BOUND_EXACT_BYTES"
+    },
+    {
+      "from": "native/native98/assets/direct95/vendor/app/core/vehicle-profile.mjs",
+      "line": 1,
+      "target": "native/native98/assets/direct95/vendor/app/core/geodata.mjs",
+      "kind": "DIRECT_STATIC_ESM",
+      "status": "BOUND_EXACT_BYTES"
+    },
+    {
+      "from": "native/native98/assets/direct95/vendor/pilot/aeris57/domain.mjs",
+      "line": 1,
+      "target": "native/native98/assets/offline94/domain.mjs",
+      "kind": "DIRECT_STATIC_ESM",
+      "status": "BOUND_EXACT_BYTES"
+    },
+    {
+      "from": "native/native98/assets/direct95/vendor/pilot/apstream40/wire.mjs",
+      "line": 1,
+      "target": "native/native98/assets/direct95/vendor/pilot/apstream40/definitions.mjs",
+      "kind": "DIRECT_STATIC_ESM",
+      "status": "BOUND_EXACT_BYTES"
+    },
+    {
+      "from": "native/native98/assets/direct95/vendor/pilot/apstream40/wire.mjs",
+      "line": 2,
+      "target": "native/native98/assets/direct95/vendor/pilot/mavflight37/wire.mjs",
+      "kind": "DIRECT_STATIC_ESM",
+      "status": "BOUND_EXACT_BYTES"
+    },
+    {
+      "from": "native/native98/assets/direct95/vendor/pilot/apstream40/wire.mjs",
+      "line": 3,
+      "target": "native/native98/assets/direct95/vendor/pilot/apflight36/types.mjs",
+      "kind": "DIRECT_STATIC_ESM",
+      "status": "BOUND_EXACT_BYTES"
+    },
+    {
+      "from": "native/native98/assets/direct95/vendor/pilot/auto63/compiler.mjs",
+      "line": 1,
+      "target": "native/native98/assets/offline94/auto.mjs",
+      "kind": "DIRECT_STATIC_ESM",
+      "status": "BOUND_EXACT_BYTES"
+    },
+    {
+      "from": "native/native98/assets/direct95/vendor/pilot/auto63/link-v5.mjs",
+      "line": 2,
+      "target": "native/native98/assets/direct95/vendor/services/sitl.mjs",
+      "kind": "DIRECT_STATIC_ESM",
+      "status": "BOUND_EXACT_BYTES"
+    },
+    {
+      "from": "native/native98/assets/direct95/vendor/pilot/firmware38/wire.mjs",
+      "line": 1,
+      "target": "native/native98/assets/direct95/vendor/pilot/firmware38/version-schema.mjs",
+      "kind": "DIRECT_STATIC_ESM",
+      "status": "BOUND_EXACT_BYTES"
+    },
+    {
+      "from": "native/native98/assets/direct95/vendor/pilot/firmware38/wire.mjs",
+      "line": 2,
+      "target": "native/native98/assets/direct95/vendor/pilot/mavflight37/wire.mjs",
+      "kind": "DIRECT_STATIC_ESM",
+      "status": "BOUND_EXACT_BYTES"
+    },
+    {
+      "from": "native/native98/assets/direct95/vendor/pilot/firmware38/wire.mjs",
+      "line": 3,
+      "target": "native/native98/assets/direct95/vendor/pilot/apflight36/types.mjs",
+      "kind": "DIRECT_STATIC_ESM",
+      "status": "BOUND_EXACT_BYTES"
+    },
+    {
+      "from": "native/native98/assets/direct95/vendor/pilot/mapping51/planner.mjs",
+      "line": 1,
+      "target": "native/native98/assets/direct95/vendor/app/core/survey.mjs",
+      "kind": "DIRECT_STATIC_ESM",
+      "status": "BOUND_EXACT_BYTES"
+    },
+    {
+      "from": "native/native98/assets/direct95/vendor/pilot/mapping51/planner.mjs",
+      "line": 2,
+      "target": "native/native98/assets/direct95/vendor/pilot/mapping51/common.mjs",
+      "kind": "DIRECT_STATIC_ESM",
+      "status": "BOUND_EXACT_BYTES"
+    },
+    {
+      "from": "native/native98/assets/direct95/vendor/pilot/mavflight37/wire.mjs",
+      "line": 1,
+      "target": "native/native98/assets/direct95/vendor/pilot/mavflight37/definitions.mjs",
+      "kind": "DIRECT_STATIC_ESM",
+      "status": "BOUND_EXACT_BYTES"
+    },
+    {
+      "from": "native/native98/assets/direct95/vendor/pilot/preflight43/adapter.mjs",
+      "line": 1,
+      "target": "native/native98/assets/direct95/vendor/pilot/apstream40/wire.mjs",
+      "kind": "DIRECT_STATIC_ESM",
+      "status": "BOUND_EXACT_BYTES"
+    },
+    {
+      "from": "native/native98/assets/direct95/vendor/pilot/preflight43/adapter.mjs",
+      "line": 2,
+      "target": "native/native98/assets/direct95/vendor/pilot/firmware38/wire.mjs",
+      "kind": "DIRECT_STATIC_ESM",
+      "status": "BOUND_EXACT_BYTES"
+    },
+    {
+      "from": "native/native98/assets/direct95/vendor/pilot/preflight43/adapter.mjs",
+      "line": 3,
+      "target": "native/native98/assets/direct95/vendor/pilot/preflight43/profile.mjs",
+      "kind": "DIRECT_STATIC_ESM",
+      "status": "BOUND_EXACT_BYTES"
+    },
+    {
+      "from": "native/native98/assets/direct95/vendor/services/sitl.mjs",
+      "line": 1,
+      "target": "native/native98/assets/direct95/vendor/app/core/geo-quality.mjs",
+      "kind": "DIRECT_STATIC_ESM",
+      "status": "BOUND_EXACT_BYTES"
+    },
+    {
+      "from": "native/native98/assets/direct95/vendor/services/sitl.mjs",
+      "line": 2,
+      "target": "native/native98/assets/direct95/vendor/app/core/geodata.mjs",
+      "kind": "DIRECT_STATIC_ESM",
+      "status": "BOUND_EXACT_BYTES"
+    },
+    {
+      "from": "native/native98/assets/direct95/vendor/services/sitl.mjs",
+      "line": 3,
+      "target": "native/native98/assets/direct95/socket.mjs",
+      "kind": "DIRECT_STATIC_ESM",
+      "status": "BOUND_EXACT_BYTES"
+    },
+    {
+      "from": "native/native98/assets/direct95/vendor/services/sitl.mjs",
+      "line": 4,
+      "target": "native/native98/assets/direct95/events.mjs",
+      "kind": "DIRECT_STATIC_ESM",
+      "status": "BOUND_EXACT_BYTES"
+    },
+    {
+      "from": "native/native98/assets/direct95/vendor/services/sitl.mjs",
+      "line": 6,
+      "target": "native/native98/assets/direct95/vendor/services/mavlink.mjs",
+      "kind": "DIRECT_STATIC_ESM",
+      "status": "BOUND_EXACT_BYTES"
+    },
+    {
+      "from": "native/native98/assets/direct95/vendor/services/sitl.mjs",
+      "line": 7,
+      "target": "native/native98/assets/direct95/vendor/app/core/compiler.mjs",
+      "kind": "DIRECT_STATIC_ESM",
+      "status": "BOUND_EXACT_BYTES"
+    },
+    {
+      "from": "native/native98/assets/direct95/vendor/services/sitl.mjs",
+      "line": 8,
+      "target": "native/native98/assets/direct95/vendor/app/core/qgc.mjs",
+      "kind": "DIRECT_STATIC_ESM",
+      "status": "BOUND_EXACT_BYTES"
+    },
+    {
+      "from": "native/native98/assets/direct95/vendor/services/sitl.mjs",
+      "line": 9,
+      "target": "native/native98/assets/direct95/vendor/app/core/geodata.mjs",
+      "kind": "DIRECT_STATIC_ESM",
+      "status": "BOUND_EXACT_BYTES"
+    },
+    {
+      "from": "native/native98/assets/direct95/vendor/services/sitl.mjs",
+      "line": 10,
+      "target": "native/native98/assets/direct95/vendor/app/core/survey.mjs",
+      "kind": "DIRECT_STATIC_ESM",
+      "status": "BOUND_EXACT_BYTES"
+    },
+    {
+      "from": "native/native98/assets/direct95/vendor/services/sitl.mjs",
+      "line": 11,
+      "target": "native/native98/assets/direct95/vendor/app/core/vehicle-profile.mjs",
+      "kind": "DIRECT_STATIC_ESM",
+      "status": "BOUND_EXACT_BYTES"
+    },
+    {
+      "from": "native/native98/assets/index.html",
+      "line": 2,
+      "target": "native/native98/assets/cockpit.css",
+      "kind": "HTML_STATIC_RESOURCE",
+      "status": "BOUND_EXACT_BYTES"
+    },
+    {
+      "from": "native/native98/assets/index.html",
+      "line": 2,
+      "target": "native/native98/assets/glass.css",
+      "kind": "HTML_STATIC_RESOURCE",
+      "status": "BOUND_EXACT_BYTES"
+    },
+    {
+      "from": "native/native98/assets/index.html",
+      "line": 2,
+      "target": "native/native98/assets/native82.css",
+      "kind": "HTML_STATIC_RESOURCE",
+      "status": "BOUND_EXACT_BYTES"
+    },
+    {
+      "from": "native/native98/assets/index.html",
+      "line": 2,
+      "target": "native/native98/assets/islands82.css",
+      "kind": "HTML_STATIC_RESOURCE",
+      "status": "BOUND_EXACT_BYTES"
+    },
+    {
+      "from": "native/native98/assets/index.html",
+      "line": 2,
+      "target": "native/native98/assets/native84.css",
+      "kind": "HTML_STATIC_RESOURCE",
+      "status": "BOUND_EXACT_BYTES"
+    },
+    {
+      "from": "native/native98/assets/index.html",
+      "line": 2,
+      "target": "native/native98/assets/fly84.css",
+      "kind": "HTML_STATIC_RESOURCE",
+      "status": "BOUND_EXACT_BYTES"
+    },
+    {
+      "from": "native/native98/assets/index.html",
+      "line": 2,
+      "target": "native/native98/assets/layout85.css",
+      "kind": "HTML_STATIC_RESOURCE",
+      "status": "BOUND_EXACT_BYTES"
+    },
+    {
+      "from": "native/native98/assets/index.html",
+      "line": 2,
+      "target": "native/native98/assets/layout86.css",
+      "kind": "HTML_STATIC_RESOURCE",
+      "status": "BOUND_EXACT_BYTES"
+    },
+    {
+      "from": "native/native98/assets/index.html",
+      "line": 2,
+      "target": "native/native98/assets/native87.css",
+      "kind": "HTML_STATIC_RESOURCE",
+      "status": "BOUND_EXACT_BYTES"
+    },
+    {
+      "from": "native/native98/assets/index.html",
+      "line": 2,
+      "target": "native/native98/assets/diagnostics90.css",
+      "kind": "HTML_STATIC_RESOURCE",
+      "status": "BOUND_EXACT_BYTES"
+    },
+    {
+      "from": "native/native98/assets/index.html",
+      "line": 2,
+      "target": "native/native98/assets/payload97.css",
+      "kind": "HTML_STATIC_RESOURCE",
+      "status": "BOUND_EXACT_BYTES"
+    },
+    {
+      "from": "native/native98/assets/index.html",
+      "line": 123,
+      "target": "native/native98/assets/mission92.css",
+      "kind": "HTML_STATIC_RESOURCE",
+      "status": "BOUND_EXACT_BYTES"
+    },
+    {
+      "from": "native/native98/assets/index.html",
+      "line": 123,
+      "target": "native/native98/assets/cockpit.mjs",
+      "kind": "HTML_STATIC_RESOURCE",
+      "status": "BOUND_EXACT_BYTES"
+    },
+    {
+      "from": "native/native98/assets/index.html",
+      "line": 123,
+      "target": "native/native98/assets/native84.mjs",
+      "kind": "HTML_STATIC_RESOURCE",
+      "status": "BOUND_EXACT_BYTES"
+    },
+    {
+      "from": "native/native98/assets/index.html",
+      "line": 124,
+      "target": "native/native98/assets/layout85.mjs",
+      "kind": "HTML_STATIC_RESOURCE",
+      "status": "BOUND_EXACT_BYTES"
+    },
+    {
+      "from": "native/native98/assets/index.html",
+      "line": 124,
+      "target": "native/native98/assets/layout86.mjs",
+      "kind": "HTML_STATIC_RESOURCE",
+      "status": "BOUND_EXACT_BYTES"
+    },
+    {
+      "from": "native/native98/assets/index.html",
+      "line": 124,
+      "target": "native/native98/assets/fly87.mjs",
+      "kind": "HTML_STATIC_RESOURCE",
+      "status": "BOUND_EXACT_BYTES"
+    },
+    {
+      "from": "native/native98/assets/index.html",
+      "line": 124,
+      "target": "native/native98/assets/workspace87.mjs",
+      "kind": "HTML_STATIC_RESOURCE",
+      "status": "BOUND_EXACT_BYTES"
+    },
+    {
+      "from": "native/native98/assets/index.html",
+      "line": 124,
+      "target": "native/native98/assets/diagnostics90.mjs",
+      "kind": "HTML_STATIC_RESOURCE",
+      "status": "BOUND_EXACT_BYTES"
+    },
+    {
+      "from": "native/native98/assets/index.html",
+      "line": 124,
+      "target": "native/native98/assets/saf91.mjs",
+      "kind": "HTML_STATIC_RESOURCE",
+      "status": "BOUND_EXACT_BYTES"
+    },
+    {
+      "from": "native/native98/assets/index.html",
+      "line": 124,
+      "target": "native/native98/assets/raw96.mjs",
+      "kind": "HTML_STATIC_RESOURCE",
+      "status": "BOUND_EXACT_BYTES"
+    },
+    {
+      "from": "native/native98/assets/index.html",
+      "line": 126,
+      "target": "native/native98/assets/payload97.mjs",
+      "kind": "HTML_STATIC_RESOURCE",
+      "status": "BOUND_EXACT_BYTES"
+    },
+    {
+      "from": "native/native98/assets/offline94/auto.mjs",
+      "line": 1,
+      "target": "native/native98/assets/offline94/domain.mjs",
+      "kind": "DIRECT_STATIC_ESM",
+      "status": "BOUND_EXACT_BYTES"
+    },
+    {
+      "from": "native/native98/assets/offline94/auto.mjs",
+      "line": 2,
+      "target": "native/native98/assets/offline94/compiler.mjs",
+      "kind": "DIRECT_STATIC_ESM",
+      "status": "BOUND_EXACT_BYTES"
+    },
+    {
+      "from": "native/native98/assets/offline94/auto.mjs",
+      "line": 3,
+      "target": "native/native98/assets/offline94/qgc.mjs",
+      "kind": "DIRECT_STATIC_ESM",
+      "status": "BOUND_EXACT_BYTES"
+    },
+    {
+      "from": "native/native98/assets/offline94/auto.mjs",
+      "line": 4,
+      "target": "native/native98/assets/offline94/survey.mjs",
+      "kind": "DIRECT_STATIC_ESM",
+      "status": "BOUND_EXACT_BYTES"
+    },
+    {
+      "from": "native/native98/assets/offline94/auto.mjs",
+      "line": 5,
+      "target": "native/native98/assets/offline94/common.mjs",
+      "kind": "DIRECT_STATIC_ESM",
+      "status": "BOUND_EXACT_BYTES"
+    },
+    {
+      "from": "native/native98/assets/offline94/common.mjs",
+      "line": 1,
+      "target": "native/native98/assets/workflow/preflight/sha256.mjs",
+      "kind": "DIRECT_STATIC_ESM",
+      "status": "BOUND_EXACT_BYTES"
+    },
+    {
+      "from": "native/native98/assets/offline94/compiler.mjs",
+      "line": 1,
+      "target": "native/native98/assets/offline94/survey.mjs",
+      "kind": "DIRECT_STATIC_ESM",
+      "status": "BOUND_EXACT_BYTES"
+    },
+    {
+      "from": "native/native98/assets/offline94/domain.mjs",
+      "line": 1,
+      "target": "native/native98/assets/offline94/kml.mjs",
+      "kind": "DIRECT_STATIC_ESM",
+      "status": "BOUND_EXACT_BYTES"
+    },
+    {
+      "from": "native/native98/assets/offline94/domain.mjs",
+      "line": 1,
+      "target": "native/native98/assets/offline94/planner.mjs",
+      "kind": "DIRECT_STATIC_ESM",
+      "status": "BOUND_EXACT_BYTES"
+    },
+    {
+      "from": "native/native98/assets/offline94/kml.mjs",
+      "line": 2,
+      "target": "native/native98/assets/offline94/common.mjs",
+      "kind": "DIRECT_STATIC_ESM",
+      "status": "BOUND_EXACT_BYTES"
+    },
+    {
+      "from": "native/native98/assets/offline94/planner.mjs",
+      "line": 1,
+      "target": "native/native98/assets/offline94/survey.mjs",
+      "kind": "DIRECT_STATIC_ESM",
+      "status": "BOUND_EXACT_BYTES"
+    },
+    {
+      "from": "native/native98/assets/offline94/planner.mjs",
+      "line": 2,
+      "target": "native/native98/assets/offline94/common.mjs",
+      "kind": "DIRECT_STATIC_ESM",
+      "status": "BOUND_EXACT_BYTES"
+    },
+    {
+      "from": "native/native98/assets/offline94/qgc.mjs",
+      "line": 1,
+      "target": "native/native98/assets/offline94/compiler.mjs",
+      "kind": "DIRECT_STATIC_ESM",
+      "status": "BOUND_EXACT_BYTES"
+    },
+    {
+      "from": "native/native98/assets/offline94/qgc.mjs",
+      "line": 2,
+      "target": "native/native98/assets/offline94/survey.mjs",
+      "kind": "DIRECT_STATIC_ESM",
+      "status": "BOUND_EXACT_BYTES"
+    },
+    {
+      "from": "native/native98/assets/saf91.mjs",
+      "line": 1,
+      "target": "native/native98/assets/diagnostics90.mjs",
+      "kind": "DIRECT_STATIC_ESM",
+      "status": "BOUND_EXACT_BYTES"
+    },
+    {
+      "from": "native/native98/assets/sitl.html",
+      "line": 2,
+      "target": "native/native98/assets/cockpit.css",
+      "kind": "HTML_STATIC_RESOURCE",
+      "status": "BOUND_EXACT_BYTES"
+    },
+    {
+      "from": "native/native98/assets/sitl.html",
+      "line": 2,
+      "target": "native/native98/assets/glass.css",
+      "kind": "HTML_STATIC_RESOURCE",
+      "status": "BOUND_EXACT_BYTES"
+    },
+    {
+      "from": "native/native98/assets/sitl.html",
+      "line": 2,
+      "target": "native/native98/assets/native82.css",
+      "kind": "HTML_STATIC_RESOURCE",
+      "status": "BOUND_EXACT_BYTES"
+    },
+    {
+      "from": "native/native98/assets/sitl.html",
+      "line": 2,
+      "target": "native/native98/assets/islands82.css",
+      "kind": "HTML_STATIC_RESOURCE",
+      "status": "BOUND_EXACT_BYTES"
+    },
+    {
+      "from": "native/native98/assets/sitl.html",
+      "line": 2,
+      "target": "native/native98/assets/native84.css",
+      "kind": "HTML_STATIC_RESOURCE",
+      "status": "BOUND_EXACT_BYTES"
+    },
+    {
+      "from": "native/native98/assets/sitl.html",
+      "line": 2,
+      "target": "native/native98/assets/fly84.css",
+      "kind": "HTML_STATIC_RESOURCE",
+      "status": "BOUND_EXACT_BYTES"
+    },
+    {
+      "from": "native/native98/assets/sitl.html",
+      "line": 2,
+      "target": "native/native98/assets/layout85.css",
+      "kind": "HTML_STATIC_RESOURCE",
+      "status": "BOUND_EXACT_BYTES"
+    },
+    {
+      "from": "native/native98/assets/sitl.html",
+      "line": 2,
+      "target": "native/native98/assets/layout86.css",
+      "kind": "HTML_STATIC_RESOURCE",
+      "status": "BOUND_EXACT_BYTES"
+    },
+    {
+      "from": "native/native98/assets/sitl.html",
+      "line": 2,
+      "target": "native/native98/assets/native87.css",
+      "kind": "HTML_STATIC_RESOURCE",
+      "status": "BOUND_EXACT_BYTES"
+    },
+    {
+      "from": "native/native98/assets/sitl.html",
+      "line": 2,
+      "target": "native/native98/assets/diagnostics90.css",
+      "kind": "HTML_STATIC_RESOURCE",
+      "status": "BOUND_EXACT_BYTES"
+    },
+    {
+      "from": "native/native98/assets/sitl.html",
+      "line": 2,
+      "target": "native/native98/assets/payload97.css",
+      "kind": "HTML_STATIC_RESOURCE",
+      "status": "BOUND_EXACT_BYTES"
+    },
+    {
+      "from": "native/native98/assets/sitl.html",
+      "line": 123,
+      "target": "native/native98/assets/mission92.css",
+      "kind": "HTML_STATIC_RESOURCE",
+      "status": "BOUND_EXACT_BYTES"
+    },
+    {
+      "from": "native/native98/assets/sitl.html",
+      "line": 123,
+      "target": "native/native98/assets/cockpit.mjs",
+      "kind": "HTML_STATIC_RESOURCE",
+      "status": "BOUND_EXACT_BYTES"
+    },
+    {
+      "from": "native/native98/assets/sitl.html",
+      "line": 123,
+      "target": "native/native98/assets/native84.mjs",
+      "kind": "HTML_STATIC_RESOURCE",
+      "status": "BOUND_EXACT_BYTES"
+    },
+    {
+      "from": "native/native98/assets/sitl.html",
+      "line": 124,
+      "target": "native/native98/assets/layout85.mjs",
+      "kind": "HTML_STATIC_RESOURCE",
+      "status": "BOUND_EXACT_BYTES"
+    },
+    {
+      "from": "native/native98/assets/sitl.html",
+      "line": 124,
+      "target": "native/native98/assets/layout86.mjs",
+      "kind": "HTML_STATIC_RESOURCE",
+      "status": "BOUND_EXACT_BYTES"
+    },
+    {
+      "from": "native/native98/assets/sitl.html",
+      "line": 124,
+      "target": "native/native98/assets/fly87.mjs",
+      "kind": "HTML_STATIC_RESOURCE",
+      "status": "BOUND_EXACT_BYTES"
+    },
+    {
+      "from": "native/native98/assets/sitl.html",
+      "line": 124,
+      "target": "native/native98/assets/workspace87.mjs",
+      "kind": "HTML_STATIC_RESOURCE",
+      "status": "BOUND_EXACT_BYTES"
+    },
+    {
+      "from": "native/native98/assets/sitl.html",
+      "line": 124,
+      "target": "native/native98/assets/saf91.mjs",
+      "kind": "HTML_STATIC_RESOURCE",
+      "status": "BOUND_EXACT_BYTES"
+    },
+    {
+      "from": "native/native98/assets/sitl.html",
+      "line": 124,
+      "target": "native/native98/assets/diagnostics90.mjs",
+      "kind": "HTML_STATIC_RESOURCE",
+      "status": "BOUND_EXACT_BYTES"
+    },
+    {
+      "from": "native/native98/assets/sitl.html",
+      "line": 124,
+      "target": "native/native98/assets/raw96.mjs",
+      "kind": "HTML_STATIC_RESOURCE",
+      "status": "BOUND_EXACT_BYTES"
+    },
+    {
+      "from": "native/native98/assets/sitl.html",
+      "line": 126,
+      "target": "native/native98/assets/payload97.mjs",
+      "kind": "HTML_STATIC_RESOURCE",
+      "status": "BOUND_EXACT_BYTES"
+    },
+    {
+      "from": "native/native98/assets/workflow/core/airspace.mjs",
+      "line": 1,
+      "target": "native/native98/assets/workflow/core/common.mjs",
+      "kind": "DIRECT_STATIC_ESM",
+      "status": "BOUND_EXACT_BYTES"
+    },
+    {
+      "from": "native/native98/assets/workflow/core/airspace.mjs",
+      "line": 2,
+      "target": "native/native98/assets/workflow/core/geometry.mjs",
+      "kind": "DIRECT_STATIC_ESM",
+      "status": "BOUND_EXACT_BYTES"
+    },
+    {
+      "from": "native/native98/assets/workflow/core/geometry.mjs",
+      "line": 1,
+      "target": "native/native98/assets/workflow/core/common.mjs",
+      "kind": "DIRECT_STATIC_ESM",
+      "status": "BOUND_EXACT_BYTES"
+    },
+    {
+      "from": "native/native98/assets/workflow/journey.mjs",
+      "line": 1,
+      "target": "native/native98/assets/workflow/editor.mjs",
+      "kind": "DIRECT_STATIC_ESM",
+      "status": "BOUND_EXACT_BYTES"
+    },
+    {
+      "from": "native/native98/assets/workflow/journey.mjs",
+      "line": 2,
+      "target": "native/native98/assets/workflow/pins.mjs",
+      "kind": "DIRECT_STATIC_ESM",
+      "status": "BOUND_EXACT_BYTES"
+    },
+    {
+      "from": "native/native98/assets/workflow/preflight/adapter.mjs",
+      "line": 1,
+      "target": "native/native98/assets/workflow/preflight/wire.mjs",
+      "kind": "DIRECT_STATIC_ESM",
+      "status": "BOUND_EXACT_BYTES"
+    },
+    {
+      "from": "native/native98/assets/workflow/preflight/adapter.mjs",
+      "line": 2,
+      "target": "native/native98/assets/workflow/preflight/parameter.mjs",
+      "kind": "DIRECT_STATIC_ESM",
+      "status": "BOUND_EXACT_BYTES"
+    },
+    {
+      "from": "native/native98/assets/workflow/preflight/adapter.mjs",
+      "line": 3,
+      "target": "native/native98/assets/workflow/preflight/profile.mjs",
+      "kind": "DIRECT_STATIC_ESM",
+      "status": "BOUND_EXACT_BYTES"
+    },
+    {
+      "from": "native/native98/assets/workflow/preflight/profile.mjs",
+      "line": 1,
+      "target": "native/native98/assets/workflow/preflight/sha256.mjs",
+      "kind": "DIRECT_STATIC_ESM",
+      "status": "BOUND_EXACT_BYTES"
+    },
+    {
+      "from": "native/native98/assets/workflow/preflight/wire.mjs",
+      "line": 1,
+      "target": "native/native98/assets/workflow/preflight/definitions.mjs",
+      "kind": "DIRECT_STATIC_ESM",
+      "status": "BOUND_EXACT_BYTES"
+    },
+    {
+      "from": "native/native98/assets/workflow/preflight/wire.mjs",
+      "line": 2,
+      "target": "native/native98/assets/workflow/preflight/bytes.mjs",
+      "kind": "DIRECT_STATIC_ESM",
+      "status": "BOUND_EXACT_BYTES"
+    },
+    {
+      "from": "native/native98/assets/workflow/vendor/compiler.mjs",
+      "line": 1,
+      "target": "native/native98/assets/workflow/vendor/survey.mjs",
+      "kind": "DIRECT_STATIC_ESM",
+      "status": "BOUND_EXACT_BYTES"
+    }
+  ],
+  "unresolvedDirectStaticImportsOrResources": [],
+  "runtimeRouteReferences": [
+    {
+      "from": "native/native98/assets/cockpit.css",
+      "line": 1,
+      "literal": "/fonts/Barlow-Medium.ttf",
+      "kind": "CSS_STATIC_RESOURCE",
+      "status": "EXPLICIT_ROUTER_OR_RUNTIME_CONTEXT_REQUIRED_NOT_ASSET_FILE"
+    },
+    {
+      "from": "native/native98/assets/cockpit.css",
+      "line": 1,
+      "literal": "/fonts/Barlow-SemiBold.ttf",
+      "kind": "CSS_STATIC_RESOURCE",
+      "status": "EXPLICIT_ROUTER_OR_RUNTIME_CONTEXT_REQUIRED_NOT_ASSET_FILE"
+    },
+    {
+      "from": "native/native98/assets/cockpit.css",
+      "line": 1,
+      "literal": "/fonts/Barlow-Bold.ttf",
+      "kind": "CSS_STATIC_RESOURCE",
+      "status": "EXPLICIT_ROUTER_OR_RUNTIME_CONTEXT_REQUIRED_NOT_ASSET_FILE"
+    }
+  ],
+  "OperationGateDisposition": "No OperationGate.java exists in Native98. The actual gates are NativeSend98/WireGate95/UnifiedCore98 and FileGate91; MissionBeta OperationGate belongs to different companion shell. Do not invent or mix the classes.",
+  "generatedBuildInput": {
+    "name": "BuildInfo90.java",
+    "historicalRecipe": "Build sourceId from explicit source/assets hashes; write constants class during new isolated build",
+    "notMaterializedNow": true
+  },
+  "selectedPythonBuildRuntimeLaunchers": [],
+  "knownPlatformRestrictions": [
+    "ShellActivity requires ranchu and observed owned AP identity",
+    "DirectTransport95 opens10.0.2.2:5937 and rejects reopening sameActivity",
+    "JS socket.mjs expects127.0.0.1:5937 logicalendpoint",
+    "Existing provider is internalquad/AP011627d4\u2026, not SIMSTABILITY03 externalphysics/APf2be1f34\u2026"
+  ],
+  "runtimeAPKAccepted": false,
+  "fullBetaRunnableClosureAccepted": false,
+  "nextStep": "M1 materializes versioned explicit provider, lifecycle and build manifest; do not run historical build/exec projections blindly."
+}

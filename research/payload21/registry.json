@@ -1,0 +1,435 @@
+{
+  "aggregates": {
+    "cells_by_state": {
+      "null": 40,
+      "sourced": 12
+    },
+    "coverage_pct": null,
+    "n_entities": 4,
+    "rollup": {},
+    "rollup_field": null,
+    "universe_estimate": null
+  },
+  "registry": {
+    "MAVLink Camera v2": {
+      "entity_type": null,
+      "fields": {
+        "accessories_workflow": {
+          "state": "null",
+          "value": null
+        },
+        "ack_semantics": {
+          "state": "null",
+          "value": null
+        },
+        "addressing": {
+          "claims": [
+            {
+              "capture": {
+                "fetched_at": "2026-10-13T06:24:44.961620+00:00",
+                "origin_id": "camera",
+                "snapshot": "camera.html",
+                "source": "camera",
+                "url": "https://mavlink.io/en/services/camera.html"
+              },
+              "evidence_span": "identified and addressed by their system and component id.",
+              "extraction": "normalized",
+              "source": "camera",
+              "tier": "A",
+              "value": "System/component identity with explicit proxy device addressing"
+            }
+          ],
+          "state": "sourced",
+          "value": "System/component identity with explicit proxy device addressing"
+        },
+        "ai_workflow": {
+          "state": "null",
+          "value": null
+        },
+        "authority": {
+          "state": "null",
+          "value": null
+        },
+        "camera_controls": {
+          "state": "null",
+          "value": null
+        },
+        "configuration_workflow": {
+          "state": "null",
+          "value": null
+        },
+        "controller_workflow": {
+          "state": "null",
+          "value": null
+        },
+        "flight_workflow": {
+          "state": "null",
+          "value": null
+        },
+        "media_workflow": {
+          "state": "null",
+          "value": null
+        },
+        "mission_workflow": {
+          "state": "null",
+          "value": null
+        },
+        "multi_payload_positions": {
+          "state": "null",
+          "value": null
+        },
+        "runtime_ab": {
+          "state": "null",
+          "value": null
+        }
+      }
+    },
+    "MAVLink Command": {
+      "entity_type": null,
+      "fields": {
+        "accessories_workflow": {
+          "state": "null",
+          "value": null
+        },
+        "ack_semantics": {
+          "claims": [
+            {
+              "capture": {
+                "fetched_at": "2026-10-13T06:24:45.954119+00:00",
+                "origin_id": "command",
+                "snapshot": "command.html",
+                "source": "command",
+                "url": "https://mavlink.io/en/services/command.html"
+              },
+              "evidence_span": "from commands to indicate command arrival, and result.",
+              "extraction": "normalized",
+              "source": "command",
+              "tier": "A",
+              "value": "Command arrival/result ACK requires separate application observation"
+            }
+          ],
+          "state": "sourced",
+          "value": "Command arrival/result ACK requires separate application observation"
+        },
+        "addressing": {
+          "state": "null",
+          "value": null
+        },
+        "ai_workflow": {
+          "state": "null",
+          "value": null
+        },
+        "authority": {
+          "state": "null",
+          "value": null
+        },
+        "camera_controls": {
+          "state": "null",
+          "value": null
+        },
+        "configuration_workflow": {
+          "state": "null",
+          "value": null
+        },
+        "controller_workflow": {
+          "state": "null",
+          "value": null
+        },
+        "flight_workflow": {
+          "state": "null",
+          "value": null
+        },
+        "media_workflow": {
+          "state": "null",
+          "value": null
+        },
+        "mission_workflow": {
+          "state": "null",
+          "value": null
+        },
+        "multi_payload_positions": {
+          "state": "null",
+          "value": null
+        },
+        "runtime_ab": {
+          "state": "null",
+          "value": null
+        }
+      }
+    },
+    "MAVLink Gimbal v2": {
+      "entity_type": null,
+      "fields": {
+        "accessories_workflow": {
+          "state": "null",
+          "value": null
+        },
+        "ack_semantics": {
+          "state": "null",
+          "value": null
+        },
+        "addressing": {
+          "state": "null",
+          "value": null
+        },
+        "ai_workflow": {
+          "state": "null",
+          "value": null
+        },
+        "authority": {
+          "claims": [
+            {
+              "capture": {
+                "fetched_at": "2026-10-13T06:24:45.477544+00:00",
+                "origin_id": "gimbal",
+                "snapshot": "gimbal.html",
+                "source": "gimbal",
+                "url": "https://mavlink.io/en/services/gimbal_v2.html"
+              },
+              "evidence_span": "ignore any gimbal controls which come from MAVLink components that are not explicitly set to &quot;in control&quot;.",
+              "extraction": "normalized",
+              "source": "gimbal",
+              "tier": "A",
+              "value": "Manager-observed control ownership required"
+            }
+          ],
+          "state": "sourced",
+          "value": "Manager-observed control ownership required"
+        },
+        "camera_controls": {
+          "state": "null",
+          "value": null
+        },
+        "configuration_workflow": {
+          "state": "null",
+          "value": null
+        },
+        "controller_workflow": {
+          "state": "null",
+          "value": null
+        },
+        "flight_workflow": {
+          "state": "null",
+          "value": null
+        },
+        "media_workflow": {
+          "state": "null",
+          "value": null
+        },
+        "mission_workflow": {
+          "state": "null",
+          "value": null
+        },
+        "multi_payload_positions": {
+          "state": "null",
+          "value": null
+        },
+        "runtime_ab": {
+          "state": "null",
+          "value": null
+        }
+      }
+    },
+    "RAGAS": {
+      "entity_type": null,
+      "fields": {
+        "accessories_workflow": {
+          "claims": [
+            {
+              "capture": {
+                "fetched_at": "2026-10-13T06:24:44.343022+00:00",
+                "origin_id": "ragas",
+                "snapshot": "ragas.md",
+                "source": "ragas",
+                "url": "https://raw.githubusercontent.com/Real-Time-Robotics/ragas-release/main/README.md"
+              },
+              "evidence_span": "measure distances with a laser range finder, and manage accessories such as spotlights and drop systems.",
+              "extraction": "normalized",
+              "source": "ragas",
+              "tier": "A",
+              "value": "Published accessory control scope"
+            }
+          ],
+          "state": "sourced",
+          "value": "Published accessory control scope"
+        },
+        "ack_semantics": {
+          "state": "null",
+          "value": null
+        },
+        "addressing": {
+          "state": "null",
+          "value": null
+        },
+        "ai_workflow": {
+          "claims": [
+            {
+              "capture": {
+                "fetched_at": "2026-10-13T06:24:44.343022+00:00",
+                "origin_id": "ragas",
+                "snapshot": "ragas.md",
+                "source": "ragas",
+                "url": "https://raw.githubusercontent.com/Real-Time-Robotics/ragas-release/main/README.md"
+              },
+              "evidence_span": "Use AI to detect and track people, vehicles, animals and specialised infrastructure targets.",
+              "extraction": "normalized",
+              "source": "ragas",
+              "tier": "A",
+              "value": "Published detection/tracking workflow"
+            }
+          ],
+          "state": "sourced",
+          "value": "Published detection/tracking workflow"
+        },
+        "authority": {
+          "state": "null",
+          "value": null
+        },
+        "camera_controls": {
+          "claims": [
+            {
+              "capture": {
+                "fetched_at": "2026-10-13T06:24:44.343022+00:00",
+                "origin_id": "ragas",
+                "snapshot": "ragas.md",
+                "source": "ragas",
+                "url": "https://raw.githubusercontent.com/Real-Time-Robotics/ragas-release/main/README.md"
+              },
+              "evidence_span": "View colour and thermal feeds side by side",
+              "extraction": "normalized",
+              "source": "ragas",
+              "tier": "A",
+              "value": "Published colour/thermal, zoom/focus/capture/gimbal scope"
+            }
+          ],
+          "state": "sourced",
+          "value": "Published colour/thermal, zoom/focus/capture/gimbal scope"
+        },
+        "configuration_workflow": {
+          "claims": [
+            {
+              "capture": {
+                "fetched_at": "2026-10-13T06:24:44.343022+00:00",
+                "origin_id": "ragas",
+                "snapshot": "ragas.md",
+                "source": "ragas",
+                "url": "https://raw.githubusercontent.com/Real-Time-Robotics/ragas-release/main/README.md"
+              },
+              "evidence_span": "Configure RTK/NTRIP and PPK workflows, calibrate sensors and controllers, test motors, manage vehicle parameters, and keep compatible payload firmware up to date.",
+              "extraction": "normalized",
+              "source": "ragas",
+              "tier": "A",
+              "value": "Published RTK/configuration workflow"
+            }
+          ],
+          "state": "sourced",
+          "value": "Published RTK/configuration workflow"
+        },
+        "controller_workflow": {
+          "claims": [
+            {
+              "capture": {
+                "fetched_at": "2026-10-13T06:24:44.343022+00:00",
+                "origin_id": "ragas",
+                "snapshot": "ragas.md",
+                "source": "ragas",
+                "url": "https://raw.githubusercontent.com/Real-Time-Robotics/ragas-release/main/README.md"
+              },
+              "evidence_span": "customise controller buttons for quicker access to frequently used functions.",
+              "extraction": "normalized",
+              "source": "ragas",
+              "tier": "A",
+              "value": "Published controller button customization"
+            }
+          ],
+          "state": "sourced",
+          "value": "Published controller button customization"
+        },
+        "flight_workflow": {
+          "claims": [
+            {
+              "capture": {
+                "fetched_at": "2026-10-13T06:24:44.343022+00:00",
+                "origin_id": "ragas",
+                "snapshot": "ragas.md",
+                "source": "ragas",
+                "url": "https://raw.githubusercontent.com/Real-Time-Robotics/ragas-release/main/README.md"
+              },
+              "evidence_span": "Control every stage of your flight, from arming and takeoff to landing and Return to Home.",
+              "extraction": "normalized",
+              "source": "ragas",
+              "tier": "A",
+              "value": "Published flight stage/mode operation"
+            }
+          ],
+          "state": "sourced",
+          "value": "Published flight stage/mode operation"
+        },
+        "media_workflow": {
+          "claims": [
+            {
+              "capture": {
+                "fetched_at": "2026-10-13T06:24:44.343022+00:00",
+                "origin_id": "ragas",
+                "snapshot": "ragas.md",
+                "source": "ragas",
+                "url": "https://raw.githubusercontent.com/Real-Time-Robotics/ragas-release/main/README.md"
+              },
+              "evidence_span": "Access photos, videos, captures and flight records from a unified gallery.",
+              "extraction": "normalized",
+              "source": "ragas",
+              "tier": "A",
+              "value": "Published media/log review/export workflow"
+            }
+          ],
+          "state": "sourced",
+          "value": "Published media/log review/export workflow"
+        },
+        "mission_workflow": {
+          "claims": [
+            {
+              "capture": {
+                "fetched_at": "2026-10-13T06:24:44.343022+00:00",
+                "origin_id": "ragas",
+                "snapshot": "ragas.md",
+                "source": "ragas",
+                "url": "https://raw.githubusercontent.com/Real-Time-Robotics/ragas-release/main/README.md"
+              },
+              "evidence_span": "Create and fly missions with waypoints, surveys, corridor scans, structure scans, orbits and LiDAR calibration.",
+              "extraction": "normalized",
+              "source": "ragas",
+              "tier": "A",
+              "value": "Published mission planning/execution workflow"
+            }
+          ],
+          "state": "sourced",
+          "value": "Published mission planning/execution workflow"
+        },
+        "multi_payload_positions": {
+          "claims": [
+            {
+              "capture": {
+                "fetched_at": "2026-10-13T06:24:44.343022+00:00",
+                "origin_id": "ragas",
+                "snapshot": "ragas.md",
+                "source": "ragas",
+                "url": "https://raw.githubusercontent.com/Real-Time-Robotics/ragas-release/main/README.md"
+              },
+              "evidence_span": "Operate up to three payloads simultaneously from Front, Center and Rear positions.",
+              "extraction": "normalized",
+              "source": "ragas",
+              "tier": "A",
+              "value": "Published up to three Front/Center/Rear payload positions"
+            }
+          ],
+          "state": "sourced",
+          "value": "Published up to three Front/Center/Rear payload positions"
+        },
+        "runtime_ab": {
+          "state": "null",
+          "value": null
+        }
+      }
+    }
+  }
+}

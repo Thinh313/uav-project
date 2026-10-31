@@ -1,0 +1,11 @@
+domain: qgc-runtime-20261012
+entity_label: Pinned desktop and simulator behavior
+schema:
+  type_field: null
+  fields: [release, mode_reason, gcs_timeout, fs_options, home_terrain, camera_distance]
+rollup_field: null
+universe:
+  estimate: null
+  basis: Selected runtime semantics, no universal compatibility denominator
+alias_map: {}
+ambiguous_clusters: []

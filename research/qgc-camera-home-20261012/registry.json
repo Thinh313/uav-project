@@ -1,0 +1,175 @@
+{
+  "aggregates": {
+    "cells_by_state": {
+      "null": 6,
+      "sourced": 6
+    },
+    "coverage_pct": null,
+    "n_entities": 2,
+    "rollup": {},
+    "rollup_field": null,
+    "universe_estimate": null
+  },
+  "registry": {
+    "Copter4.7.1": {
+      "entity_type": null,
+      "fields": {
+        "home_terrain": {
+          "state": "null",
+          "value": null
+        },
+        "immediate_trigger": {
+          "claims": [
+            {
+              "capture": {
+                "fetched_at": "2026-10-12T08:40:45.567772+00:00",
+                "origin_id": "ardupilot-upstream",
+                "sha256": "52ded5856557718047c6bac239ca559bd90a5fd46178ebb8501bfe9845512e22",
+                "snapshot": "ap-mission-commands.txt",
+                "source": "ap-mission-commands",
+                "url": "https://raw.githubusercontent.com/ArduPilot/ardupilot/Copter-4.7.1/libraries/AP_Mission/AP_Mission_Commands.cpp"
+              },
+              "evidence_span": "if (cmd.content.cam_trigg_dist.trigger == 1) {",
+              "extraction": "normalized",
+              "source": "ap-mission-commands",
+              "tier": "A",
+              "value": "Distance-trigger flag1 calls take_picture even when distance is0"
+            }
+          ],
+          "state": "sourced",
+          "value": "Distance-trigger flag1 calls take_picture even when distance is0"
+        },
+        "reserved_nulls": {
+          "state": "null",
+          "value": null
+        },
+        "stop_capture": {
+          "claims": [
+            {
+              "capture": {
+                "fetched_at": "2026-10-12T08:40:45.567772+00:00",
+                "origin_id": "ardupilot-upstream",
+                "sha256": "52ded5856557718047c6bac239ca559bd90a5fd46178ebb8501bfe9845512e22",
+                "snapshot": "ap-mission-commands.txt",
+                "source": "ap-mission-commands",
+                "url": "https://raw.githubusercontent.com/ArduPilot/ardupilot/Copter-4.7.1/libraries/AP_Mission/AP_Mission_Commands.cpp"
+              },
+              "evidence_span": "camera->stop_capture();",
+              "extraction": "normalized",
+              "source": "ap-mission-commands",
+              "tier": "A",
+              "value": "Mission command2001 camera0 stops capture across backends"
+            }
+          ],
+          "state": "sourced",
+          "value": "Mission command2001 camera0 stops capture across backends"
+        },
+        "stop_pair": {
+          "state": "null",
+          "value": null
+        },
+        "stored_stop_fields": {
+          "claims": [
+            {
+              "capture": {
+                "fetched_at": "2026-10-12T08:40:45.567612+00:00",
+                "origin_id": "ardupilot-upstream",
+                "sha256": "1e9115fe299dea50351ab65228e9336484310c3ca7b8ed80d24788dc855618f8",
+                "snapshot": "ap-mission.txt",
+                "source": "ap-mission",
+                "url": "https://raw.githubusercontent.com/ArduPilot/ardupilot/Copter-4.7.1/libraries/AP_Mission/AP_Mission.cpp"
+              },
+              "evidence_span": "cmd.p1 = packet.param1;",
+              "extraction": "normalized",
+              "source": "ap-mission",
+              "tier": "A",
+              "value": "IMAGE_STOP_CAPTURE stores camera ID in p1; reserved fields not stored"
+            }
+          ],
+          "state": "sourced",
+          "value": "IMAGE_STOP_CAPTURE stores camera ID in p1; reserved fields not stored"
+        }
+      }
+    },
+    "QGC5.1.5": {
+      "entity_type": null,
+      "fields": {
+        "home_terrain": {
+          "claims": [
+            {
+              "capture": {
+                "fetched_at": "2026-10-12T08:40:47.119700+00:00",
+                "origin_id": "qgc-upstream",
+                "sha256": "fd37a832a8288d81ae4cd442cd9737e5e755a4fb473cc8a10e73e61a99845974",
+                "snapshot": "mission-settings.txt",
+                "source": "mission-settings",
+                "url": "https://raw.githubusercontent.com/mavlink/qgroundcontrol/3a67d31f0c36bf3fe38ec52970d250a89d0aaf67/src/MissionManager/MissionSettingsItem.cc"
+              },
+              "evidence_span": "_plannedHomePositionAltitudeFact.setRawValue(terrainAltitude);",
+              "extraction": "normalized",
+              "source": "mission-settings",
+              "tier": "A",
+              "value": "Planned Home altitude can be set from terrain altitude"
+            }
+          ],
+          "state": "sourced",
+          "value": "Planned Home altitude can be set from terrain altitude"
+        },
+        "immediate_trigger": {
+          "state": "null",
+          "value": null
+        },
+        "reserved_nulls": {
+          "claims": [
+            {
+              "capture": {
+                "fetched_at": "2026-10-12T08:40:45.567149+00:00",
+                "origin_id": "qgc-upstream",
+                "sha256": "04cfceccc69e124d18df208c1e5e0bb2da471380da02895baa355b7c6030cc82",
+                "snapshot": "camera-section.txt",
+                "source": "camera-section",
+                "url": "https://raw.githubusercontent.com/mavlink/qgroundcontrol/3a67d31f0c36bf3fe38ec52970d250a89d0aaf67/src/MissionManager/CameraSection.cc"
+              },
+              "evidence_span": "qQNaN(), qQNaN(), qQNaN(), qQNaN(), qQNaN(), qQNaN(),",
+              "extraction": "normalized",
+              "source": "camera-section",
+              "tier": "A",
+              "value": "Stop-capture serializer uses reserved NaN, persisted as JSON null"
+            }
+          ],
+          "state": "sourced",
+          "value": "Stop-capture serializer uses reserved NaN, persisted as JSON null"
+        },
+        "stop_capture": {
+          "state": "null",
+          "value": null
+        },
+        "stop_pair": {
+          "claims": [
+            {
+              "capture": {
+                "fetched_at": "2026-10-12T08:40:45.567149+00:00",
+                "origin_id": "qgc-upstream",
+                "sha256": "04cfceccc69e124d18df208c1e5e0bb2da471380da02895baa355b7c6030cc82",
+                "snapshot": "camera-section.txt",
+                "source": "camera-section",
+                "url": "https://raw.githubusercontent.com/mavlink/qgroundcontrol/3a67d31f0c36bf3fe38ec52970d250a89d0aaf67/src/MissionManager/CameraSection.cc"
+              },
+              "evidence_span": "MAV_CMD_IMAGE_STOP_CAPTURE,",
+              "extraction": "normalized",
+              "source": "camera-section",
+              "tier": "A",
+              "value": "Stop-photo serialization appends distance-trigger stop then IMAGE_STOP_CAPTURE"
+            }
+          ],
+          "state": "sourced",
+          "value": "Stop-photo serialization appends distance-trigger stop then IMAGE_STOP_CAPTURE"
+        },
+        "stored_stop_fields": {
+          "state": "null",
+          "value": null
+        }
+      }
+    }
+  }
+}

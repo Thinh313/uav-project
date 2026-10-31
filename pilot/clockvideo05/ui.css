@@ -1,0 +1,82 @@
+@import url('/media-panel.css');
+:root{--field-border:rgba(255,255,255,.16)}
+#field-console{position:fixed;z-index:70;top:calc(var(--top,64px) + 52px);right:110px;bottom:calc(var(--bottom,88px) + 48px);width:min(420px,40vw);padding:16px 18px;overflow:auto;border:1px solid var(--field-border);border-radius:20px;background:rgba(17,23,23,.7);backdrop-filter:blur(28px);box-shadow:0 16px 60px #0003;color:#f5f6f4;font:500 14px/1.45 Barlow,Arial,sans-serif}
+#field-console[hidden],#field-media[hidden],#field-open[hidden]{display:none!important}#field-console header{display:flex;justify-content:space-between;gap:12px;align-items:center}#field-console h2{font-size:21px;margin:3px 0 12px}#field-console small{letter-spacing:1.2px;color:#dfc85d}#field-console nav,.field-grid,.field-row{display:flex;gap:8px;flex-wrap:wrap}#field-console nav{margin-bottom:12px}#field-console nav button{flex:1}#field-console button,#field-console select,#field-console input,#field-open{min-height:48px;border:1px solid var(--field-border);border-radius:10px;background:rgba(255,255,255,.06);color:inherit;padding:10px 12px;font:600 14px Barlow,Arial,sans-serif}#field-console button{cursor:pointer}#field-console button:disabled{opacity:.35;cursor:default}#field-console label{display:grid;gap:4px;margin:12px 0;flex:1}#field-console select option{background:#182120;color:white}.field-grid button{flex:1 1 44%}#field-console button.field-primary,#field-console nav [aria-selected=true]{border-color:#e2c948;background:rgba(226,201,72,.16)}#field-console section>button{width:100%;margin:5px 0}#field-hide{width:48px;flex:none}#field-message{display:block;border-left:2px solid #e0c65b;padding:8px 10px;margin:8px 0 12px;white-space:pre-wrap;overflow-wrap:anywhere;max-height:120px;overflow:auto;font-size:12px}.field-hint,#field-binding,#field-home{font-size:12px;color:#bdc8c4;margin:10px 0;overflow-wrap:anywhere}.field-check{display:inline-block;border:1px solid #fff2;border-radius:6px;padding:5px;margin:3px;font-size:12px}#field-preflight-list{max-height:160px;overflow:auto;margin:10px 0}#field-console pre{white-space:pre-wrap;overflow-wrap:anywhere;font:12px/1.5 Barlow,Arial}#field-console details{margin-top:16px}#field-console summary{min-height:48px;cursor:pointer}.field-capture{border-top:1px solid #fff2;padding:16px 0;overflow-wrap:anywhere}.field-capture strong{font-size:12px}.field-capture img{display:block;width:100%;border-radius:12px;margin:8px 0}.field-capture button{width:100%}#field-open{position:fixed;z-index:69;right:112px;top:calc(var(--top,64px) + 52px);background:rgba(20,27,25,.6);backdrop-filter:blur(20px);color:white}#field-media{position:fixed;left:110px;right:550px;top:calc(var(--top,64px) + 52px);bottom:calc(var(--bottom,88px) + 48px);z-index:58;pointer-events:auto}body[data-field-console-open=false] #field-media{right:110px}body[data-view=review] .metrics{visibility:visible!important}.scene-top,.camera-meta,.mini-view,.heading,.gimbal-angle,#phone06-open,#phone06-panel,#history84,#map84,#native-raw96-panel,#native-saf91-panel{display:none!important}#field-console~#field-media{}.camera-rail{z-index:71}.channel-strip{z-index:72}body[data-view=plan] #field-console{display:none}#field-console select:focus-visible,#field-console button:focus-visible,#field-console input:focus-visible{outline:2px solid #f0d467;outline-offset:3px}
+@media(max-width:1100px){#field-console{right:90px;width:360px;top:100px;bottom:112px}#field-media{left:90px;right:466px;top:100px;bottom:112px}#field-open{right:90px;top:100px}}
+@media(max-height:650px){#field-console,#field-media{top:96px;bottom:110px}#field-console{padding:10px 14px}#field-console h2{font-size:17px}#field-message{max-height:70px}}
+
+#source90,#diagnostics90,#panel83{display:none!important}#field-console output,#field-console p{user-select:text}.field-live-map{width:100%;height:160px;background:#101d1a55;border:1px solid #fff2;border-radius:12px}body[data-view=fly] #camera-scene{filter:brightness(.45)}
+
+#field-live-map{width:100%;height:150px;border-radius:12px;background:#10201b55;border:1px solid #fff2}#field-flight-review{white-space:pre-wrap;font-size:12px}
+#field-open{top:calc(var(--top,64px) + 4px);min-height:48px}#field-diagnostics{font-size:12px}#field-diagnostics pre{max-height:180px;overflow:auto}
+@media(max-height:600px){#field-media{left:90px;right:90px;top:96px;bottom:110px}#field-media .field-media-panel{grid-template-rows:24px minmax(108px,1fr) 48px 16px 48px;gap:4px;padding:8px}#field-media .fmp-scope,#field-media .fmp-heading p{display:none}#field-media .fmp-heading h2{font-size:16px}#field-media .fmp-viewport{min-height:108px}#field-media .fmp-actions{grid-template-columns:repeat(4,minmax(0,1fr))}#field-media .fmp-actions button{font-size:11px;padding:5px}#field-media .fmp-notice{max-height:16px;min-height:16px}#field-media .fmp-source{width:124px;right:6px;top:6px}#field-media .fmp-source iframe{height:76px}#field-media .fmp-source figcaption{font-size:9px;padding:3px 6px}#field-media .fmp-setup[open]{position:absolute;z-index:8;bottom:8px;left:8px;right:8px;max-height:calc(100% - 40px);padding:0 8px;background:rgba(17,28,24,.96);border-radius:10px}body[data-field-console-open=true] #field-media{visibility:hidden;pointer-events:none}.channel-strip{max-width:calc(100vw - 420px)}#field-console{top:96px;bottom:110px;width:360px;max-width:calc(100vw - 180px)}#field-console header h2{margin-bottom:6px}#field-console #field-message{max-height:48px}#field-open{right:90px}}
+
+.field-download{display:block;min-height:48px;padding:12px 8px;color:#efda72;overflow-wrap:anywhere}#field-delivery-links{font-size:13px}
+
+body[data-field-loading=true]>*{visibility:hidden!important}body[data-field-loading=true]::after{content:attr(data-field-message);position:fixed;inset:0;display:grid;place-items:center;z-index:9999;background:#14221d;color:#f1f4ef;font:600 17px Barlow,Arial,sans-serif}body[data-field-loading=true]{pointer-events:none}
+
+/* Remove inherited illustrative aircraft/Home markers; own fresh WGS84 layer above. */
+#terrain>g[transform],#terrain>.map-home,#terrain>.map-labels{display:none}
+#native-route{pointer-events:none}
+.field-capture>svg{width:100%;height:100px;background:rgba(0,0,0,.12)}
+.field-capture>small{display:block;line-height:1.4;color:var(--muted,#aeb8b5)}
+
+/* Compact session labels stay on the shared header baseline. */
+.topbar .authority-chip{min-height:48px;justify-content:center;gap:3px;padding-block:4px}
+.topbar #my-session{font-size:12px;line-height:16px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:100%;overflow-wrap:normal}
+.topbar #owners{font-size:11px;line-height:14px;max-width:100%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+
+/* Repair01 semantic glass tokens. Values remain legible over both black/white scene extremes. */
+:root{--field-ink:#f4f8f5;--field-muted:#c3d1c8;--field-fresh:#d4efce;--field-warning:#ffe18a;--field-error:#ffd0bd;--field-glass:rgba(13,23,18,.9);--field-rule:rgba(225,239,229,.3)}
+body[data-theme=day]{--field-ink:#142d21;--field-muted:#3d5848;--field-fresh:#175532;--field-warning:#6b4800;--field-error:#942f15;--field-glass:rgba(245,249,246,.94);--field-rule:rgba(24,54,36,.36)}
+#field-console{color:var(--field-ink);background:var(--field-glass);border-color:var(--field-rule)}
+#field-console small{color:var(--field-warning)}
+#field-console .field-hint,#field-binding,#field-home{color:var(--field-muted)}
+#field-console button,#field-console input,#field-console select{border-color:var(--field-rule)}
+#field-console button:enabled,#field-console input,#field-console select{color:var(--field-ink)}
+#field-console button:disabled{opacity:.48;border-style:dashed}
+#field-message{color:var(--field-ink);border-color:var(--field-warning)}
+#field-message[data-error=true]{color:var(--field-error);border-color:var(--field-error)}
+#field-console .field-download{color:var(--field-warning)}
+
+/* CLOCKVIDEO05: action geometry stays independent of diagnostic/checklist growth. */
+#field-console{display:flex;flex-direction:column;gap:6px;overflow:hidden;padding:12px;width:400px;right:96px;top:90px;bottom:108px;border-radius:18px}
+#field-console header{min-height:40px;flex:none}#field-console h2{font-size:18px;line-height:22px;margin:0}#field-console small{font-size:10px;line-height:14px}#field-console nav{flex:none;gap:6px;margin:0}#field-console nav button{min-height:44px;padding:6px}
+#field-console button,#field-console select,#field-console input{min-height:44px;padding:7px 9px;font-size:13px;line-height:17px}#field-hide{width:44px;min-height:40px!important}#field-message{flex:none;margin:0;padding:4px 8px;height:32px;min-height:32px;max-height:32px;overflow:auto;line-height:15px;font-size:11px}#field-action-receipt{display:block;flex:none;min-height:15px;max-height:15px;font:10px/15px Barlow,Arial,sans-serif;color:var(--field-muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+#field-flight{display:flex;flex:1;flex-direction:column;min-height:0;overflow:hidden}#field-flight[hidden],#field-payload[hidden],#field-review[hidden]{display:none!important}#field-flight-context{flex:1;min-height:28px;overflow:auto;overscroll-behavior:contain;padding:0 4px 6px 0}#field-flight-context .field-hint{margin:4px 0}#field-flight-context label{margin:4px 0}#field-flight-context #field-preflight-list{max-height:none;overflow:visible;margin:5px 0}#field-flight-context #field-live-map{height:100px}#field-flight-context #field-diagnostics{margin:4px 0}#field-flight-context #field-diagnostics summary{min-height:36px}
+#field-flight-actions{flex:none;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:6px;padding-top:8px;border-top:1px solid var(--field-rule);position:relative}#field-flight-actions>button{width:auto;margin:0;min-height:44px;max-height:44px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}#field-flight-actions #field-auto{font-size:11px}#field-home{grid-column:1/-1;height:32px;min-height:32px;max-height:32px;overflow:auto;margin:0;font-size:10px;line-height:15px}#field-home:empty{display:none}#field-fault-details{grid-column:1/-1;margin:0!important}#field-fault-details>summary{min-height:36px!important;font-size:12px}#field-fault-details[open]{position:absolute;z-index:4;inset:auto 0 0;padding:10px;background:var(--field-glass);border:1px solid var(--field-rule);border-radius:12px;box-shadow:0 8px 30px #0005}#field-fault-details[open] .field-grid button{min-height:44px}#field-fault-details .field-hint{font-size:11px}
+#field-payload,#field-review{flex:1;min-height:0;overflow:auto;overscroll-behavior:contain;padding-right:4px}#field-payload>label{margin:6px 0}#field-payload .field-hint{margin:4px 0}#field-media{left:96px;right:512px;top:90px;bottom:108px}#field-open{right:96px;top:68px;min-height:44px}
+@media(max-width:1100px){#field-console{width:360px;right:80px}#field-media{left:80px;right:456px}}
+@media(max-height:650px){#field-console{top:80px;bottom:96px;padding:8px;gap:4px}#field-console header{min-height:30px}#field-console h2{font-size:15px;line-height:18px}#field-console #field-message{height:24px;min-height:24px;max-height:24px}#field-console #field-action-receipt{min-height:12px;max-height:12px;line-height:12px}#field-media{top:80px;bottom:96px}#field-flight-context{min-height:20px}#field-flight-actions{gap:4px;padding-top:4px}#field-home{height:24px;min-height:24px;max-height:24px}}
+@media(max-height:600px){body[data-field-console-open=true] #field-media{visibility:hidden;pointer-events:none}}
+/* Home is reserved before arm; entering Home review cannot move any action. */
+#field-home:empty{display:block}
+#field-fault-row{grid-column:1/-1;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:6px}#field-fault-row button{min-height:44px;max-height:44px;font-size:11px;padding:6px}
+/* Critical payload actions use the same fixed dock as flight, never the settings scroller. */
+#field-payload{display:flex;flex-direction:column;overflow:hidden;padding:0}
+#field-payload-context{flex:1;min-height:28px;overflow:auto;overscroll-behavior:contain;padding:0 4px 6px 0}
+#field-payload-actions{flex:none;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:6px;padding-top:8px;border-top:1px solid var(--field-rule)}
+#field-payload-actions>button{min-height:44px;max-height:44px;margin:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+#field-payload-context>label{margin:6px 0}
+
+/* Generation02: authenticated716px viewport budget; no clipped connection target. */
+#field-console{top:106px;padding:8px;gap:4px}
+#field-media{top:106px}
+#field-flight-context{min-height:96px}
+#field-flight-context .field-connection-row{display:flex;flex-wrap:nowrap;align-items:flex-end;gap:8px;min-height:69px;margin:0 0 4px}
+#field-flight-context .field-connection-row>label{flex:1;min-width:0;margin:0;gap:4px}
+#field-flight-context .field-connection-row select{width:100%;min-width:0;height:44px;max-height:44px}
+#field-flight-context #field-connect{flex:0 0 108px;width:108px;height:44px;min-height:44px;max-height:44px;align-self:flex-end;white-space:nowrap;line-height:17px}
+#field-flight-context #field-fault-details{position:static;inset:auto;margin:4px 0!important;padding:0;background:transparent;border:0;box-shadow:none}
+#field-flight-context #field-diagnostics{margin:4px 0}
+@media(max-height:650px){#field-console,#field-media{top:106px}#field-flight-context{min-height:80px}}
+/* Known critical labels are concise; never replace their meaning with an ellipsis. */
+#field-flight-actions>button,#field-payload-actions>button,#field-fault-row button{text-overflow:clip}
+#field-flight-actions #field-auto{font-size:13px}
+
+/* Generation03: bound the inherited inline header strut and allow context flex shrink. */
+#field-console>header{height:44px;min-height:44px;max-height:44px;flex:0 0 44px}
+#field-console>header>div{display:grid;grid-template-rows:14px 22px;line-height:14px}
+#field-console>header small{display:block;height:14px;line-height:14px}
+#field-hide{height:44px!important;min-height:44px!important;max-height:44px;width:44px;min-width:44px;flex:0 0 44px}
+#field-flight-context{min-height:80px}

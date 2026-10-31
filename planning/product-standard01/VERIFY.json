@@ -1,0 +1,25 @@
+{
+  "at": "2026-10-20T10:28:46.936661+07:00",
+  "documentationStatus": "READY_FOR_PRODUCT_PLANNING",
+  "productStatus": "NOT READY unchanged",
+  "checks": {
+    "featureRowsUnique": 48,
+    "legacyIDsF01toF47Retained": true,
+    "newDedicatedUXRowF48": true,
+    "currentReportInputsExactSHA": 25,
+    "operationalHeraClaims": 0,
+    "canonicalSOTSourceCandidateEndureWrites": 0,
+    "buildInstallNewRuntimeSignatures": 0,
+    "bytes": 113806
+  },
+  "evidenceClass": "StructuralQA/reportlineage only; no software/human/device acceptance rerun",
+  "files": {
+    "planning/product-standard01/BASELINE.md": "89392a98e28621107b245aeb51329731e2e7b1c1e77484c161a89ec059539be0",
+    "planning/product-standard01/build_baseline.py": "8c848efd17a186d3b8ef11f46639ca6c4e090a26bbb5c36f98a82102bbe42a0d",
+    "planning/product-standard01/feature-matrix.json": "5490f3c4a8073e22a6f882689fa9f74c2f3b38b2791b407d07ef49c68eff6859",
+    "planning/product-standard01/report-input-pins.json": "3f3e52b7ce80c7048a2a913f60d7d58d68906489d59f7c2a0871d9021e78230d",
+    "planning/product-standard01/sources/browser-capture.json": "f286de4a6394d2f8a2ab7d04a86aa7bf03bdf3464dc25aa337a53ed5f8054aa4"
+  },
+  "noCertificationClaim": true,
+  "noMaturityPercentage": true
+}

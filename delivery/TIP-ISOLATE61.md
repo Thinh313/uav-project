@@ -1,0 +1,12 @@
+# ISOLATE61 — host/AP/filesystem attribution
+
+Explicit user authorization. Single agent spec/build/verify, Vibecode transfer applies; no independent review claim. New pilot/isolate61,evidence/isolate61 only plus new ADR/report. Freeze earlier source/candidate/ENDURE/SOT including ALLOC60.
+
+REQ1: same AP binary/rate1200/speedup1/cap500ms, host original exact numeric model, WAL on host physical disk, fsync each INTENT before sensor. No preallocation selected. Same wrapper/observer in both variants; only AP trace path bind versus guest tmpfs changes.
+REQ2: guest AP child supervisor retains container after writer exit; stop only owned AP child, wait reaped/observer seal, archive immutable trace/probe and compare source SHA to destination BEFORE container stop. Failed archival retains live container, FAILED, never erase volatile evidence. tmpfs is volatile and may swap; no RAM-only guarantee. Both variants memory384MiB/cpus2 fixed.
+REQ3: kernel per-thread schedstat/stat and pressure/cgroup context at20ms/1s in bounded tmpfs, host process rusage counters in memory alongside wake probes, existing syscall tracing. Host wait remains proxy; guest runnable-wait counters require availability, no cross-clock subtraction without nonce bracket.
+REQ4: mocks CRC/frame/flush/fault, supervisor and immutable archival with actual Docker/mock child before real AP; chunked UI JSON strings <=500rows, append indexed envelopes, independent coverage/order tests. Two actual registered starts bind then tmpfs, all failures counted. Bounded20s neutral hold/observed land. No POST retry/authority restoration or frame drops. Full UI exported before next run, explicit missing instead of reconstruction.
+REQ5: fresh22.5GiB admission for <=1GiB/run forecast (WAL384MiB, AP128MiB, MAV64MiB, syscall64MiB, stages64MiB, probes/clock/UI/console/analysis <=192MiB); max2 actual starts and2.25GiB cumulative evidence budget. Live stop20GiB+768MiB, no builds/install. New scoped budget replaces old4-run24GiB policy only in this derivative; old gates untouched.
+REQ6: original-model+AP raw integrity all admitted frames, syscall barriers, host/guest correlations and compare whole/full5s RTF/cap/jitter without invented PASS tolerance. Preservation before/after, report/fingerprints; no software signature or ENDURE acceptance.
+
+Decision before SITL: Docker cp did not export tmpfs in the mock. Source/container were retained and recovered through docker exec cat plus independent source SHA; fresh bind/tmpfs mocks verify this path. No volatile teardown before export.

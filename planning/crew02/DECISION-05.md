@@ -1,0 +1,5 @@
+# CREW02 L2 refinement05: export compatibility and evidence boundary
+
+20/10/2026. Contractor chose existing RawSAF package membership (raw, source-meta, review), without a new archive schema. It contains Crew events mirrored after APopen. Pre-AP public identity/listen/TLS audit, public admin policy and companion chain are separately retained, hashed and associated with that exact SAF package/run by the delivery/receiver receipt. No private keys are exported.
+
+C10 verifies actual SAF output, raw integrity/semantics and process/coldboot persistence with the separate pinned evidence set. The SAF ZIP is explicitly NOT a selfcontained crewidentity proof or a signed/nonrepudiable receipt. Authentication is demonstrated by actual TLS runtime/negative probes plus implementation pins. Independent local logs, SHA chains and MAVLink ACKs do not become cryptographic end-to-end sender attribution or physical execution. This preserves old format compatibility and avoids expanding a focused crew milestone into a new package framework. Frozen TIP AC unchanged.

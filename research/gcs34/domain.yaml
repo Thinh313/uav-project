@@ -1,0 +1,22 @@
+domain: uav_gcs_capabilities_20261014
+entity_label: Selected documented capability assertions
+schema:
+  type_field: deployment_scope
+  fields:
+  - documented_capability
+  - deployment_scope
+  - independent_performance
+rollup_field: deployment_scope
+universe:
+  estimate: 39
+  basis: Closed set of selected capability entities in this research, not the universe
+    of products/features or market coverage
+refresh_days:
+  default: 30
+alias_map: {}
+ambiguous_clusters:
+- - DJI M4 / Tracking
+  - Skydio ecosystem / Navigation
+domain_gates:
+  no_inferred_fields:
+  - documented_capability

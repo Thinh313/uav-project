@@ -1,0 +1,18 @@
+# LIFECYCLE12 · storage lifecycle and controlled reclamation
+
+User-authorized local host work; no SDK/HeraHub dependency. Single-agent Contractor → Builder → Verify. Eight REQ/AC.
+
+| REQ | Acceptance gate |
+|---|---|
+| L12-1 | Versioned storage policy and append-only sealed lifecycle journal. Dataset ACTIVE/SEALED, checkpoint ACTIVE/ABANDONED and explicit holds. Canonical records, associations, accepted receipts/media and audit metadata are never cleanup targets. |
+| L12-2 | Preview distinguishes protected, young, unique/unproven and redundant candidates. Only byte-proven copies qualify. ABANDONED acknowledged chunks require a fresh VERIFIED same-manifest receipt in a different stage; retained checkpoint metadata stays auditable and released stages cannot resume/reactivate. |
+| L12-3 | Digest-bound stored plan, typed confirmation and revalidation before cleanup; reject stale policy/hold/inventory, paths, symlinks, keeper changes, concurrent writers and active transfer. No automatic deletion. |
+| L12-4 | fsync plan/start/progress/completion and per-file identity/hash/keeper checks. Kill after unlink cannot erase the authorized plan; restart requires explicit resume/cancel. Missing bytes after restart are absence observations, not invented deletion acknowledgements. |
+| L12-5 | Default 64 MiB metadata/audit quota reserve (proportionally smaller only in tiny test stores), 20 GiB host floor and conservative room for one export. Admission/export recheck space. Audit/cleanup can use reserved quota so low space does not silently delete evidence. Physical preallocation/other-process interference/remote destination capacity are not asserted. |
+| L12-6 | UI shows quota/reserve/lifecycle/hold, reviewable candidates and explicit confirmation; stale/offline state never authorizes deletion. Shared controls remain aligned/responsive. No flight writes. |
+| L12-7 | Actual ≥128 MiB synthetic storage corpus, reclaim abandoned duplicate prefix, real process kill/restart during cleanup and export/receipt integrity afterward. Source/mission/profile/spool remain immutable; corruption/pressure/failure tests and historical stream/resume regressions. |
+| L12-8 | Current source, roadmap, SOT intent-only change, coverage/report and test-root cleanup. Hardware/native/physical power-loss/signed or remote identity stay NOT_CHECKED. |
+
+Default age floor: 24 h for candidates, measured from host file mtime (not capture time). Operator may revise policy explicitly. Limits: 8 GiB source store / 12 GiB recipient store, metadata reserve included; usable intake is lower than total quota. Media limits and wire schemas remain unchanged. Export workspace estimates conservatively from stored/projected bytes up to package maximum; it is an admission guard, not disk preallocation. Cleanup batch ≤8192 files, ledger rows ≤4 MiB / journal ≤32 MiB. Unique, corrupt, unknown or unproved bytes remain protected. A released checkpoint is historical metadata backed by a freshly verifiable accepted package, never an active continuation cursor. Holds block reclamation including duplicate copies. Lifecycle audit cannot be garbage-collected by this policy. No timer-based cleanup or automatic restart deletion.
+
+Cooperating stores on the same host filesystem share admission accounting for outstanding intake and export leases, including the strictest floor and metadata reserves. Export leases are released on completion/cancellation/error. Internal cleanup-proof scans do not reserve an output copy because they only hash retained bytes; low-space cleanup remains possible when audit writes can be durable. This process-local coordination does not control other applications or preallocate the destination disk.

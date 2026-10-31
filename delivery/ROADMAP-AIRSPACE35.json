@@ -1,0 +1,1025 @@
+{
+  "format": "aeris-product-roadmap35",
+  "version": 1,
+  "catalogSha256": "1200afc0de3000496e291a450ce4c8b5738ca81442cf64eeb1a34ce22f9caf8e",
+  "at": "2026-10-14",
+  "operationalAccepted": false,
+  "scope": "Supplement only; canonical SOT/source/candidate/ENDURE unchanged",
+  "stages": [
+    {
+      "order": 1,
+      "id": "AIRSPACE35",
+      "scope": "Host contracts/corpus and isolated native mock"
+    },
+    {
+      "order": 2,
+      "id": "AP-FLIGHTOPS",
+      "scope": "Scoped AP fence/modes/failsafe SITL, same identities/datum"
+    },
+    {
+      "order": 3,
+      "id": "ANDROID-RUNTIME",
+      "scope": "Actual ART/lifecycle/input/video; real28GiB admission"
+    },
+    {
+      "order": 4,
+      "id": "HERA-BENCH-HIL",
+      "scope": "SDK/protocol, authenticated transport and target configuration"
+    },
+    {
+      "order": 5,
+      "id": "FIELD-SURVEY",
+      "scope": "Usable captured media, geodesy/quality and delivery"
+    },
+    {
+      "order": 6,
+      "id": "AI-ASSIST-AUTONOMY",
+      "scope": "Independent perception metrics, bounded proposals and fallback"
+    },
+    {
+      "order": 7,
+      "id": "PERFORMANCE-AB",
+      "scope": "Endurance/pacing/resource gates and named Ragas/DJI comparison"
+    },
+    {
+      "order": 8,
+      "id": "FLEET",
+      "scope": "Roles/handover/deconfliction with multi-aircraft tests"
+    }
+  ],
+  "features": [
+    {
+      "id": "F01",
+      "group": "Điều khiển và quyền thao tác",
+      "name": "Hiển thị mode thực, mode yêu cầu và bên giữ quyền",
+      "priority": "P0",
+      "aerisEvidenceScope": "SITL_PARTIAL",
+      "dependency": "Flight firmware, RC path, transport authority",
+      "decisionStatus": "USER_AUTHORIZED_STEPWISE_IMPLEMENTATION_WITH_EXISTING_GATES",
+      "nextStage": 1,
+      "stageId": "AIRSPACE35",
+      "currentMilestoneScope": "CONTRACT_OR_MOCK_PARTIAL",
+      "operationalAccepted": false,
+      "gates": [
+        "HOST_CONTRACT_CORPUS",
+        "SCOPED_SITL",
+        "ACTUAL_ANDROID",
+        "HERA_BENCH_HIL",
+        "FIELD_OPERATOR_ACCEPTANCE"
+      ]
+    },
+    {
+      "id": "F02",
+      "group": "Điều khiển và quyền thao tác",
+      "name": "Điều khiển bằng joystick, hiệu chỉnh và tiếp quản",
+      "priority": "P0",
+      "aerisEvidenceScope": "MOCK_ONLY",
+      "dependency": "Hera input mapping/SDK, bench and HIL",
+      "decisionStatus": "USER_AUTHORIZED_STEPWISE_IMPLEMENTATION_WITH_EXISTING_GATES",
+      "nextStage": 3,
+      "stageId": "ANDROID-RUNTIME",
+      "currentMilestoneScope": "ROADMAP_ONLY_REUSE_PRIOR_EVIDENCE",
+      "operationalAccepted": false,
+      "gates": [
+        "HOST_CONTRACT_CORPUS",
+        "SCOPED_SITL",
+        "ACTUAL_ANDROID",
+        "HERA_BENCH_HIL",
+        "FIELD_OPERATOR_ACCEPTANCE"
+      ]
+    },
+    {
+      "id": "F03",
+      "group": "Điều khiển và quyền thao tác",
+      "name": "Arm, takeoff, AUTO, Hold, RTL, landing theo capability",
+      "priority": "P0",
+      "aerisEvidenceScope": "SITL_PARTIAL",
+      "dependency": "Observed firmware/mode support and command gates",
+      "decisionStatus": "USER_AUTHORIZED_STEPWISE_IMPLEMENTATION_WITH_EXISTING_GATES",
+      "nextStage": 1,
+      "stageId": "AIRSPACE35",
+      "currentMilestoneScope": "CONTRACT_OR_MOCK_PARTIAL",
+      "operationalAccepted": false,
+      "gates": [
+        "HOST_CONTRACT_CORPUS",
+        "SCOPED_SITL",
+        "ACTUAL_ANDROID",
+        "HERA_BENCH_HIL",
+        "FIELD_OPERATOR_ACCEPTANCE"
+      ]
+    },
+    {
+      "id": "F04",
+      "group": "Điều khiển và quyền thao tác",
+      "name": "Pause/continue/resume sau gián đoạn và đổi pin",
+      "priority": "P0",
+      "aerisEvidenceScope": "SITL_PARTIAL",
+      "dependency": "Mission progress/readback, explicit operator review",
+      "decisionStatus": "USER_AUTHORIZED_STEPWISE_IMPLEMENTATION_WITH_EXISTING_GATES",
+      "nextStage": 2,
+      "stageId": "AP-FLIGHTOPS",
+      "currentMilestoneScope": "ROADMAP_ONLY_REUSE_PRIOR_EVIDENCE",
+      "operationalAccepted": false,
+      "gates": [
+        "HOST_CONTRACT_CORPUS",
+        "SCOPED_SITL",
+        "ACTUAL_ANDROID",
+        "HERA_BENCH_HIL",
+        "FIELD_OPERATOR_ACCEPTANCE"
+      ]
+    },
+    {
+      "id": "F05",
+      "group": "Điều khiển và quyền thao tác",
+      "name": "Dual-operator: tách quyền flight và payload",
+      "priority": "P1",
+      "aerisEvidenceScope": "MISSING",
+      "dependency": "Identity/auth, ownership transfer and input routing",
+      "decisionStatus": "USER_AUTHORIZED_STEPWISE_IMPLEMENTATION_WITH_EXISTING_GATES",
+      "nextStage": 4,
+      "stageId": "HERA-BENCH-HIL",
+      "currentMilestoneScope": "ROADMAP_ONLY_REUSE_PRIOR_EVIDENCE",
+      "operationalAccepted": false,
+      "gates": [
+        "HOST_CONTRACT_CORPUS",
+        "SCOPED_SITL",
+        "ACTUAL_ANDROID",
+        "HERA_BENCH_HIL",
+        "FIELD_OPERATOR_ACCEPTANCE"
+      ]
+    },
+    {
+      "id": "F06",
+      "group": "Vùng trời và an toàn",
+      "name": "Vùng cấm/hạn chế4D: polygon, thời gian, altitude datum",
+      "priority": "P0",
+      "aerisEvidenceScope": "MISSING",
+      "dependency": "Authorized authoritative data and source/validity version",
+      "decisionStatus": "USER_AUTHORIZED_STEPWISE_IMPLEMENTATION_WITH_EXISTING_GATES",
+      "nextStage": 1,
+      "stageId": "AIRSPACE35",
+      "currentMilestoneScope": "CONTRACT_OR_MOCK_PARTIAL",
+      "operationalAccepted": false,
+      "gates": [
+        "HOST_CONTRACT_CORPUS",
+        "SCOPED_SITL",
+        "ACTUAL_ANDROID",
+        "HERA_BENCH_HIL",
+        "FIELD_OPERATOR_ACCEPTANCE"
+      ]
+    },
+    {
+      "id": "F07",
+      "group": "Vùng trời và an toàn",
+      "name": "Đối chiếu tuyến, đường về và nơi đáp với vùng trời",
+      "priority": "P0",
+      "aerisEvidenceScope": "MISSING",
+      "dependency": "Geometry engine, uncertainty and actual return strategy",
+      "decisionStatus": "USER_AUTHORIZED_STEPWISE_IMPLEMENTATION_WITH_EXISTING_GATES",
+      "nextStage": 1,
+      "stageId": "AIRSPACE35",
+      "currentMilestoneScope": "CONTRACT_OR_MOCK_PARTIAL",
+      "operationalAccepted": false,
+      "gates": [
+        "HOST_CONTRACT_CORPUS",
+        "SCOPED_SITL",
+        "ACTUAL_ANDROID",
+        "HERA_BENCH_HIL",
+        "FIELD_OPERATOR_ACCEPTANCE"
+      ]
+    },
+    {
+      "id": "F08",
+      "group": "Vùng trời và an toàn",
+      "name": "Geofence: edit/upload/readback/breach trên autopilot",
+      "priority": "P0",
+      "aerisEvidenceScope": "MISSING",
+      "dependency": "QGC nonempty fence currently rejected; firmware-specific protocol",
+      "decisionStatus": "USER_AUTHORIZED_STEPWISE_IMPLEMENTATION_WITH_EXISTING_GATES",
+      "nextStage": 1,
+      "stageId": "AIRSPACE35",
+      "currentMilestoneScope": "CONTRACT_OR_MOCK_PARTIAL",
+      "operationalAccepted": false,
+      "gates": [
+        "HOST_CONTRACT_CORPUS",
+        "SCOPED_SITL",
+        "ACTUAL_ANDROID",
+        "HERA_BENCH_HIL",
+        "FIELD_OPERATOR_ACCEPTANCE"
+      ]
+    },
+    {
+      "id": "F09",
+      "group": "Vùng trời và an toàn",
+      "name": "Dữ liệu vùng trời offline: phủ vùng, thời hạn và UNKNOWN",
+      "priority": "P0",
+      "aerisEvidenceScope": "MISSING",
+      "dependency": "Licensed cache/update policy; no fabricated no-zone clearance",
+      "decisionStatus": "USER_AUTHORIZED_STEPWISE_IMPLEMENTATION_WITH_EXISTING_GATES",
+      "nextStage": 1,
+      "stageId": "AIRSPACE35",
+      "currentMilestoneScope": "CONTRACT_OR_MOCK_PARTIAL",
+      "operationalAccepted": false,
+      "gates": [
+        "HOST_CONTRACT_CORPUS",
+        "SCOPED_SITL",
+        "ACTUAL_ANDROID",
+        "HERA_BENCH_HIL",
+        "FIELD_OPERATOR_ACCEPTANCE"
+      ]
+    },
+    {
+      "id": "F10",
+      "group": "Vùng trời và an toàn",
+      "name": "GNSS/EKF/link/battery/failsafe alerts theo mức ưu tiên",
+      "priority": "P0",
+      "aerisEvidenceScope": "SITL_PARTIAL",
+      "dependency": "Real health/fault telemetry and observed configured action",
+      "decisionStatus": "USER_AUTHORIZED_STEPWISE_IMPLEMENTATION_WITH_EXISTING_GATES",
+      "nextStage": 1,
+      "stageId": "AIRSPACE35",
+      "currentMilestoneScope": "CONTRACT_OR_MOCK_PARTIAL",
+      "operationalAccepted": false,
+      "gates": [
+        "HOST_CONTRACT_CORPUS",
+        "SCOPED_SITL",
+        "ACTUAL_ANDROID",
+        "HERA_BENCH_HIL",
+        "FIELD_OPERATOR_ACCEPTANCE"
+      ]
+    },
+    {
+      "id": "F11",
+      "group": "Vùng trời và an toàn",
+      "name": "Dự phòng năng lượng, gió/tải và điểm đáp thay thế",
+      "priority": "P0",
+      "aerisEvidenceScope": "MISSING",
+      "dependency": "Calibrated aircraft/battery/payload model and terrain/landing data",
+      "decisionStatus": "USER_AUTHORIZED_STEPWISE_IMPLEMENTATION_WITH_EXISTING_GATES",
+      "nextStage": 2,
+      "stageId": "AP-FLIGHTOPS",
+      "currentMilestoneScope": "ROADMAP_ONLY_REUSE_PRIOR_EVIDENCE",
+      "operationalAccepted": false,
+      "gates": [
+        "HOST_CONTRACT_CORPUS",
+        "SCOPED_SITL",
+        "ACTUAL_ANDROID",
+        "HERA_BENCH_HIL",
+        "FIELD_OPERATOR_ACCEPTANCE"
+      ]
+    },
+    {
+      "id": "F12",
+      "group": "Nhiệm vụ và khảo sát",
+      "name": "Polygon/grid, camera/GSD/overlap/speed có đơn vị",
+      "priority": "P0",
+      "aerisEvidenceScope": "HOST_AND_SITL_PARTIAL",
+      "dependency": "Physical camera/calibration, target mission semantics",
+      "decisionStatus": "USER_AUTHORIZED_STEPWISE_IMPLEMENTATION_WITH_EXISTING_GATES",
+      "nextStage": 3,
+      "stageId": "ANDROID-RUNTIME",
+      "currentMilestoneScope": "ROADMAP_ONLY_REUSE_PRIOR_EVIDENCE",
+      "operationalAccepted": false,
+      "gates": [
+        "HOST_CONTRACT_CORPUS",
+        "SCOPED_SITL",
+        "ACTUAL_ANDROID",
+        "HERA_BENCH_HIL",
+        "FIELD_OPERATOR_ACCEPTANCE"
+      ]
+    },
+    {
+      "id": "F13",
+      "group": "Nhiệm vụ và khảo sát",
+      "name": "Home/AMSL/AGL/terrain/geoid: nhìn thấy và đối chiếu",
+      "priority": "P0",
+      "aerisEvidenceScope": "HOST_AND_SITL_PARTIAL",
+      "dependency": "Actual datum/terrain coverage; flat-world gate not production",
+      "decisionStatus": "USER_AUTHORIZED_STEPWISE_IMPLEMENTATION_WITH_EXISTING_GATES",
+      "nextStage": 1,
+      "stageId": "AIRSPACE35",
+      "currentMilestoneScope": "CONTRACT_OR_MOCK_PARTIAL",
+      "operationalAccepted": false,
+      "gates": [
+        "HOST_CONTRACT_CORPUS",
+        "SCOPED_SITL",
+        "ACTUAL_ANDROID",
+        "HERA_BENCH_HIL",
+        "FIELD_OPERATOR_ACCEPTANCE"
+      ]
+    },
+    {
+      "id": "F14",
+      "group": "Nhiệm vụ và khảo sát",
+      "name": "Corridor, structure, orbit/POI, slope/oblique patterns",
+      "priority": "P1",
+      "aerisEvidenceScope": "MISSING",
+      "dependency": "Separate mission corpus/firmware/camera acceptance",
+      "decisionStatus": "USER_AUTHORIZED_STEPWISE_IMPLEMENTATION_WITH_EXISTING_GATES",
+      "nextStage": 3,
+      "stageId": "ANDROID-RUNTIME",
+      "currentMilestoneScope": "ROADMAP_ONLY_REUSE_PRIOR_EVIDENCE",
+      "operationalAccepted": false,
+      "gates": [
+        "HOST_CONTRACT_CORPUS",
+        "SCOPED_SITL",
+        "ACTUAL_ANDROID",
+        "HERA_BENCH_HIL",
+        "FIELD_OPERATOR_ACCEPTANCE"
+      ]
+    },
+    {
+      "id": "F15",
+      "group": "Nhiệm vụ và khảo sát",
+      "name": "RTK/NTRIP/PPK: correction age, fix và độ chính xác",
+      "priority": "P0",
+      "aerisEvidenceScope": "MISSING",
+      "dependency": "GNSS/caster transport, physical reference validation",
+      "decisionStatus": "USER_AUTHORIZED_STEPWISE_IMPLEMENTATION_WITH_EXISTING_GATES",
+      "nextStage": 3,
+      "stageId": "ANDROID-RUNTIME",
+      "currentMilestoneScope": "ROADMAP_ONLY_REUSE_PRIOR_EVIDENCE",
+      "operationalAccepted": false,
+      "gates": [
+        "HOST_CONTRACT_CORPUS",
+        "SCOPED_SITL",
+        "ACTUAL_ANDROID",
+        "HERA_BENCH_HIL",
+        "FIELD_OPERATOR_ACCEPTANCE"
+      ]
+    },
+    {
+      "id": "F16",
+      "group": "Nhiệm vụ và khảo sát",
+      "name": "Map/terrain offline có kiểm vùng phủ và dung lượng",
+      "priority": "P0",
+      "aerisEvidenceScope": "HOST_PARTIAL",
+      "dependency": "Target-device runtime and field coverage",
+      "decisionStatus": "USER_AUTHORIZED_STEPWISE_IMPLEMENTATION_WITH_EXISTING_GATES",
+      "nextStage": 3,
+      "stageId": "ANDROID-RUNTIME",
+      "currentMilestoneScope": "ROADMAP_ONLY_REUSE_PRIOR_EVIDENCE",
+      "operationalAccepted": false,
+      "gates": [
+        "HOST_CONTRACT_CORPUS",
+        "SCOPED_SITL",
+        "ACTUAL_ANDROID",
+        "HERA_BENCH_HIL",
+        "FIELD_OPERATOR_ACCEPTANCE"
+      ]
+    },
+    {
+      "id": "F17",
+      "group": "Nhiệm vụ và khảo sát",
+      "name": "Lập kế hoạch nhiều sortie, đổi pin và refly phần thiếu",
+      "priority": "P1",
+      "aerisEvidenceScope": "MISSING",
+      "dependency": "Real acquisition coverage and mission state continuity",
+      "decisionStatus": "USER_AUTHORIZED_STEPWISE_IMPLEMENTATION_WITH_EXISTING_GATES",
+      "nextStage": 3,
+      "stageId": "ANDROID-RUNTIME",
+      "currentMilestoneScope": "ROADMAP_ONLY_REUSE_PRIOR_EVIDENCE",
+      "operationalAccepted": false,
+      "gates": [
+        "HOST_CONTRACT_CORPUS",
+        "SCOPED_SITL",
+        "ACTUAL_ANDROID",
+        "HERA_BENCH_HIL",
+        "FIELD_OPERATOR_ACCEPTANCE"
+      ]
+    },
+    {
+      "id": "F18",
+      "group": "Payload và video",
+      "name": "Discovery/route/identity cho nhiều camera/gimbal",
+      "priority": "P0",
+      "aerisEvidenceScope": "AP_ROUTING_SYNTHETIC_PEERS",
+      "dependency": "Actual payload SDK/firmware/boot identities",
+      "decisionStatus": "USER_AUTHORIZED_STEPWISE_IMPLEMENTATION_WITH_EXISTING_GATES",
+      "nextStage": 4,
+      "stageId": "HERA-BENCH-HIL",
+      "currentMilestoneScope": "ROADMAP_ONLY_REUSE_PRIOR_EVIDENCE",
+      "operationalAccepted": false,
+      "gates": [
+        "HOST_CONTRACT_CORPUS",
+        "SCOPED_SITL",
+        "ACTUAL_ANDROID",
+        "HERA_BENCH_HIL",
+        "FIELD_OPERATOR_ACCEPTANCE"
+      ]
+    },
+    {
+      "id": "F19",
+      "group": "Payload và video",
+      "name": "EO/thermal live: decode, frame age, switch, freeze alert",
+      "priority": "P0",
+      "aerisEvidenceScope": "HOST_SYNTHETIC_VIDEO_ONLY",
+      "dependency": "Real stream descriptor/decoder/native thermal budget",
+      "decisionStatus": "USER_AUTHORIZED_STEPWISE_IMPLEMENTATION_WITH_EXISTING_GATES",
+      "nextStage": 1,
+      "stageId": "AIRSPACE35",
+      "currentMilestoneScope": "CONTRACT_OR_MOCK_PARTIAL",
+      "operationalAccepted": false,
+      "gates": [
+        "HOST_CONTRACT_CORPUS",
+        "SCOPED_SITL",
+        "ACTUAL_ANDROID",
+        "HERA_BENCH_HIL",
+        "FIELD_OPERATOR_ACCEPTANCE"
+      ]
+    },
+    {
+      "id": "F20",
+      "group": "Payload và video",
+      "name": "Điều khiển camera/gimbal theo capability và mục tiêu",
+      "priority": "P0",
+      "aerisEvidenceScope": "AP_ROUTING_SYNTHETIC_PEERS",
+      "dependency": "Actual capture/settings/attitude responses and owner",
+      "decisionStatus": "USER_AUTHORIZED_STEPWISE_IMPLEMENTATION_WITH_EXISTING_GATES",
+      "nextStage": 4,
+      "stageId": "HERA-BENCH-HIL",
+      "currentMilestoneScope": "ROADMAP_ONLY_REUSE_PRIOR_EVIDENCE",
+      "operationalAccepted": false,
+      "gates": [
+        "HOST_CONTRACT_CORPUS",
+        "SCOPED_SITL",
+        "ACTUAL_ANDROID",
+        "HERA_BENCH_HIL",
+        "FIELD_OPERATOR_ACCEPTANCE"
+      ]
+    },
+    {
+      "id": "F21",
+      "group": "Payload và video",
+      "name": "Capture ảnh/video thực: source/time/GNSS/index/hash",
+      "priority": "P0",
+      "aerisEvidenceScope": "MISSING_PHYSICAL_MEDIA",
+      "dependency": "Actual file acquisition and capture correlation",
+      "decisionStatus": "USER_AUTHORIZED_STEPWISE_IMPLEMENTATION_WITH_EXISTING_GATES",
+      "nextStage": 4,
+      "stageId": "HERA-BENCH-HIL",
+      "currentMilestoneScope": "ROADMAP_ONLY_REUSE_PRIOR_EVIDENCE",
+      "operationalAccepted": false,
+      "gates": [
+        "HOST_CONTRACT_CORPUS",
+        "SCOPED_SITL",
+        "ACTUAL_ANDROID",
+        "HERA_BENCH_HIL",
+        "FIELD_OPERATOR_ACCEPTANCE"
+      ]
+    },
+    {
+      "id": "F22",
+      "group": "Payload và video",
+      "name": "Đồng bộ nhiều stream, EO/IR và bản đồ/FOV overlay",
+      "priority": "P1",
+      "aerisEvidenceScope": "MOCK_PARTIAL",
+      "dependency": "Sensor calibration/time sync/frame-geographic alignment",
+      "decisionStatus": "USER_AUTHORIZED_STEPWISE_IMPLEMENTATION_WITH_EXISTING_GATES",
+      "nextStage": 4,
+      "stageId": "HERA-BENCH-HIL",
+      "currentMilestoneScope": "ROADMAP_ONLY_REUSE_PRIOR_EVIDENCE",
+      "operationalAccepted": false,
+      "gates": [
+        "HOST_CONTRACT_CORPUS",
+        "SCOPED_SITL",
+        "ACTUAL_ANDROID",
+        "HERA_BENCH_HIL",
+        "FIELD_OPERATOR_ACCEPTANCE"
+      ]
+    },
+    {
+      "id": "F23",
+      "group": "Payload và video",
+      "name": "Thermal radiometry/LRF/geolocation với sai số",
+      "priority": "P1",
+      "aerisEvidenceScope": "MISSING",
+      "dependency": "Radiometric/laser API, calibration and uncertainty",
+      "decisionStatus": "USER_AUTHORIZED_STEPWISE_IMPLEMENTATION_WITH_EXISTING_GATES",
+      "nextStage": 4,
+      "stageId": "HERA-BENCH-HIL",
+      "currentMilestoneScope": "ROADMAP_ONLY_REUSE_PRIOR_EVIDENCE",
+      "operationalAccepted": false,
+      "gates": [
+        "HOST_CONTRACT_CORPUS",
+        "SCOPED_SITL",
+        "ACTUAL_ANDROID",
+        "HERA_BENCH_HIL",
+        "FIELD_OPERATOR_ACCEPTANCE"
+      ]
+    },
+    {
+      "id": "F24",
+      "group": "AI và tự chủ",
+      "name": "AI hỗ trợ lập plan với proposal/diff/validation",
+      "priority": "P1",
+      "aerisEvidenceScope": "MISSING_RUNTIME_AI",
+      "dependency": "Model/mission optimizer, deterministic admission and operator review",
+      "decisionStatus": "USER_AUTHORIZED_STEPWISE_IMPLEMENTATION_WITH_EXISTING_GATES",
+      "nextStage": 6,
+      "stageId": "AI-ASSIST-AUTONOMY",
+      "currentMilestoneScope": "ROADMAP_ONLY_REUSE_PRIOR_EVIDENCE",
+      "operationalAccepted": false,
+      "gates": [
+        "HOST_CONTRACT_CORPUS",
+        "SCOPED_SITL",
+        "ACTUAL_ANDROID",
+        "HERA_BENCH_HIL",
+        "FIELD_OPERATOR_ACCEPTANCE",
+        "MODEL_CORPUS_HOLDOUT_METRICS",
+        "SENSOR_COMPUTE_LATENCY",
+        "BOUNDED_CONTROL_FALLBACK"
+      ]
+    },
+    {
+      "id": "F25",
+      "group": "AI và tự chủ",
+      "name": "Nhận diện đối tượng/khuyết tật từ EO/IR",
+      "priority": "P1",
+      "aerisEvidenceScope": "MISSING_RUNTIME_AI",
+      "dependency": "Versioned models and labeled application-specific evaluation",
+      "decisionStatus": "USER_AUTHORIZED_STEPWISE_IMPLEMENTATION_WITH_EXISTING_GATES",
+      "nextStage": 6,
+      "stageId": "AI-ASSIST-AUTONOMY",
+      "currentMilestoneScope": "ROADMAP_ONLY_REUSE_PRIOR_EVIDENCE",
+      "operationalAccepted": false,
+      "gates": [
+        "HOST_CONTRACT_CORPUS",
+        "SCOPED_SITL",
+        "ACTUAL_ANDROID",
+        "HERA_BENCH_HIL",
+        "FIELD_OPERATOR_ACCEPTANCE",
+        "MODEL_CORPUS_HOLDOUT_METRICS",
+        "SENSOR_COMPUTE_LATENCY",
+        "BOUNDED_CONTROL_FALLBACK"
+      ]
+    },
+    {
+      "id": "F26",
+      "group": "AI và tự chủ",
+      "name": "Bám đối tượng/gimbal, reacquire và mất target",
+      "priority": "P1",
+      "aerisEvidenceScope": "MISSING_RUNTIME_AI",
+      "dependency": "Fresh perception, target identity, payload/control acceptance",
+      "decisionStatus": "USER_AUTHORIZED_STEPWISE_IMPLEMENTATION_WITH_EXISTING_GATES",
+      "nextStage": 6,
+      "stageId": "AI-ASSIST-AUTONOMY",
+      "currentMilestoneScope": "ROADMAP_ONLY_REUSE_PRIOR_EVIDENCE",
+      "operationalAccepted": false,
+      "gates": [
+        "HOST_CONTRACT_CORPUS",
+        "SCOPED_SITL",
+        "ACTUAL_ANDROID",
+        "HERA_BENCH_HIL",
+        "FIELD_OPERATOR_ACCEPTANCE",
+        "MODEL_CORPUS_HOLDOUT_METRICS",
+        "SENSOR_COMPUTE_LATENCY",
+        "BOUNDED_CONTROL_FALLBACK"
+      ]
+    },
+    {
+      "id": "F27",
+      "group": "AI và tự chủ",
+      "name": "Tránh vật cản và replanning có giới hạn",
+      "priority": "P1",
+      "aerisEvidenceScope": "MISSING",
+      "dependency": "Proximity/vision sensing, onboard compute, AP interfaces and closed-loop tests",
+      "decisionStatus": "USER_AUTHORIZED_STEPWISE_IMPLEMENTATION_WITH_EXISTING_GATES",
+      "nextStage": 6,
+      "stageId": "AI-ASSIST-AUTONOMY",
+      "currentMilestoneScope": "ROADMAP_ONLY_REUSE_PRIOR_EVIDENCE",
+      "operationalAccepted": false,
+      "gates": [
+        "HOST_CONTRACT_CORPUS",
+        "SCOPED_SITL",
+        "ACTUAL_ANDROID",
+        "HERA_BENCH_HIL",
+        "FIELD_OPERATOR_ACCEPTANCE",
+        "MODEL_CORPUS_HOLDOUT_METRICS",
+        "SENSOR_COMPUTE_LATENCY",
+        "BOUNDED_CONTROL_FALLBACK"
+      ]
+    },
+    {
+      "id": "F28",
+      "group": "AI và tự chủ",
+      "name": "AI kiểm blur/coverage/GSD và đề nghị refly",
+      "priority": "P1",
+      "aerisEvidenceScope": "MISSING_RUNTIME_AI",
+      "dependency": "Actual images/geography and independent image-quality oracle",
+      "decisionStatus": "USER_AUTHORIZED_STEPWISE_IMPLEMENTATION_WITH_EXISTING_GATES",
+      "nextStage": 6,
+      "stageId": "AI-ASSIST-AUTONOMY",
+      "currentMilestoneScope": "ROADMAP_ONLY_REUSE_PRIOR_EVIDENCE",
+      "operationalAccepted": false,
+      "gates": [
+        "HOST_CONTRACT_CORPUS",
+        "SCOPED_SITL",
+        "ACTUAL_ANDROID",
+        "HERA_BENCH_HIL",
+        "FIELD_OPERATOR_ACCEPTANCE",
+        "MODEL_CORPUS_HOLDOUT_METRICS",
+        "SENSOR_COMPUTE_LATENCY",
+        "BOUNDED_CONTROL_FALLBACK"
+      ]
+    },
+    {
+      "id": "F29",
+      "group": "AI và tự chủ",
+      "name": "GPS-denied/VIO và night autonomy",
+      "priority": "P2",
+      "aerisEvidenceScope": "MISSING",
+      "dependency": "Appropriate navigation sensors/illumination, compute and field acceptance",
+      "decisionStatus": "USER_AUTHORIZED_STEPWISE_IMPLEMENTATION_WITH_EXISTING_GATES",
+      "nextStage": 6,
+      "stageId": "AI-ASSIST-AUTONOMY",
+      "currentMilestoneScope": "ROADMAP_ONLY_REUSE_PRIOR_EVIDENCE",
+      "operationalAccepted": false,
+      "gates": [
+        "HOST_CONTRACT_CORPUS",
+        "SCOPED_SITL",
+        "ACTUAL_ANDROID",
+        "HERA_BENCH_HIL",
+        "FIELD_OPERATOR_ACCEPTANCE",
+        "MODEL_CORPUS_HOLDOUT_METRICS",
+        "SENSOR_COMPUTE_LATENCY",
+        "BOUNDED_CONTROL_FALLBACK"
+      ]
+    },
+    {
+      "id": "F30",
+      "group": "AI và tự chủ",
+      "name": "Thông báo giới hạn AI, confidence, evidence age và fallback",
+      "priority": "P0",
+      "aerisEvidenceScope": "MISSING_RUNTIME_AI",
+      "dependency": "Per-model reliability/authority contract; no direct LLM flight output",
+      "decisionStatus": "USER_AUTHORIZED_STEPWISE_IMPLEMENTATION_WITH_EXISTING_GATES",
+      "nextStage": 1,
+      "stageId": "AIRSPACE35",
+      "currentMilestoneScope": "CONTRACT_OR_MOCK_PARTIAL",
+      "operationalAccepted": false,
+      "gates": [
+        "HOST_CONTRACT_CORPUS",
+        "SCOPED_SITL",
+        "ACTUAL_ANDROID",
+        "HERA_BENCH_HIL",
+        "FIELD_OPERATOR_ACCEPTANCE",
+        "MODEL_CORPUS_HOLDOUT_METRICS",
+        "SENSOR_COMPUTE_LATENCY",
+        "BOUNDED_CONTROL_FALLBACK"
+      ]
+    },
+    {
+      "id": "F31",
+      "group": "Hồ sơ và vận hành offline",
+      "name": "Flight journal/review: quan sát khác ACK và ảnh thật",
+      "priority": "P0",
+      "aerisEvidenceScope": "HOST_AND_SITL_PARTIAL",
+      "dependency": "Native/device power-loss and long-run acceptance",
+      "decisionStatus": "USER_AUTHORIZED_STEPWISE_IMPLEMENTATION_WITH_EXISTING_GATES",
+      "nextStage": 1,
+      "stageId": "AIRSPACE35",
+      "currentMilestoneScope": "CONTRACT_OR_MOCK_PARTIAL",
+      "operationalAccepted": false,
+      "gates": [
+        "HOST_CONTRACT_CORPUS",
+        "SCOPED_SITL",
+        "ACTUAL_ANDROID",
+        "HERA_BENCH_HIL",
+        "FIELD_OPERATOR_ACCEPTANCE"
+      ]
+    },
+    {
+      "id": "F32",
+      "group": "Hồ sơ và vận hành offline",
+      "name": "Dataset lớn, handoff/resume/checkpoint/integrity",
+      "priority": "P0",
+      "aerisEvidenceScope": "HOST_DATA_TESTED",
+      "dependency": "Native storage, physical media and recipient workflow",
+      "decisionStatus": "USER_AUTHORIZED_STEPWISE_IMPLEMENTATION_WITH_EXISTING_GATES",
+      "nextStage": 5,
+      "stageId": "FIELD-SURVEY",
+      "currentMilestoneScope": "ROADMAP_ONLY_REUSE_PRIOR_EVIDENCE",
+      "operationalAccepted": false,
+      "gates": [
+        "HOST_CONTRACT_CORPUS",
+        "SCOPED_SITL",
+        "ACTUAL_ANDROID",
+        "HERA_BENCH_HIL",
+        "FIELD_OPERATOR_ACCEPTANCE"
+      ]
+    },
+    {
+      "id": "F33",
+      "group": "Hồ sơ và vận hành offline",
+      "name": "Replay/timeline liên kết lệnh, video, event, mission",
+      "priority": "P1",
+      "aerisEvidenceScope": "HOST_PARTIAL",
+      "dependency": "Actual stream time synchronization and frame indexes",
+      "decisionStatus": "USER_AUTHORIZED_STEPWISE_IMPLEMENTATION_WITH_EXISTING_GATES",
+      "nextStage": 1,
+      "stageId": "AIRSPACE35",
+      "currentMilestoneScope": "CONTRACT_OR_MOCK_PARTIAL",
+      "operationalAccepted": false,
+      "gates": [
+        "HOST_CONTRACT_CORPUS",
+        "SCOPED_SITL",
+        "ACTUAL_ANDROID",
+        "HERA_BENCH_HIL",
+        "FIELD_OPERATOR_ACCEPTANCE"
+      ]
+    },
+    {
+      "id": "F34",
+      "group": "Hồ sơ và vận hành offline",
+      "name": "Nhập/xuất QGC/GIS có scope và dữ liệu giữ nguyên",
+      "priority": "P0",
+      "aerisEvidenceScope": "BOUNDED_CORPUS_PARTIAL",
+      "dependency": "Broader pattern/fence/rally semantic corpus",
+      "decisionStatus": "USER_AUTHORIZED_STEPWISE_IMPLEMENTATION_WITH_EXISTING_GATES",
+      "nextStage": 5,
+      "stageId": "FIELD-SURVEY",
+      "currentMilestoneScope": "ROADMAP_ONLY_REUSE_PRIOR_EVIDENCE",
+      "operationalAccepted": false,
+      "gates": [
+        "HOST_CONTRACT_CORPUS",
+        "SCOPED_SITL",
+        "ACTUAL_ANDROID",
+        "HERA_BENCH_HIL",
+        "FIELD_OPERATOR_ACCEPTANCE"
+      ]
+    },
+    {
+      "id": "F35",
+      "group": "Hồ sơ và vận hành offline",
+      "name": "Storage preview/quota/retention bảo vệ bằng chứng",
+      "priority": "P0",
+      "aerisEvidenceScope": "HOST_DATA_TESTED",
+      "dependency": "Target filesystem/capacity/permissions/power behavior",
+      "decisionStatus": "USER_AUTHORIZED_STEPWISE_IMPLEMENTATION_WITH_EXISTING_GATES",
+      "nextStage": 5,
+      "stageId": "FIELD-SURVEY",
+      "currentMilestoneScope": "ROADMAP_ONLY_REUSE_PRIOR_EVIDENCE",
+      "operationalAccepted": false,
+      "gates": [
+        "HOST_CONTRACT_CORPUS",
+        "SCOPED_SITL",
+        "ACTUAL_ANDROID",
+        "HERA_BENCH_HIL",
+        "FIELD_OPERATOR_ACCEPTANCE"
+      ]
+    },
+    {
+      "id": "F36",
+      "group": "Đội bay và cộng tác",
+      "name": "Fleet/mission scheduling và quyền theo vai trò",
+      "priority": "P2",
+      "aerisEvidenceScope": "MISSING",
+      "dependency": "Fleet service, operator workflow and licensed hardware",
+      "decisionStatus": "USER_AUTHORIZED_STEPWISE_IMPLEMENTATION_WITH_EXISTING_GATES",
+      "nextStage": 8,
+      "stageId": "FLEET",
+      "currentMilestoneScope": "ROADMAP_ONLY_REUSE_PRIOR_EVIDENCE",
+      "operationalAccepted": false,
+      "gates": [
+        "HOST_CONTRACT_CORPUS",
+        "SCOPED_SITL",
+        "ACTUAL_ANDROID",
+        "HERA_BENCH_HIL",
+        "FIELD_OPERATOR_ACCEPTANCE",
+        "MULTI_AIRCRAFT_AUTHORITY_AND_RECOVERY"
+      ]
+    },
+    {
+      "id": "F37",
+      "group": "Đội bay và cộng tác",
+      "name": "Remote cockpit/handover có xác nhận ownership",
+      "priority": "P2",
+      "aerisEvidenceScope": "MISSING",
+      "dependency": "Network/auth/control channel and supervised handover",
+      "decisionStatus": "USER_AUTHORIZED_STEPWISE_IMPLEMENTATION_WITH_EXISTING_GATES",
+      "nextStage": 8,
+      "stageId": "FLEET",
+      "currentMilestoneScope": "ROADMAP_ONLY_REUSE_PRIOR_EVIDENCE",
+      "operationalAccepted": false,
+      "gates": [
+        "HOST_CONTRACT_CORPUS",
+        "SCOPED_SITL",
+        "ACTUAL_ANDROID",
+        "HERA_BENCH_HIL",
+        "FIELD_OPERATOR_ACCEPTANCE",
+        "MULTI_AIRCRAFT_AUTHORITY_AND_RECOVERY"
+      ]
+    },
+    {
+      "id": "F38",
+      "group": "Đội bay và cộng tác",
+      "name": "Chia sẻ video/annotations/GIS có quyền truy cập",
+      "priority": "P1",
+      "aerisEvidenceScope": "MISSING",
+      "dependency": "Actual media path, access policy and privacy",
+      "decisionStatus": "USER_AUTHORIZED_STEPWISE_IMPLEMENTATION_WITH_EXISTING_GATES",
+      "nextStage": 8,
+      "stageId": "FLEET",
+      "currentMilestoneScope": "ROADMAP_ONLY_REUSE_PRIOR_EVIDENCE",
+      "operationalAccepted": false,
+      "gates": [
+        "HOST_CONTRACT_CORPUS",
+        "SCOPED_SITL",
+        "ACTUAL_ANDROID",
+        "HERA_BENCH_HIL",
+        "FIELD_OPERATOR_ACCEPTANCE",
+        "MULTI_AIRCRAFT_AUTHORITY_AND_RECOVERY"
+      ]
+    },
+    {
+      "id": "F39",
+      "group": "Đội bay và cộng tác",
+      "name": "Nhiều máy bay: deconfliction không suy từ multi-payload",
+      "priority": "P2",
+      "aerisEvidenceScope": "MISSING",
+      "dependency": "Multi-aircraft safety architecture, identities and validation",
+      "decisionStatus": "USER_AUTHORIZED_STEPWISE_IMPLEMENTATION_WITH_EXISTING_GATES",
+      "nextStage": 8,
+      "stageId": "FLEET",
+      "currentMilestoneScope": "ROADMAP_ONLY_REUSE_PRIOR_EVIDENCE",
+      "operationalAccepted": false,
+      "gates": [
+        "HOST_CONTRACT_CORPUS",
+        "SCOPED_SITL",
+        "ACTUAL_ANDROID",
+        "HERA_BENCH_HIL",
+        "FIELD_OPERATOR_ACCEPTANCE",
+        "MULTI_AIRCRAFT_AUTHORITY_AND_RECOVERY"
+      ]
+    },
+    {
+      "id": "F40",
+      "group": "Nền tảng, bảo mật và bảo trì",
+      "name": "Native lifecycle/private persistence sau restart/reboot",
+      "priority": "P0",
+      "aerisEvidenceScope": "HOST_VERIFIED_ANDROID_NOT_CHECKED",
+      "dependency": "Android runtime gate28GiB and actual target HeraHub build",
+      "decisionStatus": "USER_AUTHORIZED_STEPWISE_IMPLEMENTATION_WITH_EXISTING_GATES",
+      "nextStage": 1,
+      "stageId": "AIRSPACE35",
+      "currentMilestoneScope": "CONTRACT_OR_MOCK_PARTIAL",
+      "operationalAccepted": false,
+      "gates": [
+        "HOST_CONTRACT_CORPUS",
+        "SCOPED_SITL",
+        "ACTUAL_ANDROID",
+        "HERA_BENCH_HIL",
+        "FIELD_OPERATOR_ACCEPTANCE"
+      ]
+    },
+    {
+      "id": "F41",
+      "group": "Nền tảng, bảo mật và bảo trì",
+      "name": "Transport signing/auth/replay protection/failover",
+      "priority": "P0",
+      "aerisEvidenceScope": "MISSING_PHYSICAL_TRANSPORT_AUTH",
+      "dependency": "Observed radio/firmware/key provisioning; software package signature is separate",
+      "decisionStatus": "USER_AUTHORIZED_STEPWISE_IMPLEMENTATION_WITH_EXISTING_GATES",
+      "nextStage": 4,
+      "stageId": "HERA-BENCH-HIL",
+      "currentMilestoneScope": "ROADMAP_ONLY_REUSE_PRIOR_EVIDENCE",
+      "operationalAccepted": false,
+      "gates": [
+        "HOST_CONTRACT_CORPUS",
+        "SCOPED_SITL",
+        "ACTUAL_ANDROID",
+        "HERA_BENCH_HIL",
+        "FIELD_OPERATOR_ACCEPTANCE"
+      ]
+    },
+    {
+      "id": "F42",
+      "group": "Nền tảng, bảo mật và bảo trì",
+      "name": "Signed update/schema migration/recovery",
+      "priority": "P0",
+      "aerisEvidenceScope": "HOST_ENGINEERING_TESTED",
+      "dependency": "Official key custody, target native and production release",
+      "decisionStatus": "USER_AUTHORIZED_STEPWISE_IMPLEMENTATION_WITH_EXISTING_GATES",
+      "nextStage": 4,
+      "stageId": "HERA-BENCH-HIL",
+      "currentMilestoneScope": "ROADMAP_ONLY_REUSE_PRIOR_EVIDENCE",
+      "operationalAccepted": false,
+      "gates": [
+        "HOST_CONTRACT_CORPUS",
+        "SCOPED_SITL",
+        "ACTUAL_ANDROID",
+        "HERA_BENCH_HIL",
+        "FIELD_OPERATOR_ACCEPTANCE"
+      ]
+    },
+    {
+      "id": "F43",
+      "group": "Nền tảng, bảo mật và bảo trì",
+      "name": "Aircraft/payload configuration, calibration và diagnostics",
+      "priority": "P1",
+      "aerisEvidenceScope": "PROFILE_READONLY_PARTIAL",
+      "dependency": "Actual parameter corpus, hardware and maintenance authority",
+      "decisionStatus": "USER_AUTHORIZED_STEPWISE_IMPLEMENTATION_WITH_EXISTING_GATES",
+      "nextStage": 4,
+      "stageId": "HERA-BENCH-HIL",
+      "currentMilestoneScope": "ROADMAP_ONLY_REUSE_PRIOR_EVIDENCE",
+      "operationalAccepted": false,
+      "gates": [
+        "HOST_CONTRACT_CORPUS",
+        "SCOPED_SITL",
+        "ACTUAL_ANDROID",
+        "HERA_BENCH_HIL",
+        "FIELD_OPERATOR_ACCEPTANCE"
+      ]
+    },
+    {
+      "id": "F44",
+      "group": "Nền tảng, bảo mật và bảo trì",
+      "name": "Latency/jitter/overload/heat/power/long-run budgets",
+      "priority": "P0",
+      "aerisEvidenceScope": "PARTIAL_OPEN_GATES",
+      "dependency": "Default1x and24h not accepted; reference workload/device required",
+      "decisionStatus": "USER_AUTHORIZED_STEPWISE_IMPLEMENTATION_WITH_EXISTING_GATES",
+      "nextStage": 7,
+      "stageId": "PERFORMANCE-AB",
+      "currentMilestoneScope": "ROADMAP_ONLY_REUSE_PRIOR_EVIDENCE",
+      "operationalAccepted": false,
+      "gates": [
+        "HOST_CONTRACT_CORPUS",
+        "SCOPED_SITL",
+        "ACTUAL_ANDROID",
+        "HERA_BENCH_HIL",
+        "FIELD_OPERATOR_ACCEPTANCE",
+        "ENDURANCE_ACCEPTANCE_NOT_ELAPSED",
+        "RAGAS_DJI_NAMED_CONFIGURATION_AB"
+      ]
+    },
+    {
+      "id": "F45",
+      "group": "Đào tạo và đối chứng",
+      "name": "SITL đóng vòng physics, tải/gió và lỗi",
+      "priority": "P0",
+      "aerisEvidenceScope": "REFERENCE_SITL_OBSERVED",
+      "dependency": "Hera physical calibration; existing model provisional",
+      "decisionStatus": "USER_AUTHORIZED_STEPWISE_IMPLEMENTATION_WITH_EXISTING_GATES",
+      "nextStage": 7,
+      "stageId": "PERFORMANCE-AB",
+      "currentMilestoneScope": "ROADMAP_ONLY_REUSE_PRIOR_EVIDENCE",
+      "operationalAccepted": false,
+      "gates": [
+        "HOST_CONTRACT_CORPUS",
+        "SCOPED_SITL",
+        "ACTUAL_ANDROID",
+        "HERA_BENCH_HIL",
+        "FIELD_OPERATOR_ACCEPTANCE",
+        "ENDURANCE_ACCEPTANCE_NOT_ELAPSED",
+        "RAGAS_DJI_NAMED_CONFIGURATION_AB"
+      ]
+    },
+    {
+      "id": "F46",
+      "group": "Đào tạo và đối chứng",
+      "name": "Đồ họa/âm thanh bám trạng thái và nguồn dữ liệu",
+      "priority": "P1",
+      "aerisEvidenceScope": "HOST_SYNTHETIC_PARTIAL",
+      "dependency": "Native hardware performance and real acoustic references",
+      "decisionStatus": "USER_AUTHORIZED_STEPWISE_IMPLEMENTATION_WITH_EXISTING_GATES",
+      "nextStage": 7,
+      "stageId": "PERFORMANCE-AB",
+      "currentMilestoneScope": "ROADMAP_ONLY_REUSE_PRIOR_EVIDENCE",
+      "operationalAccepted": false,
+      "gates": [
+        "HOST_CONTRACT_CORPUS",
+        "SCOPED_SITL",
+        "ACTUAL_ANDROID",
+        "HERA_BENCH_HIL",
+        "FIELD_OPERATOR_ACCEPTANCE",
+        "ENDURANCE_ACCEPTANCE_NOT_ELAPSED",
+        "RAGAS_DJI_NAMED_CONFIGURATION_AB"
+      ]
+    },
+    {
+      "id": "F47",
+      "group": "Đào tạo và đối chứng",
+      "name": "Operator training/scenario score/Ragas-DJI A/B",
+      "priority": "P1",
+      "aerisEvidenceScope": "MISSING_ACCEPTANCE",
+      "dependency": "Matched configurations, protocol/operator sample and no-regression gates",
+      "decisionStatus": "USER_AUTHORIZED_STEPWISE_IMPLEMENTATION_WITH_EXISTING_GATES",
+      "nextStage": 7,
+      "stageId": "PERFORMANCE-AB",
+      "currentMilestoneScope": "ROADMAP_ONLY_REUSE_PRIOR_EVIDENCE",
+      "operationalAccepted": false,
+      "gates": [
+        "HOST_CONTRACT_CORPUS",
+        "SCOPED_SITL",
+        "ACTUAL_ANDROID",
+        "HERA_BENCH_HIL",
+        "FIELD_OPERATOR_ACCEPTANCE",
+        "ENDURANCE_ACCEPTANCE_NOT_ELAPSED",
+        "RAGAS_DJI_NAMED_CONFIGURATION_AB"
+      ]
+    }
+  ]
+}

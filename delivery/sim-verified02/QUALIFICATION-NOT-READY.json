@@ -1,0 +1,51 @@
+{
+  "format": "aeris-simverified02-diagnostic-qualification",
+  "version": 1,
+  "status": "NOT_READY",
+  "engineeringOnly": true,
+  "productionSignature": false,
+  "functionalQualification": false,
+  "originalArchiveAndReceiver04Immutable": true,
+  "parentManifestSha256": "2cd082b304e684baf1424fbdba1be724e96d8d8bcac13feda39cd5bf33859711",
+  "parentEngineeringRevision": {
+    "id": "SIMVERIFY02-R04",
+    "parentManifestSHA256": "38c852a277c5f22af141771909992d0f0637fe92c630692f639e5d08efeda241",
+    "changes": [
+      "retain tested3codefixes",
+      "include exact predeclared integrator C dependency"
+    ],
+    "productionSignature": false
+  },
+  "sourceIDs": {
+    "reference": "SIMTRAIN53_FUSED_REFERENCE_NOT_HERA",
+    "assets": "VISUAL56_OFFLINE_CACHED",
+    "font": "BarlowOFL1.1",
+    "renderer": "Three.jsMIT",
+    "model": "CesiumDroneEdMackeyAGI_CCBY4.0",
+    "environment": "PolyHavenCC0"
+  },
+  "addedStructuralMountpoint": {
+    "path": "runtime/sitl/arducopter",
+    "bytes": 0,
+    "mode": 420,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "purpose": "EMPTY_REGULAR_DOCKER_BIND_TARGET_NOT_FIRMWARE"
+  },
+  "unchangedAPK": {
+    "path": "native/simhand01/dist/aeris-simhand01-development01.apk",
+    "sha256": "8f1767933059b719d0bfb260df751678d24bd6d0a345397a5d52815cf7f2aec1",
+    "bytes": 37267,
+    "mode": 420
+  },
+  "remainingAcceptance": [
+    "usableFreshAPLinkAndDeadLinkRecovery",
+    "completeManualFlightAndNeutralAuthorityLifecycle",
+    "realTimeFactorClockAndFullFrameIntegrityUnderLoad",
+    "durableReviewAndFullRawVerification",
+    "AndroidSAFExportImportRestartReceiverRoundtrip",
+    "audibleRPMSynthesisAndStaleMute",
+    "physicalXiaomiHeraSDK",
+    "AUTOAndBroaderWeatherCollisionTrainingValidity"
+  ],
+  "archiveIntegrity": "SEE_EXTERNAL_PACKAGING_RECEIPT; NOT_FUNCTIONAL_ACCEPTANCE"
+}

@@ -1,0 +1,14 @@
+import {createHash} from 'node:crypto';
+import {writeFile,readFile} from 'node:fs/promises';
+import {compileSurvey,SITL_WORLD} from '../app/core/compiler.mjs';
+import {surveyPackage,DEFAULT_SURVEY,localFrame} from '../app/core/survey.mjs';
+import {exportQgc} from '../app/core/qgc.mjs';
+const f=localFrame({lat:SITL_WORLD.home.lat,lon:SITL_WORLD.home.lon}),polygon=[{x:0,y:0},{x:45,y:0},{x:45,y:45},{x:0,y:45}].map(p=>f.reverse(p));
+const compiled=compileSurvey(surveyPackage({...DEFAULT_SURVEY,name:'QGC01 · Simulator fixture',polygon,altitude:15,speed:6,sideOverlap:30,frontOverlap:30}),SITL_WORLD),out=exportQgc(compiled),simple=JSON.parse(out.raw);
+for(const i of simple.mission.items)if([16,22].includes(i.command))i.params[3]=null;
+await writeFile('app/fixtures/qgc/aeris-simple.plan',JSON.stringify(simple,null,2)+'\n');
+const complex=structuredClone(simple),inside=complex.mission.items.slice(2,-1);
+complex.mission.items=[...complex.mission.items.slice(0,2),{type:'ComplexItem',complexItemType:'survey',version:5,angle:0,entryLocation:0,flyAlternateTransects:false,splitConcavePolygons:true,polygon:polygon.map(p=>[p.lat,p.lon]),TransectStyleComplexItem:{version:2,TurnAroundDistance:0,CameraTriggerInTurnAround:false,HoverAndCapture:false,Refly90Degrees:false,CameraShots:15,CameraCalc:{version:2,CameraName:'Manual (no camera specs)',DistanceMode:1,DistanceToSurface:15,AdjustedFootprintFrontal:10,AdjustedFootprintSide:15},VisualTransectPoints:inside.filter(i=>i.command===16).map(i=>i.params.slice(4,6)),Items:inside}},complex.mission.items.at(-1)];
+await writeFile('app/fixtures/qgc/aeris-cached-survey.plan',JSON.stringify(complex,null,2)+'\n');
+const hashes={};for(const name of ['aeris-simple.plan','aeris-cached-survey.plan','upstream-section-v5.1.5.plan'])hashes[name]=createHash('sha256').update(await readFile('app/fixtures/qgc/'+name)).digest('hex');
+await writeFile('app/fixtures/qgc/provenance.json',JSON.stringify({version:1,sha256:hashes,upstream:{file:'upstream-section-v5.1.5.plan',url:'https://raw.githubusercontent.com/mavlink/qgroundcontrol/3a67d31f0c36bf3fe38ec52970d250a89d0aaf67/test/MissionManager/SectionTest.plan',scope:'Unmodified official legacy PX4 fixture; parsed, SITL execution blocked'},generated:{files:['aeris-simple.plan','aeris-cached-survey.plan'],generator:'tools/make_qgc_fixtures.mjs',scope:'AERIS-authored schema fixtures; NOT a QGC application export; QGC open/save and regeneration NOT_CHECKED'}},null,2)+'\n');

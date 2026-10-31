@@ -1,0 +1,362 @@
+[
+  {
+    "id": "rtr-herahub",
+    "url": "https://rtrobotics.com/commercial/herahub",
+    "origin_id": "rtr",
+    "tier": "A",
+    "scope": "Official published scope; no device verification or firmware/API inference",
+    "snapshot": "rtr-herahub.html"
+  },
+  {
+    "id": "rtr-herahub-v2",
+    "url": "https://rtrobotics.com/commercial/herahub-v2",
+    "origin_id": "rtr",
+    "tier": "A",
+    "scope": "Official published scope; no device verification or firmware/API inference",
+    "snapshot": "rtr-herahub-v2.html"
+  },
+  {
+    "id": "rtr-ragas",
+    "url": "https://rtrobotics.com/commercial/ragas",
+    "origin_id": "rtr",
+    "tier": "A",
+    "scope": "Official published scope; no device verification or firmware/API inference",
+    "snapshot": "rtr-ragas.html"
+  },
+  {
+    "id": "ragas-index",
+    "url": "https://rtrobotics.gitbook.io/real-time-robotics/llms.txt",
+    "origin_id": "rtr",
+    "tier": "A",
+    "scope": "Official published scope; no device verification or firmware/API inference",
+    "snapshot": "ragas-index.txt"
+  },
+  {
+    "id": "ragas-readme",
+    "url": "https://raw.githubusercontent.com/Real-Time-Robotics/ragas-release/main/README.md",
+    "origin_id": "rtr",
+    "tier": "A",
+    "scope": "Official published scope; no device verification or firmware/API inference",
+    "snapshot": "ragas-readme.md"
+  },
+  {
+    "id": "ragas-releases",
+    "url": "https://api.github.com/repos/Real-Time-Robotics/ragas-release/releases?per_page=100",
+    "origin_id": "rtr",
+    "tier": "A",
+    "scope": "Official published scope; no device verification or firmware/API inference",
+    "snapshot": "ragas-releases.json"
+  },
+  {
+    "id": "qualcomm-selector",
+    "url": "https://www.qualcomm.com/content/dam/qcomm-martech/dm-assets/documents/Qualcomm-Application-Processors-for-IoT-Selector-Guide.PDF",
+    "origin_id": "qualcomm",
+    "tier": "A",
+    "scope": "Official published scope; no device verification or firmware/API inference",
+    "snapshot": "qualcomm-selector.pdf"
+  },
+  {
+    "id": "manual-ragas",
+    "url": "https://rtrobotics.gitbook.io/real-time-robotics/ragas.md",
+    "origin_id": "rtr",
+    "tier": "A",
+    "scope": "Official RAGAS documentation, published version 4.0.0 build 4; not proof of installed version or hardware wiring",
+    "snapshot": "manual-ragas.md"
+  },
+  {
+    "id": "manual-getting-started-supported-platforms",
+    "url": "https://rtrobotics.gitbook.io/real-time-robotics/getting-started/supported-platforms.md",
+    "origin_id": "rtr",
+    "tier": "A",
+    "scope": "Official RAGAS documentation, published version 4.0.0 build 4; not proof of installed version or hardware wiring",
+    "snapshot": "manual-getting-started-supported-platforms.md"
+  },
+  {
+    "id": "manual-getting-started-installation",
+    "url": "https://rtrobotics.gitbook.io/real-time-robotics/getting-started/installation.md",
+    "origin_id": "rtr",
+    "tier": "A",
+    "scope": "Official RAGAS documentation, published version 4.0.0 build 4; not proof of installed version or hardware wiring",
+    "snapshot": "manual-getting-started-installation.md"
+  },
+  {
+    "id": "manual-getting-started-interface-overview",
+    "url": "https://rtrobotics.gitbook.io/real-time-robotics/getting-started/interface-overview.md",
+    "origin_id": "rtr",
+    "tier": "A",
+    "scope": "Official RAGAS documentation, published version 4.0.0 build 4; not proof of installed version or hardware wiring",
+    "snapshot": "manual-getting-started-interface-overview.md"
+  },
+  {
+    "id": "manual-user-guide-settings",
+    "url": "https://rtrobotics.gitbook.io/real-time-robotics/user-guide/settings.md",
+    "origin_id": "rtr",
+    "tier": "A",
+    "scope": "Official RAGAS documentation, published version 4.0.0 build 4; not proof of installed version or hardware wiring",
+    "snapshot": "manual-user-guide-settings.md"
+  },
+  {
+    "id": "manual-user-guide-settings-rc-settings",
+    "url": "https://rtrobotics.gitbook.io/real-time-robotics/user-guide/settings/rc-settings.md",
+    "origin_id": "rtr",
+    "tier": "A",
+    "scope": "Official RAGAS documentation, published version 4.0.0 build 4; not proof of installed version or hardware wiring",
+    "snapshot": "manual-user-guide-settings-rc-settings.md"
+  },
+  {
+    "id": "manual-user-guide-settings-transmission-settings",
+    "url": "https://rtrobotics.gitbook.io/real-time-robotics/user-guide/settings/transmission-settings.md",
+    "origin_id": "rtr",
+    "tier": "A",
+    "scope": "Official RAGAS documentation, published version 4.0.0 build 4; not proof of installed version or hardware wiring",
+    "snapshot": "manual-user-guide-settings-transmission-settings.md"
+  },
+  {
+    "id": "manual-user-guide-settings-rtk-settings",
+    "url": "https://rtrobotics.gitbook.io/real-time-robotics/user-guide/settings/rtk-settings.md",
+    "origin_id": "rtr",
+    "tier": "A",
+    "scope": "Official RAGAS documentation, published version 4.0.0 build 4; not proof of installed version or hardware wiring",
+    "snapshot": "manual-user-guide-settings-rtk-settings.md"
+  },
+  {
+    "id": "manual-user-guide-settings-battery-settings",
+    "url": "https://rtrobotics.gitbook.io/real-time-robotics/user-guide/settings/battery-settings.md",
+    "origin_id": "rtr",
+    "tier": "A",
+    "scope": "Official RAGAS documentation, published version 4.0.0 build 4; not proof of installed version or hardware wiring",
+    "snapshot": "manual-user-guide-settings-battery-settings.md"
+  },
+  {
+    "id": "manual-user-guide-settings-common-settings",
+    "url": "https://rtrobotics.gitbook.io/real-time-robotics/user-guide/settings/common-settings.md",
+    "origin_id": "rtr",
+    "tier": "A",
+    "scope": "Official RAGAS documentation, published version 4.0.0 build 4; not proof of installed version or hardware wiring",
+    "snapshot": "manual-user-guide-settings-common-settings.md"
+  },
+  {
+    "id": "manual-user-guide-settings-storage",
+    "url": "https://rtrobotics.gitbook.io/real-time-robotics/user-guide/settings/storage.md",
+    "origin_id": "rtr",
+    "tier": "A",
+    "scope": "Official RAGAS documentation, published version 4.0.0 build 4; not proof of installed version or hardware wiring",
+    "snapshot": "manual-user-guide-settings-storage.md"
+  },
+  {
+    "id": "manual-user-guide-settings-ota-update",
+    "url": "https://rtrobotics.gitbook.io/real-time-robotics/user-guide/settings/ota-update.md",
+    "origin_id": "rtr",
+    "tier": "A",
+    "scope": "Official RAGAS documentation, published version 4.0.0 build 4; not proof of installed version or hardware wiring",
+    "snapshot": "manual-user-guide-settings-ota-update.md"
+  },
+  {
+    "id": "manual-reference-known-limitations",
+    "url": "https://rtrobotics.gitbook.io/real-time-robotics/reference/known-limitations.md",
+    "origin_id": "rtr",
+    "tier": "A",
+    "scope": "Official RAGAS documentation, published version 4.0.0 build 4; not proof of installed version or hardware wiring",
+    "snapshot": "manual-reference-known-limitations.md"
+  },
+  {
+    "id": "manual-reference-capability-matrix",
+    "url": "https://rtrobotics.gitbook.io/real-time-robotics/reference/capability-matrix.md",
+    "origin_id": "rtr",
+    "tier": "A",
+    "scope": "Official RAGAS documentation, published version 4.0.0 build 4; not proof of installed version or hardware wiring",
+    "snapshot": "manual-reference-capability-matrix.md"
+  },
+  {
+    "id": "manual-user-guide-mission",
+    "url": "https://rtrobotics.gitbook.io/real-time-robotics/user-guide/mission.md",
+    "origin_id": "rtr",
+    "tier": "A",
+    "scope": "Official RAGAS documentation, published version 4.0.0 build 4; not proof of installed version or hardware wiring",
+    "snapshot": "manual-user-guide-mission.md"
+  },
+  {
+    "id": "manual-user-guide-mission-waypoints-and-patterns",
+    "url": "https://rtrobotics.gitbook.io/real-time-robotics/user-guide/mission/waypoints-and-patterns.md",
+    "origin_id": "rtr",
+    "tier": "A",
+    "scope": "Official RAGAS documentation, published version 4.0.0 build 4; not proof of installed version or hardware wiring",
+    "snapshot": "manual-user-guide-mission-waypoints-and-patterns.md"
+  },
+  {
+    "id": "manual-user-guide-mission-mission-terrain",
+    "url": "https://rtrobotics.gitbook.io/real-time-robotics/user-guide/mission/mission-terrain.md",
+    "origin_id": "rtr",
+    "tier": "A",
+    "scope": "Official RAGAS documentation, published version 4.0.0 build 4; not proof of installed version or hardware wiring",
+    "snapshot": "manual-user-guide-mission-mission-terrain.md"
+  },
+  {
+    "id": "manual-user-guide-map-offline-map",
+    "url": "https://rtrobotics.gitbook.io/real-time-robotics/user-guide/map/offline-map.md",
+    "origin_id": "rtr",
+    "tier": "A",
+    "scope": "Official RAGAS documentation, published version 4.0.0 build 4; not proof of installed version or hardware wiring",
+    "snapshot": "manual-user-guide-map-offline-map.md"
+  },
+  {
+    "id": "manual-user-guide-payload",
+    "url": "https://rtrobotics.gitbook.io/real-time-robotics/user-guide/payload.md",
+    "origin_id": "rtr",
+    "tier": "A",
+    "scope": "Official RAGAS documentation, published version 4.0.0 build 4; not proof of installed version or hardware wiring",
+    "snapshot": "manual-user-guide-payload.md"
+  },
+  {
+    "id": "manual-user-guide-flight-top-bar-status",
+    "url": "https://rtrobotics.gitbook.io/real-time-robotics/user-guide/flight/top-bar-status.md",
+    "origin_id": "rtr",
+    "tier": "A",
+    "scope": "Official RAGAS documentation, published version 4.0.0 build 4; not proof of installed version or hardware wiring",
+    "snapshot": "manual-user-guide-flight-top-bar-status.md"
+  },
+  {
+    "id": "manual-payloads-herasight-2-remote-controller-operation",
+    "url": "https://rtrobotics.gitbook.io/real-time-robotics/payloads/herasight-2/remote-controller-operation.md",
+    "origin_id": "rtr",
+    "tier": "A",
+    "scope": "Official RAGAS documentation, published version 4.0.0 build 4; not proof of installed version or hardware wiring",
+    "snapshot": "manual-payloads-herasight-2-remote-controller-operation.md"
+  },
+  {
+    "id": "manual-payloads-herasight-lr-remote-controller-operation",
+    "url": "https://rtrobotics.gitbook.io/real-time-robotics/payloads/herasight-lr/remote-controller-operation.md",
+    "origin_id": "rtr",
+    "tier": "A",
+    "scope": "Official RAGAS documentation, published version 4.0.0 build 4; not proof of installed version or hardware wiring",
+    "snapshot": "manual-payloads-herasight-lr-remote-controller-operation.md"
+  },
+  {
+    "id": "android-rtsp",
+    "url": "https://developer.android.com/media/media3/exoplayer/rtsp",
+    "origin_id": "android",
+    "tier": "A",
+    "scope": "Generic platform/protocol documentation; applicability to Hera adapter is conditional",
+    "snapshot": "android-rtsp.html"
+  },
+  {
+    "id": "android-codec-capabilities",
+    "url": "https://developer.android.com/reference/android/media/MediaCodecInfo.CodecCapabilities",
+    "origin_id": "android",
+    "tier": "A",
+    "scope": "Generic platform/protocol documentation; applicability to Hera adapter is conditional",
+    "snapshot": "android-codec-capabilities.html"
+  },
+  {
+    "id": "android-background",
+    "url": "https://developer.android.com/develop/background-work/services/fgs/restrictions-bg-start",
+    "origin_id": "android",
+    "tier": "A",
+    "scope": "Generic platform/protocol documentation; applicability to Hera adapter is conditional",
+    "snapshot": "android-background.html"
+  },
+  {
+    "id": "android-input",
+    "url": "https://developer.android.com/games/sdk/game-controller/controller-input",
+    "origin_id": "android",
+    "tier": "A",
+    "scope": "Generic platform/protocol documentation; applicability to Hera adapter is conditional",
+    "snapshot": "android-input.html"
+  },
+  {
+    "id": "mavlink-redundancy",
+    "url": "https://mavlink.io/en/guide/redundancy_deduplication.html",
+    "origin_id": "mavlink",
+    "tier": "A",
+    "scope": "Generic platform/protocol documentation; applicability to Hera adapter is conditional",
+    "snapshot": "mavlink-redundancy.html"
+  },
+  {
+    "id": "mavlink-rtk",
+    "url": "https://mavlink.io/en/services/rtk.html",
+    "origin_id": "mavlink",
+    "tier": "A",
+    "scope": "Generic platform/protocol documentation; applicability to Hera adapter is conditional",
+    "snapshot": "mavlink-rtk.html"
+  },
+  {
+    "id": "ragas-release-manifest",
+    "url": "https://github.com/Real-Time-Robotics/ragas-release/releases/download/v4.0.14-b111/manifest-prod.json",
+    "origin_id": "rtr",
+    "tier": "A",
+    "scope": "Public release manifest v4.0.14-b111; not installed device or APK inspection",
+    "snapshot": "ragas-release-manifest.json"
+  },
+  {
+    "id": "mavlink-common",
+    "url": "https://mavlink.io/en/messages/common.html",
+    "origin_id": "mavlink",
+    "tier": "A",
+    "scope": "Protocol definitions; Hera firmware/transport applicability conditional",
+    "snapshot": "mavlink-common.html"
+  },
+  {
+    "id": "rtr-legacy-payload-brochure",
+    "url": "https://rtrobotics.com/brochures/HERASIGHT-LR-Brochure.pdf",
+    "origin_id": "rtr",
+    "tier": "A",
+    "scope": "Official legacy payload brochure; HeraLink mention is identity context, not controller SDK",
+    "snapshot": "rtr-legacy-payload-brochure.pdf"
+  },
+  {
+    "id": "gstreamer-android",
+    "url": "https://gstreamer.freedesktop.org/documentation/tutorials/android/index.html",
+    "origin_id": "gstreamer",
+    "tier": "A",
+    "scope": "Native Android integration reference; not selected production stack",
+    "snapshot": "gstreamer-android.html"
+  },
+  {
+    "id": "gstreamer-rtsp",
+    "url": "https://gstreamer.freedesktop.org/documentation/rtsp/rtspsrc.html",
+    "origin_id": "gstreamer",
+    "tier": "A",
+    "scope": "Generic RTSP element, not proof of Hera pipeline",
+    "snapshot": "gstreamer-rtsp.html"
+  },
+  {
+    "id": "gstreamer-h265",
+    "url": "https://gstreamer.freedesktop.org/documentation/rtp/rtph265depay.html",
+    "origin_id": "gstreamer",
+    "tier": "A",
+    "scope": "H265 RTP depayloader reference; not proof of installed plugin",
+    "snapshot": "gstreamer-h265.html"
+  },
+  {
+    "id": "manual-legacy-payload-setup",
+    "url": "https://rtrobotics.gitbook.io/real-time-robotics/payloads/herasight-2/setup.md",
+    "origin_id": "rtr",
+    "tier": "A",
+    "scope": "Legacy HeraSight setup scope; endpoints are examples/configuration only",
+    "snapshot": "manual-legacy-payload-setup.md"
+  },
+  {
+    "id": "manual-legacy-app-settings",
+    "url": "https://rtrobotics.gitbook.io/real-time-robotics/payloads/herasight-2/ragas-app/app-settings/drone-and-remote-controller.md",
+    "origin_id": "rtr",
+    "tier": "A",
+    "scope": "Legacy payload controller settings scope, not firmware SDK",
+    "snapshot": "manual-legacy-app-settings.md"
+  },
+  {
+    "id": "mavlink-manual",
+    "url": "https://mavlink.io/en/services/manual_control.html",
+    "origin_id": "mavlink",
+    "tier": "A",
+    "scope": "Generic protocol contract, not proof of selected Hera controller transport",
+    "snapshot": "mavlink-manual.html"
+  },
+  {
+    "id": "mavlink-signing",
+    "url": "https://mavlink.io/en/guide/message_signing.html",
+    "origin_id": "mavlink",
+    "tier": "A",
+    "scope": "Generic protocol contract, not proof of selected Hera controller transport",
+    "snapshot": "mavlink-signing.html"
+  }
+]

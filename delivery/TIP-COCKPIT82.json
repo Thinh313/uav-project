@@ -1,0 +1,28 @@
+{
+  "id": "COCKPIT82",
+  "authorization": "User17/10 requests immediate P1 fix, icon QA/theme header toggle, detached vertically centered glass sidebars. Development testing authorization persists; no production/candidate signature/selection.",
+  "requirements": {
+    "R82-01": "Vertical/diagonal scrolling across altitude/speed visual tracks cannot mutate parameters; deliberate numeric/step edits validate and invalidate approvals",
+    "R82-02": "Theme sun=day/moon=night in header next to battery, icon-only visual with accessible current state and next action",
+    "R82-03": "Left/right detached islands share one work-area Y center, minimum16px clearance from header/footer where space permits, all primary targets>=56px",
+    "R82-04": "Coherent24px icon family maps actual function, no broken references, unknown/battery states honest, recoverable clean-view",
+    "R82-05": "Day/night and layout QA1280x800,1024x600,1920x1080, keyboard/touch, no overlap/clipping",
+    "R82-06": "Android development APK gesture regression and survey→preflight→Fly mock→review/persistence; no operational commands",
+    "R82-07": "Frozen source/candidate/ENDURE/prior81 evidence unchanged,20GiB floor, cleanup owned SDK/builds"
+  },
+  "design": {
+    "palette": {
+      "glassNight": "#0c1210",
+      "glassDay": "#f5f9f6",
+      "inkNight": "#f7faf8",
+      "inkDay": "#14231a",
+      "accent": "#edc83c"
+    },
+    "typography": "Barlow medium/semibold/bold Vietnamese",
+    "geometry": "Matching widths/radii/edges for floating islands, common Y center of usable work area, no physical attachment to header/footer",
+    "themeRule": "Icon shows current theme; aria-label announces current theme and next action",
+    "gestureRule": "Read-only native meter, explicit numeric entry or stepped buttons; no range-pointer handler or drag ambiguity"
+  },
+  "review": "Single agent builder then QA, not independent review",
+  "scope": "native/cockpit82, evidence/cockpit82 and new delivery/ADR overlays only"
+}

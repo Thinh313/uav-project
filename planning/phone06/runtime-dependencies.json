@@ -1,0 +1,21 @@
+{
+  "format": "phone06-readonly-runtime-lineage",
+  "files": {
+    "planning/integration03/runtime/runtime05.py": "586a0d2d8f9193dbc4e0ce420059d3cb3b4b8ca3b2c06b9c54f6fd6a76e07842",
+    "planning/integration03/runtime/bootstrap04.py": "0bc72f3c88ce1c38871735768cda186b18f5b4d023bf4d4ab4ca63d42515067e",
+    "planning/integration03/runtime/peers.mjs": "f565c99445a4773bee2e796ac39f5d04cc8eed410cb75f2869b357b608dabda8",
+    "planning/integration03/runtime/sitl.parm": "341fe8138bb321bb0fdc15f1659aed36ab527ebfaf79901d309a510170cbf921",
+    "pilot/integration03/server.mjs": "142f8c13b97b6a75c62a402fee1150d83ff8ea3689dc2237c3e79831e35439e8",
+    "pilot/integration03/client.mjs": "c59fbc8ac0977e1040e896e2e779102a1d47963131d2d2d54c79619420f1544f",
+    "pilot/integration03/decoder.mjs": "b449574de881cf05bad794e993eafe99e7e10bf36069ebdd7f8cdccf9627df37",
+    "pilot/integration03/projection.mjs": "8bfc69707e2c5d2d8b3ca7fd786a0278fcaaf1ab343e67f8ef63f810d2c7b495",
+    "pilot/integration03/style.css": "e9dbacc4ebd8f2fd34c7d0e6fb0adc5a3ef34a1ce1849e3ef51cf522e72966c9",
+    "pilot/integration03/index.html": "f193548b32a00370c5e72296a9d17fbe512c54608e2eba25d58b9cf3c73153eb",
+    "pilot/integration03/dependencies.json": "463e887083aa028f1b8e4e61e1cb0cc879007a35b26f9d54d10c8f8a4177bca2",
+    "native/crew02/host/companion.mjs": "2340703a0e9ea5e507d31e7304174d38d8b613eaf7b07b087bb1afb5f4533677",
+    "native/crew02/host/client.mjs": "72692848fafb953ebe6d784705a5175d8188dabccefc5f1039aa0931122fee8d",
+    "native/crew02/host/index.html": "3da3e0ea4b748e99f95d468bf1fc5e3f41831f2f33ea5c884afae0cb27a53b2f",
+    "native/crew02/host/cockpit.css": "dcae5c8d4267f4f4d7fa3838f0bd6f0773c83fc50baf9bed629f1ee725b1bec5",
+    "native/integration03/host/companion.mjs": "58f15935cba959d413ad28392fa468856a36edb50f1bcb81b3dc38b31fa88f9d"
+  }
+}

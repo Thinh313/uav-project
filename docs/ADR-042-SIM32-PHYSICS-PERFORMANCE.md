@@ -1,0 +1,13 @@
+# ADR042 — SIM32 performance increment
+
+Context: default AP speedup1,1200Hz JSON lockstep, UI live measured RTF0.928. Packet processing includes5derivative evaluations, serializations/gzip and atomic snapshot writes. Current model validator also prevents4ideal analytic tests; historical receipt preserved and correction recorded.
+
+Decision: first exact-preserving caches for fixed rotor arms and actuator coefficients; skip final derivative only on ideal-ground branch where final specific force is unconditionally[0,0,-G]. Same RK4/order/dt/battery/sensors. Compare full historical raw against pinned reference, not merely test count.
+
+Offload gzip/digest/snapshot serialization to a single bounded FIFO worker. Main thread owns model/socket; rows and snapshot values are frozen at enqueue (no mutable model references). Overflow or worker error fails session; shutdown drains accepted rows, flushes and closes gzip, then verifies written count. Keep atomic snapshots and freshness bound; no dropped telemetry/evidence or silent fallback. Resource checks and lifetime remain enforced by main loop. Filesystem fsync once at sealed archive, not each packet. Record enqueue/physics/wire/worker costs and highwater, no hard-real-time claim.
+
+AP JSON uses `time_advance()` to match desired speedup; actual RTF is host-sensitive. Keep speedup1 paired baseline first. Optional declared1.05/1.10 pacing headroom allowed only separate matched configuration if required for measured>=1x. It does not alter dt1200Hz or skip steps, and is not attributed to algorithmic acceleration. Unmet default1x remains visible. No new aircraft firmware or existing frozen app changes.
+
+Reject any optimization that changes exact sensor/model outputs in the6supported historical traces, weakens authority/raw/failure gates, or violates host20GiB floor. Native Hera/physical calibration/24h ENDURE/superiority remain separate.
+
+13/10 profiling decision: Python-only live run remained0.598x and timed out; profiler attributes most cumulative model time to derivative/vector sums. Add a small local CPython C derivative kernel, same float64 evaluation order/compensated sum as pinned CPython3.14, `-fno-fast-math -ffp-contract=off`. Built with existing clang/headers, no dependency install or firmware change. Native artifact/source/hash included in runtime attestation; supported host ABI only, no silent fallback. Full exact corpus comparison and analytic tests precede new UI acceptance. This implementation change is within the explicitly authorized algorithm/performance optimization, while mathematical/model architecture stays fixed.

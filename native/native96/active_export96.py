@@ -1,0 +1,4 @@
+from raw_ui96 import *
+owned();label='final05-active-saf';base='/data/user/0/'+P+'/files/'
+def stage():return adb('exec-out','tar','-C',base,'-cf','-','raw-packages96','raw-fileops96')
+before=stage();raw_panel();find_control('confirm-raw96');tap94('confirm-raw96');find_control('export-raw96');tap94('export-raw96');time.sleep(.4);capture(label+'-refused');after=stage();assert before==after,'ACTIVE_EXPORT_CHANGED_STAGE_OR_OPS';r=last();assert any(x['id']=='export-raw96'for x in r['controls']);(E/(label+'-verification.json')).open('x').write(json.dumps({'status':'PASS','stageAndOpsExactUnchanged':True,'stageTarSha256':hashlib.sha256(before).hexdigest(),'scope':'Actual UI export refused while native direct is open; screenshot contains error, no SAF provider opened','provenance':'SCREENSHOT_PLUS_PRIVATE_BYTE_COMPARISON_NOT_UI_ATTESTATION'},indent=2));print('ACTIVE_NATIVE_SAF_REFUSED_NO_STAGE_CHANGE')

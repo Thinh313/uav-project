@@ -1,0 +1,5 @@
+{
+  "status": "PASS",
+  "test": "Duplicate reported window start fails exact-six ledger; no second save or hidden replacement",
+  "scope": "PURE_MOCK_NO_ANDROID_OR_VIDEO"
+}

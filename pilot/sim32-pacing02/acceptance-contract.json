@@ -1,0 +1,97 @@
+{
+  "schemaVersion": 1,
+  "milestone": "SIM32-PACING02",
+  "at": "2026-10-14T02:32:00.566414+00:00",
+  "status": "TESTS_COMPLETED_NOT_READY_FOR_ROBUST_1X",
+  "implementationCoverage": {
+    "implemented": 5,
+    "total": 5,
+    "percent": 100
+  },
+  "requirements": [
+    {
+      "id": "REQ-P01",
+      "implementation": "DONE",
+      "acceptance": "PASS",
+      "evidence": [
+        "admission.json",
+        "preservation-before.json",
+        "preservation-after.json"
+      ]
+    },
+    {
+      "id": "REQ-P02",
+      "implementation": "DONE",
+      "acceptance": "MEASURED_1_OF_9_MEAN_RTF_PASS_6_OF_9_UI_PASS",
+      "evidence": [
+        "plan.json",
+        "matrix-completion.json",
+        "summary.json"
+      ]
+    },
+    {
+      "id": "REQ-P03",
+      "implementation": "DONE",
+      "acceptance": "CAP_BRACKET_CAPTURED_STALE_REFUSAL_AND_LONG_FRAME_CORRELATION_FAIL",
+      "evidence": [
+        "pause-frame-association.json",
+        "runs/p3200a1/stale-probe-diagnostic.json"
+      ]
+    },
+    {
+      "id": "REQ-P04",
+      "implementation": "DONE",
+      "acceptance": "ALL_MODEL_BYTES_PASS_CLOCK_CAPTURE_AND_NODE_PYTHON_MAPPING_GATES_FAIL",
+      "evidence": [
+        "analysis-resolution.json",
+        "clock-domain-incident.json",
+        "summary.json"
+      ]
+    },
+    {
+      "id": "REQ-P05",
+      "implementation": "DONE",
+      "acceptance": "PRESERVATION_RESOURCE_CLOSURE_PASS_PRODUCT_PERFORMANCE_NOT_READY",
+      "evidence": [
+        "cleanup-final.json",
+        "preservation-after.json",
+        "verification-summary.json"
+      ]
+    }
+  ],
+  "observedAcceptance": {
+    "plannedUiRuns": 9,
+    "capturedUiRuns": 9,
+    "uiPass": 6,
+    "meanRtfAtLeast1Pass": 1,
+    "meanRtfAtLeast1Fail": 8,
+    "groundOnlyPauseProbes": 4,
+    "rawReplaysPass": 13,
+    "rawUniqueModelFrames": 1240400,
+    "clockObserverIncompleteRuns": [
+      "m06w0r2"
+    ],
+    "staleSuspensionRefusal": "FAIL",
+    "longPauseStrictAPModelFrameCorrelation": "FAIL",
+    "uncalibratedNodePythonAssociation": "REJECTED"
+  },
+  "configuration": {
+    "nominalSpeedup": 1,
+    "rateHz": 1200,
+    "capUs": 500000,
+    "platform": "linux/arm64",
+    "apBinarySha256": "f2be1f349f84b4aedaa5912b3050f64f476f3218bc4f68b34ad4de11393c2d08"
+  },
+  "notChecked": [
+    "Campaign-time Node/Python counter calibration",
+    "Post-pause parameter readback for3200ms diagnostic",
+    "Randomized/statistical observer-cost estimate",
+    "Long-duration1x/other power or thermal states",
+    "Native Hera/SDK/video/input/HIL/flight/calibrated physics",
+    "Ragas/DJI matched comparison"
+  ],
+  "softwareSignature": false,
+  "FlyIntegration": false,
+  "ENDUREAcceptanceChanged": false,
+  "auditMethod": "Sequential roles by one agent; not independent review"
+}

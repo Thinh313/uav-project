@@ -1,0 +1,25 @@
+{
+  "format": "aeris-simhand01-source-ids",
+  "version": 1,
+  "referencePhysics": "SIMTRAIN53_FUSED_REFERENCE_NOT_HERA",
+  "APK": {
+    "apk": "native/simhand01/dist/aeris-simhand01-development01.apk",
+    "sha256": "8f1767933059b719d0bfb260df751678d24bd6d0a345397a5d52815cf7f2aec1",
+    "bytes": 37267,
+    "signature": "Verifies\nVerified using v1 scheme (JAR signing): false\nVerified using v2 scheme (APK Signature Scheme v2): true\nVerified using v3 scheme (APK Signature Scheme v3): true\nVerified using v3.1 scheme (APK Signature Scheme v3.1): false\nVerified using v4 scheme (APK Signature Scheme v4): false\nVerified for SourceStamp: false\nNumber of signers: 1\nSigner #1 certificate DN: CN=AERIS NATIVE31 Development, OU=Engineering Emulator Only, O=RtR\nSigner #1 certificate SHA-256 digest: 3b3652341ec954f4640892e73df124f41cbb0efc81ace1d6ba83cfdddd319800\nSigner #1 certificate SHA-1 digest: 18b3782bbc6df0a5e1371d88d6dbf4a6e8c2ed4b\nSigner #1 certificate MD5 digest: d4f1798afb00a8f8c4fce97c0e1b3835\nSigner #1 key algorithm: RSA\nSigner #1 key size (bits): 2048\nSigner #1 public key SHA-256 digest: 6cd7bd31038b2e1587d06bd862969368020eec631ce29ce11f87eb95b0b5060d\nSigner #1 public key SHA-1 digest: dd75fa87c5516a6ffc61de4a568f3a2aa84d7971\nSigner #1 public key MD5 digest: ed43ca56a2800812ce4d336133af783c\nWARNING: A restricted method in java.lang.System has been called\nWARNING: java.lang.System::loadLibrary has been called by org.conscrypt.NativeLibraryUtil in an unnamed module (file:/opt/homebrew/share/android-commandlinetools/build-tools/36.0.0/lib/apksigner.jar)\nWARNING: Use --enable-native-access=ALL-UNNAMED to avoid a warning for callers in this module\nWARNING: Restricted methods will be blocked in a future release unless native access is enabled\n\n",
+    "sourceFiles": {
+      "native/simhand01/src/vn/rtr/aeris/simhand01/ShellActivity.java": "4b2aeb97623989fc4657ad7f75dddb291e62318e4a85cefda2db8bf1b7fddaf8",
+      "native/simhand01/src/vn/rtr/aeris/simhand01/WorkspaceStore.java": "9fa34c6b159ae834617db0d2f6925187bfc65002a5091b23f6a455a909d3f9d7",
+      "native/simhand01/OperationGate.java": "b8f58aa70db22ab3bca3802328677036ee3402c1714a029905ec30fa79f0e2d5"
+    }
+  },
+  "engineeringCertificateSHA256": "3b3652341ec954f4640892e73df124f41cbb0efc81ace1d6ba83cfdddd319800",
+  "noPrivateSigningKeyIncluded": true,
+  "assetAttributions": [
+    "pilot/visual56/credits.html",
+    "pilot/visual56/assets/fonts/OFL.txt",
+    "pilot/sim32/viewer/vendor/THREE-LICENSE.txt",
+    "pilot/sim32/KERNEL-LICENSE.txt"
+  ],
+  "actualAPPhoneVisualAcceptance": "NOT_CHECKED_IN_PACKAGING_BUILD"
+}

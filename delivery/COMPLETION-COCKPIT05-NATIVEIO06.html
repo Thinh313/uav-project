@@ -1,0 +1,34 @@
+<!doctype html><html lang="vi"><meta charset="utf-8"><meta name="viewport" content="width=device-width"><title>AERIS · NativeIO06</title>
+<style>body{font:16px/1.6 system-ui,sans-serif;color:#222;background:#f6f6f4;margin:0}main{max-width:1080px;margin:44px auto;padding:0 28px 60px}h1{font-size:34px;line-height:1.2}h2{margin-top:32px}table{width:100%;border-collapse:collapse;background:white;font-size:14px}td,th{text-align:left;vertical-align:top;border-bottom:1px solid #ddd;padding:12px}th{background:#e8e9e6}a{color:inherit}.status{font-weight:750;border:1px solid #555;padding:12px;display:inline-block}</style>
+<main><p>RtR / AERIS · 27/10/2026 · NativeIO06</p><h1>Đo IO và phục vụ input trong vòng native</h1><p class="status">NOT READY CHO 30 PHÚT · THỬ NGHIỆM NGẮN THẤT BẠI, ĐÃ KIỂM ĐỘC LẬP</p>
+<p>Đã triển khai checkpoint phục vụ cùng FIFO giữa các thao tác IO, giữ global 16 message/outer loop và queue 128, không coalesce, bỏ, retime, gửi lại hoặc tự cấp quyền. Thêm đo wall/thread CPU thực của write/fsync/socket/RX/tick/publish và offer → consume. Diagnostic riêng tối đa 256 KiB; APK development 02 dùng package riêng vn.rtr.aeris.cockpitio06.</p>
+<table><tr><th>Phạm vi</th><th>Kết quả và giới hạn</th></tr>
+<tr><td>Mock/core/package</td><td>22 nhóm mock builder đạt. QA độc lập kiểm byte/fsync journal, FIFO/global16, APK và helper. Clock/connection mock có ghi rõ provenance.</td></tr>
+<tr><td>Android–SITL ngắn</td><td>Đã preflight, xác nhận Home sau arm, cất cánh khoảng 3 m và LOITER. Dừng NO_FRESH_CONTROL_LEASE; chưa hoàn tất manual → BRAKE → quyền mới → LAND chủ động.</td></tr>
+<tr><td>Host/model/AP/frame</td><td>90.995 frame đúng model; 731.095 AP event; không bỏ frame. Không nhóm STAGE vượt 250 ms; clock age tối đa 184,127 ms. RTF 0,974246, chưa đạt 1×.</td></tr>
+<tr><td>Native/review</td><td>6.393 record kiểm được chain/CRC của prefix; 3 segment sealed, 1 segment cuối chưa sealed, không session.json/closed anchor. Review PENDING giữ nguyên; không coi prefix là journal hoàn tất.</td></tr>
+<tr><td>Restart</td><td>10 file journal/workspace/link trước và sau restart giống SHA; draft r1 giữ nguyên, NO_SESSION, không binding/quyền. Hai package cũ giữ đúng 25 + 233 file. Sự trùng SHA không chứng minh journal hoàn tất.</td></tr>
+<tr><td>30 phút và intentional CUT</td><td>Không chạy vì short và closed-anchor gate không đạt. Không retry hoặc cộng interval cũ.</td></tr></table>
+<h2>Đoạn gây lỗi thực</h2><table><tr><th>Đoạn</th><th>Số đo cùng span</th><th>Ý nghĩa</th></tr>
+<tr><td>Input 270 producer → consume</td><td>3,003 ms</td><td>Hàng đợi phục vụ kịp ở đoạn này.</td></tr>
+<tr><td>queue.apply</td><td>258,275 ms wall / 9,479 ms CPU</td><td>Bên trong một callback vẫn có nhiều barrier bền vững.</td></tr>
+<tr><td>WIRE_BINDING fsync</td><td>163,741 ms wall / 0,164 ms CPU</td><td>Cặp số thuộc cùng một thao tác thực.</td></tr>
+<tr><td>TX_INTENT fsync kế tiếp</td><td>27,929 ms</td><td>Kiểm quyền sau fsync từ chối gửi khi lease quá hạn 19,535 ms. TX_UNKNOWN giữ nguyên.</td></tr>
+<tr><td>Input 270 → 271 producer</td><td>215,537 ms</td><td>UI producer cũng vượt TTL 200 ms, không quy toàn bộ lỗi cho consumer.</td></tr></table>
+<p>Giữ freshness frame 250 ms, input/lease 200 ms, loop 500 ms, speedup 1, cap 500 ms và fsync trước gửi. Các phase nested inclusive, không cộng thành elapsed hay nguyên nhân độc quyền. NonCPU wall gồm khả năng IO wait hoặc descheduling; chưa tách được nguyên nhân OS.</p>
+<p>Diagnostic 101.959 byte, 22.808 span, 15 phase, CPU unavailable 0 và measurement errors 0. Đã phục hồi chỉ đọc sau restart bằng 4 lệnh ADB với receipt và SHA thiết bị trước/sau. Gate xuất chuẩn thất bại vì không có closed native anchor; forensic diagnostic không được nâng thành nghiệm thu bay.</p>
+<h2>Ưu tiên sửa tiếp</h2><ol>
+<li>Tách lịch lấy mẫu input khỏi tải UI, đo deadline producer thực; không đổi timestamp hoặc tự gia hạn quyền.</li>
+<li>Thiết kế các bước giao dịch điều khiển tại boundary an toàn để owner không bị giữ qua nhiều barrier. Giữ một writer và TX_INTENT fsync, kiểm quyền/clock/context trước socket, không gửi mẫu cũ.</li>
+<li>Phân biệt từ chối trước callback với send outcome không xác định; sửa đóng journal khi bị từ chối sau TX_INTENT bằng mock/fault injection. Giữ nguyên lỗi và TX_UNKNOWN của lượt này, không viết lại lịch sử.</li>
+<li>Đo overhead Android, tái hiện timeline bằng mock rồi thử APK mới ngắn. Chỉ mở 30 phút sau short đóng đủ, QA độc lập, pacing và admission đạt.</li></ol>
+<h2>Bảo toàn và đóng runtime</h2><p>Kiểm lại 17.117 entry legacy và 16 seal chứa 29.226 entry không drift; 165 đường dẫn thiếu từ trước giữ đúng baseline, không khẳng định hiện diện liên tục. 298 source và 15 metadata fingerprint không đổi. Không sửa source/candidate đóng băng hay ENDURE, không khởi động soak, không SDK/HeraHub hoặc ký production.</p>
+<p>Đã dừng sạch emulator, guardian, AP/host và caffeinate sở hữu; các cổng thử được giải phóng. Xóa 87 file scratch build (~1,92 MB), Docker image prune thu hồi 0 B. Không xóa raw/partial hoặc dữ liệu khác.</p>
+<p>Lỗi IME của harness giữ đầy đủ hồ sơ; Root sửa tên và đợi keyboard ẩn bằng thao tác thật trước một lần SAVE. Hai thư mục trống được bootstrap có công bố; app first-run directory creation chưa được nghiệm thu. HTML chỉ kiểm cấu trúc/link, chưa kiểm browser trực quan.</p>
+<h2>Tệp bàn giao</h2><ul>
+<li><a href="/Users/os/Downloads/AI technique/aeris/native/betaintegrated01/cockpitio06/dist/aeris-cockpitio06-development-02.apk">APK development</a></li>
+<li><a href="/Users/os/Downloads/AI technique/aeris/evidence/betaintegrated01-cockpit05-nativeio06/qa/short-failure01/FINAL-QA02.json">QA độc lập cuối</a></li>
+<li><a href="/Users/os/Downloads/AI technique/aeris/evidence/betaintegrated01-cockpit05-nativeio06/qa/short-failure01/forensic-diagnostic-recovery-results.json">Số đo và bằng chứng forensic ADB</a></li>
+<li><a href="/Users/os/Downloads/AI technique/aeris/evidence/betaintegrated01-cockpit05-nativeio06/preservation-after01.json">Đối chiếu toàn vẹn</a></li>
+<li><a href="/Users/os/Downloads/AI technique/aeris/evidence/betaintegrated01-cockpit05-nativeio06/root-cleanup01.json">Đóng runtime và dọn scratch</a></li>
+</ul></main></html>

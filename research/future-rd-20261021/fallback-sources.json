@@ -1,0 +1,27 @@
+{
+  "sources": [
+    {
+      "id": "flir-hadron-reader",
+      "origin": "flir",
+      "originalFailure": "HTTP403 retained in sources.json",
+      "representation": "EXACT_WEB_TOOL_READER_TEXT_NOT_ORIGIN_HTML",
+      "snapshot": "flir-hadron-reader.html",
+      "sha256": "942c8e9bb0be084d262bdbdc4ff16865571b11399cda0faf632fa9c612b06410",
+      "bytes": 12688,
+      "at": "2026-10-21T04:00:32.314668+00:00",
+      "url": "https://www.oem.flir.com/products/hadron-640/"
+    },
+    {
+      "id": "doodle-products-reader",
+      "origin": "doodlelabs",
+      "originalFailure": "HTTP403 retained in sources.json",
+      "representation": "EXACT_WEB_TOOL_READER_TEXT_NOT_ORIGIN_HTML",
+      "snapshot": "doodle-products-reader.html",
+      "sha256": "3633d51b3c42e4be923ecee03e9c5d2cc40fc4328a1142e888672bc8bd9a6fa2",
+      "bytes": 14071,
+      "at": "2026-10-21T04:00:32.315162+00:00",
+      "url": "https://doodlelabs.com/products/"
+    }
+  ],
+  "sonyProduct": "raw403 then webreader timeout; do not manufacture missing snapshot/spec fields"
+}

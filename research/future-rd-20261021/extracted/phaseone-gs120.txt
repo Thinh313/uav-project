@@ -1,0 +1,302 @@
+Explore the Fastest Electronic Shutter Speed with iXM-GS120
+Sign in
+Contact us
+Home
+Solutions
+Geospatial Solutions
+Geospatial Components
+iXM-GS120 Camera
+Choose your language
+English
+iXM-GS120
+Reliable performance under any circumstances.
+iX Process
+iX Process is an integrated software solution for mapping professionals. It delivers instant project visualization, advanced radiometric adjustments, and seamless photogrammetry integration, fully leveraging the IIQ format to maximize hardware value.
+iX Process
+For customers who need to capture the finest details of rapidly moving objects, the Phase One iXM-GS120 camera delivers the accuracy and resolution required at the highest speed possible due to its electronic global shutter. Unlike competitors, the unrivalled dynamic range and image quality enables you to capture the details you need even under highly unfavorable environmental conditions, ensuring you can operate under any circumstances.
+Contact Us
+Key benefits of the iXM-GS120
+Lightweight, compact and built for tight integrations
+With a minimal mechanical footprint when paired with compact RSM lenses, the iXM-GS120 fits easily into space-constrained pods and gimbals, reducing system weight and simplifying integration.
+No mechanical shutter required
+The electronic global shutter ensures that the iXM-GS120 is extremely robust and long-lasting with low-to-no maintenance.
+Fastest shutter speed on the market
+Set exposure times up to 1/16,000 of a second to capture perfect still frames of fast-moving objects.
+Technical specifications
+iXM-GS120
+iXM-GS120
+Specifications
+Sensor type
+CMOS Global Shutter
+Sensor type
+CMOS Global Shutter
+Resolution (Mpix)
+120
+Resolution (Mpix)
+120
+Sensor resolution (Pix)
+12,768 x 9,564
+Sensor resolution (Pix)
+12,768 x 9,564
+Color options
+RGB & Achromatic
+Color options
+RGB & Achromatic
+Dynamic range (dB)
+80
+Dynamic range (dB)
+80
+Light sensitivity RGB (ISO)
+200
+Light sensitivity RGB (ISO)
+200
+Light sensitivity ACH (ISO)
+800
+Light sensitivity ACH (ISO)
+800
+Pixel size [um]
+3.45
+Pixel size [um]
+3.45
+Sensor size [mm x mm]
+43.9 x 32.9
+Sensor size [mm x mm]
+43.9 x 32.9
+Aspect ratio
+4:3
+Aspect ratio
+4:3
+Max shutter speed [s]
+1/16000
+Max shutter speed [s]
+1/16000
+Shutter type
+Mechanical, leaf or Electronic
+Shutter type
+Mechanical, leaf or Electronic
+Continuous frame rate w. previews (fps)
+up to 2 fps
+Continuous frame rate w. previews (fps)
+up to 2 fps
+RAW file compression (approx.) (IIQ)
+RAW file compression (approx.) (IIQ)
+Lens mount
+Phase One RSM and RS
+Lens mount
+Phase One RSM and RS
+Interface
+Image data
+Ethernet 10G (Fiber/Copper), USB3
+Image data
+Ethernet 10G (Fiber/Copper), USB3
+API
+Phase One SDK, Mavlink
+API
+Phase One SDK, Mavlink
+H/W signals (inputs)
+Trigger, Black reference
+H/W signals (inputs)
+Trigger, Black reference
+H/W signals (output)
+Camera ready, MEP
+H/W signals (output)
+Camera ready, MEP
+Internal data storage
+CF Express card up to 1TB**
+Internal data storage
+CF Express card up to 1TB**
+HDMI
+1,920 x 1,080
+HDMI
+1,920 x 1,080
+Synchronization speed in multiple camera configuration (μsec)
+50
+Synchronization speed in multiple camera configuration (μsec)
+50
+Mechanical
+Weight - excl. lens (g)
+647
+Weight - excl. lens (g)
+647
+Dimensions - excl. lens (mm)
+90 x 90 x 67
+Dimensions - excl. lens (mm)
+90 x 90 x 67
+Interface (for mounting)
+4 x M4 threads
+Interface (for mounting)
+4 x M4 threads
+Operating conditions
+Operating temperature (°C)
+-10 to 40
+Operating temperature (°C)
+-10 to 40
+Relative humidity (%)
+15 to 80 (non-condensing)
+Relative humidity (%)
+15 to 80 (non-condensing)
+Approvals
+FCC Class A, CE, RoHS
+Approvals
+FCC Class A, CE, RoHS
+Weather protection
+IP53
+Weather protection
+IP53
+Lenses and opening angles
+Camera specifications
+Pixel size:
+3.45 µm
+Resolution:
+12,768 x 9,564 pixels
+Shutter life:
+500,000 actuations
+These specifications apply to the iXM-GS120 camera and remain constant across all supported RS and RSM lenses.
+RSM-35 mm
+RS-50 mm
+RS-70 mm
+RSM-80 mm
+RS-90 mm
+RS-110 mm
+RS-150 mm / RSM-150 mm
+RS-180 mm
+RSM-300 mm
+RSM-35 mm
+RSM-35 mm
+Angle of view - long side (°)
+64.4
+Angle of view - long side (°)
+64.4
+Angle of view - Short side (°)
+50.5
+Angle of view - Short side (°)
+50.5
+RS-50 mm
+RS-50 mm
+Angle of view - long side (°)
+47.5
+Angle of view - long side (°)
+47.5
+Angle of view - Short side (°)
+36.5
+Angle of view - Short side (°)
+36.5
+RS-70 mm
+RS-70 mm
+Angle of view - long side (°)
+34.9
+Angle of view - long side (°)
+34.9
+Angle of view - Short side (°)
+26.5
+Angle of view - Short side (°)
+26.5
+RSM-80 mm
+RSM-80 mm
+Angle of view - long side (°)
+30.8
+Angle of view - long side (°)
+30.8
+Angle of view - Short side (°)
+23.3
+Angle of view - Short side (°)
+23.3
+RS-90 mm
+RS-90 mm
+Angle of view - long side (°)
+27.5
+Angle of view - long side (°)
+27.5
+Angle of view - Short side (°)
+20.8
+Angle of view - Short side (°)
+20.8
+RS-110 mm
+RS-110 mm
+Angle of view - long side (°)
+22.6
+Angle of view - long side (°)
+22.6
+Angle of view - Short side (°)
+17.1
+Angle of view - Short side (°)
+17.1
+RS-150 mm / RSM-150 mm
+RS-150 mm / RSM-150 mm
+Angle of view - long side (°)
+16.7
+Angle of view - long side (°)
+16.7
+Angle of view - Short side (°)
+12.6
+Angle of view - Short side (°)
+12.6
+RS-180 mm
+RS-180 mm
+Angle of view - long side (°)
+14
+Angle of view - long side (°)
+14
+Angle of view - Short side (°)
+10.5
+Angle of view - Short side (°)
+10.5
+RSM-300 mm
+RSM-300 mm
+Angle of view - long side (°)
+8.4
+Angle of view - long side (°)
+8.4
+Angle of view - Short side (°)
+6.3
+Angle of view - Short side (°)
+6.3
+Contact a Phase One Expert
+If you would like to learn more about the iXM-GS120, our experts are eager to help! Contact Us.
+Applications
+Geospatial Imagery
+Space
+Heritage
+Bespoke Photography
+Imaging Quality & Performance
+From Pixels to Perception™
+Intelligent Image Quality (IIQ)
+Blur Control Technology
+Bayer Pattern Technology
+Solutions
+Aerial Camera Systems
+Geospatial Components
+UAV Cameras
+Space Solutions
+Heritage Solutions
+Heritage Components
+Photographic Cameras
+Knowledge Hub
+Case Studies
+Upcoming Events, Webinars and Workshops
+Inspiration
+Press Releases
+On-demand webinars and videos
+Developer
+Phase One Blogs
+About
+What Do We Stand For?
+Life at Phase One
+Sustainability
+Find a Local Partner
+Find a Rental Studio
+Contact us
+Newsletter sign up
+Legal
+Legal
+Privacy Policy
+Cookie Policy
+Terms and Conditions
+Whistleblower Policy
+© Phase One 2026
+Legal
+Legal
+Privacy Policy
+Cookie Policy
+Terms and Conditions
+Whistleblower Policy

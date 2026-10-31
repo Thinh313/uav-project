@@ -1,0 +1,2 @@
+export const FLOOR=20*1024**3,QUOTA=2.25*1024**3,FORECAST=1024**3;
+export function admission(freeBytes,retainedBytes){if(!Number.isSafeInteger(freeBytes)||!Number.isSafeInteger(retainedBytes))throw Error('STORAGE_SHAPE');return {admitted:freeBytes>=22.5*1024**3&&retainedBytes+FORECAST<=QUOTA,freeBytes,retainedBytes,quotaBytes:QUOTA,reservationBytes:FORECAST,floorBytes:FLOOR,reason:freeBytes<22.5*1024**3?'HOST_PEAK_HEADROOM':retainedBytes+FORECAST>QUOTA?'RETAINED_EVIDENCE_QUOTA':'ADMITTED_ONE_BOUNDED_RUN',autoDelete:false}}

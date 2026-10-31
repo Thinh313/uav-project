@@ -1,0 +1,102 @@
+{
+  "format": "aeris-ioadmit13-protocol",
+  "version": 1,
+  "package": "vn.rtr.aeris.cockpitio13",
+  "extendsReleaseProtocol": "evidence/betaintegrated01-cockpit05-release12/native/RELEASE-PROTOCOL01.json",
+  "physicalFormat": "EXACT_COMPACT10_VERSION2",
+  "rxGroup": {
+    "method": "NativeSegments.rxGroup(byte[] raw,long originalSocketReceiptNs)",
+    "maximumRawBytes": 4096,
+    "orderedRows": [
+      "RX",
+      "AP_RX_GROUP",
+      "AP_RX_GROUP_COMMIT"
+    ],
+    "durability": "First two rows fsynced once before parser. Third row actual completion witness written after returned barrier, pending until next strict append/transaction/TX_INTENT/finish; explicit flush before observable presentation. No record omission.",
+    "groupKeys": [
+      "format",
+      "version",
+      "receiptElapsedNs",
+      "rawRecordN",
+      "rawPayloadSHA256",
+      "groupRecords",
+      "kernelNetworkAge"
+    ],
+    "completionKeys": [
+      "format",
+      "version",
+      "receiptElapsedNs",
+      "rawRecordN",
+      "rawPayloadSHA256",
+      "groupRecordN",
+      "groupPayloadSHA256",
+      "groupDurableNs",
+      "parserAfterBarrier",
+      "completionWitnessDurability"
+    ],
+    "clockOrder": "originalReceipt <= rawAppend <= groupAppend <= actualGroupDurable <= completionAppend",
+    "partialWriteSyncOrClockFailure": "POISON_NO_PARSE_NO_RESEND",
+    "reserve": "THREE_ADJACENT_ROWS_PHYSICAL_LOGICAL_TOTAL_BEFORE_FIRST_MUTATION",
+    "wireAndPublication": "Strict TX_INTENT / authority candidate append fsync includes pending completion witness. Owner presentation explicitly flushes if still pending.",
+    "sourceAttestationLimit": "LOCAL_SOURCE_BOUND_NOT_KERNEL_NETWORK_AGE_OR_EXTERNAL_ATTESTATION"
+  },
+  "admission": {
+    "kind": "CONTROL_INPUT_ADMISSION_REJECTED",
+    "keys": [
+      "reason",
+      "reasonClass",
+      "sequence",
+      "atNs",
+      "invalidInput",
+      "fullInvalidInputRetained",
+      "phase",
+      "disposition",
+      "priorLeaseId",
+      "priorExpiryNs",
+      "authorityRestorable"
+    ],
+    "optionalExistingCarrier": "commitReceipt",
+    "fullOriginalTuple": "Original immutable input context/source/provenance/axes/pointers/action/uptime/elapsed/observation; malformed values bounded using original invalidInput encoding.",
+    "expiryClass": "AdmissionExpiry",
+    "expiryReasons": [
+      "INPUT_SAMPLE_EXPIRED",
+      "UI_OBSERVATION_EXPIRED",
+      "PRIOR_LEASE_EXPIRED_BEFORE_CANCEL_CHECK"
+    ],
+    "shapeIdentityBeforeTemporal": true,
+    "expiryDisposition": "EXPIRED_NO_AUTHORITY",
+    "genericDisposition": "INVALID_FATAL",
+    "expiry": "Durable rejection then explicit CONTROL_REVOKED INPUT_ADMISSION_EXPIRED; finite original safety path only; new fresh consent required; never renew oldlease or rebind newerUI to oldinput.",
+    "generic": "Durable full rejection then INVALID_INPUT revoke and original fatal exception. Storage failures propagate, never safe-expiry.",
+    "successfulNominalShort": "ANY_ADMISSION_REJECTION_NONQUALIFYING_EVEN_IF_FINITE_SAFE_CLEANUP",
+    "receiver": "Validate exact shapes, original tuple/domain/sequence/temporal predicates, priorlease, immediate causal revocation. No silent skip."
+  },
+  "unchanged": {
+    "inputUIFreshnessNs": 200000000,
+    "frameFreshnessNs": 250000000,
+    "loopNs": 500000000,
+    "geographyNs": 1500000000,
+    "samplePeriodNs": 50000000,
+    "FIFO": 128,
+    "globalPerLoop": 16,
+    "speedup": 1,
+    "capMs": 500,
+    "physicalNativeMiB": 160,
+    "decodedNativeMiB": 512,
+    "physicalSegmentMiB": 1,
+    "logicalSegmentMiB": 8,
+    "maxSegments": 256,
+    "fsyncBeforeWireAndSensor": true
+  },
+  "limits": [
+    "A single slow barrier can still expire input; no real-time scheduler/storage guarantee.",
+    "No actual Android/SITL acceptance from mocks.",
+    "No production/HeraHub/HID/realPayload acceptance.",
+    "Unknown invalidation/fence failure without corroborating durable cause remains fatal; independent semantic reader rejects unprovable generic reason rather than accepting a string. Physical chain verification can still preserve failed raw separately."
+  ],
+  "sessionBinding": {
+    "CONTROL_PROVIDERAdditionalMandatoryField": "selectedUIEpoch",
+    "meaning": "Actual selected native session/UI epoch source-bound binding; not external UI or physical-device attestation.",
+    "reader": "Strict selected13 provider requires positive integer; rejected expiry observation must match exactselectedepoch; foreignepoch remains INVALID_FATAL."
+  }
+}

@@ -1,0 +1,156 @@
+{
+  "schema": 1,
+  "assurance": "UNKNOWN_DATA_NOT_ESTIMATED",
+  "items": [
+    {
+      "id": "H75-01",
+      "domain": "Airframe Hera",
+      "missingFields": "Số rotor, vị trí/hướng trục và chiều quay rotor, mixer, kích thước bao/cánh quạt",
+      "units": "m; FRD; rotor index",
+      "requiredSource": "CAD + mixer/frame config đúng serial/revision",
+      "blocks": "pitch+yaw, hỏng motor, collider",
+      "status": "UNKNOWN",
+      "owner": "RtR engineering; individual unassigned"
+    },
+    {
+      "id": "H75-02",
+      "domain": "Mass / CG / inertia",
+      "missingFields": "Không tải và từng payload; mass, vị trí CG, tensor quán tính và sai số phép đo",
+      "units": "kg; m FRD; kg·m²",
+      "requiredSource": "Cân/đo/CAD cùng trạng thái pin và payload",
+      "blocks": "Hera dynamic fidelity",
+      "status": "UNKNOWN",
+      "owner": "RtR engineering; individual unassigned"
+    },
+    {
+      "id": "H75-03",
+      "domain": "Propulsion",
+      "missingFields": "Thrust/torque vs RPM/PWM/voltage; saturation; actuator lag; ESC mapping",
+      "units": "N; N·m; RPM; V; s",
+      "requiredSource": "Thrust bench + ESC logs và firmware",
+      "blocks": "gia tốc, cân bằng, motor fault",
+      "status": "UNKNOWN",
+      "owner": "RtR engineering; individual unassigned"
+    },
+    {
+      "id": "H75-04",
+      "domain": "Autopilot",
+      "missingFields": "Firmware version/git hash, binary SHA, full parameter file, modes, mixer, avoidance/failsafe config",
+      "units": "versioned configuration",
+      "requiredSource": "Export từ aircraft đúng cấu hình demo",
+      "blocks": "SITL/HIL behavior parity",
+      "status": "UNKNOWN",
+      "owner": "RtR engineering; individual unassigned"
+    },
+    {
+      "id": "H75-05",
+      "domain": "Flight references",
+      "missingFields": "Command RC/setpoint, gyro, attitude quaternion, position/velocity, motor output/RPM, clock/timestamp, payload và gió",
+      "units": "rad/s; NED m/m·s⁻¹; monotonic s",
+      "requiredSource": "Log pitch+yaw hai dấu, tuần tự/đồng thời, nose-in; không gây sự cố bay thật để lấy dữ liệu",
+      "blocks": "Hera tolerance và holdout validation",
+      "status": "UNKNOWN",
+      "owner": "RtR engineering; individual unassigned"
+    },
+    {
+      "id": "H75-06",
+      "domain": "Proximity sensors",
+      "missingFields": "Model/firmware, mounting transforms, FOV, min/max, sample rate, latency, noise, blind spots/occlusion",
+      "units": "m; FRD transforms; Hz; ms",
+      "requiredSource": "Datasheet + raw capture timestamp + calibration",
+      "blocks": "phanh/nhích, mất sensor",
+      "status": "UNKNOWN",
+      "owner": "RtR engineering; individual unassigned"
+    },
+    {
+      "id": "H75-07",
+      "domain": "Avoidance reference",
+      "missingFields": "Tốc độ tiếp cận, khoảng hở thực, mode, tham số, RC input, sensor validity, decel và đáp ứng khi tiếp tục đẩy cần",
+      "units": "m; m/s; m/s²; s",
+      "requiredSource": "Log cấu hình demo + controlled safe sensor/bench reference",
+      "blocks": "Xác nhận claim10m/creep; không hardcode",
+      "status": "UNKNOWN",
+      "owner": "RtR engineering; individual unassigned"
+    },
+    {
+      "id": "H75-08",
+      "domain": "Collision / terrain",
+      "missingFields": "Vehicle envelope, scene/collider metre scale, terrain origin/CRS/vertical datum và độ phân giải/sai số",
+      "units": "m; CRS; AMSL/ellipsoid/AGL definition",
+      "requiredSource": "CAD/collider + survey/DEM provenance + approved virtual contact scenarios",
+      "blocks": "Full terrain/finite objects/contact response",
+      "status": "UNKNOWN",
+      "owner": "RtR engineering; individual unassigned"
+    },
+    {
+      "id": "H75-09",
+      "domain": "Suspended payload",
+      "missingFields": "Khối lượng, chiều dài dây, điểm treo, stiffness/damping, drag và giới hạn tải",
+      "units": "kg; m; N/m; N·s/m",
+      "requiredSource": "Rig measurements + safe pendulum video/log; separate fit/validation",
+      "blocks": "sling/wind oscillation",
+      "status": "UNKNOWN",
+      "owner": "RtR engineering; individual unassigned"
+    },
+    {
+      "id": "H75-10",
+      "domain": "Battery",
+      "missingFields": "Chemistry/cells/capacity, OCV vs SOC/temp, internal resistance vs SOC/temp/age, current calibration",
+      "units": "Ah; V; A; Ω; °C; Wh",
+      "requiredSource": "Bench discharge/step-load + flight current/voltage logs",
+      "blocks": "SOC/voltage/altitude fidelity",
+      "status": "UNKNOWN",
+      "owner": "RtR engineering; individual unassigned"
+    },
+    {
+      "id": "H75-11",
+      "domain": "Wind / atmosphere",
+      "missingFields": "Gió đo theo vị trí/thời gian, gust spectrum, nhiệt độ/áp suất và dữ liệu wake nếu có",
+      "units": "m/s NED; Pa; °C; kg/m³",
+      "requiredSource": "Anemometer/log/environment source with uncertainty",
+      "blocks": "building wake/rain/VRS; no invented CFD",
+      "status": "UNKNOWN",
+      "owner": "RtR engineering; individual unassigned"
+    },
+    {
+      "id": "H75-12",
+      "domain": "Motor failure behavior",
+      "missingFields": "Aircraft fault detection, thresholds, control allocation, remaining authority, observed mode changes; correct motor count",
+      "units": "versioned config/events",
+      "requiredSource": "Firmware/test-bench/HIL data, not speculative crash/auto-land rule",
+      "blocks": "1/2/3 motor fault acceptance",
+      "status": "UNKNOWN",
+      "owner": "RtR engineering; individual unassigned"
+    },
+    {
+      "id": "H75-13",
+      "domain": "RPM / audio",
+      "missingFields": "RPM telemetry validity and source; blade count; synchronized audio/RPM and microphone geometry",
+      "units": "RPM; Hz; m; audio sample rate",
+      "requiredSource": "ESC logs + permitted measured audio",
+      "blocks": "RPM/audio realism",
+      "status": "UNKNOWN",
+      "owner": "RtR engineering; individual unassigned"
+    },
+    {
+      "id": "H75-14",
+      "domain": "HID",
+      "missingFields": "VID/PID/descriptors, OS/driver, axes/ranges/neutral/mapping/deadzone, calibration and timing/disconnect events",
+      "units": "device IDs; raw counts; ms",
+      "requiredSource": "Actual HeraHub/controller USB capture on intended laptop",
+      "blocks": "physical HID / remote training",
+      "status": "UNKNOWN",
+      "owner": "RtR engineering; individual unassigned"
+    },
+    {
+      "id": "H75-15",
+      "domain": "Acceptance ownership",
+      "missingFields": "Domain tolerance and trial protocol, config/seed/clock, repeated trials and held-out reference set",
+      "units": "tolerance units per metric",
+      "requiredSource": "RtR simulator/flight experts approve before collection",
+      "blocks": "No blanket Hera PASS from mock counts",
+      "status": "UNKNOWN",
+      "owner": "RtR engineering; individual unassigned"
+    }
+  ]
+}

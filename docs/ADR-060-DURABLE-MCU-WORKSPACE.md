@@ -1,0 +1,7 @@
+# ADR060 · durable workspace, evidence separate from live MCU authority
+
+Successor47 composes46runtime and45replay, unchangedimports. Persistsealedlogicaloperationepochs with capturedinitial/newsessioncontexts, result/error/state digests andpendingintent. Coldreplay computesmockpeer stored/appliedanddraft/history; onlystoredmockconfig andtypedlocaldraft survive intonewruntime. Oldcurrent45record archived ashistoricalinterruptedstate; oldcalibration/ACK/pendingoperation never resumed. Pendingintent classifiedinterrupted byappendedmarker, no overwrite/delete.
+
+Reuse44immutableJVMjournal at newprivate.local/herapersist47/operator path. CAS andperprocessserialization; journalOSlockprotectsseparatewriters. Validatebodyandsemanticappendlineagebeforecommit; nosuccessuntilintentandresultcommittedexactbytes. Unknownreply/pendinghead/corruptchain quarantine, noauto retry/recovery/deletion. Explicitread canreconcile knownHEAD but requiresfreshmockhandshake. Quota/floor failbeforeoperation wherepossible; alreadyloggedintent retainsuncertainty ifresultwritefails.
+
+Browserworkspace persistence storesonlytoken-freeconfiguration/evidence. EphemeralHTTPtoken renewedonreload; cookie/localStorage not used forauthority. Importsreadonly; expectedhashnotcryptoidentity. No actualphysicalflashdurability,SDK/Android/signing/Flyintegration. Old46RAMnotautomigrated; usercanexportits45record andreview separately.

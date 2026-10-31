@@ -1,0 +1,12 @@
+# TIP-QGC01 · v0.7 / M2 interchange and simulator campaign
+
+Owner 2026-10-12 explicitly prioritizes SDK/device-independent QGC mission compatibility and SITL. Single agent Contractor → Builder → Verify; no independent review claim. No RAGAS application code. No SDK/emulator/dependency installation.
+
+AC01 lock official QGC v5.1.5 commit/schema/legacy fixture/license snapshots with hashes, Refinery sourced claims and reviewed scope. Moving docs are secondary, tagged source resolves disagreements.
+AC02 bounded Plan v1 / mission v2 intake; support current seven-parameter and legacy coordinate/four-parameter SimpleItem. Preserve original bytes/metadata/unknown fields, never replace prior valid intake on failed import. Firmware/vehicle/frame/unsupported-command fences are separate from structural intake.
+AC03 export AERIS compiled survey as QGC SimpleItems, home excluded from sequence; correct relative altitude mode, camera start/stop and speed. Separate simulation lineage receipt; never disguise DSM simulator offsets as operational terrain.
+AC04 inspect Survey v4/v5 TransectStyle v1/v2 stored Items and polygon. Preserve complex object on round-trip; only execute explicit stored-command snapshot, no QGC regeneration equivalence claim. Block missing/stale/untrusted datum or unsupported commands and nonempty fences/rally rather than silently drop them.
+AC05 deterministic loopback compiler validates Home/500m/5–120m, takeoff-first/RTL-last, ArduCopter type, supported parameters; no coordinate relocation, frame conversion or silent mission rewrite. Raw null yaw preserved in Plan, explicit Copter-4.7.1 ignored-yaw normalization recorded in preview.
+AC06 operator interchange view previews route, ordered commands, home/altitude/camera and reasons; import/restore/export/remove/offline, explicit simulation review before upload. Server reparses original Plan and enforces same gates; readback is required before AUTO.
+AC07 actual ArduCopter 4.7.1 upload/readback/GUIDED/ARM/AUTO/landing, cached-complex snapshot and simple roundtrip; camera CAM dataflash; repeated real link gap/timeout/read-only recovery and disarmed reboot mismatch. Retain actual journals and failed attempts, no command retries after ambiguity.
+AC08 meaningful negative fixtures + browser layout/touch/offline + existing regression + SOT/source gates. QGC application open/save, QGC-generated complex fixture, HeraHub/HIL/physical flight remain NOT_CHECKED when absent. Publish completion/coverage and clean scratch/logs/Docker dangling images.

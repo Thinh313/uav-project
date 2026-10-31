@@ -1,0 +1,11 @@
+# ADR-101 — Isolated COCKPIT85 Android mock journey
+
+Package vn.rtr.aeris.native86 and origin native86.aeris.invalid isolate Android data from native84. Default entry uses the persisted native mock journey. fly84 module remains unexecuted; no host bridge token is supplied. COCKPIT85 assets are reused without edits apart from the documented entry; new layout86 owns compatibility fallbacks for older WebView and bounded UI diagnostics. Maintain byte/format identities in old evidence. Development key reuse is authorized; no production signature or selection.
+
+Use an owned fresh AVD86 on emulator-5582; retain AVD84. APK/ART/native UI/journal evidence is scoped to Android emulator, not HeraHub or physical flight. GPU/material support must be observed; unsupported glass uses documented translucent fallback rather than claiming unmeasured blur.
+
+Runtime retention: keep one rebuildable, exact-pinned SDK under this workspace while disk remains above20GiB; remove duplicate download chunks/archives after clean emulator closure. Runtime cache fingerprints are separate from immutable mission/source evidence so later deliberate cache cleanup does not rewrite historic evidence.
+
+Observed Android compatibility: API33 WebView101 lacks :has but supports backdrop-filter. layout86 mirrors engineering-panel/video visibility as data attributes. Fullscreen mode ignores adjustResize; build01 screenshot reproduced the IME occlusion. Build02/03 size only the WebView to the native visible frame, use an edit-only scroll surface and retain all safety/storage logic. Only isolated native86 source was edited; accepted development03 is pinned separately from earlier build01 pins. Native UI diagnostics remain renderer self-observations, cross-checked with screenshots/UIAutomator and raw app-private journal bytes.
+
+SAF late-result finding: a second provider picker held beyond the inherited60second bridge timer surfaced UNKNOWN rather than a success claim. Read-only full manifest reconciliation verified the later provider output before explicit fresh-workspace selection. The first timely export/import/activation/restart passed. Improve this timeout UX in a future isolated change; do not treat late file write alone as an acknowledged UI completion or retry automatically.

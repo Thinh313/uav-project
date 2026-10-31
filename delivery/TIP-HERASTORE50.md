@@ -1,0 +1,14 @@
+# TIP HERASTORE50 · archival / verified import / confirmed quota reclamation
+
+Authorized15/10/2026: controlled workspace archival/reclamation using mock/replay, no automatic evidence deletion. Isolated new50 root using49 data format; do not mutate the live49 store or frozen45–49/source/candidate/SOT/trust/ENDURE. No SDK/APK/build/signature/SITL/emulator. One agent specifies/builds/verifies; no independent review.
+
+A unit is an inactive group with its attributable workspace journals, or a retained-aborted switch. Published selection-chain events and active workspace are ineligible. Export a bounded streaming archive, import it into a separate receiver, read back every byte and replay applicable49/47 semantics. Raw/incomplete evidence stays explicitly quarantined. Only a server-owned verified export+import receipt and a fresh source/selection check permit a concrete cleanup plan. User must check acknowledgement and type exact unit ID; no automatic cleanup. Same-host retained copies reclaim hot quota, not host disk space.
+
+AC01: safe bounded manifest/chunk stream export, exact bytes/empty directories, expected whole-package SHA, no traversal/symlink/hardlink/duplicate/truncated/trailing data; raw partial input cannot be claimed healthy.
+AC02: actual receiver extraction/readback plus semantic49/47 replay, fresh disconnected inspection, no commands/activation. Receipt pins both retained archive and restored data; missing/changed receiver or archive invalidates cleanup.
+AC03: active unit, published selection log, pending switch, unknown association, stale selection/source/receipt, absent confirmation all refuse before removal. Quota counts retained and incomplete copies; host20GiB+reserve; cold512MiB cap.
+AC04: cleanup moves only an authorized hot replica to a transaction, then unlinks only manifest files after verified retention; per-file intent/result. No rm-rf product cleanup, no automatic retry; all authorization/audit/archives stay. Crash retains charged quota until explicit continue or restore-before-deletion; unknown missing files never become PASS.
+AC05: export→download/import→verify→review/type ID/ack→reclaim, receipt/source mismatch and restart/lost response,1280/1024/360/52px browser QA. Mock store separate from8803.
+AC06: host/replay/adversarial/fault/actual owned-process kill tests, source/evidence fingerprints and cumulative protection15796/ENDURE inventory. Not-run required checks NOT_CHECKED; owned scratch cleanup documented.
+
+Limits: single cooperating owner per50 root, no hostile filesystem-owner certification. Imports are archive inspection, not automatic hot activation. Incomplete units without attributable workspace IDs cannot be cleaned by guessing; published selection history cannot be pruned without a new checkpoint design. Verify off-host retention separately; local import/download does not prove it.

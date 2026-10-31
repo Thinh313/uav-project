@@ -1,0 +1,8 @@
+import assert from'node:assert/strict';import fs from'node:fs';import{retainCockpitToken02}from'./position-validity.mjs';
+const rows=[],base={active:true,clientActive:true,positionUsable:true};
+assert.equal(retainCockpitToken02('lease',base),'lease');rows.push('existing_active_lease_retained_only');
+for(const key of['active','clientActive','positionUsable']){assert.equal(retainCockpitToken02('lease',{...base,[key]:false}),null);rows.push(key+'_loss_clears_local_lease');}
+assert.equal(retainCockpitToken02(null,base),null);rows.push('restored_foreground_or_new_run_never_restores_token');
+const css=fs.readFileSync('pilot/field02/media-panel.css','utf8');assert(css.includes('body[data-theme=day] .field-media-panel button.fmp-primary:enabled{color:#51420b'));const lum=hex=>{const rgb=hex.match(/\w\w/g).map(x=>parseInt(x,16)/255).map(x=>x<=.04045?x/12.92:((x+.055)/1.055)**2.4);return rgb[0]*.2126+rgb[1]*.7152+rgb[2]*.0722;};const fg=lum('51420b'),bgWhite=lum('ffffff'),contrast=(bgWhite+.05)/(fg+.05);assert(contrast>=7);rows.push('day_primary_declared_dark_ink_on_light_glass_target_contrast');
+const ui=fs.readFileSync('pilot/field02/ui.mjs','utf8');assert(ui.indexOf('token=retainCockpitToken02')<ui.indexOf("$('#owners').textContent"));assert(ui.includes('FIELD02 · Android / host'));rows.push('header_painted_after_local_token_cleanup_compact_source_label');
+const report={status:'PASS',at:new Date().toISOString(),rows,contrastOnWhite:contrast,scope:'UNIT_AND_CSS_DECLARATION_CHECK_NOT_ACTUAL_ANDROID_PIXEL_CONTRAST'};fs.writeFileSync('evidence/field02/host-ui-closure-tests01.json',JSON.stringify(report,null,2)+'\n',{flag:'wx'});console.log(JSON.stringify(report));

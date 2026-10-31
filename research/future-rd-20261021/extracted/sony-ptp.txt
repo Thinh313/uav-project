@@ -1,0 +1,148 @@
+Camera Remote Command | Camera Remote Toolkit | SONY
+SDK
+PTP Command
+Camera Remote Toolkit
+SDK
+PTP Command
+日本語
+Develop environment-independent camera control applications with PTP
+Camera Remote Command
+Camera Remote Command allows software developers to integrate Sony cameras into their solutions and applications. With this reference, developers can create customized software applications to remotely control Sony cameras from your device via a PTP connection and capture the image data with Sony cameras. This reference describes many control commands, such as changing the camera settings, shutter release, and live view monitoring.
+Contents
+Command Reference
+Example Code
+Supported Devices
+ILX-LR1
+ILCE-1M2, ILCE-1, ILCE-9M3, ILCE-9M2, ILCE-7RM6, ILCE-7RM5, ILCE-7RM4A, ILCE-7RM4, ILCE-7CR, ILCE-7SM3, ILCE-7M5, ILCE-7M4, ILCE-7CM2, ILCE-7C, ILCE-7RM3A, ILCE-7M3, ILCE-7M2, ILCE-6700, ILCE-6600, ILCE-6400A, ILCE-6400, ILCE-6100A, ILCE-6100
+BURANO(MPC-2610), ILME-FX6V/ILME-FX6T, ILME-FX3A, ILME-FX3, ILME-FX2, ILME-FX30, PXW-Z300, PXW-Z380, PXW-Z200, HXR-NX800
+BRC-AM7, ILME-FR7 (Ver. 3.00 or later)
+ZV-E1, ZV-E10, ZV-E10M2, ZV-1M2, ZV-1F, ZV-1A, ZV-1
+DSC-RX1RM3, DSC-RX0M2, DSC-RX100M7A, DSC-RX100M7, DSC-RX100M5A, DSC-RX10M4, DSC-HX99
+Only supports the latest firmware version.
+Supported Interfaces
+USB
+Wired LAN
+Wireless LAN (Wi-Fi)
+Refer to the README in the provided contents for information on the interface compatibility of each device.
+Apply for Camera Remote Command
+For whom located in Canada or the USA
+APPLY
+For whom located in Mainland China
+APPLY
+For whom located in the EU, the UK, Norway, Switzerland, Turkey, Bosnia and Herzegovina, Macedonia, Moldova, Montenegro or Serbia
+APPLY
+For whom located in Australia and New Zealand
+APPLY
+For whom located in Central Asia, Middle East and Africa (Please note that availability depends on the country.)
+APPLY
+For whom located in India
+APPLY
+For whom located in Taiwan
+APPLY
+For whome located in Korea
+APPLY
+For whome located in Hong Kong
+APPLY
+For whom located in other countries in Asia Pacific region (Please note that availability depends on the country.)
+APPLY
+LICENSE AGREEMENT
+Notification
+2026-Jun-10
+Camera Remote Command Ver. 2.02.00 has been released.
+Main changes:
+Added support for ILCE-7RM6.
+Camera Control PTP 2 commands may become unusable on some models from 2027, so their use is not recommended. For details, refer to the supplied README file.
+2026-Feb-3
+Camera Remote Command Ver. 2.01.00 has been released.
+Main changes:
+Added support for ILCE-7M5, PXW-Z300, PXW-Z380, and DSC-RX1RM3.
+Added the following functions.
+For details, refer to the command reference.
+Support for “Peaking Display,” “Zebra Display,” and when recording video “Marker Display”
+*1
+*1
+Compatible model: ILX-LR1.*
+* It is necessary to update the software to the latest version.
+2025-Oct-30
+Camera Remote Command Version 2.00.02 has been released.
+Main changes:
+Updated the Compatibility section for ILCE-9M3.
+Updated the Note regarding commands requiring installation of a license on the camera.
+2025-Aug-5
+Camera Remote Command Version 2.00.01 has been released.
+Main changes:
+Updated the Compatibility section for some models, such as the ILCE-1M2.
+Deleted unnecessary notations from the “SDIO_GetContentData” specifications.
+2025-Jun-23
+Camera Remote Command Version 2.00.00 has been released.
+Main changes:
+Added support for ILCE-1M2, ILCE-6400A, ILCE-6100A, ILME-FX3A, ILME-FX2, PXW-Z200, HXR-NX800, BRC-AM7, ILME-FR7 (Ver. 3.00 or later), ZV-1A, and DSC-RX100M7A.
+Added support for over 300 types of commands, including some with functionality equivalent to Camera Remote SDK Ver. 2.00.00.
+*1*2
+Remote emulation. which allows users to remotely receive display information from the camera including On-screen display. This provides the level of remote-control equivalent to a non-remote manipulation.
+*2
+Background File Transfer: Remote control and file transfer can be performed simultaneously in order to maximise the efficiency of any remote production.
+*2
+Remote Firmware Update: Users can now update the camera’s firmware remotely within user application. In the future, when a new firmware for the camera is provided by Sony, it can be applied without disassembling the system.
+*2
+Support for deleting data stored on the camera: It is now possible to build more efficient workflows for environments where shooting, recording, transferring data, and deleting data stored on the camera are performed repeatedly.
+*2
+Support for pan/tilt type cameras.
+*3
+Corrected errors in the Compatibility section of the specification.
+For 25 models including the ZV-E10 in the Compatibility section, check marks were incorrectly displayed for commands that in fact do not work on the camera models in question. The check marks have been removed for the incompatible commands.
+*1
+Some functions, such as Recorded Video Preview and on some models live view monitoring, are not supported. For details, refer to the command reference.
+*2
+For information on the commands supported by each model, refer to the command reference.
+*3
+BRC-AM7 and ILME-FR7 (Ver. 3.00 or later)
+2024-Oct-16
+Camera Remote Command Version 2024.1.0 has been released.
+Main changes:
+Added support for control via IP connection (PTP-IP).
+*1
+Added support for MPC-2610(BURANO), ILME-FX6V/ILME-FX6T, ILCE-9M3, and ZV-E10M2.
+Added some functions as following.
+For details, refer to the command references.
+Added over 100 types of commands. Recording media settings which arbitrarily switch the memory card slot for recording still images and movies depending on the shooting situation, and ISO AUTO Maximum/Minimum settings according to the shooting environment are available.
+*2
+*1
+For information on the supported interfaces for each model, refer to the README included in the provided materials.
+*2
+For information on the commands supported by each model, refer to the command reference.
+2024-Apr-12
+Camera Remote Command Version 2024.0.0 has been released.
+Related Websites
+Camera Remote SDK
+Efficiently develops camera control applications with high-level APIs
+Camera Remote SDK
+More information
+Digital Imaging Solutions
+Featuring a wide range of solutions and case studies utilizing the Camera Remote Command
+FAQ
+Is the Camera Remote Command charged? Do I need to pay for it?
+It is free of charge.
+Is it possible for developers to sell apps developed based on Camera Remote Command?
+Yes. Developers can sell their apps for legitimate purposes.
+Can personal users download Camera Remote Command?
+No. Camera Remote Command is only available for corporate customers.
+What is the difference between Camera Remote SDK and Camera Remote Command?
+Camera Remote SDK
+Camera Remote SDK is a high-level command system designed for development efficiency that enables operation and control of Sony digital cameras using dedicated API provided by Sony. This is ideal for use with high-level APIs to efficiently develop programs.
+Camera Remote Command
+Camera Remote Command enables remote control of cameras using a communication protocol that is Sony's proprietary extension of the ISO standard PTP (Picture Transfer Protocol). This increases convenience when operating camera products from different brands with a single software, or when applying existing software to Sony’s digital cameras.
+Customers using ILX-LR1 Ver. 2.00 or later, ILCE-7CM2 Ver. 2.00 or later, ILCE-7CR Ver. 2.00 or later, or ILCE-9M3 Ver. 4.00 or later
+The setting value assigned to “Focus Position Setting” is no longer compatible after updating the camera’s system software. After updating the system software, measure the “Focus Position Setting” setting value once again.
+Trademarks
+Microsoft and Windows are either registered trademarks or trademarks of Microsoft Corporation in the U.S. and other countries.
+Linux is the registered trademark of Linus Torvalds in the U.S. and other countries.
+Other system names, product names, and service names are registered trademarks or trademarks of each company.
+PAGE TOP
+Terms of Use
+About this Site
+Privacy Policy
+CA Privacy Notice
+Cookie Policy
+Copyright
+Sony Corporation

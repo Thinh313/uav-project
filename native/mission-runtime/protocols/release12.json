@@ -1,0 +1,257 @@
+{
+  "format": "aeris-release12-protocol",
+  "version": 1,
+  "status": "IMPLEMENTED_SCHEMA_SOURCE_HOLD_PENDING_INDEPENDENT_GATE",
+  "package": "vn.rtr.aeris.cockpitio12",
+  "contextKeys": [
+    "run",
+    "epoch",
+    "boot",
+    "operator",
+    "generation",
+    "profileId"
+  ],
+  "notice": {
+    "kind": "CONTROL_RELEASE_NOTICE",
+    "format": "aeris-release12-notice",
+    "version": 1,
+    "keys": [
+      "format",
+      "version",
+      "context",
+      "source",
+      "inputProvenance",
+      "viewEpoch",
+      "oldFence",
+      "newFence",
+      "releaseId",
+      "observedAtNs",
+      "permitSerialAtRelease",
+      "uiThreadId",
+      "touchRevision",
+      "releaseRevision",
+      "motionRawSHA256",
+      "motionContext",
+      "axes",
+      "pointers",
+      "foreground",
+      "focused",
+      "presentedFly"
+    ],
+    "motionContextKeys": [
+      "action",
+      "side",
+      "eventSource",
+      "deviceId",
+      "flags",
+      "eventUptimeMs",
+      "downUptimeMs",
+      "receiptElapsedNs",
+      "viewWidthPx",
+      "viewHeightPx"
+    ],
+    "actionAllowlist": [
+      1,
+      3,
+      6
+    ],
+    "axes": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "pointers": 0,
+    "source": "exact original input source touch-UUID",
+    "inputProvenance": "exact original selected provenance",
+    "hashDefinition": "SHA256 exact Values.bytes(raw) nested raw object. CONTROL_RELEASE_MOTION full raw is fsynced before notice/outcome, original queued TOUCH_MOTION_EVENT may duplicate source event later.",
+    "bounds": {
+      "history": 16,
+      "ageNs": 200000000
+    },
+    "ordering": "oldFence+1==newFence; touchRevision>inputObservation.touchRevision; releaseReceiptElapsedNs>=inputObservation.uiHeartbeatElapsedNs; receipt<=noticeObserved<=actualdecision; inputelapsed<=actualdecision; both input/UI age<=200ms; source/context/view/UIthread exact",
+    "rawFields": [
+      "source",
+      "kind",
+      "side",
+      "eventSource",
+      "deviceId",
+      "flags",
+      "action",
+      "eventUptimeMs",
+      "downUptimeMs",
+      "receiptElapsedNs",
+      "viewWidthPx",
+      "viewHeightPx",
+      "radiusPx",
+      "points",
+      "history"
+    ],
+    "sideAllowlist": [
+      0,
+      1
+    ],
+    "observedAtSemantics": "Actual first observation AFTER successful release CAS, captured once by UI or writer and materialized immutably. An upper bound on publication, never the exact publication instant. Motion receipt is original event lower bound. All observed-State handles materialized before final authority decision clock. No extra field, IO or thread.",
+    "coldKnownBeforeDecision": "Only strict observedAtNs < acceptedDecisionNs establishes publication-before-decision by clock upper bound; equality and delayed intervals do not establish exact chronology. Existing notice ordinal before candidate is independent causal order. Source-pinned stable-state decision/entry guards remain mandatory."
+  },
+  "cancellation": {
+    "format": "aeris-release12-cancellation",
+    "version": 1,
+    "keys": [
+      "format",
+      "version",
+      "context",
+      "phase",
+      "source",
+      "inputSequence",
+      "viewEpoch",
+      "oldFence",
+      "newFence",
+      "decisionNs",
+      "notices",
+      "dispatchPermitEntered"
+    ],
+    "phases": [
+      "PRE_COMMIT",
+      "AUTHORITY_OR_PRE_SOCKET",
+      "DISPATCH_ENTRY"
+    ],
+    "dispatchPermitEntered": false,
+    "noticeRefKeys": [
+      "recordN",
+      "payloadSHA256",
+      "releaseId",
+      "oldFence",
+      "newFence",
+      "motionRecordN",
+      "motionPayloadSHA256"
+    ],
+    "reuse": "one immutable notice can cancel several distinct old-fence sample sequences or intents; never renew/grant; exact row references must resolve. No globally unique wireSHA assumption."
+  },
+  "preQueue": {
+    "kind": "CONTROL_INPUT_CANCELLED_BEFORE_COMMIT",
+    "keys": [
+      "input",
+      "expectedCancellation",
+      "atNs"
+    ],
+    "fullInputRetained": true
+  },
+  "transaction": {
+    "candidate": "unchanged aeris-authority-transaction/v1 CONTROL_INPUT_TX or CONTROL_CONSENT_TX",
+    "receipt": "unchanged aeris-authority-commit-receipt/v1 + expectedCancellation only when disposition CANCELLED",
+    "carrier": "CONTROL_COMMIT_CANCELLED",
+    "carrierKeys": [
+      "reason",
+      "atNs",
+      "noAutomaticRegrant",
+      "commitReceipt"
+    ],
+    "reason": "EXPECTED_RELEASE_CANCELLATION",
+    "CANCELLED": "never publishes latest input/grant/lease/renew; original input+UI+priorlease freshness floors must pass actual postdurability decision before classification",
+    "optionalPriorReceiptCarriers": [
+      "CONTROL_INPUT_CANCELLED_BEFORE_COMMIT",
+      "CONTROL_COMMIT_CANCELLED"
+    ]
+  },
+  "wire": {
+    "kind": "TX_REFUSED",
+    "baseKeys": [
+      "wireSHA256",
+      "intentRecordN",
+      "reasonClass",
+      "reason",
+      "disposition",
+      "socketCallbackEntered",
+      "run",
+      "epoch"
+    ],
+    "extraKey": "expectedCancellation",
+    "reasonClass": "Cancel",
+    "reason": "EXPECTED_RELEASE_CANCELLATION",
+    "disposition": "PRE_SOCKET_REFUSED",
+    "socketCallbackEntered": false,
+    "phase": "recognized typed release only in approval/dispatch-entry phase; outcome barrier success required; same exception from sender -> TX_UNKNOWN+poison"
+  },
+  "handled": {
+    "kind": "CONTROL_EXPECTED_INPUT_CANCELLED",
+    "keys": [
+      "expectedCancellation",
+      "causePhase",
+      "intentRecordN",
+      "outcomeRecordN",
+      "wireSHA256",
+      "atNs",
+      "userAuthorityRestored"
+    ],
+    "nonWireOrdinals": -1,
+    "userAuthorityRestored": false
+  },
+  "permit": {
+    "kind": "CONTROL_LOCAL_SEND_RETURNED",
+    "keys": [
+      "inputSequence",
+      "atNs",
+      "executionAccepted",
+      "dispatchPermit"
+    ],
+    "permitKeys": [
+      "serial",
+      "releaseFence",
+      "claimObservedNs",
+      "meaning"
+    ],
+    "meaning": "LOCAL_DISPATCH_ENTRY_PERMIT_NOT_KERNEL_OR_REMOTE_ATTESTATION",
+    "executionAccepted": false,
+    "linearization": "atomic CAS serial/fence only; no UI IO lock. UP after permit never retroactive NOT_SENT.",
+    "placement": "Existing local-send-returned durable row gains dispatchPermit; NO extra per-packet record/fsync."
+  },
+  "physical": "EXACT frozenCompact10 codec/version/bounds unchanged; only NativeSegments typed local entry/cancellation protocol derivative",
+  "guardsUnchanged": {
+    "inputUIAgeNs": 200000000,
+    "frameAgeMs": 250,
+    "loopNs": 500000000,
+    "FIFO": 128,
+    "globalPerLoop": 16,
+    "physicalMiB": 160,
+    "decodedMiB": 512
+  },
+  "releaseMotion": {
+    "kind": "CONTROL_RELEASE_MOTION",
+    "keys": [
+      "run",
+      "epoch",
+      "boot",
+      "operator",
+      "generation",
+      "profileId",
+      "inputProvenance",
+      "releaseId",
+      "raw"
+    ],
+    "ordering": "durable full original raw BEFORE notice BEFORE cancellation outcome BEFORE cleanup"
+  },
+  "inputSelectionCount": 42,
+  "linearizationLimit": "A release after CAS permit cannot retroactively claim NOT_SENT even if actual kernel write has not begun. No lock spans IO. Unknown post-entry remains UNKNOWN.",
+  "failedForensics": "Incomplete expected outcome may retain sealed FAILED only with CONTROL_FAILURE+CONTROL_FAILED_RESOURCES_CLOSED; not successful short/nominal acceptance.",
+  "revocation": {
+    "kind": "CONTROL_REVOKED",
+    "legacyKeys": [
+      "reason",
+      "atNs",
+      "previousLeaseId",
+      "previouslyActive",
+      "lastInputSequence",
+      "authorityRestorable"
+    ],
+    "optionalExactField": "releaseCause",
+    "TRUSTED_TOUCH_RELEASE": "exact durable NoticeRef sevenkeys",
+    "EXPECTED_RELEASE_CANCELLATION": "exact cancellation detail",
+    "placement": "same existing row/barrier; no extra hot fsync"
+  },
+  "regrant": {
+    "gate": "CONSENT original producerElapsedNs strictly greater than actual releaseCompletedNs sampled AFTER cleanup outcome barrier returns; WAIT_HOLD always refuses. Earlier queued click is a finite explicit button refusal, no grant.",
+    "snapshotField": "releaseCompletedNs",
+    "durableWitness": "Existing OPERATOR_TOUCH_ACTION for CONSENT gains exact releaseCompletedNs field; initial/noPriorRelease=-1. Successfulclick and consentdecision strictly greater than prior cleanup actual postbarrier completion; no new append/fsync."
+  }
+}

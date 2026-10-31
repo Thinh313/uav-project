@@ -1,0 +1,18 @@
+package vn.rtr.aeris.integration03;
+import java.util.*;import java.util.function.Consumer;import java.util.function.LongSupplier;
+/** Ordered, bounded, one-in-flight WebView delivery. Never retries a failed batch. */
+public final class UiPump98{
+ public interface Scheduler{void post(Runnable work);}public interface Evaluator{void evaluate(List<String>events,Runnable consumed)throws Exception;}
+ private static final class Entry03{final String text;final long enqueued;Entry03(String text,long at){this.text=text;enqueued=at;}}
+ private final Scheduler scheduler;private final Evaluator evaluator;private final Consumer<String>failure;private final LongSupplier diagnosticClock03;private final ArrayDeque<Entry03>queue=new ArrayDeque<>();private boolean scheduled,failed;private int totalCount,totalChars,inflightCount,inflightChars;private long serial,flight,scheduledAt03,lastCallbackAt03=-1;private List<Map<String,Object>>delivery03=Collections.emptyList();
+ public UiPump98(Scheduler scheduler,Evaluator evaluator,Consumer<String>failure){this(scheduler,evaluator,failure,()->System.nanoTime()/1000000);}
+ public UiPump98(Scheduler scheduler,Evaluator evaluator,Consumer<String>failure,LongSupplier diagnosticClock){this.scheduler=scheduler;this.evaluator=evaluator;this.failure=failure;diagnosticClock03=diagnosticClock;}
+ public void enqueue(String event){boolean overflow=false;synchronized(this){if(failed)return;if(event==null||event.length()>16384||totalCount>=64||totalChars+event.length()>524288)overflow=true;else{queue.add(new Entry03(event,diagnosticClock03.getAsLong()));totalCount++;totalChars+=event.length();schedule();}}if(overflow)fail("UI_PUMP_BOUND_NO_RETRY");}
+ private void schedule(){if(scheduled||flight!=0||queue.isEmpty()||failed)return;scheduled=true;scheduledAt03=diagnosticClock03.getAsLong();scheduler.post(()->flush());}
+ private void flush(){List<String>batch=new ArrayList<>();long id;synchronized(this){scheduled=false;if(failed||flight!=0||queue.isEmpty())return;long flushAt=diagnosticClock03.getAsLong();int depth=queue.size();List<Entry03>entries=new ArrayList<>();while(batch.size()<8&&!queue.isEmpty()){Entry03 e=queue.remove();entries.add(e);batch.add(e.text);inflightChars+=e.text.length();}inflightCount=batch.size();flight=++serial;id=flight;List<Map<String,Object>>meta=new ArrayList<>();for(int i=0;i<entries.size();i++){Map<String,Object>m=new LinkedHashMap<>();m.put("clock","ANDROID_ELAPSED_REALTIME_MS_DIAGNOSTIC");m.put("enqueueAtMs",entries.get(i).enqueued);m.put("scheduledAtMs",scheduledAt03);m.put("flushAtMs",flushAt);m.put("previousCallbackAtMs",lastCallbackAt03);m.put("batchId",id);m.put("batchIndex",i);m.put("batchSize",entries.size());m.put("queuedAtFlush",depth);m.put("outstandingAtFlush",totalCount);meta.add(Collections.unmodifiableMap(m));}delivery03=Collections.unmodifiableList(meta);}try{evaluator.evaluate(Collections.unmodifiableList(batch),()->consumed(id));}catch(Exception e){fail("UI_PUMP_EVALUATE_FAILURE_NO_RETRY");}}
+ /** Read-only diagnostics for the existing evaluator; no admission/scheduling effects. */
+ public synchronized List<Map<String,Object>>delivery03(){return delivery03;}
+ private synchronized void consumed(long id){if(failed||flight!=id)return;lastCallbackAt03=diagnosticClock03.getAsLong();totalCount-=inflightCount;totalChars-=inflightChars;inflightCount=inflightChars=0;flight=0;schedule();}
+ private void fail(String reason){synchronized(this){if(failed)return;failed=true;queue.clear();}failure.accept(reason);}
+ public synchronized boolean failed(){return failed;}public synchronized int outstanding(){return totalCount;}
+}

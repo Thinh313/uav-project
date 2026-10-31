@@ -1,0 +1,40 @@
+{
+  "status": "PASS",
+  "results": [
+    {
+      "name": "11999+1000 files refused before AP allocation",
+      "status": "PASS"
+    },
+    {
+      "name": "2GiB+64MiB refused before AP allocation",
+      "status": "PASS"
+    },
+    {
+      "name": "Exactly11000+1000files,2GiB-64MiB+64MiB admitted",
+      "status": "PASS"
+    },
+    {
+      "name": "No files silently excluded by symlink",
+      "status": "PASS"
+    },
+    {
+      "name": "Actual cumulative namespace has bounded next-case capacity",
+      "status": "PASS"
+    },
+    {
+      "name": "20/10+256MiB,31samples,256MiBtrend,15sforecast and12000/2GiB remain exact",
+      "status": "PASS"
+    },
+    {
+      "name": "Child has exact pre-create quota seam and no inherited5000 value",
+      "status": "PASS"
+    }
+  ],
+  "actualUsage": {
+    "files": 5748,
+    "bytes": 437840287,
+    "symlinks": []
+  },
+  "scope": "PURE_STUB_AND_WHOLE_NAMESPACE_READ_ONLY_NO_RUNTIME_NO_CONTAINER_ALLOCATION",
+  "noExcludedTaskScopes": true
+}

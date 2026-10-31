@@ -1,0 +1,482 @@
+DJI Matrice 400 - Specs - DJI Enterprise
+Industries
+Public Safety
+Geospatial
+Inspection
+Law Enforcement
+Dock as First Responder
+Situational Awareness
+Collision Reconstruction
+Firefighting
+Urban Fires
+Wildfires
+Additional Response
+Emergency Response
+Disaster Response
+Search and Rescue
+Search and Rescue
+Private Security
+Private Security
+Learn more about Public Safety solutions
+Products
+Drones
+Aerial tools for your daily tasks
+DJI Matrice 400
+Matrice 350 RTK
+DJI Matrice 4 Series
+DJI Matrice 4D Series
+DJI Mavic 3 Enterprise Series
+Matrice 30 Series
+DJI FlyCart 100
+DJI Flycart 30
+Payloads
+Gather data from multiple angles
+Zenmuse L3
+Zenmuse S1
+Zenmuse V1
+Zenmuse H30 Series
+Zenmuse L2
+Zenmuse H20N
+Zenmuse P1
+Zenmuse H20 Series
+Remote Drone Operation Solutions
+For Roads Less Traveled
+DJI Dock 4
+DJI Dock 3
+DJI Dock 2
+DJI Dock
+Software
+Create digital transformation
+DJI FlightHub 2
+DJI FlightHub 2 On-Premises
+DJI Terra
+DJI Modify
+DJI DeliveryHub
+Developer Technologies
+Unleash enterprise potential
+Cloud API
+Mobile SDK
+Payload SDK
+Accessories
+Expand your capabilities
+DJI AP100 Parachute
+DJI O4 Ground Station
+DJI FlightHub 2 AIO
+Manifold 3
+D-RTK 3 Multifunctional Station
+DJI SkyPort V2
+DJI X-Port
+Challenges
+World Heritage 3D Conservation Initiative
+See Heritage. Share Heritage.
+AI Challenge
+Redefine the era of AI-enabled flight
+Ecosystem
+Ecosystem Solution Catalogue
+Learn DJI Ecosystem  Solution to Expand Drone Application
+DJI Developer
+Automate DJI Drones with Powerful Customization Tools
+Learn
+Insights
+Blogs
+The latest on enterprise drones
+Users Stories
+How industry leaders are putting drones to work
+News
+Stay informed with the latest Enterprise drone trends
+Rescue Map
+Drone have helped rescue people around the world, see where.
+Events
+Support
+Data Security
+Put Your Data First
+Service Request and Inquiry
+Start your service journey
+DJI Care Enterprise
+Comprehensive Fleet Protection
+Fly Safe
+Tips, Regulations, and Geo Unlocking
+DJI Maintenance Program
+Keep Your Fleet Online
+DJI Advanced GEO Products Training Services
+Learn once, continuing education
+EN
+English
+简体中文
+日本語
+Français
+Deutsch
+Español
+한국어
+Pусский
+Italiano
+繁體中文
+Português (BR)
+Contact Us
+Store
+当前预览工作区id：7fc08f60-57ff-44c7-9687-aaa712835e79
+收起
+退出
+DJI Matrice 400
+Accessories
+Compare
+Specs
+Video
+Downloads
+FAQ
+Buy Now
+Contact Us
+Specs
+Aircraft
+Takeoff Weight (with propellers)
+Without Batteries: 5020±20 g
+With Batteries: 9740±40 g
+The actual product weight may vary due to differences in batch materials and external factors.
+Max Takeoff Weight
+15.8 kg
+Dimensions
+Unfolded: 980×760×480 mm (L×W×H) (with landing gear)
+Folded: 490×490×480 mm (L×W×H) (with landing gear and gimbal)
+Maximum dimensions excluding propellers.
+Aircraft carrying case dimensions: 779×363×528 mm (L×W×H)
+Max Payload
+6 kg
+The 6 kg payload is measured at the third gimbal connector under sea level conditions. Payload capacity decreases as altitude increases. For details, refer to the official user manual.
+Propeller Size
+25 inches
+Diagonal Wheelbase
+1070 mm
+Max Ascent Speed
+10 m/s
+Max Descent Speed
+8 m/s
+Max Horizontal Speed (at sea level, no wind)
+25 m/s
+Max Takeoff Altitude
+7000 m
+Max Flight Time (no wind)
+59 minutes*
+(When used with DJI AP100 Parachute, the max flight time is approximately 53 minutes**)
+* Measured with the aircraft flying forward at a constant speed of 10 m/s in a windless environment at sea level, carrying only the H30T (total weight 10,670 g), until a forced landing due to battery depletion. Data is for reference only. Actual experience may vary depending on the environment, usage, and firmware version.
+** Measured with the aircraft flying forward at a constant speed of 10 m/s in a windless environment at sea level, carrying the H30T and AP100 Parachute (total weight 11,605 g), until a forced landing due to battery depletion. Data is for reference only. Actual experience may vary depending on the environment, usage, and firmware version.
+Max Hover Time (no wind)
+53 minutes
+Measured with the aircraft hovering in a windless environment at sea level, carrying only the H30T (total weight 10,670 g), and from 100% battery level until 0%. Data is for reference only. Actual usage time may vary depending on the environment, usage, and firmware version.
+Max Flight Distance (no wind)
+49 km
+Measured by the aircraft flying forward at a constant speed of 17 m/s in a windless environment at sea level, carrying only the H30T (total weight 10,670 g), and from 100% battery level until 0%. Actual experience may vary depending on the environment, usage, and firmware version.
+Max Wind Speed Resistance
+12 m/s
+Max wind speed resistance during takeoff and landing.
+Max Yaw Angular Velocity
+Yaw: 100°/s
+Max Pitch Angle
+35°
+Operating Temperature
+-20° to 50° C (-4° to 122° F) (without solar radiation)
+Global Navigation Satellite System (GNSS)
+GPS + Galileo + BeiDou + GLONASS*
+* GLONASS is supported only when the RTK module is enabled.
+Equipped with standard airborne ADS-B In receiver and dual antennas, supporting reception up to 20 km.
+Hovering Accuracy Range (with moderate or no wind)
+Vertical:
+±0.1 m (with vision positioning)
+±0.5 m (with satellite positioning)
+±0.1 m (with RTK positioning)
+Horizontal:
+±0.3 m (with vision positioning)
+±0.5 m (with satellite positioning)
+±0.1 m (with RTK positioning)
+RTK GNSS Accuracy
+RTK Fix:
+1 cm + 1 ppm (horizontal), 1.5 cm + 1 ppm (vertical)
+RTK Heading
+Supports RTK heading with an accuracy better than 2°
+Airborne ADS-B In
+Equipped with standard airborne ADS-B In receiver and dual antennas, supporting reception up to 20 km.
+Internal Storage
+N/A
+Ports
+USB-C Debug Port × 1: USB 2.0
+E-Port V2 × 4: At the lower part of the drone, with 120W single-port power
+Cellular Dongle 2 Interface × 2: On the underside of the drone
+Propeller Model
+2510F
+Beacon
+Built into the aircraft
+Ingress Protection Rating
+IP55
+The rating is not permanently effective and may decrease due to product wear and tear.
+Motor Model
+7510
+Gimbal
+Maximum Payload for Single Gimbal Connector
+1400 g
+If exceeds 950 g, the gimbal damper lifespan will decrease from 1000 hours to 400 hours.
+Maximum Payload for Dual Gimbal Connector
+950 g per mount
+Maximum Payload for Third Gimbal Connector
+3 kg for quick-release port, 6 kg for screw lock fastening
+Maximum Payload for Zenmuse L3 Gimbal Connector
+2100 g
+If exceeds 1600 g, the gimbal damper lifespan will decrease from 1000 hours to 400 hours.
+Sensing
+Sensing Type
+Omnidirectional binocular vision system (surround view provided by full-color fisheye vision sensors)
+Horizontal rotating LiDAR, upper LiDAR, and downward 3D infrared range sensor
+Six-direction mmWave radar
+Forward
+Measurement Range: 0.4-21 m
+Detection Range: 0.4-200 m
+Field of View (FOV): 90° (horizontal), 90° (vertical)
+Backward
+Measurement Range: 0.4-21 m
+Detection Range: 0.4-200 m
+Field of View (FOV): 90° (horizontal), 90° (vertical)
+Lateral
+Measurement Range: 0.6-21 m
+Detection Range: 0.5-200 m
+Field of View (FOV): 90° (horizontal), 90° (vertical)
+Downward
+Measurement Range: 0.5-19 m
+The FOV to the front and rear is 160° and 105° to the right and left.
+Operating Environment
+Forward, Backward, Left, Right, and Upward:
+Delicate texture on the surface, adequate light.
+Downward:
+The ground has rich textures and sufficient lighting conditions*, with a diffuse reflection surface and a reflectivity greater than 20% (such as walls, trees, people, etc.).
+* Sufficient lighting conditions refer to an illuminance not lower than that of a nighttime city light scene.
+Rotating LiDAR
+Standard Measurement Range: 0.5-100 m @ 100,000 lux with 10% reflectivity target
+Measurement Range for Power Line: 35 m @ 30° @ 10,000 lux for 21.6 mm steel-core aluminum stranded wire with a relative body tilt angle of 30° to the left and right
+Field of View (FOV): 360° (horizontal), 58° (vertical)
+Point-Frequency: 520,000 points/second
+Laser Wavelength: 905 nm
+Eye Safety Level: Class 1 (IEC60825-1:2014), eye-safe
+Upper LiDAR (3D ToF)
+0.5-25 m at night (reflectivity > 10%)
+The FOV to the up and down is 60° and 60° to the right and left.
+Downward 3D Infrared Range Sensor
+Measurement Range: 0.3-8 m (reflectivity > 10%)
+The FOV to the front and rear is 60° and 60° to the right and left.
+mmWave Radar
+Measurement Range for Power Line:
+36 m for a 12mm steel-core aluminum stranded wire
+50 m for a 21.6mm steel-core aluminum stranded wire
+FOV: ± 45° (horizontal and vertical)
+The mmWave radar function may be unavailable or restricted in some countries or regions. Refer to local laws and regulations for more information.
+FPV Camera
+Resolution
+1080p
+Field of View (FOV)
+DFOV: 150°
+HFOV: 139.6°
+VFOV: 95.3°
+Frame Rate
+30fps
+Night Vision
+Starlight Grade
+Video Transmission
+Video Transmission System
+DJI O4 Enterprise Enhanced Video Transmission System
+Live View Quality
+Remote Controller: 3-channel 1080p/30fps
+Operating Frequency and Transmitter Power (EIRP)
+902-928 MHz: < 30 dBm (FCC), < 16 dBm (MIC)
+1.430-1.444 GHz: < 35 dBm (SRRC)
+2.4000-2.4835 GHz: < 33 dBm (FCC), < 20 dBm (CE/SRRC/MIC)
+5.150-5.250 GHz: < 23 dBm (FCC/CE)
+5.725-5.850 GHz: < 33 dBm (FCC), < 14 dBm (CE), < 30 dBm (SRRC)
+Operating frequency allowed varies among countries and regions. Refer to local laws and regulations for more information.
+Max Transmission Distance (unobstructed, free of interference)
+40 km (FCC)
+20 km (CE/SRRC/MIC)
+Measured in an unobstructed environment free of interference. The above data shows the farthest communication range for one-way, non-return flights under each standard. During your flight, please pay attention to RTH reminder on the DJI Pilot 2 app.
+Max Transmission Distance (with interference)
+Strong interference (dense buildings, residential areas, etc.): approx. 1.5-6 km
+Medium interference (suburban counties, city parks, etc.): approx. 6-15 km
+Weak interference (open spaces, remote areas, etc.): approx. 15-40 km
+Data is tested under FCC standard in unobstructed environments of typical interference. Only to serve as a reference and provides no guarantee as to the actual flight distance.
+Max Download Speed
+Standard Mode: 80Mbps Downlink
+Playback Download: < 25 MBps
+Single-Channel Bitrate: ≤ 12 Mbps
+The above data was measured under conditions where the aircraft and remote controller were in close proximity without interference.
+Antenna
+WLAN Antenna × 8: 6 vertically polarized antennas and 2 horizontally polarized antennas
+sub2G Antenna × 2: 2 vertically polarized antennas
+4G Antenna × 4
+Operating Mode: 2T4R
+Others
+Supports Dual Control Mode and 2-channel Cellular Dongle 2
+Battery
+Model
+TB100
+Capacity
+20254 mAh
+Standard Voltage
+48.23 V
+Max Charging Voltage
+54.6 V
+Cell Type
+Li-ion 13S
+Energy
+977 Wh
+Weight
+4720 ± 20 g
+Charging Temperature
+5° to 45° C (41° to 113° F)
+Discharging Temperature
+-20° to 75° C (-4° to 167° F)
+Battery Heating
+Single Battery: Support
+Onboard: Support
+Battery Station: Support
+Discharge Rate
+4C
+Max Charging Power
+2C
+Low-Temperature Charging
+Supports low-temperature self-heating charging
+Cycle Count
+400
+Intelligent Battery Station
+Model
+BS100
+Net Weight
+11.8 kg
+Dimensions
+605×410×250 mm (L×W×H)
+Supported Batteries
+TB100 Intelligent Flight Battery, TB100C Tethered Battery
+WB37 Battery
+Operating Temperature
+-20° to 40° C (-4° to 104° F)
+Input
+100-240 V (AC), 50-60 Hz, 10 A
+Output
+TB100 Battery Interface:
+100-110 V: Approx. 1185 W
+110-180 V: Approx.1474 W
+180-240 V: Approx. 2184 W
+WB37 Battery Interface:
+100-240 V: Approx. 52 W
+USB-C:
+5.0 V 3.0 A, 9.0 V 3.0 A, 12.0 V 3.0 A, 15.0 V 3.0 A, 20.0 V 3.25 A
+Number of Charging Channels
+Three TB100 and two WB37 batteries
+Charging Mode
+Ready-to-Fly Mode 90%; Standard Mode 100%
+Supports Fast Charging Mode and Silent Mode
+Charging Time
+TB100/TB100C Battery From 0% to 100%:
+220 V: 45 minutes (Fast Charging Mode); 110 minutes (Silent Mode)
+110 V: 70 minutes (Fast Charging Mode); 110 minutes (Silent Mode)
+Charging time is measured in a test environment with a temperature of 25° C (77° F).
+DJI RC Plus 2 Enterprise Enhanced
+Video Transmission System
+DJI O4 Enterprise Enhanced Video Transmission System
+Max Transmission Distance (unobstructed, free of interference)
+40 km (FCC)
+20 km (CE/SRRC/MIC)
+Measured in an unobstructed environment free of interference. The above data shows the farthest communication range for one-way, non-return flights under each standard. During your flight, please pay attention to RTH reminder on the DJI Pilot 2 app.
+Video Transmission Operating Frequency and Transmitter Power (EIRP)
+902-928 MHz: < 30 dBm (FCC), < 16 dBm (MIC)
+2.400-2.4835 GHz: < 33 dBm (FCC), < 20 dBm (CE/SRRC/MIC)
+5.150-5.250 GHz: < 23 dBm (FCC/CE)
+5.725-5.850 GHz: < 33 dBm (FCC), < 14 dBm (CE), < 30 dBm (SRRC)
+Operating frequency allowed varies among countries and regions. Refer to local laws and regulations for more information.
+Antenna
+2.4GHz/5.8GHz Multi-Beam High-Gain Antenna: 2T4R
+sub2G Module: 2T2R
+Enhanced Transmission
+Supports DJI Cellular Dongle 2
+Wi-Fi Protocol
+Wi-Fi Direct, Wireless Display, IEEE 802.11 a/b/g/n/ac/ax
+Supports 2×2 MIMO Wi-Fi, dual-band simultaneous (DBS) support for dual MAC, with data rates up to 1774.5 Mbps (2×2 + 2×2 11ax dual-band simultaneous)
+Wi-Fi Operating Frequency
+2.4000-2.4835 GHz
+5.150-5.250 GHz
+5.725-5.850 GHz
+5.2 and 5.8GHz frequencies are prohibited in some countries. In some countries, the 5.2GHz frequency is only allowed for use in indoor. Refer to local laws and regulations for more information.
+Wi-Fi Transmitter Power (EIRP)
+2.4 GHz: < 26 dBm, < 20 dBm (CE/SRRC/MIC)
+5.1 GHz: < 23 dBm (FCC/CE/SRRC/MIC)
+5.8 GHz: ＜ 23 dBm (FCC/SRRC), ＜ 14 dBm (CE)
+Bluetooth Protocol
+Bluetooth 5.2
+Bluetooth Operating Frequency
+2.400-2.4835 GHz
+Bluetooth Transmitter Power (EIRP)
+＜ 10 dBm
+Screen Resolution
+1920 × 1200
+Screen Size
+7.02 inches
+Screen Frame Rate
+60fps
+Brightness
+1400 nits
+Touchscreen Control
+10-Point Multi-Touch
+Built-in Battery
+2S2P High Energy Density 18650 Lithium-ion Battery (6500 mAh @ 7.2 V) 46.8 Wh
+External Battery
+Optional, WB37 (4920 mAh @ 7.6 V) 37 Wh
+Charging Type
+Supports PD fast charging, with a maximum 20V/3.25A USB Type-C charger
+Storage Capacity
+RAM 8G + ROM 128G UFS + expandable storage via microSD card
+Charging Time
+2 hours for internal battery; 2 hours for internal plus external batteries.
+When remote controller is powered off and using a standard DJI charger.
+Internal Battery Runtime
+3.8 hours
+External Battery Runtime
+3.2 hours
+Output Port
+HDMI 1.4
+Indicators
+Status LED, battery level LED, connection status LED; brightness adjustable according to ambient light.
+Speaker
+Supports buzzer
+Audio
+Array MIC
+Operating Temperature
+-20° to 50° C (-4° to 122° F)
+Storage Temperature
+Within one month: -30° to 45° C (-22° to 140° F)
+One to three months: -30° to 35° C (-22° to 113° F)
+Three months to one year: -30° to 30° C (-22° to 86° F)
+Charging Temperature
+5° to 40° C (41° to 104° F)
+Supported Aircraft Model
+Matrice 400
+Global Navigation Satellite System
+GPS + Galileo + BeiDou
+Dimensions
+268×163×94.5 mm (L×W×H)
+Width including external antenna folded, thickness including handle and controller sticks.
+Weight
+1.15 kg (without external battery)
+Model
+TKPL 2
+System Version
+Android 11
+External Interfaces
+HDMI 1.4, SD 3.0, USB-C with OTG support, max 65W PD charging, USB-A with USB 2.0 support
+Accessories
+Strap/waist support
+Supported Products
+DJI Products Compatible With Matrice 400
+Gimbal Cameras: Zenmuse L3, Zenmuse H30, Zenmuse H30T, Zenmuse L2 and Zenmuse P1
+Accessories: DJI AP100 Parachute, Zenmuse S1 (drone spotlight), Zenmuse V1 (drone speaker), Manifold 3, DJI RC Plus 2 sub2G SDR Module*, DJI Cellular Dongle 2
+RTK Station: D-RTK 3 Multifunctional Station, D-RTK 2 Mobile Station
+Ecosystem Accessories: DJI X-Port
+DJI E-Port V2 Development Kit
+DJI E-Port V2 Coaxial Cable Kit
+DJI SKYPORT V3 Adapter Set
+DJI SKYPORT V3 Coaxial Cable Kit
+* Operating frequency allowed varies among countries and regions. Refer to local laws and regulations for more information.
+Footnotes
+The terms HDMI, HDMI High-Definition Multimedia Interface, HDMI Trade dress and the HDMI Logos are trademarks or registered trademarks of HDMI Licensing Administrator, Inc.

@@ -1,0 +1,11 @@
+domain: qgc-interchange-20261012
+entity_label: QGC pinned interchange schema references
+schema:
+  type_field: null
+  fields: [parameters, survey_version, cached_items, altitude_enum, legacy_fixture, license]
+rollup_field: null
+universe:
+  estimate: null
+  basis: Selected QGC v5.1.5 serializers and fixture; no universal compatibility denominator
+alias_map: {}
+ambiguous_clusters: []

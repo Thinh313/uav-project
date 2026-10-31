@@ -1,0 +1,12 @@
+# NATIVE93 — Corridor Android/SITL, disconnect và restart
+
+SPEC 18/10/2026. Theo ROADMAP-NATIVE92 và yêu cầu hiện tại. Một agent chuyển SPEC→BUILD→VERIFY; không gọi tự kiểm là review đội độc lập. Scope/SDK/signing đã rõ: development engineering riêng được phép để kiểm Android; không production/candidate/ENDURE promotion. Không cần phỏng vấn lại.
+
+REQ93-01 / AC01: giữ nguyên shared mission92 schema/model/compiler; cockpit chọn KML LineString corridor, inspect/feature/Home→compile/save. Polygon regression và corridor bằng protocol mock trước real SITL. Plan/items/camera/khung cao độ đối chiếu theo chính model, không hardcode16items của polygon.
+REQ93-02 / AC02: Android33 source93 đi trọn corridor→preflight4.7.1 readonly→grant→upload/readback→arm→Home mới→AUTO→takeoff/NAV/RTL/ground/disarm→review. Chỉ actual raw mới xác nhận bay hoàn tất, ACK/camera command không là ảnh.
+REQ93-03 / AC03: cut duplex sau khi đã airborne AUTO khi foreground vẫn còn. Proxy ngừng forward; observer riêng chứng minh GCS failsafe/RTL/ground/disarm; review INTERRUPTED, accepted=false; recovery yêu cầu xác nhận rõ và không phục hồi quyền.
+REQ93-04 / AC04: restart APK đang AUTO làm mất native instance/lease, revoke và no-resume. Reopen không tự cấp quyền/kết nối; observer theo dõi safe terminal, xác nhận và lưu review gián đoạn. Reboot Android + cold host khi đã đóng: mọi workspace/CURRENT/review/SAF byte giữ nguyên, plan binding/grant không tự phục hồi.
+REQ93-05 / AC05: độc lập receiver recompile model và replay raw cho nominal/fault/restart. Kiểm target/session/boot/model lineage, typed failsafe params,2readback, camera commands nguyên, noPARAM_SET, ảnh thực0. Trace không tự nâng thành whole-session execution.
+REQ93-06 / AC06: namespace/package93, bridge8872/AP5903/proxy5904/container93; reuse AVD90/SDK86, no install. Admission26GiB, estimated≤1GiB additional, emulator stop21GiB, hardfloor20GiB. Preserve manifests through92 và private sandbox90/91/92, no old receipt overwrite. Max8attempt/900s per SITL. Close owned runtimes, cleanup own unsigned/build/cache, preserve raw/signed/rejected outcomes and fingerprint delivery.
+
+Implementation: copy only source/assets/helpers module92 inside current repo; no full project copy. Shared asset mission92 stays identical; controller/transport isolation and generic plan-derived oracle live only93. UI blur glass/layout unchanged. Actual hardware/camera/video/Hera physics, standalone KML parser, long soak, pacing1× not acceptance claims.

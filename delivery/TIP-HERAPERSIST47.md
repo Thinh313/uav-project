@@ -1,0 +1,14 @@
+# HERAPERSIST47 · durable mock workspace / 2026-10-15
+
+Authorized successor of46 in newnamespace47, all45/46/prior/source/candidate/SOT/trust/ENDURE frozen. Hostfree20GiB; newsource/evidence16MiB and persistentstore16MiB caps,64MiB admissionmargin. Existing44hostJVMjournal reusedread-only, noAPK/build/install/signature/SITL/emulator/SDK. Singleagent specification/build/verify.
+
+R47-01 baseline46+prior hashes/inventory/ENDURE, resourcegate/checks/boundedoutputs/cleanup.
+R47-02 versionedsealedworkspace with operationepochs, typed draft, immutable45rawreplayrecords, peer syntheticstoredconfig lineage. Replay46logicaloperations from pinnedcontext, nothydrateoldliveMCU. Corrupt/hashvalidsemanticfalse/foreigncontract/prefixrewrite refused. Expectedexternaldigest optional, hash notauthentication.
+R47-03 persistintent before logicaloperation; exactCAS result commit before success. Reuse44journal fsync/immutablebin/HEAD +OSfilelock, runtimeperworkspaceexclusive serialization. Validatepreviouspayload/appendprefix,body262144byte and16MiBstore quotas; noautoGC/delete/retry. Pendinghead/uncertainreply quarantines, explicitreload only. Failedattempt/evidence retained.
+R47-04 restore valid history andsaved mappingdraft acrossactualhostprocessrestart; newcontext/disconnected/no source/preview/calibrationprogress/authority. Preserve historicalpartialcalibration andpendingintent asinterruption, neverexecuteoldintent. Mockpeer boot starts from derivedstoredconfig only, not unacknowledged appliedconfig. Stageddraft is historical/unvalidated afterrestart; expliciteditorrestore/validate/apply.
+R47-05 successorUIsameRtR52px/layout, durablehead/status/error visibility, saveDraft/restoreDraft/checkpoint export, reload/recoverrequiresfreshhandshake; importsreadonlyrecipientreplay.46memoryworkspace remainsseparate,noautoimportoldRAM. No realMCUdurabilityclaim.
+R47-06 fault/mock tests: intent/resultloss, CAS/partialwrite/pending/corrupt/typedfalse/quota, repeatedrestores/lostresponse andnoauthority. ActualexistingJVM childSIGKILL atrecord/headpending/headcommitted withownsmallstores; no physicalpowerlossinference.
+R47-07 actualnewserverprocess +Chromium surveyofdiagnostic/cal/mapping, persistedworkspaceafterrestart/readonlyrecipientload; staleUI request/revision/origin guards; screenshots1280/1024/360.
+R47-08 regress46/45read-only replay,syntax/finalfingerprints/completion+resource/recoverylimits. AllrequirednotrunexplicitNOT_CHECKED. UIserverisolated8801,46preview8800untouched.
+
+Decision: reusablehostJVMjournal provenance/limits unchanged. Payloadcapsule bounded262144 andepochsmax8/operationsmax128 each; refuseandexport atquota, not silentlydroprecords. Operationintent durable beforeanymockmutation. Restore read-only replay islocalcomputation anddoesnottransmit. Serverstartup orpagecreate usesnewruntimeepoch preparedinRAM; oldepoch stays immutable. No userapprovalpause because requestedscopeauthorized. Noexisting46sourcechanges.

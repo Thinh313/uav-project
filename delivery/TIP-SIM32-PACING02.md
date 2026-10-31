@@ -1,0 +1,17 @@
+# SIM32-PACING02 — repeated host-load pacing and cap boundary
+
+Owner14/10/2026 authorizes repeated actual SITL at nominal1×, host-load variation, jitter and500ms catch-up-cap tests. Sequential Contractor/Builder/Verify in one agent; not independent review. No permission checkpoint: implementation/testing is explicitly authorized, no release/publication involved.
+
+Reuse exact tested ARM64 AP v2 binary/source read-only, and original physics/journal/kernel/viewer/core. Small lifecycle/backend/link/server namespace adapters only in `pilot/sim32-pacing02`; all evidence in `evidence/sim32-pacing02`. Keep all earlier module, receipt, source/candidate/trust/ENDURE bytes. No new AP build, release, Fly integration, SDK or hardware. No dependency install, whole-project copy or outside-repo scratch.
+
+REQ-P01: preserve baseline plus complete INSTRUMENT01 inventory/pacer build. Admission floor20GiB +4GiB peak evidence budget +512MiB margin. Each launch existing640MiB headroom; monitor every second, stop owned campaign on free<20GiB+768MiB. Memory bounded CPU workers, no memory/disk stress that consumes unrelated data.
+
+REQ-P02: nine UI+SITL flights, three levels with0/2/6 added host CPU workers; three replicates per level in balanced order [0,2,6], [2,6,0], [6,0,2]. Same reference offset1kg/gust seed, mission7m and same AP binary/physics/rate1200/speedup1, renderer viewport/driver. Record actual worker process CPU, host load/power, clock/cgroup and disk; levels are added load, not proof host is otherwise idle. Keep all failed/aborted runs in denominator; no automatic retry. No stats/significance claim from n=3. Same-binary on/off observer-cost comparison is deferred; all these runs use observer ON.
+
+REQ-P03: ground-only backend pause450/550/900ms to bracket cap500ms; measure real pause, debt entering cap, clipped time, recovery/drift, rolling1s/5s RTF and frame jitter. A separate3200ms pause probes stale/suspension boundary. No ARM/mission/control replay in probes. Expected long-pause/control freshness failure remains visible, never converted to performance PASS. Intentional pause is not automatic campaign resume or ENDURE time credit.
+
+REQ-P04: full model byte replay for all positive raw captures; sealed/count/SHA/frame continuity/rate, source/binary/config readbacks, AP/host trace matching and debt equation. Report p50/p95/p99/max wall servo intervals/absolute period error, packet deadline excursions, burst/gap counts, rolling-window extrema, time-lag/cap counts and host-clock uncertainty. Average≥1 alone is not acceptance of uniform pacing or sustained robustness.
+
+REQ-P05: owned clean closure, before/after byte preservation and digest-bound report. Fail-loud on source drift, missing traces, disk gate or unidentified process; stop only owned processes. Required tests not run stay NOT_CHECKED. Old static-binary/startup/archive incidents remain unchanged. Product/Hera calibration/HIL/flight/Ragas/DJI and native graphics acceptance remain open.
+
+Implementation decision: copied four small namespace adapters, symlinked unchanged Python stage/clock helpers and copied exact-byte engineering tools; exact v2 AP build read-only. Reuse existing UI and driver as workload, no graphics redesign. AP nominal speedup1 and max negative debt500000µs remain unchanged. Host load via bounded Python arithmetic workers, owned PIDs, actual CPU monitoring. Plan13runs≤~3GiB trace/raw/UI evidence within4GiB peak budget. Analysis offline after CPU workers close avoids distorting live measurements.

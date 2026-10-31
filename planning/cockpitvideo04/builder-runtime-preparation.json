@@ -1,0 +1,19 @@
+{
+  "scope": "BUILDER_HELPER_SOURCE_PREPARATION_ONLY",
+  "pythonHelpers": {
+    "planning/cockpitvideo04/qa-runtime.py": "3131203ee08668093fa4f5ede8a55ea6b45a493d3293f48383e8bb8139faa934",
+    "planning/cockpitvideo04/qa-runtime-mock.py": "c9369085cdb716b6051a08d39ea01630902f8af7c659e7346543a0850cc9df52",
+    "planning/cockpitvideo04/qa-media-replay.py": "47358b166b66e22fb2796b01ad0ca7511d464d4fcef30f63db2667c32c0212f7",
+    "planning/cockpitvideo04/qa-ui-sequence.py": "e8c86fbca2511951859d3d040b6691b9f70f79bc15798726d98e711dfa28fa8e",
+    "planning/cockpitvideo04/qa-device.py": "05838d9319c871064993205c1e75d9e296811d47500ce980f1bf67c0a7e6f641",
+    "planning/cockpitvideo04/qa-android.py": "1b7f5339eca807e86532eedda7bd327b89beddae08820f872d87627b2f6dea6a"
+  },
+  "helperPolicyMockChecks": 9,
+  "adbCalls": 0,
+  "runtimeStarts": 0,
+  "productionEdits": 0,
+  "declaredCachedAPI": 33,
+  "attemptBudget": 2,
+  "SITLRemaining": 2,
+  "liveVerification": "NOT_RUN_BY_BUILDER"
+}

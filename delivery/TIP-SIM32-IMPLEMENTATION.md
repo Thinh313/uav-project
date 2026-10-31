@@ -1,0 +1,9 @@
+# SIM32 implementation increment /13 October2026
+
+Depends on TIP-SIM32, quality standard, ADR041 and its runtime addendum. Applies sequential Contractor/Builder/Verify in this chat, not independent audit. Owner has authorized simulation implementation without SDK/hardware/signing, preserving frozen source/candidate/ENDURE and20GiB floor.
+
+Deliver reference quad physics/control before viewer/audio; prove unloaded, center-load/crosswind and offset-load/gust through actual AP, not waypoint playback. Test analytic/convergence/domain and full raw trace/model integrity. Operator controls plan→Home/preflight→upload/readback→ARM/AUTO→observed landing→sealed review. Synthetic payload routing must respect capability/target/device/correlation and keep ACK/observations/real media distinct. Read-only replay has no command path. Test resource/lifecycle/stale/failsafe and report performance denominators/renderer/host limits, including failed samples.
+
+Deliver isolated loopback8796 preview, code/profile/runbook, retained raw/request/readback/reviews, hashes, current status contract version2 and completion report. Original contract version1 and protected inventories stay exact. No large install/build, radio fallback, automatic resume, release/candidate/signature or canonical SOT rewrite. Model remains provisional until calibrated measurements/Hera HIL/controlled-flight gates; comparison against named Ragas/DJI systems is a separate unexecuted protocol.
+
+Implementation deviations must be explicit in completion: flat synthetic world only, one quad airframe family; no propwash/contact/turbulent CFD; synthetic camera POV/audio rather than native video/physical photos; conservative generation-wide ACK quarantine; performance1×/Hera native/comparative superiority remain open where unmeasured or unmet. Applicable functional verification does not accept those product gates.

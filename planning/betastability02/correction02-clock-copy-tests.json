@@ -1,0 +1,10 @@
+{
+  "format": "aeris-correction02-clock-copy-design-test",
+  "version": 1,
+  "at": "2026-10-26T01:35:51.824Z",
+  "status": "PASS",
+  "checks": 4,
+  "oldShallowChanged": true,
+  "deepSnapshotStable": true,
+  "scope": "MOCK_PROPOSAL_ONLY_NOT_PINNED_RUNTIME_OR_ANDROID_ACCEPTANCE"
+}

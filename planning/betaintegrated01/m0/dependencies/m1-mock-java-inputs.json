@@ -1,0 +1,67 @@
+{
+  "status": "PURE_JAVA_SOURCE_REFERENCE_CLOSURE_FOR_M1_MOCKS_NO_EXECUTION",
+  "inputs": [
+    {
+      "path": "native/native98/src/vn/rtr/aeris/native98/RawJournal95.java",
+      "bytes": 1965,
+      "sha256": "130d6400cf048291cad758c380af0a7d6466d6dd1a4ece2890e10fb34d767c46"
+    },
+    {
+      "path": "native/native98/src/vn/rtr/aeris/native98/DraftStore.java",
+      "bytes": 8122,
+      "sha256": "405d899570c75cc509f65f328f9466d7719e6ee72f90768f368b15cc4705b506"
+    },
+    {
+      "path": "native/native98/src/vn/rtr/aeris/native98/Json.java",
+      "bytes": 376,
+      "sha256": "b0364abb861c246e988848ff977692d33188e467afde5838cb85af30439e9e93"
+    },
+    {
+      "path": "native/native98/src/vn/rtr/aeris/native98/UnifiedCore98.java",
+      "bytes": 3012,
+      "sha256": "6d11da1bc9fb07fc578c7e7acde4dee2386ab7dd403fbf8ef1f1c2c0632d5dc1"
+    },
+    {
+      "path": "native/native98/src/vn/rtr/aeris/native98/PayloadCore97.java",
+      "bytes": 19855,
+      "sha256": "ed3d1fb455d85eb934016d00c114712413b5d547ba7c8f18d5fd7e9b13a6a2d3"
+    },
+    {
+      "path": "native/native98/src/vn/rtr/aeris/native98/Data97.java",
+      "bytes": 947,
+      "sha256": "29ca316d53c0df288768e9f9a483cf1102f6ca57967e2b56b20d20e1181cdb29"
+    },
+    {
+      "path": "native/native98/src/vn/rtr/aeris/native98/Dialect95.java",
+      "bytes": 67621,
+      "sha256": "6c0aa29eae1ef749a407c6cb667b157cee4eedce41d4bf0e34ad8cfc9aedd754"
+    },
+    {
+      "path": "native/native98/src/vn/rtr/aeris/native98/WireGate95.java",
+      "bytes": 11495,
+      "sha256": "5db76e5b1a7efea1d03f093118163d5ed9de0b10fd22acb3033599ad5ed0b356"
+    },
+    {
+      "path": "native/native98/src/vn/rtr/aeris/native98/Profile95.java",
+      "bytes": 1143,
+      "sha256": "70078ed2f08b45a3787693ef4b3ee0d986cc99ecbab230d1ac62cb5416d0c3a7"
+    },
+    {
+      "path": "native/native98/src/vn/rtr/aeris/native98/NativeSend98.java",
+      "bytes": 818,
+      "sha256": "b5d6cdcc17e78ace237307e4f1f434ec55d530a5383301216cec9edb8d79d937"
+    }
+  ],
+  "classCount": 10,
+  "method": "Conservative same-package class token references, all resolved and no android import; stdlib/JDK external",
+  "systemPrerequisite": "Pinned JDK --release8 from root config; no compile done here",
+  "notIncluded": [
+    "DirectTransport95 Socket/Android activity",
+    "historical Python launcher or buildCLI",
+    "AP/native binary",
+    "private keys",
+    "competing host GCS writer"
+  ],
+  "mockOrBuildExecuted": false,
+  "furtherM1Work": "New provider/state/clock/recorder tests must be implemented against explicit seams; unchanged source presence is not test PASS"
+}

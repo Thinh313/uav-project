@@ -1,0 +1,25 @@
+domain: ragas-baseline
+entity_label: Technical references and product claims
+schema:
+  type_field: null
+  fields:
+  - ack_semantics
+  - build_marker
+  - latest_returned_release
+  - mission_regression
+  - other_public_repository
+  - product_role
+  - published_at
+  - reference
+  - repository_names
+  - runtime_benchmark
+  - source_code_access
+rollup_field: null
+universe:
+  estimate: null
+  basis: First-pass selected technical sources; no exhaustive universe or market coverage
+    claimed
+refresh_days:
+  default: 14
+alias_map: {}
+ambiguous_clusters: []

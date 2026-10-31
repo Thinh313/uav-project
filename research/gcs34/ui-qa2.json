@@ -1,0 +1,118 @@
+{
+  "status": "FAIL",
+  "checks": [
+    {
+      "name": "explicit proposed/synthetic provenance",
+      "pass": true
+    },
+    {
+      "name": "aligned stable command actions",
+      "pass": true
+    },
+    {
+      "name": "primary actions remain visible1280x800",
+      "pass": true
+    },
+    {
+      "name": "contextual warning airspace",
+      "pass": true
+    },
+    {
+      "name": "actions stable in airspace",
+      "pass": true
+    },
+    {
+      "name": "contextual warning video",
+      "pass": true
+    },
+    {
+      "name": "actions stable in video",
+      "pass": true
+    },
+    {
+      "name": "old frame visibly marked",
+      "pass": true
+    },
+    {
+      "name": "primary video also marks stale frame",
+      "pass": true
+    },
+    {
+      "name": "contextual warning link",
+      "pass": true
+    },
+    {
+      "name": "actions stable in link",
+      "pass": true
+    },
+    {
+      "name": "lost telemetry never asserts AUTO",
+      "pass": true
+    },
+    {
+      "name": "network-dependent controls blocked",
+      "pass": true
+    },
+    {
+      "name": "contextual warning battery",
+      "pass": true
+    },
+    {
+      "name": "actions stable in battery",
+      "pass": true
+    },
+    {
+      "name": "contextual warning unknown",
+      "pass": true
+    },
+    {
+      "name": "actions stable in unknown",
+      "pass": true
+    },
+    {
+      "name": "action only opens explicit no-command illustration",
+      "pass": true
+    },
+    {
+      "name": "stage ownership Plan",
+      "pass": true
+    },
+    {
+      "name": "no flight action outside Fly Plan",
+      "pass": true
+    },
+    {
+      "name": "stage ownership Preflight",
+      "pass": true
+    },
+    {
+      "name": "no flight action outside Fly Preflight",
+      "pass": true
+    },
+    {
+      "name": "stage ownership Review",
+      "pass": true
+    },
+    {
+      "name": "no flight action outside Fly Review",
+      "pass": true
+    },
+    {
+      "name": "stage ownership Fly",
+      "pass": true
+    },
+    {
+      "name": "primary and secondary selected stream agree",
+      "pass": false
+    },
+    {
+      "name": "QA failure",
+      "pass": false,
+      "error": "Error: primary and secondary selected stream agree\n    at check (file:///Users/os/Downloads/AI%20technique/aeris/research/gcs34/ui-qa.mjs:5:65)\n    at file:///Users/os/Downloads/AI%20technique/aeris/research/gcs34/ui-qa.mjs:16:73"
+    }
+  ],
+  "errors": [],
+  "external": [],
+  "writes": [],
+  "scope": "Interactive design illustration only, not AERIS function/flight/native48dp/operator acceptance"
+}

@@ -1,0 +1,17 @@
+import assert from'node:assert/strict';import fs from'node:fs';import{cockpitPosition02}from'./position-validity.mjs';
+const rows=[],req={run:'run1',session:'session1',boot:'boot1',modelSha256:'model',planSha256:'plan'};const base={client:{active:true},flight:{run:'run1',request:req,positionAgeMs:100,live:{transport:'connected',failure:null,heartbeatAgeMs:100},latestPosition:{...req,latitudeDeg:10.854,longitudeDeg:106.807,altitudeMslM:10,relativeHomeM:0,gpsFix:6,gps:{fixType:6,satellites:10,ageMs:100},apTimeBootMs:4000}}};
+const check=(id,mutate,usable=false)=>{const s=structuredClone(base);mutate(s);assert.equal(cockpitPosition02(s).usable,usable,id);if(!usable)assert.equal(cockpitPosition02(s).position,null,id);rows.push(id);};
+check('fresh_target_gps3d_valid_position_reference',()=>{},true);
+check('startup0_0_without_gps_unknown',s=>{s.flight.latestPosition.latitudeDeg=0;s.flight.latestPosition.longitudeDeg=0;s.flight.latestPosition.gps=null;s.flight.latestPosition.gpsFix=null;});
+check('startup0_0_fix0_sats0_unknown',s=>{Object.assign(s.flight.latestPosition,{latitudeDeg:0,longitudeDeg:0,gpsFix:0,gps:{fixType:0,satellites:0,ageMs:10}});});
+check('legitimate0_0_with_usable_gps_remains_valid',s=>{s.flight.latestPosition.latitudeDeg=0;s.flight.latestPosition.longitudeDeg=0;},true);
+check('gps2d_refused',s=>{s.flight.latestPosition.gps.fixType=2;s.flight.latestPosition.gpsFix=2;});
+check('satellites255_unknown_refused',s=>s.flight.latestPosition.gps.satellites=255);
+check('gps_too_old_at_position_receipt_refused',s=>s.flight.latestPosition.gps.ageMs=1501);
+check('combined_gps_receipt_plus_position_age_refused',s=>s.flight.latestPosition.gps.ageMs=1450);
+for(const k of['run','boot','session','modelSha256','planSha256'])check('wrong_'+k+'_refused',s=>s.flight.latestPosition[k]='other');
+for(const [k,v]of[['latitudeDeg',91],['longitudeDeg',181],['relativeHomeM',NaN],['altitudeMslM',Infinity],['apTimeBootMs',0]])check('invalid_'+k+'_refused',s=>s.flight.latestPosition[k]=v);
+check('inactive_client_refused',s=>s.client.active=false);check('link_stale_refused',s=>s.flight.live.heartbeatAgeMs=1501);
+check('absent_context_never_matches_itself',s=>{s.flight.request={};s.flight.run=undefined;for(const k of['run','session','boot','modelSha256','planSha256'])delete s.flight.latestPosition[k];});
+check('empty_context_refused',s=>{s.flight.request.boot='';s.flight.latestPosition.boot='';});
+const report={status:'PASS',at:new Date().toISOString(),rows,scope:'PRESENTATION_ONLY_UNIT_BOUNDS_NO_FLIGHT_AUTHORITY_OR_AP_CHANGE'};fs.writeFileSync('evidence/field02/host-position-tests02.json',JSON.stringify(report,null,2)+'\n',{flag:'wx'});console.log(JSON.stringify(report));

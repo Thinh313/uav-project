@@ -1,0 +1,11 @@
+from pathlib import Path
+import importlib.util,time,json
+p=Path(__file__).with_name('android-journey.py');s=importlib.util.spec_from_file_location('q',p);q=importlib.util.module_from_spec(s);s.loader.exec_module(q)
+try:
+ before=q.state();assert before['flight']['live']['stage']=='DISARMED' and not before['flight']['live']['armed'];run=before['flight']['run'];q.log('CONTINUE_READONLY_PREFLIGHT_AFTER_NEW_EKF_OBSERVATION',{'run':run,'noNewAP':True,'noFlightCommandRetry':True});q.tap('b-preflight');q.wait(lambda s:not s['busy'],15);assert q.state()['flight']['preflight']['ready'],'READONLY_REASSESSMENT_NOT_READY';q.tap('b-grant');q.tap('b-upload');q.wait(lambda s:s['flight']['live']['readback63']);q.tap('video-measure');q.tap('b-arm');s=q.wait(lambda s:s['flight']['live']['stage']=='ARMED_HOME_REVIEW');v=q.obs();h=s['flight']['homeReview'];assert h['sha256'][:10]in v['homeText'];q.log('SIMULATED_HOME_REVIEW',{'shown':v['homeText'],'sha256':h['sha256'],'humanOrHeraApproval':False});q.check('b-home-after');q.tap('b-auto');q.wait(lambda s:s['flight']['live']['stage']=='AUTO');q.wait(lambda s:(s['flight']['latestPosition']or{}).get('relativeHomeM',0)>3,30);q.tap('b-pause');q.wait(lambda s:s['flight']['live']['stage']=='HOLD');time.sleep(1);q.tap('b-resume');q.wait(lambda s:s['flight']['live']['stage']=='AUTO')
+ for name in ['b-discover','b-select','b-payload-grant','b-gimbal']:q.tap(name)
+ q.tap('video-capture');q.wait(lambda s:len(s['captures'])>0);q.wait(lambda s:s['flight']['completion']['complete'],180);deadline=time.monotonic()+190
+ while not q.obs()['controls']['video-save']['enabled']:
+  v=q.obs();q.log('VIDEO_WAIT',{'run':run,'video':v.get('video')});assert time.monotonic()<deadline,'VIDEO_REPORT_NOT_READY';time.sleep(3)
+ q.tap('video-save');q.tap('b-close');s=q.wait(lambda s:any(r['run']==run for r in s['reviews']));r=next(r for r in s['reviews']if r['run']==run);assert r['accepted'];history=q.get('/api/history')['result'];assert any(h['run']==run for h in history['reviews']);q.log('NOMINAL_COMPLETE',{'kind':'polygon','index':1,'review':r,'history':history});print('NOMINAL_COMPLETE',run,flush=True)
+except BaseException as e:q.log('CONTINUATION_FAILURE',{'error':repr(e)});raise

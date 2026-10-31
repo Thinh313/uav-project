@@ -1,0 +1,11 @@
+# NativeIO04 isolated artifact selection
+
+User authorization: new development APK with NativeIO03 and conditional short→30min Android–SITL. Keep previous selected artifact/source and ENDURE immutable.
+
+Reason: clockowner02's full674058-frame long hostprefix passed independent durability/model/AP/clock verification, yet native consumer revoked its200ms input lease. The next producer sample was generated50.509ms after the previous sample but handled after the old expiry. This does not measure an exclusive filesystem/scheduler cause. The exact NativeIO03 bounded16 queue relocation has already passed source diff, Java/mock and independent closure tests.
+
+Selection: new package vn.rtr.aeris.cockpitio04 and new source identity/development signature from the existing approved development key. Exactly reviewed ControlOwner changes and package-specific Activity/review namespace adaptation, same UI assets, providers/AP/model and all wire/freshness/authority thresholds. Old package retains233privatefiles and is not migrated, cleared or reinterpreted. New package's training draft is created by actual UI from observed empty state; no synthetic restore of flight authority or prior history. Receiver requires observed actual installed APK/source hash, not mere package label.
+
+Limits: no promise that priority reordering defeats input's own slow fsync or guestwide pauses. Trulyexpired inputs must stillrevoke. Lack of actual30min evidence remains NOTREADY, not a reason to weaken lease250/200/500 thresholds or concatenate intervals. Host250ms freshness/native200ms/loop500ms are distinct unchanged controls. New APK build/source tests do not imply Android–SITL acceptance, and simulation does not certify Hera realflight.
+
+Runtime gates: bounded cached build/cleanup; independent artifact+mock/sourceclosure; actualpower/disk15sprime; short complete anchors/frame/model/AP/nativeauthority/ground/restart; independent short gate; separately admitted newlong plannedCUT/failsafe/restart with fullclockdurations. Anyfailedcase retains raw and ends; only diagnosed reviewed targeted repair may create newpath/identity. Fresh case budget includes retained preceding work and all new artifact/archive/AVD allocations; entry10 alone never grants admission.

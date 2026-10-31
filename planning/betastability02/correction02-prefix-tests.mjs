@@ -1,0 +1,18 @@
+import assert from'node:assert/strict';import fs from'node:fs';import{prefixBarrier,verifyPrefix}from'./correction02-prefix-fence.mjs';
+const results=[],traceId='5d6fb6e0-f4ac-4d2c-90aa-b2f0f7de327a',configId='c',serverBoot='b',head='1'.repeat(64),receiptSha256='2'.repeat(64);
+let accepted=12,acknowledged=6,flushes=0;
+const snapshot=()=>({accepted,acknowledged,pending:accepted-acknowledged,fatal:null});
+const fence=await prefixBarrier({traceId,configId,serverBoot,snapshot,flush:async()=>{flushes++;acknowledged=12;accepted=15;},persist:async q=>{assert.equal(q.requiredThrough,12);accepted=18;return{...q,ackThrough:12,durable:{complete:true,fatal:null,hostThrough:18,hostHead:head,receiptSha256,receiptFile:'trace-barrier-00001.json'}};}});
+assert.equal(fence.requiredThrough,12);assert.equal(fence.ackThrough,12);assert.equal(fence.currentLivePending,6);assert.equal(fence.currentLiveAccepted,18);assert.equal(flushes,1);results.push({case:'NEW_FRAMES_DURING_FLUSH_AND_DURABILITY',status:'PASS',fence});
+const rows=Array.from({length:12},(_,i)=>({seq:i+7,sha256:i===11?head:'0'.repeat(64),kind:'VIEWER_FRAME',data:{externalTraceId:traceId,externalSeq:i+1}}));
+assert.equal(verifyPrefix(fence,{configId,serverBoot,rows,selectedViewerRows:rows.slice(0,10)}).status,'PASS');results.push({case:'LIVE_PENDING_IS_NOT_MISSING_REQUIRED_PREFIX',status:'PASS'});
+const fail=(name,fn,pattern)=>{assert.throws(fn,pattern);results.push({case:name,status:'PASS',reject:pattern.source});};
+fail('MISSING_REQUIRED_TAIL',()=>verifyPrefix(fence,{configId,serverBoot,rows:rows.slice(0,-1),selectedViewerRows:rows.slice(0,10)}),/REQUIRED_SEQUENCE_MISSING/);
+fail('MISSING_REQUIRED_MIDDLE',()=>verifyPrefix(fence,{configId,serverBoot,rows:rows.filter((_,i)=>i!==5),selectedViewerRows:rows.slice(0,4)}),/PRODUCER_SEQUENCE_GAP/);
+fail('SAMPLE_BEYOND_PREFIX',()=>verifyPrefix(fence,{configId,serverBoot,rows,selectedViewerRows:[{seq:19,kind:'VIEWER_FRAME',data:{externalTraceId:traceId,externalSeq:13}}]}),/SAMPLE_OUTSIDE_TRACE_PREFIX/);
+fail('WRONG_PRODUCER',()=>verifyPrefix(fence,{configId,serverBoot,rows,selectedViewerRows:[{seq:8,kind:'VIEWER_FRAME',data:{externalTraceId:'other',externalSeq:1}}]}),/SAMPLE_OUTSIDE_TRACE_PREFIX/);
+fail('WRONG_DURABLE_ANCHOR',()=>verifyPrefix({...fence,durable:{...fence.durable,hostHead:'3'.repeat(64)}},{configId,serverBoot,rows,selectedViewerRows:rows.slice(0,4)}),/DURABLE_PREFIX_NOT_IN_RANGE/);
+fail('ACK_BELOW_REQUIRED',()=>verifyPrefix({...fence,ackThrough:11},{configId,serverBoot,rows,selectedViewerRows:rows.slice(0,4)}),/PREFIX_FENCE/);
+fail('COUNTER_FORGERY',()=>verifyPrefix({...fence,currentLivePending:0},{configId,serverBoot,rows,selectedViewerRows:rows.slice(0,4)}),/LIVE_COUNTERS/);
+let rejected=false;try{await prefixBarrier({traceId,configId,serverBoot,snapshot:()=>({accepted:12,acknowledged:6,pending:6,fatal:null}),flush:async()=>{},persist:async()=>assert.fail('mustnotpersist')});}catch(e){rejected=e.message==='TRACE_PREFIX_FLUSH_NO_PROGRESS'}assert.ok(rejected);results.push({case:'MISSING_ACK_NO_PROGRESS_FAILS_BOUNDED',status:'PASS'});
+const output={format:'aeris-correction02-prefix-design-test',version:1,at:new Date().toISOString(),status:'PASS',results,scope:'MOCK_PROPOSAL_ONLY_NOT_PINNED_RUNTIME_OR_ANDROID_ACCEPTANCE'};fs.writeFileSync('planning/betastability02/correction02-prefix-tests.json',JSON.stringify(output,null,2)+'\n',{flag:'wx'});console.log(JSON.stringify(output));

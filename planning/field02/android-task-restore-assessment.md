@@ -1,0 +1,13 @@
+# FIELD02 pending-export restart: task restore assessment
+
+22/10/2026, Builder readonly assessment. No emulator UI or ADB was used by Builder for this assessment; native/APK sources remain frozen.
+
+Contractor observed pending operation `3aa726c0-6e91-4f6d-88f1-cf874de9b1a9` at native journal record20. After intentional package force-stop, no FIELD02 PID existed, but an ordinary component start reported delivery to an existing top DocumentsUI picker. The collected `qa-pending-after02.jsonl` still had20 records. This does **not** establish that product `recover()` executed and failed. It is an unsuccessful recovery-test entrypoint, with an associated external-picker task still foreground. Exact platform cause requires retained activity/task diagnostics; it must not be inferred solely from a command's wording.
+
+Frozen manifest declares a standard exported launcher ShellActivity, no custom launchMode/taskAffinity/clearTaskOnLaunch. Frozen `onCreate()` calls `recover()` synchronously before constructing/loading WebView. Therefore an actual new ShellActivity process, a resumed ShellActivity observation and journal transition are the required proof of execution.
+
+For this owned emulator task, Contractor may start explicit `vn.rtr.aeris.field02/.ShellActivity` with `FLAG_ACTIVITY_NEW_TASK | FLAG_ACTIVITY_CLEAR_TASK` (`0x10008000`). Android documents that CLEAR_TASK clears the task associated with the activity and starts it as a new root, and requires NEW_TASK. This changes the associated activity back stack; it is not a clear-data/reinstall operation. It can finish the DocumentsUI child associated with this task, so retain the initial picker/task observation first. [Android Intent reference](https://developer.android.com/reference/android/content/Intent#FLAG_ACTIVITY_CLEAR_TASK).
+
+After the explicit task restart, verify a new owned PID, actual ShellActivity foreground, original20 journal lines unchanged, exactly one UNKNOWN_AFTER_RESTART for the pending UUID, retained stage SHA `790cea3ae4872f69077b7261868bf98b0462eb600f344298a1740936de320b3d`, no successful export for that UUID, and no restored flight/payload authority. A later restart must not duplicate UNKNOWN. The original ordinary-start attempt remains NOT_EXERCISED_RECOVER rather than retroactively PASS/FAIL.
+
+The retained journal's elapsedMs decreases at record19 after a guest emulator restart. Its hash chain can remain valid across that restart, but the current schema does not record a guest boot identity. Do not use globally monotonic elapsedMs or infer uninterrupted guest uptime across this boundary. Within-process recovery and content integrity are separate conclusions.

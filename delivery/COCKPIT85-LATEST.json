@@ -1,0 +1,25 @@
+{
+  "at": "2026-10-17T19:47:39.785697+07:00",
+  "status": "READY_SCOPED_BROWSER_UI_ANDROID_DEFERRED",
+  "requirements": {
+    "implemented": 5,
+    "total": 5,
+    "scope": "Browser overlay only"
+  },
+  "scenarioReceipts": 306,
+  "aggregateChecks": 1127,
+  "regressions": {
+    "controls": 31,
+    "model": 46,
+    "workflowJVM": 16
+  },
+  "protectedFiles": 50870,
+  "preservation": "evidence/cockpit85/preservation-final.json",
+  "freeGiB": 54.93,
+  "androidAPK": "NOT_BUILT_NOT_CHECKED",
+  "newSITL": "NOT_RUN",
+  "productionSignature": false,
+  "noFrozenChanges": true,
+  "preview": "http://127.0.0.1:8848/mock.html",
+  "report": "delivery/COMPLETION-COCKPIT85.html"
+}

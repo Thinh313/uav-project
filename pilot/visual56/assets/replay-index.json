@@ -1,0 +1,32 @@
+[
+  {
+    "id": "rc0364e5644f5461ebff1",
+    "label": "Tải giữa · lặng gió",
+    "mode": "REPLAY_ACTUAL_REFERENCE_SITL",
+    "physicsCalibration": "NOT_HERA",
+    "source": "evidence/simtrain53/runs/rc0364e5644f5461ebff1/frames.wal",
+    "sourceSha256": "e9f43779ac37c2bb2a23c3701810552833dcee8a3207d2c0cb069dcf87e82558",
+    "walRecordsVerified": 227825,
+    "originalIntentFrames": 75941,
+    "renderSelection": "Every40th frame only; original1200Hz WAL is unchanged",
+    "sampleHz": 30,
+    "file": "replay-rc0364e5644f5461ebff1.json",
+    "duration": 63.26749999995058,
+    "sha256": "1259b28eae304bf83085885a8c7a1be25cc210298c35587ad170a08547aaa356"
+  },
+  {
+    "id": "r8dc8fec8bc65440c8f38",
+    "label": "Tải lệch · gió giật",
+    "mode": "REPLAY_ACTUAL_REFERENCE_SITL",
+    "physicsCalibration": "NOT_HERA",
+    "source": "evidence/simtrain53/runs/r8dc8fec8bc65440c8f38/frames.wal",
+    "sourceSha256": "5c414b2c5c60feee81f165b1dda5d9c0ec41f5b619455a082a6b96e9c2692135",
+    "walRecordsVerified": 227852,
+    "originalIntentFrames": 75950,
+    "renderSelection": "Every40th frame only; original1200Hz WAL is unchanged",
+    "sampleHz": 30,
+    "file": "replay-r8dc8fec8bc65440c8f38.json",
+    "duration": 63.26749999995058,
+    "sha256": "eb3338b7153764cab2fb67bf0942961d5778e5d800e3bee982bceb38df3af461"
+  }
+]

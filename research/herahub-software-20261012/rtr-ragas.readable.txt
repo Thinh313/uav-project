@@ -1,0 +1,52 @@
+Ragas - Commercial | Real-time Robotics | NDAA Compliant DronesSkip to content
+Defense
+Commercial
+OEM
+Training
+Partner Deals
+Sales
+About
+VITalk to SalesVIRTROBOTICS
+Invent. Build. Prove.
+Platform
+HERA Platform
+VEGA Platform
+DualSight Payload
+Compare
+Solutions
+Government & Defense
+Defense & National Security
+Law Enforcement
+Industrial Inspection
+Agriculture & Mapping
+Resources
+Partner Deal Registration
+Case Studies
+Support
+News
+Press & Media
+Company
+About
+Careers
+Partners
+Contact
+ContactUS Headquarters
+4250 Heyer Ave, Castro Valley, CA 94546R&D Center
+Lot I-4b-4.2, Saigon Hi-Tech Park, HCMC[email protected]+1 (510) 457-6280(+84) 9111 00 357NDAA §889US DesignedBlue sUAS ReadyData Secure105 TOPS AI© 2026 Real-time Robotics Inc. All rights reserved.Privacy Policy·Terms of Service·Terms of Sale·Warranty·Made in USA / VNSoftware / RAGASTARGET ACQUIREDCommercial/RAGASSoftware
+RAGAS
+RAGAS for commercial operations provides AI-powered analytics for inspection, mapping, and public safety missions. Automated defect detection, change analysis, and object tracking processed at the edge.Request DemoView SpecsReal-time AI ground analytics suite for commercial operationsFeatures
+Key Capabilities01
+Automated Inspection
+AI detects defects in infrastructure, powerlines, and structures without manual review.02
+Change Detection
+Compare flights over time to identify structural changes, vegetation growth, and erosion.03
+Instant Reporting
+Automated report generation with geotagged findings exportable to GIS platforms.Specifications
+Technical SpecificationsProcessing105 TOPS edgeDefect DetectionAutomated AILatency< 50 msChange DetectionMulti-temporal analysisReportsAutomated PDF/GISAPIREST + WebSocketEcosystem
+Related Products
+HeraSight
+240× stable zoom · Real-time edge AI
+OmniSight
+Smart Chameleon Eyes
+Talk to Sales
+Connect with our solutions team for capability demonstrations and technical specifications.Contact Sales

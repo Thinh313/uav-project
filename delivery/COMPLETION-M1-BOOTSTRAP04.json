@@ -1,0 +1,28 @@
+{
+  "at": "2026-10-20T10:41:16.315578+07:00",
+  "milestone": "M1 Integrated Operational Alpha",
+  "overallStatus": "NOT READY",
+  "phaseStatus": "OFFLINE_BOOTSTRAP_RIG_VERIFIED",
+  "actualRuntimeAcceptance": "NOT_RUN_HEADROOM_GATE_UNMET",
+  "rigSourceId": "dff20568baf38c0599aaef66fddc1facb621c55ce3c227e506c92c4658e4ee19",
+  "nativeSourceIdUnchanged": "7784d45e8ba42e654e0a8f15a87476febf8145f0f70d30d88cefb261ed9edab3",
+  "apkSHA256Unchanged": "9218acc3b71ad271b3ee9b7ba291d76fe1f97cd714e962ec34630fb6eb6f4ddf",
+  "currentFreeBytes": 25395200000,
+  "currentFreeGiB": 23.651123046875,
+  "requiredInitialFreeGiB": 29,
+  "userFloorGiB": 20,
+  "runtimeLaunchedThisTurn": false,
+  "newSignatureOrBuild": false,
+  "rootCauseOldActualEOF": "UNKNOWN",
+  "remaining": "INTEGRATION03 I01-I10 actual acceptance remainsunmet; unchangedpriorP1 scopedpass retained",
+  "qa": "evidence/integration03-bootstrap04/qa/source-gate01.json",
+  "report": "delivery/COMPLETION-M1-BOOTSTRAP04.md",
+  "protectedBeforeAfter": 71158,
+  "cleanup": {
+    "mockScratchRemoved": "planning/integration03/runtime/.mock-bootstrap04",
+    "outsideRepoScratchCreated": false,
+    "dockerPruneReclaimedBytes": 0,
+    "containersVolumesPruned": false
+  },
+  "decision": "Waitactual29GiBstable30s plusfreshadmission; no runtimeautoretry"
+}

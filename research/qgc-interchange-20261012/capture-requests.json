@@ -1,0 +1,56 @@
+[
+  {
+    "id": "mission-item",
+    "url": "https://raw.githubusercontent.com/mavlink/qgroundcontrol/3a67d31f0c36bf3fe38ec52970d250a89d0aaf67/src/MissionManager/MissionItem.cc",
+    "snapshot": "mission-item.txt",
+    "origin_id": "qgc-upstream"
+  },
+  {
+    "id": "simple-item",
+    "url": "https://raw.githubusercontent.com/mavlink/qgroundcontrol/3a67d31f0c36bf3fe38ec52970d250a89d0aaf67/src/MissionManager/SimpleMissionItem.cc",
+    "snapshot": "simple-item.txt",
+    "origin_id": "qgc-upstream"
+  },
+  {
+    "id": "mission-controller",
+    "url": "https://raw.githubusercontent.com/mavlink/qgroundcontrol/3a67d31f0c36bf3fe38ec52970d250a89d0aaf67/src/MissionManager/MissionController.cc",
+    "snapshot": "mission-controller.txt",
+    "origin_id": "qgc-upstream"
+  },
+  {
+    "id": "survey",
+    "url": "https://raw.githubusercontent.com/mavlink/qgroundcontrol/3a67d31f0c36bf3fe38ec52970d250a89d0aaf67/src/MissionManager/SurveyComplexItem.cc",
+    "snapshot": "survey.txt",
+    "origin_id": "qgc-upstream"
+  },
+  {
+    "id": "transect",
+    "url": "https://raw.githubusercontent.com/mavlink/qgroundcontrol/3a67d31f0c36bf3fe38ec52970d250a89d0aaf67/src/MissionManager/TransectStyleComplexItem.cc",
+    "snapshot": "transect.txt",
+    "origin_id": "qgc-upstream"
+  },
+  {
+    "id": "qgc-fixture",
+    "url": "https://raw.githubusercontent.com/mavlink/qgroundcontrol/3a67d31f0c36bf3fe38ec52970d250a89d0aaf67/test/MissionManager/SectionTest.plan",
+    "snapshot": "qgc-fixture.txt",
+    "origin_id": "qgc-upstream"
+  },
+  {
+    "id": "license",
+    "url": "https://raw.githubusercontent.com/mavlink/qgroundcontrol/3a67d31f0c36bf3fe38ec52970d250a89d0aaf67/.github/COPYING.md",
+    "snapshot": "license.txt",
+    "origin_id": "qgc-upstream"
+  },
+  {
+    "id": "plan-guide",
+    "url": "https://docs.qgroundcontrol.com/master/en/qgc-dev-guide/file_formats/plan.html",
+    "snapshot": "plan-guide.html",
+    "origin_id": "qgc-upstream"
+  },
+  {
+    "id": "altitude-enum",
+    "url": "https://raw.githubusercontent.com/mavlink/qgroundcontrol/3a67d31f0c36bf3fe38ec52970d250a89d0aaf67/src/QmlControls/QGroundControlQmlGlobal.h",
+    "snapshot": "altitude-enum.txt",
+    "origin_id": "qgc-upstream"
+  }
+]

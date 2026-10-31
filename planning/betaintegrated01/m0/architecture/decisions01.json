@@ -1,0 +1,317 @@
+{
+  "format": "aeris-beta-m0-static-architecture-audit",
+  "version": 1,
+  "status": "STATIC_AUDIT_COMPLETE_ARCHITECTURE_PROPOSED_NOT_PRODUCT_ACCEPTANCE",
+  "selectedFinalFoundation": "Native98-derived native shell/shared flight+payload dispatch; existing modules adapted at explicit seams",
+  "selectionIsImplemented": false,
+  "decisions": [
+    {
+      "id": "D01",
+      "area": "Android shell/transport",
+      "decision": "ADAPT",
+      "selected": "Native98 ShellActivity, DirectTransport95, UnifiedCore98, NativeSend98, RawJournal95 and existing SAF/store components",
+      "references": [
+        "A01",
+        "A02",
+        "A03",
+        "A04",
+        "A05",
+        "A06",
+        "A07",
+        "A08",
+        "A09"
+      ],
+      "reason": "Smallest foundation already keeping real flight+payload wire I/O and shared native policy on Android. Prefer this for the final GCS architecture; host-companion Activity is not an equivalent driver.",
+      "workRequired": "Create new package/origin/provider context in isolated beta; versioned session lifecycle, trusted pairing and committed mission/boot binding; retain all current safety fences until replaced by tested equivalents.",
+      "state": "M0_ARCHITECTURAL_SELECTION_NOT_IMPLEMENTED_OR_QUALIFIED"
+    },
+    {
+      "id": "D02",
+      "area": "Mission model/compiler",
+      "decision": "RETAIN_AND_ADAPT",
+      "selected": "mission92 document/binding and offline94 portable KML/compiler as native boundary; Workbench01 core geometry/readiness/analysis as explicitly adapted functions",
+      "references": [
+        "A31",
+        "A32",
+        "A33",
+        "A34"
+      ],
+      "reason": "Avoid introducing a third IR or making a Python subprocess a hidden prerequisite of offline Android planning.",
+      "workRequired": "One canonical selected document; one audited conversion from Workbench plan schema; preserve plan/model/mission digest relationships and independent roundtrip/geo oracle.",
+      "state": "M0_ARCHITECTURAL_SELECTION_NOT_IMPLEMENTED_OR_QUALIFIED"
+    },
+    {
+      "id": "D03",
+      "area": "Cockpit ownership",
+      "decision": "ADAPT",
+      "selected": "Native98 cockpit surface/layout85/layout86, Controller82-derived single page/domain owner; Workbench form/editor behavior extracted through a new explicit component API",
+      "references": [
+        "A02",
+        "A03",
+        "A26",
+        "A27",
+        "A28",
+        "A29",
+        "A30"
+      ],
+      "reason": "Do not mount standalone Workbench mock workflow, projected BetaWorkbench controls and SIM phoneMarkup in the same live page.",
+      "workRequired": "Single PlanEditor, PreflightPresenter, FlyPresenter and ReviewPresenter backed by the same mission/flight state. Retire mock animation for actual modes; replace brittle runtime text projection with pinned explicit adapter/component assembly.",
+      "state": "PROPOSED_OWNER_MAP_NOT_PRODUCT_CODE"
+    },
+    {
+      "id": "D04",
+      "area": "Host simulator lifecycle/physics",
+      "decision": "RETAIN_AS_REFERENCE_THEN_ADAPT",
+      "selected": "Exact9-file SIM-STABILITY03 overlay, pinned external reference physics, runtime/projection and durable review behavior",
+      "references": [
+        "A41",
+        "A42",
+        "A43",
+        "A44",
+        "A45",
+        "A46",
+        "A48"
+      ],
+      "reason": "Best recent closed-loop/manual/frames proof, but manual host writer has no mission or camera capability and is a different control plane from Native98.",
+      "workRequired": "M1 may use the host reference writer only in an explicitly reference-only test configuration. Final beta host owns AP/FDM/recorder/faults but must not concurrently write flight intents when native provider is selected. Port neutral-handoff/session policy behind the native FlightProvider contract with fresh qualification.",
+      "state": "REFERENCE_PROVENANCE_RETAINED_FINAL_PORT_NOT_IMPLEMENTED"
+    },
+    {
+      "id": "D05",
+      "area": "Media",
+      "decision": "RETAIN_AND_ADAPT",
+      "selected": "BetaVideo03 publisher/worker demand and shutdown, viewer/decoder worker, clock/full-trace/independent oracle functions",
+      "references": [
+        "A23",
+        "A24",
+        "A25",
+        "A35",
+        "A36",
+        "A37",
+        "A38",
+        "A39",
+        "A40"
+      ],
+      "reason": "Most recent measured video slice; host source and Android receiver are separated. The full server also includes a flight writer, which cannot be retained unchanged beside native flight.",
+      "workRequired": "Extract a media-only companion API; explicit manifest replaces hidden historical-pin dependencies; native WebView origin/worker routes and actual trace-sealing state repaired/retested. Record synthetic source identity; actual codec backend stays unknown until probed.",
+      "state": "M0_ARCHITECTURAL_SELECTION_NOT_IMPLEMENTED_OR_QUALIFIED"
+    },
+    {
+      "id": "D06",
+      "area": "Payload/crew",
+      "decision": "ADAPT",
+      "selected": "UnifiedCore98/PayloadCore97 native dispatch plus existing crew/session contracts and independent-client corpus",
+      "references": [
+        "A07",
+        "A08",
+        "A09",
+        "A23",
+        "A24",
+        "A25"
+      ],
+      "reason": "Shared wire sequence and local policy are valuable, but current same-cockpit role controls are not proof of globally consistent two-operator authority.",
+      "workRequired": "Define one resource authority service per aircraft/session; B authenticates independently and submits per-payload intent through an explicit ingress to the selected native dispatch owner. Broker role/scope must never grant B flight control. Pilot/background/loss fences invalidate pending B dispatch. Verify manager/device ownership and contention independently. Do not combine unrelated local leases as global authority.",
+      "state": "M3_REQUIRED_INGRESS_AND_GLOBAL_POLICY_NOT_IMPLEMENTED"
+    },
+    {
+      "id": "D07",
+      "area": "Observer/3D/audio",
+      "decision": "RETAIN_AS_READONLY",
+      "selected": "SIM-STABILITY03 observer/scene/audio and licensed assets",
+      "references": [
+        "A47",
+        "A48"
+      ],
+      "reason": "Separate observer can reuse AP/FDM ground-truth output without owning control.",
+      "workRequired": "Bind same release/session/boot/clock, stale freeze/mute and actual visual/audio performance; no observer screenshot counted as camera exposure.",
+      "state": "ADAPTER_SELECTION_PENDING_RUNTIME_QUALIFICATION"
+    },
+    {
+      "id": "D08",
+      "area": "Prior applications",
+      "decision": "RETIRE_FROM_SELECTED_BOOT_NOT_DELETE",
+      "selected": "Keep MissionBeta01/BetaVideo03 whole-app launchers, Workbench standalone mock Fly and SIM phone cockpit as historical/reference applications only",
+      "references": [
+        "A16",
+        "A17",
+        "A18",
+        "A19",
+        "A20",
+        "A21",
+        "A22",
+        "A26",
+        "A29",
+        "A41",
+        "A42"
+      ],
+      "reason": "These have overlapping state/session/UI/host writers and hardcoded localhost endpoints. Retiring selection is not permission to delete frozen code/evidence.",
+      "workRequired": "One candidate entrypoint/manifest; no fallback to a legacy app or hidden old launcher when a candidate action fails.",
+      "state": "PROPOSED_SELECTION_POLICY"
+    }
+  ],
+  "uiAndDomainOwners": [
+    {
+      "surface": "Plan/editor/map",
+      "selectedOwner": "One beta PlanEditor backed by selected mission92 schema and adapted Workbench planning functions",
+      "rejectConcurrent": [
+        "Standalone Workflow mock Fly renderer",
+        "Another projected Workbench render closure"
+      ],
+      "implementation": "PROPOSED"
+    },
+    {
+      "surface": "Preflight/flight domain",
+      "selectedOwner": "Native-derived provider plus one JS domain facade, typed native context",
+      "rejectConcurrent": [
+        "MissionBeta host MissionLink write path",
+        "SIM TrainingLink host writer in final native profile"
+      ],
+      "implementation": "PROPOSED"
+    },
+    {
+      "surface": "Fly graphics/telemetry",
+      "selectedOwner": "One FlyPresenter consuming authoritative flight state; observer remains read-only",
+      "rejectConcurrent": [
+        "Telemetry-paint DOM geometry diagnostics every tick",
+        "Observer writing pose back to flight"
+      ],
+      "implementation": "PROPOSED"
+    },
+    {
+      "surface": "Payload panel",
+      "selectedOwner": "Per-resource policy delegated to selected native dispatch; separate authenticated B ingress",
+      "rejectConcurrent": [
+        "Unrelated host Payload01 local authority alongside native PayloadCore97"
+      ],
+      "implementation": "PROPOSED"
+    },
+    {
+      "surface": "Video",
+      "selectedOwner": "One media viewer/worker and source identity lifecycle",
+      "rejectConcurrent": [
+        "Multiple viewer canvases/worker generations owning same panel"
+      ],
+      "implementation": "PROPOSED"
+    },
+    {
+      "surface": "Review/workspace/SAF",
+      "selectedOwner": "One selected native workspace/journal/SAF API with versioned mission+run refs",
+      "rejectConcurrent": [
+        "NativeWB02 and Native82Bridge storage schemas both active without audited conversion"
+      ],
+      "implementation": "PROPOSED"
+    }
+  ],
+  "blockers": [
+    {
+      "id": "B01",
+      "severity": "P1_INTEGRATION",
+      "title": "Three incompatible live-control owners",
+      "evidence": [
+        "A07",
+        "A22",
+        "A43"
+      ],
+      "resolution": "Select one provider/writer per run. Final target is native; host reference path remains labeled test-only until policy ported."
+    },
+    {
+      "id": "B02",
+      "severity": "P1_CONFIGURATION",
+      "title": "AP/port/model identity mismatch",
+      "evidence": [
+        "A10",
+        "A11",
+        "A12",
+        "A14",
+        "A21",
+        "A44"
+      ],
+      "resolution": "New versioned provider descriptor with exact AP artifact/config/model and authenticated endpoint; never weaken/rip out old guard."
+    },
+    {
+      "id": "B03",
+      "severity": "P1_LIFECYCLE",
+      "title": "Native one-shot Activity lifecycle",
+      "evidence": [
+        "A13",
+        "A15"
+      ],
+      "resolution": "Explicit fresh session after confirmed closure, no authority restore, late callback fencing; keep failed raw immutable."
+    },
+    {
+      "id": "B04",
+      "severity": "P1_UI_INTEGRATION",
+      "title": "Competing UI controllers and projected text substitutions",
+      "evidence": [
+        "A26",
+        "A27",
+        "A28",
+        "A29",
+        "A30"
+      ],
+      "resolution": "One selected UI owner and model; replace runtime source surgery with exact adapter/component assembly and geometry/state tests."
+    },
+    {
+      "id": "B05",
+      "severity": "P1_CLOSURE",
+      "title": "Hidden runtime file/projection/compiler dependencies",
+      "evidence": [
+        "A30",
+        "A32",
+        "A35",
+        "A36",
+        "A37",
+        "A48"
+      ],
+      "resolution": "Closure includes literal fs/asset/pin/Python/native-binary dependencies, not imports alone; portable Android parser selected."
+    },
+    {
+      "id": "B06",
+      "severity": "P1_RUNTIME",
+      "title": "Current external manual slice does not implement missions/payload",
+      "evidence": [
+        "A41",
+        "A42"
+      ],
+      "resolution": "Do not ship its whole app as the multi-task beta. Extract behavior/physics only, then actual native integration gate."
+    },
+    {
+      "id": "B07",
+      "severity": "P1_RECORDER_AND_TIME",
+      "title": "Closed elapsed and long trace failures remain",
+      "evidence": [
+        "A45",
+        "A48"
+      ],
+      "resolution": "M1 recorder capacity and closure-clock repair with mock then bounded actual requalification."
+    },
+    {
+      "id": "B08",
+      "severity": "P1_CREW",
+      "title": "Local native policy is not global dual-operator authorization",
+      "evidence": [
+        "A07",
+        "A09"
+      ],
+      "resolution": "M3 explicit independent-client ingress/resource authority; no unproven sum of local leases."
+    },
+    {
+      "id": "B09",
+      "severity": "P1_MEDIA",
+      "title": "Media source platform-specific and trace-seal UI incomplete",
+      "evidence": [
+        "A37",
+        "A38",
+        "A39",
+        "A40"
+      ],
+      "resolution": "Pin exact encoder prerequisite; repair saved-window/sealing transition and test full selected workload; no camera-hardware claim."
+    }
+  ],
+  "authorityInvariant": "Exactly one selected flight provider per run; historical host writers never run alongside the final native writer. Separate clientB ingress is not permission for a second flight owner.",
+  "rootDecisionRequired": [
+    "Confirm final Native98-derived source foundation and paired-provider contract",
+    "Confirm M1 reference-only simulator harness vs final candidate qualification distinction",
+    "Choose generation/authority broker deployment and immutable config binding before M3 implementation"
+  ]
+}

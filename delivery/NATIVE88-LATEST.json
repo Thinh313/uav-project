@@ -1,0 +1,12 @@
+{
+  "milestone": "NATIVE88",
+  "status": "PASS_SCOPED_ANDROID_SITL_AND_BENCH_PREPARATION",
+  "apk": "native/native88/dist/aeris-native88-development02.apk",
+  "sha256": "3db42a4fe878d1087a0975ead837484050c4c03789df4b4c362fc515910160cf",
+  "report": "delivery/COMPLETION-NATIVE88.html",
+  "verification": "evidence/native88/verification.json",
+  "bench": "native/native88/bench/README.md",
+  "runtime": "STOPPED",
+  "hardwareAcceptance": "NOT_CHECKED",
+  "sourceCandidateEndureUnchanged": true
+}

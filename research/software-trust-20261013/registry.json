@@ -1,0 +1,103 @@
+{
+  "aggregates": {
+    "cells_by_state": {
+      "sourced": 4
+    },
+    "coverage_pct": null,
+    "n_entities": 1,
+    "rollup": {},
+    "rollup_field": null,
+    "universe_estimate": null
+  },
+  "registry": {
+    "Software trust definitions": {
+      "entity_type": null,
+      "fields": {
+        "bootstrap_boundary": {
+          "claims": [
+            {
+              "capture": {
+                "fetched_at": "2026-10-13T02:55:05.572180+00:00",
+                "origin_id": "tuf-spec",
+                "sha256": "f20fda0dda7128f3b9cc1f12f3d90301b0f6e163576ba285bfe485d1671e8def",
+                "snapshot": "tuf-spec.html",
+                "source": "tuf-spec",
+                "url": "https://theupdateframework.github.io/specification/latest/"
+              },
+              "evidence_span": "bootstrap security",
+              "extraction": "normalized",
+              "source": "tuf-spec",
+              "tier": "A",
+              "value": "TUF does not establish initial bootstrap security for arbitrary manual installation"
+            }
+          ],
+          "state": "sourced",
+          "value": "TUF does not establish initial bootstrap security for arbitrary manual installation"
+        },
+        "consecutive_version": {
+          "claims": [
+            {
+              "capture": {
+                "fetched_at": "2026-10-13T02:55:05.572180+00:00",
+                "origin_id": "tuf-spec",
+                "sha256": "f20fda0dda7128f3b9cc1f12f3d90301b0f6e163576ba285bfe485d1671e8def",
+                "snapshot": "tuf-spec.html",
+                "source": "tuf-spec",
+                "url": "https://theupdateframework.github.io/specification/latest/"
+              },
+              "evidence_span": "incremented by one",
+              "extraction": "normalized",
+              "source": "tuf-spec",
+              "tier": "A",
+              "value": "TUF requires a consecutive root version and checks rollback"
+            }
+          ],
+          "state": "sourced",
+          "value": "TUF requires a consecutive root version and checks rollback"
+        },
+        "durable_root": {
+          "claims": [
+            {
+              "capture": {
+                "fetched_at": "2026-10-13T02:55:05.572180+00:00",
+                "origin_id": "tuf-spec",
+                "sha256": "f20fda0dda7128f3b9cc1f12f3d90301b0f6e163576ba285bfe485d1671e8def",
+                "snapshot": "tuf-spec.html",
+                "source": "tuf-spec",
+                "url": "https://theupdateframework.github.io/specification/latest/"
+              },
+              "evidence_span": "non-volatile storage",
+              "extraction": "normalized",
+              "source": "tuf-spec",
+              "tier": "A",
+              "value": "TUF requires trusted root metadata to be persisted to non-volatile storage"
+            }
+          ],
+          "state": "sourced",
+          "value": "TUF requires trusted root metadata to be persisted to non-volatile storage"
+        },
+        "rotation_quorum": {
+          "claims": [
+            {
+              "capture": {
+                "fetched_at": "2026-10-13T02:55:05.572180+00:00",
+                "origin_id": "tuf-spec",
+                "sha256": "f20fda0dda7128f3b9cc1f12f3d90301b0f6e163576ba285bfe485d1671e8def",
+                "snapshot": "tuf-spec.html",
+                "source": "tuf-spec",
+                "url": "https://theupdateframework.github.io/specification/latest/"
+              },
+              "evidence_span": "When replacing root keys",
+              "extraction": "normalized",
+              "source": "tuf-spec",
+              "tier": "A",
+              "value": "TUF root rotation requires unique signature thresholds of the old and new root keys"
+            }
+          ],
+          "state": "sourced",
+          "value": "TUF root rotation requires unique signature thresholds of the old and new root keys"
+        }
+      }
+    }
+  }
+}

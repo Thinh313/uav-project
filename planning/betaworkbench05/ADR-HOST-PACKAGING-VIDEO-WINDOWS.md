@@ -1,0 +1,11 @@
+# ADR Beta05: workspace-bound companion and complete-AUTO video evidence
+
+Accepted within the user-authorized isolated Beta scope,25/10/2026. Frozen source/candidates/ENDURE and Beta04 remain unchanged.
+
+Use a small macOS launcher/APK/checksum kit referencing the retained checkout and cached Android/ARM artifacts. Do not duplicate the project or ship SDK/images/keys. Doctor validates pins, projection inverse, ports and dependencies; start performs31sample/30s admission and rechecks pins; PID birth/ownership and exclusive runtime lock govern stop. Per-run output is exclusive; no automatic retry, evidence deletion or authority restore.20GiB entry/10GiB floor+256MiB closure reserve, forecast15s,45min runtime,1GiB task evidence remain.
+
+Keep the qualified ArduPilot internal-quad executable/image/command/readback/takeoff/closure algorithms. Namespace run output beneath the owned host. Three AP requests per host and at most three retained Beta05 AP containers bound this engineering epoch. Future cleanup is a separate controlled evidence policy, not implicit deletion.
+
+Preserve existing30–60s viewer/4096sample/body caps. Collect exactly three consecutive30s windows (90s), freeze each report before starting the next and save sequentially. Independently decode raw MAVLink for AUTO command → armed AUTO → airborne → landed/disarmed. Join source/canvas clock intervals conservatively; no gap or missing window may qualify. Receiver recomputes from raw and samples. A second Python wire/CRC implementation cross-checks measurements; neither is independent human QA or camera/photon evidence. Missions outside90s coverage fail this qualification; this is the short internal survey fixture, not an unbounded operational monitor.
+
+UI current permission is a sanitized live snapshot bound to gateway/run/boot/client epoch, never a historical invalidation receipt. Missing/stale identity displays unknown. Labels/units switch synchronously between planning metrics and flight telemetry. These observations/presentation changes never grant authority. Final UI repairs are checked by mock+actual Android navigation; the earlier actual AUTO/video evidence retains its own pins03 and is not relabelled as a later flight build.

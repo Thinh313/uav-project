@@ -1,0 +1,83 @@
+/* Shared control geometry. Load after each page's stylesheet.
+   Form labels keep their spacing; interactive toolbar labels own a clean box. */
+:root {
+  --control-size: 44px;
+  --control-gap: 6px;
+  --control-radius: 2px;
+}
+.control-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  gap: var(--control-gap);
+}
+.control-toolbar > .toolbar-control {
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+  min-width: var(--control-size);
+  height: var(--control-size);
+  min-height: var(--control-size);
+  margin: 0;
+  padding: 0 10px;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: var(--control-radius);
+  font: 400 14px/20px Plex, Arial, sans-serif;
+  white-space: nowrap;
+  cursor: pointer;
+}
+.control-toolbar > .toolbar-icon {
+  width: var(--control-size);
+  padding: 0;
+  font-size: 20px;
+}
+.control-toolbar > .toolbar-fit { width: 56px; }
+.control-toolbar > .toolbar-draw { width: 112px; }
+.control-toolbar > .toolbar-toggle { width: 80px; gap: 8px; }
+.toolbar-toggle > input[type=checkbox] {
+  flex: 0 0 18px;
+  width: 18px;
+  height: 18px;
+  min-width: 18px;
+  min-height: 18px;
+  margin: 0;
+  padding: 0;
+  accent-color: #edc62c;
+  cursor: pointer;
+}
+.toolbar-toggle > span { margin: 0; color: inherit; font: inherit; }
+.control-toolbar > .toolbar-toggle:focus-within {
+  outline: 2px solid #b38e04;
+  outline-offset: 2px;
+}
+/* Equal columns, stretch per row and wrap text instead of shrinking hit areas. */
+.control-group {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: stretch;
+  gap: var(--control-gap);
+}
+.control-group > button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: var(--control-size);
+  min-height: var(--control-size);
+  margin: 0;
+  line-height: 1.25;
+  overflow-wrap: anywhere;
+}
+.control-group.commands > [data-command=auto] { grid-column: 1 / -1; }
+.control-link {
+  display: inline-flex;
+  align-items: center;
+  min-height: var(--control-size);
+  margin: 0 0 6px;
+  font-size: 12px;
+  color: inherit;
+}
+/* Additional workflow links wrap as a shared navigation rule on small screens. */
+@media(max-width:720px){header{flex-wrap:wrap;height:auto;padding:16px;gap:12px}header nav{order:3;width:100%;margin:0;flex-wrap:wrap;row-gap:4px}header nav a{display:inline-flex;align-items:center;min-height:36px}header .badge{margin-left:auto}main{height:auto}}

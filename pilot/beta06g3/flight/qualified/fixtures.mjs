@@ -1,0 +1,1 @@
+import{baseline}from'../../../preflight43/fixtures.mjs';import{BINARY}from'./profile.mjs';export{baseline};export const context=(session='mock43')=>({scope:'READONLY_PREFLIGHT43',origin:'MOCK_REPLAY',binarySha256:BINARY,system:42,component:1,session,boot:'mock-boot',epoch:session,containerId:'a'.repeat(64),pid:123,startedAt:'MOCK_NOT_ACTUAL_PROCESS'});

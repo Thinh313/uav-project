@@ -1,0 +1,9 @@
+{
+  "milestone": "NATIVE86",
+  "status": "PASS_ANDROID_MOCK_SCOPE_WITH_RECORDED_LIMITATIONS",
+  "apk": "native/native86/dist/aeris-native86-development03.apk",
+  "sha256": "8c4d016e5aa8b6c52e86ab3234cccd9ea2602f5b1c1d55478152f9c156559e4a",
+  "report": "delivery/COMPLETION-NATIVE86.html",
+  "evidence": "evidence/native86/verification.json",
+  "scope": "ANDROID_MOCK_ONLY_NOT_HERAHUB_PRODUCTION"
+}

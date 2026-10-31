@@ -1,0 +1,183 @@
+{
+  "atUTC": "2026-10-26T01:39:48.338Z",
+  "status": "PASS",
+  "results": [
+    {
+      "name": "Six distinct retained protocol-mock packages with large borrowed structural traces archive without blocking host timer",
+      "status": "PASS"
+    },
+    {
+      "name": "Zero queue rejects competing request; next explicit read returns same selected bytes",
+      "status": "PASS"
+    },
+    {
+      "name": "Six-entry history deep audit runs on worker and returns no issues",
+      "status": "PASS"
+    },
+    {
+      "name": "Worker death retains pending evidence and refuses automatic retry or success",
+      "status": "PASS"
+    },
+    {
+      "name": "Journal snapshot is the captured prefix even if source file later acquires an incomplete suffix",
+      "status": "PASS"
+    }
+  ],
+  "scope": "PROTOCOL_MOCK_RAW_WITH_BORROWED_ACTUAL_TRACE_INTEGRITY_ONLY_NO_NEW_SITL_OR_VIDEO_ACCEPTANCE",
+  "cases": [
+    {
+      "run": "mf85458e77d3043428008",
+      "source": "MOCK_PROTOCOL_NOT_ARDUPILOT"
+    },
+    {
+      "run": "m4d9fc3eb530f4bf5a33f",
+      "source": "MOCK_PROTOCOL_NOT_ARDUPILOT"
+    },
+    {
+      "run": "m2c04e31854774b0a86e7",
+      "source": "MOCK_PROTOCOL_NOT_ARDUPILOT"
+    },
+    {
+      "run": "md516e82250fc4541983f",
+      "source": "MOCK_PROTOCOL_NOT_ARDUPILOT"
+    },
+    {
+      "run": "m620e046f6505420791c2",
+      "source": "MOCK_PROTOCOL_NOT_ARDUPILOT"
+    },
+    {
+      "run": "ma34e0a740330482682db",
+      "source": "MOCK_PROTOCOL_NOT_ARDUPILOT"
+    }
+  ],
+  "borrowedTraceSource": "sc5180d878e4c44169552",
+  "mainTimer": {
+    "periodMs": 10,
+    "samples": 870,
+    "maxLateMs": 3.467500000000655
+  },
+  "workerSpans": [
+    {
+      "operation": "archive",
+      "id": 1,
+      "durationMs": 834.213625,
+      "spans": [
+        {
+          "kind": "makePackage",
+          "durationMs": 22.20833300000001
+        },
+        {
+          "kind": "history.archive",
+          "durationMs": 783.659417
+        }
+      ],
+      "ok": true
+    },
+    {
+      "operation": "archive",
+      "id": 2,
+      "durationMs": 779.1441659999999,
+      "spans": [
+        {
+          "kind": "makePackage",
+          "durationMs": 24.671540999999934
+        },
+        {
+          "kind": "history.archive",
+          "durationMs": 727.764083
+        }
+      ],
+      "ok": true
+    },
+    {
+      "operation": "archive",
+      "id": 3,
+      "durationMs": 753.1702499999999,
+      "spans": [
+        {
+          "kind": "makePackage",
+          "durationMs": 22.008542000000034
+        },
+        {
+          "kind": "history.archive",
+          "durationMs": 705.5885410000001
+        }
+      ],
+      "ok": true
+    },
+    {
+      "operation": "archive",
+      "id": 4,
+      "durationMs": 757.3257090000002,
+      "spans": [
+        {
+          "kind": "makePackage",
+          "durationMs": 21.9350000000004
+        },
+        {
+          "kind": "history.archive",
+          "durationMs": 709.0135829999999
+        }
+      ],
+      "ok": true
+    },
+    {
+      "operation": "archive",
+      "id": 5,
+      "durationMs": 768.6466249999994,
+      "spans": [
+        {
+          "kind": "makePackage",
+          "durationMs": 22.55749999999989
+        },
+        {
+          "kind": "history.archive",
+          "durationMs": 719.9766250000002
+        }
+      ],
+      "ok": true
+    },
+    {
+      "operation": "archive",
+      "id": 6,
+      "durationMs": 768.8381250000002,
+      "spans": [
+        {
+          "kind": "makePackage",
+          "durationMs": 22.486249999999927
+        },
+        {
+          "kind": "history.archive",
+          "durationMs": 720.0208750000002
+        }
+      ],
+      "ok": true
+    },
+    {
+      "operation": "read",
+      "id": 7,
+      "durationMs": 711.5180839999994,
+      "spans": [
+        {
+          "kind": "history.read",
+          "durationMs": 682.9303330000002
+        }
+      ],
+      "ok": true
+    },
+    {
+      "operation": "list",
+      "id": 8,
+      "durationMs": 4115.428833000001,
+      "spans": [
+        {
+          "kind": "history.list",
+          "durationMs": 4086.3499170000005
+        }
+      ],
+      "ok": true
+    }
+  ],
+  "historyUsage": 79659589,
+  "actualArchiveUnchanged": "8ee17fb0fb0946c45e511719d88c69e01fa0e633ee7ce11cbb60f4a6ea8fd9da"
+}

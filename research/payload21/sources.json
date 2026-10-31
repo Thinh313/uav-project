@@ -1,0 +1,58 @@
+[
+  {
+    "id": "ragas",
+    "url": "https://raw.githubusercontent.com/Real-Time-Robotics/ragas-release/main/README.md",
+    "final_url": "https://raw.githubusercontent.com/Real-Time-Robotics/ragas-release/main/README.md",
+    "fetched_at": "2026-10-13T06:24:44.343022+00:00",
+    "snapshot": "ragas.md",
+    "sha256": "f1652e1cb409ddad0c79e2492a343aae2630dc66ef9e8df4c34c10a7e1f8b335",
+    "bytes": 6585,
+    "origin_id": "ragas",
+    "tier": "A",
+    "scope": "Official published documentation; not installed or runtime capability",
+    "status": "captured",
+    "http_status": 200
+  },
+  {
+    "id": "camera",
+    "url": "https://mavlink.io/en/services/camera.html",
+    "final_url": "https://mavlink.io/en/services/camera.html",
+    "fetched_at": "2026-10-13T06:24:44.961620+00:00",
+    "snapshot": "camera.html",
+    "sha256": "06da5f2b08a99f3be2210bc5fe68a0b3344145d33f2daf81e6b5bd1c80c5da89",
+    "bytes": 155867,
+    "origin_id": "camera",
+    "tier": "A",
+    "scope": "Official published documentation; not installed or runtime capability",
+    "status": "captured",
+    "http_status": 200
+  },
+  {
+    "id": "gimbal",
+    "url": "https://mavlink.io/en/services/gimbal_v2.html",
+    "final_url": "https://mavlink.io/en/services/gimbal_v2.html",
+    "fetched_at": "2026-10-13T06:24:45.477544+00:00",
+    "snapshot": "gimbal.html",
+    "sha256": "ec701755833bb53aee1df94e0b38191240946501a49110ab3c336a75ae9760fd",
+    "bytes": 148211,
+    "origin_id": "gimbal",
+    "tier": "A",
+    "scope": "Official published documentation; not installed or runtime capability",
+    "status": "captured",
+    "http_status": 200
+  },
+  {
+    "id": "command",
+    "url": "https://mavlink.io/en/services/command.html",
+    "final_url": "https://mavlink.io/en/services/command.html",
+    "fetched_at": "2026-10-13T06:24:45.954119+00:00",
+    "snapshot": "command.html",
+    "sha256": "4acab8dad8366c873d691c4ab1b3728cc7e41b58ecffcbca33ff084484a67c50",
+    "bytes": 110765,
+    "origin_id": "command",
+    "tier": "A",
+    "scope": "Official published documentation; not installed or runtime capability",
+    "status": "captured",
+    "http_status": 200
+  }
+]

@@ -1,0 +1,83 @@
+.venv/
+node_modules/
+__pycache__/
+.DS_Store
+sot/index/.publish_token
+sot/registry/_backup/
+.local/
+native/diagnostic/.build/
+runtime/executions/
+runtime/test-executions/
+
+# Source repository policy. Host evidence/runtime remain intact on disk.
+/runtime/
+/evidence/**
+!/evidence/cockpit85/
+!/evidence/cockpit85/**
+# Exact regression fixtures used by tests; not a full flight/evidence archive.
+!/evidence/hera03/
+!/evidence/hera03/native-model-replay.json
+!/evidence/qgc03/
+!/evidence/qgc03/sitl/
+!/evidence/qgc03/sitl/simple-relative-accepted.plan
+!/evidence/qgc03/sitl/simple-relative-frozen-request.json
+!/evidence/review04/
+!/evidence/review04/completed-record.json
+!/evidence/profile05/
+!/evidence/profile05/completed-record.json
+!/evidence/bench06/
+!/evidence/bench06/rotated-interrupted-record.json
+!/evidence/recovery07/
+!/evidence/recovery07/run.json
+
+# Signing material and local credentials must never enter Git.
+.env
+.env.*
+!.env.example
+*.p12
+*.pfx
+*.jks
+*.keystore
+*.key
+*.pem
+**/credentials.json
+**/password
+**/bridge-token
+
+# Reproducible build outputs and native debug packages remain host-local.
+**/.build/
+*.apk
+*.apk.idsig
+*.aab
+*.dex
+*.class
+*.o
+*.pyc
+*.aeris-software
+*.dmg
+*.qcow2
+*.img
+
+# Generated staging and engineering archives stay on the evidence host.
+# Do not delete these paths: pinned runs may still reference them.
+**/.stage/
+**/.pytest_cache/
+**/.mypy_cache/
+/delivery/**/*.zip
+/delivery/**/*.tar.gz
+/planning/**/*.log
+
+# Retained web capture contains a credential-like signed download reference.
+/research/mapping-camera-fixed-20261015/snapshots/agisoft-capture.html
+
+# Public handoff: sensitive context and host artifacts are supplied separately.
+/handoff-private/
+/PRIVATE-CONTEXT.zip
+/ENGINEERING-REPLAY-KIT.tar.gz
+/SITL-LINUX-ARM64-IMAGE.tar.gz
+/tmp/
+!/evidence/workbench01/
+!/evidence/workbench01/handoff-manifest.json
+
+!/evidence/handoff09/
+!/evidence/handoff09/completed.aeris-handoff.json

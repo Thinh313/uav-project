@@ -1,0 +1,35 @@
+{
+  "format": "aeris-m1control01-independent-qa-contract",
+  "version": 1,
+  "role": "/root/m1runtime_qa",
+  "scope": "Native LOITER-assisted pilot input and bounded assisted scenarios; not ACRO or physical-controller qualification",
+  "cases": [
+    {"id":"C01","area":"Input provenance","acceptance":"Immutable run/epoch/boot/operator/generation/source/sequence/Android clock, pointer state, axes and receipt timestamps bind each input. UI producer and native sender clocks are distinct observations. A stationary held UI pointer may be sampled, but sender must never restamp old input as new. ADB/root touch and scripts are labelled, not human/HID proof."},
+    {"id":"C02","area":"Consent/neutral/lease","acceptance":"Discovery alone cannot grant. Explicit consent and fresh neutral bind context; fresh input can renew a bounded lease according to declared policy. Foreign context/source, duplicate/reordered/stale input, clock offset/regression, pointerUP/CANCEL/background fail closed; revoke cannot silently restore."},
+    {"id":"C03","area":"Actual wire boundary","acceptance":"Single native sender; durable intent and input-to-wire SHA/context binding before wire. Recheck input age/lease/profile immediately at send callback. Block stale/foreign target/type/sequence and malformed axes; unknown send and fsync failure cannot become SENT or be retried."},
+    {"id":"C04","area":"Continuous cadence/release","acceptance":"Multiple distinct fresh input samples drive continuous observed RC override packets. Stale last sample is not resent as fresh. Expiry/CANCEL/revoke stops further stick output and uses only the dedicated bounded release path if possible; unsent or unknown release is not called delivered/neutralized."},
+    {"id":"C05","area":"Firmware typed profile","acceptance":"Observe exact4.7.1/dbe79216 target42/1 and current typed arming/failsafe/RC mapping/calibration parameters. ARMING_SKIPCHK0 skips none. FS_OPTIONS bit4 must not suppress GCS action in LOITER. RC_OVERRIDE_TIME finite and GCS timeout/action declared per profile; disabled checks/failsafes cannot PASS."},
+    {"id":"C06","area":"Post-arm Home","acceptance":"Takeoff blocked until actual armed observation, fresh post-arm Home candidate and explicit exact candidate confirmation with raw coordinates/MSL datum/time/boot/generation. Home change/reboot/expiry invalidates confirmation; no tolerant or automatic reseal."},
+    {"id":"C07","area":"Assisted takeoff/Hold","acceptance":"GUIDED/ARM/3m takeoff and Hold accepted from independent raw mode/armed/position/land-state observations over time. ACK or command write never proves motion, hover or ground."},
+    {"id":"C08","area":"Manual response","acceptance":"LOITER assistance labelled; actual nonzero input-to-wire bindings precede observed horizontal motion with correct declared axis direction. Explicit neutral/release/Hold observations show bounded stop; no motor-output/ACRO claim."},
+    {"id":"C09","area":"Observed LAND/disarm","acceptance":"LAND request plus observed landing mode/vertical motion, on-ground extended state and disarmed heartbeats under declared freshness/continuity. Local socket close/elapsed time are not safe landing."},
+    {"id":"C10","area":"Held-input external link fault","acceptance":"Cut only Android-native MAVLink path while nonzero input is active; preserve FDM/clock/AP/passive observation. Root pressing graceful CLOSE or cutting whole Docker networking is not the intended fault. No automatic reconnect or GCS heartbeat restoration before failsafe observation."},
+    {"id":"C11","area":"AP autonomous failsafe","acceptance":"Passive application-layer MAVLinkTX0 (TCP handshake/ACK traffic is not MAVLink payload). Observe airborne state when lastGCSheartbeat timeout expires, configured AP action and terminal ground/disarm or UNKNOWN. Landing caused earlier by RC fallback cannot alone prove GCS failsafe."},
+    {"id":"C12","area":"Ground AP reboot","acceptance":"Observe ground/disarmed before killing/restarting AP; owned new process/executable identity and new AP epoch/boot. Require complete new discovery/profile and fresh consent/neutral before any control; old input/lease/callback or persisted history never regains authority. Airborne reboot mock-only."},
+    {"id":"C13","area":"Recording and closure","acceptance":"All admitted host/model/AP frames and exact timing are retained, current clock/chain/cold anchors checked; partial prefixes and post-SENT stage failure counts remain truthful. Root owned resources close and failed attempts remain distinct."},
+    {"id":"C14","area":"Admission/isolation","acceptance":"Entry20GiB/floor10GiB+256MiB/real15s prime and forecast, speedup1/cap500ms unchanged. Previous1651-file handoff/source/candidate/ENDURE immutable; no QA launches/APK sign/product edit."}
+  ],
+  "candidateActualMetricsForContractorConfirmation": {
+    "takeoffTargetRelativeHomeM":3,
+    "proposedTakeoffToleranceM":0.75,
+    "proposedHoverMinSeconds":1,
+    "proposedHoverMaxHorizontalSpeedMS":0.5,
+    "proposedManualMinHorizontalDisplacementM":0.3,
+    "proposedManualMinNonzeroHoldSeconds":1,
+    "proposedGroundMaxAbsRelativeAltitudeM":0.4,
+    "proposedGroundDisarmedMinIndependentFreshObservations":2,
+    "status":"PROPOSED_BEFORE_ACTUAL_NOT_YET_ROOT_FROZEN_ACCEPTANCE"
+  },
+  "initialStatus":"NOT_CHECKED",
+  "notSufficientForPass":["ACK","local send","native FDdisconnect alone","elapsed walltime","GCS enabled flag without FS_OPTIONS semantics","observer receiving bytes without zeroTX proof","on-ground after RC fallback without airborne-at-GCS-timeout evidence","old input resampled by network timer","same-epoch reboot metadata","builder completion text"]
+}

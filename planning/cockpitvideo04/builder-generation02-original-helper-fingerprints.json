@@ -1,0 +1,13 @@
+{
+  "scope": "READONLY_ORIGINAL_HELPER_CURRENT_FINGERPRINTS_GENERATION02_ADDS_ONLY",
+  "files": {
+    "planning/cockpitvideo04/qa-runtime.py": "3131203ee08668093fa4f5ede8a55ea6b45a493d3293f48383e8bb8139faa934",
+    "planning/cockpitvideo04/qa-android.py": "e74f8f0f283a22b13c21f9786b05b19fec73b1bcc300d0f05dde7df24c25df03",
+    "planning/cockpitvideo04/qa-device-actions.py": "b96488bcafe8665458f4c943e82197ece2d11e5cb25d8c1d98f8d8cae837d1ad",
+    "planning/cockpitvideo04/qa-device.py": "05838d9319c871064993205c1e75d9e296811d47500ce980f1bf67c0a7e6f641",
+    "planning/cockpitvideo04/qa-arm-auto.py": "bc219c0561dab09e370355cd09e0c5ab1e2a746b4ea446721d48fcf3a1cffe3e",
+    "planning/cockpitvideo04/qa-preflight-upload.py": "06d6b6626e6d3c5db292666f806072f34835a2d3ec9e0bb056ff2f4ca9743f02",
+    "planning/cockpitvideo04/qa-live-actions.py": "1217b946555a05a31c009fdd7c7c521033d6221fdc2e2cae44e66b5f54e0b415"
+  },
+  "noRuntimeNoADB": true
+}

@@ -1,0 +1,162 @@
+{
+  "format": "aeris-ragas-capability-matrix",
+  "version": 1,
+  "scope": "Published RAGAS documentation versus bounded engineering evidence. No same-device human A/B.",
+  "sourceURL": "https://github.com/Real-Time-Robotics/ragas-release",
+  "capturedAt": "2026-10-13",
+  "ragasRuntime": "NOT_CHECKED",
+  "winner": null,
+  "rows": [
+    {
+      "id": "flight",
+      "workflow": "Điều khiển bay",
+      "ragas": "Bay tay và nhiệm vụ tự động",
+      "aeris": "SITL: telemetry, ARM, AUTO, HOLD, RTL; lệnh/phản hồi có hồ sơ",
+      "status": "MEASURED_SITL",
+      "evidence": [
+        "delivery/COMPLETION-ACCEPT13.md",
+        "evidence/accept13/campaign.json"
+      ],
+      "missing": "Radio/Hera thật, manual sticks, HIL, controlled flight",
+      "ragasClaimField": "flight_workflow"
+    },
+    {
+      "id": "planning",
+      "workflow": "Khảo sát / lập nhiệm vụ",
+      "ragas": "Lập và thực thi nhiệm vụ",
+      "aeris": "Corpus QGC, compiler/profile/Home; sáu mẫu hoàn thành trên SITL",
+      "status": "MEASURED_BOUNDED",
+      "evidence": [
+        "delivery/COMPLETION-QGC03.md",
+        "delivery/COMPLETION-GEO14.md",
+        "delivery/COMPLETION-ACCEPT13.md"
+      ],
+      "missing": "Cấu hình bay thực, địa hình/độ cao thực địa, semantic QGC phổ quát",
+      "ragasClaimField": "mission_workflow"
+    },
+    {
+      "id": "payloads",
+      "workflow": "Nhiều payload",
+      "ragas": "Tối đa ba vị trí Trước/Giữa/Sau theo README",
+      "aeris": "PAYLOAD21: ba payload dị loại; địa chỉ và quyền điều khiển riêng",
+      "status": "SIMULATED",
+      "evidence": [
+        "pilot/payload21/fixtures.mjs",
+        "evidence/payload21/unit-tests.txt"
+      ],
+      "missing": "As-built mapping, discovery và SDK/protocol thực; số payload lắp trên Hera chưa xác nhận",
+      "ragasClaimField": "multi_payload_positions"
+    },
+    {
+      "id": "video",
+      "workflow": "Màu / nhiệt",
+      "ragas": "Xem luồng màu và nhiệt",
+      "aeris": "Chuyển luồng tổng hợp, trạng thái mất/mới của từng luồng",
+      "status": "SIMULATED",
+      "evidence": [
+        "pilot/payload21/console.mjs",
+        "evidence/payload21/browser-qa.json"
+      ],
+      "missing": "Decoder/native video, nhiều feed thật đồng thời, thời gian trễ camera-to-display",
+      "ragasClaimField": "camera_controls"
+    },
+    {
+      "id": "gimbal",
+      "workflow": "Gimbal / zoom / focus",
+      "ragas": "Điều khiển góc nhìn và camera",
+      "aeris": "Capability-aware; giới hạn góc/zoom, ACK tách quan sát, lỗi riêng gimbal",
+      "status": "SIMULATED",
+      "evidence": [
+        "pilot/payload21/core.mjs",
+        "evidence/payload21/unit-tests.txt"
+      ],
+      "missing": "Manager authority và calibration/protocol camera/gimbal thực",
+      "ragasClaimField": "camera_controls"
+    },
+    {
+      "id": "capture",
+      "workflow": "Ảnh / video",
+      "ragas": "Chụp ảnh và ghi video",
+      "aeris": "Camera mission commands trên SITL; capture receipt tổng hợp, 0 ảnh thật",
+      "status": "SIMULATED",
+      "evidence": [
+        "delivery/COMPLETION-QGC03.md",
+        "pilot/payload21/core.mjs"
+      ],
+      "missing": "Capture thực, video recording, timestamp/media correlation, camera storage",
+      "ragasClaimField": "camera_controls"
+    },
+    {
+      "id": "accessories",
+      "workflow": "Payload chuyên dụng",
+      "ragas": "LRF, đèn và thả vật",
+      "aeris": "Chưa triển khai adapter",
+      "status": "MISSING",
+      "evidence": [],
+      "missing": "Giao thức, quyền thao tác và safety contract riêng từng phụ kiện",
+      "ragasClaimField": "accessories_workflow"
+    },
+    {
+      "id": "ai",
+      "workflow": "AI nhận diện / tracking",
+      "ragas": "Nhận diện và bám mục tiêu",
+      "aeris": "AI hỗ trợ phát triển; runtime detection/tracking chưa triển khai",
+      "status": "MISSING",
+      "evidence": [
+        "docs/ROADMAP.md"
+      ],
+      "missing": "Inference/runtime dataset, target selection, tracking authority/metrics",
+      "ragasClaimField": "ai_workflow"
+    },
+    {
+      "id": "native",
+      "workflow": "HeraHub / input",
+      "ragas": "Ứng dụng GCS và tùy chỉnh điều khiển",
+      "aeris": "APK chẩn đoán và input intake; chưa có ứng dụng GCS native đầy đủ",
+      "status": "DIAGNOSTIC_ONLY",
+      "evidence": [
+        "delivery/COMPLETION-HERA03.md"
+      ],
+      "missing": "SDK, máy thực, joystick/buttons/video/lifecycle integration",
+      "ragasClaimField": "controller_workflow"
+    },
+    {
+      "id": "configuration",
+      "workflow": "RTK / cấu hình",
+      "ragas": "RTK/NTRIP, PPK và cấu hình thiết bị",
+      "aeris": "Profile có phiên bản, preflight đọc tham số; không ghi tham số máy bay",
+      "status": "MEASURED_BOUNDED",
+      "evidence": [
+        "delivery/COMPLETION-PROFILE05.md"
+      ],
+      "missing": "RTK/NTRIP, sensor/controller calibration, camera firmware",
+      "ragasClaimField": "configuration_workflow"
+    },
+    {
+      "id": "data",
+      "workflow": "Review / bàn giao",
+      "ragas": "Media, log và PPK sau bay",
+      "aeris": "Hồ sơ, integrity, checkpoint/resume, receiver review; media khai nguồn",
+      "status": "MEASURED_HOST",
+      "evidence": [
+        "delivery/COMPLETION-ACCEPT13.md",
+        "delivery/COMPLETION-RESUME11.md"
+      ],
+      "missing": "Pipeline media thực, quality/PPK thực địa và người nhận kiểm trên thiết bị",
+      "ragasClaimField": "media_workflow"
+    },
+    {
+      "id": "comparison",
+      "workflow": "A/B người vận hành",
+      "ragas": "Chưa đo trong cùng bài thử",
+      "aeris": "Harness/corpus đã có; thời gian thao tác, lỗi, workload và winner còn null",
+      "status": "NOT_CHECKED",
+      "evidence": [
+        "delivery/COMPLETION-BENCH06.md",
+        "docs/PAYLOAD21-AB-PROTOCOL.md"
+      ],
+      "missing": "RAGAS binary/version, cùng thiết bị/cấu hình, người vận hành và phiên A/B có đối chứng",
+      "ragasClaimField": "runtime_ab"
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+[
+  {
+    "id": "proj-topocentric",
+    "url": "https://proj.org/en/stable/operations/conversions/topocentric.html",
+    "origin_id": "proj",
+    "snapshot": "proj-topocentric.html",
+    "tier": "A",
+    "scope": "Primary documentation/source scope only; not AERIS compatibility or production verification"
+  },
+  {
+    "id": "geographiclib-local",
+    "url": "https://raw.githubusercontent.com/geographiclib/geographiclib/main/src/LocalCartesian.cpp",
+    "origin_id": "geographiclib",
+    "snapshot": "LocalCartesian.cpp.txt",
+    "tier": "A",
+    "scope": "Primary documentation/source scope only; not AERIS compatibility or production verification"
+  },
+  {
+    "id": "qgc-plan",
+    "url": "https://docs.qgroundcontrol.com/master/en/qgc-dev-guide/file_formats/plan.html",
+    "origin_id": "qgroundcontrol",
+    "snapshot": "qgc-plan.html",
+    "tier": "A",
+    "scope": "Primary documentation/source scope only; not AERIS compatibility or production verification"
+  }
+]

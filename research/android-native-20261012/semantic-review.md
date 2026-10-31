@@ -1,0 +1,5 @@
+# Android native API review / 2026-10-12
+
+Single-agent review, no independent verification claim. Six official Android API/tool snapshots support six limited claims. InputDevice exposes motion ranges; InputManager listener supports inventory lifecycle changes. MediaCodecList enumerates API-advertised codec information; neither enumeration nor hardware flag measures live decoder concurrency. SAF ACTION_CREATE_DOCUMENT is a user-selected document flow, not broad filesystem permissions. onPause is one Activity lifecycle callback, not proof that our implementation handles process death correctly. apksigner's verify command checks APK signatures, not the truth of device report JSON.
+
+Capture spans are narrow method/constants or explicit sentences. Context reviewed in full official pages; structural Refinery PASS is not native runtime acceptance. All six snapshots share Android-docs origin, so different pages are not independent corroborating sources. Alias/revision/build/source hashes in a report do not attest controller identity. Browser import remains untrusted review data. No report or public Android source is promoted to verified HeraHub hardware capability.

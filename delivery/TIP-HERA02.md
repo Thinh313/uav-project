@@ -1,0 +1,7 @@
+# TIP-HERA02 · HeraHub software deep research
+
+Authorization: user requests continued scraping/refinement/deep research of Hera controller; confirms old name HeraLink → current HeraHub; numeric brightness differences are unimportant to software and must not block development. Scope: primary public controller/RAGAS/platform/protocol sources, frozen captures + claims + deterministic Refinery registry, internal source-profile linkage, software integration synthesis and prioritized backlog.
+
+AC-R1: manufacturer identity and platform generations remain distinct; user rename recorded as owner intent, no accidental CubePilot HereLink merge. AC-R2: investigate OS/install/update, physical input, telemetry/radio, video, RTK, storage/power/lifecycle and survey workflow. For missing evidence report bounded unknowns; no endpoint/binding invention. AC-R3: source URL/time/hash/exact span/scope, origin grouping, deterministic audit/applicable fault tests. AC-R4: decisions/backlog based on evidence, brightness out of blocking path, future device tests separate from this research.
+
+Single-agent manual deep research using web/public HTTP and existing local source extracts; no dedicated Deep Research service is available. No private source upload, colleague messages, APK execution/install, hardware command or production deploy. Preserve existing app and historical receipts. Research completion is evidence-backed desk research, not completion of hardware integration.

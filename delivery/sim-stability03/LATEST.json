@@ -1,0 +1,8 @@
+{
+  "archive": "AERIS-SIM-STABILITY03-NOT-READY.tar.gz",
+  "sha256": "0b56c97e067e41cb4b633429028f1defa7d4708e4b8606195ba00b404a64d022",
+  "qualification": "NOT READY",
+  "runtimeAcceptance": "MANUAL_ANDROID_SITL_SLICE_PASS_FULL_MILESTONE_NOT_READY",
+  "manifestSHA256": "5f2f33295602c2b535a93feae27f48dbc1d2e73edcc22483b664ddc81257c76a",
+  "productionSignature": false
+}

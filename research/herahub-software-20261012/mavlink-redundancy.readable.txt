@@ -1,0 +1,135 @@
+
+
+  
+    
+    
+    Redundancy and Message/Command De-duplication | MAVLink Guide
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  
+  
+    Skip to contentSearchK Main Navigation MessagesFAQImplementationsArduPilotPX4OtherLanguagesC (mavgen)Python (Pymavlink)Rust (rust-mavlink)OtherSupport
+English中文 (Chinese)한국어 (Korean)
+English中文 (Chinese)한국어 (Korean)
+AppearanceMenuReturn to top Sidebar Navigation 
+Introduction
+Overview
+FAQ
+Implementations
+Getting Started
+Install MAVLink
+Generate MAVLink Libraries
+Generate Source Files for ROS
+Using MAVLink Libraries
+C (mavgen)
+Message Signing
+Examples
+UART Interface (C)
+UDP Example (C)
+C++ 11 (mavgen)
+Examples
+UDP Example (C++)
+Pymavlink (Python-mavgen)
+How to Request Messages/Set Message Rates
+Message Signing
+Examples
+Guide
+MAVLink Versions
+MAVLink 2
+Message Signing
+Serialization
+Routing
+Redundancy/Message De-duplication
+Packet Loss Calculation
+General Telemetry
+Message Rates
+File Formats
+UAVCAN Interaction
+Scripts
+MAVLink XML Schema
+Defining XML Enums/Messages
+MAVLink CRC
+Debugging with Wireshark
+Standard Messages/Commands
+✔ common.xml
+standard.xml
+minimal.xml
+development.xml
+Microservices
+Heartbeat/Connection Protocol
+Mission Protocol
+Parameter Protocol
+Parameters over MAVLink FTP
+Extended Parameter Protocol
+Command Protocol
+Manual Control (Joystick) Protocol
+Camera Protocol v2
+Camera Definition Files
+Camera Protocol v1 (Simple Trigger Protocol)
+Gimbal Protocol v2
+Gimbal Protocol v1 (superseded)
+Arm Authorization Protocol
+Illuminator Protocol
+Image Transmission Protocol
+Offboard Control Protocol
+File Transfer Protocol (FTP)
+Landing Target Protocol
+Ping Protocol
+Battery Protocol
+Terrain Protocol
+Tunnel Protocol
+Open Drone ID Protocol
+High Latency Protocol
+Component Metadata Protocol
+MAVLink Id Assignment (sysid, compid)
+Payload Protocols
+Traffic Management (UTM/ADS-B)
+Events Interface
+Standard Flight Modes
+Time Synchronization
+Dialects & Tests
+ardupilotmega.xml
+ASLUAV.xml
+AVSSUAS.xml
+csAirLink.xml
+cubepilot.xml
+icarous.xml
+loweheiser.xml
+marsh.xml
+paparazzi.xml
+storm32.xml
+stemstudios.xml
+uAvionix.xml
+all.xml
+python_array_test.xml
+test.xml
+Contributing
+SupportOn this page
+Redundancy and Message/Command De-duplication ​
+A MAVLink network may include redundant links. For example, a vehicle might have two telemetry radios for connecting to a ground station, or a telemetry radio for near-communication and a satellite connection for long range communication. In these cases, the same message or command may reach the receiver by several paths. Further, even on a single channel, it is possible that the same command is sent (and received) multiple times, due to loss of the original acknowledgement.
+MAVLink has no in-built mechanism for deconflicting messages received from multiple channels. The packet sequence number cannot be used, for example, because each channel has its own sequence counter.
+To mitigate this problem, commands are designed (where possible) to be idempotent, such that it doesn't matter if the same command is received when the vehicle is acting/has already acted on the same command. For example, a command to ARM or TAKEOFF when the vehicle is already armed or flying should immediately be acknowledged with a COMMAND_ACK.result of MAV_RESULT_ACCEPTED.
+Another approach to mitigate this kind of problem is to only accept data on a primary channel, and fall back to the secondary channel if the first channel fails.
+When using multiple channels you may still run into problems, in particular when working with very high latency links. The appropriate actions in these cases need to be considered on a case-by-case basis. Edit on GitHub
+Last updated: PagerPrevious pageRoutingNext pagePacket Loss Calculation
+    
+    
+  

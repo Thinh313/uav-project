@@ -1,0 +1,30 @@
+domain: aeris_future_rd_20261021
+entity_label: Selected reference components, not market coverage
+schema:
+  type_field: null
+  fields: &id001
+  - feature
+  - interface
+  - imaging
+  - software
+  - power
+  - mass
+  - installed_hera
+  - price
+rollup_field: null
+universe:
+  estimate: null
+  basis: Purposeful shortlist only; no market denominator or coverage percentage
+refresh_days:
+  default: 90
+alias_map: {}
+ambiguous_clusters:
+- - gremsy-pixylr-standard
+  - gremsy-pixylr-sportv2
+  - gremsy-pixylr-twoaxis
+- - gremsy-vio-f1
+  - gremsy-vio-g1
+- - flir-hadron640rplus
+  - flir-hadron640plus
+domain_gates:
+  no_inferred_fields: *id001

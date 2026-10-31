@@ -1,0 +1,359 @@
+P3 UAV Camera for DJI M400 & MAVLink: High-end Drone Payload
+Sign in
+Contact us
+Home
+Solutions
+Geospatial Solutions
+UAV Cameras
+P3 UAV Camera
+Choose your language
+English
+P3 UAV Camera
+Drone inspection camera for unmatched inspection productivity
+P3 Datasets
+P3 UAV Camera delivering  the finest details from the furthest distance
+Designed to maximize the productivity of any inspection project where time, safety, and image details are paramount for success, P3 UAV Camera provides you with the right tools to achieve unmatched performance.
+Featuring a medium format sensor 1.7 times larger than other cameras, Phase One iXM captures more details in each frame saving you tremendous mission time.
+Our iXM cameras are uniquely designed for UAVs and are fast, highly responsive, robust, and easily integrate with your
+aerial photography drone
+for diverse inspection and mapping missions.
+iXM cameras
+are available with a range of RSM lenses to ensure that your Phase One P3 UAV Camera gives you the best image quality and performance.
+Download brochure
+Datasets
+Best-in-class sensor performance
+Make the most of every flight by capturing more in every shot with the largest image sensor.
+Flexible configuration for every need
+Get more value out of your inspection by switching between vertical and horizontal configurations to collect data faster and reduce background noise.
+More details from a distance
+Get detailed data from the safest distance while covering a large area choosing from a variety of our lenses.
+Smart capture for robust results
+Make every shot count. Capture easily complex assets and moving objects with
+smart focusing
+and triggering.
+High Dynamic Range. No Re-Flights.
+P3 delivers full data recovery even in challenging lighting, eliminating the need for costly re-flights. Get complete, reliable inspection data in a single pass, saving time, reducing operational costs, and enhancing mission confidence.
+Productivity Drivers
+Longest focal length 150mm lens
+Largest image sensor
+Highest dynamic range
+Smart focus
+Longest focal length 150mm lens
+Longer distance – more details – increased safety
+The lens offering increases productivity and ensures safe operation, without compromising on image quality
+All Phase One lenses are factory-calibrated to the highest quality standards
+Best coverage to GSD ratio
+Largest image sensor
+More coverage – fewer images – faster missions
+The iXM medium format sensor has been the benchmark for many years for high-resolution aerial photography. This medium format sensor is 1.7 times larger than a standard 35mm full-frame sensor, which translates directly into inspection productivity.
+Highest dynamic range
+Extended operations – higher availability
+The iXM reaches superior performance in low light & high contrast situations, thanks to its dynamic range of 83dB, low noise, and optimized pixel size.
+Smart focus
+Smart focus – sharper images – no repetition
+Onsite inspection productivity depends on the ability to capture the correct data. End-to-end productivity means that the data has to constantly be of high quality. Phase One P3 Payload uses a smart focus system to ensure sharpness and consistent image quality.
+Longest focal length 150mm lens
+Longest focal length 150mm lens
+Longer distance – more details – increased safety
+The lens offering increases productivity and ensures safe operation, without compromising on image quality
+All Phase One lenses are factory-calibrated to the highest quality standards
+Best coverage to GSD ratio
+Largest image sensor
+Largest image sensor
+More coverage – fewer images – faster missions
+The iXM medium format sensor has been the benchmark for many years for high-resolution aerial photography. This medium format sensor is 1.7 times larger than a standard 35mm full-frame sensor, which translates directly into inspection productivity.
+Highest dynamic range
+Highest dynamic range
+Extended operations – higher availability
+The iXM reaches superior performance in low light & high contrast situations, thanks to its dynamic range of 83dB, low noise, and optimized pixel size.
+Smart focus
+Smart focus
+Smart focus – sharper images – no repetition
+Onsite inspection productivity depends on the ability to capture the correct data. End-to-end productivity means that the data has to constantly be of high quality. Phase One P3 Payload uses a smart focus system to ensure sharpness and consistent image quality.
+Calculate Your Drone’s Ground Sample Distance (GSD) with Precision
+Welcome to our GSD Calculator, the tool for precise aerial imaging in the
+drone inspection industry
+Know your GSD to optimize image quality and flight missions. Ensure every pixel counts and deliver superior results to your clients. It is quite simple: select your sensor, flight distance, and lens and discover your GSD and frame height x width
+P3 seamless integrations with ready-for-flight drones
+P3 UAV Camera Payload for DJI platforms
+P3 UAV Camera Payload for DJI platforms provides a flexible solution with the highest quality imagery for mission planning and execution.
+P3 UAV Camera for MAVLink/Auterion
+P3 UAV Camera for MAVLink integrates with MAVLink and Auterion supported drone providing a ready-for-integration solution with the highest quality imagery.
+P3 is the perfect inspection UAV camera for
+Power line
+Wind turbine
+Are you on a mission to inspect moving turbines?
+Welcome to our GSD Calculator, the essential tool for precision-driven aerial imaging.
+Ensure every pixel counts and deliver superior results to your clients. It is quite simple: select your lens, wind turbine parameters, flight distance and discover your GSD, pixel blur and swath area to better plan your mission.
+Success stories from our customers
+Discover the success stories of our customers who have harnessed the power of the Phase One P3 UAV Camera, a customizable drone imaging solution for all your inspection needs. Choose your drone, your camera, and your lens, to capture the smallest details of the largest areas from the furthest distance.
+Case study
+Axpo
+Axpo revolutionizes utility asset inspections with the latest P3 UAV Camera sensor technology from Phase One and LINIA's drone software, ensuring fast, effective, and safe aerial power line inspections with significant time and cost savings.
+Learn more
+Case video
+Eyefly and vliegend.nl.
+Witness the P3 UAV Camera in action with a ready-for-flight solution for drones, offering versatile solutions and unmatched productivity in various inspection missions, ensuring you're equipped from day one to deliver enhanced value to your customers using your existing tools.
+Watch the video
+Case video
+Nordic Unmanned
+Our P3 UAV Camera for DJI M300 was put to the test to see how it performs on bridge inspections by our partner Nordic Unmanned. Watch its performance in action.
+Watch the video
+Technical specifications
+Image sensor & camera
+P3 DJI
+P3 MAVLink/Auterion
+P3 DJI
+P3 MAVLink/Auterion
+Weight kg without payload mount
+2.5
+2.5
+Weight kg without payload mount
+2.5
+2.5
+120 MP & 100 MP sensors available
+Medium format sensor
+Medium format sensor
+120 MP & 100 MP sensors available
+Medium format sensor
+Medium format sensor
+iXM-100 (rolling shutter)
+iXM-100 (rolling shutter)
+iXM-100 (rolling shutter)
+iXM-100 (rolling shutter)
+iXM-GS120 (electronic Global Shutter)
+iXM-GS120 (electronic Global Shutter)
+iXM-GS120 (electronic Global Shutter)
+iXM-GS120 (electronic Global Shutter)
+Environmental rating
+IP53 (iXM only)
+IP53 (iXM only)
+Environmental rating
+IP53 (iXM only)
+IP53 (iXM only)
+Gimbal stabIlization
+3 axis
+3 axis
+Gimbal stabIlization
+3 axis
+3 axis
+Laser range finder (max effective range)
+Approximately 90 m
+Approximately 90 m
+Laser range finder (max effective range)
+Approximately 90 m
+Approximately 90 m
+Supported lens range (mm)
+35, 80 or 150
+35, 80 or 150
+Supported lens range (mm)
+35, 80 or 150
+35, 80 or 150
+Camera control (key features)
+ISO, shutter speed, exposure,  AE, focus distance AF/MF,  LRF range max/min, focus peaking
+ISO, shutter speed, exposure,  AE, focus distance AF/MF,  LRF range max/min, focus peaking
+Camera control (key features)
+ISO, shutter speed, exposure,  AE, focus distance AF/MF,  LRF range max/min, focus peaking
+ISO, shutter speed, exposure,  AE, focus distance AF/MF,  LRF range max/min, focus peaking
+Camera control (key features)
+EXIF (incl. IMU & Custom Field),  ICC Profile, XMP (incl. GPS) & IPTC
+EXIF (incl. IMU & Custom Field),  ICC Profile, XMP (incl. GPS) & IPTC
+Camera control (key features)
+EXIF (incl. IMU & Custom Field),  ICC Profile, XMP (incl. GPS) & IPTC
+EXIF (incl. IMU & Custom Field),  ICC Profile, XMP (incl. GPS) & IPTC
+Live view
+HDMI
+HDMI
+Live view
+HDMI
+HDMI
+Camera orientation
+Vertical and horizontal
+Vertical and horizontal
+Camera orientation
+Vertical and horizontal
+Vertical and horizontal
+Smart focusing
+Auto focus based on LRF input
+Auto focus based on LRF input
+Smart focusing
+Auto focus based on LRF input
+Auto focus based on LRF input
+Flight planning software
+DJI pilot
+Q Ground Control & Mission Planner
+Flight planning software
+DJI pilot
+Q Ground Control & Mission Planner
+Electric interface
+Skyport V3/V2
+HDMI, Telemetry, USB-c
+Electric interface
+Skyport V3/V2
+HDMI, Telemetry, USB-c
+Software interface
+Support for PSDK & MSDK
+Support for MAVLink/Auterion Protocol v1 and v2
+Software interface
+Support for PSDK & MSDK
+Support for MAVLink/Auterion Protocol v1 and v2
+Hardware compatibility
+DJI M300 / M350 (with M300/M350 mount assembly)
+MAVLink based platforms Cube Orange & PixHawk 4.0
+Hardware compatibility
+DJI M300 / M350 (with M300/M350 mount assembly)
+MAVLink based platforms Cube Orange & PixHawk 4.0
+DJI M400 (with M400 mount assembly)
+DJI M400 (with M400 mount assembly)
+P3 is a modular system consisting of camera & lens, gimbal, and drone mount assembly. Existing P3 DJI M300/M350 customers can upgrade to DJI M400 by purchasing the P3 DJI M400 mount kit, while retaining their existing camera, lens, and gimbal.
+P3 is a modular system consisting of camera & lens, gimbal, and drone mount assembly. Existing P3 DJI M300/M350 customers can upgrade to DJI M400 by purchasing the P3 DJI M400 mount kit, while retaining their existing camera, lens, and gimbal.
+RSM Lenses – Technical specifications
+RSM 35mm f/5.6
+Lens
+RSM 80mm f/5.6
+Lens
+RSM 80mm AF f/5.6
+Lens
+RSM 150mm AF f/5.6
+Lens
+RSM 35mm f/5.6 Lens
+Lens composition
+12 elements in 8 groups
+Minimum focusing range
+infinity
+Shutter speed max (sec)
+1/2500
+Exposure control
+1/3 f - stop increments
+Aperture range
+f/5.6 - f/22
+Filter diameter (mm)
+58
+Angle of view - Long side (°) 120 MP sensor
+64.4
+Angle of view - Long side (°) 100 MP sensor
+64.1
+Angle of view - Short side - (°) 120 MP sensor
+50.2
+Angle of view - Short side - (°) 100 MP sensor
+50.3
+Entrance pupil to image plane (mm)
+72
+RSM 80mm f/5.6 Lens
+Lens composition
+8 elements in 5 groups
+Minimum focusing range
+infinity
+Shutter speed max (sec)
+1/2500
+Exposure control
+1/3 f - stop increments
+Aperture range
+f/5.6 - f/22
+Filter diameter (mm)
+58
+Angle of view - Long side (°) 120 MP sensor
+30.8
+Angle of view - Long side (°) 100 MP sensor
+30.7
+Angle of view - Short side - (°) 120 MP sensor
+23.3
+Angle of view - Short side - (°) 100 MP sensor
+23.2
+Entrance pupil to image plane (mm)
+85
+RSM 80mm AF f/5.6 Lens
+Lens composition
+8 elements in 5 groups
+Minimum focusing range
+3m to infinity
+Shutter speed max (sec)
+1/2500
+Exposure control
+1/3 f - stop increments
+Aperture range
+f/5.6 - f/22
+Filter diameter (mm)
+58
+Angle of view - Long side (°) 120 MP sensor
+30.8
+Angle of view - Long side (°) 100 MP sensor
+30.7
+Angle of view - Short side - (°) 120 MP sensor
+23.3
+Angle of view - Short side - (°) 100 MP sensor
+23.2
+Entrance pupil to image plane (mm)
+85
+RSM 150mm AF f/5.6 Lens
+Lens composition
+8 elements in 7 groups
+Minimum focusing range
+10m to infinity
+Shutter speed max (sec)
+1/2500
+Exposure control
+1/3 f - stop increments
+Aperture range
+f/5.6 - f/22
+Filter diameter (mm)
+58
+Angle of view - Long side (°) 120 MP sensor
+16.7
+Angle of view - Long side (°) 100 MP sensor
+16.6
+Angle of view - Short side - (°) 120 MP sensor
+12,6
+Angle of view - Short side - (°) 100 MP sensor
+12.5
+Entrance pupil to image plane (mm)
+107
+Contact a Phase One Expert
+If you would like to learn more about our P3 for DJI, our experts are eager to help! Contact Us.
+Applications
+Geospatial Imagery
+Space
+Heritage
+Bespoke Photography
+Imaging Quality & Performance
+From Pixels to Perception™
+Intelligent Image Quality (IIQ)
+Blur Control Technology
+Bayer Pattern Technology
+Solutions
+Aerial Camera Systems
+Geospatial Components
+UAV Cameras
+Space Solutions
+Heritage Solutions
+Heritage Components
+Photographic Cameras
+Knowledge Hub
+Case Studies
+Upcoming Events, Webinars and Workshops
+Inspiration
+Press Releases
+On-demand webinars and videos
+Developer
+Phase One Blogs
+About
+What Do We Stand For?
+Life at Phase One
+Sustainability
+Find a Local Partner
+Find a Rental Studio
+Contact us
+Newsletter sign up
+Legal
+Legal
+Privacy Policy
+Cookie Policy
+Terms and Conditions
+Whistleblower Policy
+© Phase One 2026
+Legal
+Legal
+Privacy Policy
+Cookie Policy
+Terms and Conditions
+Whistleblower Policy

@@ -1,0 +1,5 @@
+{
+  "decision": "Noninteractive meters + explicit step/numeric controls; isolate package/workspace native82; common geometric center for islands; preserve original81 bytes",
+  "why": "Observed Android vertical swipe changed altitude; theme icon stale; navigation attached to edges and mismatched tool meaning",
+  "release": "Engineering development only; no candidate selection"
+}

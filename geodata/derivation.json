@@ -1,0 +1,29 @@
+{
+  "script": "tools/build_geodata.py",
+  "sourceHashes": {
+    "copernicus-N10-E106.tif": "37e5afce5979cf5d73da47f770d143dd8dfb8bc4e3f34caeb09d7fab3cbebd0c",
+    "osm-extract.json": "bdee8bbf106a7f278696b96be19af042db449e2ff02db91b2ca1a3e13fb58dff"
+  },
+  "pixelInterpretation": "point",
+  "grid": {
+    "west": 106.79888888888888,
+    "north": 10.862222222222222,
+    "stepLon": 0.0002777777777777778,
+    "stepLat": 0.0002777777777777778,
+    "cols": 59,
+    "rows": 60,
+    "sourcePixelWindow": {
+      "col0": 2876,
+      "row0": 496,
+      "col1": 2934,
+      "row1": 555
+    }
+  },
+  "heightRangeM": [
+    0.0,
+    34.1775
+  ],
+  "featureCount": 692,
+  "manifestSha256": "eb64726cbf5cbf51e24dde2dc9bb46c1f0a0fd17bf42e817e3fbca07f49e31a2",
+  "scope": "Source byte/pixel extraction, not surveyed ground accuracy"
+}

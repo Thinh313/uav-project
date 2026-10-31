@@ -1,0 +1,141 @@
+{
+  "fileType": "Plan",
+  "version": 1,
+  "groundStation": "QA authored, not actual QGC output",
+  "geoFence": {
+    "version": 2,
+    "circles": [],
+    "polygons": []
+  },
+  "rallyPoints": {
+    "version": 2,
+    "points": []
+  },
+  "mission": {
+    "version": 2,
+    "firmwareType": 3,
+    "vehicleType": 2,
+    "cruiseSpeed": 1.4,
+    "hoverSpeed": 2,
+    "globalPlanAltitudeMode": 1,
+    "plannedHomePosition": [
+      10.854,
+      106.807,
+      10
+    ],
+    "items": [
+      {
+        "type": "SimpleItem",
+        "command": 22,
+        "frame": 3,
+        "autoContinue": true,
+        "doJumpId": 1,
+        "params": [
+          0,
+          0,
+          0,
+          null,
+          10.854,
+          106.807,
+          17.25
+        ]
+      },
+      {
+        "type": "SimpleItem",
+        "command": 178,
+        "frame": 2,
+        "autoContinue": true,
+        "doJumpId": 2,
+        "params": [
+          1,
+          1.75,
+          -1,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "type": "SimpleItem",
+        "command": 16,
+        "frame": 3,
+        "autoContinue": true,
+        "doJumpId": 3,
+        "params": [
+          0,
+          0,
+          0,
+          null,
+          10.854047010464365,
+          106.80705213050514,
+          23.5
+        ]
+      },
+      {
+        "type": "SimpleItem",
+        "command": 206,
+        "frame": 2,
+        "autoContinue": true,
+        "doJumpId": 4,
+        "params": [
+          1.2480000000000002,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "type": "SimpleItem",
+        "command": 16,
+        "frame": 3,
+        "autoContinue": true,
+        "doJumpId": 5,
+        "params": [
+          0,
+          0,
+          0,
+          null,
+          10.854060571156504,
+          106.80712255242113,
+          14.75
+        ]
+      },
+      {
+        "type": "SimpleItem",
+        "command": 206,
+        "frame": 2,
+        "autoContinue": true,
+        "doJumpId": 6,
+        "params": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "type": "SimpleItem",
+        "command": 20,
+        "frame": 2,
+        "autoContinue": true,
+        "doJumpId": 7,
+        "params": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      }
+    ]
+  }
+}

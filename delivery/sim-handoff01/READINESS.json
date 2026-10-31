@@ -1,0 +1,8 @@
+{
+  "status": "NOT_READY",
+  "archiveSHA256": "6b36304d31554f32299021feb3cde770bbad31168ab093f08a9cac741fc3bfd3",
+  "APK_SHA256": "8f1767933059b719d0bfb260df751678d24bd6d0a345397a5d52815cf7f2aec1",
+  "runtimeAcceptance": "NOT_CHECKED",
+  "AUTO": "UNSUPPORTED",
+  "acceptance": "../../evidence/simhand01/acceptance.json"
+}

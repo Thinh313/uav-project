@@ -1,0 +1,8 @@
+import fs from 'node:fs';import path from 'node:path';import {sha,stable} from './compiler.mjs';
+export class Capture{
+ constructor(root){this.root=root;this.file=path.join(root,'raw.jsonl');this.fd=fs.openSync(this.file,'wx',0o600);this.n=0;this.bytes=0;this.head='';this.failed=null;this.closed=false;}
+ append(kind,data){if(this.failed||this.closed)throw Error('CAPTURE_BLOCKED');const body={n:this.n+1,previous:this.head,at:new Date().toISOString(),hostNs:String(process.hrtime.bigint()),kind,data},row={...body,sha256:sha(body)},b=Buffer.from(stable(row)+'\n');if(this.bytes+b.length>16*2**20){this.failed='RAW_QUOTA';throw Error(this.failed)}try{fs.writeFileSync(this.fd,b);fs.fsyncSync(this.fd);this.n++;this.bytes+=b.length;this.head=row.sha256;return row}catch(e){this.failed=e.message;throw e}}
+ close(){if(this.closed)return;fs.fsyncSync(this.fd);fs.closeSync(this.fd);this.closed=true}
+}
+export function replay(file){const s=fs.lstatSync(file);if(!s.isFile()||s.isSymbolicLink()||s.size>16*2**20)throw Error('RAW_BOUND');const text=fs.readFileSync(file,'utf8');if(text&&!text.endsWith('\n'))throw Error('TORN_RAW');let prev='',n=0;const rows=[];for(const l of text.trimEnd().split('\n')){if(!l)continue;const r=JSON.parse(l),{sha256,...body}=r;if(r.n!==++n||r.previous!==prev||sha(body)!==sha256)throw Error('RAW_CHAIN');prev=sha256;rows.push(r)}return{rows,head:prev};}
+export function save(p,d){const fd=fs.openSync(p,'wx',0o600);try{fs.writeFileSync(fd,stable(d)+'\n');fs.fsyncSync(fd)}finally{fs.closeSync(fd)}const dir=fs.openSync(path.dirname(p),'r');try{fs.fsyncSync(dir)}finally{fs.closeSync(dir)}}

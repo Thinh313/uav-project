@@ -1,0 +1,2 @@
+import{regular}from'./store.mjs';import{verifier}from'./runner.mjs';import path from'node:path';
+const v=verifier();try{if(process.argv.length!==3)throw Error('Usage: node pilot/betaops01/receiver.mjs package.json');console.log(JSON.stringify(await v.run(regular(path.resolve(process.argv[2]),32*2**20)),null,2));}catch(e){console.error(JSON.stringify({status:'REJECTED',error:e.message,authorityRestorable:false}));process.exitCode=1;}finally{v.close();}

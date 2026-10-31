@@ -1,0 +1,22 @@
+[
+  {
+    "path": "geodata/sources/copernicus-N10-E106.tif",
+    "url": "https://copernicus-dem-30m.s3.amazonaws.com/Copernicus_DSM_COG_10_N10_00_E106_00_DEM/Copernicus_DSM_COG_10_N10_00_E106_00_DEM.tif",
+    "query": null,
+    "fetched_at": "2026-10-12T05:15:28.577347+00:00",
+    "sha256": "37e5afce5979cf5d73da47f770d143dd8dfb8bc4e3f34caeb09d7fab3cbebd0c",
+    "bytes": 46642401,
+    "content_type": "image/tiff",
+    "final_url": "https://copernicus-dem-30m.s3.amazonaws.com/Copernicus_DSM_COG_10_N10_00_E106_00_DEM/Copernicus_DSM_COG_10_N10_00_E106_00_DEM.tif"
+  },
+  {
+    "path": "geodata/sources/osm-extract.json",
+    "url": "https://overpass-api.de/api/interpreter",
+    "query": "[out:json][timeout:40];(way[highway](10.846,106.799,10.862,106.815);way[building](10.846,106.799,10.862,106.815);way[waterway](10.846,106.799,10.862,106.815);way[natural=water](10.846,106.799,10.862,106.815);way[landuse](10.846,106.799,10.862,106.815););out geom;",
+    "fetched_at": "2026-10-12T05:15:15.085759+00:00",
+    "sha256": "bdee8bbf106a7f278696b96be19af042db449e2ff02db91b2ca1a3e13fb58dff",
+    "bytes": 464396,
+    "content_type": "application/json",
+    "final_url": "https://overpass-api.de/api/interpreter"
+  }
+]

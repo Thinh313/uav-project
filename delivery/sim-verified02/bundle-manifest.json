@@ -1,0 +1,591 @@
+{
+  "format": "aeris-simhand01-bundle",
+  "version": 1,
+  "files": {
+    "QUALIFICATION-NOT-READY.json": {
+      "sha256": "26f1c7adf397ceb710835e430b95eed30f517bd92c641267e16ea153ef94914c",
+      "bytes": 1871,
+      "mode": 420
+    },
+    "RELEASE-NOTES-NOT-READY.md": {
+      "sha256": "08a31ea4fb298e1ed3046631a71497c33d1bb43dc9695925d4e46869a1c4a339",
+      "bytes": 2747,
+      "mode": 420
+    },
+    "app/core/compiler.mjs": {
+      "sha256": "f30223bb98d493a36012676edf24d8220e04fcf799ab0f15481e018ff63b5557",
+      "bytes": 3416,
+      "mode": 420
+    },
+    "app/core/geo-pins.mjs": {
+      "sha256": "d55b0139b877390ecb746c43104f6944d262aed298e7777673ea767ffcb6ce3f",
+      "bytes": 521,
+      "mode": 420
+    },
+    "app/core/geo-policy.mjs": {
+      "sha256": "37ee82b38648bd82e59b2ca526d91de41207e2fea22bc5549a1a34002a246e66",
+      "bytes": 1122,
+      "mode": 420
+    },
+    "app/core/geo-quality.mjs": {
+      "sha256": "4233a94a29d3661b724542e35b4e177b0b4c9e14f6d34c8cc7d98f6867ec27ae",
+      "bytes": 12015,
+      "mode": 420
+    },
+    "app/core/geodata.mjs": {
+      "sha256": "4745f0b7b4ebe002cf5bb728e835078a3424796162712219761a32a1472e1059",
+      "bytes": 7710,
+      "mode": 420
+    },
+    "app/core/qgc.mjs": {
+      "sha256": "d2de74f83d5bef53530f88203cfbb9d232689b324023107ce67e3bcaddbe09d8",
+      "bytes": 18764,
+      "mode": 420
+    },
+    "app/core/survey.mjs": {
+      "sha256": "c41beb843a59400aaaf88a9efe7e6bb67f4e5ac3547e0504f1ae433f4801033e",
+      "bytes": 12132,
+      "mode": 420
+    },
+    "app/core/vehicle-profile.mjs": {
+      "sha256": "7981c969ab27bb0086d5c081ac88a81882b7935b68b40408131d558c26f1df0e",
+      "bytes": 6796,
+      "mode": 420
+    },
+    "evidence/sim32/source-final/pilot/sim32/physics.py": {
+      "sha256": "6e2c77cc1202a83e5b009b1a06393057546a120ef20d9a8062a5f0bfc98d40c1",
+      "bytes": 8025,
+      "mode": 420
+    },
+    "evidence/simhand01/source-baseline01.json": {
+      "sha256": "a8b637b21cecca5ccf9432fbf492fe5a5ab9dc1a030cdaa302b913f95b42fc0d",
+      "bytes": 2555,
+      "mode": 420
+    },
+    "lineage/receiver04-bundle-manifest.json": {
+      "sha256": "2cd082b304e684baf1424fbdba1be724e96d8d8bcac13feda39cd5bf33859711",
+      "bytes": 19600,
+      "mode": 420
+    },
+    "native/crew02/assets/fonts/Barlow-Bold.ttf": {
+      "sha256": "84e6a4d61e7c3e21f3c50ea6a4f7e5303a3467864c038be6ea3759bab8d547f9",
+      "bytes": 108220,
+      "mode": 420
+    },
+    "native/crew02/assets/fonts/Barlow-Medium.ttf": {
+      "sha256": "f8906f762cb73dca441da034bc363b2d8e2e68bc10d5c05e58717646c20cc4b4",
+      "bytes": 103536,
+      "mode": 420
+    },
+    "native/crew02/assets/fonts/Barlow-SemiBold.ttf": {
+      "sha256": "86577cb32f8abe3673db53ca0f4221e6856751a4f6730c867e00f720f8bb1fc5",
+      "bytes": 108348,
+      "mode": 420
+    },
+    "native/simhand01/AndroidManifest.xml": {
+      "sha256": "916c9cb39d6324ddb16c5d7651d29800dda5dbb25143dd92ab205e443246c059",
+      "bytes": 913,
+      "mode": 420
+    },
+    "native/simhand01/OperationGate.java": {
+      "sha256": "b8f58aa70db22ab3bca3802328677036ee3402c1714a029905ec30fa79f0e2d5",
+      "bytes": 584,
+      "mode": 420
+    },
+    "native/simhand01/dist/aeris-simhand01-development01.apk": {
+      "sha256": "8f1767933059b719d0bfb260df751678d24bd6d0a345397a5d52815cf7f2aec1",
+      "bytes": 37267,
+      "mode": 420
+    },
+    "native/simhand01/src/vn/rtr/aeris/simhand01/ShellActivity.java": {
+      "sha256": "4b2aeb97623989fc4657ad7f75dddb291e62318e4a85cefda2db8bf1b7fddaf8",
+      "bytes": 10359,
+      "mode": 420
+    },
+    "native/simhand01/src/vn/rtr/aeris/simhand01/WorkspaceStore.java": {
+      "sha256": "9fa34c6b159ae834617db0d2f6925187bfc65002a5091b23f6a455a909d3f9d7",
+      "bytes": 5711,
+      "mode": 420
+    },
+    "pilot/sim32-journal04/wal_journal.py": {
+      "sha256": "13a5b6db819b9290201f2e45c013f96967d311ae6b4c3a963344d569c73f8f70",
+      "bytes": 11612,
+      "mode": 420
+    },
+    "pilot/sim32-pipe03/clock_client.mjs": {
+      "sha256": "b0dcd896b7b4766957cd5b917fa32e7fd022abd80e32b4f78b2c251cca6d3b24",
+      "bytes": 2877,
+      "mode": 420
+    },
+    "pilot/sim32-pipe03/clock_host.py": {
+      "sha256": "35913b2b0336b2e40403751347fb064ef35c73e31497d162639359c8827f5788",
+      "bytes": 6070,
+      "mode": 420
+    },
+    "pilot/sim32-pipe03/clockprobe": {
+      "sha256": "d4217b8f8098abe7b1a503f8ad7d747d1b85af2c3523c1e54db3ed5248b3b0fc",
+      "bytes": 70736,
+      "mode": 493
+    },
+    "pilot/sim32-pipe03/entry.sh": {
+      "sha256": "6ace13955b842f32a184f5f54cd8fb6527f62fb2274c0179684513cd9a39a85f",
+      "bytes": 176,
+      "mode": 493
+    },
+    "pilot/sim32-pipe03/epoch.py": {
+      "sha256": "619ecb6423d84a7f1629fd79d925614618b39bb5fb01c524005f8310e7bfc8cc",
+      "bytes": 2411,
+      "mode": 420
+    },
+    "pilot/sim32-pipe03/fast_physics.py": {
+      "sha256": "0d04d30aa80a2051204720236d200fc1d5b3bfb045041eb7d254e04027b7c217",
+      "bytes": 8574,
+      "mode": 420
+    },
+    "pilot/sim32-pipe03/integrator.c": {
+      "sha256": "b71591fad0cd26053147c9b88086a50e0ffb7c8622b0fd09f15ba6c411f297f8",
+      "bytes": 4257,
+      "mode": 420
+    },
+    "pilot/sim32-pipe03/traceflush": {
+      "sha256": "5768e8361542c9892fb71bdda5667b2c0ecad48a5a4738265298876cc1742777",
+      "bytes": 70648,
+      "mode": 493
+    },
+    "pilot/sim32/KERNEL-LICENSE.txt": {
+      "sha256": "5eb924c53024d9e1e28aad015ae164bc9a069a509f6fbfe5bdc896fbfae75395",
+      "bytes": 14057,
+      "mode": 420
+    },
+    "pilot/sim32/_sim32_kernel.cpython-314-darwin.so": {
+      "sha256": "3db9ac03292378fa51aa269561befa87c6cd6a7a60e8c176b85d7abc26c84247",
+      "bytes": 51616,
+      "mode": 493
+    },
+    "pilot/sim32/sitl.parm": {
+      "sha256": "450f1d51acb2ea77352074e28aec5681f5cc98a37875d0bcdcbbfa9b4cedd92a",
+      "bytes": 589,
+      "mode": 420
+    },
+    "pilot/sim32/viewer/vendor/THREE-LICENSE.txt": {
+      "sha256": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc",
+      "bytes": 1081,
+      "mode": 420
+    },
+    "pilot/sim32/viewer/vendor/three.core.js": {
+      "sha256": "9edde002b066a9a05676a6127f67735b62baf399bdea529f2f7e31657da769e6",
+      "bytes": 1458113,
+      "mode": 420
+    },
+    "pilot/sim32/viewer/vendor/three.module.js": {
+      "sha256": "9052042d676cb0fdc1ddfefe193053f34b7ac0513a616fdac4535d49987812ea",
+      "bytes": 662772,
+      "mode": 420
+    },
+    "pilot/simhand01/api.mjs": {
+      "sha256": "f9291ff0bd151e129dd9f6eabc3c2f1b4c83ce220e01f3951a9f18d0d3aaf2aa",
+      "bytes": 3188,
+      "mode": 420
+    },
+    "pilot/simhand01/audio.mjs": {
+      "sha256": "c4dd757ec4748fe1dfdcc8df2a2fd6f7fa19e903574a51c1c505545dd1ec6de8",
+      "bytes": 2159,
+      "mode": 420
+    },
+    "pilot/simhand01/backend.py": {
+      "sha256": "6c3a2f90bf9a58ff5000e333c74d0d747beda0f847a7eb91e7253d7d4273d930",
+      "bytes": 59,
+      "mode": 420
+    },
+    "pilot/simhand01/budget.mjs": {
+      "sha256": "00da9f284228d864821979520e845c3cd5827a542ae8ad4929139eccf55193f3",
+      "bytes": 1781,
+      "mode": 420
+    },
+    "pilot/simhand01/cockpit.mjs": {
+      "sha256": "7d7fc71ac26467971540bc4adc8b092cba57a2615de97ba7b323c915fdeeea5c",
+      "bytes": 15575,
+      "mode": 420
+    },
+    "pilot/simhand01/evidence.mjs": {
+      "sha256": "c53badd12a1f39cc3c60db035a69221bdc3c925c44aa36105bd1c875eacfcb6c",
+      "bytes": 2787,
+      "mode": 420
+    },
+    "pilot/simhand01/guard.py": {
+      "sha256": "3487ecbbee5cb8df6d9988ce9487cb0aa4e92d2aa82f1776183a072115844d0d",
+      "bytes": 2840,
+      "mode": 420
+    },
+    "pilot/simhand01/icons.mjs": {
+      "sha256": "deab5249d31302ef838858ff816b815e40bf9177a65a702b9187c9d63b64d4dd",
+      "bytes": 1095,
+      "mode": 420
+    },
+    "pilot/simhand01/input.mjs": {
+      "sha256": "427de46f165b9d7b2ed3fa790498999e93268f28320df284449e07ee4de5d702",
+      "bytes": 4928,
+      "mode": 420
+    },
+    "pilot/simhand01/link.mjs": {
+      "sha256": "8e12480cdbab49c02c3eb26563a06f7104381019b79a2bd659b6794158d54f23",
+      "bytes": 987,
+      "mode": 420
+    },
+    "pilot/simhand01/native.mjs": {
+      "sha256": "590eb439cf4e79c0dee642b8f51b3f277daaaebcf3f656fa9013f88ab886fb55",
+      "bytes": 1341,
+      "mode": 420
+    },
+    "pilot/simhand01/observer.html": {
+      "sha256": "d40bde38ac956e9138ffcacddb151c3d66183510c4b84011bb54a8297fe7118c",
+      "bytes": 459,
+      "mode": 420
+    },
+    "pilot/simhand01/observer.mjs": {
+      "sha256": "242923c8f502eefea4d3eccece8faa0fd194fb44c91cc4cbcc284452c75ac73a",
+      "bytes": 7040,
+      "mode": 420
+    },
+    "pilot/simhand01/phone.html": {
+      "sha256": "d3267f85798f422766e93bb256ac6cfe9a61d798c16c2f4f62e00d0892e90175",
+      "bytes": 395,
+      "mode": 420
+    },
+    "pilot/simhand01/projection.py": {
+      "sha256": "75d787ea516e4f901ea7a8a88af78c4c4a7451d9d6e3bb1b8e5f557d5309865a",
+      "bytes": 2360,
+      "mode": 420
+    },
+    "pilot/simhand01/readback.py": {
+      "sha256": "6e44fe4cf0c46597546b28cefb93e6b3b0e16fa571fa03c81ff5507229c623fc",
+      "bytes": 60,
+      "mode": 420
+    },
+    "pilot/simhand01/runtime.py": {
+      "sha256": "5436a619800324a3d609f58bcceae8d07a5d33c699bf06d4d012ba77f3681ae4",
+      "bytes": 59,
+      "mode": 420
+    },
+    "pilot/simhand01/scene.mjs": {
+      "sha256": "3dec43bb2c9d09f0c213f1c1e859857f4f2ee259385266bc4fb463819f7b6a79",
+      "bytes": 8921,
+      "mode": 420
+    },
+    "pilot/simhand01/server.mjs": {
+      "sha256": "1561efa9bd9c29b3d871bc88735695ee97263b8761b853c2895b06da5ba12598",
+      "bytes": 14259,
+      "mode": 420
+    },
+    "pilot/simhand01/ui.css": {
+      "sha256": "a74afffb70f9e71bc8b256d642a91c448fe410cd418bce2163c117d2567ec2c9",
+      "bytes": 11897,
+      "mode": 420
+    },
+    "pilot/simtrain52/contracts.mjs": {
+      "sha256": "c959285f85fa2b466d56b7631d53b219f67fdd74ecebcdaa6fc8bd09f780909c",
+      "bytes": 5189,
+      "mode": 420
+    },
+    "pilot/simtrain53/authority.mjs": {
+      "sha256": "1f978c0f14c359e12643784b5faa72bfc726c33702973c0d26efc85043d91ab5",
+      "bytes": 2386,
+      "mode": 420
+    },
+    "pilot/simtrain53/backend.py": {
+      "sha256": "d2eca45e01fd008a4c26cae419e5daf809bf3658e740a3ec729daecdaf4c3559",
+      "bytes": 6814,
+      "mode": 420
+    },
+    "pilot/simtrain53/link.mjs": {
+      "sha256": "f42a431fa0c814328bed95306ac9801657c0d51d34fb11073c67829d3cd2ee40",
+      "bytes": 8150,
+      "mode": 420
+    },
+    "pilot/simtrain53/rc.mjs": {
+      "sha256": "521e56996c0b81f2fa5dc62f03a9501fd92b774e9728dd14a00a9467083ae122",
+      "bytes": 972,
+      "mode": 420
+    },
+    "pilot/simtrain53/readback.py": {
+      "sha256": "8803d43fb528b86c2b10dfaebc1f05c0532bda7aa6c8a691423bc5b03980ade1",
+      "bytes": 10443,
+      "mode": 420
+    },
+    "pilot/simtrain53/runtime.py": {
+      "sha256": "9ec260cec0e59d12ea596310f13cf8f504d04d504cec2ac05aec6500303b113b",
+      "bytes": 5867,
+      "mode": 420
+    },
+    "pilot/visual56/assets/asphalt-color.jpg": {
+      "sha256": "28f5ba8690553f192c0e5e1a5ff40f34765b4b93f4cc7059b1a3e9c795b6c28c",
+      "bytes": 3075676,
+      "mode": 420
+    },
+    "pilot/visual56/assets/asphalt-normal.jpg": {
+      "sha256": "ffe49db71a0fd34c1e259625df66a302a237597d6ef655307987ec4e45bc6f21",
+      "bytes": 4943950,
+      "mode": 420
+    },
+    "pilot/visual56/assets/asphalt-rough.jpg": {
+      "sha256": "b9a516b61b7040a9245ac206642d5f767ad9589a0169c4a1668221429e8a998c",
+      "bytes": 2230457,
+      "mode": 420
+    },
+    "pilot/visual56/assets/cesium-drone.glb": {
+      "sha256": "77e8a8cfa4763ec83097f492cd48b2143e9c40797ff7211d5752604a35ac3d9d",
+      "bytes": 1169536,
+      "mode": 420
+    },
+    "pilot/visual56/assets/fonts/OFL.txt": {
+      "sha256": "186d750eb496a4c17a76385f82be6aea2ac1cf2de074a811d63786cf374ea73f",
+      "bytes": 4377,
+      "mode": 420
+    },
+    "pilot/visual56/assets/outdoor-background.jpg": {
+      "sha256": "e61c9123f1393c1c1501ab3acfa4906a7eadc6e632337d7d2740323fde5cea1d",
+      "bytes": 5275330,
+      "mode": 420
+    },
+    "pilot/visual56/assets/outdoor.hdr": {
+      "sha256": "3fbd33f279f29bd64925c1dd3214fd46c627493d21f1100248b6b1098da4d06e",
+      "bytes": 6480797,
+      "mode": 420
+    },
+    "pilot/visual56/credits.html": {
+      "sha256": "fd6b8410cb17fbcf7448be2570319f975a622ed11cf3ff81619204479d9757a0",
+      "bytes": 1430,
+      "mode": 420
+    },
+    "pilot/visual56/vendor/addons/loaders/GLTFLoader.js": {
+      "sha256": "5a091f3460ebdf846c3dfd8fd856c49b170a98677715021274cab56c233b608e",
+      "bytes": 117590,
+      "mode": 420
+    },
+    "pilot/visual56/vendor/addons/loaders/HDRLoader.js": {
+      "sha256": "440169c7630ec383556698510e1e57a147150c3d2858008bd352bc18283f4b81",
+      "bytes": 12099,
+      "mode": 420
+    },
+    "pilot/visual56/vendor/addons/loaders/RGBELoader.js": {
+      "sha256": "6c08f9c441040a61a188ad7711078da4df48f8c5ac3b3725dd6f10ac9ff81162",
+      "bytes": 268,
+      "mode": 420
+    },
+    "pilot/visual56/vendor/addons/math/SimplexNoise.js": {
+      "sha256": "acfa57d62600179d0452ead1b993208ed607f323b5c1a2abc45cd74dc2e192f9",
+      "bytes": 15150,
+      "mode": 420
+    },
+    "pilot/visual56/vendor/addons/objects/GroundedSkybox.js": {
+      "sha256": "b67ea3bac2279bd0b48e4094f136780247c95e0c65b5f68b563e659bc9d13507",
+      "bytes": 2000,
+      "mode": 420
+    },
+    "pilot/visual56/vendor/addons/postprocessing/EffectComposer.js": {
+      "sha256": "3dfd500c3ae775b5814ec311c2cb848a9bb841be995065575aa0e8ce5b017179",
+      "bytes": 8521,
+      "mode": 420
+    },
+    "pilot/visual56/vendor/addons/postprocessing/MaskPass.js": {
+      "sha256": "972888214d7495fe44c6aa8fb80d388e9711a808fd3cb4f724f847a2e28934ac",
+      "bytes": 4696,
+      "mode": 420
+    },
+    "pilot/visual56/vendor/addons/postprocessing/OutputPass.js": {
+      "sha256": "3b41db0b3ce0dfb5c4ef2243b259d274b348702e1c03a4cf9f01ff89f164eea6",
+      "bytes": 4204,
+      "mode": 420
+    },
+    "pilot/visual56/vendor/addons/postprocessing/Pass.js": {
+      "sha256": "585fe53c31256e09f63e1571ab8827fed4b6f75ca04c5814469266b2e38d98be",
+      "bytes": 4240,
+      "mode": 420
+    },
+    "pilot/visual56/vendor/addons/postprocessing/RenderPass.js": {
+      "sha256": "90743238549ad6730afea7b41c860d7847ee1c91fc2cd7239c3997a48140aeb1",
+      "bytes": 4300,
+      "mode": 420
+    },
+    "pilot/visual56/vendor/addons/postprocessing/SSAOPass.js": {
+      "sha256": "a82084c266a259fcd684f32495f681385903fdbc04daf76ee5aedfe85a3b296b",
+      "bytes": 13483,
+      "mode": 420
+    },
+    "pilot/visual56/vendor/addons/postprocessing/ShaderPass.js": {
+      "sha256": "ee99d5b8dc6a3770328a32552aac5a7ed5f473479cb808d5a07e84380f7c128d",
+      "bytes": 3248,
+      "mode": 420
+    },
+    "pilot/visual56/vendor/addons/shaders/CopyShader.js": {
+      "sha256": "7afe5c9afa71e811c97f376bf07da4d97748b9bf48443cbc3ab0f0caefa90d9a",
+      "bytes": 731,
+      "mode": 420
+    },
+    "pilot/visual56/vendor/addons/shaders/OutputShader.js": {
+      "sha256": "ac159d210985435b5a0fa29ecb0e6846741b958c9c196839e6360438e9ebfb8d",
+      "bytes": 1878,
+      "mode": 420
+    },
+    "pilot/visual56/vendor/addons/shaders/SSAOShader.js": {
+      "sha256": "7cd5164c0e39650bf7b1e23bb2a6f285368be679dfc3772f691c465a512b0ced",
+      "bytes": 6988,
+      "mode": 420
+    },
+    "pilot/visual56/vendor/addons/utils/BufferGeometryUtils.js": {
+      "sha256": "9af04fd9d87c50b3d8c32fedf82102a28f0f1462e8689a432ec127c56a278489",
+      "bytes": 37732,
+      "mode": 420
+    },
+    "pilot/visual56/vendor/addons/utils/SkeletonUtils.js": {
+      "sha256": "01bb5831e0d7863495db0f6f0d040ca560bda66dba18f3f59acae6dd898030e2",
+      "bytes": 11555,
+      "mode": 420
+    },
+    "planning/simhand01/Doctor AERIS SIM.command": {
+      "sha256": "3f6b2115188df3f6e4a5297bf16a7789f51108e28dbfeff170412461dd988c04",
+      "bytes": 100,
+      "mode": 493
+    },
+    "planning/simhand01/NATIVE-BRIDGE.md": {
+      "sha256": "64e71a30ddb66def53e980582934a75d383db741d121bc2610472e1ffbdfc9da",
+      "bytes": 2450,
+      "mode": 420
+    },
+    "planning/simhand01/README.md": {
+      "sha256": "eceb873918abdb4dfcaf4051de56fe2f537537273f1825d2b09ad33ef1209f5f",
+      "bytes": 5848,
+      "mode": 420
+    },
+    "planning/simhand01/Start AERIS SIM.command": {
+      "sha256": "4b9ab67cc51c062c1a45a924c82c95bc3568d5d8deb5892dfd5eaeb94f867821",
+      "bytes": 116,
+      "mode": 493
+    },
+    "planning/simhand01/Stop AERIS SIM.command": {
+      "sha256": "28912683ba6d573c65855b57de1ee027a1fbb76584db68d7fb5ef0468411c836",
+      "bytes": 98,
+      "mode": 493
+    },
+    "planning/simhand01/TIP.md": {
+      "sha256": "78ee679b454041dfec274928981a5e1e340ed28e77a29db194bc9d14807fa65c",
+      "bytes": 7711,
+      "mode": 420
+    },
+    "planning/simhand01/archive.py": {
+      "sha256": "544f9191b1dad51a9cd67fba581fa48e0be8b56c3d4420dde76c84534077bbfd",
+      "bytes": 5074,
+      "mode": 420
+    },
+    "planning/simhand01/dependencies.json": {
+      "sha256": "4e2050aeac15a4fa25a5150c6493bd8fc8a975e1a28a1a1bdc59429ee1be98ef",
+      "bytes": 19141,
+      "mode": 420
+    },
+    "planning/simhand01/dependency-closure.py": {
+      "sha256": "357c8583e8d77ade2487ed7f58ebebf9b8b570d93b6612954175b33aafc6e23f",
+      "bytes": 5184,
+      "mode": 420
+    },
+    "planning/simhand01/install.py": {
+      "sha256": "e232c2edb4a68de9cfa4901ba3e01211ae816d6bbaba7adad4da45f177f324cf",
+      "bytes": 3261,
+      "mode": 420
+    },
+    "planning/simhand01/launcher.py": {
+      "sha256": "f01c0400b71027546bc6efa84513a482b498650206fb6360d1221aa9d05efddc",
+      "bytes": 5426,
+      "mode": 420
+    },
+    "planning/simhand01/recipient-policy.json": {
+      "sha256": "efeb097275c462680b0ce4e332c75d1d2c156eb93b6a83e041eecc3c147a5c8b",
+      "bytes": 378,
+      "mode": 420
+    },
+    "planning/simhand01/source-ids.json": {
+      "sha256": "ca8fd3845e62d4c292e044eeb8f0b59b0633ddcd319e2c898daee40bcc103fa2",
+      "bytes": 2622,
+      "mode": 420
+    },
+    "planning/simhand01/support.py": {
+      "sha256": "809effa3b0bc8712ebd53f2f68703b7e2c31637b00bab8c34b847d271e250f40",
+      "bytes": 5541,
+      "mode": 420
+    },
+    "runtime/sim32-instrument01-build/ardupilot/build/sitl/bin/arducopter": {
+      "sha256": "f2be1f349f84b4aedaa5912b3050f64f476f3218bc4f68b34ad4de11393c2d08",
+      "bytes": 7172024,
+      "mode": 493
+    },
+    "runtime/sim32-pipe03-build/host-native/_sim32_integrator.cpython-314-darwin.so": {
+      "sha256": "26f9e96b64053aa970402f781880baf7fbde87c5bb8aa289b15f2d4e3a0abb64",
+      "bytes": 51624,
+      "mode": 493
+    },
+    "runtime/sitl/arducopter": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "mode": 420
+    },
+    "runtime/sitl/copter.parm": {
+      "sha256": "5e01345b45d1c6190b28bece5638bbdd4cf1cce35e05bbbf480ab24d2b51aa0e",
+      "bytes": 1957,
+      "mode": 420
+    },
+    "services/mavlink-definitions.mjs": {
+      "sha256": "04b6be6960843b4473d67f84701ceca3521e8ade3f7a8f0514b417d1d0ebcaaf",
+      "bytes": 22597,
+      "mode": 420
+    },
+    "services/mavlink.mjs": {
+      "sha256": "5ac7566eb4c5b33bd5bbd22d3ca99ac87e19ea1b70f81b6cafaac27ee3a8b3a3",
+      "bytes": 3095,
+      "mode": 420
+    },
+    "services/sitl.mjs": {
+      "sha256": "a28de515747e025ae829983555c616149a851c4915f9549d97f70a95e5efb1a3",
+      "bytes": 29404,
+      "mode": 420
+    }
+  },
+  "uncompressedBytes": 33733699,
+  "engineeringOnly": true,
+  "productionSignature": false,
+  "sourceIDs": {
+    "reference": "SIMTRAIN53_FUSED_REFERENCE_NOT_HERA",
+    "assets": "VISUAL56_OFFLINE_CACHED",
+    "font": "BarlowOFL1.1",
+    "renderer": "Three.jsMIT",
+    "model": "CesiumDroneEdMackeyAGI_CCBY4.0",
+    "environment": "PolyHavenCC0"
+  },
+  "externalPrerequisites": {
+    "platform": "Darwin-arm64",
+    "Python": "3.14.6",
+    "Node": "validated24.14.1",
+    "DockerImage": "sha256:e27f0236daf88218a8a76a2c58c4c185e36fbc0c67e05d12ca5af9292f442f84",
+    "ADB": "cachedAndroidPlatformTools"
+  },
+  "recipientPolicy": "planning/simhand01/recipient-policy.json",
+  "originalAgentBudgetEmbedded": false,
+  "engineeringRevision": {
+    "id": "SIMVERIFY02-DIAGNOSTIC-PACKAGE01",
+    "parentManifestSHA256": "2cd082b304e684baf1424fbdba1be724e96d8d8bcac13feda39cd5bf33859711",
+    "parentEngineeringRevision": {
+      "id": "SIMVERIFY02-R04",
+      "parentManifestSHA256": "38c852a277c5f22af141771909992d0f0637fe92c630692f639e5d08efeda241",
+      "changes": [
+        "retain tested3codefixes",
+        "include exact predeclared integrator C dependency"
+      ],
+      "productionSignature": false
+    },
+    "changes": [
+      "packaging-only empty regular Docker bind mountpoint",
+      "NOT_READY release qualification and exact parent manifest lineage"
+    ],
+    "productionSignature": false
+  },
+  "qualificationStatus": "NOT_READY",
+  "functionalQualification": false
+}

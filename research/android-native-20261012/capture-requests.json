@@ -1,0 +1,8 @@
+[
+ {"id":"input-device","url":"https://developer.android.com/reference/android/view/InputDevice","snapshot":"input-device.html","origin_id":"android-docs"},
+ {"id":"input-manager","url":"https://developer.android.com/reference/android/hardware/input/InputManager","snapshot":"input-manager.html","origin_id":"android-docs"},
+ {"id":"codec-list","url":"https://developer.android.com/reference/android/media/MediaCodecList","snapshot":"codec-list.html","origin_id":"android-docs"},
+ {"id":"saf","url":"https://developer.android.com/training/data-storage/shared/documents-files","snapshot":"saf.html","origin_id":"android-docs"},
+ {"id":"lifecycle","url":"https://developer.android.com/guide/components/activities/activity-lifecycle","snapshot":"lifecycle.html","origin_id":"android-docs"},
+ {"id":"apksigner","url":"https://developer.android.com/tools/apksigner","snapshot":"apksigner.html","origin_id":"android-docs"}
+]

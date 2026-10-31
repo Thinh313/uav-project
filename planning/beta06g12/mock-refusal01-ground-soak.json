@@ -1,0 +1,13 @@
+{
+  "clockBasis": "MACOS_CLOCK_UPTIME_RAW_NS_SAME_HOST_BOOT_V1",
+  "hostBootId": "11111111-2222-3333-4444-555555555555",
+  "status": "REFUSED_GROUND_ADMISSION_NO_AP",
+  "samples": [],
+  "clockPath": "/Users/os/Downloads/AI technique/aeris/planning/beta06g12/mock-clock01.jsonl",
+  "minimumDurationS": 75,
+  "maximumDurationS": 80,
+  "noRuntimeOrControlInput": true,
+  "error": "MOCK_JOURNAL_REFUSAL_NO_NETWORK",
+  "failureObservation": null,
+  "endedPythonMonoS": 1000.0
+}

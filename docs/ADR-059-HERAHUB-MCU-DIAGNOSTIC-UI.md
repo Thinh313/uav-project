@@ -1,0 +1,7 @@
+# ADR059 · host mock MCU interface over isolated loopback
+
+UI46 imports frozenHERAMCU45 directly onhost. Browser receivesboundedJSON viewmodel and sends symbolicactions toloopbackserver, notMAVLink/USB. Contracts16unknowns remain unconfirmed. Nochanging45 forbrowserportability, copyingwholeproject or nativeSDK. Sessiontoken obtainedsameorigin, POSTrequiresJSON/origin/host, routesallowlist/bodybounded, perworkspace busy/revisiontoken preventreplayedaction retries. Mutatingreplyloss becomesuncertain inUI; noimplicitresend. ExplicitGETreload may reconcileobservedhostmockstate withnewsourcepreviewdisabled; itnevertransmitsflightcommand. Staleclientrevision conflictblocks.
+
+Virtual clock explicitly labeled advanced byuseractions/faultbuttons; no backgroundgeneratedtelemetry or latencyclaim. Mockpeer stored/applied/readback distinct; noautocalibration. Sliders rawpreview only, calibrationresults explicitsynthetic fixtures withninegroups. No authority acrosspage/serverrestart. Import isreadonlyreplay withoptional expected digest, never activeworkspace/config hydration.
+
+Historymax4pluscurrent,256KiBrecordbounds45 unchanged; UI exportoldhistory beforemaxrefusal. Host sessionsmax2/records4each. Preview process memoryonly; exportisusercontrolleddownload, nohostjournal durabilityclaim. Nooperationalinput/networkdevice endpoints orsigning. Fixedlocalhost8800preview isscopedmock only, no externalpublication.

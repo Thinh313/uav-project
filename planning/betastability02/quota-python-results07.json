@@ -1,0 +1,55 @@
+{
+  "atSource": "PYTHON_SHARED_COMPANION_POLICY_READ_ONLY_BOUNDARIES",
+  "results": [
+    {
+      "name": "11999 existing paths +1000 case reserve rejects before allocation",
+      "status": "PASS"
+    },
+    {
+      "name": "Whole2GiB +64MiB reserve rejects",
+      "status": "PASS"
+    },
+    {
+      "name": "Counted symlink refuses qualification rather than excluded scope",
+      "status": "PASS"
+    },
+    {
+      "name": "Global12000 file hard bound consistent",
+      "status": "PASS"
+    },
+    {
+      "name": "Exactly reserved11000+1000 and budget-64MiB+64MiB fits entry maximum",
+      "status": "PASS"
+    },
+    {
+      "name": "Actual whole namespace, including mocks/failures/revisions, fits next-case reserve",
+      "status": "PASS"
+    },
+    {
+      "name": "Runtime and companion use shared policy, no5000 legacy constant",
+      "status": "PASS"
+    }
+  ],
+  "actualUsage": {
+    "files": 5748,
+    "bytes": 437840287,
+    "symlinks": []
+  },
+  "entryDecision": {
+    "usage": {
+      "files": 5748,
+      "bytes": 437840287,
+      "symlinks": []
+    },
+    "reservedFiles": 1000,
+    "reservedBytes": 67108864,
+    "maxEvidenceFiles": 12000,
+    "evidenceBudgetBytes": 2147483648,
+    "allRetainedTaskPathsCounted": true,
+    "automaticRetry": false
+  },
+  "runtimeLaunches": 0,
+  "containerAllocations": 0,
+  "exclusions": [],
+  "status": "PASS"
+}

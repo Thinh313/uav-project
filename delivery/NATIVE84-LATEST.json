@@ -1,0 +1,10 @@
+{
+  "at": "2026-10-17T18:56:46.752259+07:00",
+  "status": "READY_SCOPED_ANDROID_FLY_TELEMETRY_HISTORY",
+  "report": "delivery/COMPLETION-NATIVE84.html",
+  "verification": "evidence/native84/verification.json",
+  "apk": "native/native84/dist/aeris-native84-development10.apk",
+  "apkSHA256": "4dd6953321f5cdd7b3a3e164d2f4bf2ae8818b38b6cccef0adb577c345af2bc2",
+  "scope": "Isolated emulator/SITL; development signature only; no candidate/SOT promotion",
+  "next": "delivery/ROADMAP-NATIVE84.md"
+}

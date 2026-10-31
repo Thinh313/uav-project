@@ -1,0 +1,738 @@
+{
+  "schema": 1,
+  "created_at": "2026-10-15T06:37:22.112557+00:00",
+  "kind": "RESEARCH_BASELINE_NOT_PRODUCT_ACCEPTANCE",
+  "latest_in_captured_release_list": "v4.0.14-b111",
+  "captured_release_count": 13,
+  "published_at": "2026-10-09T10:26:59Z",
+  "updated_at": "2026-10-13T02:36:25Z",
+  "commit_4014": {
+    "sha": "36dfd83695772cbbddfeb2b906d7cc650947f9c9",
+    "type": "commit",
+    "url": "https://api.github.com/repos/Real-Time-Robotics/ragas-release/git/commits/36dfd83695772cbbddfeb2b906d7cc650947f9c9"
+  },
+  "commit_4010": {
+    "sha": "1ec7595c8f3caf86abed765b02dc4135fda298f8",
+    "type": "commit",
+    "url": "https://api.github.com/repos/Real-Time-Robotics/ragas-release/git/commits/1ec7595c8f3caf86abed765b02dc4135fda298f8"
+  },
+  "readme_head": "5387d6cfb7cfc8b64236eca67415b547d7cfde99",
+  "readme_badge": "4.0.0 (build 4)",
+  "metadata_gate": {
+    "status": "FAIL_METADATA_IDENTITY_CONSISTENCY",
+    "tag_build": 111,
+    "apk_filename_build": 111,
+    "android_update_manifest_build": 112,
+    "previous_manifest_build": 111,
+    "internal_apk_build": "NOT_CHECKED",
+    "binary_signer": "NOT_CHECKED",
+    "conclusion": "Publisher manifest now declares112 while tag/name remain111; do not infer APK internal version or code change."
+  },
+  "old_capture_comparison": {
+    "source": "research/ragas-baseline/snapshots/ragas-releases.json",
+    "old_sha256": "11c8ed509c538c87bb2f3214690026c2360e7cceedc872f5bcce44d55be8b041",
+    "old_release_updated_at": "2026-10-09T10:26:59Z",
+    "old_notes_sha256": "65a4fa7ddb2107149bfc97e1df4adbf74910f8f9c2eaba78e06a06e0f3a1243a",
+    "current_notes_sha256": "acea56152f6faaf7cc198c32fa8946a586489372d0631def0e5fe30f308d31e9",
+    "notes_equal_raw": false,
+    "notes_equal_after_line_ending_normalization": true,
+    "manifest_changed_fields": {
+      "buildNumber": {
+        "old": 111,
+        "current": 112
+      }
+    },
+    "manifest_release_notes_equal_normalized": true,
+    "assets": [
+      {
+        "name": "manifest-prod-linux-u20.json",
+        "id_unchanged": true,
+        "digest_unchanged": true,
+        "size_unchanged": true,
+        "current_id": 624634411,
+        "old_id": 624634411,
+        "current_digest": "sha256:8745ecec1f1721e3172b4f47f6c7cb03a2955202d680b848a0b677cb29141904",
+        "old_digest": "sha256:8745ecec1f1721e3172b4f47f6c7cb03a2955202d680b848a0b677cb29141904",
+        "binary_bytes_downloaded_or_verified": false
+      },
+      {
+        "name": "manifest-prod.json",
+        "id_unchanged": false,
+        "digest_unchanged": false,
+        "size_unchanged": false,
+        "current_id": 635649533,
+        "old_id": 624634412,
+        "current_digest": "sha256:e3745e206e9f129907d9fd3ff46fe0545968cb1998ee4baf21af634eb10cdfef",
+        "old_digest": "sha256:980762ffeaef7cbcbd7937c0caf1fbee6f9ee9759bad73fcff540418d939fa66",
+        "binary_bytes_downloaded_or_verified": false
+      },
+      {
+        "name": "ragas-4.0.14+111-arm64-v8a.apk",
+        "id_unchanged": true,
+        "digest_unchanged": true,
+        "size_unchanged": true,
+        "current_id": 624634407,
+        "old_id": 624634407,
+        "current_digest": "sha256:9d02a432379c752e55ff604be45d52626eb046636361b7c80d1dcee1ad054d21",
+        "old_digest": "sha256:9d02a432379c752e55ff604be45d52626eb046636361b7c80d1dcee1ad054d21",
+        "binary_bytes_downloaded_or_verified": false
+      },
+      {
+        "name": "ragas-4.0.14+111-arm64-v8a.apk.sha256",
+        "id_unchanged": true,
+        "digest_unchanged": true,
+        "size_unchanged": true,
+        "current_id": 624634410,
+        "old_id": 624634410,
+        "current_digest": "sha256:3182f5cdbfcb9eb82e289be87fcdaec71f3e94a3b5a765dad0b89e31aade2f08",
+        "old_digest": "sha256:3182f5cdbfcb9eb82e289be87fcdaec71f3e94a3b5a765dad0b89e31aade2f08",
+        "binary_bytes_downloaded_or_verified": false
+      },
+      {
+        "name": "ragas-4.0.14+111-x64-u20.deb",
+        "id_unchanged": true,
+        "digest_unchanged": true,
+        "size_unchanged": true,
+        "current_id": 624634415,
+        "old_id": 624634415,
+        "current_digest": "sha256:b52c35da5b1f58fbda6a589a233ddb8c288413541bdc7a465af202a3a07d0a61",
+        "old_digest": "sha256:b52c35da5b1f58fbda6a589a233ddb8c288413541bdc7a465af202a3a07d0a61",
+        "binary_bytes_downloaded_or_verified": false
+      },
+      {
+        "name": "ragas-4.0.14+111-x64-u20.deb.sha256",
+        "id_unchanged": true,
+        "digest_unchanged": true,
+        "size_unchanged": true,
+        "current_id": 624634435,
+        "old_id": 624634435,
+        "current_digest": "sha256:aebea87749fcd6adefdc55e42c78827f851f166eb67783e0dcad3dc820ab43b0",
+        "old_digest": "sha256:aebea87749fcd6adefdc55e42c78827f851f166eb67783e0dcad3dc820ab43b0",
+        "binary_bytes_downloaded_or_verified": false
+      }
+    ]
+  },
+  "comparison_4010_to_4014": {
+    "method": "Published bullet labels and text; no implementation/source diff or first-introduction inference",
+    "same_labels_same_text": [
+      "Correct Area, Time and Photos",
+      "Easier Figures to Read",
+      "Follow the Aircraft",
+      "Gallery Opens Again",
+      "Gets Out of the Way",
+      "Layout Settings Survive a Round Trip",
+      "Never Inside the Hill",
+      "Photo Counts You Can Trust",
+      "Plan On the Surface",
+      "Points the Right Way",
+      "Step the Band Exactly",
+      "Surveys Laid Out the Way QGC Lays Them",
+      "Takeoff Placed by Tap Counts",
+      "The Ground, Not a Flat Picture",
+      "Where It Runs"
+    ],
+    "same_labels_changed_text": [],
+    "mentioned_in_4014_not_4010": [
+      "A Feed That Stays Current",
+      "Above Terrain, Calculated for You",
+      "Aim, Track and Detect",
+      "Asks Before It Looks",
+      "Camera Commands Reach the Autopilot",
+      "Camera Commands on a Waypoint",
+      "Camera Footprint on the Map",
+      "Cameras Found Automatically",
+      "Choose How It Takes Off",
+      "Circle Fence Around Home",
+      "Clear When a Command Fails",
+      "Describe a Payload, Get a Screen",
+      "Draw the Shape You Mean",
+      "Each Waypoint Its Own Altitude Mode",
+      "Edit From Any Angle",
+      "Explained at a Glance",
+      "Find Photos Faster",
+      "From Alert to Detail in One Tap",
+      "GSD You Can Rely On",
+      "Ground Clearance Chart",
+      "Map Tiles Recover",
+      "Mission Thumbnails",
+      "More Built-in Cameras",
+      "More Capture Options",
+      "Move and Rotate a Whole Pattern",
+      "Photos Taken vs Planned",
+      "Quick to Come Back To",
+      "Reboot the Aircraft From RAGAS",
+      "Resume Where It Stopped",
+      "Says Exactly What Is Wrong",
+      "See Which Way It Flies",
+      "Sensible Sizes",
+      "Trigger Distance 0 in Manual",
+      "Type the Exact Position",
+      "Warned Before It Is Too Fast",
+      "What to Do, in Plain Words",
+      "Zoom Without Fighting the Swipe"
+    ],
+    "only_4010": []
+  },
+  "versions": [
+    {
+      "tag": "v4.0.14-b111",
+      "published_at": "2026-10-09T10:26:59Z",
+      "updated_at": "2026-10-13T02:36:25Z",
+      "prerelease": false,
+      "url": "https://github.com/Real-Time-Robotics/ragas-release/releases/tag/v4.0.14-b111",
+      "assets": [
+        {
+          "id": 624634411,
+          "name": "manifest-prod-linux-u20.json",
+          "size": 11252,
+          "digest": "sha256:8745ecec1f1721e3172b4f47f6c7cb03a2955202d680b848a0b677cb29141904",
+          "created_at": "2026-10-09T10:26:47Z",
+          "updated_at": "2026-10-09T10:26:47Z",
+          "browser_download_url": "https://github.com/Real-Time-Robotics/ragas-release/releases/download/v4.0.14-b111/manifest-prod-linux-u20.json"
+        },
+        {
+          "id": 635649533,
+          "name": "manifest-prod.json",
+          "size": 11298,
+          "digest": "sha256:e3745e206e9f129907d9fd3ff46fe0545968cb1998ee4baf21af634eb10cdfef",
+          "created_at": "2026-10-13T02:36:17Z",
+          "updated_at": "2026-10-13T02:36:19Z",
+          "browser_download_url": "https://github.com/Real-Time-Robotics/ragas-release/releases/download/v4.0.14-b111/manifest-prod.json"
+        },
+        {
+          "id": 624634407,
+          "name": "ragas-4.0.14+111-arm64-v8a.apk",
+          "size": 294901847,
+          "digest": "sha256:9d02a432379c752e55ff604be45d52626eb046636361b7c80d1dcee1ad054d21",
+          "created_at": "2026-10-09T10:26:47Z",
+          "updated_at": "2026-10-09T10:26:59Z",
+          "browser_download_url": "https://github.com/Real-Time-Robotics/ragas-release/releases/download/v4.0.14-b111/ragas-4.0.14%2B111-arm64-v8a.apk"
+        },
+        {
+          "id": 624634410,
+          "name": "ragas-4.0.14+111-arm64-v8a.apk.sha256",
+          "size": 97,
+          "digest": "sha256:3182f5cdbfcb9eb82e289be87fcdaec71f3e94a3b5a765dad0b89e31aade2f08",
+          "created_at": "2026-10-09T10:26:47Z",
+          "updated_at": "2026-10-09T10:26:47Z",
+          "browser_download_url": "https://github.com/Real-Time-Robotics/ragas-release/releases/download/v4.0.14-b111/ragas-4.0.14%2B111-arm64-v8a.apk.sha256"
+        },
+        {
+          "id": 624634415,
+          "name": "ragas-4.0.14+111-x64-u20.deb",
+          "size": 196604324,
+          "digest": "sha256:b52c35da5b1f58fbda6a589a233ddb8c288413541bdc7a465af202a3a07d0a61",
+          "created_at": "2026-10-09T10:26:47Z",
+          "updated_at": "2026-10-09T10:26:55Z",
+          "browser_download_url": "https://github.com/Real-Time-Robotics/ragas-release/releases/download/v4.0.14-b111/ragas-4.0.14%2B111-x64-u20.deb"
+        },
+        {
+          "id": 624634435,
+          "name": "ragas-4.0.14+111-x64-u20.deb.sha256",
+          "size": 95,
+          "digest": "sha256:aebea87749fcd6adefdc55e42c78827f851f166eb67783e0dcad3dc820ab43b0",
+          "created_at": "2026-10-09T10:26:48Z",
+          "updated_at": "2026-10-09T10:26:48Z",
+          "browser_download_url": "https://github.com/Real-Time-Robotics/ragas-release/releases/download/v4.0.14-b111/ragas-4.0.14%2B111-x64-u20.deb.sha256"
+        }
+      ]
+    },
+    {
+      "tag": "v4.0.10-b111",
+      "published_at": "2026-09-23T10:35:01Z",
+      "updated_at": "2026-09-24T02:55:11Z",
+      "prerelease": false,
+      "url": "https://github.com/Real-Time-Robotics/ragas-release/releases/tag/v4.0.10-b111",
+      "assets": [
+        {
+          "id": 585027031,
+          "name": "manifest-prod.json",
+          "size": 4178,
+          "digest": "sha256:693d33fda7563dd6f1b05d2b0fd2c8e4bff7e15ce59cdf3b4c4a38894bcafc1a",
+          "created_at": "2026-09-24T02:55:06Z",
+          "updated_at": "2026-09-24T02:55:11Z",
+          "browser_download_url": "https://github.com/Real-Time-Robotics/ragas-release/releases/download/v4.0.10-b111/manifest-prod.json"
+        },
+        {
+          "id": 584985490,
+          "name": "ragas-4.0.10+111-arm64-v8a.apk",
+          "size": 293177003,
+          "digest": "sha256:eb4cb46ec21b542d0fef5daa399aea5fc1cea893ff925b7d17f865864bb30c5c",
+          "created_at": "2026-09-24T02:20:47Z",
+          "updated_at": "2026-09-24T02:22:24Z",
+          "browser_download_url": "https://github.com/Real-Time-Robotics/ragas-release/releases/download/v4.0.10-b111/ragas-4.0.10%2B111-arm64-v8a.apk"
+        },
+        {
+          "id": 583570444,
+          "name": "ragas-4.0.10+111-arm64-v8a.apk.sha256",
+          "size": 97,
+          "digest": "sha256:cb3172f151f1cead5dbfe09da4dd4c86c6f067936d2daaf584190a54c364adc1",
+          "created_at": "2026-09-23T10:48:39Z",
+          "updated_at": "2026-09-23T10:48:40Z",
+          "browser_download_url": "https://github.com/Real-Time-Robotics/ragas-release/releases/download/v4.0.10-b111/ragas-4.0.10%2B111-arm64-v8a.apk.sha256"
+        }
+      ]
+    },
+    {
+      "tag": "v4.0.8-b110",
+      "published_at": "2026-09-08T01:45:28Z",
+      "updated_at": "2026-09-08T01:45:28Z",
+      "prerelease": false,
+      "url": "https://github.com/Real-Time-Robotics/ragas-release/releases/tag/v4.0.8-b110",
+      "assets": [
+        {
+          "id": 549686550,
+          "name": "manifest-prod-linux-u20.json",
+          "size": 1735,
+          "digest": "sha256:5978b375c9b0f8d5259b60b429d7610939bdbe455ecf75fcd47cfc21c381a740",
+          "created_at": "2026-09-08T01:45:20Z",
+          "updated_at": "2026-09-08T01:45:20Z",
+          "browser_download_url": "https://github.com/Real-Time-Robotics/ragas-release/releases/download/v4.0.8-b110/manifest-prod-linux-u20.json"
+        },
+        {
+          "id": 549686549,
+          "name": "manifest-prod.json",
+          "size": 1780,
+          "digest": "sha256:19cf2547584c30486290dee8011b4a864af4421f1217ceae836ad48ad2013fbb",
+          "created_at": "2026-09-08T01:45:20Z",
+          "updated_at": "2026-09-08T01:45:20Z",
+          "browser_download_url": "https://github.com/Real-Time-Robotics/ragas-release/releases/download/v4.0.8-b110/manifest-prod.json"
+        },
+        {
+          "id": 549686546,
+          "name": "ragas-4.0.8+110-arm64-v8a.apk",
+          "size": 261921617,
+          "digest": "sha256:8c4fe55929a6cefe90d834a808570fce85f96bc4497c66b3010b5f25b198d56a",
+          "created_at": "2026-09-08T01:45:20Z",
+          "updated_at": "2026-09-08T01:45:27Z",
+          "browser_download_url": "https://github.com/Real-Time-Robotics/ragas-release/releases/download/v4.0.8-b110/ragas-4.0.8%2B110-arm64-v8a.apk"
+        },
+        {
+          "id": 549686548,
+          "name": "ragas-4.0.8+110-arm64-v8a.apk.sha256",
+          "size": 96,
+          "digest": "sha256:c1f04c0cc419fd3d80a92632784ae6bfad7e96cf74be2c16aff3926ebb9dbd11",
+          "created_at": "2026-09-08T01:45:20Z",
+          "updated_at": "2026-09-08T01:45:20Z",
+          "browser_download_url": "https://github.com/Real-Time-Robotics/ragas-release/releases/download/v4.0.8-b110/ragas-4.0.8%2B110-arm64-v8a.apk.sha256"
+        },
+        {
+          "id": 549686547,
+          "name": "ragas-4.0.8+110-x64-u20.deb",
+          "size": 180763120,
+          "digest": "sha256:760e797467ab9615ca434f6e1e777879554d0686edce571c7430941f4f4e8264",
+          "created_at": "2026-09-08T01:45:20Z",
+          "updated_at": "2026-09-08T01:45:24Z",
+          "browser_download_url": "https://github.com/Real-Time-Robotics/ragas-release/releases/download/v4.0.8-b110/ragas-4.0.8%2B110-x64-u20.deb"
+        },
+        {
+          "id": 549686557,
+          "name": "ragas-4.0.8+110-x64-u20.deb.sha256",
+          "size": 94,
+          "digest": "sha256:6bbe8880c8f1ed229938acc7d9587d4ac039eb5d5e7d29b09d92e6d9272fedce",
+          "created_at": "2026-09-08T01:45:20Z",
+          "updated_at": "2026-09-08T01:45:20Z",
+          "browser_download_url": "https://github.com/Real-Time-Robotics/ragas-release/releases/download/v4.0.8-b110/ragas-4.0.8%2B110-x64-u20.deb.sha256"
+        }
+      ]
+    },
+    {
+      "tag": "v4.0.5-b109",
+      "published_at": "2026-09-07T06:48:40Z",
+      "updated_at": "2026-09-07T06:48:40Z",
+      "prerelease": false,
+      "url": "https://github.com/Real-Time-Robotics/ragas-release/releases/tag/v4.0.5-b109",
+      "assets": [
+        {
+          "id": 548313356,
+          "name": "manifest-prod.json",
+          "size": 1610,
+          "digest": "sha256:e50c1424a8f02af6a30a083297c9d6d22c34d9a6a4b7abefc88e46103b292ead",
+          "created_at": "2026-09-07T06:48:32Z",
+          "updated_at": "2026-09-07T06:48:32Z",
+          "browser_download_url": "https://github.com/Real-Time-Robotics/ragas-release/releases/download/v4.0.5-b109/manifest-prod.json"
+        },
+        {
+          "id": 548313357,
+          "name": "ragas-4.0.5+109-arm64-v8a.apk",
+          "size": 262069595,
+          "digest": "sha256:96eeb5c664b94772beae2628edc4d2b4642244a58b31fa0906555b60af6bbda1",
+          "created_at": "2026-09-07T06:48:32Z",
+          "updated_at": "2026-09-07T06:48:39Z",
+          "browser_download_url": "https://github.com/Real-Time-Robotics/ragas-release/releases/download/v4.0.5-b109/ragas-4.0.5%2B109-arm64-v8a.apk"
+        },
+        {
+          "id": 548313358,
+          "name": "ragas-4.0.5+109-arm64-v8a.apk.sha256",
+          "size": 96,
+          "digest": "sha256:8ccb727d4019e4900f7e1e9037d82692b6190b5d9ac73b8d1d4bbd72928f9780",
+          "created_at": "2026-09-07T06:48:32Z",
+          "updated_at": "2026-09-07T06:48:32Z",
+          "browser_download_url": "https://github.com/Real-Time-Robotics/ragas-release/releases/download/v4.0.5-b109/ragas-4.0.5%2B109-arm64-v8a.apk.sha256"
+        }
+      ]
+    },
+    {
+      "tag": "v4.0.4-b108",
+      "published_at": "2026-08-28T10:36:59Z",
+      "updated_at": "2026-08-28T10:36:59Z",
+      "prerelease": false,
+      "url": "https://github.com/Real-Time-Robotics/ragas-release/releases/tag/v4.0.4-b108",
+      "assets": [
+        {
+          "id": 533645137,
+          "name": "manifest-prod.json",
+          "size": 1576,
+          "digest": "sha256:ef9b6257aea44c54c128dba24c5bd89628bb4a08bedbf7adfeee4be24b22d6b9",
+          "created_at": "2026-08-28T10:36:52Z",
+          "updated_at": "2026-08-28T10:36:52Z",
+          "browser_download_url": "https://github.com/Real-Time-Robotics/ragas-release/releases/download/v4.0.4-b108/manifest-prod.json"
+        },
+        {
+          "id": 533645132,
+          "name": "ragas-4.0.4+108-arm64-v8a.apk",
+          "size": 266376703,
+          "digest": "sha256:c884ae4500f8666beed5e351ccce6f8ee140b85d980b85f1bfcd9ca58876f91b",
+          "created_at": "2026-08-28T10:36:52Z",
+          "updated_at": "2026-08-28T10:36:58Z",
+          "browser_download_url": "https://github.com/Real-Time-Robotics/ragas-release/releases/download/v4.0.4-b108/ragas-4.0.4%2B108-arm64-v8a.apk"
+        },
+        {
+          "id": 533645135,
+          "name": "ragas-4.0.4+108-arm64-v8a.apk.sha256",
+          "size": 96,
+          "digest": "sha256:d6d244545d0946af0dbaa93aeaf1933955cbefb00eb2062ba8191f2df5d0aae5",
+          "created_at": "2026-08-28T10:36:52Z",
+          "updated_at": "2026-08-28T10:36:52Z",
+          "browser_download_url": "https://github.com/Real-Time-Robotics/ragas-release/releases/download/v4.0.4-b108/ragas-4.0.4%2B108-arm64-v8a.apk.sha256"
+        }
+      ]
+    },
+    {
+      "tag": "v4.0.4-b107",
+      "published_at": "2026-08-28T08:55:36Z",
+      "updated_at": "2026-08-28T08:55:36Z",
+      "prerelease": false,
+      "url": "https://github.com/Real-Time-Robotics/ragas-release/releases/tag/v4.0.4-b107",
+      "assets": [
+        {
+          "id": 533528889,
+          "name": "manifest-prod.json",
+          "size": 1576,
+          "digest": "sha256:174ff6f3771c14696d7d44d7a0d8a1029a2ad102010f53eb1747d26041214361",
+          "created_at": "2026-08-28T08:55:23Z",
+          "updated_at": "2026-08-28T08:55:23Z",
+          "browser_download_url": "https://github.com/Real-Time-Robotics/ragas-release/releases/download/v4.0.4-b107/manifest-prod.json"
+        },
+        {
+          "id": 533528892,
+          "name": "ragas-4.0.4+107-arm64-v8a.apk",
+          "size": 266376703,
+          "digest": "sha256:451b1cfaee29e687c68f7ddc6ec02f6281643d39cb6b481095744c86e1af82f8",
+          "created_at": "2026-08-28T08:55:23Z",
+          "updated_at": "2026-08-28T08:55:36Z",
+          "browser_download_url": "https://github.com/Real-Time-Robotics/ragas-release/releases/download/v4.0.4-b107/ragas-4.0.4%2B107-arm64-v8a.apk"
+        },
+        {
+          "id": 533528890,
+          "name": "ragas-4.0.4+107-arm64-v8a.apk.sha256",
+          "size": 96,
+          "digest": "sha256:42278fda990461fd328b328e345b7feed46028696b86c9ad10eb760997847d16",
+          "created_at": "2026-08-28T08:55:23Z",
+          "updated_at": "2026-08-28T08:55:23Z",
+          "browser_download_url": "https://github.com/Real-Time-Robotics/ragas-release/releases/download/v4.0.4-b107/ragas-4.0.4%2B107-arm64-v8a.apk.sha256"
+        }
+      ]
+    },
+    {
+      "tag": "test-linux-u20",
+      "published_at": "2026-09-07T02:50:09Z",
+      "updated_at": "2026-09-07T06:13:47Z",
+      "prerelease": true,
+      "url": "https://github.com/Real-Time-Robotics/ragas-release/releases/tag/test-linux-u20",
+      "assets": [
+        {
+          "id": 548275379,
+          "name": "manifest-prod-linux-u20.json",
+          "size": 533,
+          "digest": "sha256:85eaac4e478b21274146e718c2b7f7c8d6382932230fb863a3019965bbbae578",
+          "created_at": "2026-09-07T06:13:41Z",
+          "updated_at": "2026-09-07T06:13:41Z",
+          "browser_download_url": "https://github.com/Real-Time-Robotics/ragas-release/releases/download/test-linux-u20/manifest-prod-linux-u20.json"
+        },
+        {
+          "id": 548046503,
+          "name": "ragas-4.0.5+13-x64-u20.deb",
+          "size": 181358988,
+          "digest": "sha256:44d8a98130921b7de1aa566933a79335e5767ff3c9bac5c88b9a00019d70e0c2",
+          "created_at": "2026-09-07T02:50:10Z",
+          "updated_at": "2026-09-07T02:50:14Z",
+          "browser_download_url": "https://github.com/Real-Time-Robotics/ragas-release/releases/download/test-linux-u20/ragas-4.0.5%2B13-x64-u20.deb"
+        },
+        {
+          "id": 548046505,
+          "name": "ragas-4.0.5+13-x64-u20.deb.sha256",
+          "size": 93,
+          "digest": "sha256:2be5fd749418298af0a196ca136cd149ab5a4b8b46e1cc7395e7cf622e544968",
+          "created_at": "2026-09-07T02:50:10Z",
+          "updated_at": "2026-09-07T02:50:10Z",
+          "browser_download_url": "https://github.com/Real-Time-Robotics/ragas-release/releases/download/test-linux-u20/ragas-4.0.5%2B13-x64-u20.deb.sha256"
+        },
+        {
+          "id": 548131324,
+          "name": "ragas-4.0.5+14-x64-u20.deb",
+          "size": 180764392,
+          "digest": "sha256:ccb5202a016b10cf0eb6efc4bb3f2684f54576401a329bc74b6bbd2bb3e52352",
+          "created_at": "2026-09-07T04:09:03Z",
+          "updated_at": "2026-09-07T04:09:07Z",
+          "browser_download_url": "https://github.com/Real-Time-Robotics/ragas-release/releases/download/test-linux-u20/ragas-4.0.5%2B14-x64-u20.deb"
+        },
+        {
+          "id": 548131323,
+          "name": "ragas-4.0.5+14-x64-u20.deb.sha256",
+          "size": 93,
+          "digest": "sha256:61d4a085a93e52b34bae76cc2cd3809cd94f27267d7a5cbb428aeb7d41dbe935",
+          "created_at": "2026-09-07T04:09:03Z",
+          "updated_at": "2026-09-07T04:09:03Z",
+          "browser_download_url": "https://github.com/Real-Time-Robotics/ragas-release/releases/download/test-linux-u20/ragas-4.0.5%2B14-x64-u20.deb.sha256"
+        },
+        {
+          "id": 548275371,
+          "name": "ragas-4.0.5+15-x64-u20.deb",
+          "size": 180766308,
+          "digest": "sha256:ed015c32f12ae44f70370588a38e01cedde25e99b6a9707f79c2a25349c25886",
+          "created_at": "2026-09-07T06:13:40Z",
+          "updated_at": "2026-09-07T06:13:47Z",
+          "browser_download_url": "https://github.com/Real-Time-Robotics/ragas-release/releases/download/test-linux-u20/ragas-4.0.5%2B15-x64-u20.deb"
+        },
+        {
+          "id": 548275372,
+          "name": "ragas-4.0.5+15-x64-u20.deb.sha256",
+          "size": 93,
+          "digest": "sha256:6cc89a074c6136c930b4cc8ee14e86310c557072cb733f93661736e08052f72d",
+          "created_at": "2026-09-07T06:13:40Z",
+          "updated_at": "2026-09-07T06:13:41Z",
+          "browser_download_url": "https://github.com/Real-Time-Robotics/ragas-release/releases/download/test-linux-u20/ragas-4.0.5%2B15-x64-u20.deb.sha256"
+        }
+      ]
+    },
+    {
+      "tag": "v4.0.3-b106",
+      "published_at": "2026-08-28T04:28:33Z",
+      "updated_at": "2026-08-28T04:28:33Z",
+      "prerelease": false,
+      "url": "https://github.com/Real-Time-Robotics/ragas-release/releases/tag/v4.0.3-b106",
+      "assets": [
+        {
+          "id": 533253723,
+          "name": "manifest-prod.json",
+          "size": 839,
+          "digest": "sha256:5c6bd4f60e7df348bf4586ac286c6ea2463fb644acf8fa51d6a6ae4ee5291686",
+          "created_at": "2026-08-28T04:28:26Z",
+          "updated_at": "2026-08-28T04:28:27Z",
+          "browser_download_url": "https://github.com/Real-Time-Robotics/ragas-release/releases/download/v4.0.3-b106/manifest-prod.json"
+        },
+        {
+          "id": 533253724,
+          "name": "ragas-4.0.3+106-arm64-v8a.apk",
+          "size": 266311167,
+          "digest": "sha256:f029a960658273e012fb4119bcd66b88d4eab7e66c408f70d66edce4ff480489",
+          "created_at": "2026-08-28T04:28:26Z",
+          "updated_at": "2026-08-28T04:28:33Z",
+          "browser_download_url": "https://github.com/Real-Time-Robotics/ragas-release/releases/download/v4.0.3-b106/ragas-4.0.3%2B106-arm64-v8a.apk"
+        },
+        {
+          "id": 533253722,
+          "name": "ragas-4.0.3+106-arm64-v8a.apk.sha256",
+          "size": 96,
+          "digest": "sha256:a83e9d6395de5e396155145b9e9639e2e3ab53faaa8ff68a8f889464adf283e6",
+          "created_at": "2026-08-28T04:28:26Z",
+          "updated_at": "2026-08-28T04:28:27Z",
+          "browser_download_url": "https://github.com/Real-Time-Robotics/ragas-release/releases/download/v4.0.3-b106/ragas-4.0.3%2B106-arm64-v8a.apk.sha256"
+        }
+      ]
+    },
+    {
+      "tag": "v4.0.1-b105",
+      "published_at": "2026-08-26T04:16:37Z",
+      "updated_at": "2026-08-26T04:16:37Z",
+      "prerelease": false,
+      "url": "https://github.com/Real-Time-Robotics/ragas-release/releases/tag/v4.0.1-b105",
+      "assets": [
+        {
+          "id": 530246712,
+          "name": "manifest-prod.json",
+          "size": 839,
+          "digest": "sha256:636d3b4d3455764e9d4aabf7274f1d48f29d60b52dc27861a8f95825a35fb10e",
+          "created_at": "2026-08-26T04:16:25Z",
+          "updated_at": "2026-08-26T04:16:25Z",
+          "browser_download_url": "https://github.com/Real-Time-Robotics/ragas-release/releases/download/v4.0.1-b105/manifest-prod.json"
+        },
+        {
+          "id": 530246715,
+          "name": "ragas-4.0.1+105-arm64-v8a.apk",
+          "size": 263962105,
+          "digest": "sha256:dff0a015609541bc74d54823e1c6a7dcc865de0124fcab4b5a44966c5f287222",
+          "created_at": "2026-08-26T04:16:25Z",
+          "updated_at": "2026-08-26T04:16:37Z",
+          "browser_download_url": "https://github.com/Real-Time-Robotics/ragas-release/releases/download/v4.0.1-b105/ragas-4.0.1%2B105-arm64-v8a.apk"
+        },
+        {
+          "id": 530246714,
+          "name": "ragas-4.0.1+105-arm64-v8a.apk.sha256",
+          "size": 96,
+          "digest": "sha256:809b8f8ff1ca42c0e3512869f6a04a791584ec1bccd164d39314271b67040924",
+          "created_at": "2026-08-26T04:16:25Z",
+          "updated_at": "2026-08-26T04:16:25Z",
+          "browser_download_url": "https://github.com/Real-Time-Robotics/ragas-release/releases/download/v4.0.1-b105/ragas-4.0.1%2B105-arm64-v8a.apk.sha256"
+        }
+      ]
+    },
+    {
+      "tag": "v4.0.1-b104",
+      "published_at": "2026-08-25T10:40:06Z",
+      "updated_at": "2026-08-25T10:40:06Z",
+      "prerelease": false,
+      "url": "https://github.com/Real-Time-Robotics/ragas-release/releases/tag/v4.0.1-b104",
+      "assets": [
+        {
+          "id": 529039610,
+          "name": "manifest-prod.json",
+          "size": 839,
+          "digest": "sha256:69cc60ed958fea0c9fa18ad9fe53d422c75a348709f9e5df62f31d2c13ac2593",
+          "created_at": "2026-08-25T10:39:59Z",
+          "updated_at": "2026-08-25T10:39:59Z",
+          "browser_download_url": "https://github.com/Real-Time-Robotics/ragas-release/releases/download/v4.0.1-b104/manifest-prod.json"
+        },
+        {
+          "id": 529039608,
+          "name": "ragas-4.0.1+104-arm64-v8a.apk",
+          "size": 263962105,
+          "digest": "sha256:2e585e72ed7c12deeb2d925914b7db5575236e0efe28989421505e5893b0a93d",
+          "created_at": "2026-08-25T10:39:59Z",
+          "updated_at": "2026-08-25T10:40:05Z",
+          "browser_download_url": "https://github.com/Real-Time-Robotics/ragas-release/releases/download/v4.0.1-b104/ragas-4.0.1%2B104-arm64-v8a.apk"
+        },
+        {
+          "id": 529039604,
+          "name": "ragas-4.0.1+104-arm64-v8a.apk.sha256",
+          "size": 96,
+          "digest": "sha256:5054b424fbce3e35af7f89784f0fde908db7c68f39fa716ab386c9555b60ee32",
+          "created_at": "2026-08-25T10:39:59Z",
+          "updated_at": "2026-08-25T10:39:59Z",
+          "browser_download_url": "https://github.com/Real-Time-Robotics/ragas-release/releases/download/v4.0.1-b104/ragas-4.0.1%2B104-arm64-v8a.apk.sha256"
+        }
+      ]
+    },
+    {
+      "tag": "v4.0.0-b103",
+      "published_at": "2026-08-25T10:20:55Z",
+      "updated_at": "2026-08-25T10:20:55Z",
+      "prerelease": false,
+      "url": "https://github.com/Real-Time-Robotics/ragas-release/releases/tag/v4.0.0-b103",
+      "assets": [
+        {
+          "id": 529017103,
+          "name": "manifest-prod.json",
+          "size": 839,
+          "digest": "sha256:4db444d21c0c5571a7f6bfdd4487ec1578614988817de852fb2785697e1bff29",
+          "created_at": "2026-08-25T10:20:48Z",
+          "updated_at": "2026-08-25T10:20:48Z",
+          "browser_download_url": "https://github.com/Real-Time-Robotics/ragas-release/releases/download/v4.0.0-b103/manifest-prod.json"
+        },
+        {
+          "id": 529017104,
+          "name": "ragas-4.0.0+103-arm64-v8a.apk",
+          "size": 263896569,
+          "digest": "sha256:15d7170cb877ab79febea0537630cf04a7109059a81f08be0b92f73abb755776",
+          "created_at": "2026-08-25T10:20:48Z",
+          "updated_at": "2026-08-25T10:20:55Z",
+          "browser_download_url": "https://github.com/Real-Time-Robotics/ragas-release/releases/download/v4.0.0-b103/ragas-4.0.0%2B103-arm64-v8a.apk"
+        },
+        {
+          "id": 529017101,
+          "name": "ragas-4.0.0+103-arm64-v8a.apk.sha256",
+          "size": 96,
+          "digest": "sha256:ae9e66667629a04f8085e9dbf4ff0695ae6c5bd0cdf190085d02419da4d2ebed",
+          "created_at": "2026-08-25T10:20:48Z",
+          "updated_at": "2026-08-25T10:20:48Z",
+          "browser_download_url": "https://github.com/Real-Time-Robotics/ragas-release/releases/download/v4.0.0-b103/ragas-4.0.0%2B103-arm64-v8a.apk.sha256"
+        }
+      ]
+    },
+    {
+      "tag": "v4.0.0-b102",
+      "published_at": "2026-08-24T08:38:55Z",
+      "updated_at": "2026-08-24T08:38:55Z",
+      "prerelease": false,
+      "url": "https://github.com/Real-Time-Robotics/ragas-release/releases/tag/v4.0.0-b102",
+      "assets": [
+        {
+          "id": 527323086,
+          "name": "manifest-prod.json",
+          "size": 839,
+          "digest": "sha256:7e14129acc7b795ac3b455218251de407cd2c66683579d7553664c8e60baa23f",
+          "created_at": "2026-08-24T08:38:47Z",
+          "updated_at": "2026-08-24T08:38:47Z",
+          "browser_download_url": "https://github.com/Real-Time-Robotics/ragas-release/releases/download/v4.0.0-b102/manifest-prod.json"
+        },
+        {
+          "id": 527323087,
+          "name": "ragas-4.0.0+102-arm64-v8a.apk",
+          "size": 264583985,
+          "digest": "sha256:dd4a6402d50b6e8cbebc285e15a9ca6a48e8b783a109075983e99af170a541c9",
+          "created_at": "2026-08-24T08:38:47Z",
+          "updated_at": "2026-08-24T08:38:54Z",
+          "browser_download_url": "https://github.com/Real-Time-Robotics/ragas-release/releases/download/v4.0.0-b102/ragas-4.0.0%2B102-arm64-v8a.apk"
+        },
+        {
+          "id": 527323088,
+          "name": "ragas-4.0.0+102-arm64-v8a.apk.sha256",
+          "size": 96,
+          "digest": "sha256:871d2b8a36af1d214fa77557318b10bb53234172414fb1f464ed17a983b03fe7",
+          "created_at": "2026-08-24T08:38:47Z",
+          "updated_at": "2026-08-24T08:38:47Z",
+          "browser_download_url": "https://github.com/Real-Time-Robotics/ragas-release/releases/download/v4.0.0-b102/ragas-4.0.0%2B102-arm64-v8a.apk.sha256"
+        }
+      ]
+    },
+    {
+      "tag": "v4.0.0-b101",
+      "published_at": "2026-08-22T10:10:17Z",
+      "updated_at": "2026-08-22T10:10:17Z",
+      "prerelease": false,
+      "url": "https://github.com/Real-Time-Robotics/ragas-release/releases/tag/v4.0.0-b101",
+      "assets": [
+        {
+          "id": 524913687,
+          "name": "manifest-prod.json",
+          "size": 735,
+          "digest": "sha256:03910121e074c150f4acf5b5e92a57319373a8c9abb5dca3af6be63900bc2ae9",
+          "created_at": "2026-08-22T10:10:10Z",
+          "updated_at": "2026-08-22T10:10:11Z",
+          "browser_download_url": "https://github.com/Real-Time-Robotics/ragas-release/releases/download/v4.0.0-b101/manifest-prod.json"
+        },
+        {
+          "id": 524913684,
+          "name": "ragas-4.0.0+101-arm64-v8a.apk",
+          "size": 264583557,
+          "digest": "sha256:6205e8eb484553f288e338a746d56dc98815057f859bc23170d830bbadde4f24",
+          "created_at": "2026-08-22T10:10:10Z",
+          "updated_at": "2026-08-22T10:10:16Z",
+          "browser_download_url": "https://github.com/Real-Time-Robotics/ragas-release/releases/download/v4.0.0-b101/ragas-4.0.0%2B101-arm64-v8a.apk"
+        },
+        {
+          "id": 524913683,
+          "name": "ragas-4.0.0+101-arm64-v8a.apk.sha256",
+          "size": 96,
+          "digest": "sha256:9aca5a3a216963d3c17d971c8ded312c27497b1ca2dac4ce21ca00400ccda308",
+          "created_at": "2026-08-22T10:10:10Z",
+          "updated_at": "2026-08-22T10:10:10Z",
+          "browser_download_url": "https://github.com/Real-Time-Robotics/ragas-release/releases/download/v4.0.0-b101/ragas-4.0.0%2B101-arm64-v8a.apk.sha256"
+        }
+      ]
+    }
+  ],
+  "runtime_ragas": "NOT_CHECKED",
+  "ap_claims_are_not_runtime_evidence": true
+}

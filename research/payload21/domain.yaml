@@ -1,0 +1,26 @@
+domain: payload21
+entity_label: Published capability and protocol references
+schema:
+  type_field: null
+  fields:
+  - multi_payload_positions
+  - camera_controls
+  - runtime_ab
+  - addressing
+  - authority
+  - ack_semantics
+  - flight_workflow
+  - mission_workflow
+  - ai_workflow
+  - media_workflow
+  - configuration_workflow
+  - controller_workflow
+  - accessories_workflow
+rollup_field: null
+universe:
+  estimate: null
+  basis: Selected official protocol/product references; no exhaustive comparison
+refresh_days:
+  default: 14
+alias_map: {}
+ambiguous_clusters: []

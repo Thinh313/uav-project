@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="vi">
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AERIS · COMPACT10</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#f5f5f2;color:#171a1b;font:16px/1.6 system-ui,sans-serif}main{max-width:1080px;margin:auto;padding:40px 28px 80px}header{display:flex;justify-content:space-between;gap:24px;border-bottom:2px solid #171a1b;padding-bottom:16px;font-weight:750}h1{font-size:clamp(32px,5vw,50px);line-height:1.13;letter-spacing:-.035em;margin:32px 0 18px}h2{font-size:24px;margin:36px 0 14px;line-height:1.3}.status{display:inline-block;background:#ecd76e;padding:5px 10px;font-size:13px;font-weight:800;letter-spacing:.04em}.lead{font-size:20px;line-height:1.55}.metrics{display:grid;grid-template-columns:repeat(3,1fr);border-block:1px solid #adb3b5;margin:28px 0}.metrics>div{padding:20px 12px 20px 0}.metrics strong{display:block;font-size:29px;line-height:1.25}.metrics span{font-size:14px;color:#515b60}table{width:100%;border-collapse:collapse;font-size:15px}th,td{text-align:left;vertical-align:top;border-bottom:1px solid #c6ccce;padding:12px 10px 12px 0}th{font-size:13px;color:#515b60}td:first-child{width:28%;font-weight:650}p{max-width:88ch}a{color:inherit;overflow-wrap:anywhere;text-underline-offset:3px}code{font-size:13px;overflow-wrap:anywhere}.note{padding:18px 20px;background:#e7ebe8}li{margin:9px 0}.links{display:grid;grid-template-columns:1fr 1fr;gap:10px 24px}footer{border-top:1px solid #adb3b5;padding-top:18px;margin-top:36px;font-size:13px;color:#515b60}@media(max-width:650px){main{padding:24px 18px}.metrics,.links{grid-template-columns:1fr}.metrics>div{padding:12px 0}header{flex-wrap:wrap}table{font-size:13px}}
+</style>
+<main>
+<header><span>RtR / AERIS</span><span>COMPACT10 · 27.10.2026</span></header>
+<h1>Journal gọn đã kiểm lossless.<br>Tích hợp SITL chưa đạt.</h1>
+<span class="status">NOT READY · SHORT STARTUP FAILED · 30 MIN NOT RUN</span>
+<p class="lead">Đã triển khai định dạng journal gọn, reader chặt và đo pacing trong nhánh cô lập. Mock và đối chiếu byte độc lập đạt. APK development mở được trên Android, giữ hồ sơ r1 sau restart. Lượt tích hợp dừng tại validation của supervisor trước khi khởi chạy binary ArduPilot: chưa có kết nối native, ARM, bước mô hình hay frame bay. Chưa đo được RTF thực tế và không chạy 30 phút.</p>
+<div class="metrics"><div><strong>8.680 / 8.680</strong><span>record cũ tái dựng đúng từng byte</span></div><div><strong>53,64%</strong><span>mức giảm byte tối thiểu theo cửa sổ ≥5 giây, trên corpus cũ</span></div><div><strong>0 frame</strong><span>trong lượt tích hợp mới; không có kết luận pacing</span></div></div>
+
+<h2>Đã thay đổi và kiểm được gì?</h2>
+<table><thead><tr><th>Yêu cầu</th><th>Kết quả</th><th>Chứng cứ và giới hạn</th></tr></thead><tbody>
+<tr><td>Journal gọn lossless</td><td>Khung nhị phân có phiên bản, RAW hoặc raw DEFLATE1 theo payload; tái dựng nguyên dòng logic09, kể cả LF, clock, context, ordinal, payload và SHA</td><td>Parser Python độc lập đối chiếu toàn bộ 8.680 dòng thật cũ; 30 payload mới và các ca lỗi. Đây là JVM/host, chưa phải đường ghi Android đang bay</td></tr>
+<tr><td>Chống nhận nhầm hồ sơ hỏng</td><td>Kiểm header/frame/CRC, SHA logic và vật lý, hai chuỗi seal, session và external anchor; giới hạn giải nén theo luồng</td><td>Kiểm partial/trailing stream, bomb, sai kiểu, trùng khóa, file lạ, symlink và fault injection. Giữ counterexample cùng lịch sử sửa</td></tr>
+<tr><td>Giảm lưu trữ</td><td>6.070.154 byte logic gốc → 2.417.119 byte vật lý tính cả metadata, giảm khoảng 60,2%</td><td>Corpus09 được mã hóa lại để kiểm codec, không thay hồ sơ09 hoặc tái chứng nhận anchor cũ</td></tr>
+<tr><td>Pacing host</td><td>Chuẩn bị body JSON một lần, giữ nguyên byte/CRC/SHA và thứ tự write/fsync; thêm bộ đo giới hạn trong bộ nhớ, xuất sau đóng journal</td><td>Write/fsync đo mọi thao tác bằng timestamp có sẵn; guard/serialize/STAGE/recvwait đo first/every16 và đếm đủ lời gọi. Maxima sampled không phải độ phủ toàn bộ</td></tr>
+<tr><td>Chi phí bộ đo</td><td>Phép so cân bằng trên host-memory ghi nhận CPU median cao hơn baseline khoảng 9,9%</td><td>Chấp nhận chi phí chẩn đoán có giới hạn, không quảng cáo đây là tăng tốc toàn tuyến hay đạt 1×</td></tr>
+<tr><td>APK và UI Android</td><td>APK02, 40 source pins và certificate development đã kiểm; tạo r1 bằng UI, lưu một lần; restart giữ đúng SHA bản nháp</td><td>Không có review chuyến bay hay native journal hoàn chỉnh trong lượt này. Đường codec ghi trên ART chưa được nghiệm thu</td></tr>
+<tr><td>Android–SITL short</td><td>FAILED ở khởi động supervisor, sau 47,137 giây</td><td>0 frame, 0 model step, 0 telemetry AP; chưa CONNECT, consent, ARM hay takeoff</td></tr>
+<tr><td>Lượt 30 phút</td><td>NOT RUN</td><td>Short chưa đạt, không có feasibility/RTF mới để cho qua gate</td></tr>
+</tbody></table>
+
+<h2>Nguyên nhân chặn lượt thực</h2>
+<p>Config mới hợp lệ với validator Compact10 của host. Supervisor Observer05 vẫn dùng validator ClockOwner02 và yêu cầu amendment source cũ khớp tuyệt đối. Nó từ chối bằng <code>EXTERNAL_RECORDING_POLICY_EXACT_SOURCE_REQUIRED</code> tại <code>validate_state</code>, trước dòng gọi <code>Popen</code> để khởi chạy AP. Docker/supervisor được mở không đồng nghĩa binary ArduPilot đã chạy.</p>
+<p>Backend chờ servo rồi trả <code>STOP_NO_NEXT_SERVO_3S</code>. Main journal chỉ có hai record SEGMENT và TIMING_ORIGIN, chưa có RX/INTENT/SENT/STAGE. Khi xử lý dừng, guard journal phát hiện khoảng trống quan sát đĩa 15,118 giây và từ chối dùng lại; file failure metadata 0 byte được giữ nguyên. Guard không được hạ hoặc tự reprime để cho qua.</p>
+<p class="note">Clock và transport có closure nội bộ riêng, nhưng outside backend anchors đều null. Đây là lần khởi động thất bại với prefix được giữ, không phải hồ sơ bay hoàn chỉnh. Không lấy 0 frame để tuyên bố đã chứng minh “không mất frame”, không lấy component closure làm nghiệm thu toàn lượt.</p>
+
+<h2>Những lỗi chuẩn bị đã sửa trước lần tích hợp</h2>
+<p>APK01 được giữ riêng trước khi sửa Java reader ép kiểu số trong HEADER. APK02 chỉ thêm kiểm schema/kiểu dữ liệu chặt, giữ codec và quyền điều khiển. Bản guard khởi động UI đầu còn trỏ build01 dù APK02 đã cài đúng, nên dừng trước <code>am start</code>. Rà soát tiếp tìm thấy tham chiếu build/policy cũ trong controller và long-cold.</p>
+<p>Nhánh <code>release02</code> bổ sung 17 helper thủ tục và contract chung, giữ nguyên toàn bộ 479 source/49 metadata đầu. Selector và deadline được kiểm trên các entry function thực trước khi mở lại runtime. Manifest mới có 496 source/57 metadata; thời hạn vẫn neo vào prelaunch đầu tiên, tính cả lần chuẩn bị đã dừng. Tuy vậy, các gate orchestration này đã bỏ sót boundary validator trong supervisor Observer05. QA ghi rõ thiếu sót này; gate và log lỗi cũ không bị viết lại.</p>
+
+<h2>Bất biến và phạm vi bảo toàn</h2>
+<p>Giữ nguyên frame freshness 250 ms, input/UI 200 ms, loop 500 ms, geography 1.500 ms, speedup1, cap500 ms, fsync trước wire/sensor và đủ record/frame trong hợp đồng. Quota vật lý native vẫn 160 MiB; giới hạn xử lý giải nén riêng 512 MiB, theo segment 8 MiB, không phải tăng dung lượng lưu trữ. Các giới hạn thời gian/byte cần được kiểm lại từ short thực tế sau khi sửa boundary.</p>
+<p>Kiểm cuối: 17.117 entry baseline và 20 seal cũ / 40.343 entry không có drift mới. 165 đường dẫn thiếu từ baseline trước vẫn được ghi riêng, không khôi phục hoặc tuyên bố hiện diện liên tục. Source/candidate đóng băng, lịch sử ENDURE và toàn bộ 479/49 đầu giữ nguyên. Sáu package cũ, 307 file và bốn diagnostic khớp SHA sau restart.</p>
+<p>App hiện NO_SESSION, không owner, không khôi phục quyền hoặc staged binding trong bộ nhớ; hồ sơ r1 giữ nguyên, không tạo review bay giả. Emulator, guardian, container kiểm và cổng owned đã đóng sạch. Scratch build dùng lại một đường dẫn, đã xóa qua hai build: 206 file / 4.212.682 byte; scratch JVM, mock host và QA đã dọn. Docker image prune thu hồi 0 byte; không xóa dữ liệu người dùng. Dung lượng cuối khoảng 46 GiB, không phải nguyên nhân dừng.</p>
+
+<h2>Bước tiếp theo đúng trọng tâm</h2>
+<ol><li><b>Adapter Observer cô lập:</b> hợp nhất validator Compact10 cho launch, state binding và cold verification, khai báo source amendment đúng sự thật. Giữ nguyên parent pins, 39 tham số vật lý, AP/model, cadence và guard. Không giả policy cũ hoặc sửa module đóng băng.</li>
+<li><b>Smoke test xuyên boundary trước AP:</b> đưa chính config đã capture qua entry admission của supervisor và kiểm mọi dependency trước Popen. Kiểm quan sát đĩa khi chờ startup/idle; không tự làm mới một guard đã stale.</li>
+<li><b>Short thực tế sau gate:</b> xác nhận AP binary sẵn sàng rồi mới CONNECT/ARM; kiểm đủ frame, native physical/logical journal, input/quyền, RTF, review/restart và dự toán thời gian/byte. Chỉ khi toàn bộ đạt mới mở lượt 30 phút. Không cộng hoặc tiếp tục interval thất bại này.</li></ol>
+<p>Chưa có nghiệm thu HeraHub/HID, payload thật, drone thật, beta toàn sản phẩm hoặc ký production. Mô hình tham chiếu Quad-X chưa hiệu chuẩn Hera. Đợt này không tuyên bố ưu thế hiệu suất thương mại từ số lượng test.</p>
+
+<h2>Hồ sơ bàn giao</h2>
+<div class="links">
+<a href="../evidence/betaintegrated01-cockpit05-compact10/ROOT-VERIFY01.json">Root Verify Report và coverage</a>
+<a href="../evidence/betaintegrated01-cockpit05-compact10/qa/short-failure01/FINAL-QA.json">QA độc lập: NOT READY</a>
+<a href="../evidence/betaintegrated01-cockpit05-compact10/host/actual-failure-analysis01.json">Chẩn đoán config / supervisor</a>
+<a href="../evidence/betaintegrated01-cockpit05-compact10/qa/codec01/results.json">Đối chiếu byte và dữ liệu hỏng</a>
+<a href="../evidence/betaintegrated01-cockpit05-compact10/qa/projection01/results.json">Dự toán byte trên corpus cũ</a>
+<a href="../evidence/betaintegrated01-cockpit05-compact10/qa/overhead01/results.json">Chi phí profiling được đo độc lập</a>
+<a href="../evidence/betaintegrated01-cockpit05-compact10/preservation-after01.json">Kiểm bảo toàn cuối</a>
+<a href="../native/betaintegrated01/cockpitio10/dist/aeris-cockpitio10-development-02.apk">APK02 development, chưa nghiệm thu bay</a>
+<a href="../planning/betaintegrated01/cockpit05-compact10/release02/RUNNER.md">Runbook revision02, lưu kèm disposition thất bại</a>
+<a href="../evidence/betaintegrated01-cockpit05-compact10/handoff-final.json">Inventory bàn giao có SHA</a>
+</div>
+<footer>Vibecode Kit v6.3 · Contractor / Builders / QA độc lập.<br>APK02 SHA: <code>8c1f9d0b…6b9176a</code>. Manifest02: <code>c290ba8b…2d3a5ce</code>. Quyết định: giữ nguyên bằng chứng, không retry, không chạy 30 phút, chưa nghiệm thu short.</footer>
+</main>
+</html>

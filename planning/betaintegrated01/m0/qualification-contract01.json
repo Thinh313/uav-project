@@ -1,0 +1,1378 @@
+{
+  "format": "aeris-beta-m0-qualification-contract",
+  "version": 1,
+  "atUTC": "2026-10-26T16:58:31.154375+00:00",
+  "campaignSHA256": "2d266d21fc095c5ba34c9b175bf82a823a6b31f514622dd7efb03621863fe614",
+  "status": "TARGETS_FROZEN_NOT_EXECUTED",
+  "requiredRequirementIDs": [
+    "R01",
+    "R02",
+    "R03",
+    "R04",
+    "R05",
+    "R06",
+    "R07",
+    "R08",
+    "R09",
+    "R10",
+    "R11",
+    "R12",
+    "R13",
+    "R14",
+    "R15",
+    "R16",
+    "R17",
+    "R18",
+    "R19",
+    "R20",
+    "R21",
+    "R22",
+    "R23",
+    "R24",
+    "R25",
+    "R26",
+    "R27",
+    "R28"
+  ],
+  "requirements": [
+    {
+      "id": "R01",
+      "milestone": "M0",
+      "title": "Release/dependency closure",
+      "acceptance": "Selected source/config/fonts/definitions có đủ SHA/type/license; missing paths được xử lý trong isolated intake; clean install closure kiểm được",
+      "featureIDs": [
+        "F42",
+        "F43"
+      ],
+      "priority": "MUST",
+      "state": "NOT_CHECKED_NEW_CAMPAIGN",
+      "oracleRequired": true
+    },
+    {
+      "id": "R02",
+      "milestone": "M0",
+      "title": "Supported profile và pairing",
+      "acceptance": "Chốt API/ABI/OS/WebView/GPU/codec/AP/model; loopback mặc định, LAN pairing có cert/nonce/auth/expiry; WebView origin/bridge allowlist; không cleartext control ra LAN hoặc tự chọn thiết bị",
+      "featureIDs": [
+        "F41",
+        "F43"
+      ],
+      "priority": "MUST",
+      "state": "NOT_CHECKED_NEW_CAMPAIGN",
+      "oracleRequired": true
+    },
+    {
+      "id": "R03",
+      "milestone": "M1",
+      "title": "Recorder và clock closure",
+      "acceptance": "Đủ RX/INTENT/SENT/CRC/chain/CLOSE hoặc explicit failure; không overwrite/unread/tràn; elapsed đóng đúng1lần; 30min kiểm capacity thật",
+      "featureIDs": [
+        "F31",
+        "F44",
+        "F45"
+      ],
+      "priority": "MUST",
+      "state": "NOT_CHECKED_NEW_CAMPAIGN",
+      "oracleRequired": true
+    },
+    {
+      "id": "R04",
+      "milestone": "M1",
+      "title": "Authority/session/input",
+      "acceptance": "Wrong boot/target/operator/sequence/stale bị chặn; neutral claim/release; native focus/deadman; HB1500ms/lease200ms; không tự restore",
+      "featureIDs": [
+        "F01",
+        "F02",
+        "F10"
+      ],
+      "priority": "MUST",
+      "state": "NOT_CHECKED_NEW_CAMPAIGN",
+      "oracleRequired": true
+    },
+    {
+      "id": "R05",
+      "milestone": "M1",
+      "title": "Manual/assisted flight",
+      "acceptance": "Actual APK takeoff/manual pitch+yaw/Hold/POI/orbit/RTL/LAND với ACK+observed state+ground truth; không force-arm hoặc UI animation thay execution",
+      "featureIDs": [
+        "F03",
+        "F14"
+      ],
+      "priority": "MUST",
+      "state": "NOT_CHECKED_NEW_CAMPAIGN",
+      "oracleRequired": true
+    },
+    {
+      "id": "R06",
+      "milestone": "M1",
+      "title": "Mất link và AP reboot thật",
+      "acceptance": "Injection chứng minh socket/byte loss hoặc actual boot/PID đổi; pending UNKNOWN, revoke; reconnect cần discover/preflight/consent mới; failsafe quan sát theo typed config",
+      "featureIDs": [
+        "F04",
+        "F10",
+        "F40"
+      ],
+      "priority": "MUST",
+      "state": "NOT_CHECKED_NEW_CAMPAIGN",
+      "oracleRequired": true
+    },
+    {
+      "id": "R07",
+      "milestone": "M2",
+      "title": "Mission model và KML/QGC",
+      "acceptance": "Một semantic model; positive/negative held-out corpus; camera commands/frames/altitude/speed giữ nghĩa; unsupported complex/fence/rally từ chối rõ",
+      "featureIDs": [
+        "F12",
+        "F34"
+      ],
+      "priority": "MUST",
+      "state": "NOT_CHECKED_NEW_CAMPAIGN",
+      "oracleRequired": true
+    },
+    {
+      "id": "R08",
+      "milestone": "M2",
+      "title": "Geo/Home/terrain",
+      "acceptance": "WGS84/ENU/NED/Home/relative/AMSL/AGL/geoid/time/source/no-data kiểm độc lập; không ngầm chuyển datum; readback nằm tolerance theo encoding/projection",
+      "featureIDs": [
+        "F13",
+        "F16"
+      ],
+      "priority": "MUST",
+      "state": "NOT_CHECKED_NEW_CAMPAIGN",
+      "oracleRequired": true
+    },
+    {
+      "id": "R09",
+      "milestone": "M2",
+      "title": "AUTO/Hold/resume/refly intent",
+      "acceptance": "Plan→compile→upload/readback→Home review→AUTO→reached→ground/disarm→review; Hold/resume/RTL consent và MIS_RESTART typed; refly phần thiếu là plan mới được duyệt",
+      "featureIDs": [
+        "F03",
+        "F04",
+        "F17"
+      ],
+      "priority": "MUST",
+      "state": "NOT_CHECKED_NEW_CAMPAIGN",
+      "oracleRequired": true
+    },
+    {
+      "id": "R10",
+      "milestone": "M2",
+      "title": "Airspace/geofence/return",
+      "acceptance": "Nguồn vùng trời synthetic có tuổi/coverage; fenceAP upload/readback/breach; preview return/alternate/reserve; UNKNOWN không thành permission",
+      "featureIDs": [
+        "F06",
+        "F07",
+        "F08",
+        "F09",
+        "F11"
+      ],
+      "priority": "MUST",
+      "state": "NOT_CHECKED_NEW_CAMPAIGN",
+      "oracleRequired": true
+    },
+    {
+      "id": "R11",
+      "milestone": "M3",
+      "title": "Payload capability/4 peer routing",
+      "acceptance": "4 peer có ID riêng; capability-driven UI; manager/device mapping đúng; foreign/late/ambiguous ACK không mở quyền; unsupported command từ chối",
+      "featureIDs": [
+        "F18",
+        "F20"
+      ],
+      "priority": "MUST",
+      "state": "NOT_CHECKED_NEW_CAMPAIGN",
+      "oracleRequired": true
+    },
+    {
+      "id": "R12",
+      "milestone": "M3",
+      "title": "Hai operator độc lập",
+      "acceptance": "Hai authenticated clients/processes/session histories; flight và per-payload authority riêng; consent handoff/contention/partition/revoke; feed switch không chuyển quyền",
+      "featureIDs": [
+        "F05",
+        "F37"
+      ],
+      "priority": "MUST",
+      "state": "NOT_CHECKED_NEW_CAMPAIGN",
+      "oracleRequired": true
+    },
+    {
+      "id": "R13",
+      "milestone": "M3",
+      "title": "Video xuyên mission",
+      "acceptance": "Ghi từng chặng clock/seq, toàn khoảngAUTO và min-binFPS/maxgap; cold-start/codec/queue/error; source idle paused; không deduce photon từ canvas",
+      "featureIDs": [
+        "F19",
+        "F22",
+        "F44"
+      ],
+      "priority": "MUST",
+      "state": "NOT_CHECKED_NEW_CAMPAIGN",
+      "oracleRequired": true
+    },
+    {
+      "id": "R14",
+      "milestone": "M3",
+      "title": "Camera file/exposure/geotag",
+      "acceptance": "Sim camera tạo image file, exposure/index/sourceSHA/UTC-or-bracket/pose/datum; EXIF chỉ khi đúng nghĩa, sidecar đầy đủ; unknown time/geo đánh uncertainty; hardware-photo count0",
+      "featureIDs": [
+        "F21"
+      ],
+      "priority": "MUST",
+      "state": "NOT_CHECKED_NEW_CAMPAIGN",
+      "oracleRequired": true
+    },
+    {
+      "id": "R15",
+      "milestone": "M2",
+      "title": "Mapping readiness/quality",
+      "acceptance": "Stable lens/focus/mount/shutter/time sync, planned vs achieved footprint, GSD/overlap/blur; fixed không đồng nghĩa mọi gimbal sai; simulated coverage không là accuracy thật",
+      "featureIDs": [
+        "F12",
+        "F15",
+        "F28"
+      ],
+      "priority": "MUST",
+      "state": "NOT_CHECKED_NEW_CAMPAIGN",
+      "oracleRequired": true
+    },
+    {
+      "id": "R16",
+      "milestone": "M4",
+      "title": "Physics fidelity/envelope",
+      "acceptance": "Phiên bảnmass/inertia/CG/rotor/lag/drag/battery/wind/contact/sensor; frame/time oracle và held-out seeds; FID2 required; Hera constants vẫn assumptions trước calibration",
+      "featureIDs": [
+        "F45"
+      ],
+      "priority": "MUST",
+      "state": "NOT_CHECKED_NEW_CAMPAIGN",
+      "oracleRequired": true
+    },
+    {
+      "id": "R17",
+      "milestone": "M4",
+      "title": "Obstacles/contact/motor/payload swing",
+      "acceptance": "Avoidance sensor đi quaAP, contact riêng; dropout khi vẫn giữ cần; pitch+yaw,1/2/3motorfault, pendulum/headwind có expected bounded behavior/loss outcome; không giả all faults controllable",
+      "featureIDs": [
+        "F27",
+        "F45"
+      ],
+      "priority": "MUST",
+      "state": "NOT_CHECKED_NEW_CAMPAIGN",
+      "oracleRequired": true
+    },
+    {
+      "id": "R18",
+      "milestone": "M4",
+      "title": "3D/audio source-truth",
+      "acceptance": "Pose/camera/sensor bám cùng run/clock, scene stale freeze, rotor/audio muted đúng; licensed PBR assets; actual audio capture và FPS target; weather visual/physics tách rõ",
+      "featureIDs": [
+        "F46"
+      ],
+      "priority": "MUST",
+      "state": "NOT_CHECKED_NEW_CAMPAIGN",
+      "oracleRequired": true
+    },
+    {
+      "id": "R19",
+      "milestone": "M4",
+      "title": "Training/instructor/debrief",
+      "acceptance": "Manual+assisted+AUTO bài thực tế; instructor faults tách authority; input/clock/events timeline và report, scripted vs human rõ; không tổng điểm kỹ năng bay thật chưa validated",
+      "featureIDs": [
+        "F33",
+        "F47"
+      ],
+      "priority": "MUST",
+      "state": "NOT_CHECKED_NEW_CAMPAIGN",
+      "oracleRequired": true
+    },
+    {
+      "id": "R20",
+      "milestone": "M4",
+      "title": "Cockpit UI/input quality",
+      "acceptance": "Token/grid/rail alignment, đủcontrast/touch targets, 2themes/sunmoon, allscreens/popup/IME/insets/error, safe takeover; simulated HID contract và actual Android touch",
+      "featureIDs": [
+        "F02",
+        "F48"
+      ],
+      "priority": "MUST",
+      "state": "NOT_CHECKED_NEW_CAMPAIGN",
+      "oracleRequired": true
+    },
+    {
+      "id": "R21",
+      "milestone": "M5",
+      "title": "Workspace/review/restart",
+      "acceptance": "Durable workspace+review, cold Android/host restart; no authority restore; receipt/data/plan/raw identities giữ nguyên; không success từ last historical pose",
+      "featureIDs": [
+        "F31",
+        "F40"
+      ],
+      "priority": "MUST",
+      "state": "NOT_CHECKED_NEW_CAMPAIGN",
+      "oracleRequired": true
+    },
+    {
+      "id": "R22",
+      "milestone": "M5",
+      "title": "Dataset/SAF/receiver",
+      "acceptance": "Large file export/checkpoint/resume/receipt; thiếu/hỏng/sai receiver/replay từ chối; independently reconstruct từ original; metadata-only phải ghi external raw not embedded",
+      "featureIDs": [
+        "F32",
+        "F33",
+        "F34"
+      ],
+      "priority": "MUST",
+      "state": "NOT_CHECKED_NEW_CAMPAIGN",
+      "oracleRequired": true
+    },
+    {
+      "id": "R23",
+      "milestone": "M5",
+      "title": "Quota/archive/resources",
+      "acceptance": "Admission20/floor10+reserve256/forecast15; no autodrop/delete; ENOSPC/EIO/fsync/pending/reserve export; control ưu tiên dưới overload; cap queues/RAM/RSS/guest",
+      "featureIDs": [
+        "F35",
+        "F44"
+      ],
+      "priority": "MUST",
+      "state": "NOT_CHECKED_NEW_CAMPAIGN",
+      "oracleRequired": true
+    },
+    {
+      "id": "R24",
+      "milestone": "M5",
+      "title": "Performance và endurance",
+      "acceptance": "Same-final-release metrics, cold/nominal/fault,1x/frame/fsync, 30min→2h→8h→24h uninterrupted active-loop on admitted target; no time stitching/no replay substitution",
+      "featureIDs": [
+        "F44"
+      ],
+      "priority": "MUST",
+      "state": "NOT_CHECKED_NEW_CAMPAIGN",
+      "oracleRequired": true
+    },
+    {
+      "id": "R25",
+      "milestone": "M5",
+      "title": "Beta install/update/security",
+      "acceptance": "APK cert/hash/SBOM/licenses + host prerequisite/package verifier; no privatekeys; schema upgrade failure giữ original; MITM/replay/origin/simulator boundary/cold migration checked",
+      "featureIDs": [
+        "F41",
+        "F42"
+      ],
+      "priority": "MUST",
+      "state": "NOT_CHECKED_NEW_CAMPAIGN",
+      "oracleRequired": true
+    },
+    {
+      "id": "R26",
+      "milestone": "M6",
+      "title": "Receiver/user acceptance",
+      "acceptance": "Nhóm nhận độc lập install/pair/plan/fly/fault/review/export không developer shell rescue;5formative users/5tasks,≥90%completion,0criticalerrors; NOT_CHECKED nếu thiếu human",
+      "featureIDs": [
+        "F38",
+        "F48"
+      ],
+      "priority": "MUST",
+      "state": "NOT_CHECKED_NEW_CAMPAIGN",
+      "oracleRequired": true
+    },
+    {
+      "id": "R27",
+      "milestone": "M6",
+      "title": "Hardware-ready adapter kit",
+      "acceptance": "Versioned MCU/HID/radio/AP/payload contract, diagnostics/calibration & bench/HIL scripts; exact model/firmware unknown registry/owner; không hardware capability claim",
+      "featureIDs": [
+        "F02",
+        "F20",
+        "F43"
+      ],
+      "priority": "MUST",
+      "state": "NOT_CHECKED_NEW_CAMPAIGN",
+      "oracleRequired": true
+    },
+    {
+      "id": "R28",
+      "milestone": "M6",
+      "title": "Release truth and limits",
+      "acceptance": "Toàn MUST cùng release/config,0P0/P1, knownunsupported visible; feature/data/simulator/replay/actual sources tách; no DJI superiority/NDAA/endurance/realflight claim thiếu proof",
+      "featureIDs": [
+        "F30",
+        "F43"
+      ],
+      "priority": "MUST",
+      "state": "NOT_CHECKED_NEW_CAMPAIGN",
+      "oracleRequired": true
+    }
+  ],
+  "metricMethods": [
+    {
+      "id": "K01",
+      "name": "Control safety",
+      "target": "0accepted wrong/stale/foreign intent; HB1500ms/lease200ms giữ nguyên",
+      "method": "raw TX+native intent+authority journal; clock age brackets",
+      "requirement": "R04",
+      "provenance": "AERIS_ENGINEERING_PROPOSAL_UNLESS_CITED_UI_GUIDANCE",
+      "state": "NOT_MEASURED_NEW_CAMPAIGN"
+    },
+    {
+      "id": "K02",
+      "name": "Physics pacing",
+      "target": "speedup1/cap500ms/fsync-before-sensor; aggregate RTF≥1.000 nominal; đầy đủ frame",
+      "method": "independent WAL+AP required-stage correlation+host/guest uncertainty; insufficient clock→INCONCLUSIVE",
+      "requirement": "R24",
+      "provenance": "AERIS_ENGINEERING_PROPOSAL_UNLESS_CITED_UI_GUIDANCE",
+      "state": "NOT_MEASURED_NEW_CAMPAIGN"
+    },
+    {
+      "id": "K03",
+      "name": "Renderer",
+      "target": "RAF p95≤33.4ms,p99≤100ms foreground1280×800 full-quality cùngSITL/media",
+      "method": "per-frame render trace; GPU/present/thermal captured separately; no photon claim",
+      "requirement": "R18",
+      "provenance": "AERIS_ENGINEERING_PROPOSAL_UNLESS_CITED_UI_GUIDANCE",
+      "state": "NOT_MEASURED_NEW_CAMPAIGN"
+    },
+    {
+      "id": "K04",
+      "name": "RGB video",
+      "target": "720p30; everyfull5sbin≥24FPS; p95upper≤300ms; conservative maxgap≤250ms toànAUTO",
+      "method": "all frame source/encode/network/decode/canvas IDs; independent parser full interval",
+      "requirement": "R13",
+      "provenance": "AERIS_ENGINEERING_PROPOSAL_UNLESS_CITED_UI_GUIDANCE",
+      "state": "NOT_MEASURED_NEW_CAMPAIGN"
+    },
+    {
+      "id": "K05",
+      "name": "Cold start",
+      "target": "firstvalidRGBframe≤1500ms after explicit start on primaryprofile",
+      "method": "at least3 cold starts with source/decoder startup clock brackets",
+      "requirement": "R13",
+      "provenance": "AERIS_ENGINEERING_PROPOSAL_UNLESS_CITED_UI_GUIDANCE",
+      "state": "NOT_MEASURED_NEW_CAMPAIGN"
+    },
+    {
+      "id": "K06",
+      "name": "UI responsiveness",
+      "target": "localtouchfeedbackp95≤100ms;0ANR/crash mandatorycorpus",
+      "method": "actual Android native input→visible feedback; ACK separately",
+      "requirement": "R20",
+      "provenance": "AERIS_ENGINEERING_PROPOSAL_UNLESS_CITED_UI_GUIDANCE",
+      "state": "NOT_MEASURED_NEW_CAMPAIGN"
+    },
+    {
+      "id": "K07",
+      "name": "Touch/contrast",
+      "target": "touch≥48dp; textnormal≥4.5:1,largetext≥3:1; glove56–64dp trial",
+      "method": "layout measurements +adaptive scene backgrounds + human task observation",
+      "requirement": "R20",
+      "provenance": "AERIS_ENGINEERING_PROPOSAL_UNLESS_CITED_UI_GUIDANCE",
+      "state": "NOT_MEASURED_NEW_CAMPAIGN"
+    },
+    {
+      "id": "K08",
+      "name": "Storage",
+      "target": "entry20GiB/floor10GiB+256MiB/forecast15s; explicit raw/video/copy/export budgets",
+      "method": "live host/guest observer and lossless-size estimate with reserve; no evidence deletion",
+      "requirement": "R23",
+      "provenance": "AERIS_ENGINEERING_PROPOSAL_UNLESS_CITED_UI_GUIDANCE",
+      "state": "NOT_MEASURED_NEW_CAMPAIGN"
+    },
+    {
+      "id": "K09",
+      "name": "User tasks",
+      "target": "5formativeusers×5tasks;≥90%taskcompletion;0unintendedcriticalaction",
+      "method": "script/time/errors/recovery logs; not statistical DJI superiority certification",
+      "requirement": "R26",
+      "provenance": "AERIS_ENGINEERING_PROPOSAL_UNLESS_CITED_UI_GUIDANCE",
+      "state": "NOT_MEASURED_NEW_CAMPAIGN"
+    },
+    {
+      "id": "K10",
+      "name": "Endurance",
+      "target": "30min→2h→8h→24h actual closedloop, uninterrupted singleinterval at final release",
+      "method": "raw clocks/power/sleep/owner/source/GPU/media/queue/storage; restart/death→FAIL",
+      "requirement": "R24",
+      "provenance": "AERIS_ENGINEERING_PROPOSAL_UNLESS_CITED_UI_GUIDANCE",
+      "state": "NOT_MEASURED_NEW_CAMPAIGN"
+    },
+    {
+      "id": "K11",
+      "name": "Geometry/control",
+      "target": "Calm reference cross-trackRMSE≤1m,max≤3m,altitudeRMSE≤0.5m; otherprofileslocktolerancebeforetest",
+      "method": "groundtruth trajectory vsacceptedpath; separateAPestimate/noisemodel",
+      "requirement": "R08",
+      "provenance": "AERIS_ENGINEERING_PROPOSAL_UNLESS_CITED_UI_GUIDANCE",
+      "state": "NOT_MEASURED_NEW_CAMPAIGN"
+    },
+    {
+      "id": "K12",
+      "name": "Exposure/geotag",
+      "target": "Simulatedfileindex/route/SHA100%match;position≤1m,altitude≤0.5m,timebracketuncertainty≤50ms primaryprofile",
+      "method": "independent image/sidecar/exposure groundtruth reconstruction; not realcameraaccuracy",
+      "requirement": "R14",
+      "provenance": "AERIS_ENGINEERING_PROPOSAL_UNLESS_CITED_UI_GUIDANCE",
+      "state": "NOT_MEASURED_NEW_CAMPAIGN"
+    },
+    {
+      "id": "K13",
+      "name": "Model analytical fixtures",
+      "target": "Staticforce/acceleration/charge≤1%error;pendulumfrequency≤5%;exactbyteoldmodelwhereunchanged",
+      "method": "analytical/unit fixtures+timestep/contact/noise tolerances frozenbeforetest; calibrationseparate",
+      "requirement": "R16",
+      "provenance": "AERIS_ENGINEERING_PROPOSAL_UNLESS_CITED_UI_GUIDANCE",
+      "state": "NOT_MEASURED_NEW_CAMPAIGN"
+    }
+  ],
+  "caseDesigns": [
+    {
+      "id": "N01",
+      "title": "Manual hold/takeover",
+      "layer": "ANDROID_AP_E2E",
+      "requirements": [
+        "R04",
+        "R05",
+        "R16"
+      ],
+      "method": "Actual Android touch neutral→pitch/yaw→release→LAND; empty/loaded profile",
+      "expected": "Observed guided/loiter transitions and ground/disarm, no stale lease",
+      "repeats": 1,
+      "state": "PLANNED_NOT_EXECUTED",
+      "releaseScope": "SAME_FINAL_RELEASE"
+    },
+    {
+      "id": "N02",
+      "title": "Assisted POI/orbit",
+      "layer": "ANDROID_AP_E2E",
+      "requirements": [
+        "R05",
+        "R08"
+      ],
+      "method": "Actual Android radius/speed/height request, AP execution then takeover",
+      "expected": "Geometry/envelope oracle; consent and state observed",
+      "repeats": 1,
+      "state": "PLANNED_NOT_EXECUTED",
+      "releaseScope": "SAME_FINAL_RELEASE"
+    },
+    {
+      "id": "N03",
+      "title": "Inspection waypoint/oblique",
+      "layer": "ANDROID_AP_E2E",
+      "requirements": [
+        "R07",
+        "R09",
+        "R11",
+        "R14"
+      ],
+      "method": "Waypoint/camera actions +inspection target withknowngeometry",
+      "expected": "Readback/exposure/sourcefile and pose agree; unsupported action blocked",
+      "repeats": 1,
+      "state": "PLANNED_NOT_EXECUTED",
+      "releaseScope": "SAME_FINAL_RELEASE"
+    },
+    {
+      "id": "N04",
+      "title": "Polygon flat",
+      "layer": "ANDROID_AP_E2E",
+      "requirements": [
+        "R07",
+        "R08",
+        "R09",
+        "R13",
+        "R14",
+        "R15"
+      ],
+      "method": "Held-out validKML, video/payload concurrently",
+      "expected": "FullAUTO→LAND/review/receiver and geometric oracle",
+      "repeats": 3,
+      "state": "PLANNED_NOT_EXECUTED",
+      "releaseScope": "SAME_FINAL_RELEASE"
+    },
+    {
+      "id": "N05",
+      "title": "Polygon terrain",
+      "layer": "ANDROID_AP_E2E",
+      "requirements": [
+        "R07",
+        "R08",
+        "R09",
+        "R13",
+        "R14",
+        "R15"
+      ],
+      "method": "Pinned syntheticDEM and declaredAGL→APaltitude conversion",
+      "expected": "Terrain/clearance/semantic consistency, fulltask",
+      "repeats": 3,
+      "state": "PLANNED_NOT_EXECUTED",
+      "releaseScope": "SAME_FINAL_RELEASE"
+    },
+    {
+      "id": "N06",
+      "title": "Polygon boundary",
+      "layer": "ANDROID_AP_E2E",
+      "requirements": [
+        "R07",
+        "R08",
+        "R09",
+        "R13",
+        "R14",
+        "R15"
+      ],
+      "method": "Nearcoverageedge with valid source and no hidden nodata",
+      "expected": "Fullvalidmission; invalidadjacent fixtures rejected",
+      "repeats": 3,
+      "state": "PLANNED_NOT_EXECUTED",
+      "releaseScope": "SAME_FINAL_RELEASE"
+    },
+    {
+      "id": "N07",
+      "title": "Corridor straight",
+      "layer": "ANDROID_AP_E2E",
+      "requirements": [
+        "R07",
+        "R08",
+        "R09",
+        "R13",
+        "R14"
+      ],
+      "method": "KML linebuffer/overlap/camera plan shared model",
+      "expected": "Readback/achievedsimcoverage/fullmission",
+      "repeats": 3,
+      "state": "PLANNED_NOT_EXECUTED",
+      "releaseScope": "SAME_FINAL_RELEASE"
+    },
+    {
+      "id": "N08",
+      "title": "Corridor bends",
+      "layer": "ANDROID_AP_E2E",
+      "requirements": [
+        "R07",
+        "R08",
+        "R09",
+        "R13",
+        "R14"
+      ],
+      "method": "Tight-but-supported bends, gimbal/camera actions",
+      "expected": "Bounds/sequence/no cornercut outside accepted envelope",
+      "repeats": 3,
+      "state": "PLANNED_NOT_EXECUTED",
+      "releaseScope": "SAME_FINAL_RELEASE"
+    },
+    {
+      "id": "N09",
+      "title": "Corridor altitude modes",
+      "layer": "ANDROID_AP_E2E",
+      "requirements": [
+        "R07",
+        "R08",
+        "R09",
+        "R13",
+        "R14"
+      ],
+      "method": "Supportedmixedrelative/AMSL source with explicit conversions",
+      "expected": "Independentdatum oracle or explicit refusal ifunsupported",
+      "repeats": 3,
+      "state": "PLANNED_NOT_EXECUTED",
+      "releaseScope": "SAME_FINAL_RELEASE"
+    },
+    {
+      "id": "N10",
+      "title": "Night search grid",
+      "layer": "ANDROID_AP_E2E",
+      "requirements": [
+        "R09",
+        "R13",
+        "R16",
+        "R18"
+      ],
+      "method": "Dark scene+syntheticthermal, seededwind/noise",
+      "expected": "Sources/age/rightroute/capture and fulltask; no realnightclaim",
+      "repeats": 1,
+      "state": "PLANNED_NOT_EXECUTED",
+      "releaseScope": "SAME_FINAL_RELEASE"
+    },
+    {
+      "id": "N11",
+      "title": "Lowenergy return/alternate",
+      "layer": "ANDROID_AP_E2E",
+      "requirements": [
+        "R05",
+        "R10",
+        "R16"
+      ],
+      "method": "Simulatedbattery/load/headwind and approvedfailsafeprofile",
+      "expected": "Return/land policy observed or explicit unsupported/unsafe refusal",
+      "repeats": 1,
+      "state": "PLANNED_NOT_EXECUTED",
+      "releaseScope": "SAME_FINAL_RELEASE"
+    },
+    {
+      "id": "N12",
+      "title": "Fourpayload/twooperators",
+      "layer": "ANDROID_AP_E2E",
+      "requirements": [
+        "R11",
+        "R12",
+        "R13",
+        "R14"
+      ],
+      "method": "A flies;B separately controls selectedgimbal,captures, switchesRGB/IR",
+      "expected": "Correct4peer IDs/noauthoritytransfer fromfeed/noforeign capture",
+      "repeats": 1,
+      "state": "PLANNED_NOT_EXECUTED",
+      "releaseScope": "SAME_FINAL_RELEASE"
+    },
+    {
+      "id": "N13",
+      "title": "Review/SAF/coldreceiver",
+      "layer": "ANDROID_AP_E2E",
+      "requirements": [
+        "R21",
+        "R22",
+        "R25"
+      ],
+      "method": "Selectrun export, closeapp/host, import on fresh workspace/receiver",
+      "expected": "Byte/data/plan/source completeness correct;0restored authority",
+      "repeats": 1,
+      "state": "PLANNED_NOT_EXECUTED",
+      "releaseScope": "SAME_FINAL_RELEASE"
+    },
+    {
+      "id": "N14",
+      "title": "Instructor exercise and debrief",
+      "layer": "ANDROID_AP_E2E",
+      "requirements": [
+        "R04",
+        "R19",
+        "R21"
+      ],
+      "method": "Record manual input/clock/ownership with instructor-triggered fault; cold replay same exercise",
+      "expected": "Debrief actions/trajectory/uncertainty reproducible; human/scripted distinct, no unvalidated pilot score",
+      "repeats": 1,
+      "state": "PLANNED_NOT_EXECUTED",
+      "releaseScope": "SAME_FINAL_RELEASE"
+    },
+    {
+      "id": "F01",
+      "title": "Socket cut whileforwardheld",
+      "layer": "MOCK_REPLAY_THEN_SCOPED_ACTUAL_AP_ANDROID",
+      "requirements": [
+        "R04",
+        "R06",
+        "R18"
+      ],
+      "method": "Ownedfaultproxy closes actual dataFD; confirm byteflow cessation",
+      "expected": "Revoke/UNKNOWN/failsafe perprofile; stale rendering/audio stop",
+      "repeats": 1,
+      "state": "PLANNED_NOT_EXECUTED",
+      "releaseScope": "SAME_FINAL_RELEASE"
+    },
+    {
+      "id": "F02",
+      "title": "AP reboot airborne",
+      "layer": "MOCK_REPLAY_THEN_SCOPED_ACTUAL_AP_ANDROID",
+      "requirements": [
+        "R04",
+        "R06",
+        "R21"
+      ],
+      "method": "Actual ownedAP process/boot restart witholdsession frames replayed",
+      "expected": "Bootidentity changes, oldlease/approval blocked; no auto resume",
+      "repeats": 1,
+      "state": "PLANNED_NOT_EXECUTED",
+      "releaseScope": "SAME_FINAL_RELEASE"
+    },
+    {
+      "id": "F03",
+      "title": "Host crash",
+      "layer": "MOCK_REPLAY_THEN_SCOPED_ACTUAL_AP_ANDROID",
+      "requirements": [
+        "R03",
+        "R06",
+        "R21"
+      ],
+      "method": "Kill exactownedhost after precommittedfault receipt",
+      "expected": "No claimed flight completion; durableprefix/unknown recovered",
+      "repeats": 1,
+      "state": "PLANNED_NOT_EXECUTED",
+      "releaseScope": "SAME_FINAL_RELEASE"
+    },
+    {
+      "id": "F04",
+      "title": "Android background/force-stop",
+      "layer": "MOCK_REPLAY_THEN_SCOPED_ACTUAL_AP_ANDROID",
+      "requirements": [
+        "R04",
+        "R21"
+      ],
+      "method": "ActualHOME/background thenprocessdeath",
+      "expected": "Input deadman/revoke; restart has no authority",
+      "repeats": 1,
+      "state": "PLANNED_NOT_EXECUTED",
+      "releaseScope": "SAME_FINAL_RELEASE"
+    },
+    {
+      "id": "F05",
+      "title": "Delay/loss/reorder/dup",
+      "layer": "MOCK_REPLAY_THEN_SCOPED_ACTUAL_AP_ANDROID",
+      "requirements": [
+        "R04",
+        "R06",
+        "R13"
+      ],
+      "method": "Seedednetworkprofile within/outside activeenvelope",
+      "expected": "Insideprofile meetsgates; outside failsclosed without lowerguards",
+      "repeats": 1,
+      "state": "PLANNED_NOT_EXECUTED",
+      "releaseScope": "SAME_FINAL_RELEASE"
+    },
+    {
+      "id": "F06",
+      "title": "Wrongcamera/gimbal target",
+      "layer": "MOCK_REPLAY_THEN_SCOPED_ACTUAL_AP_ANDROID",
+      "requirements": [
+        "R11",
+        "R12"
+      ],
+      "method": "Realframingwrongsys/component/device, lateACK injection",
+      "expected": "0foreign accepted writes; cannotattribute ambiguousACK",
+      "repeats": 1,
+      "state": "PLANNED_NOT_EXECUTED",
+      "releaseScope": "SAME_FINAL_RELEASE"
+    },
+    {
+      "id": "F07",
+      "title": "Dual-operator split/lategrant",
+      "layer": "MOCK_REPLAY_THEN_SCOPED_ACTUAL_AP_ANDROID",
+      "requirements": [
+        "R04",
+        "R12"
+      ],
+      "method": "SeparateprocessB partition; simultaneousrequest/lategrant",
+      "expected": "Singleownerperresource; no splitbrain or autoplay",
+      "repeats": 1,
+      "state": "PLANNED_NOT_EXECUTED",
+      "releaseScope": "SAME_FINAL_RELEASE"
+    },
+    {
+      "id": "F08",
+      "title": "Payload reboot/hotplug",
+      "layer": "MOCK_REPLAY_THEN_SCOPED_ACTUAL_AP_ANDROID",
+      "requirements": [
+        "R11",
+        "R12",
+        "R14"
+      ],
+      "method": "Restartpeer/discovery sameoldidentifier newboot",
+      "expected": "Invalidateoldcapability/lease/capturepending, rediscoverexplicitly",
+      "repeats": 1,
+      "state": "PLANNED_NOT_EXECUTED",
+      "releaseScope": "SAME_FINAL_RELEASE"
+    },
+    {
+      "id": "F09",
+      "title": "Video stale/sourceclockjump",
+      "layer": "MOCK_REPLAY_THEN_SCOPED_ACTUAL_AP_ANDROID",
+      "requirements": [
+        "R13",
+        "R14",
+        "R18"
+      ],
+      "method": "Stopsource whiletransportalive; clockjump/wrongframeUID",
+      "expected": "Agevisible, nofreshlabel; noincorrectexposuregeotag",
+      "repeats": 1,
+      "state": "PLANNED_NOT_EXECUTED",
+      "releaseScope": "SAME_FINAL_RELEASE"
+    },
+    {
+      "id": "F10",
+      "title": "Writer shortwrite/EIO/fsyncfail",
+      "layer": "MOCK_REPLAY_THEN_SCOPED_ACTUAL_AP_ANDROID",
+      "requirements": [
+        "R03",
+        "R21",
+        "R23"
+      ],
+      "method": "Fault filesystemadapter; actualboundedtempvolume ifadmitted",
+      "expected": "No publishbeforesync; preservepending/failure; no falseCLOSE",
+      "repeats": 1,
+      "state": "PLANNED_NOT_EXECUTED",
+      "releaseScope": "SAME_FINAL_RELEASE"
+    },
+    {
+      "id": "F11",
+      "title": "Quota/ENOSPC/exportreserve",
+      "layer": "MOCK_REPLAY_THEN_SCOPED_ACTUAL_AP_ANDROID",
+      "requirements": [
+        "R21",
+        "R22",
+        "R23"
+      ],
+      "method": "Smalltask-ownedquota, nohostdiskfill",
+      "expected": "Admission/cleanupconsent and packagecompleteness correct",
+      "repeats": 1,
+      "state": "PLANNED_NOT_EXECUTED",
+      "releaseScope": "SAME_FINAL_RELEASE"
+    },
+    {
+      "id": "F12",
+      "title": "Missing/tampered/wrongreceiver package",
+      "layer": "MOCK_REPLAY_THEN_SCOPED_ACTUAL_AP_ANDROID",
+      "requirements": [
+        "R22",
+        "R25"
+      ],
+      "method": "Mutateclosedpackage/corruptchunk/replayoldreceipt",
+      "expected": "Coldverifier rejects; cannotpublishpartial",
+      "repeats": 1,
+      "state": "PLANNED_NOT_EXECUTED",
+      "releaseScope": "SAME_FINAL_RELEASE"
+    },
+    {
+      "id": "F13",
+      "title": "Home/datum/DEM/geoid invalid",
+      "layer": "MOCK_REPLAY_THEN_SCOPED_ACTUAL_AP_ANDROID",
+      "requirements": [
+        "R07",
+        "R08",
+        "R10"
+      ],
+      "method": "No-data/wrongdatum/staleHome/profilewrongtype corpus",
+      "expected": "Plan/preflight fails withreason, no hidden conversion",
+      "repeats": 1,
+      "state": "PLANNED_NOT_EXECUTED",
+      "releaseScope": "SAME_FINAL_RELEASE"
+    },
+    {
+      "id": "F14",
+      "title": "GPS/EKF loss",
+      "layer": "MOCK_REPLAY_THEN_SCOPED_ACTUAL_AP_ANDROID",
+      "requirements": [
+        "R06",
+        "R10",
+        "R16"
+      ],
+      "method": "APinputsensorfeed fault withrecordedgroundtruth",
+      "expected": "Firmwareprofilebehavior observed; UIuncertainty correct",
+      "repeats": 1,
+      "state": "PLANNED_NOT_EXECUTED",
+      "releaseScope": "SAME_FINAL_RELEASE"
+    },
+    {
+      "id": "F15",
+      "title": "Obstacle sensor disappears withstickheld",
+      "layer": "MOCK_REPLAY_THEN_SCOPED_ACTUAL_AP_ANDROID",
+      "requirements": [
+        "R04",
+        "R10",
+        "R17"
+      ],
+      "method": "Groundtruthobstacle plusactualdistancefeed→dropout",
+      "expected": "Sensorloss handling pertypedconfig, contact stillreal ifcollision",
+      "repeats": 1,
+      "state": "PLANNED_NOT_EXECUTED",
+      "releaseScope": "SAME_FINAL_RELEASE"
+    },
+    {
+      "id": "F16",
+      "title": "Upgrade/schema interrupt",
+      "layer": "MOCK_REPLAY_THEN_SCOPED_ACTUAL_AP_ANDROID",
+      "requirements": [
+        "R21",
+        "R25"
+      ],
+      "method": "Newbeta testworkspace upgrade interrupted beforecommit",
+      "expected": "Originalrecords preserved, no authorityrestore/implicitrollback",
+      "repeats": 1,
+      "state": "PLANNED_NOT_EXECUTED",
+      "releaseScope": "SAME_FINAL_RELEASE"
+    },
+    {
+      "id": "F17",
+      "title": "Origin/auth/replay/MITM",
+      "layer": "MOCK_REPLAY_THEN_SCOPED_ACTUAL_AP_ANDROID",
+      "requirements": [
+        "R02",
+        "R04",
+        "R25"
+      ],
+      "method": "Expiredpairingtoken, foreignorigin, copiedsession/certwrong",
+      "expected": "Unauthorized observe/control denied; noflightdispatch",
+      "repeats": 1,
+      "state": "PLANNED_NOT_EXECUTED",
+      "releaseScope": "SAME_FINAL_RELEASE"
+    },
+    {
+      "id": "P01",
+      "title": "Pitch+yaw coupling",
+      "layer": "MODEL_ORACLE_THEN_AP_PROFILE",
+      "requirements": [
+        "R16",
+        "R17",
+        "R18"
+      ],
+      "method": "Attitude combinations/timestep/differential oracle; no UIposefeedback",
+      "expected": "Within declared envelope oracle; outcomes including loss/contact remain honestly reported",
+      "repeats": 1,
+      "state": "PLANNED_NOT_EXECUTED",
+      "releaseScope": "SAME_FINAL_RELEASE"
+    },
+    {
+      "id": "P02",
+      "title": "Empty vsloaded/CGshift",
+      "layer": "MODEL_ORACLE_THEN_AP_PROFILE",
+      "requirements": [
+        "R16",
+        "R17",
+        "R18"
+      ],
+      "method": "Declaredmass/inertia/CG profiles; acceleration/settling/energy vsoracle",
+      "expected": "Within declared envelope oracle; outcomes including loss/contact remain honestly reported",
+      "repeats": 1,
+      "state": "PLANNED_NOT_EXECUTED",
+      "releaseScope": "SAME_FINAL_RELEASE"
+    },
+    {
+      "id": "P03",
+      "title": "Wind/gust/headwind",
+      "layer": "MODEL_ORACLE_THEN_AP_PROFILE",
+      "requirements": [
+        "R16",
+        "R17",
+        "R18"
+      ],
+      "method": "Seededwind withhold/return; distinguishsimulationprediction/Heraunknown",
+      "expected": "Within declared envelope oracle; outcomes including loss/contact remain honestly reported",
+      "repeats": 1,
+      "state": "PLANNED_NOT_EXECUTED",
+      "releaseScope": "SAME_FINAL_RELEASE"
+    },
+    {
+      "id": "P04",
+      "title": "Suspendedpayload",
+      "layer": "MODEL_ORACLE_THEN_AP_PROFILE",
+      "requirements": [
+        "R16",
+        "R17",
+        "R18"
+      ],
+      "method": "Pendulum/tension/CG/wind/contact; timestep/conservation oracle",
+      "expected": "Within declared envelope oracle; outcomes including loss/contact remain honestly reported",
+      "repeats": 1,
+      "state": "PLANNED_NOT_EXECUTED",
+      "releaseScope": "SAME_FINAL_RELEASE"
+    },
+    {
+      "id": "P05",
+      "title": "Motor1/2/3 faults",
+      "layer": "MODEL_ORACLE_THEN_AP_PROFILE",
+      "requirements": [
+        "R16",
+        "R17",
+        "R18"
+      ],
+      "method": "Knownrotorforces; distinguishcontrollableframe vs loss ofcontrol",
+      "expected": "Within declared envelope oracle; outcomes including loss/contact remain honestly reported",
+      "repeats": 1,
+      "state": "PLANNED_NOT_EXECUTED",
+      "releaseScope": "SAME_FINAL_RELEASE"
+    },
+    {
+      "id": "P06",
+      "title": "Obstaclebraking/contact",
+      "layer": "MODEL_ORACLE_THEN_AP_PROFILE",
+      "requirements": [
+        "R16",
+        "R17",
+        "R18"
+      ],
+      "method": "SensorFOV/range/delay separate fromphysicalcontact; no universal10m rule",
+      "expected": "Within declared envelope oracle; outcomes including loss/contact remain honestly reported",
+      "repeats": 1,
+      "state": "PLANNED_NOT_EXECUTED",
+      "releaseScope": "SAME_FINAL_RELEASE"
+    },
+    {
+      "id": "P07",
+      "title": "Battery/altitude/temperature",
+      "layer": "MODEL_ORACLE_THEN_AP_PROFILE",
+      "requirements": [
+        "R16",
+        "R17",
+        "R18"
+      ],
+      "method": "Versionedbattery/thrust/air-density model assumptions; no Hera45minclaim",
+      "expected": "Within declared envelope oracle; outcomes including loss/contact remain honestly reported",
+      "repeats": 1,
+      "state": "PLANNED_NOT_EXECUTED",
+      "releaseScope": "SAME_FINAL_RELEASE"
+    },
+    {
+      "id": "P08",
+      "title": "Night/rain sensor/render",
+      "layer": "MODEL_ORACLE_THEN_AP_PROFILE",
+      "requirements": [
+        "R16",
+        "R17",
+        "R18"
+      ],
+      "method": "Light/visualrain separate from noise/link/drag assumptionandcalibration",
+      "expected": "Within declared envelope oracle; outcomes including loss/contact remain honestly reported",
+      "repeats": 1,
+      "state": "PLANNED_NOT_EXECUTED",
+      "releaseScope": "SAME_FINAL_RELEASE"
+    },
+    {
+      "id": "P09",
+      "title": "Frames/units/geoaxis",
+      "layer": "MODEL_ORACLE_THEN_AP_PROFILE",
+      "requirements": [
+        "R16",
+        "R17",
+        "R18"
+      ],
+      "method": "ENU/NED/FRD/quaternion/timestamp/timebase knowntrajectory",
+      "expected": "Within declared envelope oracle; outcomes including loss/contact remain honestly reported",
+      "repeats": 1,
+      "state": "PLANNED_NOT_EXECUTED",
+      "releaseScope": "SAME_FINAL_RELEASE"
+    },
+    {
+      "id": "P10",
+      "title": "Exact reference replay",
+      "layer": "MODEL_ORACLE_THEN_AP_PROFILE",
+      "requirements": [
+        "R16",
+        "R17",
+        "R18"
+      ],
+      "method": "SamePWM throughoriginalmodel; exactwhereimplementationunchanged, numericalchange requires declared tolerance pretest",
+      "expected": "Within declared envelope oracle; outcomes including loss/contact remain honestly reported",
+      "repeats": 1,
+      "state": "PLANNED_NOT_EXECUTED",
+      "releaseScope": "SAME_FINAL_RELEASE"
+    },
+    {
+      "id": "Q01",
+      "title": "Fresh install and companion",
+      "layer": "QUALIFICATION",
+      "requirements": [
+        "R01",
+        "R02",
+        "R25",
+        "R26"
+      ],
+      "method": "Freshqualifiedtarget, packageprerequisitesandpairing",
+      "expected": "No developerhomedir/shell rescue; exactAPK/cert andexplicitSIM",
+      "repeats": 1,
+      "state": "PLANNED_NOT_EXECUTED",
+      "releaseScope": "SAME_FINAL_RELEASE"
+    },
+    {
+      "id": "Q02",
+      "title": "Allscreens/theme/popup/insets",
+      "layer": "QUALIFICATION",
+      "requirements": [
+        "R20",
+        "R26"
+      ],
+      "method": "Plan/preflight/Fly/payload/review/error/IME/fontscale",
+      "expected": "No overlap/cutoff criticalcontrol;touch/contrast;bothrails aligned",
+      "repeats": 1,
+      "state": "PLANNED_NOT_EXECUTED",
+      "releaseScope": "SAME_FINAL_RELEASE"
+    },
+    {
+      "id": "Q03",
+      "title": "Cold/video/fullworkload",
+      "layer": "QUALIFICATION",
+      "requirements": [
+        "R13",
+        "R18",
+        "R24"
+      ],
+      "method": "3coldstarts;allAUTOframes;fullquality scene +payload",
+      "expected": "Allselectedmetrics includingp99/maxgap/min5sFPS computed independently",
+      "repeats": 1,
+      "state": "PLANNED_NOT_EXECUTED",
+      "releaseScope": "SAME_FINAL_RELEASE"
+    },
+    {
+      "id": "Q04",
+      "title": "30min/2h/8h/24h",
+      "layer": "QUALIFICATION",
+      "requirements": [
+        "R03",
+        "R23",
+        "R24"
+      ],
+      "method": "Newbetacampaign, continuousactual-loop withpower/storageobserver",
+      "expected": "No intervalstitch;frames/clock/pins/lease/journal/resource preservation",
+      "repeats": 1,
+      "state": "PLANNED_NOT_EXECUTED",
+      "releaseScope": "SAME_FINAL_RELEASE"
+    },
+    {
+      "id": "Q05",
+      "title": "Receiver corrupted/restart",
+      "layer": "QUALIFICATION",
+      "requirements": [
+        "R21",
+        "R22",
+        "R26"
+      ],
+      "method": "Coldprocessreceiver andactualSAFdestination",
+      "expected": "Payload byteverified, completeness independent of reportedSUCCESS",
+      "repeats": 1,
+      "state": "PLANNED_NOT_EXECUTED",
+      "releaseScope": "SAME_FINAL_RELEASE"
+    },
+    {
+      "id": "Q06",
+      "title": "Human pilot/payload tasks",
+      "layer": "QUALIFICATION",
+      "requirements": [
+        "R20",
+        "R26"
+      ],
+      "method": "5participants,5tasks, counterbalancedworkflow wherebaselineavailable",
+      "expected": "≥90%taskcompletion,0unintendedcriticalaction;time/errors/workloadrecorded",
+      "repeats": 1,
+      "state": "PLANNED_NOT_EXECUTED",
+      "releaseScope": "SAME_FINAL_RELEASE"
+    },
+    {
+      "id": "Q07",
+      "title": "Release truth and Hera bench intake",
+      "layer": "QUALIFICATION",
+      "requirements": [
+        "R01",
+        "R02",
+        "R27",
+        "R28"
+      ],
+      "method": "Recipient reviews supportedmatrix, versions, unknown owners, bench/HIL contracts and unsupported capability UI",
+      "expected": "No physical-device, AI, actualmedia, NDAA or field claim inferred from simulator; all MUST/results/release refs consistent",
+      "repeats": 1,
+      "state": "PLANNED_NOT_EXECUTED",
+      "releaseScope": "SAME_FINAL_RELEASE"
+    }
+  ],
+  "nominalCorpus": {
+    "polygonsHa": {
+      "N04": 1,
+      "N05": 5,
+      "N06": 20
+    },
+    "corridorsKm": {
+      "N07": 0.5,
+      "N08": 2,
+      "N09": 5
+    },
+    "flightAltitudeSpeedCamera": "Profile-conditioned; actual fixtures prepared and oracle-validated in M2 before flight. Current mission92 fixed30m/2mps does not qualify these sizes.",
+    "projectionRule": "Geodesic/ENU bound explicit; outside envelope refuses; no flat-plane5km claim",
+    "seedCommitment": {
+      "sha256": "daeebf158655a167232fa1b131cc97e7756224c73b29c03db183cf3e0314d7be",
+      "cases": 6,
+      "nominalRepetitions": 18,
+      "method": "Random seeds committed before M1 implementation; values kept in host-local evidence. Not a claim of independent human blinding; shared workspace actor could inspect. No input re-selection after failure.",
+      "custodianRole": "Root QA; later held-out fixture generation separate from implementation",
+      "generator": "SystemRandom/OS source; not a credential/signing key"
+    }
+  },
+  "actualReleaseGate": {
+    "requiredRequirementIDs": [
+      "R01",
+      "R02",
+      "R03",
+      "R04",
+      "R05",
+      "R06",
+      "R07",
+      "R08",
+      "R09",
+      "R10",
+      "R11",
+      "R12",
+      "R13",
+      "R14",
+      "R15",
+      "R16",
+      "R17",
+      "R18",
+      "R19",
+      "R20",
+      "R21",
+      "R22",
+      "R23",
+      "R24",
+      "R25",
+      "R26",
+      "R27",
+      "R28"
+    ],
+    "allMandatoryPassSameReleaseConfiguration": true,
+    "openP0P1Allowed": 0,
+    "requiredNotCheckedAllowed": 0,
+    "pastPassingModulesAutoQualifyNewBinary": false,
+    "rawIndependentReceiverRequired": true,
+    "humanUsabilityRequiredForFinalBetaHandoff": true,
+    "physicalBETADEVICEClaimWithoutDevice": false,
+    "claimedDJISuperiorityWithoutMatchedBenchmark": false
+  },
+  "unknowns": [
+    {
+      "id": "U01",
+      "field": "ActualWebView/GPU/codec",
+      "owner": "M1 first-launch QA",
+      "blocks": "Any active candidate grant/performance acceptance; not mock-only source work",
+      "state": "NOT_OBSERVED"
+    },
+    {
+      "id": "U02",
+      "field": "New AP segmented instrumentation binary",
+      "owner": "M1 recorder builder+independent verifier",
+      "blocks": "New actual external-physics launch",
+      "state": "NOT_BUILT_NOT_PINNED"
+    },
+    {
+      "id": "U03",
+      "field": "Standalone native beta compile/provider descriptor",
+      "owner": "M1 integration owner",
+      "blocks": "Actual beta install/connect",
+      "state": "NOT_IMPLEMENTED"
+    },
+    {
+      "id": "U04",
+      "field": "ClientB ingress/shared arbiter",
+      "owner": "M3 payload/crew",
+      "blocks": "Dual-operator final acceptance",
+      "state": "NOT_IMPLEMENTED"
+    },
+    {
+      "id": "U05",
+      "field": "PhysicalXiaomi/HeraHub/camera/gimbal/SDK",
+      "owner": "RtR bench lead",
+      "blocks": "BETA_DEVICE/Hera hardware claims, not BETA_SIM mock development",
+      "state": "NOT_CHECKED"
+    },
+    {
+      "id": "U06",
+      "field": "Actual bounded resource ceilings/bitrate/compression ratio",
+      "owner": "M1/M3 performance QA",
+      "blocks": "Duration-specific admission, not cold estimated sizing",
+      "state": "NOT_MEASURED"
+    },
+    {
+      "id": "U07",
+      "field": "Human usability/receiver acceptance",
+      "owner": "M4/M6 user research/receiver",
+      "blocks": "Final user-handoff gate",
+      "state": "NOT_CHECKED"
+    }
+  ],
+  "changesToGateAfterFailure": "Requires explicit versioned pre-test ADR; old receipts retained. Never lower source/authority/frame/fsync/disk guards to convert failure to PASS.",
+  "stageState": "All beta MUST still NOT_CHECKED in new campaign"
+}

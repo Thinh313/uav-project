@@ -1,0 +1,6 @@
+[
+ {"id":"copdem-provider","url":"https://copernicus-dem-30m.s3.amazonaws.com/readme.html","snapshot":"copdem-provider.html","origin_id":"copdem-aws"},
+ {"id":"copdem-datum","url":"https://dataspace.copernicus.eu/explore-data/data-collections/copernicus-contributing-missions/collections-description/COP-DEM","snapshot":"copdem-datum.html","origin_id":"copernicus-esa"},
+ {"id":"osm-license","url":"https://www.openstreetmap.org/copyright","snapshot":"osm-license.html","origin_id":"osm-foundation"},
+ {"id":"osm-tile-policy","url":"https://operations.osmfoundation.org/policies/tiles/","snapshot":"osm-tile-policy.html","origin_id":"osm-foundation"}
+]

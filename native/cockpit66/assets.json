@@ -1,0 +1,29 @@
+{
+  "format": "aeris-cockpit66-asset-whitelist",
+  "version": 1,
+  "assets": [
+    "index.html",
+    "cockpit.css",
+    "ui.mjs",
+    "model.mjs",
+    "store.mjs",
+    "reference-reviews.json",
+    "compatibility.mjs",
+    "assets/Barlow-Bold.ttf",
+    "assets/Barlow-Medium.ttf",
+    "assets/Barlow-SemiBold.ttf",
+    "portable/sha256.mjs",
+    "portable/cyber65/authority.mjs",
+    "portable/cyber65/contracts.mjs",
+    "portable/cyber65/corpus.json",
+    "portable/cyber65/replay.mjs",
+    "portable/cyber65/session.mjs",
+    "portable/protocol22/definitions.mjs",
+    "portable/protocol22/session.mjs",
+    "portable/protocol22/wire.mjs",
+    "portable/transport25/broker.mjs",
+    "portable/transport25/config.mjs",
+    "portable/transport25/fixtures.mjs",
+    "portable/transport25/mock.mjs"
+  ]
+}

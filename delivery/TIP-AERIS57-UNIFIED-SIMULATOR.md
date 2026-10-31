@@ -1,0 +1,31 @@
+# AERIS57 · Unified engineering simulator workspace
+
+15/10/2026. User authorizes implementing the proposed next simulator step and showing the capabilities already built. Current SIM53 backend idle on8807, VISUAL56 replay on8808, about34GiB free. New code/evidence only in pilot/aeris57 and evidence/aeris57, new localhost8809. Existing modules, source/candidate, ENDURE and canonical SOT remain unchanged. No new signature/APK/dependency install. Specification→build→verify are roles of one agent; user authorization covers this blueprint, no extra ceremonial approval. Plan SIMTRAIN52 remains the broad target, not an acceptance result.
+
+Architecture: reuse SIM53 service through a fixed-loopback adapter, forwarding only existing typed allowlisted endpoints. New token/origin guard, private upstream token, explicit session ownership and no command retry. Existing backend alone owns runtime/AP/physics/WAL and finalizer. Source immutable. Render VISUAL56 scene as a presentation-only module fed by fresh physics snapshots; defaultmute RPM synthesis reused. No AUTO/goto/RTL routes added through a generic command tunnel. Planning is separate from executable control: mapping51 KML/compiler and mission55 semantic oracle operate offline; saved plans never arm/upload/start a flight. Capability catalog exposes scope and original local receipts, including remaining gaps; no product READY promotion.
+
+Design: Barlow500/600/700 local, RtR white/graphite/yellow,48px header and compact footer, large scene. Five workflow views: Nhiệm vụ, Preflight, Fly, Review, Năng lực. LAND remains visible independently of panels; disabled unless fresh owned armed session. Mode/session/stale/remaining time persist. Inspector carries engineering detail. Browser holds no arbitrary target/port or upstream token. No autoplay, automatic arm, retries or restored authority.
+
+## Acceptance
+
+AC01 Preservation/admission: ordered prior fingerprints verified before/after.20GiB floor, fresh24GiB launch admission, existing4GiB SIM53 quota/1GiB reservation unchanged; new workspace/journal16MiB with no pruning. Max2 fresh120sim/150host-second runs for this verification, retaining failures; no18minute/24h claim.
+
+AC02 Unified planning: bounded KML import, explicit feature/settings/flat-datum acknowledgement, reusable mapping51 compile, metrics/map with source/plan SHA. Own restart-persistent hash-chain plan store rejects corruption/stale head/oversize, clears flight authority after restart. No KML→flight automatic path.
+
+AC03 Semantic QGC: actual mission55 compare accepts bounded text pairs via stdin. Camera/Home/frame differences and REVIEW_REQUIRED remain visible. No normalization of unknown/null to zero, no upload endpoint.
+
+AC04 Flight bridge: fixed8807 only, same-origin/token/typed route guard, own created run/session/boot required for every mutation except explicit start. Stale/unreachable/foreign sessions cannot be claimed silently. No automatic POST retry; ambiguous write shown as unknown and reconciled with GET only. No physical hardware/flight destination exists.
+
+AC05 Live UI/render: real preflight/mode/arm/Home/physics, explicit GUIDED5m→LOITER→LAND/ground/disarm, no pose synthesis. Input lease neutral-first/stale200ms/focus/route changes revoke, no revival; LAND clears input before request. Freshness limit500ms stops presentation/audio and flight actions. Existing backend controls physics1200Hz/speedup1/cap500ms/WAL; browser interpolation only.
+
+AC06 Review: real closed-run history/readback, scope distinctions, no complete verdict until retained closure/readback; restart preserves plan/history without auto-control. Read-only original capabilities evidence catalog with honest mock/replay/offline/live boundaries and links within allowlist.
+
+AC07 Fault regression: focused mock tests for token/origin/route/body/session/upstream loss/no retry/malformed input release, journal corruption/quota/pending commit, schema and semantic/KML rejects. Explicit mock fixture is labeled and cannot reach live upstream. Browser function/responsive/GPU render, actual screenshots, no silent asset fallback.
+
+AC08 Actual bounded SITL regression: source-final integrated UI workload, fresh owned runtime and full flow, manual RC→physics movement, stale/focus revoke, LAND/close, automatic readback success, current raw SHA. Record whole-run and5s RTF, jitter and node/guest clock brackets; do not use mean≥1 to claim fullG1. If fail, retain and report PARTIAL rather than bypass guard.
+
+AC09 Catalog: show existing built capabilities with declared scope, source/evidence hashes and limitations. Data absent is unavailable, no inferred PASS from docs or hash. Unsupported AUTO/camera capture/Hera calibration remain explicit. No live ENDURE manipulation or claim.
+
+AC10 Handoff: startup/runbook, completion/REQ-AC table, missing gates, screenshots, fingerprints and retained process state. Keep only new preview running with no active aircraft simulation at handoff. No project/tmp copies, no auto-delete, Docker image prune only after own Docker work, never volumes/containers.
+
+Diagnostic refinement after runs1/2: run1 remained unarmed until bounded deadline (RTF0.9414); run2 closed normally with raw/oracle acceptance (RTF1.000215, minimum5s0.993996), but the operator waited between LOITER transition and claim, allowing default RC throttle to descend. No non-neutral RC frame was observed from the native-key test. Preserve both outcomes. UI now explicitly labels the takeoff gesture “Cất cánh & nhận quyền ·5m”: the same deliberate action performs the existing GUIDED climb/observed LOITER, fresh attestation/claim and immediate neutral-first input. This is initial authority explicitly requested by that gesture, never restored after loss. Claim is refused on ground in the new adapter. Keyboard sends immediately on down/up as well as50ms heartbeat so short taps are not omitted. Guard pending claim against stale poll responses and require current Fly focus. New60Hz presentation cap is declared; physics/WAL unchanged. One additional bounded diagnostic run is allowed only after≥24GiB live admission and quota check, to test this final-source handoff; no automatic failed-run retry/resume, no fourth run in this task. G1 remains unaccepted until pacing matrix passes.

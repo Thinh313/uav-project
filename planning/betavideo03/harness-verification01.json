@@ -1,0 +1,20 @@
+{
+  "atUTC": "2026-10-26T06:19:31.579728+00:00",
+  "status": "HARNESS_PREPARED_MOCK_VERIFIED_ACTUAL_NOT_RUN",
+  "mockTests": "planning/betavideo03/harness-tests01.json",
+  "mockGroupsPassed": 6,
+  "sourceProjectionInverse": "PASS",
+  "APK": "REUSE_EXACT_native/betastability02/dist/aeris-betastability02-development01.apk",
+  "nativePackage": "vn.rtr.aeris.betastability02",
+  "wireFormatCompat": "aeris-betastability02-diagnostic-package/version1",
+  "newBuilds": 0,
+  "newSignatures": 0,
+  "runtimeStartsByBuilder": 0,
+  "APAllocationsByBuilder": 0,
+  "driver": "python3 -B planning/betavideo03/video-only-android.py",
+  "pins": "python3 -B planning/betavideo03/pins.py",
+  "doctor": "python3 -B pilot/betavideo03/companion.py doctor --mode sitl --emulator",
+  "priorBytes": "No predecessor file edits",
+  "UIVisualQA": "NOT_CHECKED_IN_REAL_ANDROID_BY_BUILDER",
+  "wholePlan": "Sixmissions/faults/SAF/restart remain gated by actual3session videoqualification and unchanged budget."
+}

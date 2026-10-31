@@ -1,0 +1,48 @@
+// Local synthetic media and unmapped input diagnostics only. No flight sink.
+const $=s=>document.querySelector(s),bridge=window.Native82Bridge;
+const ask=(action,data={})=>{const r=JSON.parse(bridge.diagnostic90(action,JSON.stringify(data)));if(!r.ok)throw Error(r.error);return r;};
+const icon=name=>`<svg class="icon" aria-hidden="true"><use href="#i-${name}"/></svg>`;
+const panel=document.createElement('section');panel.id='diagnostics90';panel.className='glass-surface';panel.hidden=true;panel.setAttribute('role','region');panel.setAttribute('aria-labelledby','diagnostic-title90');
+panel.innerHTML=`<header><div><span>Chẩn đoán trên Android</span><h1 id="diagnostic-title90">Input & video local</h1></div><button id="close90" aria-label="Đóng chẩn đoán">${icon('close')}</button></header><div class="diagnostic-body90"><section><h2>${icon('camera')} Nguồn tổng hợp</h2><p>Clip kiểm decoder 640 × 360. Không phải camera Hera, không có ảnh khảo sát.</p><div class="actions90"><button id="play90">${icon('camera')} Phát trên Fly</button><button id="freeze90">${icon('pause')} Phát và giữ frame</button><button id="stop90">Dừng video</button></div><output id="video-state90">Chưa phát</output><p>Tuổi camera và độ trễ từ camera: chưa biết. Callback không chứng minh mọi frame đã hiển thị.</p></section><section><h2>${icon('controller')} Input chẩn đoán</h2><p>Hiệu chuẩn và deadman mẫu. Kênh chẩn đoán độc lập với quyền Fly mock.</p><div class="actions90"><button id="mock-input90">Chạy mẫu input</button><button id="invalid90">Thử axis sai</button><button id="keys90" aria-pressed="false">Quan sát phím / joystick</button><button id="selftest90">Kiểm guard trên ART</button></div><output id="input-state90">Chưa có input</output><p>Không có mapping HID/MCU được xác minh. Phím và joystick chỉ ghi nhận, không phát lệnh.</p></section><section class="journal-section90"><h2>${icon('review')} Hồ sơ chẩn đoán</h2><p id="trace90">Chưa đọc</p><p id="error90" role="status"></p></section></div>`;
+document.body.append(panel);
+const badge=document.createElement('div');badge.id='source90';badge.className='glass-surface';badge.innerHTML=`<button id="source-open90" aria-label="Mở chẩn đoán video và input">${icon('camera')}<span><b>Video tổng hợp / local</b><small id="source-state90">Chưa phát · ảnh nền minh họa</small></span></button><button id="fly-play90" aria-label="Phát clip tổng hợp"><svg class="icon" aria-hidden="true"><path d="m8 5 11 7-11 7Z"/></svg></button>`;$('.stage').append(badge);
+const review=document.createElement('section');review.id='review-diagnostic90';review.innerHTML='<h2>Input & video chẩn đoán</h2><p>Hồ sơ local tách với bằng chứng bay. Ảnh thực: 0.</p><button id="link-review90">Gắn chẩn đoán vào HEAD đang lưu</button><p id="review-link90"></p>';$('.review-main').append(review);
+let element=null,generation=-1,frameRequest=null,freeze=false,active=false,lastStatus=null,returnFocus=null;
+const text=(id,value)=>{const el=$(id);if(el.textContent!==value)el.textContent=value;};
+const reasons={EMPTY:'Chưa phát',PREPARING:'Đang chuẩn bị',WAITING_RENDER_CALLBACK:'Đang chờ callback',RENDER_CALLBACK_OBSERVED:'Có callback render',ENDED_WITH_CALLBACKS:'Đã kết thúc',STALLED_NO_AUTO_RESUME:'Frame dừng cập nhật',EXPLICIT_STOP:'Đã dừng',ANDROID_BACKGROUND:'Dừng khi ra nền',FOCUS_LOST:'Dừng khi mất focus',RESUMED_NO_RESTORE:'Chờ phát có chủ ý',DESTROYED:'Đã đóng',NEW_EXPLICIT_PLAY:'Chuẩn bị phiên mới'};
+function removeVideo(){active=false;if(element){if(frameRequest!==null&&element.cancelVideoFrameCallback)element.cancelVideoFrameCallback(frameRequest);element.pause();element.removeAttribute('src');element.load();element.remove();element=null;}frameRequest=null;document.body.dataset.localVideo90='false';}
+function stop(){removeVideo();try{ask('stop');}catch(e){error(e);}refresh();}
+window.native90Stop=(reason,invalidatedGeneration)=>{if(invalidatedGeneration<generation)return;removeVideo();refresh();};
+function error(e){text('#error90','Chưa xác nhận: '+e.message);}
+function refresh(){try{const r=ask('status');lastStatus=r;const s=r.snapshot,v=s.video,i=s.input;
+ const phase=reasons[v.state]??v.state;const age=active&&v.callbackAgeMs!==null?` · callback ${v.callbackAgeMs} ms`:'';
+ text('#source-state90',phase+(active?age:' · không live'));
+ text('#video-state90',`${phase} · ${v.frameCallbacks} callback · thế hệ ${v.generation}`);
+ text('#input-state90',`${i.state} · axis ${i.axis??'—'} · quyền mock ${i.mockOwned?'có':'không'} · phím ${s.keyCallbacks} / joystick ${s.rawMotionCallbacks}`);
+ text('#trace90',`Phiên ${s.session.slice(0,8)} · ${r.events} sự kiện đã ghi · HEAD ${r.traceHead.slice(0,12)}. Khóa quyền không được lưu.`);
+ $('#keys90').setAttribute('aria-pressed',String(s.watchKeys));if(r.fatal)text('#error90',r.fatal);
+ if(active&&!['PREPARING','WAITING_RENDER_CALLBACK','RENDER_CALLBACK_OBSERVED'].includes(v.state))removeVideo();
+ }catch(e){error(e);removeVideo();}}
+function close(){stop();try{ask('keys',{enabled:false});}catch{}panel.hidden=true;document.body.dataset.diagnostic90='false';returnFocus?.focus();}
+function open(){stop();$('#sheet-close').click();$('#panel83').hidden=true;returnFocus=document.activeElement;panel.hidden=false;document.body.dataset.diagnostic90='true';$('#close90').focus();refresh();}
+async function play(fault=false){try{stop();if(document.body.dataset.view!=='fly')document.querySelector('button[data-view="fly"]').click();if($('#camera-scene').hidden)$('#swap').click();await new Promise(resolve=>requestAnimationFrame(()=>requestAnimationFrame(resolve)));panel.hidden=true;document.body.dataset.diagnostic90='false';const r=ask('prepare');generation=r.snapshot.video.generation;freeze=fault;active=true;
+ const v=document.createElement('video');element=v;v.id='local-video90';v.setAttribute('aria-label','Clip kiểm decoder tổng hợp, không camera thật');v.muted=true;v.playsInline=true;v.preload='auto';v.loop=false;v.src='synthetic.webm';
+ if(typeof v.requestVideoFrameCallback!=='function')throw Error('WEBVIEW_FRAME_CALLBACK_NOT_SUPPORTED');document.body.dataset.localVideo90='true';$('#camera-scene').append(v);const g=generation;
+ const current=()=>element===v&&active&&generation===g&&!document.hidden&&document.body.dataset.view==='fly'&&!$('#camera-scene').hidden;
+ const frame=(at,metadata)=>{if(!current())return;try{ask('frame',{generation:g,mediaTimeNs:Math.round(metadata.mediaTime*1e9)});refresh();if(freeze&&metadata.mediaTime>=.35){freeze=false;v.pause();ask('freeze',{generation:g});return;}if(current())frameRequest=v.requestVideoFrameCallback(frame);}catch(e){error(e);stop();}};
+ v.onloadedmetadata=async()=>{if(!current())return;try{ask('prepared',{generation:g,width:v.videoWidth,height:v.videoHeight,durationMs:Math.round(v.duration*1000)});frameRequest=v.requestVideoFrameCallback(frame);await v.play();refresh();}catch(e){error(e);stop();}};
+ v.onended=()=>{if(!current())return;try{ask('ended',{generation:g});active=false;refresh();}catch(e){error(e);stop();}};
+ v.onerror=()=>{if(element===v){error(Error('LOCAL_VIDEO_DECODE_FAILED'));stop();}};v.load();refresh();
+ }catch(e){error(e);stop();}}
+$('#input').addEventListener('click',e=>{e.preventDefault();e.stopImmediatePropagation();open();},true);
+$('#source-open90').onclick=open;$('#fly-play90').onclick=()=>play();$('#play90').onclick=()=>play();$('#freeze90').onclick=()=>play(true);$('#stop90').onclick=stop;$('#close90').onclick=close;
+for(const[id,action]of [['mock-input90','mock'],['invalid90','invalid'],['selftest90','selftest']])$('#'+id).onclick=()=>{try{ask(action);text('#error90',action==='selftest'?'Kiểm guard ART đã ghi vào journal':'');refresh();}catch(e){error(e);}};
+$('#keys90').onclick=()=>{try{ask('keys',{enabled:!lastStatus?.snapshot.watchKeys});refresh();}catch(e){error(e);}};
+$('#link-review90').onclick=()=>{try{const r=ask('link');text('#review-link90',`Đã ghi tham chiếu workspace HEAD trong phiên ${r.snapshot.session.slice(0,8)} · trace HEAD ${r.traceHead.slice(0,16)}. Không có ảnh thực hoặc quyền khôi phục.`);refresh();}catch(e){error(e);text('#review-link90',e.message);}};
+panel.addEventListener('keydown',e=>{if(e.key==='Escape'){e.preventDefault();e.stopPropagation();close();}if(e.key==='Tab'){const list=[...panel.querySelectorAll('button')].filter(e=>!e.disabled),first=list[0],last=list.at(-1);if(e.shiftKey&&document.activeElement===first){e.preventDefault();last.focus();}else if(!e.shiftKey&&document.activeElement===last){e.preventDefault();first.focus();}}});
+let previousView=document.body.dataset.view;new MutationObserver(()=>{const v=document.body.dataset.view;if(previousView!==v){previousView=v;if(active)stop();if(!panel.hidden)close();}}).observe(document.body,{attributes:true,attributeFilter:['data-view']});
+new MutationObserver(()=>{if($('#camera-scene').hidden&&active)stop();}).observe($('#camera-scene'),{attributes:true,attributeFilter:['hidden']});
+window.addEventListener('blur',()=>{removeVideo();try{ask('stop');ask('keys',{enabled:false});}catch{} });document.addEventListener('visibilitychange',()=>{if(document.hidden)removeVideo();else refresh();});
+window.addEventListener('pagehide',removeVideo);setInterval(()=>{if(!document.hidden)refresh();},250);refresh();
+
+$('#open-sitl83').hidden=true;document.querySelectorAll('[data-tab83=plan],[data-tab83=live],[data-tab83=review]').forEach(e=>e.hidden=true);

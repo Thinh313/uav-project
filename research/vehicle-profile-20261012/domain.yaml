@@ -1,0 +1,11 @@
+domain: vehicle-profile-20261012
+entity_label: Bounded read-only configuration protocol
+schema:
+  type_field: null
+  fields: [named_read, cache_uncertainty, encoding]
+rollup_field: null
+universe:
+  estimate: null
+  basis: Selected protocol/source behavior; no complete configuration denominator
+alias_map: {}
+ambiguous_clusters: []

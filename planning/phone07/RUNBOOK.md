@@ -1,0 +1,20 @@
+# PHONE07: thử trên điện thoại khi sẵn sàng
+
+Package riêng `vn.rtr.aeris.phone07`, development certificate đã có, Android API26 trở lên, landscape. Không thay thế dữ liệu PHONE06. APK chỉ có quyền INTERNET; mock không mở socket hoặc gọi camera/gimbal thật. Chưa nghiệm thu Android ART/WebView, SAF hoặc hiệu suất trên Xiaomi.
+
+1. Kiểm SHA APK theo `evidence/phone07/builder/build01.json`. Cài APK `native/phone07/dist/aeris-phone07-development01.apk` sau khi điện thoại xuất hiện và đã cho phép máy tính qua USB. Không uninstall/xóa dữ liệu bản cũ để làm phép thử dễ hơn.
+2. Mở mặc định MOCK. Trong Nhiệm vụ chọn hành lang/vùng mẫu hoặc KML phù hợp, đọc đối tượng, xác nhận Home/độ cao tương đối trên mặt phẳng tổng hợp, lưu và biên dịch. Phạm vi compiler hiện vẫn dùng preset camera/mặt đất tổng hợp của PHONE06, chưa hiệu chuẩn Hera hoặc Phase One.
+3. Trước bay: có thể kiểm riêng replay; nút **Kiểm lại và bắt đầu Fly mock** chủ động kiểm mới rồi bắt đầu trong cửa sổ freshness. Không tự gia hạn ticket, không kết nối ArduPilot, không arm. Đây là tuyến script từng điểm, không phải physics simulator.
+4. Fly → Payload → Tìm payload → chọn RGB hoặc IR → cấp quyền mock60s. Chọn không tự cấp quyền. Đọc lại góc gimbal/ISO; IR không có ISO hoặc radiometry. Mở ảnh mock: codec H264720p30, fallback VP8 phải chọn riêng nếu không hỗ trợ. Không coi browser API support là Android throughput/latency đạt.
+5. Chụp khi đang có run mock và khung đúng nguồn còn mới. Gói giữ nguyên JPEG, sidecar định vị UAV tổng hợp và manifest SHA; diagnostic riêng liên kết model/head/plan/run. ±5ms là dữ liệu thời gian tổng hợp, không phải chứng nhận đồng bộ clock hay độ chính xác GNSS. Tọa độ tổng hợp chưa đi theo physics hoặc track thật, chưa được dùng để đánh giá coverage khảo sát.
+6. Quan sát đủ mọi điểm rồi xác nhận hạ cánh mock. Review phải hiện COMPLETED_MOCK, ảnh thực=0. Phiên chưa kết thúc sau reload được đánh dấu INTERRUPTED_OR_UNKNOWN. Không tự khôi phục quyền, ticket hoặc run.
+7. Nút Xuất qua Android SAF mở trình chọn nơi lưu. Chỉ công bố đã xuất khi callback ghi/readback đúng byte và context còn hợp lệ. Cancel/stale/background/error phải còn UNKNOWN hoặc bị chặn; không retry tự động. Provider I/O và callback chưa được chạy trên thiết bị trong mốc này.
+8. Dừng ứng dụng, mở lại, đổi mission, pause/resume, mất focus; kiểm ảnh đã commit vẫn được xác minh, quyền cũ không dùng được. Thử wrongTarget/noEvent/noFile/badGnss/corruptFile/disconnect/reboot. ACK không thay thế readback/exposure/file. Không tự xóa PENDING.
+
+Giới hạn có chủ ý:96 journal records,8 thư mục ảnh,512KiB/JPEG,12MiB tổng payload store, không tự dọn. Đạt quota thì dừng ghi và giữ bằng chứng. Cần thiết kế archive/rotation cho payload store trước vận hành dài hạn; workspace archive trước đây không tự được tính là đã bao phủ store mới này.
+
+Reproduce host: chỉ dùng toolchain đã cache, kiểm còn20GiB +128MiB. `python3 -B planning/phone07/verify-host.py 03` là lượt đã chạy; không ghi đè bằng chứng hoặc chạy lại cùng số. Script tạo stage nhỏ trong package rồi xóa khi kết thúc. Để kiểm lại trong tương lai phải cấp định danh/lượt mới có ngân sách cụ thể. Lượt03 gồm24 assertion JVM I/O,22 nhóm Gateway policy,13 nhóm hành trình JS/JVM, receiver Python riêng. Fixture HTTP dùng host JVM, không mô phỏng ART/JSI/SAF thật và không được đóng vào APK.
+
+Build đã hoàn tất lượt01. Không build lại chỉ để đổi tên; nếu sửa code cần source manifest/lượt kiểm mới. `python3 -B native/phone07/build.py 02` là lượt development còn lại, phải đạt admission20GiB +160MiB staging +512MiB reserve qua31 mẫu trước build. Không tạo khóa mới, không ký production. SITL/emulator tiếp tục chờ gate dung lượng ổn định29GiB và kế hoạch chạy riêng.
+
+Gate tiếp: nghiệm thu **chính APK này** trên Xiaomi: ART/native bridge, nguồn gốc dữ liệu, lifecycle/persistence, codec và stall khi fsync, thao tác SAF/cancel/readback, quota. Sau đó mới nối adapter SDK/thiết bị thật, xác minh identity/exposure/clock/GNSS và mở Sony/Phase One/thermal theo capability. Không chuyển mock/replay thành lệnh bay hoặc chứng cứ phần cứng.

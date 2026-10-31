@@ -1,0 +1,31 @@
+# COMPACT10 L2 decisions
+
+27/10 RootContractor, within user's authorized losslessjournal/pacing task.
+
+## Representation: accept measured fixed outer-wrapper factoring + optional raw DEFLATE1 payload
+
+Existing09 logicalcanonicalrecords have knownformat/version/run/epoch/segment/n/time/kind/base64/previous/SHA/LF. Factor invariantwrapper/contextinto explicitlyversioned boundedphysicalheader; storeallvariablefields andfull32Bprevious+rowSHA, kind, originalpayloadbytes RAWorindependentRAW-DEFLATE1 ifshorter. Strictdecoder reconstructs EXACT canonical09logicalrowbytes, notarbitraryJSONnormalization. Originalrawpayload/schema/clock/context/order/receiptdata unchanged. Newwriter/readerselected10only; old09chain/historyimmutable.
+
+Measuredold09 corpus8680rows/6070154B: whole-rowrawdeflate1 23.36%reduction; sharedJSON19.45%; fixedbinaryRAW46.12%; fixedbinary+optionalpayloaddeflate60.29%. JVMmicroprobe125.229msCPU/8680rows andexactrehydration, notAndroid/fsync/pacing. Initialprototypewindowspansslightly<5s doNOTfulfillactualgate: mustrecompute every>=5swindow withboundarypredecessor andALLphysicalheaders/seals/session counted. No30mincapacityclaimfromprototype.
+
+Physicalquota remains160MiB, physicalsegment1MiB/max256. Compressionrequiresseparateexplicitsecurityprocessingbounds: decodedlogicalstream<=512MiB, perphysicalsegmentdecoded<=8MiB, perpayload<=8192B, logicalline<=32768B. Streamingdecode, nowhole512MiBallocation. This is anewformatdecodebound, notexpandedstoredquota orimplicitoldguardwaiver. Rotateonphysicalsize ordecodedpersegmentlimit, never silentlyuseoldlogical1MiBrotationandclaimlongfits. Longgate mustcheckbothphysical160MiB anddecoded512MiB actualprojections.
+
+Codeccontract mustdeclarestrictmagic/version/length/endian/flags/CRC/hash/UTF8/canonicalencoding/no-dictionary/no-concatenation/no-trailing-stream. Newphysicalseals/session bindcompressedbytesandlogicalstreamSHA/head/count/bytes pluscontext andpriorseal. Framingcrash/partialinflate cannotpromoteUNKNOWNprefix. Singleowner/sameappendbarrier/fsync-before-wire and09postdurabilityauthoritydecisionsremain. Existing09corpusroundtripprovescodec only; doesnotreattest oldanchorsasnewv2healthyhistory.
+
+## Pacing: measuremissing phases and remove proven redundant serialization only
+
+Closed09worst4395frames: RX→SENTgroupmean582.6us (physics55.9us), groupend→nextRXmean555.6us includesunmeasuredSTAGEwrite/fsync/serialization+AP/network/scheduler. APsensorwaitmean1012.5us, APsyncmean1.14us; nocapturedAPdeliberatesleep events/debtapproximately−500ms. This doesnotisolatefilesystemorhost/APcause.
+
+HostBuilder mayaddboundedmemorywall/threadCPUhistogram+worst32 forserialize/guard/write/fsync/STAGE/recvwait, emitonlyafterclose; noextrahotIO/orderchange. Preparecanonicalbodyonce andconstructbyteidenticalenvelope onlyafterbyteidentity+CPUbenchmark. Editsmustbe newisolatedwriter/runtimecopies explicitlyselectedby10closure, notoldsharedsource. NoWALbarrierremoval/framesensoromission/retime/speedup/cap/freshnesschange. Newprofilingmayresolveunknownswithoutclaimingspeedimprovement. Actualshortthenindependentwholewindowgate determineswhether30minisadmissible.
+
+## Acceptance and stop
+
+Preactual Reader02 amendment: QAfinalcomparisonfoundinherited09Java logicalHEADERpayload getInt(version/segment)coercion ofnumericstrings, whilePythonstrictfullreaderrejects. BeforeANYactual, RootL2authorizesnarrowNEW10Reader strictHEADERshape/integerdomain/priorlogicalseal validation; no09edits/broadlegacyrewrite. PreserveALLcorefreeze01/build01/APK01/40inputarchive/QA01receipts ashistorical; selectedcorefreeze02/build02 andnewQA02 onlyafterregression. The01archive retains exact01source; frozenoriginalprojectsource/candidate/ENDUREunchanged. This issecondreaderhardeningfamilypreactual, notfailedactualcampaignretry. Finalhelpers/inputmanifestpauseuntil02APK; noactualsourcechange afteractualstarts.
+
+Exactlayout approved: E10/native/PHYSICAL-FORMAT01.json SHA08b3e94d58233e8e9c375c31cd553e92d6423155befff7bad48c5933c6e2170a (512Bheader/112Bframe, dualphysical/logicalseals). Decoder cannotinfercompressionlevel fromrawstream; level1iswriter/sourcepinrule, strictvalidshorterstream+exactremaining0 isdecoder rule. Pacingapprovednewisolatedpaths runtime/{profile.py,journal.py,frame_adapter.py,backend.py,policy.py}; nooldsharedsourceedit/globalmonkeypatch. Initialhostencodebenchmark3072rows byteidentical, bestCPU10.585→6.008us/record, notruntime1xproof. Profileoverheadmustbe measured onfullwriterpathbeforeactualfreeze, withcoverage limits disclosed.
+
+ProfilerL2 refinement: fairactual09DiagnosticIOfullwriterbaseline64realfsyncframesCPU12.63ms→prepareonce11.80ms→fullprofile16.61ms; memory256frames21.55→18.73→27.71ms. Fullytiming everyphasecostmorethansavedserialization, notacceptedaspacingimprovement. AcceptMETRICS-onlydeterministicperphase1/16timings forguard/serialize/STAGE/recvwait inclfirstcall; countALLcalls, declarecoverage/samplecounts/SAMPLEDmaxima, neverclaimunsampledmaximumoruseestimatedageforauthority. write/fsyncretainalloldDiagnosticIOtimingsandCPUwithnoextraclockcalls, boundedlast8failuretraceunchanged. Rawframes/input/STAGEdata andALLactualguard/barrierchecks unchanged. Fixedenumcounters/boundedworst32avoidperopallocationwherepossible. Rebenchmarkselectedpathfairly; noendlessmicroprofilerrewriteor1xclaimfrommicrobench.
+
+Selectedprofile03 measured64realfsyncframesCPU old16.94→once15.14→selected15.07ms (noisyonebatch), memory256frames21.41→18.63→24.80ms: selecteddiagnosticpathstill~15.8%CPUoveroldinmemory. Root acceptsboundedshortdiagnostictradeoff to resolveunknowns, explicitlyNOTa1xperformancewin; nofurtherprofilerrewrite. ActualshortandwholewindowRTFgate stilldecide. A futureleanproductionpolicy wouldrequireseparateverification, notsilentlydisabledmeasurementduringthiscampaign.
+
+Fullmock+independentcore/readerQA beforefreeze/build; exactAPK/helpers/sourcefreeze beforeoneactualshort. Ifactualshortfailsstopthisturnwithretainedforensicraw, noAPKrepair/retry. IfshortPASSbuttime/physical/decodedprojectionfailsstopbeforelong. IfallgatesPASS+freshpower/diskwholecaseadmission, one1802scontinuousallclockflight+plannedlinkcut/failsafeLAND/restart mayrun. Oldintervalsnotadded; noacceptedhardware/beta/30claimfromsuccessfulcodec orshort.

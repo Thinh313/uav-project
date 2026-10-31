@@ -1,0 +1,2708 @@
+{
+  "corpusSha256": "ee04050e68a647a713d648dc2fc6ae1e45a5cdf88f498d893dcc49e30ce60951",
+  "references": {
+    "front-zoom": "38ca476e591d4e434b05ef4350b304b3f1f733db89fae03e44aea789e59ebd08",
+    "proxy-focus": "cefeda947d84d1d6c9dec7c96f8d95000b3cc5f863b7908804c57f797c019e58",
+    "fixed-capture": "8d506b21acb8371345b0737581add1504bed51a0dc92a02a87ef75ef1ba8494f",
+    "gimbal-front": "c72d217ac96e419c8a1086da1f554438d227340d32269bb300b9d6030b4d8f24",
+    "gimbal-center": "9169731c207dfffed6bc8f169fca710dafd5d5d3ed96feacedec61835ff574c0",
+    "parallel-different-targets": "7c0cdbbf39a093055c96bb4d784cb3505f6e0146aefa00f4e50e583d8294145b",
+    "ack-only": "f09164301e9353573104f671cae067be19c94c45d7c88056ec9594779aa68126",
+    "rejected": "49d6e91b28d1cdebf713b0da857336092b091e2ea885079448bbb1521df21424",
+    "wrong-responder": "beac321b2b0852a0b05c36a49d481d1b2956678225b6b9465be4e11c09b42533",
+    "proxy-wrong-device": "4f7b94c5de7fa6a5c517a2cf89991756add7481e447030b2abf57653f72777df",
+    "wrong-recipient": "5fc583cc959891a630ec73a0f5c5e5dcf4ce23fcaefb8d5fbc5f95db1e6bde99",
+    "shared-manager-serialized": "2955320e152834bda5d69bbed842a73f2aa0ea6f7ed45d92c480b62ca92d7549",
+    "fixed-gimbal-denied": "5209d67c5f9d3e9c4a88a1200accb03d5bce2f0b430d434b1de3284a6f0ba991",
+    "unknown-client-profile-denied": "e1045c8c921fb950628956551553abe108538e63d07c0e605d54f062cc004be8",
+    "unsupported-sdk-control-denied": "5209d67c5f9d3e9c4a88a1200accb03d5bce2f0b430d434b1de3284a6f0ba991",
+    "payload-cannot-own-aircraft": "5209d67c5f9d3e9c4a88a1200accb03d5bce2f0b430d434b1de3284a6f0ba991",
+    "pilot-no-implicit-camera": "5209d67c5f9d3e9c4a88a1200accb03d5bce2f0b430d434b1de3284a6f0ba991",
+    "forged-identity": "5209d67c5f9d3e9c4a88a1200accb03d5bce2f0b430d434b1de3284a6f0ba991",
+    "consented-handover": "e808a69ac77450c10d1113a58f74da94b3fd3917c055e05a832ea3873f2340d3",
+    "declined-handover": "dce6932d7e2c404bf665722f548ab558542d6e56c531a47e5f88da1b758a1beb",
+    "handover-expired": "557c76856bb1f701361dca3f106ae0da6940adf619c1e3bdf55f6137aad714bb",
+    "release-with-late-feedback": "9ff20feb6414e04c0747d07091771284bb91f5df72b9b7f929c4458b8c23c03d",
+    "payload-operator-loss": "70a44f8c9ad50f9ee18dda8d52c7eda8aed6f94795e9f8cb88c5e6b34ac5d534",
+    "pilot-operator-loss": "d1145f3b0b011bbc4b14b359e48a993046071bd6afe699e580360e9df7cf9698",
+    "operator-expired": "2bf5fe9a8a2ff0936d112513555c09bac2c7554b6deb39c7be98bc9715272b2b",
+    "grant-expired": "91c8502cbafc9ff60d5b2c9d03eedbf4d3e6e875cba68d883711d460744d06cf",
+    "active-link-down": "406c17e62e8cc25a9ceaada2f913ca667807b7fadc7a2d877a76809fe462a7bd",
+    "camera-reboot": "fdfb70bc49183c1a549f1f779f4e1e6876c5045990887ff374485288dd1358cd",
+    "autopilot-reboot": "7ba85758a8ea7c41f0af079dd83d47a685ec3d261ee0f95bb76e2bc2d4773359",
+    "reconnect-old-context": "f2f786b6e6eab7cc2f05834ce7b2f99309497ea394c1d4c28cdbbc1e04290b85",
+    "foreign-aircraft-ack": "c76ab7151133c8fa725bf8de5b919fb23c798fa22d46f8062e0a51fd69c9cdb7",
+    "corrupt-ack": "b294f53764e213c70a905d3d5cd356260ae71515911dfa1b4f7856a77f366708",
+    "duplicate-ack": "daabac8f9d003e6e026a95a50a293e06e2179c00a0d003d6336d6ae056183712",
+    "capability-drop-before-feedback": "f52bcab735f95bf22c3369b91171e21b48bd25bc5ff071ef95e3acadec66b2be",
+    "nonfinite-control-denied": "5209d67c5f9d3e9c4a88a1200accb03d5bce2f0b430d434b1de3284a6f0ba991",
+    "hidden-control-fields-denied": "5209d67c5f9d3e9c4a88a1200accb03d5bce2f0b430d434b1de3284a6f0ba991",
+    "gimbal-degrees-denied": "5209d67c5f9d3e9c4a88a1200accb03d5bce2f0b430d434b1de3284a6f0ba991",
+    "refused-before-send": "bcfb56461c9405021edacabbe8a5af2d87ffdacba42e6ab0fdc9886b39455b5d",
+    "uncertain-after-send": "1c1f47a06928f8b0fa358c51f258ab6b1e3df99da98d78990d5b7a15cc1b7133",
+    "clock-regression": "acddac1264b8edac869d7977915befb0dd1604c1b49d5a9116dea81cc65b0f9b",
+    "fragmented-feedback": "c9d908239f4f5cf6b4b2a7e0212a03c5140bdfc23fe53b72080c72a2d33791e0",
+    "synthetic-file-declaration": "fec56e5add1684a6b8c052a87b3ab1f7b1d0e94ac169817b3368503a0d83ac54",
+    "same-key-quarantined": "49d6e91b28d1cdebf713b0da857336092b091e2ea885079448bbb1521df21424",
+    "view-selection-not-command-target": "185d220928afdbf817fe07da120880c1c17ce9cf003e4c3aa03939d1c6c1ab15"
+  },
+  "scope": "Expected review digests from original Node CYBER65 parity; synthetic only",
+  "diagnosticBodies": {
+    "gimbal-front": {
+      "format": "aeris-cyber65-review",
+      "version": 1,
+      "origin": "SYNTHETIC_LOCAL_MOCK_REPLAY",
+      "scope": "Mock/replay only; exact model/API unknown; no aircraft, camera, exposure, original image, dual radio or cryptographic remote authentication proven.",
+      "corpusSha256": "ee04050e68a647a713d648dc2fc6ae1e45a5cdf88f498d893dcc49e30ce60951",
+      "context": {
+        "sessionId": "cyber65-mock",
+        "generation": 1,
+        "configSha256": "28f7c83814cf26d3a748018586ed853d70d4f4956405064ce875570b5253eb2f",
+        "authorityEpoch": 1
+      },
+      "profiles": {
+        "front": {
+          "format": "aeris-camera-contract65",
+          "version": 1,
+          "kind": "PHASE_ONE_SEAM_FIXTURE",
+          "origin": "SYNTHETIC_GENERIC_PROTOCOL_FIXTURE",
+          "brand": "Phase One",
+          "model": null,
+          "firmware": null,
+          "lens": null,
+          "api": null,
+          "calibration": null,
+          "controls": [
+            "capture",
+            "zoomPercent",
+            "focusPercent",
+            "gimbalAngle"
+          ],
+          "physicalSupport": "NOT_CHECKED"
+        },
+        "center": {
+          "format": "aeris-camera-contract65",
+          "version": 1,
+          "kind": "THERMAL_SEAM_FIXTURE",
+          "origin": "SYNTHETIC_GENERIC_PROTOCOL_FIXTURE",
+          "brand": "UNSPECIFIED_FIXTURE_VENDOR",
+          "model": null,
+          "firmware": null,
+          "lens": null,
+          "api": null,
+          "calibration": null,
+          "controls": [
+            "capture",
+            "zoomPercent",
+            "focusPercent",
+            "gimbalAngle"
+          ],
+          "physicalSupport": "NOT_CHECKED"
+        },
+        "rear": {
+          "format": "aeris-camera-contract65",
+          "version": 1,
+          "kind": "CORONA_SEAM_FIXTURE",
+          "origin": "SYNTHETIC_GENERIC_PROTOCOL_FIXTURE",
+          "brand": "UNSPECIFIED_FIXTURE_VENDOR",
+          "model": null,
+          "firmware": null,
+          "lens": null,
+          "api": null,
+          "calibration": null,
+          "controls": [
+            "capture",
+            "zoomPercent",
+            "focusPercent"
+          ],
+          "physicalSupport": "NOT_CHECKED"
+        }
+      },
+      "unknownClientProfile": {
+        "format": "aeris-camera-contract65",
+        "version": 1,
+        "kind": "PHASE_ONE_CLIENT_CONFIGURATION",
+        "origin": "USER_INTAKE_UNKNOWN",
+        "brand": "Phase One",
+        "model": null,
+        "firmware": null,
+        "lens": null,
+        "api": null,
+        "calibration": null,
+        "controls": null,
+        "physicalSupport": "NOT_CHECKED"
+      },
+      "lidar": {
+        "model": null,
+        "api": null,
+        "status": "UNMAPPED_NOT_SUPPORTED"
+      },
+      "authority": {
+        "context": {
+          "sessionId": "cyber65-mock",
+          "generation": 1,
+          "configSha256": "28f7c83814cf26d3a748018586ed853d70d4f4956405064ce875570b5253eb2f",
+          "authorityEpoch": 1
+        },
+        "phase": "CONNECTED",
+        "grants": [
+          {
+            "scope": "aircraft",
+            "owner": "pilot-a",
+            "revision": 1,
+            "expiresMs": 1400
+          },
+          {
+            "scope": "camera:front",
+            "owner": "payload-b",
+            "revision": 2,
+            "expiresMs": 1400
+          },
+          {
+            "scope": "gimbal:front",
+            "owner": "payload-b",
+            "revision": 3,
+            "expiresMs": 1400
+          },
+          {
+            "scope": "camera:center",
+            "owner": "payload-b",
+            "revision": 4,
+            "expiresMs": 1400
+          },
+          {
+            "scope": "gimbal:center",
+            "owner": "payload-b",
+            "revision": 5,
+            "expiresMs": 1400
+          },
+          {
+            "scope": "camera:rear",
+            "owner": "payload-b",
+            "revision": 6,
+            "expiresMs": 1400
+          }
+        ],
+        "pending": [],
+        "operators": [
+          "pilot-a",
+          "payload-b"
+        ],
+        "events": [
+          {
+            "n": 1,
+            "atMs": 0,
+            "kind": "ALL_AUTHORITY_CLEARED",
+            "reason": "EXPLICIT_CONNECT_NO_RESUME"
+          },
+          {
+            "n": 2,
+            "atMs": 0,
+            "kind": "SCOPE_INVALIDATED_NO_RESTORE",
+            "scope": "camera:front",
+            "reason": "DISCOVERY_GENERATION_CHANGED"
+          },
+          {
+            "n": 3,
+            "atMs": 0,
+            "kind": "SCOPE_INVALIDATED_NO_RESTORE",
+            "scope": "gimbal:front",
+            "reason": "DISCOVERY_GENERATION_CHANGED"
+          },
+          {
+            "n": 4,
+            "atMs": 0,
+            "kind": "SCOPE_INVALIDATED_NO_RESTORE",
+            "scope": "camera:center",
+            "reason": "DISCOVERY_GENERATION_CHANGED"
+          },
+          {
+            "n": 5,
+            "atMs": 0,
+            "kind": "SCOPE_INVALIDATED_NO_RESTORE",
+            "scope": "gimbal:center",
+            "reason": "DISCOVERY_GENERATION_CHANGED"
+          },
+          {
+            "n": 6,
+            "atMs": 0,
+            "kind": "SCOPE_INVALIDATED_NO_RESTORE",
+            "scope": "camera:rear",
+            "reason": "DISCOVERY_GENERATION_CHANGED"
+          },
+          {
+            "n": 7,
+            "atMs": 0,
+            "kind": "SCOPE_INVALIDATED_NO_RESTORE",
+            "scope": "camera:front",
+            "reason": "DISCOVERY_GENERATION_CHANGED"
+          },
+          {
+            "n": 8,
+            "atMs": 0,
+            "kind": "SCOPE_INVALIDATED_NO_RESTORE",
+            "scope": "gimbal:front",
+            "reason": "DISCOVERY_GENERATION_CHANGED"
+          },
+          {
+            "n": 9,
+            "atMs": 0,
+            "kind": "SCOPE_INVALIDATED_NO_RESTORE",
+            "scope": "camera:center",
+            "reason": "DISCOVERY_GENERATION_CHANGED"
+          },
+          {
+            "n": 10,
+            "atMs": 0,
+            "kind": "SCOPE_INVALIDATED_NO_RESTORE",
+            "scope": "gimbal:center",
+            "reason": "DISCOVERY_GENERATION_CHANGED"
+          },
+          {
+            "n": 11,
+            "atMs": 0,
+            "kind": "LOCAL_MOCK_IDENTITY_FRESH",
+            "subject": "pilot-a"
+          },
+          {
+            "n": 12,
+            "atMs": 0,
+            "kind": "LOCAL_MOCK_IDENTITY_FRESH",
+            "subject": "payload-b"
+          },
+          {
+            "n": 13,
+            "atMs": 0,
+            "kind": "EXPLICIT_SCOPE_CLAIM",
+            "scope": "aircraft",
+            "owner": "pilot-a",
+            "revision": 1,
+            "expiresMs": 1400
+          },
+          {
+            "n": 14,
+            "atMs": 0,
+            "kind": "EXPLICIT_SCOPE_CLAIM",
+            "scope": "camera:front",
+            "owner": "payload-b",
+            "revision": 2,
+            "expiresMs": 1400
+          },
+          {
+            "n": 15,
+            "atMs": 0,
+            "kind": "EXPLICIT_SCOPE_CLAIM",
+            "scope": "gimbal:front",
+            "owner": "payload-b",
+            "revision": 3,
+            "expiresMs": 1400
+          },
+          {
+            "n": 16,
+            "atMs": 0,
+            "kind": "EXPLICIT_SCOPE_CLAIM",
+            "scope": "camera:center",
+            "owner": "payload-b",
+            "revision": 4,
+            "expiresMs": 1400
+          },
+          {
+            "n": 17,
+            "atMs": 0,
+            "kind": "EXPLICIT_SCOPE_CLAIM",
+            "scope": "gimbal:center",
+            "owner": "payload-b",
+            "revision": 5,
+            "expiresMs": 1400
+          },
+          {
+            "n": 18,
+            "atMs": 0,
+            "kind": "EXPLICIT_SCOPE_CLAIM",
+            "scope": "camera:rear",
+            "owner": "payload-b",
+            "revision": 6,
+            "expiresMs": 1400
+          }
+        ],
+        "historyComplete": true,
+        "dropped": 0,
+        "policy": {
+          "origin": "PROPOSED_ENGINEERING_MOCK_NOT_APPROVED_FLIGHT_POLICY",
+          "operatorAgeMs": 1500,
+          "grantMs": 1400,
+          "transferMs": 800,
+          "maxEvents": 256
+        },
+        "authentication": "LOCAL_MOCK_ONLY_NOT_REMOTE_AUTHENTICATION",
+        "flightLossAction": "UNSPECIFIED_NOT_EXECUTED"
+      },
+      "transport": {
+        "format": "aeris-transport25-review",
+        "version": 1,
+        "sessionId": "cyber65-mock",
+        "generation": 1,
+        "configSha256": "28f7c83814cf26d3a748018586ed853d70d4f4956405064ce875570b5253eb2f",
+        "phase": "CONNECTED",
+        "protocolSnapshotKind": "CURRENT_MOCK_REPLAY",
+        "configuration": {
+          "format": "aeris-mock-transport-config",
+          "version": 1,
+          "origin": "SYNTHETIC_DECLARED_CONFIGURATION",
+          "aircraftSystem": 42,
+          "autopilotComponent": 1,
+          "sender": {
+            "system": 255,
+            "component": 190
+          },
+          "links": [
+            "mock-a",
+            "mock-b"
+          ],
+          "bindings": [
+            {
+              "id": "front",
+              "label": "Phase One integration seam · mock",
+              "cameraKey": "42/100/0",
+              "gimbalKey": "42/154/1"
+            },
+            {
+              "id": "center",
+              "label": "Thermal proxy · mock",
+              "cameraKey": "42/1/2",
+              "gimbalKey": "42/154/2"
+            },
+            {
+              "id": "rear",
+              "label": "Corona fixed camera · mock",
+              "cameraKey": "42/101/0",
+              "gimbalKey": null
+            }
+          ]
+        },
+        "activeLink": "mock-a",
+        "viewSelection": "front",
+        "transactions": [
+          {
+            "id": "1/tx-26",
+            "bindingId": "front",
+            "operation": "gimbal",
+            "sessionId": "cyber65-mock",
+            "generation": 1,
+            "configSha256": "28f7c83814cf26d3a748018586ed853d70d4f4956405064ce875570b5253eb2f",
+            "linkId": "mock-a",
+            "cameraKey": "42/100/0",
+            "gimbalKey": "42/154/1",
+            "cameraGeneration": 3,
+            "gimbalGeneration": 7,
+            "protocol": {
+              "endpoint": "42/154",
+              "targetKey": "42/154/1",
+              "operation": "gimbal",
+              "command": 1000,
+              "params": {
+                "param1": -30,
+                "param2": 15,
+                "param3": {
+                  "$number": "NaN"
+                },
+                "param4": {
+                  "$number": "NaN"
+                },
+                "param5": 0,
+                "param7": 1
+              },
+              "value": {
+                "pitchDeg": -30,
+                "yawDeg": 15
+              },
+              "device": 0,
+              "generation": 7,
+              "id": "tx-26",
+              "sessionId": "cyber65-mock",
+              "epoch": 1,
+              "ackKey": "42/154/1000",
+              "state": "OBSERVATION_CONSISTENT_UNATTRIBUTED",
+              "requestedAtMs": 0,
+              "deadlineMs": 2000,
+              "ack": {
+                "result": 0,
+                "atMs": 10,
+                "recipientKnown": true,
+                "causalityProven": false
+              },
+              "observation": {
+                "id": 285,
+                "atMs": 10,
+                "rawHex": "fd310000062a9a1d0100f20300005a29753fb15f0a3db56183bec11a013e000000000000000000000000000000002000ffbe000000000000000001d636",
+                "origin": "SYNTHETIC_PROTOCOL_CORPUS",
+                "causalExecutionProven": false
+              },
+              "physicalMediaVerified": false,
+              "causalExecutionProven": false,
+              "rawCommandHex": "fd2000001affbe4c00000000f0c1000070410000c07f0000c07f00000000000000000000803fe8032a9a0813"
+            },
+            "override": null,
+            "sendStatus": "MOCK_SEND_ADMITTED_NOT_ACK",
+            "state": "OBSERVATION_CONSISTENT_UNATTRIBUTED",
+            "physicalMediaVerified": false,
+            "causalExecutionProven": false
+          }
+        ],
+        "protocol": {
+          "format": "aeris-protocol22-review",
+          "version": 1,
+          "sessionId": "cyber65-mock",
+          "epoch": 1,
+          "origin": "SYNTHETIC_PROTOCOL_CORPUS",
+          "scope": "Offline protocol consistency, not aircraft execution or physical media",
+          "components": [
+            {
+              "key": "42/1",
+              "system": 42,
+              "component": 1,
+              "type": 2,
+              "role": "autopilot",
+              "generation": 1,
+              "ready": true,
+              "heartbeatAt": 0,
+              "boot": 1000,
+              "seq": 3
+            },
+            {
+              "key": "42/100",
+              "system": 42,
+              "component": 100,
+              "type": 30,
+              "role": "camera",
+              "generation": 3,
+              "ready": true,
+              "heartbeatAt": 0,
+              "boot": 1000,
+              "seq": 2
+            },
+            {
+              "key": "42/101",
+              "system": 42,
+              "component": 101,
+              "type": 30,
+              "role": "camera",
+              "generation": 5,
+              "ready": true,
+              "heartbeatAt": 0,
+              "boot": 1000,
+              "seq": 2
+            },
+            {
+              "key": "42/154",
+              "system": 42,
+              "component": 154,
+              "type": 26,
+              "role": "gimbal",
+              "generation": 7,
+              "ready": true,
+              "heartbeatAt": 0,
+              "boot": 1010,
+              "seq": 6
+            }
+          ],
+          "cameras": [
+            {
+              "key": "42/100/0",
+              "endpoint": "42/100",
+              "system": 42,
+              "component": 100,
+              "device": 0,
+              "generation": 3,
+              "valid": true,
+              "flags": 450,
+              "capabilities": {
+                "capture": true,
+                "zoom": true,
+                "focus": true,
+                "stream": true
+              },
+              "gimbalDevice": 1,
+              "definitionURI": null,
+              "settings": null,
+              "lastImage": {
+                "index": 10,
+                "utcUs": "9007199254740993",
+                "atMs": 0,
+                "bootMs": 1000,
+                "url": "mock://synthetic/no-image-file",
+                "physicalMediaVerified": false,
+                "origin": "SYNTHETIC_PROTOCOL_CORPUS"
+              },
+              "streams": {},
+              "captureStatus": null,
+              "origin": "SYNTHETIC_PROTOCOL_CORPUS"
+            },
+            {
+              "key": "42/1/2",
+              "endpoint": "42/1",
+              "system": 42,
+              "component": 1,
+              "device": 2,
+              "generation": 1,
+              "valid": true,
+              "flags": 450,
+              "capabilities": {
+                "capture": true,
+                "zoom": true,
+                "focus": true,
+                "stream": true
+              },
+              "gimbalDevice": 2,
+              "definitionURI": null,
+              "settings": null,
+              "lastImage": null,
+              "streams": {},
+              "captureStatus": null,
+              "origin": "SYNTHETIC_PROTOCOL_CORPUS"
+            },
+            {
+              "key": "42/101/0",
+              "endpoint": "42/101",
+              "system": 42,
+              "component": 101,
+              "device": 0,
+              "generation": 5,
+              "valid": true,
+              "flags": 2,
+              "capabilities": {
+                "capture": true,
+                "zoom": false,
+                "focus": false,
+                "stream": false
+              },
+              "gimbalDevice": null,
+              "definitionURI": null,
+              "settings": null,
+              "lastImage": {
+                "index": 10,
+                "utcUs": "9007199254740993",
+                "atMs": 0,
+                "bootMs": 1000,
+                "url": "mock://synthetic/no-image-file",
+                "physicalMediaVerified": false,
+                "origin": "SYNTHETIC_PROTOCOL_CORPUS"
+              },
+              "streams": {},
+              "captureStatus": null,
+              "origin": "SYNTHETIC_PROTOCOL_CORPUS"
+            }
+          ],
+          "gimbals": [
+            {
+              "key": "42/154/1",
+              "endpoint": "42/154",
+              "system": 42,
+              "manager": 154,
+              "device": 1,
+              "generation": 7,
+              "valid": true,
+              "capabilities": 288,
+              "pitchRad": [
+                -1.5707963705062866,
+                0.5235987901687622
+              ],
+              "yawRad": [
+                -3.1415927410125732,
+                3.1415927410125732
+              ],
+              "authority": {
+                "primary": [
+                  255,
+                  190
+                ],
+                "secondary": [
+                  0,
+                  0
+                ],
+                "atMs": 0
+              },
+              "attitude": {
+                "pitchRad": -0.5235988103298792,
+                "yawRad": 0.26179939847500117,
+                "atMs": 10,
+                "flags": 32,
+                "bootMs": 1010
+              },
+              "failure": 0,
+              "origin": "SYNTHETIC_PROTOCOL_CORPUS"
+            },
+            {
+              "key": "42/154/2",
+              "endpoint": "42/154",
+              "system": 42,
+              "manager": 154,
+              "device": 2,
+              "generation": 7,
+              "valid": true,
+              "capabilities": 288,
+              "pitchRad": [
+                -1.5707963705062866,
+                0.5235987901687622
+              ],
+              "yawRad": [
+                -3.1415927410125732,
+                3.1415927410125732
+              ],
+              "authority": {
+                "primary": [
+                  255,
+                  190
+                ],
+                "secondary": [
+                  0,
+                  0
+                ],
+                "atMs": 0
+              },
+              "attitude": null,
+              "failure": 0,
+              "origin": "SYNTHETIC_PROTOCOL_CORPUS"
+            }
+          ],
+          "transactions": [
+            {
+              "endpoint": "42/154",
+              "targetKey": "42/154/1",
+              "operation": "gimbal",
+              "command": 1000,
+              "params": {
+                "param1": -30,
+                "param2": 15,
+                "param3": {
+                  "$number": "NaN"
+                },
+                "param4": {
+                  "$number": "NaN"
+                },
+                "param5": 0,
+                "param7": 1
+              },
+              "value": {
+                "pitchDeg": -30,
+                "yawDeg": 15
+              },
+              "device": 0,
+              "generation": 7,
+              "id": "tx-26",
+              "sessionId": "cyber65-mock",
+              "epoch": 1,
+              "ackKey": "42/154/1000",
+              "state": "OBSERVATION_CONSISTENT_UNATTRIBUTED",
+              "requestedAtMs": 0,
+              "deadlineMs": 2000,
+              "ack": {
+                "result": 0,
+                "atMs": 10,
+                "recipientKnown": true,
+                "causalityProven": false
+              },
+              "observation": {
+                "id": 285,
+                "atMs": 10,
+                "rawHex": "fd310000062a9a1d0100f20300005a29753fb15f0a3db56183bec11a013e000000000000000000000000000000002000ffbe000000000000000001d636",
+                "origin": "SYNTHETIC_PROTOCOL_CORPUS",
+                "causalExecutionProven": false
+              },
+              "physicalMediaVerified": false,
+              "causalExecutionProven": false,
+              "rawCommandHex": "fd2000001affbe4c00000000f0c1000070410000c07f0000c07f00000000000000000000803fe8032a9a0813"
+            }
+          ],
+          "events": [
+            {
+              "n": 2,
+              "atMs": 0,
+              "sessionId": "cyber65-mock",
+              "epoch": 1,
+              "type": "FRAME_ACCEPTED",
+              "endpoint": "42/1",
+              "id": 0,
+              "seq": 0,
+              "rawHex": "fd090000002a01000000000000000203000003fe70"
+            },
+            {
+              "n": 4,
+              "atMs": 0,
+              "sessionId": "cyber65-mock",
+              "epoch": 1,
+              "type": "FRAME_ACCEPTED",
+              "endpoint": "42/100",
+              "id": 0,
+              "seq": 0,
+              "rawHex": "fd090000002a64000000000000001e08000003d52f"
+            },
+            {
+              "n": 6,
+              "atMs": 0,
+              "sessionId": "cyber65-mock",
+              "epoch": 1,
+              "type": "FRAME_ACCEPTED",
+              "endpoint": "42/101",
+              "id": 0,
+              "seq": 0,
+              "rawHex": "fd090000002a65000000000000001e080000033f51"
+            },
+            {
+              "n": 8,
+              "atMs": 0,
+              "sessionId": "cyber65-mock",
+              "epoch": 1,
+              "type": "FRAME_ACCEPTED",
+              "endpoint": "42/154",
+              "id": 0,
+              "seq": 0,
+              "rawHex": "fd090000002a9a000000000000001a08000003ae68"
+            },
+            {
+              "n": 9,
+              "atMs": 0,
+              "sessionId": "cyber65-mock",
+              "epoch": 1,
+              "type": "FRAME_ACCEPTED",
+              "endpoint": "42/100",
+              "id": 259,
+              "seq": 1,
+              "rawHex": "fdec0000012a64030100e803000000000000000000000000000000000000c2010000800738040000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000178e1"
+            },
+            {
+              "n": 10,
+              "atMs": 0,
+              "sessionId": "cyber65-mock",
+              "epoch": 1,
+              "type": "CAMERA_DISCOVERED",
+              "key": "42/100/0",
+              "definitionFetched": false
+            },
+            {
+              "n": 11,
+              "atMs": 0,
+              "sessionId": "cyber65-mock",
+              "epoch": 1,
+              "type": "FRAME_ACCEPTED",
+              "endpoint": "42/1",
+              "id": 259,
+              "seq": 1,
+              "rawHex": "fded0000012a01030100e803000000000000000000000000000000000000420100008007380400000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000002022e8c"
+            },
+            {
+              "n": 12,
+              "atMs": 0,
+              "sessionId": "cyber65-mock",
+              "epoch": 1,
+              "type": "CAMERA_DISCOVERED",
+              "key": "42/1/2",
+              "definitionFetched": false
+            },
+            {
+              "n": 13,
+              "atMs": 0,
+              "sessionId": "cyber65-mock",
+              "epoch": 1,
+              "type": "FRAME_ACCEPTED",
+              "endpoint": "42/101",
+              "id": 259,
+              "seq": 1,
+              "rawHex": "fd1c0000012a65030100e8030000000000000000000000000000000000000200000080073804b005"
+            },
+            {
+              "n": 14,
+              "atMs": 0,
+              "sessionId": "cyber65-mock",
+              "epoch": 1,
+              "type": "CAMERA_DISCOVERED",
+              "key": "42/101/0",
+              "definitionFetched": false
+            },
+            {
+              "n": 15,
+              "atMs": 0,
+              "sessionId": "cyber65-mock",
+              "epoch": 1,
+              "type": "FRAME_ACCEPTED",
+              "endpoint": "42/154",
+              "id": 280,
+              "seq": 1,
+              "rawHex": "fd210000012a9a180100e8030000200100000000000000000000db0fc9bf920a063fdb0f49c0db0f494001d9ec"
+            },
+            {
+              "n": 16,
+              "atMs": 0,
+              "sessionId": "cyber65-mock",
+              "epoch": 1,
+              "type": "GIMBAL_DISCOVERED",
+              "key": "42/154/1"
+            },
+            {
+              "n": 17,
+              "atMs": 0,
+              "sessionId": "cyber65-mock",
+              "epoch": 1,
+              "type": "FRAME_ACCEPTED",
+              "endpoint": "42/154",
+              "id": 280,
+              "seq": 2,
+              "rawHex": "fd210000022a9a180100e8030000200100000000000000000000db0fc9bf920a063fdb0f49c0db0f494002ffd4"
+            },
+            {
+              "n": 18,
+              "atMs": 0,
+              "sessionId": "cyber65-mock",
+              "epoch": 1,
+              "type": "GIMBAL_DISCOVERED",
+              "key": "42/154/2"
+            },
+            {
+              "n": 19,
+              "atMs": 0,
+              "sessionId": "cyber65-mock",
+              "epoch": 1,
+              "type": "FRAME_ACCEPTED",
+              "endpoint": "42/154",
+              "id": 281,
+              "seq": 3,
+              "rawHex": "fd0b0000032a9a190100e80300000000000001ffbe71a8"
+            },
+            {
+              "n": 20,
+              "atMs": 0,
+              "sessionId": "cyber65-mock",
+              "epoch": 1,
+              "type": "FRAME_ACCEPTED",
+              "endpoint": "42/154",
+              "id": 281,
+              "seq": 4,
+              "rawHex": "fd0b0000042a9a190100e80300000000000002ffbe2b77"
+            },
+            {
+              "n": 21,
+              "atMs": 0,
+              "sessionId": "cyber65-mock",
+              "epoch": 1,
+              "type": "FRAME_ACCEPTED",
+              "endpoint": "42/100",
+              "id": 263,
+              "seq": 2,
+              "rawHex": "fd500000022a640701000100000000002000e8030000000000000000000000000000000000000000803f0000000000000000000000000a00000000016d6f636b3a2f2f73796e7468657469632f6e6f2d696d6167652d66696c65b2bf"
+            },
+            {
+              "n": 22,
+              "atMs": 0,
+              "sessionId": "cyber65-mock",
+              "epoch": 1,
+              "type": "FRAME_ACCEPTED",
+              "endpoint": "42/1",
+              "id": 263,
+              "seq": 2,
+              "rawHex": "fd500000022a010701000100000000002000e8030000000000000000000000000000000000000000803f0000000000000000000000000a00000002016d6f636b3a2f2f73796e7468657469632f6e6f2d696d6167652d66696c656a9a"
+            },
+            {
+              "n": 23,
+              "atMs": 0,
+              "sessionId": "cyber65-mock",
+              "epoch": 1,
+              "type": "FRAME_ACCEPTED",
+              "endpoint": "42/101",
+              "id": 263,
+              "seq": 2,
+              "rawHex": "fd500000022a650701000100000000002000e8030000000000000000000000000000000000000000803f0000000000000000000000000a00000000016d6f636b3a2f2f73796e7468657469632f6e6f2d696d6167652d66696c6555dd"
+            },
+            {
+              "n": 24,
+              "atMs": 0,
+              "sessionId": "cyber65-mock",
+              "epoch": 1,
+              "type": "FRAME_ACCEPTED",
+              "endpoint": "42/1",
+              "id": 259,
+              "seq": 3,
+              "rawHex": "fded0000032a01030100e803000000000000000000000000000000000000c201000080073804000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000020239c8"
+            },
+            {
+              "n": 25,
+              "atMs": 0,
+              "sessionId": "cyber65-mock",
+              "epoch": 1,
+              "type": "CAMERA_DISCOVERED",
+              "key": "42/1/2",
+              "definitionFetched": false
+            },
+            {
+              "n": 27,
+              "atMs": 0,
+              "sessionId": "cyber65-mock",
+              "epoch": 1,
+              "type": "REQUEST_QUEUED_OFFLINE",
+              "id": "tx-26",
+              "rawCommandHex": "fd2000001affbe4c00000000f0c1000070410000c07f0000c07f00000000000000000000803fe8032a9a0813"
+            },
+            {
+              "n": 28,
+              "atMs": 10,
+              "sessionId": "cyber65-mock",
+              "epoch": 1,
+              "type": "FRAME_ACCEPTED",
+              "endpoint": "42/154",
+              "id": 77,
+              "seq": 5,
+              "rawHex": "fd0a0000052a9a4d0000e803000000000000ffbe0e2c"
+            },
+            {
+              "n": 29,
+              "atMs": 10,
+              "sessionId": "cyber65-mock",
+              "epoch": 1,
+              "type": "ACK_ACCEPTED_NOT_EXECUTION",
+              "id": "tx-26"
+            },
+            {
+              "n": 30,
+              "atMs": 10,
+              "sessionId": "cyber65-mock",
+              "epoch": 1,
+              "type": "FRAME_ACCEPTED",
+              "endpoint": "42/154",
+              "id": 285,
+              "seq": 6,
+              "rawHex": "fd310000062a9a1d0100f20300005a29753fb15f0a3db56183bec11a013e000000000000000000000000000000002000ffbe000000000000000001d636"
+            },
+            {
+              "n": 31,
+              "atMs": 10,
+              "sessionId": "cyber65-mock",
+              "epoch": 1,
+              "type": "OBSERVATION_CONSISTENT_NOT_CAUSAL",
+              "id": "tx-26"
+            }
+          ],
+          "decoderStats": {
+            "accepted": 17,
+            "corrupt": 0,
+            "unknown": 0,
+            "unsupported": 0,
+            "noise": 0
+          },
+          "quarantined": [],
+          "historyComplete": true,
+          "dropped": 0,
+          "physicalMedia": [],
+          "physicalMediaVerified": false
+        },
+        "transport": {
+          "kind": "IN_MEMORY_MOCK_NO_IO",
+          "connected": true,
+          "links": [
+            {
+              "id": "mock-a",
+              "up": true
+            },
+            {
+              "id": "mock-b",
+              "up": true
+            }
+          ],
+          "outbound": [
+            {
+              "context": {
+                "sessionId": "cyber65-mock",
+                "generation": 1,
+                "configSha256": "28f7c83814cf26d3a748018586ed853d70d4f4956405064ce875570b5253eb2f"
+              },
+              "linkId": "mock-a",
+              "bindingId": "front",
+              "transactionId": "1/tx-26",
+              "bytes": [
+                253,
+                32,
+                0,
+                0,
+                26,
+                255,
+                190,
+                76,
+                0,
+                0,
+                0,
+                0,
+                240,
+                193,
+                0,
+                0,
+                112,
+                65,
+                0,
+                0,
+                192,
+                127,
+                0,
+                0,
+                192,
+                127,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                128,
+                63,
+                232,
+                3,
+                42,
+                154,
+                8,
+                19
+              ]
+            }
+          ],
+          "automaticRetries": 0
+        },
+        "events": [
+          {
+            "type": "EXPLICIT_CONNECT_NO_RESUME",
+            "atMs": 0,
+            "sessionId": "cyber65-mock",
+            "generation": 1,
+            "configSha256": "28f7c83814cf26d3a748018586ed853d70d4f4956405064ce875570b5253eb2f",
+            "activeLink": "mock-a"
+          },
+          {
+            "type": "MOCK_RAW_RECEIVE",
+            "atMs": 0,
+            "sessionId": "cyber65-mock",
+            "generation": 1,
+            "configSha256": "28f7c83814cf26d3a748018586ed853d70d4f4956405064ce875570b5253eb2f",
+            "linkId": "mock-a",
+            "rawHex": "fd090000002a01000000000000000203000003fe70"
+          },
+          {
+            "type": "MOCK_RAW_RECEIVE",
+            "atMs": 0,
+            "sessionId": "cyber65-mock",
+            "generation": 1,
+            "configSha256": "28f7c83814cf26d3a748018586ed853d70d4f4956405064ce875570b5253eb2f",
+            "linkId": "mock-a",
+            "rawHex": "fd090000002a64000000000000001e08000003d52f"
+          },
+          {
+            "type": "MOCK_RAW_RECEIVE",
+            "atMs": 0,
+            "sessionId": "cyber65-mock",
+            "generation": 1,
+            "configSha256": "28f7c83814cf26d3a748018586ed853d70d4f4956405064ce875570b5253eb2f",
+            "linkId": "mock-a",
+            "rawHex": "fd090000002a65000000000000001e080000033f51"
+          },
+          {
+            "type": "MOCK_RAW_RECEIVE",
+            "atMs": 0,
+            "sessionId": "cyber65-mock",
+            "generation": 1,
+            "configSha256": "28f7c83814cf26d3a748018586ed853d70d4f4956405064ce875570b5253eb2f",
+            "linkId": "mock-a",
+            "rawHex": "fd090000002a9a000000000000001a08000003ae68"
+          },
+          {
+            "type": "MOCK_RAW_RECEIVE",
+            "atMs": 0,
+            "sessionId": "cyber65-mock",
+            "generation": 1,
+            "configSha256": "28f7c83814cf26d3a748018586ed853d70d4f4956405064ce875570b5253eb2f",
+            "linkId": "mock-a",
+            "rawHex": "fdec0000012a64030100e803000000000000000000000000000000000000c2010000800738040000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000178e1"
+          },
+          {
+            "type": "MOCK_RAW_RECEIVE",
+            "atMs": 0,
+            "sessionId": "cyber65-mock",
+            "generation": 1,
+            "configSha256": "28f7c83814cf26d3a748018586ed853d70d4f4956405064ce875570b5253eb2f",
+            "linkId": "mock-a",
+            "rawHex": "fded0000012a01030100e803000000000000000000000000000000000000420100008007380400000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000002022e8c"
+          },
+          {
+            "type": "MOCK_RAW_RECEIVE",
+            "atMs": 0,
+            "sessionId": "cyber65-mock",
+            "generation": 1,
+            "configSha256": "28f7c83814cf26d3a748018586ed853d70d4f4956405064ce875570b5253eb2f",
+            "linkId": "mock-a",
+            "rawHex": "fd1c0000012a65030100e8030000000000000000000000000000000000000200000080073804b005"
+          },
+          {
+            "type": "MOCK_RAW_RECEIVE",
+            "atMs": 0,
+            "sessionId": "cyber65-mock",
+            "generation": 1,
+            "configSha256": "28f7c83814cf26d3a748018586ed853d70d4f4956405064ce875570b5253eb2f",
+            "linkId": "mock-a",
+            "rawHex": "fd210000012a9a180100e8030000200100000000000000000000db0fc9bf920a063fdb0f49c0db0f494001d9ec"
+          },
+          {
+            "type": "MOCK_RAW_RECEIVE",
+            "atMs": 0,
+            "sessionId": "cyber65-mock",
+            "generation": 1,
+            "configSha256": "28f7c83814cf26d3a748018586ed853d70d4f4956405064ce875570b5253eb2f",
+            "linkId": "mock-a",
+            "rawHex": "fd210000022a9a180100e8030000200100000000000000000000db0fc9bf920a063fdb0f49c0db0f494002ffd4"
+          },
+          {
+            "type": "MOCK_RAW_RECEIVE",
+            "atMs": 0,
+            "sessionId": "cyber65-mock",
+            "generation": 1,
+            "configSha256": "28f7c83814cf26d3a748018586ed853d70d4f4956405064ce875570b5253eb2f",
+            "linkId": "mock-a",
+            "rawHex": "fd0b0000032a9a190100e80300000000000001ffbe71a8"
+          },
+          {
+            "type": "MOCK_RAW_RECEIVE",
+            "atMs": 0,
+            "sessionId": "cyber65-mock",
+            "generation": 1,
+            "configSha256": "28f7c83814cf26d3a748018586ed853d70d4f4956405064ce875570b5253eb2f",
+            "linkId": "mock-a",
+            "rawHex": "fd0b0000042a9a190100e80300000000000002ffbe2b77"
+          },
+          {
+            "type": "MOCK_RAW_RECEIVE",
+            "atMs": 0,
+            "sessionId": "cyber65-mock",
+            "generation": 1,
+            "configSha256": "28f7c83814cf26d3a748018586ed853d70d4f4956405064ce875570b5253eb2f",
+            "linkId": "mock-a",
+            "rawHex": "fd500000022a640701000100000000002000e8030000000000000000000000000000000000000000803f0000000000000000000000000a00000000016d6f636b3a2f2f73796e7468657469632f6e6f2d696d6167652d66696c65b2bf"
+          },
+          {
+            "type": "MOCK_RAW_RECEIVE",
+            "atMs": 0,
+            "sessionId": "cyber65-mock",
+            "generation": 1,
+            "configSha256": "28f7c83814cf26d3a748018586ed853d70d4f4956405064ce875570b5253eb2f",
+            "linkId": "mock-a",
+            "rawHex": "fd500000022a010701000100000000002000e8030000000000000000000000000000000000000000803f0000000000000000000000000a00000002016d6f636b3a2f2f73796e7468657469632f6e6f2d696d6167652d66696c656a9a"
+          },
+          {
+            "type": "MOCK_RAW_RECEIVE",
+            "atMs": 0,
+            "sessionId": "cyber65-mock",
+            "generation": 1,
+            "configSha256": "28f7c83814cf26d3a748018586ed853d70d4f4956405064ce875570b5253eb2f",
+            "linkId": "mock-a",
+            "rawHex": "fd500000022a650701000100000000002000e8030000000000000000000000000000000000000000803f0000000000000000000000000a00000000016d6f636b3a2f2f73796e7468657469632f6e6f2d696d6167652d66696c6555dd"
+          },
+          {
+            "type": "MOCK_RAW_RECEIVE",
+            "atMs": 0,
+            "sessionId": "cyber65-mock",
+            "generation": 1,
+            "configSha256": "28f7c83814cf26d3a748018586ed853d70d4f4956405064ce875570b5253eb2f",
+            "linkId": "mock-a",
+            "rawHex": "fded0000032a01030100e803000000000000000000000000000000000000c201000080073804000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000020239c8"
+          },
+          {
+            "type": "MOCK_DISPATCH",
+            "atMs": 0,
+            "sessionId": "cyber65-mock",
+            "generation": 1,
+            "configSha256": "28f7c83814cf26d3a748018586ed853d70d4f4956405064ce875570b5253eb2f",
+            "id": "1/tx-26",
+            "targetKey": "42/154/1",
+            "rawCommandHex": "fd2000001affbe4c00000000f0c1000070410000c07f0000c07f00000000000000000000803fe8032a9a0813",
+            "status": "MOCK_SEND_ADMITTED_NOT_ACK"
+          },
+          {
+            "type": "MOCK_RAW_RECEIVE",
+            "atMs": 10,
+            "sessionId": "cyber65-mock",
+            "generation": 1,
+            "configSha256": "28f7c83814cf26d3a748018586ed853d70d4f4956405064ce875570b5253eb2f",
+            "linkId": "mock-a",
+            "rawHex": "fd0a0000052a9a4d0000e803000000000000ffbe0e2c"
+          },
+          {
+            "type": "MOCK_RAW_RECEIVE",
+            "atMs": 10,
+            "sessionId": "cyber65-mock",
+            "generation": 1,
+            "configSha256": "28f7c83814cf26d3a748018586ed853d70d4f4956405064ce875570b5253eb2f",
+            "linkId": "mock-a",
+            "rawHex": "fd310000062a9a1d0100f20300005a29753fb15f0a3db56183bec11a013e000000000000000000000000000000002000ffbe000000000000000001d636"
+          }
+        ],
+        "historyComplete": true,
+        "dropped": 0,
+        "rawBytes": 1365,
+        "decoderStats": [
+          {
+            "linkId": "mock-a",
+            "accepted": 17,
+            "corrupt": 0,
+            "unknown": 0,
+            "unsupported": 0,
+            "noise": 0
+          },
+          {
+            "linkId": "mock-b",
+            "accepted": 0,
+            "corrupt": 0,
+            "unknown": 0,
+            "unsupported": 0,
+            "noise": 0
+          }
+        ],
+        "origin": "SYNTHETIC_IN_MEMORY_MOCK",
+        "physicalMedia": [],
+        "physicalMediaVerified": false,
+        "hardwareOrSITLTransportVerified": false
+      },
+      "transactions": [
+        {
+          "id": "intent-1",
+          "bindingId": "front",
+          "semanticOperation": "gimbalAngle",
+          "unit": "degrees_pitch_yaw",
+          "profileSha256": "6138ea7c7e7092af4f457d652121a15e06e75b28ca4b442059d78c458385acc1",
+          "authorityTicket": {
+            "scope": "gimbal:front",
+            "owner": "payload-b",
+            "revision": 3,
+            "expiresMs": 1400,
+            "sessionId": "cyber65-mock",
+            "generation": 1,
+            "configSha256": "28f7c83814cf26d3a748018586ed853d70d4f4956405064ce875570b5253eb2f",
+            "authorityEpoch": 1
+          },
+          "transportId": "1/tx-26",
+          "protocolState": "OBSERVATION_CONSISTENT_UNATTRIBUTED",
+          "protocol": {
+            "id": "1/tx-26",
+            "bindingId": "front",
+            "operation": "gimbal",
+            "sessionId": "cyber65-mock",
+            "generation": 1,
+            "configSha256": "28f7c83814cf26d3a748018586ed853d70d4f4956405064ce875570b5253eb2f",
+            "linkId": "mock-a",
+            "cameraKey": "42/100/0",
+            "gimbalKey": "42/154/1",
+            "cameraGeneration": 3,
+            "gimbalGeneration": 7,
+            "protocol": {
+              "endpoint": "42/154",
+              "targetKey": "42/154/1",
+              "operation": "gimbal",
+              "command": 1000,
+              "params": {
+                "param1": -30,
+                "param2": 15,
+                "param3": {
+                  "$number": "NaN"
+                },
+                "param4": {
+                  "$number": "NaN"
+                },
+                "param5": 0,
+                "param7": 1
+              },
+              "value": {
+                "pitchDeg": -30,
+                "yawDeg": 15
+              },
+              "device": 0,
+              "generation": 7,
+              "id": "tx-26",
+              "sessionId": "cyber65-mock",
+              "epoch": 1,
+              "ackKey": "42/154/1000",
+              "state": "OBSERVATION_CONSISTENT_UNATTRIBUTED",
+              "requestedAtMs": 0,
+              "deadlineMs": 2000,
+              "ack": {
+                "result": 0,
+                "atMs": 10,
+                "recipientKnown": true,
+                "causalityProven": false
+              },
+              "observation": {
+                "id": 285,
+                "atMs": 10,
+                "rawHex": "fd310000062a9a1d0100f20300005a29753fb15f0a3db56183bec11a013e000000000000000000000000000000002000ffbe000000000000000001d636",
+                "origin": "SYNTHETIC_PROTOCOL_CORPUS",
+                "causalExecutionProven": false
+              },
+              "physicalMediaVerified": false,
+              "causalExecutionProven": false,
+              "rawCommandHex": "fd2000001affbe4c00000000f0c1000070410000c07f0000c07f00000000000000000000803fe8032a9a0813"
+            },
+            "override": null,
+            "sendStatus": "MOCK_SEND_ADMITTED_NOT_ACK",
+            "state": "OBSERVATION_CONSISTENT_UNATTRIBUTED",
+            "physicalMediaVerified": false,
+            "causalExecutionProven": false
+          },
+          "override": null,
+          "finalized": true,
+          "state": "OBSERVATION_CONSISTENT_UNATTRIBUTED",
+          "causalExecutionProven": false,
+          "physicalMediaVerified": false,
+          "captureStages": {
+            "intent": "RECORDED_MOCK",
+            "send": "MOCK_SEND_ADMITTED_NOT_ACK",
+            "ack": "ACCEPTED",
+            "observation": "CONSISTENT_UNATTRIBUTED",
+            "syntheticExposureMetadata": false,
+            "exposureProven": false,
+            "fileDeclaration": "NONE",
+            "physicalFileVerified": false,
+            "actualImages": 0
+          }
+        }
+      ],
+      "syntheticFileDeclarations": [],
+      "actualImages": 0,
+      "hardwareSupport": "NOT_CHECKED",
+      "twoPhysicalStations": "NOT_CHECKED",
+      "historyComplete": true,
+      "automaticRetries": 0,
+      "flightCommandsEncoded": 0
+    },
+    "gimbal-center": {
+      "format": "aeris-cyber65-review",
+      "version": 1,
+      "origin": "SYNTHETIC_LOCAL_MOCK_REPLAY",
+      "scope": "Mock/replay only; exact model/API unknown; no aircraft, camera, exposure, original image, dual radio or cryptographic remote authentication proven.",
+      "corpusSha256": "ee04050e68a647a713d648dc2fc6ae1e45a5cdf88f498d893dcc49e30ce60951",
+      "context": {
+        "sessionId": "cyber65-mock",
+        "generation": 1,
+        "configSha256": "28f7c83814cf26d3a748018586ed853d70d4f4956405064ce875570b5253eb2f",
+        "authorityEpoch": 1
+      },
+      "profiles": {
+        "front": {
+          "format": "aeris-camera-contract65",
+          "version": 1,
+          "kind": "PHASE_ONE_SEAM_FIXTURE",
+          "origin": "SYNTHETIC_GENERIC_PROTOCOL_FIXTURE",
+          "brand": "Phase One",
+          "model": null,
+          "firmware": null,
+          "lens": null,
+          "api": null,
+          "calibration": null,
+          "controls": [
+            "capture",
+            "zoomPercent",
+            "focusPercent",
+            "gimbalAngle"
+          ],
+          "physicalSupport": "NOT_CHECKED"
+        },
+        "center": {
+          "format": "aeris-camera-contract65",
+          "version": 1,
+          "kind": "THERMAL_SEAM_FIXTURE",
+          "origin": "SYNTHETIC_GENERIC_PROTOCOL_FIXTURE",
+          "brand": "UNSPECIFIED_FIXTURE_VENDOR",
+          "model": null,
+          "firmware": null,
+          "lens": null,
+          "api": null,
+          "calibration": null,
+          "controls": [
+            "capture",
+            "zoomPercent",
+            "focusPercent",
+            "gimbalAngle"
+          ],
+          "physicalSupport": "NOT_CHECKED"
+        },
+        "rear": {
+          "format": "aeris-camera-contract65",
+          "version": 1,
+          "kind": "CORONA_SEAM_FIXTURE",
+          "origin": "SYNTHETIC_GENERIC_PROTOCOL_FIXTURE",
+          "brand": "UNSPECIFIED_FIXTURE_VENDOR",
+          "model": null,
+          "firmware": null,
+          "lens": null,
+          "api": null,
+          "calibration": null,
+          "controls": [
+            "capture",
+            "zoomPercent",
+            "focusPercent"
+          ],
+          "physicalSupport": "NOT_CHECKED"
+        }
+      },
+      "unknownClientProfile": {
+        "format": "aeris-camera-contract65",
+        "version": 1,
+        "kind": "PHASE_ONE_CLIENT_CONFIGURATION",
+        "origin": "USER_INTAKE_UNKNOWN",
+        "brand": "Phase One",
+        "model": null,
+        "firmware": null,
+        "lens": null,
+        "api": null,
+        "calibration": null,
+        "controls": null,
+        "physicalSupport": "NOT_CHECKED"
+      },
+      "lidar": {
+        "model": null,
+        "api": null,
+        "status": "UNMAPPED_NOT_SUPPORTED"
+      },
+      "authority": {
+        "context": {
+          "sessionId": "cyber65-mock",
+          "generation": 1,
+          "configSha256": "28f7c83814cf26d3a748018586ed853d70d4f4956405064ce875570b5253eb2f",
+          "authorityEpoch": 1
+        },
+        "phase": "CONNECTED",
+        "grants": [
+          {
+            "scope": "aircraft",
+            "owner": "pilot-a",
+            "revision": 1,
+            "expiresMs": 1400
+          },
+          {
+            "scope": "camera:front",
+            "owner": "payload-b",
+            "revision": 2,
+            "expiresMs": 1400
+          },
+          {
+            "scope": "gimbal:front",
+            "owner": "payload-b",
+            "revision": 3,
+            "expiresMs": 1400
+          },
+          {
+            "scope": "camera:center",
+            "owner": "payload-b",
+            "revision": 4,
+            "expiresMs": 1400
+          },
+          {
+            "scope": "gimbal:center",
+            "owner": "payload-b",
+            "revision": 5,
+            "expiresMs": 1400
+          },
+          {
+            "scope": "camera:rear",
+            "owner": "payload-b",
+            "revision": 6,
+            "expiresMs": 1400
+          }
+        ],
+        "pending": [],
+        "operators": [
+          "pilot-a",
+          "payload-b"
+        ],
+        "events": [
+          {
+            "n": 1,
+            "atMs": 0,
+            "kind": "ALL_AUTHORITY_CLEARED",
+            "reason": "EXPLICIT_CONNECT_NO_RESUME"
+          },
+          {
+            "n": 2,
+            "atMs": 0,
+            "kind": "SCOPE_INVALIDATED_NO_RESTORE",
+            "scope": "camera:front",
+            "reason": "DISCOVERY_GENERATION_CHANGED"
+          },
+          {
+            "n": 3,
+            "atMs": 0,
+            "kind": "SCOPE_INVALIDATED_NO_RESTORE",
+            "scope": "gimbal:front",
+            "reason": "DISCOVERY_GENERATION_CHANGED"
+          },
+          {
+            "n": 4,
+            "atMs": 0,
+            "kind": "SCOPE_INVALIDATED_NO_RESTORE",
+            "scope": "camera:center",
+            "reason": "DISCOVERY_GENERATION_CHANGED"
+          },
+          {
+            "n": 5,
+            "atMs": 0,
+            "kind": "SCOPE_INVALIDATED_NO_RESTORE",
+            "scope": "gimbal:center",
+            "reason": "DISCOVERY_GENERATION_CHANGED"
+          },
+          {
+            "n": 6,
+            "atMs": 0,
+            "kind": "SCOPE_INVALIDATED_NO_RESTORE",
+            "scope": "camera:rear",
+            "reason": "DISCOVERY_GENERATION_CHANGED"
+          },
+          {
+            "n": 7,
+            "atMs": 0,
+            "kind": "SCOPE_INVALIDATED_NO_RESTORE",
+            "scope": "camera:front",
+            "reason": "DISCOVERY_GENERATION_CHANGED"
+          },
+          {
+            "n": 8,
+            "atMs": 0,
+            "kind": "SCOPE_INVALIDATED_NO_RESTORE",
+            "scope": "gimbal:front",
+            "reason": "DISCOVERY_GENERATION_CHANGED"
+          },
+          {
+            "n": 9,
+            "atMs": 0,
+            "kind": "SCOPE_INVALIDATED_NO_RESTORE",
+            "scope": "camera:center",
+            "reason": "DISCOVERY_GENERATION_CHANGED"
+          },
+          {
+            "n": 10,
+            "atMs": 0,
+            "kind": "SCOPE_INVALIDATED_NO_RESTORE",
+            "scope": "gimbal:center",
+            "reason": "DISCOVERY_GENERATION_CHANGED"
+          },
+          {
+            "n": 11,
+            "atMs": 0,
+            "kind": "LOCAL_MOCK_IDENTITY_FRESH",
+            "subject": "pilot-a"
+          },
+          {
+            "n": 12,
+            "atMs": 0,
+            "kind": "LOCAL_MOCK_IDENTITY_FRESH",
+            "subject": "payload-b"
+          },
+          {
+            "n": 13,
+            "atMs": 0,
+            "kind": "EXPLICIT_SCOPE_CLAIM",
+            "scope": "aircraft",
+            "owner": "pilot-a",
+            "revision": 1,
+            "expiresMs": 1400
+          },
+          {
+            "n": 14,
+            "atMs": 0,
+            "kind": "EXPLICIT_SCOPE_CLAIM",
+            "scope": "camera:front",
+            "owner": "payload-b",
+            "revision": 2,
+            "expiresMs": 1400
+          },
+          {
+            "n": 15,
+            "atMs": 0,
+            "kind": "EXPLICIT_SCOPE_CLAIM",
+            "scope": "gimbal:front",
+            "owner": "payload-b",
+            "revision": 3,
+            "expiresMs": 1400
+          },
+          {
+            "n": 16,
+            "atMs": 0,
+            "kind": "EXPLICIT_SCOPE_CLAIM",
+            "scope": "camera:center",
+            "owner": "payload-b",
+            "revision": 4,
+            "expiresMs": 1400
+          },
+          {
+            "n": 17,
+            "atMs": 0,
+            "kind": "EXPLICIT_SCOPE_CLAIM",
+            "scope": "gimbal:center",
+            "owner": "payload-b",
+            "revision": 5,
+            "expiresMs": 1400
+          },
+          {
+            "n": 18,
+            "atMs": 0,
+            "kind": "EXPLICIT_SCOPE_CLAIM",
+            "scope": "camera:rear",
+            "owner": "payload-b",
+            "revision": 6,
+            "expiresMs": 1400
+          }
+        ],
+        "historyComplete": true,
+        "dropped": 0,
+        "policy": {
+          "origin": "PROPOSED_ENGINEERING_MOCK_NOT_APPROVED_FLIGHT_POLICY",
+          "operatorAgeMs": 1500,
+          "grantMs": 1400,
+          "transferMs": 800,
+          "maxEvents": 256
+        },
+        "authentication": "LOCAL_MOCK_ONLY_NOT_REMOTE_AUTHENTICATION",
+        "flightLossAction": "UNSPECIFIED_NOT_EXECUTED"
+      },
+      "transport": {
+        "format": "aeris-transport25-review",
+        "version": 1,
+        "sessionId": "cyber65-mock",
+        "generation": 1,
+        "configSha256": "28f7c83814cf26d3a748018586ed853d70d4f4956405064ce875570b5253eb2f",
+        "phase": "CONNECTED",
+        "protocolSnapshotKind": "CURRENT_MOCK_REPLAY",
+        "configuration": {
+          "format": "aeris-mock-transport-config",
+          "version": 1,
+          "origin": "SYNTHETIC_DECLARED_CONFIGURATION",
+          "aircraftSystem": 42,
+          "autopilotComponent": 1,
+          "sender": {
+            "system": 255,
+            "component": 190
+          },
+          "links": [
+            "mock-a",
+            "mock-b"
+          ],
+          "bindings": [
+            {
+              "id": "front",
+              "label": "Phase One integration seam · mock",
+              "cameraKey": "42/100/0",
+              "gimbalKey": "42/154/1"
+            },
+            {
+              "id": "center",
+              "label": "Thermal proxy · mock",
+              "cameraKey": "42/1/2",
+              "gimbalKey": "42/154/2"
+            },
+            {
+              "id": "rear",
+              "label": "Corona fixed camera · mock",
+              "cameraKey": "42/101/0",
+              "gimbalKey": null
+            }
+          ]
+        },
+        "activeLink": "mock-a",
+        "viewSelection": "front",
+        "transactions": [
+          {
+            "id": "1/tx-26",
+            "bindingId": "center",
+            "operation": "gimbal",
+            "sessionId": "cyber65-mock",
+            "generation": 1,
+            "configSha256": "28f7c83814cf26d3a748018586ed853d70d4f4956405064ce875570b5253eb2f",
+            "linkId": "mock-a",
+            "cameraKey": "42/1/2",
+            "gimbalKey": "42/154/2",
+            "cameraGeneration": 1,
+            "gimbalGeneration": 7,
+            "protocol": {
+              "endpoint": "42/154",
+              "targetKey": "42/154/2",
+              "operation": "gimbal",
+              "command": 1000,
+              "params": {
+                "param1": -30,
+                "param2": 15,
+                "param3": {
+                  "$number": "NaN"
+                },
+                "param4": {
+                  "$number": "NaN"
+                },
+                "param5": 0,
+                "param7": 2
+              },
+              "value": {
+                "pitchDeg": -30,
+                "yawDeg": 15
+              },
+              "device": 0,
+              "generation": 7,
+              "id": "tx-26",
+              "sessionId": "cyber65-mock",
+              "epoch": 1,
+              "ackKey": "42/154/1000",
+              "state": "OBSERVATION_CONSISTENT_UNATTRIBUTED",
+              "requestedAtMs": 0,
+              "deadlineMs": 2000,
+              "ack": {
+                "result": 0,
+                "atMs": 10,
+                "recipientKnown": true,
+                "causalityProven": false
+              },
+              "observation": {
+                "id": 285,
+                "atMs": 10,
+                "rawHex": "fd310000062a9a1d0100f20300005a29753fb15f0a3db56183bec11a013e000000000000000000000000000000002000ffbe000000000000000002be1c",
+                "origin": "SYNTHETIC_PROTOCOL_CORPUS",
+                "causalExecutionProven": false
+              },
+              "physicalMediaVerified": false,
+              "causalExecutionProven": false,
+              "rawCommandHex": "fd2000001affbe4c00000000f0c1000070410000c07f0000c07f000000000000000000000040e8032a9a9d6d"
+            },
+            "override": null,
+            "sendStatus": "MOCK_SEND_ADMITTED_NOT_ACK",
+            "state": "OBSERVATION_CONSISTENT_UNATTRIBUTED",
+            "physicalMediaVerified": false,
+            "causalExecutionProven": false
+          }
+        ],
+        "protocol": {
+          "format": "aeris-protocol22-review",
+          "version": 1,
+          "sessionId": "cyber65-mock",
+          "epoch": 1,
+          "origin": "SYNTHETIC_PROTOCOL_CORPUS",
+          "scope": "Offline protocol consistency, not aircraft execution or physical media",
+          "components": [
+            {
+              "key": "42/1",
+              "system": 42,
+              "component": 1,
+              "type": 2,
+              "role": "autopilot",
+              "generation": 1,
+              "ready": true,
+              "heartbeatAt": 0,
+              "boot": 1000,
+              "seq": 3
+            },
+            {
+              "key": "42/100",
+              "system": 42,
+              "component": 100,
+              "type": 30,
+              "role": "camera",
+              "generation": 3,
+              "ready": true,
+              "heartbeatAt": 0,
+              "boot": 1000,
+              "seq": 2
+            },
+            {
+              "key": "42/101",
+              "system": 42,
+              "component": 101,
+              "type": 30,
+              "role": "camera",
+              "generation": 5,
+              "ready": true,
+              "heartbeatAt": 0,
+              "boot": 1000,
+              "seq": 2
+            },
+            {
+              "key": "42/154",
+              "system": 42,
+              "component": 154,
+              "type": 26,
+              "role": "gimbal",
+              "generation": 7,
+              "ready": true,
+              "heartbeatAt": 0,
+              "boot": 1010,
+              "seq": 6
+            }
+          ],
+          "cameras": [
+            {
+              "key": "42/100/0",
+              "endpoint": "42/100",
+              "system": 42,
+              "component": 100,
+              "device": 0,
+              "generation": 3,
+              "valid": true,
+              "flags": 450,
+              "capabilities": {
+                "capture": true,
+                "zoom": true,
+                "focus": true,
+                "stream": true
+              },
+              "gimbalDevice": 1,
+              "definitionURI": null,
+              "settings": null,
+              "lastImage": {
+                "index": 10,
+                "utcUs": "9007199254740993",
+                "atMs": 0,
+                "bootMs": 1000,
+                "url": "mock://synthetic/no-image-file",
+                "physicalMediaVerified": false,
+                "origin": "SYNTHETIC_PROTOCOL_CORPUS"
+              },
+              "streams": {},
+              "captureStatus": null,
+              "origin": "SYNTHETIC_PROTOCOL_CORPUS"
+            },
+            {
+              "key": "42/1/2",
+              "endpoint": "42/1",
+              "system": 42,
+              "component": 1,
+              "device": 2,
+              "generation": 1,
+              "valid": true,
+              "flags": 450,
+              "capabilities": {
+                "capture": true,
+                "zoom": true,
+                "focus": true,
+                "stream": true
+              },
+              "gimbalDevice": 2,
+              "definitionURI": null,
+              "settings": null,
+              "lastImage": null,
+              "streams": {},
+              "captureStatus": null,
+              "origin": "SYNTHETIC_PROTOCOL_CORPUS"
+            },
+            {
+              "key": "42/101/0",
+              "endpoint": "42/101",
+              "system": 42,
+              "component": 101,
+              "device": 0,
+              "generation": 5,
+              "valid": true,
+              "flags": 2,
+              "capabilities": {
+                "capture": true,
+                "zoom": false,
+                "focus": false,
+                "stream": false
+              },
+              "gimbalDevice": null,
+              "definitionURI": null,
+              "settings": null,
+              "lastImage": {
+                "index": 10,
+                "utcUs": "9007199254740993",
+                "atMs": 0,
+                "bootMs": 1000,
+                "url": "mock://synthetic/no-image-file",
+                "physicalMediaVerified": false,
+                "origin": "SYNTHETIC_PROTOCOL_CORPUS"
+              },
+              "streams": {},
+              "captureStatus": null,
+              "origin": "SYNTHETIC_PROTOCOL_CORPUS"
+            }
+          ],
+          "gimbals": [
+            {
+              "key": "42/154/1",
+              "endpoint": "42/154",
+              "system": 42,
+              "manager": 154,
+              "device": 1,
+              "generation": 7,
+              "valid": true,
+              "capabilities": 288,
+              "pitchRad": [
+                -1.5707963705062866,
+                0.5235987901687622
+              ],
+              "yawRad": [
+                -3.1415927410125732,
+                3.1415927410125732
+              ],
+              "authority": {
+                "primary": [
+                  255,
+                  190
+                ],
+                "secondary": [
+                  0,
+                  0
+                ],
+                "atMs": 0
+              },
+              "attitude": null,
+              "failure": 0,
+              "origin": "SYNTHETIC_PROTOCOL_CORPUS"
+            },
+            {
+              "key": "42/154/2",
+              "endpoint": "42/154",
+              "system": 42,
+              "manager": 154,
+              "device": 2,
+              "generation": 7,
+              "valid": true,
+              "capabilities": 288,
+              "pitchRad": [
+                -1.5707963705062866,
+                0.5235987901687622
+              ],
+              "yawRad": [
+                -3.1415927410125732,
+                3.1415927410125732
+              ],
+              "authority": {
+                "primary": [
+                  255,
+                  190
+                ],
+                "secondary": [
+                  0,
+                  0
+                ],
+                "atMs": 0
+              },
+              "attitude": {
+                "pitchRad": -0.5235988103298792,
+                "yawRad": 0.26179939847500117,
+                "atMs": 10,
+                "flags": 32,
+                "bootMs": 1010
+              },
+              "failure": 0,
+              "origin": "SYNTHETIC_PROTOCOL_CORPUS"
+            }
+          ],
+          "transactions": [
+            {
+              "endpoint": "42/154",
+              "targetKey": "42/154/2",
+              "operation": "gimbal",
+              "command": 1000,
+              "params": {
+                "param1": -30,
+                "param2": 15,
+                "param3": {
+                  "$number": "NaN"
+                },
+                "param4": {
+                  "$number": "NaN"
+                },
+                "param5": 0,
+                "param7": 2
+              },
+              "value": {
+                "pitchDeg": -30,
+                "yawDeg": 15
+              },
+              "device": 0,
+              "generation": 7,
+              "id": "tx-26",
+              "sessionId": "cyber65-mock",
+              "epoch": 1,
+              "ackKey": "42/154/1000",
+              "state": "OBSERVATION_CONSISTENT_UNATTRIBUTED",
+              "requestedAtMs": 0,
+              "deadlineMs": 2000,
+              "ack": {
+                "result": 0,
+                "atMs": 10,
+                "recipientKnown": true,
+                "causalityProven": false
+              },
+              "observation": {
+                "id": 285,
+                "atMs": 10,
+                "rawHex": "fd310000062a9a1d0100f20300005a29753fb15f0a3db56183bec11a013e000000000000000000000000000000002000ffbe000000000000000002be1c",
+                "origin": "SYNTHETIC_PROTOCOL_CORPUS",
+                "causalExecutionProven": false
+              },
+              "physicalMediaVerified": false,
+              "causalExecutionProven": false,
+              "rawCommandHex": "fd2000001affbe4c00000000f0c1000070410000c07f0000c07f000000000000000000000040e8032a9a9d6d"
+            }
+          ],
+          "events": [
+            {
+              "n": 2,
+              "atMs": 0,
+              "sessionId": "cyber65-mock",
+              "epoch": 1,
+              "type": "FRAME_ACCEPTED",
+              "endpoint": "42/1",
+              "id": 0,
+              "seq": 0,
+              "rawHex": "fd090000002a01000000000000000203000003fe70"
+            },
+            {
+              "n": 4,
+              "atMs": 0,
+              "sessionId": "cyber65-mock",
+              "epoch": 1,
+              "type": "FRAME_ACCEPTED",
+              "endpoint": "42/100",
+              "id": 0,
+              "seq": 0,
+              "rawHex": "fd090000002a64000000000000001e08000003d52f"
+            },
+            {
+              "n": 6,
+              "atMs": 0,
+              "sessionId": "cyber65-mock",
+              "epoch": 1,
+              "type": "FRAME_ACCEPTED",
+              "endpoint": "42/101",
+              "id": 0,
+              "seq": 0,
+              "rawHex": "fd090000002a65000000000000001e080000033f51"
+            },
+            {
+              "n": 8,
+              "atMs": 0,
+              "sessionId": "cyber65-mock",
+              "epoch": 1,
+              "type": "FRAME_ACCEPTED",
+              "endpoint": "42/154",
+              "id": 0,
+              "seq": 0,
+              "rawHex": "fd090000002a9a000000000000001a08000003ae68"
+            },
+            {
+              "n": 9,
+              "atMs": 0,
+              "sessionId": "cyber65-mock",
+              "epoch": 1,
+              "type": "FRAME_ACCEPTED",
+              "endpoint": "42/100",
+              "id": 259,
+              "seq": 1,
+              "rawHex": "fdec0000012a64030100e803000000000000000000000000000000000000c2010000800738040000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000178e1"
+            },
+            {
+              "n": 10,
+              "atMs": 0,
+              "sessionId": "cyber65-mock",
+              "epoch": 1,
+              "type": "CAMERA_DISCOVERED",
+              "key": "42/100/0",
+              "definitionFetched": false
+            },
+            {
+              "n": 11,
+              "atMs": 0,
+              "sessionId": "cyber65-mock",
+              "epoch": 1,
+              "type": "FRAME_ACCEPTED",
+              "endpoint": "42/1",
+              "id": 259,
+              "seq": 1,
+              "rawHex": "fded0000012a01030100e803000000000000000000000000000000000000420100008007380400000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000002022e8c"
+            },
+            {
+              "n": 12,
+              "atMs": 0,
+              "sessionId": "cyber65-mock",
+              "epoch": 1,
+              "type": "CAMERA_DISCOVERED",
+              "key": "42/1/2",
+              "definitionFetched": false
+            },
+            {
+              "n": 13,
+              "atMs": 0,
+              "sessionId": "cyber65-mock",
+              "epoch": 1,
+              "type": "FRAME_ACCEPTED",
+              "endpoint": "42/101",
+              "id": 259,
+              "seq": 1,
+              "rawHex": "fd1c0000012a65030100e8030000000000000000000000000000000000000200000080073804b005"
+            },
+            {
+              "n": 14,
+              "atMs": 0,
+              "sessionId": "cyber65-mock",
+              "epoch": 1,
+              "type": "CAMERA_DISCOVERED",
+              "key": "42/101/0",
+              "definitionFetched": false
+            },
+            {
+              "n": 15,
+              "atMs": 0,
+              "sessionId": "cyber65-mock",
+              "epoch": 1,
+              "type": "FRAME_ACCEPTED",
+              "endpoint": "42/154",
+              "id": 280,
+              "seq": 1,
+              "rawHex": "fd210000012a9a180100e8030000200100000000000000000000db0fc9bf920a063fdb0f49c0db0f494001d9ec"
+            },
+            {
+              "n": 16,
+              "atMs": 0,
+              "sessionId": "cyber65-mock",
+              "epoch": 1,
+              "type": "GIMBAL_DISCOVERED",
+              "key": "42/154/1"
+            },
+            {
+              "n": 17,
+              "atMs": 0,
+              "sessionId": "cyber65-mock",
+              "epoch": 1,
+              "type": "FRAME_ACCEPTED",
+              "endpoint": "42/154",
+              "id": 280,
+              "seq": 2,
+              "rawHex": "fd210000022a9a180100e8030000200100000000000000000000db0fc9bf920a063fdb0f49c0db0f494002ffd4"
+            },
+            {
+              "n": 18,
+              "atMs": 0,
+              "sessionId": "cyber65-mock",
+              "epoch": 1,
+              "type": "GIMBAL_DISCOVERED",
+              "key": "42/154/2"
+            },
+            {
+              "n": 19,
+              "atMs": 0,
+              "sessionId": "cyber65-mock",
+              "epoch": 1,
+              "type": "FRAME_ACCEPTED",
+              "endpoint": "42/154",
+              "id": 281,
+              "seq": 3,
+              "rawHex": "fd0b0000032a9a190100e80300000000000001ffbe71a8"
+            },
+            {
+              "n": 20,
+              "atMs": 0,
+              "sessionId": "cyber65-mock",
+              "epoch": 1,
+              "type": "FRAME_ACCEPTED",
+              "endpoint": "42/154",
+              "id": 281,
+              "seq": 4,
+              "rawHex": "fd0b0000042a9a190100e80300000000000002ffbe2b77"
+            },
+            {
+              "n": 21,
+              "atMs": 0,
+              "sessionId": "cyber65-mock",
+              "epoch": 1,
+              "type": "FRAME_ACCEPTED",
+              "endpoint": "42/100",
+              "id": 263,
+              "seq": 2,
+              "rawHex": "fd500000022a640701000100000000002000e8030000000000000000000000000000000000000000803f0000000000000000000000000a00000000016d6f636b3a2f2f73796e7468657469632f6e6f2d696d6167652d66696c65b2bf"
+            },
+            {
+              "n": 22,
+              "atMs": 0,
+              "sessionId": "cyber65-mock",
+              "epoch": 1,
+              "type": "FRAME_ACCEPTED",
+              "endpoint": "42/1",
+              "id": 263,
+              "seq": 2,
+              "rawHex": "fd500000022a010701000100000000002000e8030000000000000000000000000000000000000000803f0000000000000000000000000a00000002016d6f636b3a2f2f73796e7468657469632f6e6f2d696d6167652d66696c656a9a"
+            },
+            {
+              "n": 23,
+              "atMs": 0,
+              "sessionId": "cyber65-mock",
+              "epoch": 1,
+              "type": "FRAME_ACCEPTED",
+              "endpoint": "42/101",
+              "id": 263,
+              "seq": 2,
+              "rawHex": "fd500000022a650701000100000000002000e8030000000000000000000000000000000000000000803f0000000000000000000000000a00000000016d6f636b3a2f2f73796e7468657469632f6e6f2d696d6167652d66696c6555dd"
+            },
+            {
+              "n": 24,
+              "atMs": 0,
+              "sessionId": "cyber65-mock",
+              "epoch": 1,
+              "type": "FRAME_ACCEPTED",
+              "endpoint": "42/1",
+              "id": 259,
+              "seq": 3,
+              "rawHex": "fded0000032a01030100e803000000000000000000000000000000000000c201000080073804000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000020239c8"
+            },
+            {
+              "n": 25,
+              "atMs": 0,
+              "sessionId": "cyber65-mock",
+              "epoch": 1,
+              "type": "CAMERA_DISCOVERED",
+              "key": "42/1/2",
+              "definitionFetched": false
+            },
+            {
+              "n": 27,
+              "atMs": 0,
+              "sessionId": "cyber65-mock",
+              "epoch": 1,
+              "type": "REQUEST_QUEUED_OFFLINE",
+              "id": "tx-26",
+              "rawCommandHex": "fd2000001affbe4c00000000f0c1000070410000c07f0000c07f000000000000000000000040e8032a9a9d6d"
+            },
+            {
+              "n": 28,
+              "atMs": 10,
+              "sessionId": "cyber65-mock",
+              "epoch": 1,
+              "type": "FRAME_ACCEPTED",
+              "endpoint": "42/154",
+              "id": 77,
+              "seq": 5,
+              "rawHex": "fd0a0000052a9a4d0000e803000000000000ffbe0e2c"
+            },
+            {
+              "n": 29,
+              "atMs": 10,
+              "sessionId": "cyber65-mock",
+              "epoch": 1,
+              "type": "ACK_ACCEPTED_NOT_EXECUTION",
+              "id": "tx-26"
+            },
+            {
+              "n": 30,
+              "atMs": 10,
+              "sessionId": "cyber65-mock",
+              "epoch": 1,
+              "type": "FRAME_ACCEPTED",
+              "endpoint": "42/154",
+              "id": 285,
+              "seq": 6,
+              "rawHex": "fd310000062a9a1d0100f20300005a29753fb15f0a3db56183bec11a013e000000000000000000000000000000002000ffbe000000000000000002be1c"
+            },
+            {
+              "n": 31,
+              "atMs": 10,
+              "sessionId": "cyber65-mock",
+              "epoch": 1,
+              "type": "OBSERVATION_CONSISTENT_NOT_CAUSAL",
+              "id": "tx-26"
+            }
+          ],
+          "decoderStats": {
+            "accepted": 17,
+            "corrupt": 0,
+            "unknown": 0,
+            "unsupported": 0,
+            "noise": 0
+          },
+          "quarantined": [],
+          "historyComplete": true,
+          "dropped": 0,
+          "physicalMedia": [],
+          "physicalMediaVerified": false
+        },
+        "transport": {
+          "kind": "IN_MEMORY_MOCK_NO_IO",
+          "connected": true,
+          "links": [
+            {
+              "id": "mock-a",
+              "up": true
+            },
+            {
+              "id": "mock-b",
+              "up": true
+            }
+          ],
+          "outbound": [
+            {
+              "context": {
+                "sessionId": "cyber65-mock",
+                "generation": 1,
+                "configSha256": "28f7c83814cf26d3a748018586ed853d70d4f4956405064ce875570b5253eb2f"
+              },
+              "linkId": "mock-a",
+              "bindingId": "center",
+              "transactionId": "1/tx-26",
+              "bytes": [
+                253,
+                32,
+                0,
+                0,
+                26,
+                255,
+                190,
+                76,
+                0,
+                0,
+                0,
+                0,
+                240,
+                193,
+                0,
+                0,
+                112,
+                65,
+                0,
+                0,
+                192,
+                127,
+                0,
+                0,
+                192,
+                127,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                64,
+                232,
+                3,
+                42,
+                154,
+                157,
+                109
+              ]
+            }
+          ],
+          "automaticRetries": 0
+        },
+        "events": [
+          {
+            "type": "EXPLICIT_CONNECT_NO_RESUME",
+            "atMs": 0,
+            "sessionId": "cyber65-mock",
+            "generation": 1,
+            "configSha256": "28f7c83814cf26d3a748018586ed853d70d4f4956405064ce875570b5253eb2f",
+            "activeLink": "mock-a"
+          },
+          {
+            "type": "MOCK_RAW_RECEIVE",
+            "atMs": 0,
+            "sessionId": "cyber65-mock",
+            "generation": 1,
+            "configSha256": "28f7c83814cf26d3a748018586ed853d70d4f4956405064ce875570b5253eb2f",
+            "linkId": "mock-a",
+            "rawHex": "fd090000002a01000000000000000203000003fe70"
+          },
+          {
+            "type": "MOCK_RAW_RECEIVE",
+            "atMs": 0,
+            "sessionId": "cyber65-mock",
+            "generation": 1,
+            "configSha256": "28f7c83814cf26d3a748018586ed853d70d4f4956405064ce875570b5253eb2f",
+            "linkId": "mock-a",
+            "rawHex": "fd090000002a64000000000000001e08000003d52f"
+          },
+          {
+            "type": "MOCK_RAW_RECEIVE",
+            "atMs": 0,
+            "sessionId": "cyber65-mock",
+            "generation": 1,
+            "configSha256": "28f7c83814cf26d3a748018586ed853d70d4f4956405064ce875570b5253eb2f",
+            "linkId": "mock-a",
+            "rawHex": "fd090000002a65000000000000001e080000033f51"
+          },
+          {
+            "type": "MOCK_RAW_RECEIVE",
+            "atMs": 0,
+            "sessionId": "cyber65-mock",
+            "generation": 1,
+            "configSha256": "28f7c83814cf26d3a748018586ed853d70d4f4956405064ce875570b5253eb2f",
+            "linkId": "mock-a",
+            "rawHex": "fd090000002a9a000000000000001a08000003ae68"
+          },
+          {
+            "type": "MOCK_RAW_RECEIVE",
+            "atMs": 0,
+            "sessionId": "cyber65-mock",
+            "generation": 1,
+            "configSha256": "28f7c83814cf26d3a748018586ed853d70d4f4956405064ce875570b5253eb2f",
+            "linkId": "mock-a",
+            "rawHex": "fdec0000012a64030100e803000000000000000000000000000000000000c2010000800738040000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000178e1"
+          },
+          {
+            "type": "MOCK_RAW_RECEIVE",
+            "atMs": 0,
+            "sessionId": "cyber65-mock",
+            "generation": 1,
+            "configSha256": "28f7c83814cf26d3a748018586ed853d70d4f4956405064ce875570b5253eb2f",
+            "linkId": "mock-a",
+            "rawHex": "fded0000012a01030100e803000000000000000000000000000000000000420100008007380400000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000002022e8c"
+          },
+          {
+            "type": "MOCK_RAW_RECEIVE",
+            "atMs": 0,
+            "sessionId": "cyber65-mock",
+            "generation": 1,
+            "configSha256": "28f7c83814cf26d3a748018586ed853d70d4f4956405064ce875570b5253eb2f",
+            "linkId": "mock-a",
+            "rawHex": "fd1c0000012a65030100e8030000000000000000000000000000000000000200000080073804b005"
+          },
+          {
+            "type": "MOCK_RAW_RECEIVE",
+            "atMs": 0,
+            "sessionId": "cyber65-mock",
+            "generation": 1,
+            "configSha256": "28f7c83814cf26d3a748018586ed853d70d4f4956405064ce875570b5253eb2f",
+            "linkId": "mock-a",
+            "rawHex": "fd210000012a9a180100e8030000200100000000000000000000db0fc9bf920a063fdb0f49c0db0f494001d9ec"
+          },
+          {
+            "type": "MOCK_RAW_RECEIVE",
+            "atMs": 0,
+            "sessionId": "cyber65-mock",
+            "generation": 1,
+            "configSha256": "28f7c83814cf26d3a748018586ed853d70d4f4956405064ce875570b5253eb2f",
+            "linkId": "mock-a",
+            "rawHex": "fd210000022a9a180100e8030000200100000000000000000000db0fc9bf920a063fdb0f49c0db0f494002ffd4"
+          },
+          {
+            "type": "MOCK_RAW_RECEIVE",
+            "atMs": 0,
+            "sessionId": "cyber65-mock",
+            "generation": 1,
+            "configSha256": "28f7c83814cf26d3a748018586ed853d70d4f4956405064ce875570b5253eb2f",
+            "linkId": "mock-a",
+            "rawHex": "fd0b0000032a9a190100e80300000000000001ffbe71a8"
+          },
+          {
+            "type": "MOCK_RAW_RECEIVE",
+            "atMs": 0,
+            "sessionId": "cyber65-mock",
+            "generation": 1,
+            "configSha256": "28f7c83814cf26d3a748018586ed853d70d4f4956405064ce875570b5253eb2f",
+            "linkId": "mock-a",
+            "rawHex": "fd0b0000042a9a190100e80300000000000002ffbe2b77"
+          },
+          {
+            "type": "MOCK_RAW_RECEIVE",
+            "atMs": 0,
+            "sessionId": "cyber65-mock",
+            "generation": 1,
+            "configSha256": "28f7c83814cf26d3a748018586ed853d70d4f4956405064ce875570b5253eb2f",
+            "linkId": "mock-a",
+            "rawHex": "fd500000022a640701000100000000002000e8030000000000000000000000000000000000000000803f0000000000000000000000000a00000000016d6f636b3a2f2f73796e7468657469632f6e6f2d696d6167652d66696c65b2bf"
+          },
+          {
+            "type": "MOCK_RAW_RECEIVE",
+            "atMs": 0,
+            "sessionId": "cyber65-mock",
+            "generation": 1,
+            "configSha256": "28f7c83814cf26d3a748018586ed853d70d4f4956405064ce875570b5253eb2f",
+            "linkId": "mock-a",
+            "rawHex": "fd500000022a010701000100000000002000e8030000000000000000000000000000000000000000803f0000000000000000000000000a00000002016d6f636b3a2f2f73796e7468657469632f6e6f2d696d6167652d66696c656a9a"
+          },
+          {
+            "type": "MOCK_RAW_RECEIVE",
+            "atMs": 0,
+            "sessionId": "cyber65-mock",
+            "generation": 1,
+            "configSha256": "28f7c83814cf26d3a748018586ed853d70d4f4956405064ce875570b5253eb2f",
+            "linkId": "mock-a",
+            "rawHex": "fd500000022a650701000100000000002000e8030000000000000000000000000000000000000000803f0000000000000000000000000a00000000016d6f636b3a2f2f73796e7468657469632f6e6f2d696d6167652d66696c6555dd"
+          },
+          {
+            "type": "MOCK_RAW_RECEIVE",
+            "atMs": 0,
+            "sessionId": "cyber65-mock",
+            "generation": 1,
+            "configSha256": "28f7c83814cf26d3a748018586ed853d70d4f4956405064ce875570b5253eb2f",
+            "linkId": "mock-a",
+            "rawHex": "fded0000032a01030100e803000000000000000000000000000000000000c201000080073804000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000020239c8"
+          },
+          {
+            "type": "MOCK_DISPATCH",
+            "atMs": 0,
+            "sessionId": "cyber65-mock",
+            "generation": 1,
+            "configSha256": "28f7c83814cf26d3a748018586ed853d70d4f4956405064ce875570b5253eb2f",
+            "id": "1/tx-26",
+            "targetKey": "42/154/2",
+            "rawCommandHex": "fd2000001affbe4c00000000f0c1000070410000c07f0000c07f000000000000000000000040e8032a9a9d6d",
+            "status": "MOCK_SEND_ADMITTED_NOT_ACK"
+          },
+          {
+            "type": "MOCK_RAW_RECEIVE",
+            "atMs": 10,
+            "sessionId": "cyber65-mock",
+            "generation": 1,
+            "configSha256": "28f7c83814cf26d3a748018586ed853d70d4f4956405064ce875570b5253eb2f",
+            "linkId": "mock-a",
+            "rawHex": "fd0a0000052a9a4d0000e803000000000000ffbe0e2c"
+          },
+          {
+            "type": "MOCK_RAW_RECEIVE",
+            "atMs": 10,
+            "sessionId": "cyber65-mock",
+            "generation": 1,
+            "configSha256": "28f7c83814cf26d3a748018586ed853d70d4f4956405064ce875570b5253eb2f",
+            "linkId": "mock-a",
+            "rawHex": "fd310000062a9a1d0100f20300005a29753fb15f0a3db56183bec11a013e000000000000000000000000000000002000ffbe000000000000000002be1c"
+          }
+        ],
+        "historyComplete": true,
+        "dropped": 0,
+        "rawBytes": 1365,
+        "decoderStats": [
+          {
+            "linkId": "mock-a",
+            "accepted": 17,
+            "corrupt": 0,
+            "unknown": 0,
+            "unsupported": 0,
+            "noise": 0
+          },
+          {
+            "linkId": "mock-b",
+            "accepted": 0,
+            "corrupt": 0,
+            "unknown": 0,
+            "unsupported": 0,
+            "noise": 0
+          }
+        ],
+        "origin": "SYNTHETIC_IN_MEMORY_MOCK",
+        "physicalMedia": [],
+        "physicalMediaVerified": false,
+        "hardwareOrSITLTransportVerified": false
+      },
+      "transactions": [
+        {
+          "id": "intent-1",
+          "bindingId": "center",
+          "semanticOperation": "gimbalAngle",
+          "unit": "degrees_pitch_yaw",
+          "profileSha256": "32d99cd456b54354c45a42482dea8bf3f735fb37abc66c8895ff728c3cd75d34",
+          "authorityTicket": {
+            "scope": "gimbal:center",
+            "owner": "payload-b",
+            "revision": 5,
+            "expiresMs": 1400,
+            "sessionId": "cyber65-mock",
+            "generation": 1,
+            "configSha256": "28f7c83814cf26d3a748018586ed853d70d4f4956405064ce875570b5253eb2f",
+            "authorityEpoch": 1
+          },
+          "transportId": "1/tx-26",
+          "protocolState": "OBSERVATION_CONSISTENT_UNATTRIBUTED",
+          "protocol": {
+            "id": "1/tx-26",
+            "bindingId": "center",
+            "operation": "gimbal",
+            "sessionId": "cyber65-mock",
+            "generation": 1,
+            "configSha256": "28f7c83814cf26d3a748018586ed853d70d4f4956405064ce875570b5253eb2f",
+            "linkId": "mock-a",
+            "cameraKey": "42/1/2",
+            "gimbalKey": "42/154/2",
+            "cameraGeneration": 1,
+            "gimbalGeneration": 7,
+            "protocol": {
+              "endpoint": "42/154",
+              "targetKey": "42/154/2",
+              "operation": "gimbal",
+              "command": 1000,
+              "params": {
+                "param1": -30,
+                "param2": 15,
+                "param3": {
+                  "$number": "NaN"
+                },
+                "param4": {
+                  "$number": "NaN"
+                },
+                "param5": 0,
+                "param7": 2
+              },
+              "value": {
+                "pitchDeg": -30,
+                "yawDeg": 15
+              },
+              "device": 0,
+              "generation": 7,
+              "id": "tx-26",
+              "sessionId": "cyber65-mock",
+              "epoch": 1,
+              "ackKey": "42/154/1000",
+              "state": "OBSERVATION_CONSISTENT_UNATTRIBUTED",
+              "requestedAtMs": 0,
+              "deadlineMs": 2000,
+              "ack": {
+                "result": 0,
+                "atMs": 10,
+                "recipientKnown": true,
+                "causalityProven": false
+              },
+              "observation": {
+                "id": 285,
+                "atMs": 10,
+                "rawHex": "fd310000062a9a1d0100f20300005a29753fb15f0a3db56183bec11a013e000000000000000000000000000000002000ffbe000000000000000002be1c",
+                "origin": "SYNTHETIC_PROTOCOL_CORPUS",
+                "causalExecutionProven": false
+              },
+              "physicalMediaVerified": false,
+              "causalExecutionProven": false,
+              "rawCommandHex": "fd2000001affbe4c00000000f0c1000070410000c07f0000c07f000000000000000000000040e8032a9a9d6d"
+            },
+            "override": null,
+            "sendStatus": "MOCK_SEND_ADMITTED_NOT_ACK",
+            "state": "OBSERVATION_CONSISTENT_UNATTRIBUTED",
+            "physicalMediaVerified": false,
+            "causalExecutionProven": false
+          },
+          "override": null,
+          "finalized": true,
+          "state": "OBSERVATION_CONSISTENT_UNATTRIBUTED",
+          "causalExecutionProven": false,
+          "physicalMediaVerified": false,
+          "captureStages": {
+            "intent": "RECORDED_MOCK",
+            "send": "MOCK_SEND_ADMITTED_NOT_ACK",
+            "ack": "ACCEPTED",
+            "observation": "CONSISTENT_UNATTRIBUTED",
+            "syntheticExposureMetadata": false,
+            "exposureProven": false,
+            "fileDeclaration": "NONE",
+            "physicalFileVerified": false,
+            "actualImages": 0
+          }
+        }
+      ],
+      "syntheticFileDeclarations": [],
+      "actualImages": 0,
+      "hardwareSupport": "NOT_CHECKED",
+      "twoPhysicalStations": "NOT_CHECKED",
+      "historyComplete": true,
+      "automaticRetries": 0,
+      "flightCommandsEncoded": 0
+    }
+  }
+}

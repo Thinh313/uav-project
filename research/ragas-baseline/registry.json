@@ -1,0 +1,485 @@
+{
+  "aggregates": {
+    "cells_by_state": {
+      "null": 55,
+      "sourced": 11
+    },
+    "coverage_pct": null,
+    "n_entities": 6,
+    "rollup": {},
+    "rollup_field": null,
+    "universe_estimate": null
+  },
+  "registry": {
+    "ArduPilot SITL": {
+      "entity_type": null,
+      "fields": {
+        "ack_semantics": {
+          "state": "null",
+          "value": null
+        },
+        "build_marker": {
+          "state": "null",
+          "value": null
+        },
+        "latest_returned_release": {
+          "state": "null",
+          "value": null
+        },
+        "mission_regression": {
+          "state": "null",
+          "value": null
+        },
+        "other_public_repository": {
+          "state": "null",
+          "value": null
+        },
+        "product_role": {
+          "state": "null",
+          "value": null
+        },
+        "published_at": {
+          "state": "null",
+          "value": null
+        },
+        "reference": {
+          "claims": [
+            {
+              "capture": {
+                "fetched_at": "2026-10-12T02:29:03.268449+00:00",
+                "origin_id": "ardupilot-sitl",
+                "snapshot": "ardupilot-sitl.html",
+                "source": "ardupilot-sitl",
+                "url": "https://ardupilot.org/dev/docs/sitl-simulator-software-in-the-loop.html"
+              },
+              "evidence_span": "SITL Simulator",
+              "extraction": "normalized",
+              "source": "ardupilot-sitl",
+              "tier": "A",
+              "value": "Simulation environment reference"
+            }
+          ],
+          "state": "sourced",
+          "value": "Simulation environment reference"
+        },
+        "repository_names": {
+          "state": "null",
+          "value": null
+        },
+        "runtime_benchmark": {
+          "state": "null",
+          "value": null
+        },
+        "source_code_access": {
+          "state": "null",
+          "value": null
+        }
+      }
+    },
+    "MAVLink Command": {
+      "entity_type": null,
+      "fields": {
+        "ack_semantics": {
+          "claims": [
+            {
+              "capture": {
+                "fetched_at": "2026-10-12T02:29:02.516337+00:00",
+                "origin_id": "mavlink-command",
+                "snapshot": "mavlink-command.html",
+                "source": "mavlink-command",
+                "url": "https://mavlink.io/en/services/command.html"
+              },
+              "evidence_span": "not that the command has completed",
+              "extraction": "normalized",
+              "source": "mavlink-command",
+              "tier": "A",
+              "value": "Acceptance is distinct from command completion"
+            }
+          ],
+          "state": "sourced",
+          "value": "Acceptance is distinct from command completion"
+        },
+        "build_marker": {
+          "state": "null",
+          "value": null
+        },
+        "latest_returned_release": {
+          "state": "null",
+          "value": null
+        },
+        "mission_regression": {
+          "state": "null",
+          "value": null
+        },
+        "other_public_repository": {
+          "state": "null",
+          "value": null
+        },
+        "product_role": {
+          "state": "null",
+          "value": null
+        },
+        "published_at": {
+          "state": "null",
+          "value": null
+        },
+        "reference": {
+          "state": "null",
+          "value": null
+        },
+        "repository_names": {
+          "state": "null",
+          "value": null
+        },
+        "runtime_benchmark": {
+          "state": "null",
+          "value": null
+        },
+        "source_code_access": {
+          "state": "null",
+          "value": null
+        }
+      }
+    },
+    "MAVLink Mission": {
+      "entity_type": null,
+      "fields": {
+        "ack_semantics": {
+          "state": "null",
+          "value": null
+        },
+        "build_marker": {
+          "state": "null",
+          "value": null
+        },
+        "latest_returned_release": {
+          "state": "null",
+          "value": null
+        },
+        "mission_regression": {
+          "state": "null",
+          "value": null
+        },
+        "other_public_repository": {
+          "state": "null",
+          "value": null
+        },
+        "product_role": {
+          "state": "null",
+          "value": null
+        },
+        "published_at": {
+          "state": "null",
+          "value": null
+        },
+        "reference": {
+          "claims": [
+            {
+              "capture": {
+                "fetched_at": "2026-10-12T02:29:03.034651+00:00",
+                "origin_id": "mavlink-mission",
+                "snapshot": "mavlink-mission.html",
+                "source": "mavlink-mission",
+                "url": "https://mavlink.io/en/services/mission.html"
+              },
+              "evidence_span": "Mission Protocol",
+              "extraction": "normalized",
+              "source": "mavlink-mission",
+              "tier": "A",
+              "value": "Mission protocol reference"
+            }
+          ],
+          "state": "sourced",
+          "value": "Mission protocol reference"
+        },
+        "repository_names": {
+          "state": "null",
+          "value": null
+        },
+        "runtime_benchmark": {
+          "state": "null",
+          "value": null
+        },
+        "source_code_access": {
+          "state": "null",
+          "value": null
+        }
+      }
+    },
+    "QGC Plan": {
+      "entity_type": null,
+      "fields": {
+        "ack_semantics": {
+          "state": "null",
+          "value": null
+        },
+        "build_marker": {
+          "state": "null",
+          "value": null
+        },
+        "latest_returned_release": {
+          "state": "null",
+          "value": null
+        },
+        "mission_regression": {
+          "state": "null",
+          "value": null
+        },
+        "other_public_repository": {
+          "state": "null",
+          "value": null
+        },
+        "product_role": {
+          "state": "null",
+          "value": null
+        },
+        "published_at": {
+          "state": "null",
+          "value": null
+        },
+        "reference": {
+          "claims": [
+            {
+              "capture": {
+                "fetched_at": "2026-10-12T02:29:03.094731+00:00",
+                "origin_id": "qgc-plan",
+                "snapshot": "qgc-plan.html",
+                "source": "qgc-plan",
+                "url": "https://docs.qgroundcontrol.com/master/en/qgc-dev-guide/file_formats/plan.html"
+              },
+              "evidence_span": "Plan File Format",
+              "extraction": "normalized",
+              "source": "qgc-plan",
+              "tier": "A",
+              "value": "Plan interchange specification"
+            }
+          ],
+          "state": "sourced",
+          "value": "Plan interchange specification"
+        },
+        "repository_names": {
+          "state": "null",
+          "value": null
+        },
+        "runtime_benchmark": {
+          "state": "null",
+          "value": null
+        },
+        "source_code_access": {
+          "state": "null",
+          "value": null
+        }
+      }
+    },
+    "RAGAS": {
+      "entity_type": null,
+      "fields": {
+        "ack_semantics": {
+          "state": "null",
+          "value": null
+        },
+        "build_marker": {
+          "claims": [
+            {
+              "capture": {
+                "fetched_at": "2026-10-12T02:29:02.516262+00:00",
+                "origin_id": "ragas-build",
+                "snapshot": "ragas-build.txt",
+                "source": "ragas-build",
+                "url": "https://raw.githubusercontent.com/Real-Time-Robotics/ragas-release/main/latest-build-number.txt"
+              },
+              "evidence_span": "111",
+              "extraction": "normalized",
+              "source": "ragas-build",
+              "tier": "A",
+              "value": "111"
+            }
+          ],
+          "state": "sourced",
+          "value": "111"
+        },
+        "latest_returned_release": {
+          "claims": [
+            {
+              "capture": {
+                "fetched_at": "2026-10-12T02:29:02.516158+00:00",
+                "origin_id": "ragas-releases",
+                "snapshot": "ragas-releases.json",
+                "source": "ragas-releases",
+                "url": "https://api.github.com/repos/Real-Time-Robotics/ragas-release/releases?per_page=100"
+              },
+              "evidence_span": "\"tag_name\":\"v4.0.14-b111\"",
+              "extraction": "normalized",
+              "source": "ragas-releases",
+              "tier": "A",
+              "value": "v4.0.14-b111"
+            }
+          ],
+          "state": "sourced",
+          "value": "v4.0.14-b111"
+        },
+        "mission_regression": {
+          "claims": [
+            {
+              "capture": {
+                "fetched_at": "2026-10-12T02:29:02.516158+00:00",
+                "origin_id": "ragas-releases",
+                "snapshot": "ragas-latest-release.md",
+                "source": "ragas-latest-release",
+                "url": "https://github.com/Real-Time-Robotics/ragas-release/releases/tag/v4.0.14-b111"
+              },
+              "evidence_span": "Camera Commands Reach the Autopilot",
+              "extraction": "normalized",
+              "source": "ragas-latest-release",
+              "tier": "A",
+              "value": "Release notes describe camera command upload fix"
+            }
+          ],
+          "state": "sourced",
+          "value": "Release notes describe camera command upload fix"
+        },
+        "other_public_repository": {
+          "state": "null",
+          "value": null
+        },
+        "product_role": {
+          "claims": [
+            {
+              "capture": {
+                "fetched_at": "2026-10-12T02:29:02.515663+00:00",
+                "origin_id": "ragas-readme",
+                "snapshot": "ragas-readme.md",
+                "source": "ragas-readme",
+                "url": "https://raw.githubusercontent.com/Real-Time-Robotics/ragas-release/main/README.md"
+              },
+              "evidence_span": "Ground Control Station",
+              "extraction": "normalized",
+              "source": "ragas-readme",
+              "tier": "A",
+              "value": "Ground Control Station"
+            }
+          ],
+          "state": "sourced",
+          "value": "Ground Control Station"
+        },
+        "published_at": {
+          "claims": [
+            {
+              "capture": {
+                "fetched_at": "2026-10-12T02:29:02.516158+00:00",
+                "origin_id": "ragas-releases",
+                "snapshot": "ragas-releases.json",
+                "source": "ragas-releases",
+                "url": "https://api.github.com/repos/Real-Time-Robotics/ragas-release/releases?per_page=100"
+              },
+              "evidence_span": "\"published_at\":\"2026-10-09T10:26:59Z\"",
+              "extraction": "normalized",
+              "source": "ragas-releases",
+              "tier": "A",
+              "value": "2026-10-09T10:26:59Z"
+            }
+          ],
+          "state": "sourced",
+          "value": "2026-10-09T10:26:59Z"
+        },
+        "reference": {
+          "state": "null",
+          "value": null
+        },
+        "repository_names": {
+          "state": "null",
+          "value": null
+        },
+        "runtime_benchmark": {
+          "state": "null",
+          "value": null
+        },
+        "source_code_access": {
+          "state": "null",
+          "value": null
+        }
+      }
+    },
+    "RTR public source scope": {
+      "entity_type": null,
+      "fields": {
+        "ack_semantics": {
+          "state": "null",
+          "value": null
+        },
+        "build_marker": {
+          "state": "null",
+          "value": null
+        },
+        "latest_returned_release": {
+          "state": "null",
+          "value": null
+        },
+        "mission_regression": {
+          "state": "null",
+          "value": null
+        },
+        "other_public_repository": {
+          "claims": [
+            {
+              "capture": {
+                "fetched_at": "2026-10-12T02:29:41.551811+00:00",
+                "origin_id": "rtr-public-repositories",
+                "snapshot": "rtr-public-repositories.json",
+                "source": "rtr-public-repositories",
+                "url": "https://api.github.com/orgs/Real-Time-Robotics/repos?per_page=100&type=public"
+              },
+              "evidence_span": "\"full_name\": \"Real-Time-Robotics/supersplat\"",
+              "extraction": "normalized",
+              "source": "rtr-public-repositories",
+              "tier": "A",
+              "value": "supersplat"
+            }
+          ],
+          "state": "sourced",
+          "value": "supersplat"
+        },
+        "product_role": {
+          "state": "null",
+          "value": null
+        },
+        "published_at": {
+          "state": "null",
+          "value": null
+        },
+        "reference": {
+          "state": "null",
+          "value": null
+        },
+        "repository_names": {
+          "claims": [
+            {
+              "capture": {
+                "fetched_at": "2026-10-12T02:29:41.551811+00:00",
+                "origin_id": "rtr-public-repositories",
+                "snapshot": "rtr-public-repositories.json",
+                "source": "rtr-public-repositories",
+                "url": "https://api.github.com/orgs/Real-Time-Robotics/repos?per_page=100&type=public"
+              },
+              "evidence_span": "\"full_name\": \"Real-Time-Robotics/ragas-release\"",
+              "extraction": "normalized",
+              "source": "rtr-public-repositories",
+              "tier": "A",
+              "value": "ragas-release"
+            }
+          ],
+          "state": "sourced",
+          "value": "ragas-release"
+        },
+        "runtime_benchmark": {
+          "state": "null",
+          "value": null
+        },
+        "source_code_access": {
+          "state": "null",
+          "value": null
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,648 @@
+{
+  "aggregates": {
+    "cells_by_state": {
+      "null": 87,
+      "sourced": 12
+    },
+    "coverage_pct": null,
+    "n_entities": 9,
+    "rollup": {},
+    "rollup_field": null,
+    "universe_estimate": null
+  },
+  "registry": {
+    "DJI PFD": {
+      "entity_type": null,
+      "fields": {
+        "aeris-compliance": {
+          "state": "null",
+          "value": null
+        },
+        "color-redundancy": {
+          "state": "null",
+          "value": null
+        },
+        "criterion": {
+          "state": "null",
+          "value": null
+        },
+        "critical-visibility": {
+          "state": "null",
+          "value": null
+        },
+        "human-centred-method": {
+          "state": "null",
+          "value": null
+        },
+        "integrated-display": {
+          "claims": [
+            {
+              "capture": {
+                "fetched_at": "2026-10-12T02:47:22.812129+00:00",
+                "origin_id": "dji",
+                "snapshot": "dji-pfd.html",
+                "source": "dji-pfd",
+                "url": "https://enterprise-insights.dji.com/blog/dji-primary-flight-display"
+              },
+              "evidence_span": "one integrated, intuitive display",
+              "extraction": "normalized",
+              "source": "dji-pfd",
+              "tier": "A",
+              "value": "Integrate flight information for rapid scanning"
+            }
+          ],
+          "state": "sourced",
+          "value": "Integrate flight information for rapid scanning"
+        },
+        "operator-superiority": {
+          "state": "null",
+          "value": null
+        },
+        "scope-limit": {
+          "state": "null",
+          "value": null
+        },
+        "stale-data": {
+          "state": "null",
+          "value": null
+        },
+        "units": {
+          "state": "null",
+          "value": null
+        },
+        "usability-method": {
+          "state": "null",
+          "value": null
+        }
+      }
+    },
+    "ISO 9241-11 public abstract": {
+      "entity_type": null,
+      "fields": {
+        "aeris-compliance": {
+          "state": "null",
+          "value": null
+        },
+        "color-redundancy": {
+          "state": "null",
+          "value": null
+        },
+        "criterion": {
+          "state": "null",
+          "value": null
+        },
+        "critical-visibility": {
+          "state": "null",
+          "value": null
+        },
+        "human-centred-method": {
+          "state": "null",
+          "value": null
+        },
+        "integrated-display": {
+          "state": "null",
+          "value": null
+        },
+        "operator-superiority": {
+          "state": "null",
+          "value": null
+        },
+        "scope-limit": {
+          "state": "null",
+          "value": null
+        },
+        "stale-data": {
+          "state": "null",
+          "value": null
+        },
+        "units": {
+          "state": "null",
+          "value": null
+        },
+        "usability-method": {
+          "claims": [
+            {
+              "capture": {
+                "fetched_at": "2026-10-12T03:04:36.909599+00:00",
+                "origin_id": "iso",
+                "snapshot": "iso-11.html",
+                "source": "iso-11",
+                "url": "https://committee.iso.org/standard/63500.html"
+              },
+              "evidence_span": "usability is an outcome of use",
+              "extraction": "normalized",
+              "source": "iso-11",
+              "tier": "A",
+              "value": "Usability is assessed as an outcome of use"
+            }
+          ],
+          "state": "sourced",
+          "value": "Usability is assessed as an outcome of use"
+        }
+      }
+    },
+    "ISO 9241-110 public abstract": {
+      "entity_type": null,
+      "fields": {
+        "aeris-compliance": {
+          "state": "null",
+          "value": null
+        },
+        "color-redundancy": {
+          "state": "null",
+          "value": null
+        },
+        "criterion": {
+          "state": "null",
+          "value": null
+        },
+        "critical-visibility": {
+          "state": "null",
+          "value": null
+        },
+        "human-centred-method": {
+          "state": "null",
+          "value": null
+        },
+        "integrated-display": {
+          "state": "null",
+          "value": null
+        },
+        "operator-superiority": {
+          "state": "null",
+          "value": null
+        },
+        "scope-limit": {
+          "claims": [
+            {
+              "capture": {
+                "fetched_at": "2026-10-12T03:10:27.570230+00:00",
+                "origin_id": "iso",
+                "snapshot": "iso-110-web.txt",
+                "source": "iso-110-web",
+                "url": "https://www.iso.org/standard/75258.html"
+              },
+              "evidence_span": "does not consider any other aspect of design such as marketing, aesthetics and corporate identity",
+              "extraction": "normalized",
+              "source": "iso-110-web",
+              "tier": "A",
+              "value": "Interaction principles do not establish aesthetics or corporate identity"
+            }
+          ],
+          "state": "sourced",
+          "value": "Interaction principles do not establish aesthetics or corporate identity"
+        },
+        "stale-data": {
+          "state": "null",
+          "value": null
+        },
+        "units": {
+          "state": "null",
+          "value": null
+        },
+        "usability-method": {
+          "state": "null",
+          "value": null
+        }
+      }
+    },
+    "ISO 9241-210 public abstract": {
+      "entity_type": null,
+      "fields": {
+        "aeris-compliance": {
+          "state": "null",
+          "value": null
+        },
+        "color-redundancy": {
+          "state": "null",
+          "value": null
+        },
+        "criterion": {
+          "state": "null",
+          "value": null
+        },
+        "critical-visibility": {
+          "state": "null",
+          "value": null
+        },
+        "human-centred-method": {
+          "claims": [
+            {
+              "capture": {
+                "fetched_at": "2026-10-12T03:10:27.569994+00:00",
+                "origin_id": "iso",
+                "snapshot": "iso-210-web.txt",
+                "source": "iso-210-web",
+                "url": "https://www.iso.org/standard/77520.html"
+              },
+              "evidence_span": "human-centred design principles and activities throughout the life cycle",
+              "extraction": "normalized",
+              "source": "iso-210-web",
+              "tier": "A",
+              "value": "Human-centred design applies throughout the interactive system lifecycle"
+            }
+          ],
+          "state": "sourced",
+          "value": "Human-centred design applies throughout the interactive system lifecycle"
+        },
+        "integrated-display": {
+          "state": "null",
+          "value": null
+        },
+        "operator-superiority": {
+          "state": "null",
+          "value": null
+        },
+        "scope-limit": {
+          "state": "null",
+          "value": null
+        },
+        "stale-data": {
+          "state": "null",
+          "value": null
+        },
+        "units": {
+          "state": "null",
+          "value": null
+        },
+        "usability-method": {
+          "state": "null",
+          "value": null
+        }
+      }
+    },
+    "NASA crew interfaces": {
+      "entity_type": null,
+      "fields": {
+        "aeris-compliance": {
+          "state": "null",
+          "value": null
+        },
+        "color-redundancy": {
+          "claims": [
+            {
+              "capture": {
+                "fetched_at": "2026-10-12T02:47:22.811704+00:00",
+                "origin_id": "nasa",
+                "snapshot": "nasa-crew.html",
+                "source": "nasa-crew",
+                "url": "https://www.nasa.gov/reference/10-0-crew-interfaces-vol-2/"
+              },
+              "evidence_span": "additional cue",
+              "extraction": "normalized",
+              "source": "nasa-crew",
+              "tier": "A",
+              "value": "Color carries an additional cue for critical state"
+            }
+          ],
+          "state": "sourced",
+          "value": "Color carries an additional cue for critical state"
+        },
+        "criterion": {
+          "state": "null",
+          "value": null
+        },
+        "critical-visibility": {
+          "claims": [
+            {
+              "capture": {
+                "fetched_at": "2026-10-12T02:47:22.811704+00:00",
+                "origin_id": "nasa",
+                "snapshot": "nasa-crew.html",
+                "source": "nasa-crew",
+                "url": "https://www.nasa.gov/reference/10-0-crew-interfaces-vol-2/"
+              },
+              "evidence_span": "simultaneously present all critical task information",
+              "extraction": "normalized",
+              "source": "nasa-crew",
+              "tier": "A",
+              "value": "Critical task information should be simultaneously visible"
+            }
+          ],
+          "state": "sourced",
+          "value": "Critical task information should be simultaneously visible"
+        },
+        "human-centred-method": {
+          "state": "null",
+          "value": null
+        },
+        "integrated-display": {
+          "state": "null",
+          "value": null
+        },
+        "operator-superiority": {
+          "state": "null",
+          "value": null
+        },
+        "scope-limit": {
+          "state": "null",
+          "value": null
+        },
+        "stale-data": {
+          "claims": [
+            {
+              "capture": {
+                "fetched_at": "2026-10-12T02:47:22.811704+00:00",
+                "origin_id": "nasa",
+                "snapshot": "nasa-crew.html",
+                "source": "nasa-crew",
+                "url": "https://www.nasa.gov/reference/10-0-crew-interfaces-vol-2/"
+              },
+              "evidence_span": "stale, missing, unavailable, or unknown",
+              "extraction": "normalized",
+              "source": "nasa-crew",
+              "tier": "A",
+              "value": "Visually indicate stale or unavailable data"
+            }
+          ],
+          "state": "sourced",
+          "value": "Visually indicate stale or unavailable data"
+        },
+        "units": {
+          "claims": [
+            {
+              "capture": {
+                "fetched_at": "2026-10-12T02:47:22.811704+00:00",
+                "origin_id": "nasa",
+                "snapshot": "nasa-crew.html",
+                "source": "nasa-crew",
+                "url": "https://www.nasa.gov/reference/10-0-crew-interfaces-vol-2/"
+              },
+              "evidence_span": "consistent units of measure",
+              "extraction": "normalized",
+              "source": "nasa-crew",
+              "tier": "A",
+              "value": "Use consistent visible units"
+            }
+          ],
+          "state": "sourced",
+          "value": "Use consistent visible units"
+        },
+        "usability-method": {
+          "state": "null",
+          "value": null
+        }
+      }
+    },
+    "WCAG enhanced target": {
+      "entity_type": null,
+      "fields": {
+        "aeris-compliance": {
+          "state": "null",
+          "value": null
+        },
+        "color-redundancy": {
+          "state": "null",
+          "value": null
+        },
+        "criterion": {
+          "claims": [
+            {
+              "capture": {
+                "fetched_at": "2026-10-12T02:47:23.412963+00:00",
+                "origin_id": "wcag",
+                "snapshot": "wcag-target.html",
+                "source": "wcag-target",
+                "url": "https://www.w3.org/WAI/WCAG22/Understanding/target-size-enhanced.html"
+              },
+              "evidence_span": "44 by 44",
+              "extraction": "normalized",
+              "source": "wcag-target",
+              "tier": "A",
+              "value": "44 by 44 CSS pixels with exceptions, Level AAA"
+            }
+          ],
+          "state": "sourced",
+          "value": "44 by 44 CSS pixels with exceptions, Level AAA"
+        },
+        "critical-visibility": {
+          "state": "null",
+          "value": null
+        },
+        "human-centred-method": {
+          "state": "null",
+          "value": null
+        },
+        "integrated-display": {
+          "state": "null",
+          "value": null
+        },
+        "operator-superiority": {
+          "state": "null",
+          "value": null
+        },
+        "scope-limit": {
+          "state": "null",
+          "value": null
+        },
+        "stale-data": {
+          "state": "null",
+          "value": null
+        },
+        "units": {
+          "state": "null",
+          "value": null
+        },
+        "usability-method": {
+          "state": "null",
+          "value": null
+        }
+      }
+    },
+    "WCAG focus not obscured": {
+      "entity_type": null,
+      "fields": {
+        "aeris-compliance": {
+          "state": "null",
+          "value": null
+        },
+        "color-redundancy": {
+          "state": "null",
+          "value": null
+        },
+        "criterion": {
+          "claims": [
+            {
+              "capture": {
+                "fetched_at": "2026-10-12T02:47:23.641014+00:00",
+                "origin_id": "wcag",
+                "snapshot": "wcag-focus.html",
+                "source": "wcag-focus",
+                "url": "https://www.w3.org/WAI/WCAG22/Understanding/focus-not-obscured-minimum.html"
+              },
+              "evidence_span": "not entirely hidden",
+              "extraction": "normalized",
+              "source": "wcag-focus",
+              "tier": "A",
+              "value": "Focused component must not be entirely hidden by author content"
+            }
+          ],
+          "state": "sourced",
+          "value": "Focused component must not be entirely hidden by author content"
+        },
+        "critical-visibility": {
+          "state": "null",
+          "value": null
+        },
+        "human-centred-method": {
+          "state": "null",
+          "value": null
+        },
+        "integrated-display": {
+          "state": "null",
+          "value": null
+        },
+        "operator-superiority": {
+          "state": "null",
+          "value": null
+        },
+        "scope-limit": {
+          "state": "null",
+          "value": null
+        },
+        "stale-data": {
+          "state": "null",
+          "value": null
+        },
+        "units": {
+          "state": "null",
+          "value": null
+        },
+        "usability-method": {
+          "state": "null",
+          "value": null
+        }
+      }
+    },
+    "WCAG non-text contrast": {
+      "entity_type": null,
+      "fields": {
+        "aeris-compliance": {
+          "state": "null",
+          "value": null
+        },
+        "color-redundancy": {
+          "state": "null",
+          "value": null
+        },
+        "criterion": {
+          "claims": [
+            {
+              "capture": {
+                "fetched_at": "2026-10-12T02:47:23.092886+00:00",
+                "origin_id": "wcag",
+                "snapshot": "wcag-controls.html",
+                "source": "wcag-controls",
+                "url": "https://www.w3.org/WAI/WCAG22/Understanding/non-text-contrast.html"
+              },
+              "evidence_span": "3:1",
+              "extraction": "normalized",
+              "source": "wcag-controls",
+              "tier": "A",
+              "value": "Required control/state cues contrast 3:1"
+            }
+          ],
+          "state": "sourced",
+          "value": "Required control/state cues contrast 3:1"
+        },
+        "critical-visibility": {
+          "state": "null",
+          "value": null
+        },
+        "human-centred-method": {
+          "state": "null",
+          "value": null
+        },
+        "integrated-display": {
+          "state": "null",
+          "value": null
+        },
+        "operator-superiority": {
+          "state": "null",
+          "value": null
+        },
+        "scope-limit": {
+          "state": "null",
+          "value": null
+        },
+        "stale-data": {
+          "state": "null",
+          "value": null
+        },
+        "units": {
+          "state": "null",
+          "value": null
+        },
+        "usability-method": {
+          "state": "null",
+          "value": null
+        }
+      }
+    },
+    "WCAG text contrast": {
+      "entity_type": null,
+      "fields": {
+        "aeris-compliance": {
+          "state": "null",
+          "value": null
+        },
+        "color-redundancy": {
+          "state": "null",
+          "value": null
+        },
+        "criterion": {
+          "claims": [
+            {
+              "capture": {
+                "fetched_at": "2026-10-12T02:47:22.812277+00:00",
+                "origin_id": "wcag",
+                "snapshot": "wcag-text.html",
+                "source": "wcag-text",
+                "url": "https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html"
+              },
+              "evidence_span": "4.5:1",
+              "extraction": "normalized",
+              "source": "wcag-text",
+              "tier": "A",
+              "value": "Normal text contrast 4.5:1; large text 3:1"
+            }
+          ],
+          "state": "sourced",
+          "value": "Normal text contrast 4.5:1; large text 3:1"
+        },
+        "critical-visibility": {
+          "state": "null",
+          "value": null
+        },
+        "human-centred-method": {
+          "state": "null",
+          "value": null
+        },
+        "integrated-display": {
+          "state": "null",
+          "value": null
+        },
+        "operator-superiority": {
+          "state": "null",
+          "value": null
+        },
+        "scope-limit": {
+          "state": "null",
+          "value": null
+        },
+        "stale-data": {
+          "state": "null",
+          "value": null
+        },
+        "units": {
+          "state": "null",
+          "value": null
+        },
+        "usability-method": {
+          "state": "null",
+          "value": null
+        }
+      }
+    }
+  }
+}

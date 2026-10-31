@@ -1,0 +1,4 @@
+import assert from 'node:assert/strict';
+import {readFile,writeFile} from 'node:fs/promises';
+import {assertMarkup} from './markup-guard.mjs';
+const html=await readFile('pilot/herastore50/index.html','utf8'),results=[];assert.equal(assertMarkup(html),true);results.push({name:'current markup accepted',pass:true});for(const [name,bad]of [['previous closing-option regression',html.replace('</option><option value="CONTINUE_CONFIRMED_CLEANUP">','</option value="CONTINUE_CONFIRMED_CLEANUP">')],['missing recovery choice',html.replace('<option value="RESTORE_BEFORE_DELETE">','<option value="other">')]]){let refused=false;try{assertMarkup(bad);}catch{refused=true;}assert.ok(refused,name);results.push({name,pass:true});}await writeFile('evidence/herastore50/markup1.json',JSON.stringify({status:'PASS',checks:results.length,results},null,2)+'\n',{flag:'wx'});console.log(JSON.stringify({status:'PASS',checks:results.length}));

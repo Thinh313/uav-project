@@ -1,0 +1,40 @@
+{
+  "status": "PASS_ADDITIVE_MISSING_IMPORT_REPAIR_SOURCE_MOCK_ONLY",
+  "checks": {
+    "originalEffectiveEntrypoint": "PASS_NAMEERROR_BEFORE_JOURNAL_OR_WRITER",
+    "correctedFinallyRefusal": "PASS_EFFECTIVE_ENTRYPOINT_REPORT_WRITTEN_AND_SERIALIZABLE",
+    "correctedSuccessful75s": "PASS_151_REAL_SAMPLE_DECISIONS_AND_REAL_CHAIN_RENEWAL_PREDICATES_CONTROLLED_CLOCK",
+    "soleImportDeltaAndFrozenDependencies": "PASS_BYTE_EXACT_ONE_IMPORT_AND_FUNCTION_AST_IDENTICAL"
+  },
+  "groups": 4,
+  "originalSha256": "ec97843a81f052ca425b063b058d2092f348084e64c2383fa1db57011ecedda6",
+  "proposalSha256": "4e12c4888e5b75dbc72f322adf54278f36f373af433a0b2013ef94916eda77be",
+  "frozenWriterSha256": "c3520ae10128adebd3f3bad0727a160960eca5fb8a4284eaab38621565153e9c",
+  "testSha256": "18b924c1307abe595227f3eea8131ca452377736eae66db10ffed2b95c1d2682",
+  "loading": "Preloaded exact frozen g11_native_writer into sys.modules before either collector; both reused identical object. UI/clock/pause explicitly injected; only test module E and writer sink patched. No default UI/dependency action.",
+  "mockJournal": {
+    "path": "planning/ground11fix/mock-clock01.jsonl",
+    "initialBytes": 1209,
+    "initialSha256": "696c6006f2d91f3b8516ed2aca42e109d5f22d58b6550be089272342fffebc0d",
+    "finalBytes": 4196,
+    "finalSha256": "b636646d74d0af9e02aa666b3cfd2dd5c58f32389c9de0e25524e2c7103ced89",
+    "rows": 9
+  },
+  "outputs": [
+    {
+      "path": "planning/ground11fix/mock-refusal01-ground-soak.json",
+      "bytes": 475,
+      "sha256": "7bb311c2235a113d3c65b02836f0d09307b12180aaedf071795a386fbf394179"
+    },
+    {
+      "path": "planning/ground11fix/mock-success01-ground-soak.json",
+      "bytes": 124644,
+      "sha256": "d7818791526529f67c4ca9d2a6693c1b9617dcb527cae0f4f239f04c1802247f"
+    }
+  ],
+  "wallTimeSleep": false,
+  "actualRuntimeOrNetwork": false,
+  "G11WiringChanged": false,
+  "authorityGranted": false,
+  "limitations": "Controlled synthetic observations/journal and fake clock only; no actual75s admission, UI latency, Android/SITL/reboot/persistence or product readiness claim. Refusal was injected at journal read before UI; other error branches not newly exercised."
+}

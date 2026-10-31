@@ -1,0 +1,11 @@
+# L2: one replacement cold cohort after source byte quota
+
+22/10/2026. The user authorizes host-source/Android-only decoding with mock and actual FPS/cold-start checks. This decision changes the assistant-declared test budget, not the quality floor, data authority, hardware scope or software signature.
+
+Actual cold cohort01 passed all selected media gates independently:885frames/30001.1ms,29.4989FPS,P95upper22.1119ms,initialReady225.9ms,recovery553.2ms. Native15filehashes unchanged. Host source continued producing during emulator admission, UI handling and between boots. Before cohort02 measurement it reached the existing frozen128MiB per-media-session body budget. Chrome displayed BODY_OR_RUN_BYTE_BOUND and active=false; source-quota-incident01-status.json records bytesRead134235385. No report02 or second measured window exists. The second viewer attempt is retained and cannot be relabelled as a successful cold attempt.
+
+Approve exactly ONE additional owned emulator cold launch03, increasing this task cap from2 to3 launches; retain <=20min/launch,31stable29GiB admission,28GiB guard/15sforecast,64MiB aggregate newevidence and allAPK/source freezes. Use the already-budgeted second host server session, fresh exclusive evidence directory. Keep128MiB source quota unchanged; close host01 cleanly and preserve every receipt. Do not reset a running server's byte count, retry its failed POST or reuse its source identity as a new run. Start the next laptop publisher explicitly only when emulator03 and receiver page are ready, minimizing unused producer runtime.
+
+Two declared30s measured windows and cold cohorts must still pass all original thresholds. Cohort02 remains SOURCE_QUOTA_ABORT_BEFORE_MEASUREMENT; the new cohort03 has a new bootID/appcoldprocess and media server/source identities. No page/viewer warm retry may substitute for that independent boot. No further budget extension, host session or emulator launch in this task; a third-cohort failure remains NOT_READY.
+
+This is a targeted response to observed infrastructure exhaustion, not a lower resolution/FPS/clock/latency target or algorithm retune. No new native build/signature, SDK, SITL/flight operation, ENDURE change, dependency install or externalpublication.

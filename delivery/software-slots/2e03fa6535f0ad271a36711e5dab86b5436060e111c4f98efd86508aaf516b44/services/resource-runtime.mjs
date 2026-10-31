@@ -1,0 +1,10 @@
+import {RESOURCE_POLICY,policySha256,assessResources,observeResources} from './resource-policy.mjs';
+export class ResourceRuntime {
+ constructor({dataRoot,env=process.env,observe=observeResources}={}){Object.assign(this,{dataRoot,env,observe});this.state=null;this.error=null;this.timer=null;this.inflight=null;this.managed=env.AERIS_RESOURCE_POLICY_SHA===policySha256&&env.AERIS_BOOTSTRAP_IPC==='1'&&/^[a-f0-9]{64}$/.test(env.AERIS_ISOLATION_SHA??'');}
+ async sample(){if(this.inflight)return this.inflight;this.inflight=(async()=>{try{const raw=await this.observe(this.dataRoot);this.state={...assessResources(raw),ramBasis:raw.ramBasis??'test fixture',freeRamBytes:raw.freeRamBytes??null,checkedAt:new Date().toISOString()};this.error=null;}catch(e){this.state=null;this.error=e.message;}finally{this.inflight=null;}})();return this.inflight;}
+ async initialize(){await this.sample();if(this.managed&&(!this.state||this.state.status!=='OBSERVED_FIT'))throw Error('Runtime resource admission blocked: '+(this.error??this.state.reasons));return this;}
+ start(){this.timer=setInterval(async()=>{await this.sample();if(this.managed&&process.connected)process.send({type:'AERIS_RESOURCE_HEARTBEAT',policySha256,rssBytes:process.memoryUsage().rss});},RESOURCE_POLICY.heartbeatMs);this.timer.unref();}
+ close(){clearInterval(this.timer);}
+ async admission(){await this.sample();if(!this.state||this.state.status!=='OBSERVED_FIT')throw Error('Resource admission blocked: '+(this.error??this.state.reasons));}
+ async status(){await this.sample();return {format:'aeris-resource-status',version:1,checkedAt:new Date().toISOString(),status:this.state?.status??'NOT_CHECKED',reason:this.error,observation:this.state,policy:RESOURCE_POLICY,policySha256,managed:this.managed,isolation:this.managed?'PARENT_CONFIGURED_MACOS_SEATBELT':'NOT_CHECKED',isolationSha256:this.managed?this.env.AERIS_ISOLATION_SHA:null,heapLimitScope:'V8 old-space cap is not total RSS; parent samples RSS, watchdog can overshoot between samples.',device:'NOT_CHECKED'};}
+}

@@ -1,0 +1,11 @@
+from pathlib import Path
+import datetime,hashlib,json,shutil,subprocess
+R=Path(__file__).resolve().parents[4];O=R/'evidence/betaintegrated01-m1control02/qa/owner-close01';O.mkdir();W=R/'native/betaintegrated01/.build/qa-owner03';W.mkdir();Q=Path(__file__).parent;core=R/'native/betaintegrated01/control01/src/vn/rtr/aeris/control01';base=R/'native/betaintegrated01/runtime/src/vn/rtr/aeris';foundation=R/'native/betaintegrated01/src/vn/rtr/aeris/betaintegrated01'
+src=[R/'native/betaintegrated01/control03/src/vn/rtr/aeris/control01/ControlOwner.java',R/'native/betaintegrated01/control02/src/vn/rtr/aeris/control01/ControlFlight.java']+[core/n for n in ('ControlAuthority.java','ControlSession.java','RcWire.java')]+[base/'beta01runtime'/n for n in ('Values.java','Mavlink.java','NativeSegments.java')]+[base/'native98'/n for n in ('Dialect95.java','Json.java')]+[foundation/n for n in ('RunLifecycle.java','ProviderDescriptor.java')]+[Q/n for n in ('ControlConfig.java','OwnerCloseQA.java')]+[R/'planning/betaintegrated01/m1control01/qa/ProfileFixture.java']
+pins=lambda:{str(p.relative_to(R)):hashlib.sha256(p.read_bytes()).hexdigest()for p in src};before=pins();jdk=Path('/opt/homebrew/opt/openjdk/libexec/openjdk.jdk/Contents/Home/bin');logs=[];results=[]
+try:
+ c=subprocess.run([str(jdk/'javac'),'--release','8','-d',str(W),*map(str,src)],capture_output=True,text=True,timeout=60);logs.append({'kind':'javac','exit':c.returncode,'stdout':c.stdout,'stderr':c.stderr})
+ if c.returncode==0:
+  c=subprocess.run([str(jdk/'java'),'-cp',str(W),'OwnerCloseQA',str(O/'fixtures')],capture_output=True,text=True,timeout=45);logs.append({'kind':'java','exit':c.returncode,'stdout':c.stdout,'stderr':c.stderr});results=json.loads(c.stdout)['results']if c.returncode==0 else[]
+finally:shutil.rmtree(W)
+r={'atUTC':datetime.datetime.now(datetime.timezone.utc).isoformat(),'status':'PASS'if results and all(x['pass']for x in results)and before==pins()else'FAIL','results':results,'sourceBefore':before,'sourceAfter':pins(),'commands':logs,'scope':'ActualOwner03IOloop+actualSession/journal, immutabletestconfigcarrierstub/fakeConnection; realfilefsync. NoOSsocket/AP/Android/services.','scratchRemoved':not W.exists()};(O/'results.json').open('x').write(json.dumps(r,indent=2)+'\n');print(json.dumps({'status':r['status'],'failed':[x['id']for x in results if not x['pass']]}))

@@ -1,0 +1,14 @@
+from pathlib import Path
+import hashlib,json,tarfile,subprocess,shutil,datetime
+R=Path(__file__).resolve().parents[4];Q=Path(__file__).parent;O=R/'evidence/betaintegrated01-m1cockpit03/qa/reader-old-actual01';O.mkdir();C=R/'evidence/betaintegrated01-m1control02/actual-nominal03/control';meta=json.loads((C/'native-export-location.json').read_text());T=Path(meta['path']);assert hashlib.sha256(T.read_bytes()).hexdigest()==meta['sha256'];D=O/'native';D.mkdir();prefix='files/control-runs/m1c02-nominal03/'
+with tarfile.open(T) as t:
+ for m in t:
+  if m.isfile() and m.name.startswith(prefix):
+   rel=m.name[len(prefix):];assert '/' not in rel;(D/rel).write_bytes(t.extractfile(m).read())
+b=json.loads((C/'launch-binding.json').read_text());link={k:b[k]for k in ['run','epoch','boot','generation','operator','profileId','modelSHA256','configSHA256']};link.update(APSHA256=b['binarySHA256'],surveyRevision=1,surveySHA256='a'*64);(O/'link.json').write_text(json.dumps(link));(O/'terminal.json').write_text(json.dumps(json.loads((C/'external-anchors.json').read_text())['nativeClosedCheckpoint']))
+base=R/'native/betaintegrated01/runtime/src/vn/rtr/aeris';prod=R/'native/betaintegrated01/cockpit03/src/vn/rtr/aeris/cockpit03';src=[prod/'WorkspaceStore.java',prod/'ClosedReview.java',*[base/'beta01runtime'/n for n in ['NativeSegments.java','Mavlink.java','Values.java']],*[base/'native98'/n for n in ['Dialect95.java','Json.java']],Q/'json/org/json/JSONObject.java',Q/'json/org/json/JSONArray.java',Q/'ExistingReviewQA.java'];pins=lambda:{str(p.relative_to(R)):hashlib.sha256(p.read_bytes()).hexdigest()for p in src};before=pins();W=R/'native/betaintegrated01/.build/qa-oldreader';W.mkdir();jar=Path('/opt/homebrew/share/android-commandlinetools/cmdline-tools/latest/lib/external/com/google/code/gson/gson/2.11.0/gson-2.11.0.jar');J=Path('/opt/homebrew/opt/openjdk/libexec/openjdk.jdk/Contents/Home/bin');logs=[]
+try:
+ c=subprocess.run([str(J/'javac'),'--release','8','-cp',str(jar),'-d',str(W),*map(str,src)],capture_output=True,text=True);logs.append(dict(exit=c.returncode,out=c.stdout,err=c.stderr));assert c.returncode==0
+ c=subprocess.run([str(J/'java'),'-cp',str(W)+':'+str(jar),'ExistingReviewQA',str(D),str(O/'link.json'),str(O/'terminal.json')],capture_output=True,text=True);logs.append(dict(exit=c.returncode,out=c.stdout,err=c.stderr));result=json.loads(c.stdout)if c.returncode==0 else None
+finally:shutil.rmtree(W)
+r=dict(status='PASS'if result and isinstance(result['preflightContext'],dict)and result['completionClaim']is False and before==pins()else'FAIL',readerResult=result,sourceBefore=before,sourceAfter=pins(),logs=logs,oldTarSHA256=meta['sha256'],scope='Actual old CONTROL02 native bytes consumed by new reader with test-only Gson parser; synthetic draft link, NOT actual cockpit journey',scratchRemoved=not W.exists());(O/'results.json').write_text(json.dumps(r,indent=2));print(r['status'])

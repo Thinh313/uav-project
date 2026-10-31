@@ -1,0 +1,1240 @@
+webrtcbin
+Toggle navigation
+API References
+GStreamer core
+GStreamer Libraries
+GStreamer Plugins
+Application manual
+Tutorials
+webrtcbin
+This webrtcbin implements the majority of the W3's peerconnection API and
+implementation guide where possible. Generating offers, answers and setting
+local and remote SDP's are all supported.  Both media descriptions and
+descriptions involving data channels are supported.
+Each input/output pad is equivalent to a Track in W3 parlance which are
+added/removed from the bin.  The number of requested sink pads is the number
+of streams that will be sent to the receiver and will be associated with a
+GstWebRTCRTPTransceiver (very similar to W3 RTPTransceiver's).
+On the receiving side, RTPTransceiver's are created in response to setting
+a remote description.  Output pads for the receiving streams in the set
+description are also created when data is received.
+A TransportStream is created when needed in order to transport the data over
+the necessary DTLS/ICE channel to the peer.  The exact configuration depends
+on the negotiated SDP's between the peers based on the bundle and rtcp
+configuration.  Some cases are outlined below for a simple single
+audio/video/data session:
+max-bundle uses a single transport for all
+media/data transported.  Renegotiation involves adding/removing the
+necessary streams to the existing transports.
+max-compat involves two TransportStream per media stream
+to transport the rtp and the rtcp packets and a single TransportStream for
+all data channels.  Each stream change involves modifying the associated
+TransportStream/s as necessary.
+Hierarchy
+GObject
+╰──
+GInitiallyUnowned
+╰──
+GstObject
+╰──
+GstElement
+╰──
+GstBin
+╰──
+webrtcbin
+Implemented interfaces
+GstChildProxy
+Factory details
+Authors:
+– Matthew Waters
+Classification:
+–
+Filter/Network/WebRTC
+Rank
+– primary
+Plugin
+– webrtc
+Package
+– GStreamer Bad Plug-ins
+Pad Templates
+sink_%u
+application/x-rtp:
+Presence
+–
+request
+Direction
+–
+sink
+Object type
+–
+GstWebRTCBinSinkPad
+src_%u
+application/x-rtp:
+Presence
+–
+sometimes
+Direction
+–
+src
+Object type
+–
+GstWebRTCBinSrcPad
+Signals
+on-data-channel
+on_data_channel_callback (
+GstElement
+*
+object,
+GstWebRTCDataChannel
+*
+channel,
+gpointer
+udata)
+def on_data_channel_callback (object, channel, udata):
+    #python callback for the 'on-data-channel' signal
+function on_data_channel_callback(object:
+GstElement
+*
+object, channel:
+GstWebRTCDataChannel
+*
+channel, udata:
+gpointer
+udata): {
+    // javascript callback for the 'on-data-channel' signal
+}
+Parameters:
+object
+–
+the
+webrtcbin
+channel
+–
+the new
+GstWebRTCDataChannel
+udata
+–
+No description available
+Flags:
+Run Last
+on-ice-candidate
+on_ice_candidate_callback (
+GstElement
+*
+object,
+guint
+mline_index,
+gchararray
+candidate,
+gpointer
+udata)
+def on_ice_candidate_callback (object, mline_index, candidate, udata):
+    #python callback for the 'on-ice-candidate' signal
+function on_ice_candidate_callback(object:
+GstElement
+*
+object, mline_index:
+guint
+mline_index, candidate:
+gchararray
+candidate, udata:
+gpointer
+udata): {
+    // javascript callback for the 'on-ice-candidate' signal
+}
+Parameters:
+object
+–
+the
+webrtcbin
+mline_index
+–
+the index of the media description in the SDP
+candidate
+–
+the ICE candidate
+udata
+–
+No description available
+Flags:
+Run Last
+on-negotiation-needed
+on_negotiation_needed_callback (
+GstElement
+*
+object,
+gpointer
+udata)
+def on_negotiation_needed_callback (object, udata):
+    #python callback for the 'on-negotiation-needed' signal
+function on_negotiation_needed_callback(object:
+GstElement
+*
+object, udata:
+gpointer
+udata): {
+    // javascript callback for the 'on-negotiation-needed' signal
+}
+Parameters:
+object
+–
+the
+webrtcbin
+udata
+–
+No description available
+Flags:
+Run Last
+on-new-transceiver
+on_new_transceiver_callback (
+GstElement
+*
+object,
+GstWebRTCRTPTransceiver
+*
+candidate,
+gpointer
+udata)
+def on_new_transceiver_callback (object, candidate, udata):
+    #python callback for the 'on-new-transceiver' signal
+function on_new_transceiver_callback(object:
+GstElement
+*
+object, candidate:
+GstWebRTCRTPTransceiver
+*
+candidate, udata:
+gpointer
+udata): {
+    // javascript callback for the 'on-new-transceiver' signal
+}
+Parameters:
+object
+–
+the
+webrtcbin
+candidate
+–
+the new
+GstWebRTCRTPTransceiver
+udata
+–
+No description available
+Flags:
+Run Last
+prepare-data-channel
+prepare_data_channel_callback (
+GstElement
+*
+object,
+GstWebRTCDataChannel
+*
+channel,
+gboolean
+is_local,
+gpointer
+udata)
+def prepare_data_channel_callback (object, channel, is_local, udata):
+    #python callback for the 'prepare-data-channel' signal
+function prepare_data_channel_callback(object:
+GstElement
+*
+object, channel:
+GstWebRTCDataChannel
+*
+channel, is_local:
+gboolean
+is_local, udata:
+gpointer
+udata): {
+    // javascript callback for the 'prepare-data-channel' signal
+}
+Allows data-channel consumers to configure signal handlers on a newly
+created data-channel, before any data or state change has been notified.
+Parameters:
+object
+–
+the
+webrtcbin
+channel
+–
+the new
+GstWebRTCDataChannel
+is_local
+–
+Whether this channel is local or remote
+udata
+–
+No description available
+Flags:
+Run Last
+Since
+: 1.22
+request-aux-sender
+GstElement
+*
+request_aux_sender_callback (
+GstElement
+*
+object,
+GstWebRTCDTLSTransport
+*
+dtls-transport,
+gpointer
+udata)
+def request_aux_sender_callback (object, dtls-transport, udata):
+    #python callback for the 'request-aux-sender' signal
+function request_aux_sender_callback(object:
+GstElement
+*
+object, dtls-transport:
+GstWebRTCDTLSTransport
+*
+dtls-transport, udata:
+gpointer
+udata): {
+    // javascript callback for the 'request-aux-sender' signal
+}
+Request an AUX sender element for the given
+dtls
+-transport.
+Parameters:
+object
+–
+the
+webrtcbin
+dtls-transport
+–
+The
+GstWebRTCDTLSTransport
+object for which the aux
+sender will be used.
+udata
+–
+No description available
+Returns
+(
+GstElement
+*
+)
+–
+A new GStreamer element
+Flags:
+Run Last
+Since
+: 1.22
+request-post-rtp-aux-sender
+GstElement
+*
+request_post_rtp_aux_sender_callback (
+GstElement
+*
+object,
+GstWebRTCDTLSTransport
+*
+dtls-transport,
+gpointer
+udata)
+def request_post_rtp_aux_sender_callback (object, dtls-transport, udata):
+    #python callback for the 'request-post-rtp-aux-sender' signal
+function request_post_rtp_aux_sender_callback(object:
+GstElement
+*
+object, dtls-transport:
+GstWebRTCDTLSTransport
+*
+dtls-transport, udata:
+gpointer
+udata): {
+    // javascript callback for the 'request-post-rtp-aux-sender' signal
+}
+Request an AUX sender element for the given
+dtls
+-transport,
+that is placed between RTPBin and Transportbin..
+Parameters:
+object
+–
+the
+webrtcbin
+dtls-transport
+–
+The
+GstWebRTCDTLSTransport
+object for which the aux
+sender will be used.
+udata
+–
+No description available
+Returns
+(
+GstElement
+*
+)
+–
+A new GStreamer element
+Flags:
+Run Last
+Since
+: 1.26
+Action Signals
+add-ice-candidate
+g_signal_emit_by_name (object, "add-ice-candidate", mline_index, ice-candidate);
+ret = object.emit ("add-ice-candidate", mline_index, ice-candidate)
+let ret = object.emit ("add-ice-candidate", mline_index, ice-candidate);
+Parameters:
+object
+(
+GstElement
+*
+)
+–
+the
+webrtcbin
+mline_index
+(
+guint
+)
+–
+the index of the media description in the SDP
+ice-candidate
+(
+gchararray
+)
+–
+an ice candidate or NULL/"" to mark that no more candidates
+will arrive
+Flags:
+Run Last
+/
+Action
+add-ice-candidate-full
+g_signal_emit_by_name (object, "add-ice-candidate-full", mline_index, ice-candidate, promise);
+ret = object.emit ("add-ice-candidate-full", mline_index, ice-candidate, promise)
+let ret = object.emit ("add-ice-candidate-full", mline_index, ice-candidate, promise);
+Variant of the
+add-ice-candidate
+signal, allowing the call site to be
+notified using a
+GstPromise
+when the task has completed.
+Parameters:
+object
+(
+GstElement
+*
+)
+–
+the
+webrtcbin
+mline_index
+(
+guint
+)
+–
+the index of the media description in the SDP
+ice-candidate
+(
+gchararray
+)
+–
+an ice candidate or NULL/"" to mark that no more candidates
+will arrive
+promise
+(
+GstPromise
+*
+)
+–
+a
+GstPromise
+to be notified when the task is
+complete
+Flags:
+Run Last
+/
+Action
+Since
+: 1.24
+add-transceiver
+g_signal_emit_by_name (object, "add-transceiver", direction, caps, &ret);
+ret = object.emit ("add-transceiver", direction, caps)
+let ret = object.emit ("add-transceiver", direction, caps);
+Parameters:
+object
+(
+GstElement
+*
+)
+–
+the
+webrtcbin
+direction
+(
+GstWebRTCRTPTransceiverDirection
+*
+)
+–
+the direction of the new transceiver
+caps
+(
+GstCaps
+*
+)
+–
+the codec preferences for this transceiver
+Returns
+(
+GstWebRTCRTPTransceiver
+*
+)
+–
+the new
+GstWebRTCRTPTransceiver
+Flags:
+Run Last
+/
+Action
+add-turn-server
+g_signal_emit_by_name (object, "add-turn-server", uri, &ret);
+ret = object.emit ("add-turn-server", uri)
+let ret = object.emit ("add-turn-server", uri);
+Add a turn server to obtain ICE candidates from
+Parameters:
+object
+(
+GstElement
+*
+)
+–
+the
+webrtcbin
+uri
+(
+gchararray
+)
+–
+The uri of the server of the form turn(s)://username:password@host:port
+Returns
+(
+gboolean
+)
+–
+No description available
+Flags:
+Run Last
+/
+Action
+close
+g_signal_emit_by_name (object, "close", promise);
+ret = object.emit ("close", promise)
+let ret = object.emit ("close", promise);
+Invoke the close procedure as specified in
+https://www.w3.org/TR/webrtc/#dom-rtcpeerconnection-close.
+Parameters:
+object
+(
+GstElement
+*
+)
+–
+the
+webrtcbin
+promise
+(
+GstPromise
+*
+)
+–
+a
+GstPromise
+to be notified when the task is
+complete.
+Flags:
+Run Last
+/
+Action
+Since
+: 1.28
+create-answer
+g_signal_emit_by_name (object, "create-answer", options, promise);
+ret = object.emit ("create-answer", options, promise)
+let ret = object.emit ("create-answer", options, promise);
+Parameters:
+object
+(
+GstElement
+*
+)
+–
+the
+webrtcbin
+options
+(
+GstStructure
+*
+)
+–
+create-answer options
+promise
+(
+GstPromise
+*
+)
+–
+a
+GstPromise
+which will contain the answer
+Flags:
+Run Last
+/
+Action
+create-data-channel
+g_signal_emit_by_name (object, "create-data-channel", label, options, &ret);
+ret = object.emit ("create-data-channel", label, options)
+let ret = object.emit ("create-data-channel", label, options);
+The options dictionary is the same format as the RTCDataChannelInit
+members outlined https://www.w3.org/TR/webrtc/#dom-rtcdatachannelinit and
+and reproduced below
+ordered               G_TYPE_BOOLEAN        Whether the channal will send data with guaranteed ordering
+max-packet-lifetime   G_TYPE_INT            The time in milliseconds to attempt transmitting unacknowledged data. -1 for unset
+max-retransmits       G_TYPE_INT            The number of times data will be attempted to be transmitted without acknowledgement before dropping
+protocol              G_TYPE_STRING         The subprotocol used by this channel
+negotiated            G_TYPE_BOOLEAN        Whether the created data channel should not perform in-band chnanel announcement.  If
+TRUE
+, then application must negotiate the channel itself and create the corresponding channel on the peer with the same id.
+id                    G_TYPE_INT            Override the default identifier selection of this channel
+priority              GST_TYPE_WEBRTC_PRIORITY_TYPE   The priority to use for this channel
+Parameters:
+object
+(
+GstElement
+*
+)
+–
+the
+webrtcbin
+label
+(
+gchararray
+)
+–
+the label for the data channel
+options
+(
+GstStructure
+*
+)
+–
+a
+GstStructure
+of options for creating the data channel
+Returns
+(
+GstWebRTCDataChannel
+*
+)
+–
+a new data channel object
+Flags:
+Run Last
+/
+Action
+create-offer
+g_signal_emit_by_name (object, "create-offer", options, promise);
+ret = object.emit ("create-offer", options, promise)
+let ret = object.emit ("create-offer", options, promise);
+Parameters:
+object
+(
+GstElement
+*
+)
+–
+the
+webrtcbin
+options
+(
+GstStructure
+*
+)
+–
+create-offer options
+promise
+(
+GstPromise
+*
+)
+–
+a
+GstPromise
+which will contain the offer
+Flags:
+Run Last
+/
+Action
+get-stats
+g_signal_emit_by_name (object, "get-stats", pad, promise);
+ret = object.emit ("get-stats", pad, promise)
+let ret = object.emit ("get-stats", pad, promise);
+The
+promise
+will contain the result of retrieving the session statistics.
+The structure will be named 'application/x-webrtc-stats and contain the
+following based on the webrtc-stats spec available from
+https://www.w3.org/TR/webrtc-stats/.  As the webrtc-stats spec is a draft
+and is constantly changing these statistics may be changed to fit with
+the latest spec.
+Each field key is a unique identifier for each RTCStats
+(https://www.w3.org/TR/webrtc/#rtcstats-dictionary) value (another
+GstStructure) in the RTCStatsReport
+(https://www.w3.org/TR/webrtc/#rtcstatsreport-object).  Each supported
+field in the RTCStats subclass is outlined below.
+Each statistics structure contains the following values as defined by
+the RTCStats dictionary (https://www.w3.org/TR/webrtc/#rtcstats-dictionary).
+"timestamp"           G_TYPE_DOUBLE               timestamp the statistics were generated
+"type"                GST_TYPE_WEBRTC_STATS_TYPE  the type of statistics reported
+"id"                  G_TYPE_STRING               unique identifier
+RTCCodecStats supported fields (https://w3c.github.io/webrtc-stats/#codec-dict*)
+"payload-type"        G_TYPE_UINT                 the rtp payload number in use
+"clock-rate"          G_TYPE_UINT                 the rtp clock-rate
+RTCRTPStreamStats supported fields (https://w3c.github.io/webrtc-stats/#streamstats-dict*)
+"ssrc"                G_TYPE_STRING               the rtp sequence src in use
+"transport-id"        G_TYPE_STRING               identifier for the associated RTCTransportStats for this stream
+"codec-id"            G_TYPE_STRING               identifier for the associated RTCCodecStats for this stream
+"kind"                G_TYPE_STRING               either "audio" or "video", depending on the associated transceiver (Since: 1.22)
+RTCReceivedStreamStats supported fields (https://w3c.github.io/webrtc-stats/#receivedrtpstats-dict*)
+"packets-received"    G_TYPE_UINT64               number of packets received (only for local inbound)
+"packets-lost"        G_TYPE_INT64                number of packets lost
+"packets-discarded"   G_TYPE_UINT64               number of packets discarded
+"packets-repaired"    G_TYPE_UINT64               number of packets repaired
+"jitter"              G_TYPE_DOUBLE               packet jitter measured in seconds
+RTCInboundRTPStreamStats supported fields (https://w3c.github.io/webrtc-stats/#inboundrtpstats-dict*)
+"remote-id"           G_TYPE_STRING               identifier for the associated RTCRemoteOutboundRTPStreamStats
+"bytes-received"      G_TYPE_UINT64               number of bytes received (only for local inbound)
+"packets-duplicated"  G_TYPE_UINT64               number of packets duplicated
+"fir-count"           G_TYPE_UINT                 FIR packets sent by the receiver
+"pli-count"           G_TYPE_UINT                 PLI packets sent by the receiver
+"nack-count"          G_TYPE_UINT                 NACK packets sent by the receiver
+RTCRemoteInboundRTPStreamStats supported fields (https://w3c.github.io/webrtc-stats/#remoteinboundrtpstats-dict*)
+"local-id"            G_TYPE_STRING               identifier for the associated RTCOutboundRTPSTreamStats
+"round-trip-time"     G_TYPE_DOUBLE               round trip time of packets measured in seconds
+"fraction-lost"       G_TYPE_DOUBLE               fraction packet loss
+RTCSentRTPStreamStats supported fields (https://w3c.github.io/webrtc-stats/#sentrtpstats-dict*)
+"packets-sent"        G_TYPE_UINT64               number of packets sent (only for local outbound)
+"bytes-sent"          G_TYPE_UINT64               number of packets sent (only for local outbound)
+RTCOutboundRTPStreamStats supported fields (https://w3c.github.io/webrtc-stats/#outboundrtpstats-dict*)
+"remote-id"           G_TYPE_STRING               identifier for the associated RTCRemoteInboundRTPSTreamStats (optional since 1.22)
+"fir-count"           G_TYPE_UINT                 FIR packets received by the sender
+"pli-count"           G_TYPE_UINT                 PLI packets received by the sender
+"nack-count"          G_TYPE_UINT                 NACK packets received by the sender
+RTCRemoteOutboundRTPStreamStats supported fields (https://w3c.github.io/webrtc-stats/#remoteoutboundrtpstats-dict*)
+"local-id"            G_TYPE_STRING               identifier for the associated RTCInboundRTPSTreamStats
+"remote-timestamp"    G_TYPE_DOUBLE               remote timestamp the statistics were sent by the remote
+RTCTransportStats supported fields (https://www.w3.org/TR/webrtc-stats/#transportstats-dict*)
+"selected-candidate-pair-id" G_TYPE_STRING         identifier for the associated RTCIceCandidatePairStats
+"dtls-role"            GST_TYPE_WEBRTC_DTLS_ROLE   "client" or "server" depending on the DTLS role. "unknown" before the DTLS negotiation starts. (Since: 1.28)
+"dtls-state"           GST_TYPE_WEBRTC_DTLS_TRANSPORT_STATE current value of the state attribute of the underlying RTCDtlsTransport (Since: 1.28)
+"tls-version"          G_TYPE_STRING               for components where DTLS is negotiated, the TLS version agreed. Only exists after DTLS negotiation is complete (Since: 1.30)
+"dtls-cipher"          G_TYPE_STRING               descriptive name of the cipher suite used for the DTLS transport (Since: 1.30)
+"srtp-cipher"          G_TYPE_STRING               descriptive name of the protection profile used for the SRTP transport (Since: 1.30)
+RTCPeerConnectionStats supported fields (https://w3c.github.io/webrtc-stats/#pcstats-dict*) (Since: 1.24)
+"data-channels-opened"  G_TYPE_UINT               number of unique data channels that have entered the 'open' state
+"data-channels-closed"  G_TYPE_UINT               number of unique data channels that have left the 'open' state
+RTCIceCandidateStats supported fields (https://www.w3.org/TR/webrtc-stats/#icecandidate-dict*) (Since: 1.22)
+"transport-id"         G_TYPE_STRING              identifier for the associated RTCTransportStats for this stream
+"address"              G_TYPE_STRING              address of the candidate, allowing for IPv4, IPv6 and FQDNs
+"port"                 G_TYPE_UINT                port number of the candidate
+"candidate-type"       G_TYPE_STRING              RTCIceCandidateType
+"priority"             G_TYPE_UINT                calculated as defined in RFC 5245
+"protocol"             G_TYPE_STRING              Either "udp" or "tcp". Based on the "transport" defined in RFC 5245
+"relay-protocol"       G_TYPE_STRING              protocol used by the endpoint to communicate with the TURN server. Only present for local candidates. Either "udp", "tcp" or "tls"
+"url"                  G_TYPE_STRING              URL of the ICE server from which the candidate was obtained. Only present for local candidates
+"foundation"            G_TYPE_STRING              ICE foundation as defined in RFC 5245 section 15.1 (Since: 1.28)
+"related-address"       G_TYPE_STRING              ICE rel-addr as defined in RFC 5245 section 15.1. Only set for server-reflexive, peer-reflexive and relay candidates (Since: 1.28)
+"related-port"          G_TYPE_UINT                ICE rel-port as defined in RFC 5245 section 15.1. Only set for serverreflexive, peer-reflexive and relay candidates (Since: 1.28)
+"username-fragment"     G_TYPE_STRING              ICE username fragment as defined in RFC 5245 section 7.1.2.3 (Since: 1.28)
+"tcp-type"              G_TYPE_STRING              ICE candidate TCP type as defined in RTCIceTcpCandidateType (Since: 1.28)
+RTCIceCandidatePairStats supported fields (https://www.w3.org/TR/webrtc-stats/#candidatepair-dict*) (Since: 1.22)
+"local-candidate-id"  G_TYPE_STRING               unique identifier that is associated to the object that was inspected to produce the RTCIceCandidateStats for the local candidate associated with this candidate pair.
+"remote-candidate-id" G_TYPE_STRING               unique identifier that is associated to the object that was inspected to produce the RTCIceCandidateStats for the remote candidate associated with this candidate pair.
+RTCCertificateStats supported fields (https://www.w3.org/TR/webrtc-stats/#certificatestats-dict*) (Since: 1.30)
+"fingerprint"           G_TYPE_STRING             The fingerprint of the certificate. Only use the fingerprint value as defined in Section 5 of [RFC4572].
+"fingerprint-algorithm" G_TYPE_STRING             The hash function used to compute the certificate fingerprint.
+"base64-certificate"    G_TYPE_STRING             The DER-encoded base-64 representation of the certificate.
+Parameters:
+object
+(
+GstElement
+*
+)
+–
+the
+webrtcbin
+pad
+(
+GstPad
+*
+)
+–
+A
+GstPad
+to get the stats for, or
+NULL
+for all
+promise
+(
+GstPromise
+*
+)
+–
+a
+GstPromise
+for the result
+Flags:
+Run Last
+/
+Action
+get-transceiver
+g_signal_emit_by_name (object, "get-transceiver", idx, &ret);
+ret = object.emit ("get-transceiver", idx)
+let ret = object.emit ("get-transceiver", idx);
+Parameters:
+object
+(
+GstElement
+*
+)
+–
+the
+webrtcbin
+idx
+(
+gint
+)
+–
+The index of the transceiver
+Returns
+(
+GstWebRTCRTPTransceiver
+*
+)
+–
+the
+GstWebRTCRTPTransceiver
+, or
+NULL
+Flags:
+Run Last
+/
+Action
+Since
+: 1.16
+get-transceivers
+g_signal_emit_by_name (object, "get-transceivers", &ret);
+ret = object.emit ("get-transceivers")
+let ret = object.emit ("get-transceivers");
+Parameters:
+object
+(
+GstElement
+*
+)
+–
+the
+webrtcbin
+Returns
+(
+GArray
+*
+)
+–
+a
+GArray
+of
+GstWebRTCRTPTransceiver
+Flags:
+Run Last
+/
+Action
+set-local-description
+g_signal_emit_by_name (object, "set-local-description", desc, promise);
+ret = object.emit ("set-local-description", desc, promise)
+let ret = object.emit ("set-local-description", desc, promise);
+Parameters:
+object
+(
+GstElement
+*
+)
+–
+the
+webrtcbin
+desc
+(
+GstWebRTCSessionDescription
+*
+)
+–
+a
+GstWebRTCSessionDescription
+description
+promise
+(
+GstPromise
+*
+)
+–
+a
+GstPromise
+to be notified when it's set
+Flags:
+Run Last
+/
+Action
+set-remote-description
+g_signal_emit_by_name (object, "set-remote-description", desc, promise);
+ret = object.emit ("set-remote-description", desc, promise)
+let ret = object.emit ("set-remote-description", desc, promise);
+Parameters:
+object
+(
+GstElement
+*
+)
+–
+the
+webrtcbin
+desc
+(
+GstWebRTCSessionDescription
+*
+)
+–
+a
+GstWebRTCSessionDescription
+description
+promise
+(
+GstPromise
+*
+)
+–
+a
+GstPromise
+to be notified when it's set
+Flags:
+Run Last
+/
+Action
+Properties
+bundle-policy
+“bundle-policy”
+GstWebRTCBundlePolicy
+*
+The policy to apply for bundling
+Flags :	
+	
+		
+				Read
+			
+				/		
+				Write
+Default value :	none (0)
+connection-state
+“connection-state”
+GstWebRTCPeerConnectionState
+*
+The overall connection state of this element
+Flags :	
+	
+		
+				Read
+Default value :	new (0)
+current-local-description
+“current-local-description”
+GstWebRTCSessionDescription
+*
+The local description that was successfully negotiated the last time the connection transitioned into the stable state
+Flags :	
+	
+		
+				Read
+current-remote-description
+“current-remote-description”
+GstWebRTCSessionDescription
+*
+The last remote description that was successfully negotiated the last time the connection transitioned into the stable state plus any remote candidates that have been supplied via addIceCandidate since the offer or answer was created
+Flags :	
+	
+		
+				Read
+http-proxy
+“http-proxy”
+gchararray
+A HTTP proxy for use with TURN/TCP of the form
+http://[username:password@]hostname[:port][?alpn=
+]
+Flags :	
+	
+		
+				Read
+			
+				/		
+				Write
+Default value :	NULL
+Since
+: 1.22
+ice-agent
+“ice-agent”
+GstWebRTCICE
+*
+The WebRTC ICE agent
+Flags :	
+	
+		
+				Read
+			
+				/		
+				Write
+			
+				/		
+				Construct Only
+ice-connection-state
+“ice-connection-state”
+GstWebRTCICEConnectionState
+*
+The collective connection state of all ICETransport's
+Flags :	
+	
+		
+				Read
+Default value :	new (0)
+ice-gathering-state
+“ice-gathering-state”
+GstWebRTCICEGatheringState
+*
+The collective gathering state of all ICETransport's
+Flags :	
+	
+		
+				Read
+Default value :	new (0)
+ice-transport-policy
+“ice-transport-policy”
+GstWebRTCICETransportPolicy
+*
+The policy to apply for ICE transport
+Flags :	
+	
+		
+				Read
+			
+				/		
+				Write
+Default value :	all (0)
+latency
+“latency”
+guint
+Default duration to buffer in the jitterbuffers (in ms)
+Flags :	
+	
+		
+				Read
+			
+				/		
+				Write
+Default value :	200
+Since
+: 1.18
+local-description
+“local-description”
+GstWebRTCSessionDescription
+*
+The local SDP description in use for this connection. Favours a pending description over the current description
+Flags :	
+	
+		
+				Read
+pending-local-description
+“pending-local-description”
+GstWebRTCSessionDescription
+*
+The local description that is in the process of being negotiated plus any local candidates that have been generated by the ICE Agent since the offer or answer was created
+Flags :	
+	
+		
+				Read
+pending-remote-description
+“pending-remote-description”
+GstWebRTCSessionDescription
+*
+The remote description that is in the process of being negotiated, complete with any remote candidates that have been supplied via addIceCandidate since the offer or answer was created
+Flags :	
+	
+		
+				Read
+remote-description
+“remote-description”
+GstWebRTCSessionDescription
+*
+The remote SDP description to use for this connection. Favours a pending description over the current description
+Flags :	
+	
+		
+				Read
+reuse-source-pads
+“reuse-source-pads”
+gboolean
+When set to FALSE, if a transceiver becomes send-only or inactive then
+pre-existing source pads will receive an EOS event and no further traffic
+even after further renegotiation. When TRUE, pads will simply not
+receive any output when the negotiated transceiver state doesn't have
+incoming traffic. If renegotiated later, the pad will receive data again.
+Flags :	
+	
+		
+				Read
+			
+				/		
+				Write
+Default value :	false
+Since
+: 1.26
+sctp-transport
+“sctp-transport”
+GstWebRTCSCTPTransport
+*
+The WebRTC SCTP Transport
+Flags :	
+	
+		
+				Read
+Since
+: 1.20
+signaling-state
+“signaling-state”
+GstWebRTCSignalingState
+*
+The signaling state of this element
+Flags :	
+	
+		
+				Read
+Default value :	stable (0)
+stun-server
+“stun-server”
+gchararray
+The STUN server of the form stun://hostname:port
+Flags :	
+	
+		
+				Read
+			
+				/		
+				Write
+Default value :	NULL
+turn-server
+“turn-server”
+gchararray
+The TURN server of the form turn(s)://username:password@host:port. To use time-limited credentials, the form must be turn(s)://timestamp:username:password@host:port. Please note that the ':' character of the 'timestamp:username' and the 'password' encoded by base64 should be escaped to be parsed properly. This is a convenience property, use
+add-turn-server
+if you wish to use multiple TURN servers
+Flags :	
+	
+		
+				Read
+			
+				/		
+				Write
+Default value :	NULL
+GstWebRTCBinPad
+GObject
+╰──
+GInitiallyUnowned
+╰──
+GstObject
+╰──
+GstPad
+╰──
+GstProxyPad
+╰──
+GstGhostPad
+╰──
+GstWebRTCBinPad
+Properties
+transceiver
+“transceiver”
+GstWebRTCRTPTransceiver
+*
+Transceiver associated with this pad
+Flags :	
+	
+		
+				Read
+GstWebRTCBinSinkPad
+GObject
+╰──
+GInitiallyUnowned
+╰──
+GstObject
+╰──
+GstPad
+╰──
+GstProxyPad
+╰──
+GstGhostPad
+╰──
+GstWebRTCBinPad
+╰──
+GstWebRTCBinSinkPad
+Since
+: 1.22
+Properties
+msid
+“msid”
+gchararray
+The MediaStream Identifier to use for this pad (MediaStreamTrack).
+Fallback is the RTP SDES cname value if not provided.
+Flags :	
+	
+		
+				Read
+			
+				/		
+				Write
+Default value :	NULL
+Since
+: 1.22
+GstWebRTCBinSrcPad
+GObject
+╰──
+GInitiallyUnowned
+╰──
+GstObject
+╰──
+GstPad
+╰──
+GstProxyPad
+╰──
+GstGhostPad
+╰──
+GstWebRTCBinPad
+╰──
+GstWebRTCBinSrcPad
+Since
+: 1.22
+Properties
+msid
+“msid”
+gchararray
+The MediaStream Identifier the remote peer used for this pad (MediaStreamTrack).
+Will be NULL if not advertised in the remote SDP.
+Flags :	
+	
+		
+				Read
+Default value :	NULL
+Since
+: 1.22
+The results of the search are

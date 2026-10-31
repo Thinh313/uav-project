@@ -1,0 +1,3 @@
+# ADR070 — preserve physics and publication while attributing host waits
+
+Accepted scoped diagnostic derivative. PACE58 observed538ms wall versus0.69ms CPU on one frame but did not locate the wait. Instrument explicit syscall sites, never globally monkeypatch os across observer threads. Original model/AP/WAL format, speedup1 and500ms cap stay fixed. Store raw syscall observations in preallocated memory, seal only after frame processing. Compare backend-thread and separate-process wake lateness to expose possible GIL/host differences. These are proxies, not a kernel scheduler trace; syscall wall can include preemption. No causal proof from temporal correlation alone. No observer-free timing claim.

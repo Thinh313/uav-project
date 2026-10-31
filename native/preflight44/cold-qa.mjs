@@ -1,0 +1,10 @@
+import assert from 'node:assert/strict';
+import {writeFile} from 'node:fs/promises';
+import {corpus43,replayCorpus43} from '../../pilot/preflight43/corpus.mjs';
+import {coldLifecycle43} from '../../pilot/preflight43/cold-lifecycle.mjs';
+import {replay43} from '../../pilot/preflight43/replay.mjs';
+import {replay as replay42} from '../../pilot/flightsafety42/replay.mjs';
+const corpus=replayCorpus43(corpus43());assert.ok(corpus.every(r=>r.pass));
+const lifecycle=coldLifecycle43(),raw43=await replay43('run02'),raw42=await replay42('run03');
+await writeFile('evidence/native44/cold-regression1.json',JSON.stringify({status:'PASS',corpus43:corpus,lifecycle43:lifecycle,raw43,raw42,scope:'Cold replay of existing evidence only; noSITL/flight/newoldnamespacewrites'},null,2)+'\n',{flag:'wx'});
+console.log(JSON.stringify({status:'PASS',corpus:corpus.length,lifecycle:lifecycle.length,raw42:raw42.checkCount,raw43Sessions:raw43.sessions.length}));

@@ -1,0 +1,11 @@
+from ui98 import *
+owned();run=sys.argv[1];mode=sys.argv[2];out=E/'runs'/run
+wait98(run,'TAKEOFF_GEOMETRY_OBSERVED',seconds=35);workspace98();value97('value97',-30);capture(run+'-explicit-pitch');tap98('claim-payload-b');assert state98(run)['apArmed']is True;tap98('capture-payload-b')
+if mode=='nominal':
+ for op in ['authority','gimbal']:
+  if op=='authority':wait98(run,'PAYLOAD_STATE',lambda s:any(t['operation']=='capture'and t['state']=='OBSERVATION_CONSISTENT_UNATTRIBUTED'for t in s['transactions']),5)
+  tap98(op+'-payload-b');wait98(run,'PAYLOAD_STATE',lambda s:any(t['operation']==op and t['state']=='OBSERVATION_CONSISTENT_UNATTRIBUTED'for t in s['transactions']),5)
+ capture(run+'-airborne-camera-gimbal');s=state98(run);assert s['apArmed']and s['open'];(out/'airborne-ui98.json').open('x').write(json.dumps({'status':'PASS','roles':'pilot flight grant and separate local payload-b scope','payloadState':s,'actualImages':0,'executionProven':False,'source':'Real Android UI, synthetic peer feedback via AP'},indent=2));tap94('Preflight / Fly SITL');capture(run+'-mission-and-payload')
+else:
+ wait98(run,'PAYLOAD_STATE',lambda s:any(t['operation']=='capture'and t['state']=='SENT_UNCONFIRMED'for t in s['transactions']),3);capture(run+'-pending-capture-before-loss');tap94('Preflight / Fly SITL');x=find97('cut-native96');(out/'fault-cut-host.json').open('x').write(json.dumps({'beforeTapHostNs':time.monotonic_ns(),'actualUIControl':'cut-native96','coordinates':x,'hostFlightPayloadBytes':0}));adb('shell','input','tap',round((x['x']+x['right'])/2),round((x['y']+x['bottom'])/2));wait98(run,'CLOSED',seconds=5);s=state98(run);assert s['phase']=='CLOSED'and not s['open']and all(p['ownerSid']is None for p in s['payloads'])and all(not a['alive']for a in s['stations']);assert any(t['operation']=='capture'and t['state'].startswith('UNKNOWN_')for t in s['transactions']);capture(run+'-loss-revoked');(out/'loss-native98.json').open('x').write(json.dumps({'status':'PASS','payloadState':s,'nativeClosed':events98(run,'CLOSED')[-1][1],'rawSha256AtClose':hashlib.sha256(raw98(run)).hexdigest(),'actualImages':0,'authorityRestorable':False},indent=2))
+print('AIRBORNE_PAYLOAD_'+mode+'_UI_DONE',flush=True)

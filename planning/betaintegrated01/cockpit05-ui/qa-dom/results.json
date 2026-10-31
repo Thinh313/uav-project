@@ -1,0 +1,267 @@
+{
+  "status": "PASS_DOM_DOUBLE_NOT_VISUAL",
+  "groups": 63,
+  "cases": [
+    {
+      "case": "BOOT_loads_native_epoch_only",
+      "status": "PASS"
+    },
+    {
+      "case": "nav_preflight_not_optimistic",
+      "status": "PASS"
+    },
+    {
+      "case": "nav_preflight_accepted_only",
+      "status": "PASS"
+    },
+    {
+      "case": "nav_fly_not_optimistic",
+      "status": "PASS"
+    },
+    {
+      "case": "nav_fly_accepted_only",
+      "status": "PASS"
+    },
+    {
+      "case": "nav_review_not_optimistic",
+      "status": "PASS"
+    },
+    {
+      "case": "nav_review_accepted_only",
+      "status": "PASS"
+    },
+    {
+      "case": "no_session_Fly_allows_exit",
+      "status": "PASS"
+    },
+    {
+      "case": "only_narrow_native_bridge_types",
+      "status": "PASS"
+    },
+    {
+      "case": "NO_SESSION_local_tick_zero_DOM_churn",
+      "status": "PASS"
+    },
+    {
+      "case": "unchanged_NO_SESSION_push_zero_DOM_churn",
+      "status": "PASS"
+    },
+    {
+      "case": "save_validated_revision0_geometry",
+      "status": "PASS"
+    },
+    {
+      "case": "native_save_ack_displays_SHA",
+      "status": "PASS"
+    },
+    {
+      "case": "saved_revision_persists_across_view",
+      "status": "PASS"
+    },
+    {
+      "case": "active_owner_Fly_locked_until_close",
+      "status": "PASS"
+    },
+    {
+      "case": "unsolicited_callback_rejected",
+      "status": "PASS"
+    },
+    {
+      "case": "old_epoch_callback_rejected",
+      "status": "PASS"
+    },
+    {
+      "case": "stale_push_doesnot_navigate",
+      "status": "PASS"
+    },
+    {
+      "case": "theme_sun_changes_to_moon",
+      "status": "PASS"
+    },
+    {
+      "case": "theme_moon_changes_to_sun",
+      "status": "PASS"
+    },
+    {
+      "case": "qualified_numeric_zero_is_valid",
+      "status": "PASS"
+    },
+    {
+      "case": "startup00_withoutGPS_is_unknown",
+      "status": "PASS"
+    },
+    {
+      "case": "stale_position_is_unknown",
+      "status": "PASS"
+    },
+    {
+      "case": "closed_native_not_active_telemetry",
+      "status": "PASS"
+    },
+    {
+      "case": "unknown_remains_unknown",
+      "status": "PASS"
+    },
+    {
+      "case": "draft_foreignDatum_rejected",
+      "status": "PASS"
+    },
+    {
+      "case": "draft_nonfinite_rejected",
+      "status": "PASS"
+    },
+    {
+      "case": "draft_tooHigh_rejected",
+      "status": "PASS"
+    },
+    {
+      "case": "draft_tooMany_rejected",
+      "status": "PASS"
+    },
+    {
+      "case": "draft_degenerate_rejected",
+      "status": "PASS"
+    },
+    {
+      "case": "valid_corridor_supported",
+      "status": "PASS"
+    },
+    {
+      "case": "review_never_promotes_ground_to_complete",
+      "status": "PASS"
+    },
+    {
+      "case": "pending_review_never_says_closed",
+      "status": "PASS"
+    },
+    {
+      "case": "startup_trajectory_not_drawn_and_gaps_break",
+      "status": "PASS"
+    },
+    {
+      "case": "imported_name_is_text_only",
+      "status": "PASS"
+    },
+    {
+      "case": "restart_ignores_old_push_beforeBOOT",
+      "status": "PASS"
+    },
+    {
+      "case": "future_position_is_unknown",
+      "status": "PASS"
+    },
+    {
+      "case": "future_heartbeat_is_unknown",
+      "status": "PASS"
+    },
+    {
+      "case": "future_snapshot_is_unknown",
+      "status": "PASS"
+    },
+    {
+      "case": "active_owner_edit_lock_before_arm",
+      "status": "PASS"
+    },
+    {
+      "case": "review_queries_bounded_selected_detail",
+      "status": "PASS"
+    },
+    {
+      "case": "selected_detail_trajectory_rendered",
+      "status": "PASS"
+    },
+    {
+      "case": "thinPUSH_doesnot_clear_detail_cache",
+      "status": "PASS"
+    },
+    {
+      "case": "FlyNO_SESSION_has_no_blank_Home_underlay",
+      "status": "PASS"
+    },
+    {
+      "case": "observed_Home_hash_shows_underlay",
+      "status": "PASS"
+    },
+    {
+      "case": "Home_underlay_remains_Flyonly",
+      "status": "PASS"
+    },
+    {
+      "case": "unknown_Home_hash_never_reveals_blank_box",
+      "status": "PASS"
+    },
+    {
+      "case": "transparent_WebView_tap_highlight",
+      "status": "PASS"
+    },
+    {
+      "case": "gold_focus_visible_retained",
+      "status": "PASS"
+    },
+    {
+      "case": "presentation_ACK_not_immediate",
+      "status": "PASS"
+    },
+    {
+      "case": "presentation_ACK_waits_two_RAF_double",
+      "status": "PASS"
+    },
+    {
+      "case": "BOOT_ACK_once_after_two_RAF",
+      "status": "PASS"
+    },
+    {
+      "case": "same_view_PUSH_doesnot_ACK_loop",
+      "status": "PASS"
+    },
+    {
+      "case": "stale_RAF_viewgeneration_cancelled",
+      "status": "PASS"
+    },
+    {
+      "case": "no_automatic_presentation_ACK_retry",
+      "status": "PASS"
+    },
+    {
+      "case": "review_no_leading_gold_inset",
+      "status": "PASS"
+    },
+    {
+      "case": "review_flat_two_pixel_rows",
+      "status": "PASS"
+    },
+    {
+      "case": "notice_neutral_info_wrapper",
+      "status": "PASS"
+    },
+    {
+      "case": "notice_no_gold_left_border",
+      "status": "PASS"
+    },
+    {
+      "case": "active_nav_no_leading_curve",
+      "status": "PASS"
+    },
+    {
+      "case": "selected_row_trailing_check_noncolor_cue",
+      "status": "PASS"
+    },
+    {
+      "case": "selected_row_accessible_name",
+      "status": "PASS"
+    },
+    {
+      "case": "mock_preview_explicit_no_real_connection",
+      "status": "PASS"
+    }
+  ],
+  "sourceSHA256": {
+    "planning/betaintegrated01/cockpit05-ui/assets/index.html": "5aceda3931bd7cd8c87853bdc1d5c30916d457740352f76f56c8d1b701e20a0e",
+    "planning/betaintegrated01/cockpit05-ui/assets/cockpit.css": "4ebd481fc6adad371e1132bd15e7beeb1b58b02da83e0555a46cde20495130f6",
+    "planning/betaintegrated01/cockpit05-ui/assets/model.js": "b3be3407ff2c501ca48bae40f29bbbb4cd7d12db13e5f2659409558363f4dcb7",
+    "planning/betaintegrated01/cockpit05-ui/assets/app.js": "4b520fd08f531159f8b318d68a1891687c853cb0fe3531390301436ce32d6030"
+  },
+  "servicesStarted": 0,
+  "AndroidStarts": 0,
+  "scope": "DeterministicDOM/nativebridge doubles +modelpolicy; no browser/WebViewrender/GPU/visualQA claimed"
+}

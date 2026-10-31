@@ -1,0 +1,7 @@
+{
+  "release": "v5.1.5",
+  "commit": "3a67d31f0c36bf3fe38ec52970d250a89d0aaf67",
+  "releaseUrl": "https://github.com/mavlink/qgroundcontrol/releases/tag/v5.1.5",
+  "publishedAt": "2026-10-01T17:43:23Z",
+  "scope": "Schema reference only; QGC binary execution NOT_CHECKED"
+}

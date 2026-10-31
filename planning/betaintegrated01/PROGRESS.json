@@ -1,0 +1,20 @@
+{
+  "format": "aeris-beta-campaign-progress",
+  "version": 1,
+  "atUTC": "2026-10-26T17:06:40.179511+00:00",
+  "planSHA256": "2d266d21fc095c5ba34c9b175bf82a823a6b31f514622dd7efb03621863fe614",
+  "milestones": {
+    "M0": "SOURCE_HANDOFF_COMPLETE_READY_FOR_M1_MOCK",
+    "M1": "NOT_STARTED_ADMISSION_REFUSED",
+    "M2": "NOT_STARTED",
+    "M3": "NOT_STARTED",
+    "M4": "NOT_STARTED",
+    "M5": "NOT_STARTED",
+    "M6": "NOT_STARTED"
+  },
+  "M0Verification": "evidence/betaintegrated01-m0/verification-final01.json",
+  "M1Admission": "evidence/betaintegrated01-m0/m1-admission-refused01.json",
+  "allBetaRequirementsStillNotChecked": true,
+  "betaReady": false,
+  "actualRuntimeOrHardwareAcceptanceClaim": false
+}

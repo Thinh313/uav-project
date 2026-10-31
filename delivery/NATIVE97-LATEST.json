@@ -1,0 +1,11 @@
+{
+  "milestone": "NATIVE97",
+  "status": "PASS_ENGINEERING_SCOPED",
+  "apk": "native/native97/dist/aeris-native97-development07.apk",
+  "sha256": "eb0a32f02564a8e7c12a883a6392a16145fe9b6588276ccb96414862340a161a",
+  "sourceId": "641f7503f8fc77eccbc47a33a903869d8bc4f3626880283de9f57e3024e211cd",
+  "report": "delivery/COMPLETION-NATIVE97.html",
+  "verification": "evidence/native97/final-verification.json",
+  "hardwareChecked": false,
+  "productionSigned": false
+}

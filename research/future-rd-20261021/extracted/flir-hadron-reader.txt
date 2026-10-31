@@ -1,0 +1,337 @@
+Hadron 640 Series - High Performance, Dual Thermal and Visible OEM Camera Module | Teledyne FLIR OEM (https://www.oem.flir.com/products/hadron-640/)
+citeturn230view1 [wordlim: 200] Crawled: today; Content type: text/html; Source: open({"ref_id":"https://www.oem.flir.com/products/hadron-640/","lineno":null}); Total lines: 391
+L0: [Input] [Input]
+L1: 
+L2: cite0†Skip to main content [Input]
+L3: 
+L4:   *   *   * [Input] [Input]
+L5: 
+L6: [Input: Search By Product or Keyword]
+L7: 
+L8:   * Account
+L9: 
+L10:     * cite1†Log In L11:     * cite1†Sign Up L12: 
+L13:   * Added to Compare
+L14: 
+L15: Removed from Compare
+L16: 
+L17: You’ve added 1 of 10 models. Add another to start comparing.
+L18: 
+L19: To Compare:
+L20: 
+L21: Compare Models
+L22: 
+L23: Compare
+L24: 
+L25:   * Region
+L26: 
+L27:   * You must be logged in to download this content. Please cite2†sign in or create an account here. L28: 
+L29: Added to cart
+L30: 
+L31: Continue shopping
+L32: 
+L33: Model:
+L34: 
+L35: -
+L36: 
+L37: [Input]
+L38: 
+L39: +
+L40: cite3†Shop all accessories for this product L41: 
+L42: Go to cart
+L43: 
+L44: Continue shopping
+L45: 
+L46: Your order qualifies for free 2-day shipping and easy returns
+L47: 
+L48: Recommended for you
+L49: 
+L50: High Performance, Dual Thermal and Visible OEM Camera Module
+L51: # Hadron 640
+L52: The NDAA compliant and ITAR free Hadron™ 640 series pairs a 64 MP visible camera with a performance-leading 640x512 resolution radiometric Boson® or Boson+ thermal camera in a single easy-to-integrate module. With a size, weight, and power (SWaP) optimized design, it is an ideal dual sensor payload for integration into unmanned aircraft systems (UAS), unmanned ground vehicles (UGV), robotic platforms, and emerging AI applications using Teledyne FLIR Prism™ software.
+L53: Hadron 640 models share mechanical and electrical interfaces simplifying design. Compatible with Teledyne FLIR’s Prism AI detection, tracking, and classification models and Prism ISP libraries for super-resolution, turbulence mitigation, contrast enhancement, and more, Hadron 640 series enables effective AI-based applications.
+L54: With drivers available for market leading processors from NVIDIA®, Qualcomm®, and more plus industry-leading integration support, Hadron 640 series minimizes development cost and time to market.
+L55: Evaluate Prism with the Hadron 640 series using the Prism Development Kit for Qualcomm RB5 today.
+L56: cite4†Watch Video L57: 
+L58: cite5†Image: Hadron 640 L59: 
+L60: cite6†Image†img.youtube.com L61: 
+L62: This video is unavailable due to your cookie settings.
+L63: 
+L64: 
+L65: 
+L66: cite7†Image: Hadron-PDP-Pillar1-Images-Industry-Leading-Thermal-and-Visible-Camera-Performance.jpg L67: ### INDUSTRY-LEADING THERMAL AND VISIBLE CAMERA PERFORMANCE
+L68: 
+L69: Collect high-speed, dual VGA radiometric thermal and HD visible imagery in all light conditions.
+L70: 
+L71:   * AI-ready with Teledyne FLIR Prism AI and ISP
+L72:   * 64MP visible camera resolution
+L73:   * Available radiometric, 640x512 resolution Boson+ provides industry
+L74: leading NEDT of ≤20 mK
+L75:   * Flexible dual 60 Hz video output via USB or MIPI
+L76: 
+L77: 
+L78: 
+L79: cite8†Image: Hadron-PDP-Pillar2-Images-Built-for-Integrators.jpg L80: ### BUILT FOR INTEGRATORS
+L81: 
+L82: Reduce development cost and time to market with solution from a single, reliable supplier
+L83: 
+L84:   * ITAR free and classified under US Department of Commerce jurisdiction as ECCN 6A003.b.4.b
+L85:   * Drivers and sample code available for NVIDIA Jetson Nano, Qualcomm RB5, and more
+L86:   * Highly qualified, technical services team available to support integration
+L87:   * Evaluate capabilities with Prism Development Kit for Qualcomm RB5
+L88: cite9†Image: Hadron-PDP-Pillar3-Images-Size,-Weight,-and-Power-Optimized-Design.jpg L89: ### SIZE, WEIGHT, AND POWER OPTIMIZED DESIGN
+L90: 
+L91: Optimize design and operation time with compact, lightweight, and low-power module.
+L92: 
+L93:   * Low, steady state power consumption at 1.8W
+L94:   * IP54-rated dust and water protection
+L95:   * Lightweight 56 g enables longer flight time and extends battery life
+L96:   * Shared mechanical and electrical interface across all models
+L97: 
+L98: 
+L99: 
+L100: cite10†Image L101: 
+L102: This video is unavailable due to your cookie settings.
+L103: 
+L104: * * *
+L105: 
+L106: Teal 2 sUAS Overview feat. Hadron 640R
+L107: 
+L108: cite11†Image L109: This video is unavailable due to your cookie settings.
+L110: 
+L111: * * *
+L112: 
+L113: Traffic Surveillance with Hadron 640R
+L114: 
+L115: cite12†Image L116: 
+L117: This video is unavailable due to your cookie settings.
+L118: 
+L119: * * *
+L120: 
+L121: cite13†Image L122: 
+L123: This video is unavailable due to your cookie settings.
+L124: 
+L125: * * *
+L126: 
+L127: cite14†Image L128: 
+L129: This video is unavailable due to your cookie settings.
+L130: 
+L131: * * *
+L132: 
+L133: Getting Started with NVIDIA Jetson Nano & FLIR Hadron 640R
+L134: 
+L135: cite15†Image L136: 
+L137: This video is unavailable due to your cookie settings.
+L138: 
+L139: * * *
+L140: Getting Started with Qualcomm RB5 and FLIR Hadron 640R
+L141: 
+L142: WHAT IS THERMAL BY FLIR?
+L143: #### Thermal by FLIR is a cooperative product development and marketing program that supports original equipment manufacturers (OEMs) and product innovators who use FLIR thermal imaging sensors in their products. With Thermal by FLIR, let us help you create the next market-changing innovation to grow your business.
+L144: 
+L145: cite16†Learn more L146: ## Model Finder
+L147: 
+L148: Product  | Resolution  | Frame Rate  | Pixel Pitch (μm)  | FOV Horizontal  | Temperature Measurement  | Status  | Compare
+L149: --- | --- | --- | --- | --- | --- | --- | ---
+L150: cite17†Hadron 640R+ (Radiometric) L151: 
+L152: ######
+L153: 
+L154: cite17†70640AS32-6PARXP | 640 x 512  | Full resolution @ 60 Hz  | 12 µm  | 32°  | Yes  | In Production cite18†Request Info | cite19†Image: Hadron 640 [Input]
+L155: cite20†Hadron 640+ (Non-Radiometric) L156: ######
+L157: 
+L158: cite20†70640AS32-6PAAXP | 640 x 512  | Full resolution @ 60 Hz  | 12 µm  | 32°  | No  | In Production cite18†Request Info | cite19†Image: Hadron 640 [Input]
+L159: cite21†Hadron 640R (Radiometric) L160: 
+L161: ######
+L162: 
+L163: cite21†70640AS32-6PMRXX | 640 x 512  | Full resolution @ 60 Hz  | 12 µm  | 32°  | Yes  | In Production cite18†Request Info | cite19†Image: Hadron 640 [Input]
+L164: 
+L165: cite18†Back to top L166: 
+L167: ##### Compatible Accessories
+L168: 
+L169:   * cite22†G-Hadron L170: 
+L171:   * cite23†Hadron 640 Development Kits L172: ## Resources & Support
+L173: 
+L174:   *
+L175:   * [Input] Knowledge Base
+L176:   * [Input] Documentation & Drawings
+L177:   * [Input] Videos
+L178:   * [Input] Tools
+L179:   * [Input] Contact Support
+L180: [Input]
+L181: 
+L182: News articles and white papers written by Teledyne FLIR OEM experts to help you integrate your Teledyne FLIR OEM products.
+L183: 
+L184: For technical questions, find answers by visiting our FAQ at: cite24†flir.custhelp.com†flir.custhelp.com L185: 
+L186: cite25†Image L187: 
+L188: Article
+L189: 
+L190: FAQ - Everything You Need to Know About the Hadron 640R
+L191: 
+L192: cite26†Learn more L193: 
+L194: cite25†Image L195: 
+L196: Article
+L197: FLIR Hadron Enables Lightweight and Affordable sUAS
+L198: 
+L199: cite27†Read the story L200: 
+L201: cite28†Image L202: 
+L203: Whitepaper
+L204: 
+L205: Thermal Infrared Sensor Design Considerations for Counter-UAS Defense
+L206: 
+L207: cite29†Learn more L208: 
+L209: cite25†Image L210: 
+L211: Application Note
+L212: 
+L213: A Guide on Cost-Effective Thermal Lens Integration: What to Know for Defense and Autonomous Vehicle Applications
+L214: 
+L215: cite30†Learn more L216: 
+L217: cite31†Image L218: 
+L219: FAQ
+L220: 
+L221: Can a FLIR OEM camera data be streamed to disk over the PCI-1422 card and displayed real time?
+L222: 
+L223: cite32†Read the Story L224: ##### Types: cite33†Reset Filters L225: 
+L226: [Select]
+L227: 
+L228: [Input] Article (2)
+L229: 
+L230: [Input] Whitepaper (1)
+L231: 
+L232: [Input] FAQ (1)
+L233: 
+L234: [Input] Application Note (1)
+L235: ##### Topics:
+L236: 
+L237: [Select]
+L238: 
+L239: [Input] Uncrewed Systems (4)
+L240: 
+L241: [Input] Thermal Integration (2)
+L242: 
+L243: [Input] Defense (2)
+L244: 
+L245: [Input] Optics (1)
+L246: 
+L247: [Input] LWIR Imaging (1)
+L248: 
+L249: [Input] Imaging Fundamentals (1)
+L250: 
+L251: [Input] Automotive (1)
+L252: 
+L253: [Input] Artificial Intelligence (1)
+L254: 
+L255: [Input: Search articles by Keyword]
+L256: 
+L257: [Input]
+L258: 
+L259: Assets below are shared by all models in this product family.
+L260: 
+L261: 
+L262: 
+L263: The Engineering Datasheet provides detailed information.
+L264:   * Functional Characteristics
+L265:   * Technical Specifications
+L266:   * Performance Data
+L267:   * Electrical and External Circuitry
+L268:   * Mechanical Recommendations
+L269: 
+L270: 
+L271: 
+L272: The mechanical drawings and 3D files are available in IDD+ and STEP formats.
+L273: 
+L274: cite34†Image L275: 
+L276: Hadron 640 Family Engineering Datasheet R170
+L277: 
+L278: Datasheet
+L279: 
+L280: cite35†Download†flir.netx.net L281: 
+L282: cite34†Image L283: 
+L284: Hadron 640 Series Datasheet
+L285: 
+L286: Datasheet
+L287: 
+L288: cite36†Download†flir.netx.net L289: 
+L290: cite37†Image L291: 
+L292: Hadron 640 Integration Guide Rev 1.13
+L293: 
+L294: Quick Start Guide
+L295: 
+L296: cite38†Download†flir.netx.net L297: ##### Types: cite39†Reset Filters L298: 
+L299: [Select]
+L300: 
+L301: [Input] Datasheet (2)
+L302: 
+L303: [Input] Quick Start Guide (1)
+L304: 
+L305: [Input: Search documents]
+L306: 
+L307: [Input]
+L308: 
+L309: Integrating Teledyne FLIR OEM thermal camera modules is easier than ever with our cite40†library of how-to videos and more!
+L310: 
+L311: This video is unavailable due to your cookie settings.
+L312: 
+L313: Getting Started with NVIDIA Jetson Nano
+L314: 
+L315: This video is unavailable due to your cookie settings.
+L316: 
+L317: Getting Started with Qualcomm RB5
+L318: 
+L319: This video is unavailable due to your cookie settings.
+L320: Integrate AI Decision Support with Prism AI
+L321: 
+L322: This video is unavailable due to your cookie settings.
+L323: 
+L324: Guide to Image Signal Processing with Prism ISP
+L325: 
+L326: [Input]
+L327: 
+L328: cite41†Image L329: #### Camera Selector Tool
+L330: 
+L331: Compare all our infrared camera core models in one place.
+L332: 
+L333: cite42†See more L334: 
+L335: [Input]
+L336: 
+L337: Visit the cite43†Support Center for help with your Teledyne FLIR OEM products or submit a support ticket, by visiting our cite24†Technical Support Center.†flir.custhelp.com L338: 
+L339: ## Related Products
+L340: 
+L341: ### cite44†Boson+ L342: 
+L343: High Performance, Uncooled, LWIR OEM Thermal Camera Module
+L344: 
+L345:   * 320 × 256 or 640 × 512 Resolution
+L346:   * ≤20 mK Thermal Sensitivity [NEdT]
+L347:   * 4° to 95° HFoV
+L348: 
+L349: cite44†View Product L350: ### cite45†Lepton XDS L351: 
+L352: Compact Thermal and Visible Camera Module + Prism ISP
+L353: 
+L354:   * 160 x 120 Resolution
+L355:   * 5 MP Visible Camera
+L356:   * Patented FLIR MSX® and VividIR™ included
+L357: 
+L358: cite45†View Product L359: 
+L360: ### cite23†Hadron 640 Development Kits L361: 
+L362: Development Kits for Hadron 640 Dual Camera Module
+L363: 
+L364:   * Dual Thermal and Visible Camera
+L365:   * Compatible with Qualcomm® or NVIDIA®
+L366:   * AI-Ready
+L367: 
+L368: cite23†View Product L369: ### cite46†Prism AI L370: 
+L371: Object Detection and Tracking Software Libraries
+L372: 
+L373:   * 40+ Detection Categories
+L374:   * 4M Training Annotations
+L375:   * Compatible with Qualcomm or NVIDIA
+L376: 
+L377: cite46†View Product L378: 
+L379: cite18†Request Info L380: 
+L381: [Button: ×]
+L382: 
+L383: ×
+L384: 
+L385: #### Confirm Location
+L386: 
+L387:   1. cite47†United Kingdom L388:   2. cite48†United States L389: 
+L390: cite49†iframe†www.googletagmanager.com

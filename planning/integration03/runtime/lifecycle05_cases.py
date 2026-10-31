@@ -1,0 +1,22 @@
+"""Nineteen Builder lifecycle cases; independent QA owns unseen vectors."""
+CASES05 = [
+    {"name":"nominal_safe_ground","flags":{}},
+    {"name":"bootstrap_refused_before_peer","flags":{"refused":True}},
+    {"name":"bootstrap_eof_before_peer","flags":{"bootstrap_eof":True}},
+    {"name":"spontaneous_oom","flags":{"bootstrap_eof":True,"oom":True}},
+    {"name":"missing_container_before_stop","flags":{"bootstrap_eof":True,"missing_container":True}},
+    {"name":"unexpected_identity","flags":{"wrong_identity":True}},
+    {"name":"peer_popen_console_cleanup","flags":{"popen":True}},
+    {"name":"observer_thread_start_failure","flags":{"observer_start":True}},
+    {"name":"observer_crc_failure","flags":{"observer_crc":True}},
+    {"name":"resource_floor","flags":{"resource":True}},
+    {"name":"runtime_deadline","flags":{"deadline":True}},
+    {"name":"pending_stop_stale_ground","flags":{"pending_stale":True}},
+    {"name":"bootstrap_first_secondary_logs","flags":{"bootstrap_eof":True,"boot_then_logs":True}},
+    {"name":"observer_first_secondary_poll","flags":{"observer_then_poll":True}},
+    {"name":"closure_open_failure","flags":{"closure_open":True}},
+    {"name":"closure_fsync_failure","flags":{"closure_fsync":True}},
+    {"name":"prestop_capture_and_owned_stop_failure","flags":{"prestop_capture":True,"stop_failure":True}},
+    {"name":"peer_terminate_wait_kill_failures","flags":{"peer_cleanup":True}},
+    {"name":"socket_shutdown_close_failures","flags":{"socket_cleanup":True}},
+]

@@ -1,0 +1,7 @@
+# Only this owned disarmed instance; startup defaults, not a parameter-write API.
+MAV_SYSID 42
+MAV_GCS_SYSID 255
+SERIAL0_PROTOCOL 2
+LOG_DISARMED 0
+LOG_BACKEND_TYPE 0
+SIM_GPS_NUMSATS 12

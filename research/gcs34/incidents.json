@@ -1,0 +1,14 @@
+{
+  "capture": [
+    "Initial government response gzip decode failed; bounded followup succeeded, old receipt retained"
+  ],
+  "UI": [
+    "ui-qa1 FAIL: battery label wrapping shifted actionbar; fixed reserved slots and viewport grid",
+    "ui-qa2 FAIL: cloned feed duplicate ID updated wrong label; removed clone IDs and scoped target",
+    "ui-qa3 FAIL: harness included hidden dialog button in geometry; filter visible controls, rerun required"
+  ],
+  "limits": [
+    "GitBook and HeraHub-v2 web opens unavailable in this research; prior dated documents retained, no fresh claim",
+    "All data on proposed cockpit are synthetic; prototype has no actual flight/control/data ingestion"
+  ]
+}

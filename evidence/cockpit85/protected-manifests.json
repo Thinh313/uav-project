@@ -1,0 +1,11 @@
+{
+  "evidence/native79/preservation-before.json": "6e4e95c08f4c137f703aa574aed6f657153aafc998b03fc870901d0191855ae5",
+  "evidence/native79/module-fingerprints.json": "b7cd367e61bb2cca27ce557b361c5a6f9c55577a96ca15898e183a095a4ff90f",
+  "evidence/cockpit80/qa-fix02/fingerprints.json": "057cbbacb15b7243ba4f04fca36c80194d43cf7be3820354cb4686e731223f6e",
+  "evidence/native81/fingerprints.json": "f6ace5c06505d7bda0dca607b96720858ea1caa54b023435a78ec9332c6ad49b",
+  "evidence/native81-development01/fingerprints.json": "4eec01cb789d0d214232e289d69da1de25ae64341338202e271af7fe9c97a58c",
+  "evidence/cockpit82/fingerprints.json": "2466756bc792f0cc2a3b5e8b920b73b4634fd287b9a88e850eb813477a59ef65",
+  "evidence/cockpit82-emulator04/fingerprints.json": "c36583705690bbdd5549213d5a493c5f7f01051e16a3f4c3e2a65054cf59e221",
+  "evidence/native83/fingerprints.json": "b15670775eaa053925df2bc1fd3c17a8aac49f7a158a5bad14216c72c48ef09a",
+  "evidence/native84/fingerprints.json": "e9d9ad27423beac502063040e205e7b438b1400d72b16ec4defed1c879471185"
+}

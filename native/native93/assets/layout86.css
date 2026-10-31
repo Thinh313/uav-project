@@ -1,0 +1,14 @@
+/* Native-only compatibility layer; COCKPIT85 source assets stay byte-identical. */
+body[data-panel86=true] .task-pane,body[data-panel86=true] .review-panel,body[data-panel86=true] #history84,body[data-panel86=true] .camera-tools,body[data-panel86=true] .mini-view,body[data-panel86=true] .camera-meta,body[data-panel86=true] #native-fly-controls{visibility:hidden}
+body[data-video86=true] #native-fly-controls,body[data-video86=true] .camera-meta,body[data-video86=true] .reticle{visibility:hidden}
+body[data-glass86=translucent-fallback]{--glass-fill:rgba(14,20,18,.82);--glass-dense:rgba(14,20,18,.9)}
+body[data-glass86=translucent-fallback][data-theme=day]{--glass-fill:rgba(245,249,246,.87);--glass-dense:rgba(245,249,246,.94)}
+#environment86{margin:12px 0;padding:12px 14px;border:1px solid var(--glass-rule);border-radius:12px;color:var(--glass-muted);font:500 14px/1.45 Barlow;white-space:pre-wrap;overflow-wrap:anywhere}
+
+/* Fullscreen Android ignores adjustResize: native visible-frame sizing owns IME geometry.
+   Show only the editable scroll surface while the keyboard occupies the lower display. */
+body[data-ime86=true] .topbar,body[data-ime86=true] .telemetry,body[data-ime86=true] .navrail,body[data-ime86=true] .channel-strip,body[data-ime86=true] .native-status,body[data-ime86=true] .scene-top,body[data-ime86=true] .mini-view,body[data-ime86=true] .camera-tools,body[data-ime86=true] .camera-meta,body[data-ime86=true] .flight-alert{display:none!important}
+body[data-ime86=true] .task-pane{inset:8px;width:auto;max-width:640px;margin-inline:auto}
+body[data-ime86=true] .task-pane .pane-heading,body[data-ime86=true] .task-pane .pane-action{display:none}
+body[data-ime86=true] .pane-scroll{padding:12px 20px;scroll-padding-block:16px}
+body[data-ime86=true] #panel83{inset:8px;padding:12px 20px}body[data-ime86=true] #panel83>header,body[data-ime86=true] #panel83>nav,body[data-ime86=true] #panel83>p{display:none}

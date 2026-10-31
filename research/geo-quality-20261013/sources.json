@@ -1,0 +1,50 @@
+[
+  {
+    "id": "mavlink-common",
+    "url": "https://mavlink.io/en/messages/common.html",
+    "status": "captured",
+    "http_status": 200,
+    "capture_format": "Raw HTTP response bytes",
+    "snapshot": "mavlink-common.html",
+    "sha256": "0e226021cf0a90aa9cfbcf764da3f2b1b2f4b8d7c236c91c1cf73a3cd204b5bb",
+    "bytes": 1200171,
+    "fetched_at": "2026-10-13T00:54:05.266340+00:00",
+    "origin_id": "mavlink-upstream",
+    "content_type": "text/html; charset=utf-8",
+    "final_url": "https://mavlink.io/en/messages/common.html"
+  },
+  {
+    "id": "copernicus-datum",
+    "url": "https://dataspace.copernicus.eu/explore-data/data-collections/copernicus-contributing-missions/collections-description/COP-DEM",
+    "status": "captured",
+    "http_status": 200,
+    "capture_format": "Raw HTTP response bytes",
+    "snapshot": "copernicus.html",
+    "sha256": "eddf2454b6846fec04dd821f0e638acf26d8de59f6861a517fb0b09f132eb103",
+    "bytes": 110694,
+    "fetched_at": "2026-10-13T00:54:05.765269+00:00",
+    "origin_id": "copernicus-dataspace",
+    "content_type": "text/html; charset=UTF-8",
+    "final_url": "https://dataspace.copernicus.eu/explore-data/data-collections/copernicus-contributing-missions/collections-description/COP-DEM"
+  },
+  {
+    "id": "usgs-datum",
+    "url": "https://www.usgs.gov/about/organization/science-support/office-science-quality-and-integrity/guidance-use-and",
+    "status": "failed",
+    "http_status": 202,
+    "fetched_at": "2026-10-13T00:54:04.908483+00:00",
+    "detail": "Raw HTTP not successful; official web-tool excerpt captured separately"
+  },
+  {
+    "id": "usgs-web-extract",
+    "url": "https://www.usgs.gov/about/organization/science-support/office-science-quality-and-integrity/guidance-use-and",
+    "status": "captured",
+    "snapshot": "usgs-web-extract.txt",
+    "sha256": "123c667c192664752bd3746bb4ac14ee62255aa592ea7fb805a835e55aae53cd",
+    "bytes": 238,
+    "origin_id": "usgs-datum-guidance",
+    "fetched_at": "2026-10-13T00:54:05.765607+00:00",
+    "capture_format": "Official page excerpt returned by web tool; not raw HTTP capture",
+    "content_type": "text/plain"
+  }
+]

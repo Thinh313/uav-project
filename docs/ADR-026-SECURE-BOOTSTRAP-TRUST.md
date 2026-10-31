@@ -1,0 +1,9 @@
+# ADR-026 · Independent bootstrap and durable local trust
+
+Accepted within TRUST16 host engineering scope. PACK15 authenticates bytes but leaves minimum sequence and key policy to callers. Introduce an external reviewed bootstrap with a digest-pinned dependency closure and an independently pinned initial root. Candidate code is not used to authenticate itself.
+
+Root metadata has disjoint root (minimum two keys/quorum two), release and approval roles. Consecutive rotation requires both prior and proposed root thresholds. Release authorization binds root digest/version and exact package identity; separate release and approval signatures are required. Package wire/signature remains PACK15-compatible. Removed release keys are revoked for future starts; historical signatures replay at their original event time, without promoting them to current authority.
+
+Persist immutable sequential events plus an atomic head under an exclusive writer lock. A durable transaction intent precedes publication. Any orphan tail, missing head, unexpected file, stale lock or pending intent blocks normal use. Explicit reconciliation verifies a digest selected by the operator and advances only the complete validated pending event. It never discards raw evidence or falls back to an older release. Cap metadata/count and retain the host free-space floor. Record sequence, numeric semantic build and observed wall-clock high-water across process restarts. Hold the trust lock while an installed child runs to prevent concurrent trust change.
+
+This is a bounded custom engineering protocol, not a TUF implementation: timestamp/snapshot/mirrors/delegations/network freshness are absent. Local keys and synthetic reviewer signatures do not establish official ownership, real offline custody or independent human review. Trusted local OS/runtime and protected external anchors remain necessary. Device secure boot/monotonic counters require measured hardware integration.

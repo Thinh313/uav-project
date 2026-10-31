@@ -1,0 +1,28 @@
+{
+  "atUTC": "2026-10-26T01:41:54.738725+00:00",
+  "status": "IMPLEMENTED_MOCK_VERIFIED_NOT_NEW_ANDROID_SITL",
+  "files": [
+    "pilot/betastability02/server.mjs",
+    "pilot/betastability02/archive-client.mjs",
+    "pilot/betastability02/archive-worker.mjs",
+    "pilot/betastability02/package.mjs (makePackage journal snapshot seam only)",
+    "planning/betastability02/android-journey.py",
+    "planning/betastability02/inflight-faults.py",
+    "planning/betastability02/final-campaign02.py"
+  ],
+  "benchmark": "archive-correction02-benchmark.json",
+  "mockResults": "evidence/betastability02/archive-correction02-tests01/results.json",
+  "boundaryResults": "evidence/betastability02/archive-correction02-boundary-tests01.json",
+  "developmentFindings": [
+    {
+      "initialBoundary": "READ_APPLICATION_ERROR_PROMISE_REJECTED_BEFORE_WORKER_EXIT_THUS_NEXT_READ_BUSY",
+      "fix": "Settle application-level rejection only after worker exit, clean nonterminal read error; worker crash/deadline remains terminal",
+      "retest": "PASS"
+    }
+  ],
+  "syntax": "PASS",
+  "guardsChanged": false,
+  "newBuildOrRuntimeLaunchedByAgent": false,
+  "archivalMetadata": "not integrity; cold receiver still required",
+  "runtimeScope": "NEW_SUCCESSOR_ONLY_NO_OLD_CANDIDATE_OR_ENDURE_EDITS"
+}

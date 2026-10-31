@@ -1,0 +1,2 @@
+import {RotationManager} from './manager.mjs';
+const [dir,point,kind='ROTATE']=process.argv.slice(2);const m=await RotationManager.open({dir});if(m.held&&kind!=='ROLLBACK')throw Error(m.held);m.fault=async p=>{if(p===point){console.log(JSON.stringify({pid:process.pid,lockPid:m.lock.pid,point,selected:m.control.selected?.body.to,pending:[...m.control.pending.keys()]}));await new Promise(()=>{});}};const plan=await m.plan(kind);await m.confirm(plan.planSha256,plan.phrase);throw Error('BOUNDARY_NOT_REACHED');

@@ -1,0 +1,9 @@
+{
+  "status": "DONE_SCOPED_TESTING_WITH_DEFERRED_UI_COPY",
+  "report": "delivery/COMPLETION-NATIVE98-VERIFY.html",
+  "verification": "evidence/native98verify/final-verification.json",
+  "apk": "native/native98verify/dist/aeris-native98-development05.apk",
+  "apkSha256": "ad97af079cbb37bc9e9df635e0cba9d9a7fed75e0d2ee3c2fa64b19a8b14f8b8",
+  "sourceId": "e276fb4ce316d379945a7bcc746611fbc457739059a1753480bc309b13a8ddfb",
+  "sourceCandidateENDUREUnchanged": true
+}

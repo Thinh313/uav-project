@@ -1,0 +1,10 @@
+[
+  {
+    "path": "reference/protocol22/minimal.xml",
+    "sha256": "d4c7c7346432814348bb858cbab8cee7a17b23e37937c1574e2018148cbfb785"
+  },
+  {
+    "path": "reference/protocol22/common.xml",
+    "sha256": "4194171608d0641cbf9a646ebf440b174a3bd5842e41e5b87a43c540c584b280"
+  }
+]

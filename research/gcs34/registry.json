@@ -1,0 +1,992 @@
+{
+  "aggregates": {
+    "cells_by_state": {
+      "null": 78,
+      "sourced": 39
+    },
+    "coverage_pct": 100.0,
+    "n_entities": 39,
+    "rollup": {
+      "Chưa rõ": 39
+    },
+    "rollup_field": "deployment_scope",
+    "universe_estimate": 39
+  },
+  "registry": {
+    "AP / AUTO": {
+      "entity_type": null,
+      "fields": {
+        "deployment_scope": {
+          "state": "null",
+          "value": null
+        },
+        "documented_capability": {
+          "claims": [
+            {
+              "extraction": "normalized",
+              "source": "ardupilot.org",
+              "tier": "A",
+              "value": "AUTO executes a mission on the flight controller; this alone is not learned visual autonomy."
+            }
+          ],
+          "state": "sourced",
+          "value": "AUTO executes a mission on the flight controller; this alone is not learned visual autonomy."
+        },
+        "independent_performance": {
+          "state": "null",
+          "value": null
+        }
+      }
+    },
+    "AP / Avoidance": {
+      "entity_type": null,
+      "fields": {
+        "deployment_scope": {
+          "state": "null",
+          "value": null
+        },
+        "documented_capability": {
+          "claims": [
+            {
+              "extraction": "normalized",
+              "source": "ardupilot.org",
+              "tier": "A",
+              "value": "BendyRuler avoidance is mode/configuration dependent, with sensor data and an obstacle database."
+            }
+          ],
+          "state": "sourced",
+          "value": "BendyRuler avoidance is mode/configuration dependent, with sensor data and an obstacle database."
+        },
+        "independent_performance": {
+          "state": "null",
+          "value": null
+        }
+      }
+    },
+    "AP / Fence": {
+      "entity_type": null,
+      "fields": {
+        "deployment_scope": {
+          "state": "null",
+          "value": null
+        },
+        "documented_capability": {
+          "claims": [
+            {
+              "extraction": "normalized",
+              "source": "ardupilot.org",
+              "tier": "A",
+              "value": "Autopilot documents configurable inclusion/exclusion fences and breach behavior."
+            }
+          ],
+          "state": "sourced",
+          "value": "Autopilot documents configurable inclusion/exclusion fences and breach behavior."
+        },
+        "independent_performance": {
+          "state": "null",
+          "value": null
+        }
+      }
+    },
+    "AP / GCS loss": {
+      "entity_type": null,
+      "fields": {
+        "deployment_scope": {
+          "state": "null",
+          "value": null
+        },
+        "documented_capability": {
+          "claims": [
+            {
+              "extraction": "normalized",
+              "source": "ardupilot.org",
+              "tier": "A",
+              "value": "Configured autopilot failsafe does not automatically restore the previous mode after link returns."
+            }
+          ],
+          "state": "sourced",
+          "value": "Configured autopilot failsafe does not automatically restore the previous mode after link returns."
+        },
+        "independent_performance": {
+          "state": "null",
+          "value": null
+        }
+      }
+    },
+    "AP / Pilot takeover": {
+      "entity_type": null,
+      "fields": {
+        "deployment_scope": {
+          "state": "null",
+          "value": null
+        },
+        "documented_capability": {
+          "claims": [
+            {
+              "extraction": "normalized",
+              "source": "ardupilot.org",
+              "tier": "A",
+              "value": "Documentation describes pilot takeover through flight-mode change, subject to configuration."
+            }
+          ],
+          "state": "sourced",
+          "value": "Documentation describes pilot takeover through flight-mode change, subject to configuration."
+        },
+        "independent_performance": {
+          "state": "null",
+          "value": null
+        }
+      }
+    },
+    "AP / Terrain": {
+      "entity_type": null,
+      "fields": {
+        "deployment_scope": {
+          "state": "null",
+          "value": null
+        },
+        "documented_capability": {
+          "claims": [
+            {
+              "extraction": "normalized",
+              "source": "ardupilot.org",
+              "tier": "A",
+              "value": "Terrain following requires terrain information; not a complete obstacle model."
+            }
+          ],
+          "state": "sourced",
+          "value": "Terrain following requires terrain information; not a complete obstacle model."
+        },
+        "independent_performance": {
+          "state": "null",
+          "value": null
+        }
+      }
+    },
+    "Android / Touch targets": {
+      "entity_type": null,
+      "fields": {
+        "deployment_scope": {
+          "state": "null",
+          "value": null
+        },
+        "documented_capability": {
+          "claims": [
+            {
+              "extraction": "normalized",
+              "source": "developer.android.com",
+              "tier": "A",
+              "value": "Android recommends minimum touch area; glove performance and native geometry still require operator/device checks."
+            }
+          ],
+          "state": "sourced",
+          "value": "Android recommends minimum touch area; glove performance and native geometry still require operator/device checks."
+        },
+        "independent_performance": {
+          "state": "null",
+          "value": null
+        }
+      }
+    },
+    "DJI FlightHub2 / AI workflow": {
+      "entity_type": null,
+      "fields": {
+        "deployment_scope": {
+          "state": "null",
+          "value": null
+        },
+        "documented_capability": {
+          "claims": [
+            {
+              "extraction": "normalized",
+              "source": "dji.com",
+              "tier": "A",
+              "value": "Manufacturer advertises an agent for AEC operations; this is not proof of generic LLM flight authority."
+            }
+          ],
+          "state": "sourced",
+          "value": "Manufacturer advertises an agent for AEC operations; this is not proof of generic LLM flight authority."
+        },
+        "independent_performance": {
+          "state": "null",
+          "value": null
+        }
+      }
+    },
+    "DJI FlightHub2 / Collaboration": {
+      "entity_type": null,
+      "fields": {
+        "deployment_scope": {
+          "state": "null",
+          "value": null
+        },
+        "documented_capability": {
+          "claims": [
+            {
+              "extraction": "normalized",
+              "source": "dji.com",
+              "tier": "A",
+              "value": "Manufacturer advertises collaborative operational annotations."
+            }
+          ],
+          "state": "sourced",
+          "value": "Manufacturer advertises collaborative operational annotations."
+        },
+        "independent_performance": {
+          "state": "null",
+          "value": null
+        }
+      }
+    },
+    "DJI FlightHub2 / Deployment": {
+      "entity_type": null,
+      "fields": {
+        "deployment_scope": {
+          "state": "null",
+          "value": null
+        },
+        "documented_capability": {
+          "claims": [
+            {
+              "extraction": "normalized",
+              "source": "dji.com",
+              "tier": "A",
+              "value": "Manufacturer advertises private deployment; edition/API support must be checked."
+            }
+          ],
+          "state": "sourced",
+          "value": "Manufacturer advertises private deployment; edition/API support must be checked."
+        },
+        "independent_performance": {
+          "state": "null",
+          "value": null
+        }
+      }
+    },
+    "DJI FlightHub2 / Planning": {
+      "entity_type": null,
+      "fields": {
+        "deployment_scope": {
+          "state": "null",
+          "value": null
+        },
+        "documented_capability": {
+          "claims": [
+            {
+              "extraction": "normalized",
+              "source": "dji.com",
+              "tier": "A",
+              "value": "Manufacturer advertises route planning for multiple terrain and mission needs."
+            }
+          ],
+          "state": "sourced",
+          "value": "Manufacturer advertises route planning for multiple terrain and mission needs."
+        },
+        "independent_performance": {
+          "state": "null",
+          "value": null
+        }
+      }
+    },
+    "DJI FlightHub2 / Review": {
+      "entity_type": null,
+      "fields": {
+        "deployment_scope": {
+          "state": "null",
+          "value": null
+        },
+        "documented_capability": {
+          "claims": [
+            {
+              "extraction": "normalized",
+              "source": "dji.com",
+              "tier": "A",
+              "value": "Manufacturer advertises logs and post-flight operational review."
+            }
+          ],
+          "state": "sourced",
+          "value": "Manufacturer advertises logs and post-flight operational review."
+        },
+        "independent_performance": {
+          "state": "null",
+          "value": null
+        }
+      }
+    },
+    "DJI GEO / Advisory provenance": {
+      "entity_type": null,
+      "fields": {
+        "deployment_scope": {
+          "state": "null",
+          "value": null
+        },
+        "documented_capability": {
+          "claims": [
+            {
+              "extraction": "normalized",
+              "source": "dji.com",
+              "tier": "A",
+              "value": "Manufacturer states its airspace advisory does not replace authority data."
+            }
+          ],
+          "state": "sourced",
+          "value": "Manufacturer states its airspace advisory does not replace authority data."
+        },
+        "independent_performance": {
+          "state": "null",
+          "value": null
+        }
+      }
+    },
+    "DJI GEO / Legacy scope": {
+      "entity_type": null,
+      "fields": {
+        "deployment_scope": {
+          "state": "null",
+          "value": null
+        },
+        "documented_capability": {
+          "claims": [
+            {
+              "extraction": "normalized",
+              "source": "dji.com",
+              "tier": "A",
+              "value": "Legacy page identifies product generations; do not project its blocking behavior onto every current DJI configuration."
+            }
+          ],
+          "state": "sourced",
+          "value": "Legacy page identifies product generations; do not project its blocking behavior onto every current DJI configuration."
+        },
+        "independent_performance": {
+          "state": "null",
+          "value": null
+        }
+      }
+    },
+    "DJI GEO / Rollout2025": {
+      "entity_type": null,
+      "fields": {
+        "deployment_scope": {
+          "state": "null",
+          "value": null
+        },
+        "documented_capability": {
+          "claims": [
+            {
+              "extraction": "normalized",
+              "source": "dji.com",
+              "tier": "A",
+              "value": "Dated announcement describes transition of remaining NFZs to warning zones, with phased firmware rollout; not universal runtime verification."
+            }
+          ],
+          "state": "sourced",
+          "value": "Dated announcement describes transition of remaining NFZs to warning zones, with phased firmware rollout; not universal runtime verification."
+        },
+        "independent_performance": {
+          "state": "null",
+          "value": null
+        }
+      }
+    },
+    "DJI M4 / 3D capture": {
+      "entity_type": null,
+      "fields": {
+        "deployment_scope": {
+          "state": "null",
+          "value": null
+        },
+        "documented_capability": {
+          "claims": [
+            {
+              "extraction": "normalized",
+              "source": "dji.com",
+              "tier": "A",
+              "value": "Matrice4E plus Manifold3 is the stated combination for this modeling feature; not controller-only capability."
+            }
+          ],
+          "state": "sourced",
+          "value": "Matrice4E plus Manifold3 is the stated combination for this modeling feature; not controller-only capability."
+        },
+        "independent_performance": {
+          "state": "null",
+          "value": null
+        }
+      }
+    },
+    "DJI M4 / Detection": {
+      "entity_type": null,
+      "fields": {
+        "deployment_scope": {
+          "state": "null",
+          "value": null
+        },
+        "documented_capability": {
+          "claims": [
+            {
+              "extraction": "normalized",
+              "source": "dji.com",
+              "tier": "A",
+              "value": "Manufacturer advertises onboard object detection; hardware/model dependent."
+            }
+          ],
+          "state": "sourced",
+          "value": "Manufacturer advertises onboard object detection; hardware/model dependent."
+        },
+        "independent_performance": {
+          "state": "null",
+          "value": null
+        }
+      }
+    },
+    "DJI M4 / Guided navigation": {
+      "entity_type": null,
+      "fields": {
+        "deployment_scope": {
+          "state": "null",
+          "value": null
+        },
+        "documented_capability": {
+          "claims": [
+            {
+              "extraction": "normalized",
+              "source": "dji.com",
+              "tier": "A",
+              "value": "Manufacturer advertises assisted destination navigation."
+            }
+          ],
+          "state": "sourced",
+          "value": "Manufacturer advertises assisted destination navigation."
+        },
+        "independent_performance": {
+          "state": "null",
+          "value": null
+        }
+      }
+    },
+    "DJI M4 / Obstacle sensing": {
+      "entity_type": null,
+      "fields": {
+        "deployment_scope": {
+          "state": "null",
+          "value": null
+        },
+        "documented_capability": {
+          "claims": [
+            {
+              "extraction": "normalized",
+              "source": "dji.com",
+              "tier": "A",
+              "value": "Manufacturer associates avoidance with onboard vision sensors, not a GUI switch."
+            }
+          ],
+          "state": "sourced",
+          "value": "Manufacturer associates avoidance with onboard vision sensors, not a GUI switch."
+        },
+        "independent_performance": {
+          "state": "null",
+          "value": null
+        }
+      }
+    },
+    "DJI M4 / Orbit": {
+      "entity_type": null,
+      "fields": {
+        "deployment_scope": {
+          "state": "null",
+          "value": null
+        },
+        "documented_capability": {
+          "claims": [
+            {
+              "extraction": "normalized",
+              "source": "dji.com",
+              "tier": "A",
+              "value": "Manufacturer advertises point-of-interest observation."
+            }
+          ],
+          "state": "sourced",
+          "value": "Manufacturer advertises point-of-interest observation."
+        },
+        "independent_performance": {
+          "state": "null",
+          "value": null
+        }
+      }
+    },
+    "DJI M4 / Tracking": {
+      "entity_type": null,
+      "fields": {
+        "deployment_scope": {
+          "state": "null",
+          "value": null
+        },
+        "documented_capability": {
+          "claims": [
+            {
+              "extraction": "normalized",
+              "source": "dji.com",
+              "tier": "A",
+              "value": "Manufacturer advertises subject tracking, zoom adjustment and reacquisition."
+            }
+          ],
+          "state": "sourced",
+          "value": "Manufacturer advertises subject tracking, zoom adjustment and reacquisition."
+        },
+        "independent_performance": {
+          "state": "null",
+          "value": null
+        }
+      }
+    },
+    "HeraHub Intel / Operator roles": {
+      "entity_type": null,
+      "fields": {
+        "deployment_scope": {
+          "state": "null",
+          "value": null
+        },
+        "documented_capability": {
+          "claims": [
+            {
+              "extraction": "normalized",
+              "source": "rtrobotics.com",
+              "tier": "A",
+              "value": "Manufacturer advertises separate flight and payload operator roles on this Intel controller page."
+            }
+          ],
+          "state": "sourced",
+          "value": "Manufacturer advertises separate flight and payload operator roles on this Intel controller page."
+        },
+        "independent_performance": {
+          "state": "null",
+          "value": null
+        }
+      }
+    },
+    "HeraHub Intel / Streams": {
+      "entity_type": null,
+      "fields": {
+        "deployment_scope": {
+          "state": "null",
+          "value": null
+        },
+        "documented_capability": {
+          "claims": [
+            {
+              "extraction": "normalized",
+              "source": "rtrobotics.com",
+              "tier": "A",
+              "value": "Intel-generation manufacturer stream-capacity claim; not a measured Android v2 decoder limit."
+            }
+          ],
+          "state": "sourced",
+          "value": "Intel-generation manufacturer stream-capacity claim; not a measured Android v2 decoder limit."
+        },
+        "independent_performance": {
+          "state": "null",
+          "value": null
+        }
+      }
+    },
+    "NASA / Automation recovery": {
+      "entity_type": null,
+      "fields": {
+        "deployment_scope": {
+          "state": "null",
+          "value": null
+        },
+        "documented_capability": {
+          "claims": [
+            {
+              "extraction": "normalized",
+              "source": "www.nasa.gov",
+              "tier": "A",
+              "value": "Reference principle: enable safe operator recovery from automation failure; not a prescriptive Hera control binding."
+            }
+          ],
+          "state": "sourced",
+          "value": "Reference principle: enable safe operator recovery from automation failure; not a prescriptive Hera control binding."
+        },
+        "independent_performance": {
+          "state": "null",
+          "value": null
+        }
+      }
+    },
+    "NASA / Automation visibility": {
+      "entity_type": null,
+      "fields": {
+        "deployment_scope": {
+          "state": "null",
+          "value": null
+        },
+        "documented_capability": {
+          "claims": [
+            {
+              "extraction": "normalized",
+              "source": "www.nasa.gov",
+              "tier": "A",
+              "value": "Reference principle: expose automation state and operator authority. Human-spaceflight guidance used by analogy."
+            }
+          ],
+          "state": "sourced",
+          "value": "Reference principle: expose automation state and operator authority. Human-spaceflight guidance used by analogy."
+        },
+        "independent_performance": {
+          "state": "null",
+          "value": null
+        }
+      }
+    },
+    "NASA / Decision explanations": {
+      "entity_type": null,
+      "fields": {
+        "deployment_scope": {
+          "state": "null",
+          "value": null
+        },
+        "documented_capability": {
+          "claims": [
+            {
+              "extraction": "normalized",
+              "source": "www.nasa.gov",
+              "tier": "A",
+              "value": "Reference principle: explain suggested actions and their consequences; not UAV certification."
+            }
+          ],
+          "state": "sourced",
+          "value": "Reference principle: explain suggested actions and their consequences; not UAV certification."
+        },
+        "independent_performance": {
+          "state": "null",
+          "value": null
+        }
+      }
+    },
+    "QGC5.1 / Containment": {
+      "entity_type": null,
+      "fields": {
+        "deployment_scope": {
+          "state": "null",
+          "value": null
+        },
+        "documented_capability": {
+          "claims": [
+            {
+              "extraction": "normalized",
+              "source": "docs.qgroundcontrol.com",
+              "tier": "A",
+              "value": "Documentation supports planning containment and recovery points when firmware supports them."
+            }
+          ],
+          "state": "sourced",
+          "value": "Documentation supports planning containment and recovery points when firmware supports them."
+        },
+        "independent_performance": {
+          "state": "null",
+          "value": null
+        }
+      }
+    },
+    "QGC5.1 / Flight cockpit": {
+      "entity_type": null,
+      "fields": {
+        "deployment_scope": {
+          "state": "null",
+          "value": null
+        },
+        "documented_capability": {
+          "claims": [
+            {
+              "extraction": "normalized",
+              "source": "docs.qgroundcontrol.com",
+              "tier": "A",
+              "value": "Fly view combines flight telemetry, actions, maps and payload tools."
+            }
+          ],
+          "state": "sourced",
+          "value": "Fly view combines flight telemetry, actions, maps and payload tools."
+        },
+        "independent_performance": {
+          "state": "null",
+          "value": null
+        }
+      }
+    },
+    "QGC5.1 / Mission planning": {
+      "entity_type": null,
+      "fields": {
+        "deployment_scope": {
+          "state": "null",
+          "value": null
+        },
+        "documented_capability": {
+          "claims": [
+            {
+              "extraction": "normalized",
+              "source": "docs.qgroundcontrol.com",
+              "tier": "A",
+              "value": "Documentation lists mission pattern families, with firmware/vehicle dependencies."
+            }
+          ],
+          "state": "sourced",
+          "value": "Documentation lists mission pattern families, with firmware/vehicle dependencies."
+        },
+        "independent_performance": {
+          "state": "null",
+          "value": null
+        }
+      }
+    },
+    "QGC5.1 / Resume distinction": {
+      "entity_type": null,
+      "fields": {
+        "deployment_scope": {
+          "state": "null",
+          "value": null
+        },
+        "documented_capability": {
+          "claims": [
+            {
+              "extraction": "normalized",
+              "source": "docs.qgroundcontrol.com",
+              "tier": "A",
+              "value": "Documentation distinguishes paused-mission continuation from resume after an intermediate landing."
+            }
+          ],
+          "state": "sourced",
+          "value": "Documentation distinguishes paused-mission continuation from resume after an intermediate landing."
+        },
+        "independent_performance": {
+          "state": "null",
+          "value": null
+        }
+      }
+    },
+    "QGC5.1 / Video layout": {
+      "entity_type": null,
+      "fields": {
+        "deployment_scope": {
+          "state": "null",
+          "value": null
+        },
+        "documented_capability": {
+          "claims": [
+            {
+              "extraction": "normalized",
+              "source": "docs.qgroundcontrol.com",
+              "tier": "A",
+              "value": "Documentation describes switching primary map/video layout."
+            }
+          ],
+          "state": "sourced",
+          "value": "Documentation describes switching primary map/video layout."
+        },
+        "independent_performance": {
+          "state": "null",
+          "value": null
+        }
+      }
+    },
+    "RAGAS public / Geographic picture": {
+      "entity_type": null,
+      "fields": {
+        "deployment_scope": {
+          "state": "null",
+          "value": null
+        },
+        "documented_capability": {
+          "claims": [
+            {
+              "extraction": "normalized",
+              "source": "rtrobotics.com",
+              "tier": "A",
+              "value": "RtR advertises map-based aircraft, camera and ground participant context."
+            }
+          ],
+          "state": "sourced",
+          "value": "RtR advertises map-based aircraft, camera and ground participant context."
+        },
+        "independent_performance": {
+          "state": "null",
+          "value": null
+        }
+      }
+    },
+    "RAGAS public / Ground feeds": {
+      "entity_type": null,
+      "fields": {
+        "deployment_scope": {
+          "state": "null",
+          "value": null
+        },
+        "documented_capability": {
+          "claims": [
+            {
+              "extraction": "normalized",
+              "source": "rtrobotics.com",
+              "tier": "A",
+              "value": "RtR advertises feeding ground video into the GCS."
+            }
+          ],
+          "state": "sourced",
+          "value": "RtR advertises feeding ground video into the GCS."
+        },
+        "independent_performance": {
+          "state": "null",
+          "value": null
+        }
+      }
+    },
+    "RAGAS public / Shared video": {
+      "entity_type": null,
+      "fields": {
+        "deployment_scope": {
+          "state": "null",
+          "value": null
+        },
+        "documented_capability": {
+          "claims": [
+            {
+              "extraction": "normalized",
+              "source": "rtrobotics.com",
+              "tier": "A",
+              "value": "RtR advertises sharing airborne video to ground devices."
+            }
+          ],
+          "state": "sourced",
+          "value": "RtR advertises sharing airborne video to ground devices."
+        },
+        "independent_performance": {
+          "state": "null",
+          "value": null
+        }
+      }
+    },
+    "Skydio X10 / Integrated autonomy": {
+      "entity_type": null,
+      "fields": {
+        "deployment_scope": {
+          "state": "null",
+          "value": null
+        },
+        "documented_capability": {
+          "claims": [
+            {
+              "extraction": "normalized",
+              "source": "www.skydio.com",
+              "tier": "A",
+              "value": "Manufacturer describes an integrated aircraft/autonomy/application stack, not interchangeable GCS-only AI."
+            }
+          ],
+          "state": "sourced",
+          "value": "Manufacturer describes an integrated aircraft/autonomy/application stack, not interchangeable GCS-only AI."
+        },
+        "independent_performance": {
+          "state": "null",
+          "value": null
+        }
+      }
+    },
+    "Skydio X10 / Survey accuracy": {
+      "entity_type": null,
+      "fields": {
+        "deployment_scope": {
+          "state": "null",
+          "value": null
+        },
+        "documented_capability": {
+          "claims": [
+            {
+              "extraction": "normalized",
+              "source": "www.skydio.com",
+              "tier": "A",
+              "value": "Manufacturer conditions survey accuracy on setup, mission planning and reference points."
+            }
+          ],
+          "state": "sourced",
+          "value": "Manufacturer conditions survey accuracy on setup, mission planning and reference points."
+        },
+        "independent_performance": {
+          "state": "null",
+          "value": null
+        }
+      }
+    },
+    "Skydio ecosystem / Acquisition": {
+      "entity_type": null,
+      "fields": {
+        "deployment_scope": {
+          "state": "null",
+          "value": null
+        },
+        "documented_capability": {
+          "claims": [
+            {
+              "extraction": "normalized",
+              "source": "www.skydio.com",
+              "tier": "A",
+              "value": "Manufacturer advertises automated data acquisition; specific model/package support not inferred for all drones."
+            }
+          ],
+          "state": "sourced",
+          "value": "Manufacturer advertises automated data acquisition; specific model/package support not inferred for all drones."
+        },
+        "independent_performance": {
+          "state": "null",
+          "value": null
+        }
+      }
+    },
+    "Skydio ecosystem / Navigation": {
+      "entity_type": null,
+      "fields": {
+        "deployment_scope": {
+          "state": "null",
+          "value": null
+        },
+        "documented_capability": {
+          "claims": [
+            {
+              "extraction": "normalized",
+              "source": "www.skydio.com",
+              "tier": "A",
+              "value": "Manufacturer advertises automatic path planning; compatible platform and configuration must be established."
+            }
+          ],
+          "state": "sourced",
+          "value": "Manufacturer advertises automatic path planning; compatible platform and configuration must be established."
+        },
+        "independent_performance": {
+          "state": "null",
+          "value": null
+        }
+      }
+    },
+    "Vietnam / Official airspace entry": {
+      "entity_type": null,
+      "fields": {
+        "deployment_scope": {
+          "state": "null",
+          "value": null
+        },
+        "documented_capability": {
+          "claims": [
+            {
+              "extraction": "normalized",
+              "source": "xaydungchinhsach.chinhphu.vn",
+              "tier": "A",
+              "value": "Government publication identifies the Ministry of Defence airspace map entry point; usable live dataset/API/update integration remains unverified."
+            }
+          ],
+          "state": "sourced",
+          "value": "Government publication identifies the Ministry of Defence airspace map entry point; usable live dataset/API/update integration remains unverified."
+        },
+        "independent_performance": {
+          "state": "null",
+          "value": null
+        }
+      }
+    }
+  }
+}

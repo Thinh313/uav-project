@@ -1,0 +1,13 @@
+{
+  "format":"aeris-herahub-bench88-intake","version":1,"source":"NO_HARDWARE_SUPPLIED","hardwareAvailable":false,
+  "controller":{"model":"HeraHub","serial":null,"firmware":null,"androidApi":null,"screenPixels":null,"sdkVersion":null,"mcuProtocolVersion":null},
+  "aircraft":{"model":"Hera","serial":null,"autopilotFirmware":null,"autopilotCommit":null,"systemId":null,"componentId":null},
+  "input":{"transport":null,"deviceIds":null,"calibrationId":null,"axisMapping":null,"neutralDeadzone":null,"emergencyButtonPolicy":null,"latencyP95BudgetMs":null},
+  "video":{"transport":null,"codec":null,"width":null,"height":null,"frameRate":null,"cameraTimestampContract":null,"staleThresholdMs":null,"latencyP95BudgetMs":null},
+  "radio":{"model":null,"firmware":null,"topology":null,"lossPolicyVersion":null},
+  "payloads":[{"slot":"P1","family":"Phase One","model":null,"serial":null,"firmware":null,"lens":null,"sdkApiVersion":null,"gimbalModel":null,"gimbalFirmware":null,"controlTarget":null,"originalMediaPath":null}],
+  "dualOperator":{"policyVersion":null,"pilotIdentity":null,"payloadIdentity":null,"emergencyOverride":null,"receiverEnforcement":null},
+  "approval":{"criteriaOwner":null,"criteriaVersion":null,"benchOperator":null,"site":null},
+  "referenceOnly":{"androidEmulator":"Android33 ARM64 1280x800","sitlFirmware":"ArduCopter4.7.1 pinned internal quad; not a Hera firmware claim","mcuContract":"HERAMCU45; hardware mapping/calibration unverified","payloadContract":"CYBER65/PROTOCOL22; no physical Phase One compatibility proven"},
+  "authorityRestorable":false,"productionAccepted":false
+}

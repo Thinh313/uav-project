@@ -1,0 +1,911 @@
+Jetson Thor | Advanced AI for Physical Robotics | NVIDIA
+NVIDIA Home
+NVIDIA Home
+Menu
+Menu icon
+Menu
+Menu icon
+Close
+Close icon
+Close
+Close icon
+Close
+Close icon
+Caret down icon
+Accordion is closed, click to open.
+Caret down icon
+Accordion is closed, click to open.
+Caret up icon
+Accordion is open, click to close.
+Caret right icon
+Click to expand
+Caret right icon
+Click to expand
+Caret right icon
+Click to expand menu.
+Caret left icon
+Click to collapse menu.
+Caret left icon
+Click to collapse menu.
+Caret left icon
+Click to collapse menu.
+Shopping Cart
+Click to see cart items
+Search icon
+Click to search
+Visit your regional NVIDIA website for local content, pricing, and where to buy partners specific to your country.
+Argentina
+Australia
+België (Belgium)
+Belgique (Belgium)
+Brasil (Brazil)
+Canada
+Česká Republika (Czech Republic)
+Chile
+Colombia
+Danmark (Denmark)
+Deutschland (Germany)
+España (Spain)
+France
+India
+Italia (Italy)
+México (Mexico)
+Middle East
+Nederland (Netherlands)
+Norge (Norway)
+Österreich (Austria)
+Peru
+Polska (Poland)
+Rest of Europe
+România (Romania)
+Singapore
+Suomi (Finland)
+Sverige (Sweden)
+Türkiye (Turkey)
+United Kingdom
+United States
+대한민국 (South Korea)
+中国大陆 (Mainland China)
+台灣 (Taiwan)
+日本 (Japan)
+Continue
+Skip to main content
+Artificial Intelligence Computing Leadership from NVIDIA
+Robotics and Edge AI
+Solutions
+Solutions
+Robotics
+AI-powered platforms and tools for building and deploying robots
+Edge AI
+Edge AI solutions for real-time processing and decisions at the edge
+Vision AI
+Vision AI platform for building and deploying video analytics agents
+Robotics Research
+Breakthrough research and real-world validation
+Software
+Software
+Isaac Overview
+AI robotics platform for robot simulation, training, and deployment
+Isaac ROS
+CUDA-accelerated ROS 2 stack for perception and mobility
+Isaac Lab
+GPU-accelerated robot learning on Isaac Sim
+Isaac Sim
+Robotics simulation and synthetic data engine
+Isaac GR00T
+Foundation models and tools for humanoid robots
+OSMO
+Cloud-native orchestration for large-scale robotics workflows
+Metropolis
+Vision AI platform for edge-to-cloud video analytics
+Newton
+Open-source GPU physics engine for advanced robot learning
+Hardware
+Hardware
+Jetson Overview
+Edge AI and robotics computers with unified JetPack SDK
+Jetson Thor Series
+Blackwell Jetson for high-end physical AI at the edge
+Jetson Orin Nano Super
+Compact 67-TOPS generative AI edge computer
+Jetson Orin Series
+Embedded AI modules for next-gen robotics and edge apps
+Jetson Xavier Series
+Edge AI modules for autonomous machines and robotics
+Jetson TX2 Series
+Power-efficient AI module for embedded edge computing
+Jetson Nano
+Entry AI module and dev kit for compact edge inference
+IGX Platform
+Industrial edge AI platform with Blackwell-based Thor systems
+For Developers
+For Developers
+Isaac
+AI robotics platform for robot simulation, training, and deployment
+Jetson
+Embedded AI computing platform for robotics and edge
+Metropolis
+Tools and models for building vision AI applications
+IGX Orin Docs
+Software stack and resources for industrial edge AI systems
+Robotics News
+Official news and press on NVIDIA robotics products
+Robotics Blog
+Stories on robotics innovation and AI platforms
+Robotics Technical Blog
+Technical blog hub for robotics tools, SDKs, and workflows
+Shop
+US
+Sign In
+NVIDIA Account
+Logout
+Log In
+LogOut
+Skip to main content
+Artificial Intelligence Computing Leadership from NVIDIA
+0
+US
+Sign In
+NVIDIA Account
+Logout
+Login
+LogOut
+NVIDIA
+NVIDIA logo
+Robotics and Edge AI
+Solutions
+Robotics
+AI-powered platforms and tools for building and deploying robots
+Edge AI
+Edge AI solutions for real-time processing and decisions at the edge
+Vision AI
+Vision AI platform for building and deploying video analytics agents
+Robotics Research
+Breakthrough research and real-world validation
+Software
+Isaac Overview
+AI robotics platform for robot simulation, training, and deployment
+Isaac ROS
+CUDA-accelerated ROS 2 stack for perception and mobility
+Isaac Lab
+GPU-accelerated robot learning on Isaac Sim
+Isaac Sim
+Robotics simulation and synthetic data engine
+Isaac GR00T
+Foundation models and tools for humanoid robots
+OSMO
+Cloud-native orchestration for large-scale robotics workflows
+Metropolis
+Vision AI platform for edge-to-cloud video analytics
+Newton
+Open-source GPU physics engine for advanced robot learning
+Hardware
+Jetson Overview
+Edge AI and robotics computers with unified JetPack SDK
+Jetson Thor Series
+Blackwell Jetson for high-end physical AI at the edge
+Jetson Orin Nano Super
+Compact 67-TOPS generative AI edge computer
+Jetson Orin Series
+Embedded AI modules for next-gen robotics and edge apps
+Jetson Xavier Series
+Edge AI modules for autonomous machines and robotics
+Jetson TX2 Series
+Power-efficient AI module for embedded edge computing
+Jetson Nano
+Entry AI module and dev kit for compact edge inference
+IGX Platform
+Industrial edge AI platform with Blackwell-based Thor systems
+For Developers
+Isaac
+AI robotics platform for robot simulation, training, and deployment
+Jetson
+Embedded AI computing platform for robotics and edge
+Metropolis
+Tools and models for building vision AI applications
+IGX Orin Docs
+Software stack and resources for industrial edge AI systems
+Robotics News
+Official news and press on NVIDIA robotics products
+Robotics Blog
+Stories on robotics innovation and AI platforms
+Robotics Technical Blog
+Technical blog hub for robotics tools, SDKs, and workflows
+Shop
+This site requires Javascript in order to view all its content. Please enable Javascript in order to access all the functionality of this web site. Here are the
+instructions how to enable JavaScript in your web browser.
+NVIDIA Jetson Thor
+The ultimate platform for physical AI and robotics.
+Get Yours Today
+Purchase your new NVIDIA Jetson Thor through one of our partners.
+Shop Now
+Module Specifications
+|
+Developer Kit Specifications
+|
+Video
+Introduction
+Highlights
+Benefits
+Workloads
+Specs
+Get Started
+Introduction
+Highlights
+Benefits
+Workloads
+Specs
+Get Started
+Introduction
+Highlights
+Benefits
+Workloads
+Specs
+Get Started
+Shop Now
+Overview
+A Compact Powerhouse for Agentic AI and Robotics
+NVIDIA® Jetson Thor™ series modules deliver up to 2070 FP4 TFLOPS of AI compute and 128 GB of memory — 7.5× the performance and 3.5× the energy efficiency of
+NVIDIA AGX Orin™
+— at 40–130 W. They support a wide range of popular open-source models through
+Jetson AI Lab
+.
+NVIDIA Introduces New Jetson Thor Computers to Advance Mainstream Robotics and Edge AI
+New Blackwell-Powered T3000 and T2000 modules, paired with new NVIDIA Jetson software memory optimization and agent skills, help partners and customers move advanced robotics, visual AI and edge workloads onto compact, power-efficient systems.
+Learn More
+NVIDIA Jetson Thor Unlocks Real-Time Reasoning for Physical AI
+The NVIDIA Blackwell-powered robotics supercomputer delivers 2,070 FP4 teraflops to tackle complex applications including agentic AI, high-speed sensor processing and humanoid robotics tasks.
+Learn More
+Maximizing Memory Efficiency to Run Bigger Models on NVIDIA Jetson
+NVIDIA Jetson unlocks multi-billion-parameter edge AI by reclaiming up to 12GB of memory, powering real-time robots and physical AI on compact devices.
+Learn More
+Highlights
+Industry-Leading Performance for Humanoid Robots
+AI Performance
+2070
+TFLOPS
+1
+Memory Bandwidth
+273
+GB/s
+CPU
+14
+cores
+1. 130 W measured performance
+Benefits
+Blackwell GPU, Sensor Processing, and Robotic AI Software Stack
+Supercomputer for Humanoids
+Accelerate generative AI and large transformer models at the edge with the 2070 FP4 TFLOPS Blackwell GPU.
+Agentic ready
+NVIDIA Jetson agent skills and NVIDIA NemoClaw let developers build, secure, and deploy autonomous agents directly at the edge.
+Robotic AI Software
+Discover a solution designed for humanoid robotics and physical AI applications, powered by the NVIDIA Isaac™ platform and GR00T foundational models.
+High-Speed Sensor Processing
+Ingest high-speed sensor data for real-time performance with 4x 25 GbE networking, a camera offload engine, and a Holoscan Sensor Bridge.
+Get Started With NVIDIA Jetson Thor
+The Jetson AGX Thor Developer Kit delivers 2070 FP4 TFLOPS for humanoids and physical AI. This video showcases its key features, specifications, and components, as well as how to power it on and initiate the first boot. It also demonstrates some of the latest workflows, including
+Isaac GR00T N1
+,
+Video Search and Summarization (VSS)
+, and NVIDIA
+Holoscan Sensor Bridge
+.
+Watch the Video
+Read the Technical Brief
+Workloads
+Unlock Physical AI With the Power of Jetson Thor
+Humanoid Robotics
+Supercharge humanoid robot development with NVIDIA Isaac GR00T workflows.
+Jetson Thor gives you the performance you need for real-time control and multi-sensor processing, while GR00T's comprehensive AI software stack supports a wide range of generative AI models and seamless cloud-to-edge integration. Together, they offer a powerful, integrated solution that accelerates the development and deployment of sophisticated humanoid robots, making them more adaptable, responsive, and capable.
+Explore Humanoids
+Spatial Intelligence
+Create a visual AI agent with the NVIDIA Video Summarization and Search (VSS)  workflow.
+With its powerful
+NVIDIA Blackwell GPU
+, Multi-Instance GPU (MIG) technology, and suite of accelerators, Jetson Thor can handle real-time video data streaming and AI inference. This makes it ideal for building AI agents that can perform VSS tasks at the edge. Using advanced vision and language models allows for the creation of robust visual AI agents that can take on complex video workflows.
+Create Your Own VSS Workflows
+Multi-Sensor Processing
+Streamline sensor processing in real time with NVIDIA Holoscan.
+NVIDIA Holoscan accelerates edge AI development by getting sensor data to the GPU for real-time inference. Build and streamline your end-to-end sensor-processing pipelines with high-performance, user-friendly programming options and production readiness, and deploy seamlessly cloud-to-edge on Jetson Thor. The
+NVIDIA Holoscan Sensor Bridge
+is a sensor-over Ethernet technology, designed to enable real-time data streaming and simplify high-speed sensor fusion and actuator integration on NVIDIA edge AI platforms.
+Learn More About Holoscan
+Virtual Incision
+Agentic AI
+Bring the power of agentic AI to the physical world.
+Jetson Thor delivers unmatched performance and scalability,accelerating low-latency, real-time multi-sensor applications. This makes it ideal for running the latest generative AI models and AI agents. Jetson Thor modules support a wide range of generative AI models,  from VLA (Vision Language Action) models to popular LLMs (Large Language Models) and VLMs (Vision Language Models), and supports agentic AI  framework such as NemoClaw, ensuring seamless cloud-to-edge integration.
+Learn More
+Specifications
+NVIDIA Jetson Thor Series
+Jetson AGX Thor Developer Kit
+Jetson T5000
+Jetson T4000
+AI Performance
+2070 TFLOPS (FP4—Sparse)
+1200 TFLOPS (FP4—Sparse)
+GPU
+2560-core NVIDIA Blackwell architecture GPU with fifth-gen Tensor Cores
+Multi-Instance GPU (MIG) with 10 TPCs
+1536-core NVIDIA Blackwell architecture GPU with fifth-gen Tensor Cores
+Multi-Instance GPU (MIG) with six TPCs
+GPU Max Frequency
+1.57 GHz
+1.53 GHz
+CPU
+14-core Arm® Neoverse®-V3AE 64-bit CPU
+1 MB L2 cache per core
+16 MB shared system L3 cache
+12-core Arm® Neoverse®-V3AE 64-bit CPU
+1 MB L2 cache per core
+16 MB shared system L3 cache
+CPU Max Frequency
+2.6 GHz
+Vision Accelerator
+1x PVA v3
+Memory
+128 GB 256-bit LPDDR5X
+273 GB/s
+64 GB 256-bit LPDDR5X
+273 GB/s
+Storage
+1 TB NVMe M.2 Key M Slot
+Supports NVMe through PCIe
+Supports SSD through USB3.2
+Video Encode
+2X NVENCODE
+1X NVENCODE
+Video Decode
+2X NVENCODE
+1X NVENCODE
+Camera
+HSB camera via QSFP slot
+USB camera
+Up to 20 cameras via HSB
+Up to 6 cameras through 16x lanes MIPI CSI-2
+Up to 32 cameras using Virtual Channels
+C-PHY 2.1 (10.25 Gbps)
+D-PHY 2.1 (40 Gbps)
+PCIe*
+M.2 Key M slot with x4 PCIe Gen5
+M.2 Key E slot with x1 PCIe Gen5
+Up to Gen5 (x8 lanes)
+Root port only—C1 (x1) and C3 (x2)
+Root Point or Endpoint—C2 (x1), C4 (x8), and C5 (x4)
+USB*
+2x USB-A (3.2 Gen2)
+2x USB-C (3.1)
+xHCI host controller with integrated PHY (up to)
+3x USB 3.2
+4x USB 2.0
+Networking*
+1x 5GbE RJ45 connector
+1x QSFP28 (4x 25GbE)
+4x 25GbE
+3x 25GbE
+Display
+1x HDMI 2.0b
+1x DisplayPort 1.4a
+4x shared HDMI2.1
+VESA DisplayPort 1.4a—HBR3, MST
+Other I/O
+QSFP connector
+M.2 Key E expansion slot (WLAN/BT, x1 PCIe, USB2.0, UART, I2C, I2S)
+M.2 Key M connector (NVMe for storage)
+PCIe x4 lane, I2C, PCIe x2 lane
+2x 13-pin CAN header
+2x 6-pin automation header
+LED
+JTAG connector (2x 5-pin header)
+1x fan connector —12V, PWM, and Tach
+Audio panel header (2x 5-pin)
+Microfit power jack
+RTC backup battery connector 2-pin
+5x I2S/2x audio hub (AHUB), 2x DMIC, 4x UART, 4x CAN, 3x SPI, 13x I2C, 6x PWM outputs
+5x I2S/2x audio hub (AHUB), 2x DMIC, 4x UART, 3x SPI, 13x I2C, 6x PWM outputs**
+Power
+40 W–130 W
+40 W–130 W
+40 W–70 W
+Mechanical
+243.19 mm x 112.40 mm x 56.88 mm
+Thermal Transfer Plate (TTP) and optional fan or heat sink
+100 mm x 87 mm
+699-pin B2B connector
+Integrated Thermal Transfer Plate (TTP) with heatpipe
+* Refer to the Software Features section of the latest NVIDIA Jetson Linux Developer Guide for a list of supported features.
+** Low-speed I/O specification is subject to change.
+View Full Specs
+View Fewer Specs
+Get Started
+Get Yours Today
+Purchase your new NVIDIA Jetson Thor through one of our partners.
+Shop Now
+Explore NVIDIA Jetson
+NVIDIA Jetson™ is the leading platform for robotics and embedded edge AI applications. Its hardware powers edge AI with energy-efficient, high-performance modules designed for robotics, computer vision, and autonomous systems.
+Jetson Hardware
+Jetson Software
+Explore NVIDIA IGX
+NVIDIA IGX™ is an industrial-grade, edge AI platform that combines enterprise-level hardware, software, and support. It’s purpose-built for industrial, robotics, and medical environments, delivering powerful AI compute, high-bandwidth sensor processing, enterprise security, and functional safety.
+IGX Thor Hardware
+IGX Software
+Stay Connected
+NVIDIA Jetson forums provide a vibrant developer community for sharing knowledge, resolving technical issues, and accelerating innovation with the Jetson platform.
+Explore NVIDIA Jetson Forums
+NVIDIA Jetson Thor Series Modules Quick Specs
+Jetson T5000
+Jetson T4000
+AI Performance
+2070 TFLOPS (FP4—Sparse)
+1200 TFLOPS (FP4—Sparse)
+GPU
+2560-core NVIDIA Blackwell architecture GPU with fifth-gen Tensor Cores
+Multi-Instance GPU (MIG) with 10 TPCs
+1536-core NVIDIA Blackwell architecture GPU with fifth-gen Tensor Cores
+Multi-Instance GPU (MIG) with six TPCs
+CPU
+14-core Arm® Neoverse®-V3AE 64-bit CPU
+1 MB L2 cache per core
+16 MB Shared System L3 Cache
+12-core Arm® Neoverse®-V3AE 64-bit CPU
+64 KB I-Cache, 64 KB D-Cache
+1 MB L2 cache per core
+16 MB Shared System L3 Cache
+Memory
+128 GB 256-bit LPDDR5X
+273 GB/s
+64 GB 256-bit LPDDR5X
+273 GB/s
+Networking
+4x 25GbE
+3x 25GbE
+Storage
+Supports NVMe through PCIe
+Supports SSD through USB3.2
+Mechanical
+100 mm x 87 mm
+699 pins
+Power
+40 W–130 W
+40 W–70 W
+* Refer to the Software Features section of the latest NVIDIA Jetson™ Linux Developer Guide for a list of supported features.
+View the Jetson AGX Thor Module Datasheet
+NVIDIA Jetson AGX Thor Developer Kit Quick Specs
+AI Performance
+2070 TFLOPS (FP4—sparse)
+Module
+Jetson T5000
+GPU
+2560-core NVIDIA Blackwell architecture GPU with fifth-gen Tensor Cores
+Multi-Instance GPU (MIG) with 10 TPCs
+CPU
+14-core Arm® Neoverse®-V3AE 64-bit CPU
+1 MB L2 Cache per core
+16 MB Shared System L3 Cache
+Memory
+128 GB 256-bit LPDDR5X
+273 GB/s
+Networking*
+1x 5 GbE RJ45 connector
+1x QSFP28 (4x 25GbE)
+I/O
+QSFP connector
+HDMI port
+DisplayPort
+2x USB-A 3.2 | 2x USB-C 3.1
+Gigabit Ethernet
+2x 13-pin CAN header
+Microfit power jack
+Storage
+1 TB NVMe M.2 Key M slot
+Power
+40 W–130 W
+* Refer to the Software Features section of the latest NVIDIA Jetson Linux Developer Guide for a list of supported features.
+View the Jetson AGX Thor Developer Kit Datasheet
+Get notified when NVIDIA
+®
+Jetson Thor
+™
+is available.
+Welcome back.
+			Not you?
+Log Out
+Welcome
+			back. Not you?
+Clear form
+Section
+Section
+First Name
+Last Name
+Business Email Address
+Organization / University Name
+Industry
+Industry
+Aerospace
+Agriculture
+Architecture / Engineering / Construction
+Automotive / Transportation
+Cloud Services
+Consumer Internet
+Energy
+Financial Services
+Game Development
+Hardware / Semiconductor
+Healthcare & Life Sciences
+Higher Education / Academia
+HPC / Supercomputing
+Manufacturing
+Media & Entertainment
+Public Sector
+Retail
+Telecommunications
+Other
+Job Title
+Job Title
+Location
+Location
+Afghanistan
+Aland Islands
+Albania
+Algeria
+American Samoa
+Andorra
+Angola
+Anguilla
+Antarctica
+Antigua and Barbuda
+Argentina
+Armenia
+Aruba
+Australia
+Austria
+Azerbaijan
+Bahamas
+Bahrain
+Bangladesh
+Barbados
+Belarus
+Belgium
+Belize
+Benin
+Bermuda
+Bhutan
+Bolivia
+Bonaire, Sint Eustatius and Saba
+Bosnia and Herzegovina
+Botswana
+Bouvet Island
+Brazil
+British Indian Ocean Territory
+British Virgin Islands
+Brunei Darussalam
+Bulgaria
+Burkina Faso
+Burundi
+Cambodia
+Cameroon
+Canada
+Cape Verde
+Cayman Islands
+Central African Republic
+Chad
+Chile
+China
+Christmas Island
+Cocos (Keeling) Islands
+Colombia
+Comoros
+Congo
+Congo, Democratic Republic of the
+Cook Islands
+Costa Rica
+Cote D'Ivoire
+Croatia
+Cuba
+Curaçao
+Cyprus
+Czech Republic
+Denmark
+Djibouti
+Dominica
+Dominican Republic
+Ecuador
+Egypt
+El Salvador
+Equatorial Guinea
+Eritrea
+Estonia
+Eswatini
+Ethiopia
+Falkland Islands (Malvinas)
+Faroe Islands
+Fiji
+Finland
+France
+French Guiana
+French Polynesia
+French Southern Territories
+Gabon
+Gambia
+Georgia
+Germany
+Ghana
+Gibraltar
+Greece
+Greenland
+Grenada
+Guadeloupe
+Guam
+Guatemala
+Guernsey
+Guinea
+Guinea-Bissau
+Guyana
+Haiti
+Heard Island and Mcdonald Islands
+Honduras
+Hong Kong
+Hungary
+Iceland
+India
+Indonesia
+Iran
+Iraq
+Ireland
+Isle of Man
+Israel
+Italy
+Jamaica
+Japan
+Jersey
+Jordan
+Kazakhstan
+Kenya
+Kiribati
+Korea Democratic People's Republic of
+Korea Republic of
+Kuwait
+Kyrgyzstan
+Lao People's Democratic Republic
+Latvia
+Lebanon
+Lesotho
+Liberia
+Libya
+Liechtenstein
+Lithuania
+Luxembourg
+Macao
+Madagascar
+Malawi
+Malaysia
+Maldives
+Mali
+Malta
+Marshall Islands
+Martinique
+Mauritania
+Mauritius
+Mayotte
+Mexico
+Micronesia, Federated States of
+Moldova, Republic of
+Monaco
+Mongolia
+Montenegro
+Montserrat
+Morocco
+Mozambique
+Myanmar
+Namibia
+Nauru
+Nepal
+New Caledonia
+New Zealand
+Nicaragua
+Niger
+Nigeria
+Niue
+Norfolk Island
+North Macedonia
+Northern Mariana Islands
+Norway
+Oman
+Pakistan
+Palau
+Palestine, State of
+Panama
+Papua New Guinea
+Paraguay
+Peru
+Philippines
+Pitcairn
+Poland
+Portugal
+Puerto Rico
+Qatar
+Réunion
+Romania
+Russian Federation
+Rwanda
+Saint Helena
+Saint Kitts and Nevis
+Saint Lucia
+Saint Pierre and Miquelon
+Saint Vincent and the Grenadines
+Saint-Barthélemy
+Saint-Martin (French part)
+Samoa
+San Marino
+Sao Tome and Principe
+Saudi Arabia
+Senegal
+Serbia
+Seychelles
+Sierra Leone
+Singapore
+Sint Maarten
+Slovakia
+Slovenia
+Solomon Islands
+Somalia
+South Africa
+South Georgia and the South Sandwich Islands
+South Sudan
+Spain
+Sri Lanka
+Sudan
+Suriname
+Svalbard and Jan Mayen
+Sweden
+Switzerland
+Syria
+Taiwan
+Tajikistan
+Tanzania
+Thailand
+The Netherlands
+Timor-Leste
+Togo
+Tokelau
+Tonga
+Trinidad and Tobago
+Tunisia
+Turkey
+Turkmenistan
+Turks and Caicos Islands
+Tuvalu
+Uganda
+Ukraine
+United Arab Emirates
+United Kingdom
+United States
+United States Minor Outlying Islands
+Uruguay
+Uzbekistan
+Vanuatu
+Vatican City State
+Venezuela
+Viet Nam
+Virgin Islands U.S.
+Wallis and Futuna
+Western Sahara
+Yemen
+Zambia
+Zimbabwe
+Preferred Language
+Preferred Language
+Chinese (Simplified)
+Chinese (Traditional)
+Czech
+Danish
+Dutch
+English (Australia)
+English (GB)
+English (India)
+English (Malaysia)
+English (Philippines)
+English (Singapore)
+English (US)
+Finnish
+French
+French (Belgium)
+German
+German (Austria)
+Indonesian
+Italian
+Japanese
+Korean
+Netherlands (Belgium)
+Norwegian
+Polish
+Portuguese (Brazil)
+Spanish (Latin America)
+Spanish (Spain)
+Swedish
+Thai
+Turkish
+Vietnamese
+State/Province
+State/Province
+安徽
+北京
+重庆
+福建
+广东
+甘肃
+广西
+贵州
+海南
+湖北
+河北
+河南
+黑龙江
+湖南
+吉林
+江苏
+江西
+辽宁
+内蒙古
+宁夏
+青海
+四川
+山东
+上海
+陕西
+山西
+天津
+新疆
+西藏
+云南
+浙江
+enterpriseOptIns hidden field
+Send me the latest enterprise news, announcements, and more from NVIDIA. I can unsubscribe at any time.
+nvid hidden field
+ncid hidden field
+NVIDIA Privacy Policy
+I agree to the collection and processing of the above information by NVIDIA <span class="corporation-txt hidden">Corporation </span>for the purposes of research and event organization, and I have read and agree to <a href="https://www.nvidia.com/en-us/about-nvidia/privacy-policy/?deeplink=visiting-our-website"; target="_blank">NVIDIA Privacy Policy</a>.
+I agree that the above information will be transferred to NVIDIA Corporation in the United States and stored in a manner consistent with <a href="https://www.nvidia.com/en-us/about-nvidia/privacy-policy/?deeplink=visiting-our-website" target="_blank">NVIDIA Privacy Policy</a> due to necessities for research, event organization and corresponding NVIDIA internal management and system operation need. You may contact us by sending an email to <a href="mailto:privacy@nvidia.com">privacy@nvidia.com</a> to resolve related problems.
+Submit
+Software
+Isaac Overview
+Isaac ROS
+Isaac Lab
+Isaac Lab-Arena
+Isaac Sim
+Isaac GR00T
+OSMO
+Metropolis
+Newton
+Hardware
+Jetson Overview
+Jetson Thor Series
+Jetson Orin Nano Super
+Jetson Orin Series
+Jetson Xavier Series
+Jetson TX2 Series
+Jetson Nano
+IGX Platform
+Resources
+NVIDIA Developer Program
+NVIDIA Humanoid Robot Developer Program
+Ecosystem Partners
+Success Stories
+Robotics News
+Robotics Blog
+Robotics Technical Blog
+Community
+Isaac Forum
+Jetson Forum
+Metropolis Forum
+Community Projects
+Follow NVIDIA Robotics
+NVIDIA
+United States
+Privacy Policy
+Your Privacy Choices
+Terms of Service
+Accessibility
+Corporate Policies
+Product Security
+Contact
+Copyright © 2026 NVIDIA Corporation

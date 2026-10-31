@@ -1,0 +1,11 @@
+# Beta04: integrated Android + owned ArduPilot, resources20/10
+
+The user's latest explicit policy supersedes20/29 for this isolated successor: admission20GiB, hardfloor10GiB with256MiB closure/write reserve, stable31samples/30s/max256MiB decline, forecast15s retained. Old source/candidate/ENDURE and Beta03 source/receipts are immutable. No automatic evidence cleanup. Cached tools/artifacts only; development APK permitted, no production signature.
+
+One assistant switches Contractor/Builder/Verify under personal Vibecode6.3. No independent-review claim. Outcome: Android Workbench -> preflight -> actual owned ArduPilot AUTO with synthetic payload/host video -> review, restart without restored authority, SAF cancel/error recovery and verified portable package. Host-companion simulation, no physical camera/Hera qualification.
+
+Reuse exact pinned G17 runtime and MissionLink algorithms through a scoped projection, preserving binary/image identity, serial readiness, fsync-before-wire, command deadlines, session/authority, actual takeoff proof, bounded logs, ownership closure and no retry. Only namespace/port/quota/disk-policy wiring changes in launcher; original launcher/pins unchanged. Add current-source pins. Five retained AP requests maximum, five host starts (fifth is review/SAF-only with preserved workspace and no new AP permission), previously four host starts (fourth repairs mismatched media lifetime/guard and adds read-only DOM telemetry for efficient actual ADB UI tests; previous attempts retained),45min wall budget,1GiB task evidence. No whole project copy. A failed runtime is retained and must close before another separately approved bounded scenario; no hidden campaign resume.
+
+Fix discovered native origin predicate8892 mismatch to8896, main host8896/media8895/AP5984. Pure host/fault and compile first, then resource admission/build/Android/SITL. Do not infer flight from ACK, media authenticity from JPEG, or survey quality from host-receipt geolocation. Save failures, source fingerprints, per-gate actual evidence; never call mock-only completion Beta-ready.
+
+Final review-only sixth host repairs diagnostic HTTP Buffer serialization found by actual SAF. No further AP requests, same tested APK, same workspace root. HTTP response itself must pass independent receiver before native export.

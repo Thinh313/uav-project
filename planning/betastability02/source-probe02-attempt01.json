@@ -1,0 +1,10 @@
+{
+  "at": "2026-10-26T01:22:30.403025+00:00",
+  "status": "FAILED_PROBE_HANG_INPUT_READ",
+  "scope": "HOST_ONLY",
+  "cause": "Foundation FileHandle read(upToCount:4096) waited for full pipe request block; changed to POSIX read returning available bytes",
+  "ownedPids": [
+    14229,
+    14243
+  ]
+}

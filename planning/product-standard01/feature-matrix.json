@@ -1,0 +1,808 @@
+{
+  "schema": "aeris-product-standard-baseline1",
+  "date": "2026-10-20",
+  "status": "ADOPTED_PRODUCT_DIRECTION_ENGINEERING_ACCEPTANCE_PROPOSED",
+  "userDecision": "RAGAS no longer acceptance target; standards/reference outcomes and user needs are target",
+  "historicalMapping": "Retains F01-F47 IDs from AIRSPACE35; adds dedicated F48 operatorUX; count is taxonomy not percentcomplete",
+  "noProductReadinessUpgrade": true,
+  "latestIntegratedStatus": "NOT READY",
+  "foundationQualification": "P1 OPERATOR01 scoped AndroidSITL12ACaccepted retained; P2CREW02/newINTEGRATION03 unaccepted; never transfer acceptance acrosssource/app/config",
+  "hardwareQualification": "NoHeraHub/PhaseOne/physicalUAV supportaccepted",
+  "priorities": "P0 before declaredreleaseprofile; P1 premium/conditionaltraining; P2 strategic. NotallP0s in oneincrement. P0_CUSTOMER retains Research PartnerPhaseOne/dualoperator priorities.",
+  "claimsAreNotCertifications": true,
+  "features": [
+    {
+      "id": "F01",
+      "group": "Flight",
+      "target": "Mode thực, mode yêu cầu, chủ quyền điều khiển",
+      "priority": "P0",
+      "currentFoundation": "ANDROID+SITL: quan sát mode, pending/UNKNOWN và quyền trong P1",
+      "currentIntegratedGap": "INTEGRATION03 chưa tái nghiệm thu trọn hành trình",
+      "proposedAcceptance": "Mọi trạng thái có source/session/age; mode yêu cầu không thành mode thực trước quan sát mới; mất link giữ UNKNOWN.",
+      "retainedEvidenceReports": [
+        "delivery/COMPLETION-OPERATOR01.md",
+        "delivery/COMPLETION-INTEGRATION03-03.md"
+      ],
+      "provenance": "TARGET_ASSISTANT_AUTHORED_FROM_USER_DIRECTION; CURRENT_FROM_RETAINED_REPORTS_NOT_RERUN",
+      "operationalHeraAccepted": false
+    },
+    {
+      "id": "F02",
+      "group": "Input",
+      "target": "Joystick, nút/roller và tiếp quản",
+      "priority": "P0",
+      "currentFoundation": "MOCK: contract calibration/mapping MCU; có thao tác cảm ứng Android",
+      "currentIntegratedGap": "Chưa HID/USB/RC vật lý HeraHub; đường RC độc lập chưa xác nhận",
+      "proposedAcceptance": "Trên cấu hình thật kiểm deadzone/range/invert, mapping/version, giữ/nhả nút, lost focus/USB/reboot; không phát lại cần cũ.",
+      "retainedEvidenceReports": [
+        "delivery/COMPLETION-HERAMCU45.md",
+        "delivery/COMPLETION-INTEGRATION03-03.md"
+      ],
+      "provenance": "TARGET_ASSISTANT_AUTHORED_FROM_USER_DIRECTION; CURRENT_FROM_RETAINED_REPORTS_NOT_RERUN",
+      "operationalHeraAccepted": false
+    },
+    {
+      "id": "F03",
+      "group": "Flight",
+      "target": "Arm, takeoff, AUTO, Hold, RTL, land",
+      "priority": "P0",
+      "currentFoundation": "ANDROID+SITL: P1/NATIVE98 có AUTO→ground/disarm",
+      "currentIntegratedGap": "Từng mode/manual transition và toàn bộ final INTEGRATION03 chưa đạt",
+      "proposedAcceptance": "Capability theo firmware; ý định→wire→ACK→mode/position quan sát; đủ nominal và loss, không force-arm để qua kiểm.",
+      "retainedEvidenceReports": [
+        "delivery/COMPLETION-OPERATOR01.md",
+        "delivery/COMPLETION-NATIVE98-VERIFY.md",
+        "delivery/COMPLETION-INTEGRATION03-03.md"
+      ],
+      "provenance": "TARGET_ASSISTANT_AUTHORED_FROM_USER_DIRECTION; CURRENT_FROM_RETAINED_REPORTS_NOT_RERUN",
+      "operationalHeraAccepted": false
+    },
+    {
+      "id": "F04",
+      "group": "Flight",
+      "target": "Pause/continue/resume nhiệm vụ",
+      "priority": "P0",
+      "currentFoundation": "FOUNDATION: có snapshot/mission reconciliation và restart không phục hồi quyền",
+      "currentIntegratedGap": "Chưa nghiệm thu final pause/resume/reboot/đổi pin liền mạch",
+      "proposedAcceptance": "Đọc lại mission/current sequence/Home/config sau gián đoạn; operator duyệt phần còn lại, không bỏ vùng hoặc chụp trùng ngầm.",
+      "retainedEvidenceReports": [
+        "delivery/COMPLETION-NATIVE98-VERIFY.md",
+        "delivery/COMPLETION-OPERATOR01.md",
+        "delivery/COMPLETION-INTEGRATION03-03.md"
+      ],
+      "provenance": "TARGET_ASSISTANT_AUTHORED_FROM_USER_DIRECTION; CURRENT_FROM_RETAINED_REPORTS_NOT_RERUN",
+      "operationalHeraAccepted": false
+    },
+    {
+      "id": "F05",
+      "group": "Crew",
+      "target": "Hai operator độc lập và bàn giao quyền",
+      "priority": "P0_CUSTOMER",
+      "currentFoundation": "ANDROID+SITL: P1 bàn giao hai vai cùng cockpit; CREW02 có mTLS B riêng/pilot-loss",
+      "currentIntegratedGap": "P2 và INTEGRATION03 chưa đạt toàn bộ consent/partition/final review",
+      "proposedAcceptance": "Hai danh tính/phiên độc lập; một owner mỗi tài nguyên; consent/CAS; stale/partition/rejoin không tự nhận quyền.",
+      "retainedEvidenceReports": [
+        "delivery/COMPLETION-OPERATOR01.md",
+        "delivery/COMPLETION-CREW02.md",
+        "delivery/COMPLETION-INTEGRATION03-03.md"
+      ],
+      "provenance": "TARGET_ASSISTANT_AUTHORED_FROM_USER_DIRECTION; CURRENT_FROM_RETAINED_REPORTS_NOT_RERUN",
+      "operationalHeraAccepted": false
+    },
+    {
+      "id": "F06",
+      "group": "Airspace",
+      "target": "Vùng cấm/hạn chế theo vị trí–cao độ–thời gian",
+      "priority": "P0",
+      "currentFoundation": "MOCK: engine geo-awareness và đối chiếu nguồn/coverage/validity",
+      "currentIntegratedGap": "Chưa nguồn vùng trời chính thức được xác nhận cho địa bàn vận hành",
+      "proposedAcceptance": "Nguồn/version/thời hạn/vùng phủ rõ; thiếu dữ liệu trả UNKNOWN; acknowledgement không tạo giấy phép.",
+      "retainedEvidenceReports": [
+        "delivery/COMPLETION-AIRSPACE35.md"
+      ],
+      "provenance": "TARGET_ASSISTANT_AUTHORED_FROM_USER_DIRECTION; CURRENT_FROM_RETAINED_REPORTS_NOT_RERUN",
+      "operationalHeraAccepted": false
+    },
+    {
+      "id": "F07",
+      "group": "Airspace",
+      "target": "Kiểm tuyến đi, quay về và nơi đáp với vùng trời",
+      "priority": "P0",
+      "currentFoundation": "MOCK: corridor/route/return/landing conflict checks",
+      "currentIntegratedGap": "Chưa xác nhận địa hình/vùng trời và đường thực trên Hera",
+      "proposedAcceptance": "Kiểm mọi đoạn và uncertainty theo đúng datum/thời gian; path và alternate không được suy an toàn từ đường 2D.",
+      "retainedEvidenceReports": [
+        "delivery/COMPLETION-AIRSPACE35.md",
+        "delivery/COMPLETION-APFLIGHT36.md"
+      ],
+      "provenance": "TARGET_ASSISTANT_AUTHORED_FROM_USER_DIRECTION; CURRENT_FROM_RETAINED_REPORTS_NOT_RERUN",
+      "operationalHeraAccepted": false
+    },
+    {
+      "id": "F08",
+      "group": "Safety",
+      "target": "Geofence upload/readback/breach",
+      "priority": "P0",
+      "currentFoundation": "SITL: FLIGHTSAFETY42 đã kiểm fence/prearm trong scope riêng",
+      "currentIntegratedGap": "Chưa full fence editor→native→AP trong final và Hera",
+      "proposedAcceptance": "Tách mission/fence/rally; đủ item/config readback; breach/action do AP quan sát, không chỉ giao cắt do GCS tính.",
+      "retainedEvidenceReports": [
+        "delivery/COMPLETION-FLIGHTSAFETY42.md",
+        "delivery/COMPLETION-APFLIGHT36.md",
+        "delivery/COMPLETION-INTEGRATION03-03.md"
+      ],
+      "provenance": "TARGET_ASSISTANT_AUTHORED_FROM_USER_DIRECTION; CURRENT_FROM_RETAINED_REPORTS_NOT_RERUN",
+      "operationalHeraAccepted": false
+    },
+    {
+      "id": "F09",
+      "group": "Airspace",
+      "target": "Dữ liệu vùng trời offline có thời hạn",
+      "priority": "P0",
+      "currentFoundation": "MOCK: nguồn/coverage/validity/UNKNOWN",
+      "currentIntegratedGap": "Chưa bộ dữ liệu offline thực được cấp phép và vận hành",
+      "proposedAcceptance": "Tải khu vực có nguồn hợp lệ; hiển thị tuổi/vùng phủ, cảnh báo hết hạn; không dùng cache thiếu làm CLEAR.",
+      "retainedEvidenceReports": [
+        "delivery/COMPLETION-AIRSPACE35.md"
+      ],
+      "provenance": "TARGET_ASSISTANT_AUTHORED_FROM_USER_DIRECTION; CURRENT_FROM_RETAINED_REPORTS_NOT_RERUN",
+      "operationalHeraAccepted": false
+    },
+    {
+      "id": "F10",
+      "group": "Safety",
+      "target": "Preflight, GNSS/EKF/link/pin/failsafe alerts",
+      "priority": "P0",
+      "currentFoundation": "SITL+ANDROID: adapter4.7.1 đọc đúng kiểu; P1 kiểm preflight và loss",
+      "currentIntegratedGap": "Phiên dài bản mới còn stale/cohort; chưa bộ fault kết hợp trên target",
+      "proposedAcceptance": "Đúng firmware/type/unit/source-age; config mismatch và missing giữ reason; không nới guard; warning acknowledge không xóa lỗi.",
+      "retainedEvidenceReports": [
+        "delivery/COMPLETION-PREFLIGHT43.md",
+        "delivery/COMPLETION-FLIGHTSAFETY42.md",
+        "delivery/COMPLETION-OPERATOR01.md",
+        "delivery/COMPLETION-INTEGRATION03-03.md"
+      ],
+      "provenance": "TARGET_ASSISTANT_AUTHORED_FROM_USER_DIRECTION; CURRENT_FROM_RETAINED_REPORTS_NOT_RERUN",
+      "operationalHeraAccepted": false
+    },
+    {
+      "id": "F11",
+      "group": "Safety",
+      "target": "Dự phòng năng lượng/gió/tải và điểm đáp thay thế",
+      "priority": "P0",
+      "currentFoundation": "MOCK: mô hình Wh/gió/khối lượng/reserve và alternate",
+      "currentIntegratedGap": "Chưa power curve/battery/load/wind Hera hiệu chuẩn",
+      "proposedAcceptance": "Model có miền hiệu lực và uncertainty; dữ liệu thiếu trả UNKNOWN; kiểm dự báo với telemetry/flight logs thật.",
+      "retainedEvidenceReports": [
+        "delivery/COMPLETION-APFLIGHT36.md"
+      ],
+      "provenance": "TARGET_ASSISTANT_AUTHORED_FROM_USER_DIRECTION; CURRENT_FROM_RETAINED_REPORTS_NOT_RERUN",
+      "operationalHeraAccepted": false
+    },
+    {
+      "id": "F12",
+      "group": "Survey",
+      "target": "Polygon/grid, camera/GSD/overlap/tốc độ",
+      "priority": "P0_SURVEY",
+      "currentFoundation": "HOST+ANDROID: compiler/camera readiness và mission intake có kiểm",
+      "currentIntegratedGap": "Chưa độ phủ/GSD/chất lượng ảnh thật; positive polygon unseen còn thiếu ở slice mới",
+      "proposedAcceptance": "Oracle toán độc lập + corpus chưa dùng; kiểm camera cadence/readout/blur; dự kiến khác kết quả thu nhận.",
+      "retainedEvidenceReports": [
+        "delivery/COMPLETION-MAPPING51.md",
+        "delivery/COMPLETION-INTEGRATION03-03.md"
+      ],
+      "provenance": "TARGET_ASSISTANT_AUTHORED_FROM_USER_DIRECTION; CURRENT_FROM_RETAINED_REPORTS_NOT_RERUN",
+      "operationalHeraAccepted": false
+    },
+    {
+      "id": "F13",
+      "group": "Geodesy",
+      "target": "Home, AMSL/AGL/ellipsoid/geoid/terrain",
+      "priority": "P0",
+      "currentFoundation": "HOST+SITL+ANDROID: review Home và một số datum/source gates",
+      "currentIntegratedGap": "Chưa mọi mixed-frame/DEM/no-data trên target và mission cuối",
+      "proposedAcceptance": "Planned/observed Home riêng; frame/unit/geoid/DEM provenance đúng; không tự đổi altitude hoặc bù datum thiếu.",
+      "retainedEvidenceReports": [
+        "delivery/COMPLETION-GEO14.md",
+        "delivery/COMPLETION-OPERATOR01.md",
+        "delivery/COMPLETION-INTEGRATION03-03.md"
+      ],
+      "provenance": "TARGET_ASSISTANT_AUTHORED_FROM_USER_DIRECTION; CURRENT_FROM_RETAINED_REPORTS_NOT_RERUN",
+      "operationalHeraAccepted": false
+    },
+    {
+      "id": "F14",
+      "group": "Mission",
+      "target": "Corridor, structure scan, orbit/POI, oblique",
+      "priority": "P1",
+      "currentFoundation": "HOST+ANDROID: corridor có mô hình/nạp; các pattern còn lại chưa qualification",
+      "currentIntegratedGap": "Corridor final chưa bay; structure/orbit/oblique không suy từ demo",
+      "proposedAcceptance": "Mỗi pattern có compiler, geodesic/spacing/corner oracle, wire/readback và flight evidence riêng.",
+      "retainedEvidenceReports": [
+        "delivery/COMPLETION-MAPPING51.md",
+        "delivery/COMPLETION-INTEGRATION03-03.md"
+      ],
+      "provenance": "TARGET_ASSISTANT_AUTHORED_FROM_USER_DIRECTION; CURRENT_FROM_RETAINED_REPORTS_NOT_RERUN",
+      "operationalHeraAccepted": false
+    },
+    {
+      "id": "F15",
+      "group": "Survey",
+      "target": "RTK/NTRIP/PPK và chất lượng định vị",
+      "priority": "P0_SURVEY",
+      "currentFoundation": "MOCK: FIX/correction age/base/reference/PPK-readiness",
+      "currentIntegratedGap": "Chưa correction link, raw GNSS/time sync và xử lý PPK thật",
+      "proposedAcceptance": "Kiểm correction-age/reference/timebase; phân biệt navigation và payload GNSS; accuracy bằng checkpoint, không bằng nhãn FIX.",
+      "retainedEvidenceReports": [
+        "delivery/COMPLETION-MAPPING51.md"
+      ],
+      "provenance": "TARGET_ASSISTANT_AUTHORED_FROM_USER_DIRECTION; CURRENT_FROM_RETAINED_REPORTS_NOT_RERUN",
+      "operationalHeraAccepted": false
+    },
+    {
+      "id": "F16",
+      "group": "Map",
+      "target": "Map/terrain offline và kế hoạch trên địa hình 3D",
+      "priority": "P0",
+      "currentFoundation": "HOST: mô hình geo/DEM và observer3D riêng",
+      "currentIntegratedGap": "Chưa map/DEM offline-native đầy đủ và 3D terrain mission editor",
+      "proposedAcceptance": "Vùng phủ/độ phân giải/datum/no-data/cache/quota rõ; editor2D↔3D không đổi ngữ nghĩa; observer không thành terrain editor.",
+      "retainedEvidenceReports": [
+        "delivery/COMPLETION-GEO14.md",
+        "delivery/COMPLETION-INTEGRATION03-03.md"
+      ],
+      "provenance": "TARGET_ASSISTANT_AUTHORED_FROM_USER_DIRECTION; CURRENT_FROM_RETAINED_REPORTS_NOT_RERUN",
+      "operationalHeraAccepted": false
+    },
+    {
+      "id": "F17",
+      "group": "Mission",
+      "target": "Nhiều sortie, đổi pin, refly phần thiếu",
+      "priority": "P1",
+      "currentFoundation": "PLANNED: có record/plan nền",
+      "currentIntegratedGap": "Chưa planner/resume/refly end-to-end",
+      "proposedAcceptance": "Tính phần đã thu nhận theo evidence; operator chọn phần còn lại, giữ trace các sortie và Home/camera thay đổi.",
+      "retainedEvidenceReports": [
+        "delivery/COMPLETION-MAPPING51.md",
+        "delivery/COMPLETION-INTEGRATION03-03.md"
+      ],
+      "provenance": "TARGET_ASSISTANT_AUTHORED_FROM_USER_DIRECTION; CURRENT_FROM_RETAINED_REPORTS_NOT_RERUN",
+      "operationalHeraAccepted": false
+    },
+    {
+      "id": "F18",
+      "group": "Payload",
+      "target": "Discovery và routing nhiều camera/gimbal",
+      "priority": "P0_CUSTOMER",
+      "currentFoundation": "SITL+ANDROID: ba peer camera/two gimbal tổng hợp, actual MAVLink routes",
+      "currentIntegratedGap": "Chưa qualification toàn bộ final; chưa topology/as-built Hera",
+      "proposedAcceptance": "Khám phá capabilities/identity/manager/proxy/device; sai target từ chối; số payload dựa cấu hình hỗ trợ, không suy từ số bay gá.",
+      "retainedEvidenceReports": [
+        "delivery/COMPLETION-OPERATOR01.md",
+        "delivery/COMPLETION-CREW02.md",
+        "delivery/COMPLETION-INTEGRATION03-03.md"
+      ],
+      "provenance": "TARGET_ASSISTANT_AUTHORED_FROM_USER_DIRECTION; CURRENT_FROM_RETAINED_REPORTS_NOT_RERUN",
+      "operationalHeraAccepted": false
+    },
+    {
+      "id": "F19",
+      "group": "Video",
+      "target": "EO/IR live, decode/switch và cảnh báo frame cũ",
+      "priority": "P0",
+      "currentFoundation": "MOCK/FOUNDATION: contract input/video; màn3D không phải video camera",
+      "currentIntegratedGap": "Chưa live decode/latency/loss/reconnect/thermal video thật trên HeraHub",
+      "proposedAcceptance": "Mỗi feed có identity/frame age; freeze khác cảnh đứng yên; latency glass-to-glass đo trên codec/link/profile được chốt.",
+      "retainedEvidenceReports": [
+        "delivery/COMPLETION-NATIVE24.md",
+        "delivery/COMPLETION-INTEGRATION03-03.md"
+      ],
+      "provenance": "TARGET_ASSISTANT_AUTHORED_FROM_USER_DIRECTION; CURRENT_FROM_RETAINED_REPORTS_NOT_RERUN",
+      "operationalHeraAccepted": false
+    },
+    {
+      "id": "F20",
+      "group": "Payload",
+      "target": "Camera/gimbal theo capability; Phase One",
+      "priority": "P0_CUSTOMER",
+      "currentFoundation": "ANDROID+SITL: P1 lệnh camera/gimbal lặp; contract Phase One",
+      "currentIntegratedGap": "Chưa camera/gimbal thật, exact Phase One model/API và thao tác liên tục trên thiết bị",
+      "proposedAcceptance": "Đúng setting/readback, gimbal pose/limits/rates, target và owner; generic camera protocol không tự chứng minh Phase One support.",
+      "retainedEvidenceReports": [
+        "delivery/COMPLETION-OPERATOR01.md",
+        "delivery/COMPLETION-CREW02.md",
+        "delivery/COMPLETION-INTEGRATION03-03.md",
+        "planning/cyber64/ROADMAP.md"
+      ],
+      "provenance": "TARGET_ASSISTANT_AUTHORED_FROM_USER_DIRECTION; CURRENT_FROM_RETAINED_REPORTS_NOT_RERUN",
+      "operationalHeraAccepted": false
+    },
+    {
+      "id": "F21",
+      "group": "Media",
+      "target": "Ảnh/video thực có nguồn, thời gian và GNSS",
+      "priority": "P0",
+      "currentFoundation": "SITL: trigger/capture tổng hợp; P1 actualFiles=0",
+      "currentIntegratedGap": "Chưa exposure/file/media thật và time/GNSS correlation",
+      "proposedAcceptance": "Tách intent/ACK/exposure/file; đối chiếu captureID/time/GNSS/filehash; không nhận ảnh thật từ ACK hoặc file declaration.",
+      "retainedEvidenceReports": [
+        "delivery/COMPLETION-OPERATOR01.md",
+        "delivery/COMPLETION-MAPPING51.md",
+        "delivery/COMPLETION-INTEGRATION03-03.md"
+      ],
+      "provenance": "TARGET_ASSISTANT_AUTHORED_FROM_USER_DIRECTION; CURRENT_FROM_RETAINED_REPORTS_NOT_RERUN",
+      "operationalHeraAccepted": false
+    },
+    {
+      "id": "F22",
+      "group": "Payload",
+      "target": "Đồng bộ nhiều feed, EO/IR và FOV overlay",
+      "priority": "P1",
+      "currentFoundation": "PLANNED/FOUNDATION: selectors và route mô phỏng",
+      "currentIntegratedGap": "Chưa synchronization/calibration và live overlay trên target",
+      "proposedAcceptance": "Đồng hồ/feed-calibration/extrinsics rõ; đo skew; không vẽ footprint như độ phủ thực khi thiếu dữ liệu.",
+      "retainedEvidenceReports": [
+        "delivery/COMPLETION-MAPPING51.md",
+        "delivery/COMPLETION-INTEGRATION03-03.md"
+      ],
+      "provenance": "TARGET_ASSISTANT_AUTHORED_FROM_USER_DIRECTION; CURRENT_FROM_RETAINED_REPORTS_NOT_RERUN",
+      "operationalHeraAccepted": false
+    },
+    {
+      "id": "F23",
+      "group": "Payload",
+      "target": "Thermal radiometry, LRF và định vị mục tiêu",
+      "priority": "P1",
+      "currentFoundation": "PLANNED: target-specific integration còn mở",
+      "currentIntegratedGap": "Chưa số đo radiometric/range/extrinsics/uncertainty thực",
+      "proposedAcceptance": "Đúng model/unit/calibration; geolocation có error budget/terrain; no-return/invalid không thành0m/0°C.",
+      "retainedEvidenceReports": [
+        "planning/cyber64/ROADMAP.md"
+      ],
+      "provenance": "TARGET_ASSISTANT_AUTHORED_FROM_USER_DIRECTION; CURRENT_FROM_RETAINED_REPORTS_NOT_RERUN",
+      "operationalHeraAccepted": false
+    },
+    {
+      "id": "F24",
+      "group": "AI",
+      "target": "AI hỗ trợ lập plan và giải thích preflight",
+      "priority": "P1",
+      "currentFoundation": "PLANNED: chưa nghiệm thu agent/model vận hành",
+      "currentIntegratedGap": "Chưa baseline/usefulness/unsafe-proposal corpus",
+      "proposedAcceptance": "AI chỉ đưa proposal/diff có nguồn; compiler và safety validator kiểm; operator duyệt; đo lợi ích so workflow không AI/agent trực tiếp.",
+      "retainedEvidenceReports": [
+        "delivery/COMPLETION-AIRSPACE35.md",
+        "delivery/COMPLETION-INTEGRATION03-03.md"
+      ],
+      "provenance": "TARGET_ASSISTANT_AUTHORED_FROM_USER_DIRECTION; CURRENT_FROM_RETAINED_REPORTS_NOT_RERUN",
+      "operationalHeraAccepted": false
+    },
+    {
+      "id": "F25",
+      "group": "AI",
+      "target": "Nhận diện đối tượng/khuyết tật EO/IR",
+      "priority": "P1",
+      "currentFoundation": "PLANNED: chưa runtime perception được nghiệm thu",
+      "currentIntegratedGap": "Chưa dataset/model/hardware metrics và domain-shift",
+      "proposedAcceptance": "Held-out theo mission/site; precision/recall/false alarms/latency và uncertainty; không chứng nhận từ UI bounding box.",
+      "retainedEvidenceReports": [
+        "delivery/ROADMAP-AIRSPACE35.md"
+      ],
+      "provenance": "TARGET_ASSISTANT_AUTHORED_FROM_USER_DIRECTION; CURRENT_FROM_RETAINED_REPORTS_NOT_RERUN",
+      "operationalHeraAccepted": false
+    },
+    {
+      "id": "F26",
+      "group": "AI",
+      "target": "Bám đối tượng/gimbal và mất target",
+      "priority": "P1",
+      "currentFoundation": "PLANNED: chưa closed-loop tracking qualification",
+      "currentIntegratedGap": "Chưa mất/đổi target, reacquire và operator takeover thực",
+      "proposedAcceptance": "Đúng identity/occlusion/latency/limits; mất target giữ trạng thái rõ; không tự chuyển từ bám payload sang bay đuổi.",
+      "retainedEvidenceReports": [
+        "delivery/ROADMAP-AIRSPACE35.md"
+      ],
+      "provenance": "TARGET_ASSISTANT_AUTHORED_FROM_USER_DIRECTION; CURRENT_FROM_RETAINED_REPORTS_NOT_RERUN",
+      "operationalHeraAccepted": false
+    },
+    {
+      "id": "F27",
+      "group": "Autonomy",
+      "target": "Tránh vật cản và replanning có giới hạn",
+      "priority": "P1_HARDWARE_CONDITIONAL",
+      "currentFoundation": "SITL_ISOLATED: đã có corpus/campaign cảm biến tránh vật cản",
+      "currentIntegratedGap": "Chưa integrated safety envelope/cảm biến Hera; không phải DAA đầy đủ",
+      "proposedAcceptance": "Sensor-loss khi giữ cần tiến, vật cản động/biên/FOV/latency; fallback theo firmware và cảm biến, đo khoảng dừng; không suy từ3Dcollision.",
+      "retainedEvidenceReports": [
+        "delivery/COMPLETION-SIMDROP77-VERIFIED.md",
+        "delivery/COMPLETION-SIMSITL76.md"
+      ],
+      "provenance": "TARGET_ASSISTANT_AUTHORED_FROM_USER_DIRECTION; CURRENT_FROM_RETAINED_REPORTS_NOT_RERUN",
+      "operationalHeraAccepted": false
+    },
+    {
+      "id": "F28",
+      "group": "Survey",
+      "target": "Kiểm blur/coverage/GSD và đề nghị refly",
+      "priority": "P1",
+      "currentFoundation": "MOCK: model blur/coverage/readiness và review",
+      "currentIntegratedGap": "Chưa xử lý ảnh thật hoặc AI chất lượng đã kiểm",
+      "proposedAcceptance": "Dùng actualframes/footprints/time; ground-truth và checkpoint; refly là đề nghị có lý do, không tự cấp lệnh.",
+      "retainedEvidenceReports": [
+        "delivery/COMPLETION-MAPPING51.md",
+        "delivery/COMPLETION-GEO14.md"
+      ],
+      "provenance": "TARGET_ASSISTANT_AUTHORED_FROM_USER_DIRECTION; CURRENT_FROM_RETAINED_REPORTS_NOT_RERUN",
+      "operationalHeraAccepted": false
+    },
+    {
+      "id": "F29",
+      "group": "Autonomy",
+      "target": "GNSS-denied/VIO và night autonomy",
+      "priority": "P2",
+      "currentFoundation": "PLANNED",
+      "currentIntegratedGap": "Chưa VIO/navigation model/sensors/field evidence",
+      "proposedAcceptance": "Tách khả năng thermal nhìn đêm khỏi navigation tự chủ; cần cấu hình cảm biến, miền hoạt động và fallback riêng.",
+      "retainedEvidenceReports": [
+        "delivery/ROADMAP-AIRSPACE35.md"
+      ],
+      "provenance": "TARGET_ASSISTANT_AUTHORED_FROM_USER_DIRECTION; CURRENT_FROM_RETAINED_REPORTS_NOT_RERUN",
+      "operationalHeraAccepted": false
+    },
+    {
+      "id": "F30",
+      "group": "AI",
+      "target": "Giới hạn AI, confidence, tuổi dữ liệu và fallback",
+      "priority": "P0_IF_AI_ENABLED",
+      "currentFoundation": "MOCK/FOUNDATION: UNKNOWN/provenance và policy nền",
+      "currentIntegratedGap": "Chưa AI runtime để đánh giá khả năng giải thích/fallback",
+      "proposedAcceptance": "Mọi đề nghị có nguồn/giới hạn; không tự arm/đổi tham số safety; model output không vượt deterministic authority.",
+      "retainedEvidenceReports": [
+        "delivery/COMPLETION-AIRSPACE35.md",
+        "delivery/COMPLETION-INTEGRATION03-03.md"
+      ],
+      "provenance": "TARGET_ASSISTANT_AUTHORED_FROM_USER_DIRECTION; CURRENT_FROM_RETAINED_REPORTS_NOT_RERUN",
+      "operationalHeraAccepted": false
+    },
+    {
+      "id": "F31",
+      "group": "Records",
+      "target": "Journal và review liên kết nhiệm vụ",
+      "priority": "P0",
+      "currentFoundation": "ANDROID+SITL: P1 accepted nominal, loss giữ UNKNOWN",
+      "currentIntegratedGap": "INTEGRATION03 chưa final accepted review",
+      "proposedAcceptance": "Review ràng buộc raw/plan/source/session; complete/partial/UNKNOWN đúng; không sửa hồ sơ lỗi thành thành công.",
+      "retainedEvidenceReports": [
+        "delivery/COMPLETION-OPERATOR01.md",
+        "delivery/COMPLETION-NATIVE98-VERIFY.md",
+        "delivery/COMPLETION-INTEGRATION03-03.md"
+      ],
+      "provenance": "TARGET_ASSISTANT_AUTHORED_FROM_USER_DIRECTION; CURRENT_FROM_RETAINED_REPORTS_NOT_RERUN",
+      "operationalHeraAccepted": false
+    },
+    {
+      "id": "F32",
+      "group": "Handoff",
+      "target": "Dataset lớn, stream/resume và integrity receiver",
+      "priority": "P0",
+      "currentFoundation": "HOST: stream/checkpoint/receiver; ANDROID: P1 SAF2.8MB",
+      "currentIntegratedGap": "Chưa ghép large-data/native/latest-run final thành một flow",
+      "proposedAcceptance": "Đúng run/receiver/nonce; provider=stage; từng chunk fsync/checkpoint; corrupt/partial không publish; transfer-resume không flight-resume.",
+      "retainedEvidenceReports": [
+        "delivery/COMPLETION-STREAM10.md",
+        "delivery/COMPLETION-RESUME11.md",
+        "delivery/COMPLETION-OPERATOR01.md",
+        "delivery/COMPLETION-INTEGRATION03-03.md"
+      ],
+      "provenance": "TARGET_ASSISTANT_AUTHORED_FROM_USER_DIRECTION; CURRENT_FROM_RETAINED_REPORTS_NOT_RERUN",
+      "operationalHeraAccepted": false
+    },
+    {
+      "id": "F33",
+      "group": "Records",
+      "target": "Timeline/replay lệnh, event, telemetry và media",
+      "priority": "P1",
+      "currentFoundation": "HOST+ANDROID: raw/mission/review và observer có đối chiếu",
+      "currentIntegratedGap": "Chưa synchronized camera-video/media timeline đầy đủ",
+      "proposedAcceptance": "Giữ clock-domain/uncertainty; replay lịch sử không có quyền live; không biến missing frame thành interpolation giả thật.",
+      "retainedEvidenceReports": [
+        "delivery/COMPLETION-OPERATOR01.md",
+        "delivery/COMPLETION-INTEGRATION03-03.md"
+      ],
+      "provenance": "TARGET_ASSISTANT_AUTHORED_FROM_USER_DIRECTION; CURRENT_FROM_RETAINED_REPORTS_NOT_RERUN",
+      "operationalHeraAccepted": false
+    },
+    {
+      "id": "F34",
+      "group": "Interop",
+      "target": "QGC/KML/GIS nhập xuất giữ ngữ nghĩa",
+      "priority": "P0",
+      "currentFoundation": "HOST+ANDROID: SimpleItems/QGC và KML scopes đã kiểm",
+      "currentIntegratedGap": "Chưa mọi ComplexItem/terrain/fence/rally/native GIS workflow",
+      "proposedAcceptance": "Giữ original/semantic diff; unsupported refuse hoặc readonly; oracle độc lập và inputs chưa dùng; không lossy-export rồi báo tương thích toàn bộ.",
+      "retainedEvidenceReports": [
+        "delivery/COMPLETION-MAPPING51.md",
+        "delivery/COMPLETION-INTEGRATION03-03.md"
+      ],
+      "provenance": "TARGET_ASSISTANT_AUTHORED_FROM_USER_DIRECTION; CURRENT_FROM_RETAINED_REPORTS_NOT_RERUN",
+      "operationalHeraAccepted": false
+    },
+    {
+      "id": "F35",
+      "group": "Storage",
+      "target": "Quota/retention/archive có kiểm soát",
+      "priority": "P0",
+      "currentFoundation": "HOST: quota/lifecycle/archive có evidence; native persistence nền",
+      "currentIntegratedGap": "Chưa hết dung lượng/Android SAF/cleanup toàn hành trình target",
+      "proposedAcceptance": "Preview exactbytes/protectedholds/keeperproof; xác nhận trước xóa; giữ audit; không tự dọn bằng chứng hoặc mất unique data.",
+      "retainedEvidenceReports": [
+        "delivery/COMPLETION-LIFECYCLE12.md",
+        "delivery/COMPLETION-OPERATOR01.md",
+        "delivery/COMPLETION-INTEGRATION03-03.md"
+      ],
+      "provenance": "TARGET_ASSISTANT_AUTHORED_FROM_USER_DIRECTION; CURRENT_FROM_RETAINED_REPORTS_NOT_RERUN",
+      "operationalHeraAccepted": false
+    },
+    {
+      "id": "F36",
+      "group": "Fleet",
+      "target": "Fleet, lịch nhiệm vụ, vai trò và bảo trì",
+      "priority": "P2",
+      "currentFoundation": "PLANNED: quyền flight/payload chưa tương đương fleetadmin",
+      "currentIntegratedGap": "Chưa fleet inventory/maintenance/scheduler/backend",
+      "proposedAcceptance": "Danh tính/tenant/assignment/audit riêng; cấu hình/radio/pin/payload và bảo trì versioned; không tự dispatch từ lịch.",
+      "retainedEvidenceReports": [
+        "delivery/ROADMAP-AIRSPACE35.md"
+      ],
+      "provenance": "TARGET_ASSISTANT_AUTHORED_FROM_USER_DIRECTION; CURRENT_FROM_RETAINED_REPORTS_NOT_RERUN",
+      "operationalHeraAccepted": false
+    },
+    {
+      "id": "F37",
+      "group": "Crew",
+      "target": "Remote cockpit và bàn giao có xác nhận",
+      "priority": "P1",
+      "currentFoundation": "ANDROID+HOST+SITL_PARTIAL: companion B mTLS riêng",
+      "currentIntegratedGap": "Chưa vận hành mạng xa/loss/latency/handover final",
+      "proposedAcceptance": "Delay/loss/disconnect không split-brain; owner/permission rõ; qua mạng từ xa không tự nhận quyền aircraft.",
+      "retainedEvidenceReports": [
+        "delivery/COMPLETION-CREW02.md",
+        "delivery/COMPLETION-INTEGRATION03-03.md"
+      ],
+      "provenance": "TARGET_ASSISTANT_AUTHORED_FROM_USER_DIRECTION; CURRENT_FROM_RETAINED_REPORTS_NOT_RERUN",
+      "operationalHeraAccepted": false
+    },
+    {
+      "id": "F38",
+      "group": "Collaboration",
+      "target": "Chia sẻ video/annotations/GIS có quyền",
+      "priority": "P1",
+      "currentFoundation": "PLANNED: có data handoff, chưa live collaboration",
+      "currentIntegratedGap": "Chưa video fan-out/annotation sync/access audit",
+      "proposedAcceptance": "Read-only viewer không điều khiển; đúng quyền/source/time; đo bandwidth/privacy/offline behavior.",
+      "retainedEvidenceReports": [
+        "delivery/ROADMAP-AIRSPACE35.md"
+      ],
+      "provenance": "TARGET_ASSISTANT_AUTHORED_FROM_USER_DIRECTION; CURRENT_FROM_RETAINED_REPORTS_NOT_RERUN",
+      "operationalHeraAccepted": false
+    },
+    {
+      "id": "F39",
+      "group": "Fleet",
+      "target": "Nhiều máy bay và deconfliction",
+      "priority": "P2",
+      "currentFoundation": "PLANNED",
+      "currentIntegratedGap": "Chưa multi-aircraft command isolation/deconfliction",
+      "proposedAcceptance": "Aircraft/session/command target isolation, conflict prediction và operator ownership riêng; multi-payload không suy thành multi-UAV.",
+      "retainedEvidenceReports": [
+        "delivery/ROADMAP-AIRSPACE35.md"
+      ],
+      "provenance": "TARGET_ASSISTANT_AUTHORED_FROM_USER_DIRECTION; CURRENT_FROM_RETAINED_REPORTS_NOT_RERUN",
+      "operationalHeraAccepted": false
+    },
+    {
+      "id": "F40",
+      "group": "Runtime",
+      "target": "Native lifecycle, persistence và restart",
+      "priority": "P0",
+      "currentFoundation": "ANDROID: P1 process/coldboot23files exact; newprofile35files exact",
+      "currentIntegratedGap": "Final INTEGRATION03 journey/private-after chưa xong; chưa HeraHub",
+      "proposedAcceptance": "Kiểm process death/background/powercut/tornwrite; không tự connect/restore quyền; current và legacy records còn đọc được.",
+      "retainedEvidenceReports": [
+        "delivery/COMPLETION-OPERATOR01.md",
+        "delivery/COMPLETION-CREW02.md",
+        "delivery/COMPLETION-INTEGRATION03-03.md"
+      ],
+      "provenance": "TARGET_ASSISTANT_AUTHORED_FROM_USER_DIRECTION; CURRENT_FROM_RETAINED_REPORTS_NOT_RERUN",
+      "operationalHeraAccepted": false
+    },
+    {
+      "id": "F41",
+      "group": "Security",
+      "target": "Xác thực, signing, chống replay và key lifecycle",
+      "priority": "P0",
+      "currentFoundation": "HOST+ANDROID: engineering mTLS B thật; mock KEY74/key lifecycle",
+      "currentIntegratedGap": "Chưa production trust/key custody/radio/MAVLink signing và bảo mật target",
+      "proposedAcceptance": "Threat-model theo từng link; revoke/rotate/replay/clock/failover kiểm; hash không thành authentication; mTLScrew không chứng minh APidentity.",
+      "retainedEvidenceReports": [
+        "delivery/COMPLETION-CREW02.md",
+        "delivery/COMPLETION-KEY74.md",
+        "delivery/COMPLETION-INTEGRATION03-03.md"
+      ],
+      "provenance": "TARGET_ASSISTANT_AUTHORED_FROM_USER_DIRECTION; CURRENT_FROM_RETAINED_REPORTS_NOT_RERUN",
+      "operationalHeraAccepted": false
+    },
+    {
+      "id": "F42",
+      "group": "Release",
+      "target": "Signed update, schema migration/recovery và supply chain",
+      "priority": "P0_RELEASE",
+      "currentFoundation": "HOST: TRUST16/UPDATE17; ANDROID: development-signedAPK",
+      "currentIntegratedGap": "Chưa production Android update/key ownership/SBOM/license/support qualification",
+      "proposedAcceptance": "Artifact provenance/SBOM/dependency review; stagedsignedupdate/antirollback và migrationfailure bảo toàn mission records trên target.",
+      "retainedEvidenceReports": [
+        "delivery/COMPLETION-TRUST16.md",
+        "delivery/COMPLETION-UPDATE17.md",
+        "delivery/COMPLETION-INTEGRATION03-03.md"
+      ],
+      "provenance": "TARGET_ASSISTANT_AUTHORED_FROM_USER_DIRECTION; CURRENT_FROM_RETAINED_REPORTS_NOT_RERUN",
+      "operationalHeraAccepted": false
+    },
+    {
+      "id": "F43",
+      "group": "Maintenance",
+      "target": "Configuration, calibration và diagnostics",
+      "priority": "P0_TARGET",
+      "currentFoundation": "SITL: typed firmware profile; MOCK: MCU calibration/mapping",
+      "currentIntegratedGap": "Chưa exactHeraHubMCU dialect/USB/SDK và calibrationbench",
+      "proposedAcceptance": "Supported configuration matrix; readback đúng type/version; biết cái gì phải reboot; không áp tham số/camera profile sai firmware.",
+      "retainedEvidenceReports": [
+        "delivery/COMPLETION-PREFLIGHT43.md",
+        "delivery/COMPLETION-HERAMCU45.md",
+        "delivery/COMPLETION-INTEGRATION03-03.md"
+      ],
+      "provenance": "TARGET_ASSISTANT_AUTHORED_FROM_USER_DIRECTION; CURRENT_FROM_RETAINED_REPORTS_NOT_RERUN",
+      "operationalHeraAccepted": false
+    },
+    {
+      "id": "F44",
+      "group": "Quality",
+      "target": "Latency/jitter, overload, heat/power và endurance",
+      "priority": "P0",
+      "currentFoundation": "HOST+ANDROID+SITL_PARTIAL: stage traces/guards; offline repairs",
+      "currentIntegratedGap": "Chưa long-run integrated/24h; source/profile khác không thànhmatched A/B",
+      "proposedAcceptance": "Chốt hardware/load budgets trước đo; tail latency/drop/memory/storage/thermal logs; stress/fault vẫn giữ evidence; không cộng interval thất bại.",
+      "retainedEvidenceReports": [
+        "delivery/COMPLETION-INTEGRATION03-03.md",
+        "delivery/COMPLETION-LOAD19.md"
+      ],
+      "provenance": "TARGET_ASSISTANT_AUTHORED_FROM_USER_DIRECTION; CURRENT_FROM_RETAINED_REPORTS_NOT_RERUN",
+      "operationalHeraAccepted": false
+    },
+    {
+      "id": "F45",
+      "group": "Training",
+      "target": "SITL vòng kín, tải/gió và lỗi vật lý",
+      "priority": "P1_TRAINING",
+      "currentFoundation": "ISOLATED_SIM: physics/SITL và fault traces",
+      "currentIntegratedGap": "Chưa Hera calibrated model, sustained1×/đủframe/cap500ms trong fullUI",
+      "proposedAcceptance": "Ground-truth physics và autopilotresponse, tải/inertia/motor/wind/domain rõ; giữ fsync/frame/speedup rules; không lấy observer làm physics.",
+      "retainedEvidenceReports": [
+        "delivery/COMPLETION-SIM32-PACING02.md",
+        "delivery/COMPLETION-SIMSITL76.md",
+        "delivery/COMPLETION-INTEGRATION03-03.md"
+      ],
+      "provenance": "TARGET_ASSISTANT_AUTHORED_FROM_USER_DIRECTION; CURRENT_FROM_RETAINED_REPORTS_NOT_RERUN",
+      "operationalHeraAccepted": false
+    },
+    {
+      "id": "F46",
+      "group": "Training",
+      "target": "3D/âm thanh/weather bám trạng thái",
+      "priority": "P1_TRAINING",
+      "currentFoundation": "HOST: licensed PBR3D + synthetic opt-in rotor audio; groundpose verified",
+      "currentIntegratedGap": "Chưa airborne30s fullquality final, âm học/mưa/gió Hera hiệu chuẩn",
+      "proposedAcceptance": "Visual/audio từ cùng clock/state; stale hold/UNKNOWN; đồ họa thời tiết không tự tạo lực khí động; benchmark trên viewport/hardware đã pin.",
+      "retainedEvidenceReports": [
+        "delivery/COMPLETION-INTEGRATION03-03.md"
+      ],
+      "provenance": "TARGET_ASSISTANT_AUTHORED_FROM_USER_DIRECTION; CURRENT_FROM_RETAINED_REPORTS_NOT_RERUN",
+      "operationalHeraAccepted": false
+    },
+    {
+      "id": "F47",
+      "group": "Training",
+      "target": "Kịch bản huấn luyện, instructor và chấm điểm",
+      "priority": "P1_TRAINING",
+      "currentFoundation": "MOCK/FOUNDATION: scenario/corpus và simulator viewer",
+      "currentIntegratedGap": "Chưa course/instructorstation/scoring validated/remote-training flow",
+      "proposedAcceptance": "Bài tập manual/assisted/AUTO/fault; chấm theo tiêu chí trước; instructoroverride có authority; đo learnability/taskerror, không dùng RAGAS parity làm gate.",
+      "retainedEvidenceReports": [
+        "delivery/COMPLETION-SHOWCASE78.md",
+        "delivery/COMPLETION-INTEGRATION03-03.md"
+      ],
+      "provenance": "TARGET_ASSISTANT_AUTHORED_FROM_USER_DIRECTION; CURRENT_FROM_RETAINED_REPORTS_NOT_RERUN",
+      "operationalHeraAccepted": false
+    },
+    {
+      "id": "F48",
+      "group": "UX",
+      "target": "Cockpit cao cấp: cảm ứng + joystick + nút",
+      "priority": "P0",
+      "currentFoundation": "ANDROID+HOST: glasscockpit, theme/icons/islands và UI snapshots",
+      "currentIntegratedGap": "Chưa operator/glove/day-night/popup/all-state acceptance trên HeraHub",
+      "proposedAcceptance": "Sharedtokens/grid/hitboxes, contrast/focus, hierarchy/declutter, actualdevice inputtests; cùng một nút một nghĩa; allstates không overlap, không che criticaltelemetry.",
+      "retainedEvidenceReports": [
+        "delivery/COMPLETION-OPERATOR01.md",
+        "delivery/COMPLETION-INTEGRATION03-03.md"
+      ],
+      "provenance": "TARGET_ASSISTANT_AUTHORED_FROM_USER_DIRECTION; CURRENT_FROM_RETAINED_REPORTS_NOT_RERUN",
+      "operationalHeraAccepted": false
+    }
+  ],
+  "sources": [
+    {
+      "id": "STD-UX",
+      "title": "ISO 9241-210:2019 public abstract",
+      "url": "https://www.iso.org/standard/77520.html",
+      "qualification": "Human-centred design lifecycle reference; full normative text not audited.",
+      "provenance": "PUBLISHER_DOCUMENT_CLAIM_NOT_PRODUCT_TEST"
+    },
+    {
+      "id": "STD-QUALITY",
+      "title": "ISO/IEC 25010:2023 public abstract",
+      "url": "https://committee.iso.org/standard/78176.html",
+      "qualification": "Product quality model reference; not a universal GCS feature list or certificate.",
+      "provenance": "PUBLISHER_DOCUMENT_CLAIM_NOT_PRODUCT_TEST"
+    },
+    {
+      "id": "STD-SEC",
+      "title": "NIST SP800-218 SSDF1.1 final",
+      "url": "https://csrc.nist.gov/pubs/sp/800/218/final",
+      "qualification": "Secure development reference, not AERIS security certification.",
+      "provenance": "PUBLISHER_DOCUMENT_CLAIM_NOT_PRODUCT_TEST"
+    },
+    {
+      "id": "REF-INPUT",
+      "title": "Android accessibility guidance",
+      "url": "https://developer.android.com/guide/topics/ui/accessibility/apps",
+      "qualification": "Interaction reference; Android touch target guidance48dp, further glove targets proposed locally.",
+      "provenance": "PUBLISHER_DOCUMENT_CLAIM_NOT_PRODUCT_TEST"
+    },
+    {
+      "id": "PROTO-MISSION",
+      "title": "MAVLink mission protocol",
+      "url": "https://mavlink.io/en/services/mission.html",
+      "qualification": "Mission/fence/rally transfer semantics; implementation support must be checked per firmware.",
+      "provenance": "PUBLISHER_DOCUMENT_CLAIM_NOT_PRODUCT_TEST"
+    },
+    {
+      "id": "PROTO-CAMERA",
+      "title": "MAVLink camera v2",
+      "url": "https://mavlink.io/en/services/camera.html",
+      "qualification": "Discovery/capabilities/protocol reference; not evidence of PhaseOne support.",
+      "provenance": "PUBLISHER_DOCUMENT_CLAIM_NOT_PRODUCT_TEST"
+    },
+    {
+      "id": "PROTO-GIMBAL",
+      "title": "MAVLink gimbal v2",
+      "url": "https://mavlink.io/en/services/gimbal_v2.html",
+      "qualification": "Manager/device and control ownership reference; application role policy must be tested separately.",
+      "provenance": "PUBLISHER_DOCUMENT_CLAIM_NOT_PRODUCT_TEST"
+    },
+    {
+      "id": "REF-FAILSAFE",
+      "title": "ArduPilot GCS failsafe",
+      "url": "https://ardupilot.org/copter/docs/gcs-failsafe.html",
+      "qualification": "Firmware behavior reference; do not assume UI buttons execute safety control.",
+      "provenance": "PUBLISHER_DOCUMENT_CLAIM_NOT_PRODUCT_TEST"
+    },
+    {
+      "id": "REF-PLAN",
+      "title": "QGroundControl Plan View master",
+      "url": "https://docs.qgroundcontrol.com/master/en/qgc-user-guide/plan_view/plan_view.html",
+      "qualification": "Feature/workflow reference, not conformance standard; freeze exactversion for futuretest.",
+      "provenance": "PUBLISHER_DOCUMENT_CLAIM_NOT_PRODUCT_TEST"
+    }
+  ]
+}

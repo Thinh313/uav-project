@@ -1,0 +1,2 @@
+import {readJSON,authorizeRelease} from '../services/trust-store.mjs';import {packageTrust,matchPackage} from '../services/trust-metadata.mjs';import {verifyPackage} from '../services/software-release.mjs';
+const c=await readJSON(process.argv[2]);await authorizeRelease(c.state,c.anchor,await readJSON(c.authorization),async(root,a)=>matchPackage(await verifyPackage(c.package,{trust:packageTrust(root),expectedManifestSha256:a.signed.manifestSha256}),a),{fault:async point=>{if(point===c.point)process.kill(process.pid,'SIGKILL');}});

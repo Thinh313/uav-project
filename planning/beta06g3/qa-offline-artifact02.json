@@ -1,0 +1,95 @@
+{
+  "at": "2026-10-22T08:07:13.865358+00:00",
+  "status": "PASS_INDEPENDENT_OFFLINE_EXECUTABLE_ARTIFACT_ONLY_NOT_RUNTIME_PROVEN",
+  "authorization": {
+    "path": "planning/beta06g3/DECISION-OFFLINE-EXECUTABLE-ARTIFACT.md",
+    "sha256": "a041a2ab3578957da6e6a9488f0ce8396c5e9b048a9ac4a14e7e6a53ba52d880"
+  },
+  "builderReceipt": {
+    "path": "planning/beta06g3/BUILDER-ARTIFACT-VERIFY02.json",
+    "sha256": "559053d24d0f35fd26caabc1d059a7e6a8c84ed4739af1fa7aaa91dbb13cdd93"
+  },
+  "actualArtifacts": {
+    "source": {
+      "path": "/Users/os/Downloads/AI technique/aeris/evidence/sim32-instrument01/direct-uncorrected-source/arducopter",
+      "sha256": "1d3479f1fd2b9c6d85c95f38eeb8c105e6735ea1dc372736ddc07efd5162fc41",
+      "bytes": 7172336,
+      "mode": "0o644",
+      "device": 16777233,
+      "inode": 79863700,
+      "mtimeNs": 1791935002789011673,
+      "allCurrentParentsNonSymlink": true
+    },
+    "destination": {
+      "path": "/Users/os/Downloads/AI technique/aeris/.local/beta06g3/arducopter",
+      "sha256": "1d3479f1fd2b9c6d85c95f38eeb8c105e6735ea1dc372736ddc07efd5162fc41",
+      "bytes": 7172336,
+      "mode": "0o755",
+      "device": 16777233,
+      "inode": 89079978,
+      "mtimeNs": 1792656378242936952,
+      "allCurrentParentsNonSymlink": true
+    }
+  },
+  "sameExactBytesSeparateInodeModeOnlyPreparation": true,
+  "independentQualification": {
+    "original0644": "REFUSED_EXECUTABLE_MODE_0755_REQUIRED",
+    "new0755": {
+      "sha256": "1d3479f1fd2b9c6d85c95f38eeb8c105e6735ea1dc372736ddc07efd5162fc41",
+      "bytes": 7172336,
+      "mode": "0755",
+      "architecture": "ELF64_LE_AARCH64",
+      "allocationOrExecutionPerformed": false
+    }
+  },
+  "independentTests": {
+    "prepareExecutable": {
+      "groups": 10,
+      "pass": 10,
+      "failed": 0,
+      "elapsedS": 0.01
+    },
+    "launchContract": {
+      "groups": 10,
+      "pass": 10,
+      "failed": 0,
+      "elapsedS": 0.007
+    },
+    "executedBinaryOrDocker": false,
+    "fixtureScratchRemaining": []
+  },
+  "sourceReview": {
+    "boundedChunkBytes": 65536,
+    "exactKnownSourceBytesMaximum": 7172336,
+    "sourceMode0644Required": true,
+    "destinationMode0755Only": true,
+    "descriptorAnchoredDirectoryWalkNoFollow": true,
+    "sourceAndDestinationNoFollowAndExclusiveCreate": true,
+    "sourceFDIdentityPlusRehashAndCurrentPathIdentityRecheck": true,
+    "fileAndDirectoryFsyncCallsPresent": true,
+    "freeFloorCheckedBeforeDuringAfterCopy": true,
+    "partialFailuresRetainedNoOverwriteRetry": true,
+    "newSourceSHA256": {
+      "pilot/beta06g3/prepare_executable.py": "f29b0c429789f903a5b492d13eebf1c442672e22f581ac1fb6f7c4e888264da2",
+      "pilot/beta06g3/test_prepare_executable.py": "4051f985eeb4b32f390cd88c48ae1de1095a1791a4af76871f6323b9b2c8c9a5"
+    },
+    "limits": [
+      "Fsync success is reviewed source/control flow plus Builder actual receipt, not simulated crash/power-loss durability acceptance.",
+      "Descriptor-relative paths prevent symlink traversal during preparation; this is not a hostile-host or concurrent privileged namespace proof.",
+      "New0755 metadata and ELFheader qualification do not prove actual Linux exec, AP boot or telemetry.",
+      "Full durableDockercreate/attach/wait/inspectcapture still pending."
+    ]
+  },
+  "preservation": {
+    "generation02Pins": 323,
+    "manifestSHA256": "42770f9c0bea35bdf73fcc1b90199ebd2912d3e141c96c7b6a6799f2159e5c20",
+    "differences": [],
+    "priorFinalQAReceiptSHA256": "4c3a0ff63f5f7b6ae92590a161c57dceaea98a60afc87b36880d24d9fdbb9d0b",
+    "originalArchiveUnchangedSHAAnd0644": true,
+    "G2APRequestsStill1": 1,
+    "noG3RuntimeFromThisTask": true,
+    "actualFreeBytesNow": 38993920000,
+    "floorBytes": 21474836480
+  },
+  "readiness": "BETA06_NOT_READY. This explicitly authorized preparation fixes an executable metadata defect in a separate unselected engineering file. G2 exit255cause remains UNKNOWN; no runtime budget/counter/window or signing change."
+}

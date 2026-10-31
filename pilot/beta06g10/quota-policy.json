@@ -1,0 +1,293 @@
+{
+  "schema": "AERIS_G10_SCOPED_QUOTA_V1",
+  "active": {
+    "earlyBytes": 2415919104,
+    "hardBytes": 2684354560,
+    "closureBytes": 268435456,
+    "entries": 8192,
+    "closureEntries": 412,
+    "closureMeaning": "EMERGENCY_STOPPING_AND_INFLIGHT_MARGIN; normal category budgets separately reserve usable close bytes"
+  },
+  "categories": {
+    "ap": {
+      "slots": 4,
+      "bytesPerSlot": 94371840,
+      "entriesPerSlot": 1536,
+      "capturesPerSlot": 427,
+      "resultBytes": 8192,
+      "stateEntries": 128,
+      "fixedEntries": 64,
+      "closureEntriesPerSlot": 63,
+      "fixedBytes": 2097152,
+      "fixedClosureBytes": 262144
+    },
+    "screenshots": {
+      "bytes": 1258291200,
+      "entries": 240,
+      "perFileBytes": 5242880,
+      "dispatch": 160,
+      "prepare": 48,
+      "direct": 32
+    },
+    "native": {
+      "bytes": 117440512,
+      "entries": 736,
+      "normalFiles": 512,
+      "normalDirectories": 32,
+      "closureEntries": 64,
+      "ledgerBytes": 4194304,
+      "ledgerRows": 16384,
+      "closureBytes": 16777216
+    },
+    "media": {
+      "bytes": 268435456,
+      "entries": 64
+    },
+    "store": {
+      "bytes": 134217728,
+      "entries": 256
+    },
+    "hostJournals": {
+      "bytes": 20971520,
+      "entries": 16
+    },
+    "clock": {
+      "bytes": 8388608,
+      "entries": 4
+    },
+    "sourceQA": {
+      "bytes": 67108864,
+      "entries": 544,
+      "closureBytes": 4194304,
+      "closureEntries": 32
+    },
+    "hostOther": {
+      "bytes": 83886080,
+      "entries": 188,
+      "closureBytes": 16777216,
+      "closureEntries": 64
+    }
+  },
+  "optionalExports": {
+    "bytes": 0,
+    "entries": 0
+  },
+  "maxInFlightBytes": 234881024,
+  "scanner": {
+    "sliceEntries": 64,
+    "maxEntries": 16384,
+    "maxDepth": 20,
+    "cycleMs": 10000,
+    "staleMs": 15000
+  },
+  "physical": {
+    "admissionBytes": 31138512896,
+    "runtimeBytes": 30064771072,
+    "floorBytes": 21474836480,
+    "forecastSeconds": 15,
+    "otherGrowthReserveBytes": 2147483648
+  },
+  "history": {
+    "path": "evidence/beta06/generation10/qa-history-inventory01.json",
+    "sha256": "ca88ec46f9650e9da5b7ae76e504b6d41585fa1e844e04fa31c57021e9c28a16"
+  },
+  "maxInFlightMeaning": "DECLARED_OVERLAPPING_WRITE_ALLOWANCE_SUBSET_OF_CATEGORY_ENVELOPE_NOT_ADDED_AGAIN",
+  "futureRecipe": {
+    "phases": [
+      "before-host",
+      "before-connect"
+    ],
+    "projectionMeaning": "CAPACITY_ONLY_REMAINING_FIXED_ROOT_RECIPE_NOT_CLOCK_OR_AUTHORITY_RESTORE",
+    "categories": {
+      "ap": {
+        "entries": [
+          1536,
+          0,
+          0
+        ],
+        "MiB": [
+          90,
+          0,
+          0
+        ]
+      },
+      "sourceQA": {
+        "entries": [
+          6,
+          0,
+          16
+        ],
+        "MiB": [
+          12,
+          0,
+          2
+        ]
+      },
+      "native": {
+        "entries": [
+          128,
+          48,
+          32
+        ],
+        "MiB": [
+          12,
+          12,
+          8
+        ]
+      },
+      "screenshots": {
+        "entries": [
+          40,
+          8,
+          8
+        ],
+        "MiB": [
+          200,
+          40,
+          40
+        ]
+      },
+      "store": {
+        "entries": [
+          32,
+          0,
+          32
+        ],
+        "MiB": [
+          16,
+          0,
+          16
+        ]
+      },
+      "media": {
+        "entries": [
+          8,
+          4,
+          4
+        ],
+        "MiB": [
+          8,
+          8,
+          8
+        ]
+      },
+      "hostJournals": {
+        "entries": [
+          0,
+          5,
+          2
+        ],
+        "MiB": [
+          4,
+          1,
+          0
+        ]
+      },
+      "clock": {
+        "entries": [
+          0,
+          1,
+          1
+        ],
+        "MiB": [
+          1,
+          1,
+          0
+        ]
+      },
+      "hostOther": {
+        "entries": [
+          8,
+          32,
+          16
+        ],
+        "MiB": [
+          8,
+          8,
+          16
+        ]
+      }
+    },
+    "pngSubtypes": {
+      "dispatch": [
+        32,
+        0,
+        0
+      ],
+      "prepare": [
+        6,
+        0,
+        0
+      ],
+      "direct": [
+        2,
+        8,
+        8
+      ]
+    },
+    "nativeFiles": [
+      96,
+      32,
+      16
+    ]
+  },
+  "proofs": {
+    "scenario": {
+      "scenarios": [
+        "n1",
+        "f1",
+        "n2",
+        "f2"
+      ],
+      "kinds": [
+        "raw",
+        "media",
+        "overlap",
+        "index",
+        "capture-index-closure",
+        "fault",
+        "old-context",
+        "revocation"
+      ],
+      "maximumBytes": 2097152,
+      "maximumPerScenario": 6
+    },
+    "campaign": {
+      "maximumBytes": 131072,
+      "maximumFiles": 16,
+      "names": [
+        "restart",
+        "native-persistence",
+        "persistence-prestop",
+        "coldboot",
+        "index-summary",
+        "old-context",
+        "revocation",
+        "host-source",
+        "native-prefix",
+        "environment",
+        "admission",
+        "campaign-usage",
+        "historical-after",
+        "workspace-after",
+        "closure-summary",
+        "campaign-summary"
+      ]
+    },
+    "final": {
+      "maximumBytes": 4194304,
+      "aggregateBytes": 4194304,
+      "maximumFiles": 32,
+      "names": [
+        "preservation",
+        "pins",
+        "gate",
+        "completion",
+        "history",
+        "resource",
+        "closure",
+        "runtime-summary"
+      ]
+    }
+  }
+}

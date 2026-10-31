@@ -1,0 +1,162 @@
+{
+  "format": "aeris-simstability03-engineering-qualification",
+  "version": 1,
+  "atUTC": "2026-10-26T14:57:47.478207+00:00",
+  "assemblyAuthorized": true,
+  "sourceManifestSHA256": "df3eb4ec961e2fc83116440ec017796593b36847f2e1a601e7dd0a8b11ec5c8f",
+  "status": "NOT READY",
+  "runtimeAcceptance": "MANUAL_ANDROID_SITL_SLICE_PASS_FULL_MILESTONE_NOT_READY",
+  "scope": "Engineering diagnostic handoff only; no production/physical aircraft/market-readiness claim",
+  "userOutcome": "One complete actual native-touch manual reference-quad flight, durable review and SAF export/import, with raw/model byte evidence. Full simulator stability milestone remains blocked.",
+  "requirementCoverage": {
+    "requirements": 11,
+    "scopedPassOrObservation": 8,
+    "failed": 1,
+    "partial": 1,
+    "notChecked": 1,
+    "percentageClaim": null
+  },
+  "acceptance": [
+    {
+      "id": "AC01",
+      "requirement": "failed lifecycle cleanup and explicit restart",
+      "status": "PASS_SCOPED",
+      "evidence": "gateway-fault-tests05.json; actual AP01/AP03/AP05 failed closures; allOwnedClosed; no successful-flight inference"
+    },
+    {
+      "id": "AC02",
+      "requirement": "native preflight/Home/takeoff/manual pitch+yaw/LAND/disarm/review",
+      "status": "PASS_SCOPED",
+      "evidence": "AP04 actual ADB touch actions and independently checked raw ACK/HB/RC/WAL"
+    },
+    {
+      "id": "AC03",
+      "requirement": "neutral claim/release/session and boot fences",
+      "status": "PASS_SCOPED",
+      "evidence": "AP04 observed two neutral/manual handoffs and GUIDED releases; independent-handoff03.json; fixed TTL200ms/HB1500ms"
+    },
+    {
+      "id": "AC04",
+      "requirement": "background revokes input without restoring authority",
+      "status": "PASS_OBSERVATION_ONLY",
+      "evidence": "AP03 background03-revoked.json; held GUIDED reference altitude. AP03 final run failed and is not promoted"
+    },
+    {
+      "id": "AC05",
+      "requirement": "cold host history/restart never restores lease",
+      "status": "PASS_SCOPED",
+      "evidence": "cold-host04-before-start.json has null run/session/boot, no input; prior failed history retained"
+    },
+    {
+      "id": "AC06",
+      "requirement": "durable review plus native SAF export/import and receiver",
+      "status": "PASS_SCOPED",
+      "evidence": "SAF-manual04 exact SHA; actual Android import; receiver-saf04 tamper rejection; external raw not embedded"
+    },
+    {
+      "id": "AC07",
+      "requirement": "pacing >=1x with complete captured frame/WAL/AP correlation",
+      "status": "PASS_ONE_RUN",
+      "evidence": "AP04 RTF1.000696;116815 admitted contiguous frames; no AP required-stage gaps; fsync-before-sensor retained"
+    },
+    {
+      "id": "AC08",
+      "requirement": "optimized sensor/model output matches immutable original",
+      "status": "PASS_EXACT_OFFLINE",
+      "evidence": "Original pure-Python replay116815 frames;0 sensor UTF8 or modelAux byte mismatches; not Hera calibration"
+    },
+    {
+      "id": "AC09",
+      "requirement": "consistent bounded300s lifecycle and capture duration",
+      "status": "FAIL",
+      "evidence": "AP recorder exhausted on AP03/AP05 before full300s; life() activeAPSeconds keeps advancing after closed. Manual04 remained within short verified capture"
+    },
+    {
+      "id": "AC10",
+      "requirement": "3D/audio/stale freeze and visual performance",
+      "status": "PARTIAL",
+      "evidence": "Actual PBR view and audio gesture observed; no PCM/FPS/photon measurement; reverse removal did not interrupt established socket"
+    },
+    {
+      "id": "AC11",
+      "requirement": "explicit AP reboot fault and recovery in final native build",
+      "status": "NOT_CHECKED",
+      "evidence": "Host restart and background tested; AP reboot is not equivalent and was not exercised in final runtime"
+    }
+  ],
+  "verifiedOutcomes": [
+    "Actual engineering APK on owned emulator5582 completed typed preflight/Home, GUIDED takeoff, neutral LOITER claim, bounded pitch and yaw, GUIDED release, LAND/ground/disarm, durable review and native SAF export/import in AP04.",
+    "AP04 captured116815 contiguous frames over97.2773 receive wall seconds, RTF1.000696. WAL CRC/SHA chain and AP required frame stages checked with0 missing/duplicate required records. fsync-before-sensor, speedup1 and500ms cap retained.",
+    "Independent replay of the same116815 captured PWM frames through the immutable original pure-Python model matched all sensor UTF8 and modelAux bytes exactly.",
+    "Failed runs retained FAILED_INTERRUPTED with no successful-flight inference. Cold host restart restored history only, never session/boot/input lease. Native background revocation observed separately in AP03.",
+    "Actual public SAF manual04 package SHA b34b341260663d84c1a0b40f1d8981d7807b64de3f98f35559f177ce81126394 verified and tampering rejected. External raw remains on original host and is not embedded.",
+    "17117 protected legacy identities and650 predecessor entries unchanged relative to retained baselines.165 previously missing paths remain recorded. ENDURE history not rewritten; no ENDURE acceptance inferred."
+  ],
+  "remainingGates": [
+    "NOT READY overall. Immutable AP recorder capacity did not support full300s captures in AP03/AP05; a separate bounded capture-capacity solution and actual recheck are required without dropping frames or changing firmware silently.",
+    "Closed-session activeAPSeconds still advances in public state; freeze elapsed time at exact closure and regression-check late callbacks in a new isolated revision.",
+    "Native UI harness must select the actual current page before review navigation; AP05 LAND succeeded, next template mismatch halted driver, then the unclosed session exhausted trace capacity.",
+    "Actual scene-loss/audio mute/freeze, final AP reboot and measured visual FPS/photon latency remain unverified. Removing ADB reverse did not prove an established socket outage. Active AudioFlinger track is not measured audible or calibrated Hera sound.",
+    "Physical Xiaomi/Hera/HeraHub, real gimbal/camera/payload, projector display, Hera mass/aerodynamics/acoustics/environment calibration, AUTO, SDK and production release are outside this slice or NOT_CHECKED.",
+    "Client HTTP input sequence/clock/axes are validated by code/mocks but not directly embedded in raw; wire sequence is a different evidence layer. Generic DJI superiority or training certification is not claimed."
+  ],
+  "technicalHealth": {
+    "rawManualAudit": "PASS_SCOPED",
+    "originalModelReplay": "EXACT_BYTES_PASS",
+    "preservation": "PASS_BASELINE_COMPARISON",
+    "mockReports": [
+      "gateway-fault-tests05.json",
+      "manual-handoff-tests04.json",
+      "independent-handoff03.json",
+      "pending-client03-mock01.json",
+      "closed-capture-rejection01.json",
+      "ui-projection-mock02.json"
+    ],
+    "aggregateTestCount": null,
+    "allOldFailuresRetained": true
+  },
+  "valueEvidence": {
+    "status": "MEASURED_NARROW_OUTCOME",
+    "before": "AP01 RTF0.6166, frequent default-HB gaps; AP02 premature LOITER descent before input",
+    "after": "AP04 RTF1.000696, explicit GUIDED hold until neutral manual claim, complete actual manual flight",
+    "notControlledBenchmark": true,
+    "directLLMBaseline": "NOT_APPLICABLE_TO_DETERMINISTIC_FLIGHT_TRANSPORT_REPAIR",
+    "modelOrAcousticCalibration": "NOT_MEASURED"
+  },
+  "unchangedPolicy": {
+    "speedup": 1,
+    "pacingCapMs": 500,
+    "journal": "fsync-before-publish",
+    "admissionGiB": 20,
+    "runtimeFloorGiB": 10,
+    "reserveMiB": 256,
+    "forecastSeconds": 15
+  },
+  "newAPKBuild": false,
+  "newSignature": false,
+  "productionSignature": false,
+  "authorityRestorable": false,
+  "runtimeStopped": true,
+  "endureAcceptanceClaim": false,
+  "disposition": "Retain verified manual capture and diagnostic package; do not call full milestone done. Next bounded repair is recorder/time accounting + actual socket outage and AP reboot, then media performance.",
+  "engineeringOnly": true,
+  "sourceIDs": {
+    "reference": "SIMTRAIN53_FUSED_REFERENCE_NOT_HERA",
+    "assets": "VISUAL56_OFFLINE_CACHED",
+    "font": "BarlowOFL1.1",
+    "renderer": "Three.jsMIT",
+    "model": "CesiumDroneEdMackeyAGI_CCBY4.0",
+    "environment": "PolyHavenCC0"
+  },
+  "sourceLineageManifestSHA256": "df3eb4ec961e2fc83116440ec017796593b36847f2e1a601e7dd0a8b11ec5c8f",
+  "rawEvidenceEmbedded": false,
+  "unchangedAPK": {
+    "path": "native/simhand01/dist/aeris-simhand01-development01.apk",
+    "sha256": "8f1767933059b719d0bfb260df751678d24bd6d0a345397a5d52815cf7f2aec1",
+    "bytes": 37267,
+    "mode": 420
+  },
+  "physicalXiaomiHeraSDK": "NOT_CHECKED",
+  "runtimeStartedByPackaging": false,
+  "recipientEvidenceQuotaBytes": 2147483648
+}

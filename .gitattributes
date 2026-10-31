@@ -1,0 +1,2 @@
+# Preserve exact existing source/evidence bytes; no automatic EOL conversion.
+* -text

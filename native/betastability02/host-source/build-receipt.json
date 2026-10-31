@@ -1,0 +1,37 @@
+{
+  "format": "aeris-native-source-build",
+  "version": 1,
+  "at": "2026-10-26T01:22:33.188584+00:00",
+  "command": [
+    "xcrun",
+    "swiftc",
+    "-O",
+    "/Users/os/Downloads/AI technique/aeris/native/betastability02/host-source/Encoder.swift",
+    "-o",
+    "/Users/os/Downloads/AI technique/aeris/native/betastability02/host-source/aeris-native-source",
+    "-module-cache-path",
+    "/Users/os/Downloads/AI technique/aeris/native/betastability02/host-source/.swift-cache",
+    "-framework",
+    "VideoToolbox",
+    "-framework",
+    "CoreVideo",
+    "-framework",
+    "CoreMedia",
+    "-framework",
+    "CoreGraphics",
+    "-framework",
+    "CoreText"
+  ],
+  "exit": 0,
+  "stdout": "",
+  "stderr": "",
+  "freeBeforeBytes": 26222592000,
+  "compiler": "Apple Swift version 6.4 (swiftlang-6.4.0.34.1 clang-2100.3.34.1)\nTarget: arm64-apple-macosx27.0.0\n",
+  "sourceSha256": "54c11c1ea6ce10ff44c10db2d7215a74b8e5d8a614c681c043f826e21d11e57f",
+  "binarySha256": "7912bd2ca5e74bcea1c75fbd525f1881ad7f25044618de2b87d62789e87fbcbf",
+  "scope": "HOST_SYNTHETIC_ENCODER_BUILD_ONLY",
+  "scratchRemoved": [
+    "/Users/os/Downloads/AI technique/aeris/native/betastability02/host-source/.swift-cache"
+  ],
+  "freeAfterBytes": 26269085696
+}

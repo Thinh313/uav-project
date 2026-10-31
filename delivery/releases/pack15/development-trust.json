@@ -1,0 +1,14 @@
+{
+  "format": "aeris-software-trust",
+  "version": 1,
+  "channel": "engineering",
+  "minSequence": 1,
+  "keys": [
+    {
+      "keyId": "3191e3783d3033fec941fabb64fb936d3003222e529e1d1f157734dde23f772b",
+      "spkiBase64": "MCowBQYDK2VwAyEA5wTxboqe9P199wMk5rp9B4/mogy6yE7f0K/rEs6Xdi8=",
+      "scope": "local-development",
+      "revoked": false
+    }
+  ]
+}

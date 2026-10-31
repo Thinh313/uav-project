@@ -1,0 +1,17 @@
+{
+  "status": "PASS",
+  "scope": "HOST_JAVA_JOURNAL_MOCK_NOT_ANDROID",
+  "token": "00b9e230919b64529d9f7245e76187f0c64266ce4ff11f09bdd4bc05c106e092",
+  "operational": false,
+  "reviewCount": null,
+  "journeyKeys": [
+    "format",
+    "version",
+    "sourceId",
+    "operational",
+    "authorityRestorable",
+    "draft",
+    "history",
+    "current"
+  ]
+}

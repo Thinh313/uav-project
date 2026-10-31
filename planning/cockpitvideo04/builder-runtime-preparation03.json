@@ -1,0 +1,23 @@
+{
+  "scope": "BUILDER_OWN_HELPERS_SOURCE_PREPARATION_NO_LIVE_OPERATIONS",
+  "files": {
+    "planning/cockpitvideo04/qa-runtime.py": "3131203ee08668093fa4f5ede8a55ea6b45a493d3293f48383e8bb8139faa934",
+    "planning/cockpitvideo04/qa-runtime-mock.py": "c9369085cdb716b6051a08d39ea01630902f8af7c659e7346543a0850cc9df52",
+    "planning/cockpitvideo04/qa-ui-sequence.py": "516df534c13518b565c5b2361c8fa6509115cbffdbc5fbf5226859d5a2731fcf",
+    "planning/cockpitvideo04/qa-device.py": "05838d9319c871064993205c1e75d9e296811d47500ce980f1bf67c0a7e6f641",
+    "planning/cockpitvideo04/qa-device-actions.py": "b96488bcafe8665458f4c943e82197ece2d11e5cb25d8c1d98f8d8cae837d1ad",
+    "planning/cockpitvideo04/qa-android.py": "e74f8f0f283a22b13c21f9786b05b19fec73b1bcc300d0f05dde7df24c25df03"
+  },
+  "helperPolicyMockChecks": 9,
+  "AST": "PASS",
+  "adbCalls": 0,
+  "runtimeStarts": 0,
+  "productionEdits": 0,
+  "rootActionsPrepared": [
+    "owned5582root_setup_reverse",
+    "cold_process_start_exclusive_intent",
+    "native15_hashes_and_exact_journal_prefix_before_after",
+    "named_restart_variants"
+  ],
+  "earlierManifestsPreserved": true
+}

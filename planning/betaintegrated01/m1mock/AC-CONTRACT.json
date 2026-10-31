@@ -1,0 +1,82 @@
+{
+  "format": "aeris-beta-m1mock-acceptance-contract",
+  "version": 1,
+  "atUTC": "2026-10-26T22:49:26.174633+00:00",
+  "scope": "Mock component foundation only, notM1actual/BETA_SIM",
+  "criteria": [
+    {
+      "id": "A01",
+      "title": "Segmented frame-group ordering",
+      "acceptance": "Global frame/record/segment context and CRC/SHA chain; INTENT file fsync before sensor callback; no missed/duplicate admitted frame",
+      "state": "NOT_CHECKED"
+    },
+    {
+      "id": "A02",
+      "title": "Truthful segment/session closure",
+      "acceptance": "File+directory synced exclusive seals, no append afterseal; local send vsAPexecution separate; incomplete group never complete",
+      "state": "NOT_CHECKED"
+    },
+    {
+      "id": "A03",
+      "title": "Filesystem and transmission faults",
+      "acceptance": "Shortwrite/EIO/ENOSPC/filefsync/dirsync/missingnext/sendunknown preserve validprefix and diagnostics; no fabricated SENT",
+      "state": "NOT_CHECKED"
+    },
+    {
+      "id": "A04",
+      "title": "Bounded exact stage/cost records",
+      "acceptance": "All exact per-frame timing rows stream; bounded aggregate state and exact maxima, no unbounded append/flush arrays",
+      "state": "NOT_CHECKED"
+    },
+    {
+      "id": "A05",
+      "title": "Long-session clock state",
+      "acceptance": "Morethan1024 exchanges, bounded pending/tombstone maps and complete durable events; no IDreuse",
+      "state": "NOT_CHECKED"
+    },
+    {
+      "id": "A06",
+      "title": "Clock/context/freshness failure",
+      "acceptance": "Wrongpeer/epoch/boot/regressions/late/duplicate/timeout/suspend excluded fromfreshcalibration; sinkfailure failclosed",
+      "state": "NOT_CHECKED"
+    },
+    {
+      "id": "A07",
+      "title": "Terminal lifecycle",
+      "acceptance": "Firstclosed elapsed immutable, walljumps no deadlineextension; oldgenerationcallbacks fenced; reopen only verifiedclosure/durablehistory; no restored lease",
+      "state": "NOT_CHECKED"
+    },
+    {
+      "id": "A08",
+      "title": "Provider descriptor",
+      "acceptance": "Expected/observed binary/model/config/endpoint context match; null/newcandidate fails validation; no structuralvalidation as auth or flightgrant",
+      "state": "NOT_CHECKED"
+    },
+    {
+      "id": "A09",
+      "title": "Admission and real task budget",
+      "acceptance": "20GiB entry,10GiB+256MiB floor/15sforecast; deny undefined bounds/underbudget/overflow; no real hostdiskfill",
+      "state": "NOT_CHECKED"
+    },
+    {
+      "id": "A10",
+      "title": "Independent cold integrity and composition",
+      "acceptance": "Receiver checks complete raw/segments/membership/context/calleranchor; clock durable-sink\u2192journal tested; integrity notsourceauthenticity",
+      "state": "NOT_CHECKED"
+    },
+    {
+      "id": "A11",
+      "title": "Isolation and bounded verification",
+      "acceptance": "Old frozen/source/candidate/ENDURE and historicalreceipts unchanged; noAP/Android/hostservices/install/sign; own classscratch cleaned",
+      "state": "NOT_CHECKED"
+    }
+  ],
+  "requiredActualDeferred": [
+    "APstage instrumentation segmentation artifact/build/differential",
+    "Native socket/provider integration",
+    "Android actualUI/SAF/media/input",
+    "actualAPreboot/linkfaultand30minfullframes1x",
+    "calibratedHera/hardware/fieldacceptance"
+  ],
+  "status": "FROZEN_BEFORE_IMPLEMENTATION_VERDICT"
+}

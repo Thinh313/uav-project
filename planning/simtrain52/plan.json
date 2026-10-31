@@ -1,0 +1,776 @@
+{
+  "format": "aeris-simtrain52-plan",
+  "version": 1,
+  "date": "2026-10-15",
+  "status": "PLAN_ONLY_NOT_IMPLEMENTED",
+  "priority": "TOP_PRODUCT_PRIORITY_BY_USER",
+  "audience": "Hội đồng lựa chọn sản phẩm, trình chiếu từ laptop",
+  "deadline": "ASAP, no fixed date provided",
+  "delivery": "Offline laptop+projector first; HeraHub/remote integration later with gates",
+  "runtimeAcceptance": "NOT_CHECKED_FOR_SIMTRAIN52",
+  "existingGates": [
+    "SIM32 generic quad-X reference, not calibrated Hera",
+    "SIM32 default pacing1x unaccepted",
+    "MAPPING51 host mock only, no real capture/Fly integration",
+    "HeraHub MCU/native/device integration unaccepted"
+  ],
+  "requirements": [
+    {
+      "id": "R01",
+      "priority": "P0",
+      "name": "Cô lập simulator",
+      "behavior": "Chỉ kết nối instance SITL được nhận diện và cấp quyền; không dò hoặc fallback sang radio/drone thật.",
+      "acceptance": "Thử endpoint sai, instance cũ và restart: lệnh bị từ chối; raw trace không có đích ngoài allowlist.",
+      "status": "PLANNED_NOT_CHECKED"
+    },
+    {
+      "id": "R02",
+      "priority": "P0",
+      "name": "Bay bằng tay",
+      "behavior": "Gamepad/joystick với calibration, dead zone, expo, invert và sơ đồ kênh; bàn phím chỉ là đầu vào thay thế có nhãn.",
+      "acceptance": "Axis sweep, held/repeat, mất focus, hot unplug và neutral-first; xem stick overlay cùng phản ứng autopilot/physics.",
+      "status": "PLANNED_NOT_CHECKED"
+    },
+    {
+      "id": "R03",
+      "priority": "P0",
+      "name": "Mode thực và mode yêu cầu",
+      "behavior": "Training manual gồm Loiter/AltHold cho nhập môn, Stabilize cho nâng cao khi firmware hỗ trợ; không gọi tất cả là cùng một manual mode.",
+      "acceptance": "Yêu cầu mode và heartbeat mode quan sát riêng; sai capability/GNSS/ownership thì từ chối, không hiện thành công từ ACK.",
+      "status": "PLANNED_NOT_CHECKED"
+    },
+    {
+      "id": "R04",
+      "priority": "P0",
+      "name": "Bay bán tự động",
+      "behavior": "Guided takeoff, click-to-go, đổi cao độ/yaw, dừng giữ vị trí và RTL theo capability.",
+      "acceptance": "Command→wire→mode/setpoint→pose; tốc độ/độ cao được giới hạn và có người giữ quyền rõ ràng.",
+      "status": "PLANNED_NOT_CHECKED"
+    },
+    {
+      "id": "R05",
+      "priority": "P0",
+      "name": "Bay tự động",
+      "behavior": "Survey/corridor từ KML, upload/readback, AUTO, tiến độ thu nhận, kết thúc và review.",
+      "acceptance": "Plan SHA/source/firmware/Home đúng; quan sát tuyến thực từ physics, không chạy animation theo waypoint.",
+      "status": "PLANNED_NOT_CHECKED"
+    },
+    {
+      "id": "R06",
+      "priority": "P0",
+      "name": "Tiếp quản và tiếp tục",
+      "behavior": "Chuyển AUTO↔manual/assisted qua máy trạng thái; tiếp tục nhiệm vụ phải xác nhận vị trí và phần còn lại.",
+      "acceptance": "Thử chuyển khi có gió, neutral sai, lệnh cũ và reconnect; không nhảy pose hoặc tự phát lại lệnh.",
+      "status": "PLANNED_NOT_CHECKED"
+    },
+    {
+      "id": "R07",
+      "priority": "P0",
+      "name": "Động lực học có tải",
+      "behavior": "6DOF, mass/CG/inertia, actuator lag/saturation, thrust/torque, drag và pin có đơn vị/version.",
+      "acceptance": "Analytic, convergence và A/B cùng profile/seed/firmware; đo gia tốc, dừng, hover power, motor headroom thay vì gán chậm tùy ý.",
+      "status": "PLANNED_NOT_CHECKED"
+    },
+    {
+      "id": "R08",
+      "priority": "P1",
+      "name": "Hiệu chỉnh Hera",
+      "behavior": "Tách reference aircraft khỏi Hera đã đo; profile nguồn gốc CAD, mass/CG/inertia và flight log có version.",
+      "acceptance": "So đáp ứng với dữ liệu độc lập theo miền hiệu lực; ngưỡng sai số phải được chuyên gia chốt trước collection.",
+      "status": "PLANNED_NOT_CHECKED"
+    },
+    {
+      "id": "R09",
+      "priority": "P0",
+      "name": "Gió và thời tiết",
+      "behavior": "Gió nền/gust theo seed tác động lực; mưa/sương/ánh sáng tác động nhìn và camera ở miền đã công bố.",
+      "acceptance": "Cùng seed tái lập disturbance; tắt VFX không thay lực; chưa có model wet-prop/electrical thì ghi unsupported.",
+      "status": "PLANNED_NOT_CHECKED"
+    },
+    {
+      "id": "R10",
+      "priority": "P0",
+      "name": "Mặt đất và va chạm",
+      "behavior": "Mặt đất/collider đúng mét, tiếp đất và tiếp xúc cơ bản; vật thể nhìn thấy phải có trạng thái collision rõ.",
+      "acceptance": "Probe xuyên đất/đồ vật, tunneling và hạ cánh; crash kết thúc bài hoặc tạo sự kiện có chính sách, không tự bay xuyên để diễn tiếp.",
+      "status": "PLANNED_NOT_CHECKED"
+    },
+    {
+      "id": "R11",
+      "priority": "P0",
+      "name": "3D cao cấp",
+      "behavior": "Hera có tỷ lệ và silhouette được duyệt; PBR, ánh sáng/bóng, vật liệu, LOD, cảnh có chiều sâu và mốc khoảng cách.",
+      "acceptance": "Duyệt 6 góc/3 ánh sáng/3 khoảng cách và camera payload trên GPU thật; rubric visual không có mục critical fail.",
+      "status": "PLANNED_NOT_CHECKED"
+    },
+    {
+      "id": "R12",
+      "priority": "P0",
+      "name": "Laptop và máy chiếu",
+      "behavior": "Bố trí màn hội đồng sạch, operator/instructor panel riêng khi có extended display; mirror fallback một màn.",
+      "acceptance": "Diễn tập đúng laptop/projector/cáp/resolution, kiểm từ hàng cuối; mất màn phụ không làm mất quyền hoặc focus input nguy hiểm.",
+      "status": "PLANNED_NOT_CHECKED"
+    },
+    {
+      "id": "R13",
+      "priority": "P0",
+      "name": "Âm thanh động cơ",
+      "behavior": "Âm tổng hợp theo RPM từng rotor, harmonics, tải, khoảng cách và góc nhìn; limiter/mute rõ.",
+      "acceptance": "So envelope âm với RPM/thời gian, motor không đồng loạt khi physics khác; speaker volume không được coi là SPL Hera đã đo.",
+      "status": "PLANNED_NOT_CHECKED"
+    },
+    {
+      "id": "R14",
+      "priority": "P0",
+      "name": "Camera mô phỏng",
+      "behavior": "Gimbal/FOV/lens/clock/exposure/capture; tạo ảnh từ scene cùng timestamp/pose và metadata.",
+      "acceptance": "Tách preview chất lượng tương tác với sensor output; biết ground truth, hash/index/file, dropped frames và exposure timing.",
+      "status": "PLANNED_NOT_CHECKED"
+    },
+    {
+      "id": "R15",
+      "priority": "P0",
+      "name": "Kiểm mapping đầu cuối",
+      "behavior": "MAPPING51 làm nguồn AOI/profile/readiness; nối qua adapter mới tới simulator, không sửa module cũ.",
+      "acceptance": "Route executed, trigger, exposure và file riêng; review ảnh thiếu/nhòe/footprint, đưa ra đề nghị refly có xác nhận.",
+      "status": "PLANNED_NOT_CHECKED"
+    },
+    {
+      "id": "R16",
+      "priority": "P0",
+      "name": "Bàn giáo viên",
+      "behavior": "Chọn bài/tải/gió và fault; theo dõi input, sai lệch, quyền và sự kiện; chấm theo rubric.",
+      "acceptance": "Chèn gió/mất video/CORS stale có timestamp; điểm có lý do, missing evidence không được chấm đạt.",
+      "status": "PLANNED_NOT_CHECKED"
+    },
+    {
+      "id": "R17",
+      "priority": "P1",
+      "name": "Đào tạo từ xa",
+      "behavior": "Host simulator trên PC của học viên; giáo viên quan sát/chèn bài có quyền qua đường mạng riêng.",
+      "acceptance": "Auth/role, latency/jitter/outage, revoke và session isolation; WAN không nằm trên inner control loop hoặc khiến stale input bị giữ vô hạn.",
+      "status": "PLANNED_NOT_CHECKED"
+    },
+    {
+      "id": "R18",
+      "priority": "P0",
+      "name": "Hồ sơ và phát lại",
+      "behavior": "Giữ input/mode/setpoint/physics/telemetry/camera/audio/fault cùng clock domain và provenance.",
+      "acceptance": "Replay chỉ đọc, tìm được sai lệch/timing; không lấy replay làm live, không suy cause từ ACK; bundle kiểm hash/semantic.",
+      "status": "PLANNED_NOT_CHECKED"
+    },
+    {
+      "id": "R19",
+      "priority": "P0",
+      "name": "Nhịp 1× và hiệu suất",
+      "behavior": "Vật lý/control độc lập render; đo RTF/drift/jitter/frame age và resource ở workload đã khóa.",
+      "acceptance": "Đạt gate pacing 1× kế thừa, không hạ speedup/cap500ms/precision hoặc bỏ physics frame; GPU thật đo visual budget.",
+      "status": "PLANNED_NOT_CHECKED"
+    },
+    {
+      "id": "R20",
+      "priority": "P0",
+      "name": "Quá tải và restart",
+      "behavior": "Queue/storage có giới hạn, giữ raw và trạng thái incomplete; restart không tự nối quyền hoặc tiếp tục chuyến.",
+      "acceptance": "Fault injection/process kill/low-space; dừng có chủ đích, không xóa bằng chứng hoặc báo hoàn tất giả.",
+      "status": "PLANNED_NOT_CHECKED"
+    },
+    {
+      "id": "R21",
+      "priority": "P0",
+      "name": "Cockpit dễ vận hành",
+      "behavior": "Trắng/đen, vàng là nhấn phụ; vị trí mode/quyền/cảnh báo ổn định; thao tác chính ít bước.",
+      "acceptance": "Walkthrough Plan→Preflight→Fly→Review; focus/keyboard/gamepad, tỷ lệ màn hình, cảnh báo không che điều khiển.",
+      "status": "PLANNED_NOT_CHECKED"
+    },
+    {
+      "id": "R22",
+      "priority": "P0",
+      "name": "Live trước hội đồng",
+      "behavior": "Ba cách điều khiển, A/B tải/gió, một fault và post-flight review trong kịch bản 18 phút.",
+      "acceptance": "Hội đồng chọn target hoặc seed mới; hành động truy được vào trace; bản ghi dự phòng có nhãn rõ và không tính live PASS.",
+      "status": "PLANNED_NOT_CHECKED"
+    },
+    {
+      "id": "R23",
+      "priority": "P0",
+      "name": "Asset và tỷ lệ",
+      "behavior": "Mesh/collider/camera/terrain có hệ tọa độ, đơn vị, nguồn và quyền dùng; visual mesh không tự là collision model.",
+      "acceptance": "Kiểm license/offline redistribution, datum và scale; không phóng đại địa hình trên đường physics hoặc hứa quyền cache từ URL public.",
+      "status": "PLANNED_NOT_CHECKED"
+    },
+    {
+      "id": "R24",
+      "priority": "P0",
+      "name": "Gói offline",
+      "behavior": "Tất cả dependency/asset cần cho hội đồng được pin và lưu hợp lệ; không cần CDN/login/network khi demo.",
+      "acceptance": "Cold start không Internet, cache empty phù hợp, không request ngoài; launch/diagnostic/stop có runbook và budget.",
+      "status": "PLANNED_NOT_CHECKED"
+    },
+    {
+      "id": "R25",
+      "priority": "P1",
+      "name": "Payload và sensor mở rộng",
+      "behavior": "Chuẩn bị contract EO/IR/LiDAR, nhiễu/delay/bias và nhiều payload; chỉ bật module có model/test tương ứng.",
+      "acceptance": "Mỗi sensor có ground truth và reported observation riêng; không biến RGB giả màu thành thermal radiometry hoặc LiDAR đã hiệu chỉnh.",
+      "status": "PLANNED_NOT_CHECKED"
+    }
+  ],
+  "packages": [
+    {
+      "id": "G0",
+      "dependsOn": [],
+      "name": "Khóa máy và workload",
+      "role": "Lead + QA",
+      "estimate": "0,5 ngày mục tiêu",
+      "deliverable": "Reference laptop/GPU/projector, profile reference, versions, scene và resource budget; đo lại baseline pacing.",
+      "exit": "Không có hardware/budget hoặc pacing chưa định lượng thì chưa chốt ngày demo.",
+      "status": "NOT_STARTED_FOR_SIMTRAIN52",
+      "requirements": [
+        "R19",
+        "R23",
+        "R24"
+      ]
+    },
+    {
+      "id": "G1",
+      "dependsOn": [
+        "G0"
+      ],
+      "name": "Vòng kín 1× và hồ sơ",
+      "role": "Physics/control",
+      "estimate": "1–2 ngày, rủi ro cao",
+      "deliverable": "Chọn derivative mới qua oracle; manual input→AP→physics có trace và managed shutdown.",
+      "exit": "Không đạt 1× đúng workload thì dừng gate; sửa hoặc đổi cấu hình có benchmark lại, không chuyển sang animation.",
+      "status": "NOT_STARTED_FOR_SIMTRAIN52",
+      "requirements": [
+        "R01",
+        "R07",
+        "R19",
+        "R20"
+      ]
+    },
+    {
+      "id": "G2",
+      "dependsOn": [
+        "G1"
+      ],
+      "name": "Manual, assisted và tiếp quản",
+      "role": "Integration/control",
+      "estimate": "1 ngày",
+      "deliverable": "Loiter/AltHold/Stabilize theo capability; Guided, hold/RTL; state machine quyền và hot unplug.",
+      "exit": "Quan sát mode thực, no stale/duplicate authority; bài nhập môn hoàn thành từ đầu vào người dùng.",
+      "status": "NOT_STARTED_FOR_SIMTRAIN52",
+      "requirements": [
+        "R02",
+        "R03",
+        "R04",
+        "R06"
+      ]
+    },
+    {
+      "id": "G3",
+      "dependsOn": [
+        "G1"
+      ],
+      "name": "Mission và camera",
+      "role": "Integration + sensor",
+      "estimate": "1–2 ngày",
+      "deliverable": "MAPPING51 adapter, survey/corridor, gimbal, ảnh scene+metadata và review.",
+      "exit": "Upload/readback/AUTO/land/disarm/capture/file trace đầy đủ; bỏ ảnh được phát hiện.",
+      "status": "NOT_STARTED_FOR_SIMTRAIN52",
+      "requirements": [
+        "R05",
+        "R14",
+        "R15",
+        "R18"
+      ]
+    },
+    {
+      "id": "G4",
+      "dependsOn": [
+        "G0"
+      ],
+      "name": "Art direction và âm thanh",
+      "role": "3D/audio",
+      "estimate": "2–3 ngày, có thể làm asset song song",
+      "deliverable": "Một bối cảnh luyện tập đẹp, Hera mesh, ánh sáng/LOD, shadow, camera follow/payload, RPM audio.",
+      "exit": "Offline art review có thể trước G1; ghép live và performance gate chỉ sau G1, không claim scene-preview là bay thật.",
+      "status": "NOT_STARTED_FOR_SIMTRAIN52",
+      "requirements": [
+        "R09",
+        "R10",
+        "R11",
+        "R12",
+        "R13",
+        "R21"
+      ]
+    },
+    {
+      "id": "G5",
+      "dependsOn": [
+        "G2",
+        "G3",
+        "G4"
+      ],
+      "name": "Giáo viên và lỗi",
+      "role": "Integration + QA",
+      "estimate": "1 ngày",
+      "deliverable": "Gió/tải A/B, fault CORS/video/input, scoring và replay.",
+      "exit": "Fault không che lỗi physics; điểm và incomplete có bằng chứng, không tự resume.",
+      "status": "NOT_STARTED_FOR_SIMTRAIN52",
+      "requirements": [
+        "R16",
+        "R18"
+      ]
+    },
+    {
+      "id": "G6",
+      "dependsOn": [
+        "G5"
+      ],
+      "name": "Nghiệm thu tích hợp",
+      "role": "QA + lead",
+      "estimate": "1–2 ngày",
+      "deliverable": "Functional/fault matrix, workload/GPU thật, offline cold start, dual-display và visual review.",
+      "exit": "Tất cả P0 của bản hội đồng đạt, không critical fail; Hera fidelity và remote P1 vẫn có nhãn đúng.",
+      "status": "NOT_STARTED_FOR_SIMTRAIN52",
+      "requirements": [
+        "R01",
+        "R06",
+        "R10",
+        "R12",
+        "R19",
+        "R20",
+        "R21",
+        "R24"
+      ]
+    },
+    {
+      "id": "G7",
+      "dependsOn": [
+        "G6"
+      ],
+      "name": "Tổng duyệt hội đồng",
+      "role": "Operator + presenter",
+      "estimate": "0,5–1 ngày",
+      "deliverable": "Ba rehearsal liên tiếp trên laptop/projector đúng; bản ghi dự phòng, launch/stop/review runbook.",
+      "exit": "Ba lượt đều đầy đủ trace và không critical fault; một lượt challenge target/seed mới.",
+      "status": "NOT_STARTED_FOR_SIMTRAIN52",
+      "requirements": [
+        "R12",
+        "R22",
+        "R24"
+      ]
+    }
+  ],
+  "scenarios": [
+    {
+      "id": "S01",
+      "name": "Manual nhập môn",
+      "requirements": [
+        "R02",
+        "R03",
+        "R07",
+        "R12"
+      ],
+      "action": "Cất cánh, giữ vị trí, hình số8, hạ cánh bằng input người học.",
+      "evidence": "Input overlay, observed mode, trajectory và landing/disarm; không waypoint animation.",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "S02",
+      "name": "Manual nâng cao",
+      "requirements": [
+        "R02",
+        "R03",
+        "R06"
+      ],
+      "action": "Stabilize khi supported, đổi orientation và tiếp quản.",
+      "evidence": "Sai mode/GNSS/neutral bị chặn đúng; không giữ input cũ.",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "S03",
+      "name": "Bán tự động",
+      "requirements": [
+        "R04",
+        "R06"
+      ],
+      "action": "Guided takeoff, chọn điểm, đổi cao/yaw, hold/RTL.",
+      "evidence": "Setpoint với actual path khác nhau và mode quan sát.",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "S04",
+      "name": "AUTO mapping",
+      "requirements": [
+        "R05",
+        "R14",
+        "R15"
+      ],
+      "action": "KML polygon→readiness→upload/readback→AUTO→review.",
+      "evidence": "Route và ảnh/metadata được sinh từ scene theo actual pose.",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "S05",
+      "name": "AUTO corridor",
+      "requirements": [
+        "R05",
+        "R15"
+      ],
+      "action": "LineString có khúc cua, hiển thị overscan và transits.",
+      "evidence": "Không nhận mô hình đoạn hiện tại là terrain/airspace clearance; phần chưa hỗ trợ bị chặn.",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "S06",
+      "name": "Không tải so với có tải",
+      "requirements": [
+        "R07",
+        "R08",
+        "R18"
+      ],
+      "action": "Hai lượt fresh cùng input/profile nền/seed, chỉ đổi payload đã khai báo.",
+      "evidence": "So gia tốc, stopping distance, hover power, motor headroom; PID có thể bù tải.",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "S07",
+      "name": "Tải lệch và gió giật",
+      "requirements": [
+        "R07",
+        "R09",
+        "R13"
+      ],
+      "action": "Một profile off-center, gust có seed.",
+      "evidence": "Attitude/motor/RPM và âm thay đổi tương quan; không đổi CG giữa chuyến để diễn hiệu ứng.",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "S08",
+      "name": "Mưa/sương và camera",
+      "requirements": [
+        "R09",
+        "R14"
+      ],
+      "action": "Giảm visibility/ánh sáng với profile effects rõ.",
+      "evidence": "VFX không tự thành lực; noise/blur sensor có metadata và oracle nếu bật.",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "S09",
+      "name": "Tiếp quản AUTO",
+      "requirements": [
+        "R03",
+        "R06"
+      ],
+      "action": "Pause, manual takeover, xem phần còn lại và xác nhận resume.",
+      "evidence": "Một owner, mode thật, no pose teleport, no command replay.",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "S10",
+      "name": "CORS/GNSS suy giảm",
+      "requirements": [
+        "R04",
+        "R15",
+        "R16"
+      ],
+      "action": "Correction age/FLOAT hoặc payload GNSS mất.",
+      "evidence": "Hành động acquisition khác điều hướng; đúng policy, không ép cùng RTL cho mọi lỗi.",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "S11",
+      "name": "Video/camera lỗi",
+      "requirements": [
+        "R14",
+        "R15",
+        "R16"
+      ],
+      "action": "Video freeze/ảnh thiếu/full storage trong khi flight telemetry còn.",
+      "evidence": "Cảnh báo riêng; actual inventory/age đúng; không nói drone mất chỉ vì video mất.",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "S12",
+      "name": "Input/mạng mất",
+      "requirements": [
+        "R01",
+        "R02",
+        "R06",
+        "R17"
+      ],
+      "action": "Unplug joystick, blur, latency/jitter và stale session.",
+      "evidence": "Input cũ không giữ vô hạn; quyền bị thu hồi; remote P1 kiểm riêng.",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "S13",
+      "name": "Va chạm/tiếp đất",
+      "requirements": [
+        "R07",
+        "R10"
+      ],
+      "action": "Ground contact, near-obstacle và crash có kiểm soát.",
+      "evidence": "Collider đúng tỷ lệ; giữ outcome, không tự hồi sinh giữa bài.",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "S14",
+      "name": "Overload/restart",
+      "requirements": [
+        "R18",
+        "R19",
+        "R20"
+      ],
+      "action": "CPU/GPU load, queue/disk pressure và owned process kill.",
+      "evidence": "No physics frame drop để làm đẹp RTF; hồ sơ incomplete và restart disconnected.",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "S15",
+      "name": "Offline và máy chiếu",
+      "requirements": [
+        "R11",
+        "R12",
+        "R21",
+        "R23",
+        "R24"
+      ],
+      "action": "Cold start offline, mirror/extend, unplug display.",
+      "evidence": "UI đọc từ cuối phòng, input focus an toàn, không CDN/license surprise.",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "S16",
+      "name": "Challenge hội đồng",
+      "requirements": [
+        "R16",
+        "R18",
+        "R22"
+      ],
+      "action": "Người xem chọn target hoặc seed chưa dùng sau khi bắt đầu buổi.",
+      "evidence": "Kết quả live xuất hiện trong trace và review; backup replay được gắn nhãn.",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "S17",
+      "name": "Sensor và payload mở rộng",
+      "requirements": [
+        "R14",
+        "R17",
+        "R25"
+      ],
+      "action": "P1: bật từng EO/IR/LiDAR extension với model, provenance và thời gian riêng; remote cùng session/role.",
+      "evidence": "Ground truth và reported data không lẫn; sensor chưa có model bị từ chối hoặc ghi unsupported.",
+      "status": "NOT_RUN_P1"
+    }
+  ],
+  "demo": [
+    {
+      "id": "D01",
+      "time": "00:00–01:00",
+      "title": "Định vị sản phẩm",
+      "action": "Mở cockpit và màn world trên máy chiếu; chỉ rõ profile reference/Hera calibration status.",
+      "evidence": "Một session live, clock và trạng thái mô phỏng nhìn thấy."
+    },
+    {
+      "id": "D02",
+      "time": "01:00–04:00",
+      "title": "Bay bằng tay",
+      "action": "Gamepad điều khiển takeoff, tiến/lùi/yaw, giữ vị trí và hạ cánh; show stick overlay ngắn.",
+      "evidence": "Mode thực, response liên tục, đồ họa và âm bám motor."
+    },
+    {
+      "id": "D03",
+      "time": "04:00–06:00",
+      "title": "Tải thay đổi cảm giác",
+      "action": "Mở hai lượt fresh cùng bài empty/loaded đã chuẩn bị, cho hội đồng điều khiển đoạn ngắn.",
+      "evidence": "Compare input-normalized và graph; nếu dùng trace chuẩn để A/B thì ghi rõ recorded comparator."
+    },
+    {
+      "id": "D04",
+      "time": "06:00–08:00",
+      "title": "Bán tự động",
+      "action": "Guided takeoff, chọn điểm do hội đồng chỉ, hold rồi đổi yaw/độ cao.",
+      "evidence": "Target yêu cầu khác actual trajectory; không snap pose."
+    },
+    {
+      "id": "D05",
+      "time": "08:00–12:00",
+      "title": "AUTO khảo sát",
+      "action": "Nhập KML đã kiểm, review camera/GNSS, mission readback, AUTO và sinh ảnh mô phỏng.",
+      "evidence": "Mission ngắn được thiết kế để đủ thời gian thực1×, không speedup giấu."
+    },
+    {
+      "id": "D06",
+      "time": "12:00–14:00",
+      "title": "Gió và tiếp quản",
+      "action": "Giáo viên thêm gust theo seed, pause AUTO, người học tiếp quản và hold/RTL.",
+      "evidence": "Mối liên hệ disturbance→attitude/motor→audio và ownership rõ."
+    },
+    {
+      "id": "D07",
+      "time": "14:00–16:00",
+      "title": "Lỗi có kiểm soát",
+      "action": "Chọn một lỗi camera/CORS phù hợp policy; đánh giá nhận biết và xử lý.",
+      "evidence": "Fault event, phản ứng đúng miền, không auto retry hay báo ảnh đã có."
+    },
+    {
+      "id": "D08",
+      "time": "16:00–18:00",
+      "title": "Review và câu hỏi",
+      "action": "Land/disarm/đóng; xem timeline, vùng thiếu, điểm và bundle; nhận challenge target/seed cho vòng sau.",
+      "evidence": "Tách planned/executed/captured; evidence mở được và không khẳng định accuracy Hera thật."
+    }
+  ],
+  "metrics": [
+    {
+      "id": "M01",
+      "name": "Vật lý và pacing",
+      "target": "Khả năng tính ≥1×; pacing wall-clock1×; kế thừa gate cũ, không tự giảm ngưỡng.",
+      "measurement": "RTF, phase/drift, per-frame gaps/duplicates, cap clips và jitter theo cửa sổ/whole run.",
+      "condition": "P0 G0/G1 phải chốt cửa sổ/dung sai cùng reference; hiện gate cũ chưa đạt.",
+      "status": "PROPOSED_NOT_MEASURED"
+    },
+    {
+      "id": "M02",
+      "name": "Đồ họa",
+      "target": "Đề xuất60FPS ở1920×1080 output; p95≤16,7ms, p99≤33,3ms.",
+      "measurement": "GPU thật, active camera+mission+weather/audio; shader warmup và cold start tách riêng.",
+      "condition": "Không áp số GPU headless; kiểm thêm1280×800 fallback công bố.",
+      "status": "PROPOSED_NOT_MEASURED"
+    },
+    {
+      "id": "M03",
+      "name": "Phản hồi UI",
+      "target": "Đề xuất p95≤100ms local input→feedback nhận thao tác.",
+      "measurement": "Instrument input/action/render, không gọi API roundtrip hay ACK là control response.",
+      "condition": "Stick→pose/sensor và end-to-end video cần budget riêng sau G0.",
+      "status": "PROPOSED_NOT_MEASURED"
+    },
+    {
+      "id": "M04",
+      "name": "Camera và video",
+      "target": "Timestamp/index/pose/hash đầy đủ; actual/synthetic provenance đúng100%.",
+      "measurement": "Ground truth camera pose và file inventory; publish frame age/drop counters.",
+      "condition": "Cadence/resolution/codec được chốt theo máy và profile, không âm thầm giảm để lấy FPS.",
+      "status": "PROPOSED_NOT_MEASURED"
+    },
+    {
+      "id": "M05",
+      "name": "Visual quality",
+      "target": "Không critical fail về scale, rotor, shadow, clipping, HUD; mục tiêu trung vị≥4/5 theo rubric.",
+      "measurement": "Ít nhất3 người gồm operator và visual reviewer,6 góc/3 ánh sáng/3 khoảng cách.",
+      "condition": "Đây là target đề xuất, không chứng minh mô hình vật lý hoặc superiority.",
+      "status": "PROPOSED_NOT_MEASURED"
+    },
+    {
+      "id": "M06",
+      "name": "Rehearsal",
+      "target": "3 phiên18phút liên tiếp, đủ manual/assisted/AUTO/fault/review.",
+      "measurement": "Có1 lượt challenge mới,1 cold offline,1 đổi cấu hình màn hình; giữ cả fail.",
+      "condition": "Không dùng khoảng thời gian này thay ENDURE24h.",
+      "status": "PROPOSED_NOT_MEASURED"
+    },
+    {
+      "id": "M07",
+      "name": "Độ giống Hera",
+      "target": "Miền model và error tolerance được chốt trước validation.",
+      "measurement": "Mass/CG/inertia/thrust/lag/drag/battery, dữ liệu tham chiếu ngoài tập fit.",
+      "condition": "Chưa có dữ liệu thì chỉ nghiệm thu reference simulator, không gán Hera-calibrated.",
+      "status": "PROPOSED_NOT_MEASURED"
+    },
+    {
+      "id": "M08",
+      "name": "Học viên",
+      "target": "Hoàn thành mục tiêu và xử lý lỗi đúng rubric, không có thao tác critical.",
+      "measurement": "Checklist/trajectory/event/human review, thử với học viên chưa quen và operator.",
+      "condition": "Không suy hiệu quả chuyển giao bay thực từ điểm trong simulator.",
+      "status": "PROPOSED_NOT_MEASURED"
+    }
+  ],
+  "freeze": {
+    "modifySourceCandidateEndure": false,
+    "newSoftwareSignature": false,
+    "currentTask": "plan only"
+  },
+  "schedule": {
+    "target": "7–10 ngày làm việc sauG0 nếu điều kiện đạt",
+    "assumptions": [
+      "3 kỹ sư có kinh nghiệm: physics/control,3D/audio,integration/QA",
+      "LaptopGPU thật và projector sẵn",
+      "AssetHera có quyền dùng hoặc reference mesh được hội đồng chấp nhận",
+      "Không chờ SDK/HeraHub cho demo đầu",
+      "G0 định lượng pacing, G1 đạt mới nhận ngày live"
+    ],
+    "confidence": "LOW_UNTIL_G0",
+    "commitment": false
+  },
+  "resourceExample": {
+    "status": "ILLUSTRATIVE_NOT_MEASURED",
+    "physicsHz": 1200,
+    "demoSeconds": 1080,
+    "physicsFrames": 1296000,
+    "bytesPerFrameCases": [
+      512,
+      2048,
+      4096
+    ],
+    "rawBytesCases": [
+      663552000,
+      2654208000,
+      5308416000
+    ],
+    "videoMbpsExample": 8,
+    "videoBytesExample": 1080000000,
+    "imageCountExample": 200,
+    "imageBytesEachExample": 6000000,
+    "imageBytesTotalExample": 1200000000,
+    "note": "Không phải budget đã chốt hoặc usage đo; cộng WAL/archive copies, assets, runtime, stage/export và reserve sauG0; không giả định compression ratio."
+  },
+  "extensions": [
+    {
+      "id": "F1",
+      "requirements": [
+        "R08"
+      ],
+      "name": "Hiệu chỉnh và kiểm HeraHub",
+      "dependsOn": [
+        "G7"
+      ],
+      "owner": "RtR hardware/physics/native; chưa gán người",
+      "deliverable": "Profile Hera đã đo và adapter input/video trên thiết bị thật; giữ label engineering đến khi validation đạt.",
+      "status": "PLANNED_NOT_STARTED"
+    },
+    {
+      "id": "F2",
+      "requirements": [
+        "R17"
+      ],
+      "name": "Đào tạo từ xa",
+      "dependsOn": [
+        "G7"
+      ],
+      "owner": "Network/security/training; chưa gán người",
+      "deliverable": "Auth/role/session, instructor quyền hạn và đo latency/jitter/outage; simulator inner loop chạy local.",
+      "status": "PLANNED_NOT_STARTED"
+    },
+    {
+      "id": "F3",
+      "requirements": [
+        "R25"
+      ],
+      "name": "Sensor và payload nâng cao",
+      "dependsOn": [
+        "G7"
+      ],
+      "owner": "Sensor/mapping; chưa gán người",
+      "deliverable": "EO/IR/LiDAR có model riêng, ground truth và evidence; không đổi giả màu thành radiometry.",
+      "status": "PLANNED_NOT_STARTED"
+    }
+  ]
+}

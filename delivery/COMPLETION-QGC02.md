@@ -1,0 +1,26 @@
+# Completion · QGC02 v0.8 / actual corpus and airborne failsafe
+
+2026-10-12. Single-agent Contractor→Builder→Verify, not independent review. User authorizes actual QGC corpus/open-save and airborne SITL without SDK/HeraHub; explicitly authorizes AppleScript/System Events and JXA/CGEvent for QGC UI. No RAGAS application source, hardware flight, HIL, SDK installation, permission/security changes or external publication.
+
+OVERALL: PASS_FOR_DESKTOP_EVIDENCE_COLLECTION_SEMANTIC_DIFF_AND_BOUNDED_AIRBORNE_SITL_FAILURE_GATES. Universal QGC semantic roundtrip remains OPEN due to observed changes. These negative compatibility findings are retained, not normalized away.
+
+| TIP AC / requirement | Result / evidence | Limit |
+|---|---|---|
+| AC01 / REQ-001 | Official QGC5.1.5 DMG published SHA equals local hash; Developer ID signature verify succeeds; runtime-pin/codesign/QGC images | Read-only mounted runtime, recorded first-run user namespace; isolated settings NOT_CHECKED. No QGC binary linked/bundled in product |
+| AC02 / REQ-103, REQ-QGC02 | Seven actual unmodified Save As files: new simple route, QGC regenerated Survey/35° variant, two AERIS opening/saving cases, circular fence/AMSL, second save; provenance.json hashes/lineage | AERIS polygon seeding explicit; no operational geodata/datum claim |
+| AC03 / REQ-103 | 29 corpus checks, strict semantic diff, SHA-bound browser report; Home10→7, camera stop param3 0→1 and Survey coordinates/trigger differences detected; second QGC save stable | File open/save succeeds; first-round mission semantics are NOT equivalent |
+| AC04 / REQ-QGC01/02 | Original source retained; no silent Home/camera normalization; corpus loader hash verifies, negative tests isolate AMSL/fence; comparison never sends commands | Existing bounded simulator profile only; raw corpus execution blocked |
+| AC05 / REQ-104, REQ-007 | Four actual airborne flights with observed parameters1/5/0/255, speedup2; separate telemetry-only, heartbeat twice, duplex loss; proxy passive wire receipts | Simulation profile only; no aircraft FS recommendation or hardware timing |
+| AC06 / REQ-006/007 | Stale view/command gates, unrequested AUTO→RTL invalidation, three passive GCS status occurrences and three paired DataFlash RTL reason5/ERR8; four ground/disarm/stopped conclusions | 42 simulated CAM records are not physical images; extra disarmed disconnect ERR excluded from airborne count |
+| AC07 / REQ-QGC02 | Critical heartbeat case repeated; armed read-only recovery, mismatch rejection, explicit source review required before AUTO, no auto-resume/command from review | Mocked armed browser fixture separate from actual airborne adapter test; HIL NOT_CHECKED |
+| AC08 / REQ-002/008/009/010 | 126 unit/API tests; syntax; 23 browser regression +22 new UI fixture/layout checks +9 actual browser/SITL checks; 48 airborne assertions; 51 receipt checks; 25 applicable evidence checks; 59fact SOT digest99058b10894b8a55 | One external-original BOM availability check NOT_CHECKED at old locator; canonical fingerprint/lineage checked. No hardware/A/B/flight acceptance |
+
+Delivered modules: semantic compare/corpus UI, source-bound review endpoint and gate, immediate heartbeat expiry invalidation, unsolicited mode interruption handling, read-only four-name parameter protocol seam, fixed separate failsafe simulator profile, passive fault runner and DataFlash parser. Operator-requested GUIDED interrupts mission proof; requested HOLD/RTL retains explicit operator intent. No PARAM_SET/force-arm/autonomous AI commands added.
+
+Verification corrections: native Qt controls lacked AX support; owner-approved CGEvent with click-state1 and focus preservation enabled actual UI. Initial runner setup rejected invalid coordinate/too-fast-camera plan before ARM; repaired to valid bounded survey. First test UI raw comparison used innerText and lost the final newline; repaired assertion to textContent and preserved failed receipt. DataFlash reason first assumed4; pinned ModeReason source proves5, corrected parser and requires three paired events. Sandbox signature query could not access trust authorities; full verification outside sandbox passed. Historical QGC01 receipts are retained.
+
+Cleanup: QGC process exited; volume ejected;269,563,218byte DMG removed. Closed23,406,865byte raw BIN removed only after gzip/hash verification. Verification scratch `/private/tmp/codex-tmp-aeris-qgc02-20261012` and temporary edit helper removed. No project copies, dependency install, new Next distDir or native build. Docker image prune reclaimed0B. User QGC preferences preserved. Normal simulator read back disarmed, FS_OPTIONS16; preview loopback8788 remains available.
+
+SOT publication is local only. INTENT.QGC02 is the sole canonical addition,18intent/3proposal/9unknown/28BOM/1flagged. Public source10captures/6claims remain Refinery; actual tests are milestone evidence, not verified device capabilities. APK source/signature remains v0.6 diagnostic, unchanged.
+
+Next hardware-free work: resolve camera-section-safe export semantics and explicit Home/vertical-reference review using the actual corpus; extend mission patterns only behind compiler/semantic/SITL gates. HeraHub SDK/device, native runtime/video/input, physical failsafe/HIL, field flight and RAGAS A/B remain later gates.

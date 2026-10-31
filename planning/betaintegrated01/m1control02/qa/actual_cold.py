@@ -1,0 +1,34 @@
+from pathlib import Path
+import base64,datetime,hashlib,importlib.util,json,sys,tarfile
+R=Path(__file__).resolve().parents[4];sys.path.insert(0,str(R))
+from pilot.betaintegrated01.control05.oracles import verify_case
+from pilot.betaintegrated01.control04.confirmation import descriptor_sha256,_closed_native
+s=importlib.util.spec_from_file_location('oldcold',R/'planning/betaintegrated01/m1control01/qa/native_cold.py');oldcold=importlib.util.module_from_spec(s);s.loader.exec_module(oldcold)
+case=sys.argv[1];B=R/'evidence/betaintegrated01-m1control02'/case;O=R/'evidence/betaintegrated01-m1control02/qa'/case;O.mkdir();A=json.loads((B/'control/external-anchors.json').read_bytes());D=json.loads((B/'control/native-confirmation-descriptor.json').read_bytes());DANCH=json.loads((B/'control/native-confirmation-external-anchor.json').read_bytes());C=json.loads((B/'raw/run-config.json').read_bytes());ctx=[C[k]for k in('run','epoch','boot')];host=A['liveParentBackend'];ap=json.loads((B/'control/container-control-stdout.txt').read_text().splitlines()[-1]);assert descriptor_sha256(D)==DANCH['canonicalSHA256']
+oracle=verify_case(B/'raw',*ctx,host_anchor=host['commitAnchor'],AP_anchor=ap['terminalSHA256'],transport_anchor=host['transportCommitAnchor'],scenario='nominal',native_confirmation=D,confirmedHomeReceiptAnchor=DANCH['canonicalSHA256'])
+native=oldcold.native_cold_tar(D['nativeTarPath'],D['prefix'],A['nativeClosedCheckpoint']['journal']['commitAnchor']);_,rows=_closed_native(D['nativeTarPath'],D['prefix'],D['nativeExternalAnchor']);binding=json.loads((B/'control/launch-binding.json').read_bytes());inputs={};consents=[];revokes=[];actions=[];closes=[];failures=[];terminal=None;lease=None;latest=None;maxage=0;renewals=0;events=[]
+def require(x,s):
+ if not x:raise AssertionError(s)
+for row in rows:
+ k=row['kind'];payload=base64.b64decode(row['base64']);v=json.loads(payload)if k not in('RX','TX_INTENT','TX_WRITTEN')else None
+ if k=='CONTROL_INPUT':
+  require(all(v.get(x)==binding[x]for x in('run','epoch','boot','generation','operator')),'inputcontext');require(v['sequence']not in inputs,'duplicatedinput');inputs[v['sequence']]=(row,v);latest=(row,v)
+ if k=='CONTROL_CONSENT':
+  ir,iv=inputs[v['neutralInputSequence']];require(not iv['release']and iv['pointers']==0 and all(x==0 for x in iv['axes']),'neutralconsent');require(0<=row['monotonicNs']-iv['elapsedNs']<=200000000,'consentfreshness');require(v['expiresNs']==iv['elapsedNs']+200000000,'leaseTTL');lease=v['leaseId'];consents.append((row,v))
+ if k=='CONTROL_LEASE_RENEWED':require(v['leaseId']==lease and v['inputSequence']==latest[1]['sequence']and v['expiresNs']==latest[1]['elapsedNs']+200000000,'producerlease');renewals+=1
+ if k=='CONTROL_REVOKED':revokes.append((row,v));lease=None
+ if k=='CONTROL_INPUT_WIRE_BINDING':
+  ir,iv=inputs[v['inputSequence']];require(v['leaseId']==lease and v['source']==iv['source'],'bindinglease');require(0<=v['sendCheckNs']-iv['elapsedNs']<=200000000,'bindingTTL');maxage=max(maxage,v['sendCheckNs']-iv['elapsedNs']);events.append((row,v))
+ if k=='OPERATOR_TOUCH_ACTION':actions.append((row,v))
+ if k=='OPERATOR_CLOSE_REQUEST':closes.append((row,v))
+ if k=='CONTROL_FAILURE':failures.append((row,v))
+ if k=='SESSION_CLOSE':terminal=v
+require(len(consents)==2,'exacttwoexplicitgrants');require(consents[0][1]['leaseId']!=consents[1][1]['leaseId'],'distinctlease');up=[(r,v)for r,v in inputs.values()if v['release']];require(len(up)==1 and up[0][1]['motionAction']==1 and up[0][1]['pointers']==0,'actualUPsample')
+revoked=next((r,v)for r,v in revokes if v['previouslyActive']and v['previousLeaseId']==consents[0][1]['leaseId']);require(revoked[1]['reason']=='POINTER_RELEASE_OR_CANCEL','UPrevocationreason')
+w=oracle['nominalRelease']['nativeOrderedWitness'];require(w is not None,'nativeorderedwitness');require(up[0][0]['n']<=revoked[0]['n']<w['brakeNativeIntent'],'revokeBeforeSafety');require(w['releaseNativeWritten']<consents[1][0]['n']<w['landNativeIntent'],'releaseNewConsentLandorder');require(not any(v['purpose']=='RC_LOITER_PILOT'and r['n']>revoked[0]['n']for r,v in events),'pilotRCafterrevoke');landaction=[(r,v)for r,v in actions if v['action']=='LAND'];require(len(landaction)==1 and consents[1][0]['n']<landaction[0][0]['n']<w['landNativeIntent'],'userLandActionorder');landbinding=[(r,v)for r,v in events if v['purpose']=='LAND'];require(len(landbinding)==1 and landbinding[0][1]['leaseId']==consents[1][1]['leaseId'],'newleaseLANDbinding');require(lease is None,'closedlease');require(native['unknownSends']==0,'unknownsends')
+authority={'status':'PASS_INPUT_UP_REVOKE_OBSERVED_BRAKE_CLEANUP_NEW_LEASE_USER_LAND','inputs':len(inputs),'consents':[{**v,'record':r['n']}for r,v in consents],'producerLeaseRenewals':renewals,'maxProducerToBindingCheckNs':maxage,'UP':{'record':up[0][0]['n'],'input':up[0][1]},'firstActiveRevoke':{'record':revoked[0]['n'],'event':revoked[1]},'nativeCleanupWitness':w,'userLANDAction':{'record':landaction[0][0]['n'],'event':landaction[0][1]},'LANDLease':landbinding[0][1]['leaseId'],'unknownSends':native['unknownSends'],'physicalHIDAttested':False,'kernelRemoteNetworkAge':'NOT_MEASURED'}
+closure=A['nativeClosedCheckpoint'];close_ok=not failures and closure['firstFailure']is None and closure['closed']is True and closure['input']['consent']is False and len(closes)==1 and terminal['reason']=='CONTROL_OWNED_RESOURCES_CLOSED'
+if close_ok:
+ r,v=closes[0];require(v['reason']=='EXPLICIT_OPERATOR_CLOSE'and v['inFlightOperationResolvedBeforeClose']is True and 0<=v['requestElapsedNs']<=v['writerBoundaryElapsedNs']<=r['monotonicNs'],'explicitcloseordering');require(not any(x['kind']=='TX_INTENT'and x['n']>r['n']for x in rows),'TXaftercloseboundary')
+final={'atUTC':datetime.datetime.now(datetime.timezone.utc).isoformat(),'status':'SCOPED_NOMINAL_PASS_FULL_BETA_NOT_READY'if close_ok and oracle['status']=='CONTROL_OBSERVATIONS_PASS'else'NOT_READY_RETAINED_NATIVE_CLOSE_FAILURE','case':case,'outsideRawAnchorsSHA256':hashlib.sha256((B/'control/external-anchors.json').read_bytes()).hexdigest(),'confirmationDescriptorExternalAnchor':DANCH,'newOracle':oracle,'nativeIntegrity':{k:v for k,v in native.items()if k not in('RX','normalRC')},'authority':authority,'nativeClosure':{'qualifiedIntentionalClose':close_ok,'firstFailure':closure['firstFailure'],'failures':failures,'operatorCloseEvents':closes,'terminal':terminal,'lifecycle':closure['lifecycle']},'wholeM1BetaAccepted':False,'sourceAuthenticity':'Localorchestrationnotremoteauthentication','noRealAircraftOrPhysicalControllerClaim':True}
+(O/'results.json').open('x').write(json.dumps(final,indent=2)+'\n');print(json.dumps({'case':case,'status':final['status'],'frames':oracle['fullFrameModelAP']['frames'],'APevents':oracle['fullFrameModelAP']['APEventCount'],'nativeRows':native['records'],'newOracle':oracle['status'],'nativeCloseQualified':close_ok}))

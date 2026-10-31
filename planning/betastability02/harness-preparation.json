@@ -1,0 +1,68 @@
+{
+  "atUTC": "2026-10-26T01:21:44.890654+00:00",
+  "status": "SOURCE_PREPARATION_ONLY",
+  "implemented": [
+    "unit-tests.mjs",
+    "integration-tests.mjs",
+    "android-journey.py",
+    "native-ui.py",
+    "inflight-faults.py",
+    "final-campaign.py",
+    "oracle-result.py",
+    "independent-oracle.py",
+    "pins.py"
+  ],
+  "checks": {
+    "pythonAST": "PASS",
+    "nodeSyntax": "PASS",
+    "namespace": "PASS",
+    "predecessorHarnessIntegrity": [
+      {
+        "path": "planning/missionbeta01/unit-tests.mjs",
+        "matchesSealedPredecessor": true
+      },
+      {
+        "path": "planning/missionbeta01/integration-tests.mjs",
+        "matchesSealedPredecessor": true
+      },
+      {
+        "path": "planning/missionbeta01/android-journey.py",
+        "matchesSealedPredecessor": true
+      },
+      {
+        "path": "planning/missionbeta01/native-ui.py",
+        "matchesSealedPredecessor": true
+      },
+      {
+        "path": "planning/missionbeta01/inflight-faults.py",
+        "matchesSealedPredecessor": true
+      },
+      {
+        "path": "planning/missionbeta01/final-campaign.py",
+        "matchesSealedPredecessor": true
+      },
+      {
+        "path": "planning/missionbeta01/oracle-result.py",
+        "matchesSealedPredecessor": true
+      },
+      {
+        "path": "planning/missionbeta01/independent-oracle.py",
+        "matchesSealedPredecessor": true
+      },
+      {
+        "path": "planning/missionbeta01/pins.py",
+        "matchesSealedPredecessor": true
+      }
+    ]
+  },
+  "workflowMocks": "NOT_RUN_WAITING_SOURCE_STABLE",
+  "AndroidSITL": "NOT_RUN",
+  "pinsGenerated": false,
+  "newAPK": "NOT_BUILT_BY_THIS_AGENT",
+  "notes": [
+    "Six cases repeated on the declared polygon/corridor corpus; no broader geometry coverage claim.",
+    "Campaign records failed and not-run cases, no automatic retry.",
+    "Python oracle saves failed metrics and rejects bad coverage/counter deltas.",
+    "Fault harness requires fresh decoded video and synthetic capture before loss/reboot."
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "at": "2026-10-17T12:46:34.080Z",
+  "status": "PASS",
+  "scope": "HOST_JAVA_JOURNAL_MOCK_AFTER_BROWSER_RELOAD_NOT_ANDROID",
+  "head": "00b9e230919b64529d9f7245e76187f0c64266ce4ff11f09bdd4bc05c106e092",
+  "bodySHA256": "a86636002b25ba1cb522aaef0f9c3c7e21e299f91db9d899a50abcf6008518e5",
+  "operational": false,
+  "authorityRestorable": false,
+  "closedReviews": [
+    {
+      "mission": "Khảo sát đường dây điện miền núi · Khu vực phía bắc và hành lang A",
+      "phase": "COMPLETED_MOCK",
+      "observedMockPoints": 2,
+      "eventCount": 9,
+      "actualMedia": 0
+    },
+    {
+      "mission": "Khảo sát tuyến điện A · QA85",
+      "phase": "COMPLETED_MOCK",
+      "observedMockPoints": 2,
+      "eventCount": 9,
+      "actualMedia": 0
+    }
+  ],
+  "preflightSnapshots": 4
+}

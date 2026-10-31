@@ -1,0 +1,55 @@
+{
+  "clientDate": "2026-10-21",
+  "inputPins": {
+    "AGENTS.md": "2a57e95426845d1f03510b5afe996d69186a45978b76e93a74029e313448036a",
+    "package.json": "2bf02821a09c875c43f210b0c0b934eca76ca0bd46d00dd7be615008bcffc4c6",
+    "planning/product-standard01/feature-matrix.json": "5490f3c4a8073e22a6f882689fa9f74c2f3b38b2791b407d07ef49c68eff6859",
+    "planning/product-standard01/BASELINE.md": "89392a98e28621107b245aeb51329731e2e7b1c1e77484c161a89ec059539be0",
+    "planning/product-standard01/MEETING-2026-10-21-MEDIA.md": "05629d3107f729da4268653ef75aa64e3cc77f5c949d86f865a935a42e654207",
+    "planning/product-milestones/PLAN.md": "1a2b006d8108bd6bc5866860af942b1946ade6f04b1f71d8690f47935fa006d6",
+    "delivery/COMPLETION-OPERATOR01.md": "c98830dfc7bff53e59ee32b726ea6aa7ed5d5ef1038dc68a5f492a7b7ff8a1f9",
+    "delivery/COMPLETION-CREW02.md": "00508f206a1ffbb23c47cb26017a966bb07fc9bd313a8ca8e8d9edb1cd57c914",
+    "delivery/COMPLETION-INTEGRATION03-03.md": "a67b69e356464b172fc137e20881b62d3461368267f1aed82b6cf56d1ccef5af",
+    "delivery/COMPLETION-M1-LIFECYCLE05.md": "e236ffcec5569403ecf8cf5c2b81bbac5528bb34ff829d54a46649a24c51957d",
+    "evidence/integration03/source-ready07.json": "870499f44c42de80ec39f4be8cacd961b217aa8ba320a791623a94e5a760308c",
+    "evidence/integration03-lifecycle05/qa/verification-final01.json": "44db678f55b964b2cdf027d84101c48b84c877cc601fdbaa46bd391d3335558a",
+    "evidence/operator01-qa/final-12ac-disposition06.json": "87b517b00539b5b451a0636c0169caba5024cc7f8532ee7334c4810d110744c8",
+    "native/phone06/dependencies.json": "0064f12f7a40eeee276230acf585c073c14dcc77e335935ff90c410c82d37c1f",
+    "planning/phone06/TEST-PLAN.md": "83479ccf9b8db5f2bc81502edac8e73d84f2f2cd1914e1724ca8b274604a48c2",
+    "planning/phone06/MANUAL-DECISION01.md": "7a024c798a947b41a16c28254e19ce6b9ce55b6aa83fd5dd47473ffec3da3454"
+  },
+  "retainedAPKCheck": [
+    {
+      "path": "native/operator01/dist/aeris-operator01-development06.apk",
+      "exists": true,
+      "expected": "6a5a9c8a8be1e38baae0664aaedf1c2342c2b83a261b7f62649f8bdc73070ac2",
+      "actual": "6a5a9c8a8be1e38baae0664aaedf1c2342c2b83a261b7f62649f8bdc73070ac2",
+      "matches": true
+    },
+    {
+      "path": "native/integration03/dist/aeris-integration03-development04.apk",
+      "exists": true,
+      "expected": "9218acc3b71ad271b3ee9b7ba291d76fe1f97cd714e962ec34630fb6eb6f4ddf",
+      "actual": "9218acc3b71ad271b3ee9b7ba291d76fe1f97cd714e962ec34630fb6eb6f4ddf",
+      "matches": true
+    }
+  ],
+  "currentNativeSource07Pins": 192,
+  "matches": 191,
+  "drift": [
+    {
+      "path": "native/crew02/assets/direct95/vendor/pilot/apstream40/definitions.mjs",
+      "kind": "MISSING",
+      "expected": "b881e15a33e92634ded232fc25b43693e558b662a36dd82571300899d261da7d",
+      "actual": null
+    }
+  ],
+  "exactRecoveryCopyFound": "native/crew02/assets/workflow/preflight/definitions.mjs",
+  "recoveryPerformed": false,
+  "frozenSourcesEdited": false,
+  "sourceIndexSHA256": "cece9892072573c3ad4931bbe6b578d963f4f727a7b1a8bf9073316c30b0f2d3",
+  "noNewRuntimeOrTest": true,
+  "independentReview": "Separate Builder staticcode scan andQA evidenceclassification; no humanreview/no simulationfaked asdevice",
+  "limits": "Scan didnot rehash entire71158protectedbaseline; one missingdep isfreshcurrent finding, previousfullchecks historical.",
+  "exactRecoveryCopySHA256": "b881e15a33e92634ded232fc25b43693e558b662a36dd82571300899d261da7d"
+}

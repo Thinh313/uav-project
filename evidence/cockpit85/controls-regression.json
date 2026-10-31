@@ -1,0 +1,131 @@
+{
+  "scope": "Pure control logic and static resource seams; actual touch geometry verified separately",
+  "pass": 31,
+  "fail": 0,
+  "cases": [
+    {
+      "name": "Altitude lower bound never decreases",
+      "pass": true
+    },
+    {
+      "name": "Altitude upper bound never increases",
+      "pass": true
+    },
+    {
+      "name": "Deliberate altitude step exact unit",
+      "pass": true
+    },
+    {
+      "name": "Altitude decimal input remains valid after step",
+      "pass": true
+    },
+    {
+      "name": "Speed decimal stepping does not accumulate floating error",
+      "pass": true
+    },
+    {
+      "name": "Speed lower bound preserved",
+      "pass": true
+    },
+    {
+      "name": "Speed upper fractional step clamped",
+      "pass": true
+    },
+    {
+      "name": "Reject invalid step value NaN",
+      "pass": true
+    },
+    {
+      "name": "Reject invalid step value Infinity",
+      "pass": true
+    },
+    {
+      "name": "Reject invalid step value -Infinity",
+      "pass": true
+    },
+    {
+      "name": "Reject invalid step value null",
+      "pass": true
+    },
+    {
+      "name": "Reject invalid step value 30",
+      "pass": true
+    },
+    {
+      "name": "Reject invalid step value 29",
+      "pass": true
+    },
+    {
+      "name": "Reject invalid step value 121",
+      "pass": true
+    },
+    {
+      "name": "Reject unintended field",
+      "pass": true
+    },
+    {
+      "name": "Reject arbitrary pointer displacement as step",
+      "pass": true
+    },
+    {
+      "name": "Theme icon and accessible action match both states",
+      "pass": true
+    },
+    {
+      "name": "Unknown theme does not silently choose icon",
+      "pass": true
+    },
+    {
+      "name": "Idle clock/tick does not force identical presentation redraw",
+      "pass": true
+    },
+    {
+      "name": "Freshness transitions remain visible",
+      "pass": true
+    },
+    {
+      "name": "Durable revision changes remain visible",
+      "pass": true
+    },
+    {
+      "name": "Review glyph accurately scopes undefined loaded=false",
+      "pass": true
+    },
+    {
+      "name": "Review glyph accurately scopes undefined loaded=true",
+      "pass": true
+    },
+    {
+      "name": "Review glyph accurately scopes INTERRUPTED_LINK loaded=true",
+      "pass": true
+    },
+    {
+      "name": "Review glyph accurately scopes RUNNING_MOCK loaded=true",
+      "pass": true
+    },
+    {
+      "name": "Review glyph accurately scopes AWAITING_MOCK_LANDING loaded=true",
+      "pass": true
+    },
+    {
+      "name": "Review glyph accurately scopes COMPLETED_MOCK loaded=true",
+      "pass": true
+    },
+    {
+      "name": "No native range pointer input remains",
+      "pass": true
+    },
+    {
+      "name": "Both fields retain read-only meters and explicit numeric controls",
+      "pass": true
+    },
+    {
+      "name": "Theme has unique header placement and no visible text",
+      "pass": true
+    },
+    {
+      "name": "All icon references resolve and symbol identifiers unique",
+      "pass": true
+    }
+  ]
+}

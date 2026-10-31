@@ -1,0 +1,10 @@
+import {writeFile} from 'node:fs/promises';
+import {existsSync} from 'node:fs';
+import assert from 'node:assert/strict';
+import {corpus45} from './corpus.mjs';
+import {admission,receipt} from './io.mjs';
+admission();
+const c=corpus45();let n=1;while(existsSync(`evidence/heramcu45/corpus${n}.json`))n++;
+await receipt(`corpus${n}.json`,c,{compact:true});
+const r={status:c.cases.every(x=>x.pass)?'PASS':'FAIL',total:c.cases.length,passed:c.cases.filter(x=>x.pass).length,results:c.cases.map(({record,...x})=>x),scope:'Logicalhost/mock only; noMAVLinkwire/SDK/device/physicaloutput'};
+await receipt(`mock${n}.json`,r);console.log(JSON.stringify({status:r.status,total:r.total,passed:r.passed,failures:r.results.filter(x=>!x.pass)}));assert.equal(r.status,'PASS');

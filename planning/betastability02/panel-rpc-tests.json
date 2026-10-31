@@ -1,0 +1,26 @@
+{
+  "status": "PASS",
+  "results": [
+    {
+      "name": "First measurement is acknowledged only after worker RPC; worker alone schedules all six windows",
+      "status": "PASS"
+    },
+    {
+      "name": "RPC rejection cannot enable save or advertise acknowledged measurement",
+      "status": "PASS"
+    },
+    {
+      "name": "Changed mission context and worker collection failure fail closed",
+      "status": "PASS"
+    },
+    {
+      "name": "Malformed coverage, source identity change, clock overlap and seventh window cannot pass",
+      "status": "PASS"
+    },
+    {
+      "name": "Unconfirmed worker shutdown and bounded record overflow remain visible",
+      "status": "PASS"
+    }
+  ],
+  "scope": "PURE_DOM_AND_CONTROLLED_RPC_MOCK_NO_BROWSER_NO_ANDROID_NO_DECODE_NO_AP"
+}

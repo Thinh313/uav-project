@@ -1,0 +1,190 @@
+{
+  "status": "PASS",
+  "checks": [
+    {
+      "name": "initial values unknown",
+      "pass": true
+    },
+    {
+      "name": "ingest qualified envelope",
+      "pass": true
+    },
+    {
+      "name": "position mode and heading",
+      "pass": true
+    },
+    {
+      "name": "before expiry stays live",
+      "pass": true
+    },
+    {
+      "name": "source plus receipt expires",
+      "pass": true
+    },
+    {
+      "name": "duplicate cannot renew",
+      "pass": true
+    },
+    {
+      "name": "same sample cannot renew by decreasing age",
+      "pass": true
+    },
+    {
+      "name": "new position may refresh",
+      "pass": true
+    },
+    {
+      "name": "local stale timer works without new messages",
+      "pass": true
+    },
+    {
+      "name": "out of order ignored",
+      "pass": true
+    },
+    {
+      "name": "loss clears values marker and grant",
+      "pass": true
+    },
+    {
+      "name": "Android queue delay counts",
+      "pass": true
+    },
+    {
+      "name": "negative source age refused per field",
+      "pass": true
+    },
+    {
+      "name": "NaN position rejected",
+      "pass": true
+    },
+    {
+      "name": "background clears display",
+      "pass": true
+    },
+    {
+      "name": "clock regression never fresh",
+      "pass": true
+    },
+    {
+      "name": "old host instance cannot replay",
+      "pass": true
+    },
+    {
+      "name": "instance mismatch refuses",
+      "pass": true
+    },
+    {
+      "name": "independent equator projection 111.319490793m",
+      "pass": true
+    },
+    {
+      "name": "north up uses positive geographic north",
+      "pass": true
+    },
+    {
+      "name": "antimeridian takes short crossing",
+      "pass": true
+    },
+    {
+      "name": "negative and wrapped yaw",
+      "pass": true
+    },
+    {
+      "name": "integer MAVLink coordinates normalized once",
+      "pass": true
+    },
+    {
+      "name": "valid review geography hash",
+      "pass": true
+    },
+    {
+      "name": "track position refused",
+      "pass": true
+    },
+    {
+      "name": "wrong run refused",
+      "pass": true
+    },
+    {
+      "name": "false accepted abort refused",
+      "pass": true
+    },
+    {
+      "name": "authority restore refused",
+      "pass": true
+    },
+    {
+      "name": "real images claim refused",
+      "pass": true
+    },
+    {
+      "name": "canonical host serialization preserves digest",
+      "pass": true
+    },
+    {
+      "name": "legacy order compatibility sece1ab5a2c4d4b3e859d",
+      "pass": true
+    },
+    {
+      "name": "legacy order compatibility sa20a3febe2124d5e8816",
+      "pass": true
+    },
+    {
+      "name": "legacy no invented track",
+      "pass": true
+    },
+    {
+      "name": "full track quota rejects no silent truncation",
+      "pass": true
+    },
+    {
+      "name": "foreign system cannot become live",
+      "pass": true
+    },
+    {
+      "name": "foreign component cannot become live",
+      "pass": true
+    },
+    {
+      "name": "mock protocol source cannot become live",
+      "pass": true
+    },
+    {
+      "name": "missing boot cannot become live",
+      "pass": true
+    },
+    {
+      "name": "no GPS fix hides position and Home",
+      "pass": true
+    },
+    {
+      "name": "GPS2D only hides position and Home",
+      "pass": true
+    },
+    {
+      "name": "stale GPS hides position and Home",
+      "pass": true
+    },
+    {
+      "name": "unqualified and time gap do not create false continuous track",
+      "pass": true
+    },
+    {
+      "name": "selected disconnect classification",
+      "pass": true
+    },
+    {
+      "name": "connected missing target classification",
+      "pass": true
+    },
+    {
+      "name": "disconnected wrong target classification",
+      "pass": true
+    },
+    {
+      "name": "host ages use host clock",
+      "pass": true
+    }
+  ],
+  "scope": "Pure model; not Android or flight acceptance"
+}

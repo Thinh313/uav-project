@@ -1,0 +1,3 @@
+# ADR-023 · independent recipient acceptance
+
+Use a receiver-local append-only decision journal, separately bound to the immutable receipt and an operator-supplied expectation. A valid package does not imply completed flight, physical captures or client quality acceptance. Recompute byte integrity and acceptance rubric immediately before publication; optimistic prior-digest and plan-digest prevent stale reviews. Historical decisions stay historical when later corruption prevents verification. A new manifest starts a separate journal. Declared reviewer identity is unsigned. Existing transfer and flight schemas remain unchanged; acceptance journals are retained by default and are never cleanup candidates.

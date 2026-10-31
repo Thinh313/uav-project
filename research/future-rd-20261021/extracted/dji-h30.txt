@@ -1,0 +1,537 @@
+Support for Zenmuse H30 Series - DJI Global or Other Regions
+Skip to main content
+Camera Drones
+Handheld
+Lifestyle Tech
+Power Stations
+Robot Vacuums
+Specialized
+Enterprise
+Agriculture
+DJI Delivery
+Explore
+Who We Are
+SkyPixel
+DJI Forum
+Media Center
+DJI Trust Center
+DJI Blog
+Careers
+Support
+Where to Buy
+Login
+Register
+Select Your Country/Region
+Asia Pacific
+中国大陆
+简体中文
+中國香港
+繁體中文
+Hong Kong, China
+English
+Indonesia
+English
+日本
+日本語
+中國澳門
+繁體中文
+Singapore
+English
+대한민국
+한국어
+中國台灣
+繁體中文
+Australia
+English
+New Zealand
+English
+Philippines
+English
+Malaysia
+English
+Thailand
+English
+Europe
+Österreich
+Deutsch
+Россия
+Pусский
+Belgium
+English
+Bulgaria
+English
+Croatia
+English
+Czech Republic
+English
+Denmark
+English
+Estonia
+English
+Finland
+English
+France
+Français
+Deutschland
+Deutsch
+Greece
+English
+Hungary
+English
+Ireland
+English
+Italia
+Italiano
+Latvia
+English
+Liechtenstein
+Deutsch
+Lithuania
+English
+Luxembourg
+Français
+Malta
+English
+Monaco
+Français
+Netherlands
+English
+Norway
+English
+Poland
+English
+Portugal
+English
+Slovakia
+English
+Slovenia
+English
+España
+Español
+Sweden
+English
+Switzerland
+English
+United Kingdom
+English
+Middle East
+UAE
+English
+North America
+Canada
+English
+Canada
+Français
+Puerto Rico
+English
+United States
+English
+México
+Español
+South America
+Brasil
+Português (BR)
+Other Countries and Regions
+Other Regions
+English
+Other Regions
+Buy
+Suggested Searches
+当前预览工作区id：f2009ebd-5b4b-4ceb-b2d8-9c058ef61a20
+收起
+退出
+Online Customer Service
+24-Hour Service
+Contact Online Customer Service
+DJI Store App
+Conveniently request services. Manage your devices in one place.
+Check It Out
+Need assistance? We’re here to help!
+Support for Zenmuse H30 Series
+View Manuals
+Get Started
+Service Request
+Specs
+Tutorial Videos
+FAQ
+Get Started
+Other Downloads
+Manuals and other applications.
+Learn More
+Service Request
+My Device Information
+Get to know the activation, service plan status, and eligibility to purchase DJI Care.
+Check Now
+‌Authorized Service Center
+Find authorized stores and get face-to-face assistance offline.
+Check Now
+Specs
+General
+Product Name
+Zenmuse H30 Series
+Dimensions
+170×145×165 mm (L×W×H)
+Weight
+920±5 g
+Power
+H30: 26 W
+H30T: 28 W
+Ingress Protection Rating
+IP54
+Under controlled laboratory conditions, it can achieve an IP54 protection rating by IEC60529 standards. The IP rating is not permanently effective and may decrease due to product wear and tear.
+Supported Aircraft
+Matrice 400
+Matrice 350 RTK
+Matrice 300 RTK (requires DJI RC Plus)
+Environment
+Operating Temperature
+-20° to 50° C (-4° to 122° F)
+Storage Temperature
+-20° to 60° C (-4° to 140° F)
+Gimbal
+Stabilization System
+3-axis (tilt, roll, pan)
+Angular Vibration Range
+Hover: ±0.002°
+Flight: ±0.004°
+Mounting
+Detachable DJI SKYPORT
+Mechanical Range
+Tilt: -132.5° to +73°
+Roll: ±60°
+Pan: ±328°
+(Structural limit, not controllable range)
+Controllable Range
+Tilt: -120° to +60°
+Pan: ±320°
+Operation Mode
+Follow/Free/Re-center
+Zoom Camera
+Sensor
+1/1.8-inch CMOS, Effective Pixels: 40 MP
+Lens
+Actual Focal Length: 7.1-172 mm (Equivalent focal length: 33.4-809.3 mm)
+Aperture: f/1.6-f/5.2
+DFOV: 66.7°-2.9°
+Focus Mode
+MF, AFC, AFS
+Exposure Mode
+Manual, Auto
+Exposure Compensation
+±3.0 (1/3 increments)
+Metering Mode
+Spot Metering, Average Metering
+AE Lock
+Supported
+Electronic Shutter Speed
+1/8000-2 s
+ISO Range
+Single Shot: 100-25600
+Night Scene: 100-819200
+Video Resolution
+Single Shot: 3840×2160@30fps, 1920×1080@30fps
+Night Scene: 1920×1080@25fps, 1920×1080@15fps, 1920×1080@5fps
+Video Format
+MP4
+Video Subtitles
+Supported
+Video Codec and Bit Rate Strategy
+H.264, H.265
+CBR, VBR
+Max Photo Size
+7328×5496, 3664×2748
+Photo Format
+JPG
+Wide-Angle Camera
+Sensor
+1/1.3-inch CMOS, Effective Pixels: 48 MP
+Lens
+Actual Focal Length: 6.72 mm (Equivalent focal length: 24 mm)
+Aperture: f/1.7
+DFOV: 82.1°
+Focus Mode
+MF, AFC, AFS
+Exposure Mode
+Manual, Auto
+Exposure Compensation
+±3.0 (1/3 increments)
+Metering Mode
+Spot Metering, Average Metering
+AE Lock
+Supported
+Electronic Shutter Speed
+1/8000-2 s
+ISO Range
+Single Shot: 100-25600
+Night Scene: 100-409600
+Video Resolution
+Single Shot: 3840×2160@30fps, 1920×1080@30fps
+Night Scene: 1920×1080@25fps, 1920×1080@15fps, 1920×1080@5fps
+Video Format
+MP4
+Video Subtitles
+Supported
+Video Codec and Bit Rate Strategy
+H.264, H.265
+CBR, VBR
+Max Photo Size
+8064×6048, 4032×3024
+Photo Format
+JPG
+Infrared Thermal Camera (H30T)
+Thermal Imager
+Uncooled VOx Microbolometer
+Lens
+Focal Length: 24 mm (equivalent focal length: 52 mm)
+Aperture: f/0.95
+DFOV: 45.2°
+Digital Zoom Equivalent
+32×
+Video Resolution
+1280×1024@30fps
+Video Format
+MP4
+Video Subtitles
+Supported
+Video Codec and Bit Rate Strategy
+H264, H265
+CBR, VBR
+Photo Resolution
+1280×1024
+Photo Format
+R-JPEG
+Pixel Pitch
+12 μm
+Spectral Band
+8-14 μm
+Noise Equivalent Temperature Difference (NETD)
+≤ 50 mk@f/1.0
+Temperature Measurement Method
+Spot Measurement, Area Measurement, Center Point Temperature Measurement
+Temperature Measurement Range
+High Gain: -20° to 150° C (-4° to 302° F), -20° to 450° C (-4° to 842° F) (With Infrared Density Filter)
+Low Gain: 0° to 600° C (32° to 1112° F), 0° to 1600° C (32° to 2912° F) (With Infrared Density Filter)
+Temperature Alert
+Supported
+Sun Burn Protection
+Supported
+FFC
+Auto, Manual
+Palette
+White Hot, Black Hot, Tint, Iron Red, Rainbow 1, Rainbow 2, Medical, Arctic, Fulgurite, Hot Iron
+Laser Range Finder
+Wavelength
+905 nm
+Measurement Range
+3-3000 m
+Range for Common Objects: Grasslands 2000 m, woodlands 1900 m, road surfaces
+1700 m‌*
+The measurement range may vary based on the material and shape of the tested object as well as the impact of gimbal angle, environmental light, and weather conditions such as rain or fog. If a laser pulse hits multiple targets, its energy is dispersed, which may reduce the measurable distance.
+* Test conditions: Flat surface subject, subject size exceeding the laser beam diameter, atmospheric visibility of 23 km (shorter range in clear conditions compared with overcast), laser impinges at an oblique angle (with an angle of incidence of approx. 0.2 radians).
+Measurement Accuracy
+≤ 500 m: ±(0.2 m+measurement distance×0.15%)
+‌> 500 m: ±1.0 m
+Laser Spot Size
+@100 m: approx. 50×450 mm
+@1000 m: approx. 450×4500 mm
+Safety Regulation Level
+Class 1
+Accessible Emission Limit (AEL)
+260 nJ
+Reference Aperture
+18 mm
+Max Laser Pulse Emission Power Within 5 Nanoseconds
+52 W
+NIR Auxiliary Light
+Wavelength
+850 nm
+FOV
+4.6±0.6° (Round)
+Safety Regulation Level
+Class 1
+Illumination Range
+@100 m: Approx. 8m diameter circle
+Special Features
+Hybrid Optical Zoom
+34×
+Max Zoom
+400×
+Link Zoom
+Supported
+Click to Aim
+Supported
+High-Res Grid Photo
+Supported
+Night Scene
+Supported
+Timestamp
+Supported
+Smart Capture
+Supported
+Video Pre-Recording
+Supported
+UHR Infrared Image
+Supported
+Data Storage
+Supported microSD Cards
+U3/Class10/V30 or above is required, or use a memory card from the recommended list.
+Supported File System
+exFAT
+Recommended microSD Cards
+Lexar 1066x V30 A2 64GB/128GB/256GB/512GB microSDXC
+Kingston CANVAS GO! Plus V30 A2 64GB/128GB/256GB/512GB microSDXC
+Zenmuse H30 supports the Security Code function. Go to Data and Privacy in DJI Pilot 2 and set the code to encrypt the microSD card installed on the camera. Download the DJI Decrypt Tool from the DJI official website to decrypt the microSD card on a Windows computer and access the card content.
+Post-Processing Software
+Mapping Software
+DJI Terra, DJI FlightHub 2
+Infrared Analysis Software
+DJI Thermal Analysis Tool 3
+Show More
+Tutorial Videos
+Zenmuse H30 Series | New Functions and Usage
+FAQ
+General
+General
+Infrared Thermal Camera
+Infrared Thermal Camera
+Visible Light Camera
+Visible Light Camera
+NIR Auxiliary Light
+NIR Auxiliary Light
+Laser Range Finder
+Laser Range Finder
+General
+How many models are in the Zenmuse H30 Series?
+The Zenmuse H30 Series has 2 models: Zenmuse H30 (four modules: a wide-angle camera, a zoom camera, a laser range finder, and an NIR auxiliary light) and Zenmuse H30T (five modules: a wide-angle camera, a zoom camera, a laser range finder, an infrared thermal camera, and an NIR auxiliary light).
+What drone platforms are compatible with the Zenmuse H30 Series?
+‌Matrice 350 RTK and Matrice 300 RTK. The only compatible remote controller is DJI RC Plus. Before using, please upgrade the firmware of the drone and remote controller to the latest version.
+Onto which gimbal port can I mount a Zenmuse H30 Series payload?
+Either of the Zenmuse H30 Series payloads can be mounted onto any gimbal port on the Matrice 350 RTK or Matrice 300 RTK.
+What are the differences between ‌the Zenmuse H30 Series and the H20 Series?
+1. Enhanced visible light capabilities: Supports up to 34× optical zoom and 400× digital zoom.
+‌2. Improved infrared thermal camera: Resolution increased from 640×512 to 1280×1024; features High-Res mode for better observation of objects with small temperature differences; expanded temperature measurement range from -20° to 1600° C (-4° to 2912° F).*
+3. Enhanced night scene capabilities, with adjustable frame rates of 25fps, 15fps, and 5fps; and features an NIR auxiliary light.
+4. Extended laser rangefinding range up to 3000 meters.‌‌
+5. Supports Smart Capture.
+‌6. Supports electronic dehazing.
+7. Provides video foreground stabilization, enhancing efficiency in operations such as powerline inspections.‌
+* With an Infrared Density Filter installed, the max measurement temperature can reach 1600° C (2912° F).
+What is the protection level of Zenmuse H30 Series products?
+IP54.
+Under controlled laboratory conditions, the Zenmuse H30 Series can achieve an IP54 protection rating according to the IEC60529 standard. The IP rating is not permanently effective and may decrease over time due to product wear and tear.
+What is the zoom ratio of the Zenmuse H30 Series?
+Up to 34× optical zoom and 400× digital zoom.
+What are the photo resolutions of the Zenmuse H30 Series cameras?
+Zoom Camera:
+7328×5496, 3664×2748
+Wide-Angle Camera:
+8064×6048, 4032×3024
+Infrared Thermal Camera:
+1280×1024
+What video formats are supported by the Zenmuse H30 Series?
+MP4, and H.264, and H.265 codecs.
+What is the difference between VBR and CBR in video bitrate settings?
+VBR stands for Variable Bitrate, which features lower bitrates for static scenes and higher bitrates for dynamic ones. This ensures optimal image quality across various shooting scenarios but requires a microSD card capable of handling peak bitrates. CBR stands for Constant Bitrate, where the bitrate remains fixed regardless of the scene, and the write speeds for the microSD card are more consistent.
+What is the new pre-recording feature of the Zenmuse H30 Series? What is it for?
+Pre-recording is a feature that allows the device to cache a segment of video for a set duration before the user starts recording. When recording begins, the cached content is included in the video, preventing excessive use of microSD card space.
+Purpose: With pre-recording enabled, even if recording starts after an event has begun, the device can save the moments before the recording started onto the microSD card, ensuring that potentially critical information isn't missed.
+What is the maximum video recording time of the Zenmuse H30 Series?
+Two hours. Recording will automatically stop after two hours.
+Is the Zenmuse H30 Series compatible with the DJI FlightHub 2 cloud platform?
+Yes.
+What are some precautions that I should keep in mind when using the Zenmuse H30 Series?
+1. Do not aim the camera lens at high-energy power sources, such as the sun, lava, or laser beams. The temperature of the observed subjects should not exceed 800° C (1472° F) (when the Infrared Density Filter is not installed). Otherwise, it will burn the infrared sensor and cause irreversible damage.
+2. Do not place the product under direct sunlight, in areas with poor ventilation, or near a heat source such as a heater.
+3. Do not repeatedly power the gimbal and camera on or off. After powering off, wait at least 30 seconds before powering back on. Otherwise, it may affect the service life of camera chips.
+4. Do not hot-swap the microSD card during use.
+5. Do not touch the surface of the lens with your hand. Be careful to avoid scratching the surface of the lens with sharp objects. Otherwise, the quality of images may be affected.
+6. Clean the surface of the camera lens with a soft, dry, clean cloth. Do not use alkaline detergents.
+7. Store the payload in a safety box, and keep it dry and ventilated. The recommended environment humidity is between 40% to 50%.
+What are the application scenarios of the Zenmuse H30 Series?
+The products are suitable for a wide range of fields, including but not limited to geothermal inspection, firefighting and search and rescue, forest fire prevention, wildlife protection, power line inspection, oil and gas inspection, traffic law enforcement, facility inspection, and infrastructure inspection.
+Infrared Thermal Camera
+What are the differences between the three gain modes of Zenmuse H30T? What application scenarios do they correspond to?
+High Gain mode offers more precise temperature measurement capabilities, with a measurement range of -20° to 150° C (-4° to 302° F).
+Low Gain mode provides a broader temperature measurement range, from 0° to 600° C (32° to 1112° F).
+High-Res mode is designed for observing objects with small temperature differences, making the subject stand out more clearly. Temperature measurement is not supported in this mode.
+How many ways can I measure temperature using Zenmuse H30T?
+Spot Measurement: Tap on any spot in the infrared thermal camera view to display the temperature of that spot.
+Center Point Temperature Measurement: Tap on the center point in the infrared thermal camera view to display the temperature at that point for higher-precision measurements. Tapping outside the center point exits the ‌Center Point Temperature Measurement mode.
+Area Measurement: Frame to select any area in the infrared thermal camera view to display the highest and lowest temperatures within that area, along with their locations.
+What is Flat-Field Calibration (FFC) in Zenmuse H30T?
+Flat-Field Calibration is used to optimize thermal image quality so temperature changes can be observed more easily. You can choose to manually enable FFC by turning off the automatic FFC adjustment in settings.
+Why does the image exhibit uneven dark or bright areas after performing manual FFC multiple times in succession?
+It is not recommended to continuously perform manual FFC without pause, as this can cause the infrared thermal camera's shutter to heat unevenly, resulting in an inconsistent image. If this occurs, perform an FFC once every 30 seconds, and the image should return to normal.
+What is the temperature measurement accuracy of Zenmuse H30T?
+In a windless 25°C (77°F) laboratory environment, observing a blackbody subject from a distance of 13 meters:
+Without the Infrared Density Filter installed, the measurement accuracy in High Gain mode is ±2° C or ±2%, and in Low Gain mode, it is ±5° C or ±3% (whichever is greater).
+With the Infrared Density Filter installed, the measurement accuracy for temperatures ≤ 1000° C (1832° F) is ±80° C (176° F) or ±8%; for temperatures > 1000° C (1832° F), it is ±100° C (212° F) or ±10% (whichever is greater).
+What is the focusing distance of the infrared thermal camera on Zenmuse H30T? Does the focusing distance affect the accuracy of temperature measurements?
+The minimum focusing distance is 13 meters. Within 13 meters, the temperature measurement accuracy is not affected, but the image will be out of focus. It is recommended to maintain a focusing distance of more than 13 meters.
+What software can be used for post-processing of infrared thermal imaging photos taken by Zenmuse H30T?
+You can use DTAT3 (DJI Thermal Analysis Tool 3) V3.3.0 or later.
+Is the infrared resolution of 1280×1024 based on the original sensor size or from an algorithmic enhancement?
+It is the native sensor size with a resolution of 1280×1024.
+What is the function of Zenmuse H30T's UHR (Ultra-High Resolution) Infrared Image?
+This feature allows the capture of clear images when the infrared thermal camera is at 5× zoom or higher.
+What factors can affect the temperature measurement accuracy of the Zenmuse H30T's infrared thermal camera?
+Factors such as the subject's emissivity, distance, environmental temperature, and humidity can impact the accuracy of temperature measurements.
+How do I set the infrared temperature measurement parameters for Zenmuse H30T?
+Infrared temperature measurement parameters can be set in the DJI Pilot 2 app. The app supports automatic reading of laser rangefinding and environmental temperature values, as well as manual setting of object emissivity and environmental humidity values to correct the temperature measurement results.
+What is the main strategy for the Zenmuse H30T's sensor burn protection feature?
+H30T will automatically close the shutter when it detects conditions that could cause burns to the infrared sensor.
+What is the Zenmuse H30T's Infrared Density Filter for?
+It extends the thermal imaging module's temperature measurement range to 0° to 1600° C (32° to 2912° F), allowing for more effective temperature variation assessment and rapid locating of high-temperature points.
+Visible Light Camera
+What is the Night Scene mode of the Zenmuse H30 Series?
+It enhances image quality in low-light conditions, presenting clearer and more accurate visual information to ensure efficiency and precision during nighttime operations.
+How has the Night Scene mode improved in H30T compared to H20N?
+H30T's Night Scene mode supports adjustments of 25fps, 15fps, and 5fps, with a maximum ISO of 819,200, offering better noise reduction and support for NIR illumination.
+In the Night Scene mode, why does a higher noise reduction level decrease the smoothness of live feeds?
+Higher noise reduction levels result in lower frame rates, longer exposure times, and higher sensitivity, along with stronger noise reduction performance. However, due to the reduced frame rate, the smoothness of the live feed is correspondingly decreased.
+What is the function of electronic dehazing of the Zenmuse H30 Series, and how do I choose the intensity of dehazing?
+Electronic dehazing is an image-processing technique designed to reduce image blurring and haze effects caused by light scattering, atmospheric humidity, and other factors. It uses computer algorithms to optimize and restore images, enhancing their clarity and quality. Low-level electronic dehazing is mainly for mild haze conditions, while high-level electronic dehazing can handle situations like post-rain fog and moderate haze.
+Can I enable electronic dehazing in the Night Scene mode?
+No. Electronic dehazing is intended for daytime haze scenarios, while the Night Scene mode is for low-light conditions at night. Both require image processing, but due to different application scenarios and purposes, their effects would conflict, hence they are not supported simultaneously.
+Why is electronic dehazing only supported by the zoom camera?
+Zoom cameras typically observe subjects that are farther away and are more susceptible to the effects of rain, fog, and haze in the air. Therefore, electronic dehazing is primarily provided for the zoom camera.
+What is the maximum zoom supported by the zoom camera when performing High-Res Grid Photo?
+It supports up to 15× zoom.
+What is the Smart Capture mode, and what are its main application scenarios?
+Smart Capture mode allows the camera to automatically adjust parameters based on different scenes and lighting conditions to achieve higher-quality photo results. However, the shooting speed may be slower compared to Single Shot mode. Smart Capture is suitable for all scenarios.
+What is the surveying and mapping accuracy of the Zenmuse H30 Series?
+H30 series supports general surveying and mapping accuracy with an accuracy of ≤ 10 cm.*
+* Measured under the following conditions in a DJI laboratory environment: Zenmuse H30 mounted on a Matrice 350 RTK and powered up. Using DJI Pilot 2’s Area Route to plan the flight route. RTK in the FIX status. The relative altitude was set to 80 m, flight speed to 10 m/s, gimbal pitch to -90°, and each straight segment of the flight route was less than 1500 m. The field contained objects with obvious angular features, and used exposed hard-ground checkpoints that conformed to the diffuse reflection model. Post-processing with DJI Terra achieved a horizontal accuracy of 10 cm.
+What is the minimum focusing distance of the visible light cameras of the Zenmuse H30 Series?
+For the zoom camera, the minimum focusing distance is 1.5 meters below 5× zoom, 5 meters between 5× and 20×, and 10 meters above 20× zoom. The wide-angle camera has a minimum focusing distance of 1 meter.
+What is the IR Light feature of Zenmuse H30T, and what are its use scenarios?
+It switches the live feed to a grayscale image by removing the IR filter, thereby strengthening the contrast between light and dark areas, making it easier to locate subjects.
+IR Light is supported only when using the zoom camera.
+NIR Auxiliary Light
+What is the function of the NIR auxiliary light of the DJI Zenmuse H30 Series?
+The NIR auxiliary light provides additional NIR illumination in low-light environments (less than 1 lux, half moon), enhancing covert night which is especially helpful for night safety observation and search-and-rescue operations.
+NIR Auxiliary Light is supported only when using the zoom camera and only after the aircraft has taken off. If the NIR Auxiliary Light is enabled first, IR Light will also start simultaneously.
+What are the limitations of the NIR auxiliary light on the DJI Zenmuse H30 Series?
+‌1. In low-light/dark environments (e.g., urban areas at night), the Night Scene mode is sufficient. It is not recommended to activate the NIR Auxiliary Light in these conditions, as it may cause image whitening and reduced contrast.
+‌2. When observing at distances beyond 200 meters in low-light/dark conditions or in weather conditions like rain or fog, the backward scattering of light due to the Tyndall effect from particles in the air can lead to image whitening and reduced contrast.‌
+Laser Range Finder
+What is the measurement range of the laser range finder of the DJI Zenmuse H30 Series? What is the blind zone?
+The range is 3-3000 m, with the upper limit of the measurement distance being 3000 meters and the lower limit being 3 meters.
+Range for common objects: grasslands 2000 m, woodlands 1900 m, road surfaces 1700 m.*‌
+Data measured in a DJI laboratory. The rangefinding data may vary based on the material and shape of the tested object as well as the impact of gimbal angle, environmental light, and weather conditions such as rain or fog. If a laser pulse hits multiple targets, its energy is dispersed, which may reduce the measurable distance.
+* Test conditions: Flat surface subject, subject size exceeding the laser beam diameter, atmospheric visibility of 23 km (shorter range in clear conditions compared with overcast), laser impinges at an oblique angle (with an angle of incidence of approx. 0.2 radians).
+What are the challenging scenarios for the laser range finder of the DJI Zenmuse H30 Series?
+1. Weather conditions such as rain, fog, haze, or snow.
+2. Objects with reflective surfaces.
+3. Complex scenes with multiple subjects.
+What is the pin point accuracy of the laser rangefinder in the DJI Zenmuse H30 Series?
+After maneuvering the aircraft in forward, backward, left, and right directions for approximately 10 seconds, the Zenmuse H30 Series can achieve a pin point accuracy of 20 meters at a distance of 1 kilometer.
+Search for More Information
+Search
+Contact Us
+Online Customer Service
+24-Hour Service
+Contact Online Customer Service
+DJI Community
+Connect with DJI enthusiasts to explore various product experiences
+Join DJI Community

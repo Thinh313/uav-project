@@ -1,0 +1,25 @@
+import {createServer} from 'node:http';import {readFile,statfs,mkdir,writeFile} from 'node:fs/promises';import {randomBytes} from 'node:crypto';import {performance} from 'node:perf_hooks';import {fileURLToPath} from 'node:url';
+import {Arbiter} from './arbiter.mjs';
+const ROOT=new URL('./',import.meta.url),FONTS=new URL('../cockpit66/assets/',import.meta.url),ORIGIN='http://127.0.0.1:8822';
+const ASSETS=new Map([['/',['index.html',ROOT]],['/pilot',['index.html',ROOT]],['/payload',['index.html',ROOT]],['/cockpit.css',['cockpit.css',ROOT]],['/client.mjs',['client.mjs',ROOT]],...['Barlow-Medium.ttf','Barlow-SemiBold.ttf','Barlow-Bold.ttf'].map(f=>['/assets/'+f,[f,FONTS]])]);
+export async function createService({now,bootId='dual67-'+randomBytes(12).toString('hex')}={}){
+ const corpus=JSON.parse(await readFile(new URL('../cockpit66/portable/cyber65/corpus.json',ROOT)));const engine=await Arbiter.create({bootId,corpusSha256:corpus.sha256});const start=performance.now();now??=()=>Math.floor(performance.now()-start);const tokens=new Map();let chain=Promise.resolve(),stopping=false;
+ const admit=fn=>{const result=chain.then(fn);chain=result.catch(()=>{});return result;};
+ const disk=async()=>{const s=await statfs(ROOT,{bigint:true});if(s.bavail*s.bsize<20n*1024n**3n+33554432n)throw Error('DISK_FLOOR');};
+ const headers={'Cache-Control':'no-store','X-Content-Type-Options':'nosniff','Content-Security-Policy':"default-src 'self';connect-src 'self';object-src 'none';frame-src 'none';base-uri 'none';frame-ancestors 'none'",'Referrer-Policy':'no-referrer'};
+ const server=createServer(async(req,res)=>{const send=(status,value,type='application/json')=>{const bytes=type==='application/json'?Buffer.from(JSON.stringify(value)):value;res.writeHead(status,{...headers,'Content-Type':type,'Content-Length':bytes.length}).end(bytes);};try{
+  if(stopping||req.headers.host!=='127.0.0.1:8822'||req.headers.origin&&req.headers.origin!==ORIGIN){send(403,{error:'LOOPBACK_SAME_ORIGIN_ONLY'});return;}
+  if(req.method==='GET'&&ASSETS.has(req.url)){const [f,root]=ASSETS.get(req.url);send(200,await readFile(new URL(f,root)),f.endsWith('.html')?'text/html':f.endsWith('.css')?'text/css':f.endsWith('.ttf')?'font/ttf':'text/javascript');return;}
+  if(req.method==='GET'&&req.url==='/api/state'){send(200,await admit(()=>engine.view()));return;}
+  if(req.method==='GET'&&req.url==='/api/review'){send(200,await admit(()=>engine.export()));return;}
+  if(req.method!=='POST'||!['/api/connect','/api/heartbeat','/api/action','/api/disconnect'].includes(req.url)){send(404,{error:'NO_ROUTE'});return;}
+  if(req.headers.origin!==ORIGIN||req.headers['content-type']!=='application/json'){send(403,{error:'POST_ORIGIN_TYPE_REQUIRED'});return;}
+  let size=0,parts=[];for await(const b of req){size+=b.length;if(size>8192){send(413,{error:'BODY_BOUND'});return;}parts.push(b);}const input=JSON.parse(Buffer.concat(parts).toString('utf8'));
+  const result=await admit(async()=>{await disk();let event,token;if(req.url==='/api/connect'){if(Object.keys(input).sort().join('|')!=='actor')throw Error('CONNECT_SCHEMA');event={type:'connect',actor:input.actor};}else{token=req.headers.authorization?.match(/^Bearer ([a-f0-9]{64})$/)?.[1];const sid=tokens.get(token);if(!sid)throw Error('MOCK_SESSION_TOKEN_REQUIRED');if(req.url==='/api/action'){if(Object.keys(input).sort().join('|')!=='bootId|expectedRevision|intent|seq')throw Error('ACTION_ENVELOPE_SCHEMA');event={type:'action',sid,...input};}else{if(Object.keys(input).length)throw Error('EMPTY_BODY_REQUIRED');event={type:req.url==='/api/heartbeat'?'heartbeat':'disconnect',sid};}}
+   const receipt=await engine.dispatch(event,now());if(req.url==='/api/connect'&&receipt.ok){token=randomBytes(32).toString('hex');tokens.set(token,receipt.sid);}return {receipt,session:receipt.sid&&req.url==='/api/connect'&&receipt.ok?{token,sid:receipt.sid,actor:receipt.actor,bootId:engine.bootId}:null,state:engine.view()};});send(200,result);
+ }catch(error){send(error.message==='MOCK_SESSION_TOKEN_REQUIRED'?401:error.message==='DISK_FLOOR'?507:400,{error:error.message});}});
+ server.requestTimeout=5000;server.headersTimeout=5000;server.keepAliveTimeout=1000;server.maxConnections=12;
+ const timer=setInterval(()=>{if(engine.needsSweep(now()))admit(()=>{const t=now();if(engine.needsSweep(t))return engine.dispatch({type:'tick'},t);}).catch(()=>{});},200);timer.unref();
+ return {server,engine,admit,async stop(){stopping=true;clearInterval(timer);await admit(()=>{engine.closeAll('SERVER_STOPPED_NO_RESTORE');});await new Promise(resolve=>server.close(resolve));},origin:ORIGIN};
+}
+if(process.argv[1]===fileURLToPath(import.meta.url)){const s=await statfs(ROOT,{bigint:true});if(s.bavail*s.bsize<20n*1024n**3n+33554432n)throw Error('DISK_FLOOR');const service=await createService();service.server.listen(8822,'127.0.0.1',()=>console.log('DUAL67 '+ORIGIN+'/pilot and /payload PID '+process.pid));for(const sig of ['SIGINT','SIGTERM'])process.on(sig,()=>service.stop().then(()=>process.exit(0)));}

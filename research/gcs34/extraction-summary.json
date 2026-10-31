@@ -1,0 +1,26 @@
+{
+  "claims": 39,
+  "selectedEntities": 39,
+  "quotedAnchorWordsBySource": {
+    "dji-m4": 14,
+    "dji-fh2": 10,
+    "dji-geo-new": 12,
+    "dji-geo-legacy": 1,
+    "ap-auto": 8,
+    "ap-fence": 4,
+    "ap-gcs-failsafe": 4,
+    "ap-avoidance": 4,
+    "ap-terrain": 2,
+    "qgc-plan": 7,
+    "qgc-fly": 7,
+    "skydio-x10": 8,
+    "skydio-autonomy": 4,
+    "android-touch": 1,
+    "nasa-interface": 10,
+    "vn-airspace": 1,
+    "rtr-ragas": 7,
+    "rtr-herahub": 7
+  },
+  "independentPerformance": "HONEST_NULL",
+  "notes": "Registry facts concern what documentation asserts; no competitor test or AERIS feature promotion."
+}

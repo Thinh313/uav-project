@@ -1,0 +1,21 @@
+import assert from 'node:assert/strict';
+import {readFile,writeFile} from 'node:fs/promises';
+import {BINARY} from './contract.mjs';
+import {Observations42} from './observe.mjs';
+import {crc} from '../mavflight37/wire.mjs';
+import {FullFramer,unhex,encodeFull} from '../apstream40/wire.mjs';
+const m={scope:'OWNED_REAL_SITL_FLIGHT_TEST_ONLY',binarySha256:BINARY,containerId:'c'.repeat(64),pid:7,startedAt:'MOCK_NOT_ACTUAL',system:42,component:1,session:'OFFLINE_FAULT_ONLY'};
+const captured=JSON.parse(await readFile('evidence/sitldiscovery41/run03/attempt02/session01-snapshot.json','utf8')),vf=new FullFramer().push(unhex(captured.version.rawHex),0)[0];
+const h=(seq,t=0)=>encodeFull(0,{type:2,autopilot:3,base_mode:0,custom_mode:4,system_status:3},{system:42,component:1,seq}),v=(seq=1,fields={},system=42)=>encodeFull(148,{...vf.fields,...fields},{system,component:1,seq});
+const make=()=>{const o=new Observations42(m);o.receive(h(0),0);o.receive(v(),1);return o;},results=[];
+function test(name,fn){fn();results.push({name,pass:true});}
+test('selected wrong version duplicate revokes before sequence filter',()=>{const o=make();assert.throws(()=>o.receive(v(1,{flight_sw_version:1}),2));assert.equal(o.fresh(2),false);assert.equal(o.dead,true);});
+test('selected wrong version reordered revokes',()=>{const o=make();assert.throws(()=>o.receive(v(0,{flight_sw_version:1}),2));assert.equal(o.fresh(2),false);});
+test('foreign conflicting version quarantined',()=>{const o=make();o.receive(v(2,{flight_sw_version:1},43),2);assert.equal(o.fresh(2),true);assert.equal(o.latest[148].fields.flight_sw_version,67568127);});
+test('CRC failure revokes retained freshness',()=>{const o=make(),b=h(2);b[12]^=1;assert.throws(()=>o.receive(b,2));assert.equal(o.fresh(2),false);});
+test('clock failure revokes retained freshness',()=>{const o=make();assert.throws(()=>o.receive(h(2),0));assert.equal(o.fresh(2),false);});
+test('stale byte receipt revokes retained freshness',()=>{const o=make();assert.throws(()=>o.receive(h(2),2,1600));assert.equal(o.fresh(2),false);});
+test('unsupported signed selected frame revokes',()=>{const o=make(),b=h(2);b[2]=1;const c=crc(b.subarray(1,-2),50);b[b.length-2]=c&255;b[b.length-1]=c>>8;const complete=new Uint8Array(b.length+13);complete.set(b);assert.throws(()=>o.receive(complete,2));assert.equal(o.fresh(2),false);});
+test('frozen session identity refuses mutation',()=>{const o=make();assert.throws(()=>{o.context.pid=100;});assert.equal(o.context.pid,7);});
+test('boot regression revokes no fresh output',()=>{const o=make();o.receive(encodeFull(33,{time_boot_ms:100},{system:42,component:1,seq:2}),2);assert.throws(()=>o.receive(encodeFull(33,{time_boot_ms:1},{system:42,component:1,seq:3}),3));assert.equal(o.fresh(3),false);});
+const o={status:'PASS',checks:results.length,passed:results.length,results,scope:'OFFLINE_MOCK_GUARD_FAULTS_NO_NETWORK'};await writeFile('evidence/flightsafety42/guard-faults1.json',JSON.stringify(o,null,2)+'\n',{flag:'wx'});console.log(JSON.stringify({status:'PASS',checks:results.length}));

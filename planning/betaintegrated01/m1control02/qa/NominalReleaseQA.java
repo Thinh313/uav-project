@@ -1,0 +1,18 @@
+import java.io.*;import java.util.*;import java.nio.*;
+import vn.rtr.aeris.beta01runtime.Values;
+public final class NominalReleaseQA {
+ interface Op{void run()throws Exception;}static List<Map<String,Object>>results=new ArrayList<>();
+ static void check(boolean b,String s){if(!b)throw new AssertionError(s);}static void denied(Op o)throws Exception{boolean failed=false;try{o.run();}catch(Exception e){failed=true;}check(failed,"expected refusal");}
+ static void test(String id,Op o){try{o.run();results.add(Values.map("id",id,"pass",true));}catch(Throwable e){results.add(Values.map("id",id,"pass",false,"error",e.toString()));}}
+ static int mode(byte[]w){return(int)ByteBuffer.wrap(SessionQA.data(w)).order(ByteOrder.LITTLE_ENDIAN).getFloat(4);}
+ static void forward(SessionQA.F f)throws Exception{f.startPilot();f.c.n+=50000000;f.input(.4,1,false);}
+ static void up(SessionQA.F f)throws Exception{f.c.n+=50000000;f.input(0,0,true);}
+ public static void main(String[]args)throws Exception{SessionQA.root=new File(args[0]);check(SessionQA.root.mkdir(),"exclusive fixture");
+  test("N01_UP_REVOKE_BRAKE_OBSERVED_RELEASE_NEW_LEASE_EXPLICIT_LAND",()->{SessionQA.F f=new SessionQA.F("nominal",20000000000L);try{forward(f);String old=(String)((Map<?,?>)f.s.snapshot().get("input")).get("leaseId");int at=f.sent.size();up(f);check(f.sent.size()==at+1&&mode(f.sent.get(at))==17,"no oneBRAKE");check(Boolean.FALSE.equals(((Map<?,?>)f.s.snapshot().get("input")).get("consent")),"UP failed revoke");f.c.n+=10000000;f.hb(true,17);check(f.sent.size()==at+3,"cleanup not3");f.input(0,0,false);f.action("CONSENT",null);String lease=(String)((Map<?,?>)f.s.snapshot().get("input")).get("leaseId");check(lease!=null&&!lease.equals(old),"old lease revived");f.action("LAND",null);check(mode(f.sent.get(f.sent.size()-1))==9,"explicitLAND notsent");check(Boolean.FALSE.equals(((Map<?,?>)f.s.snapshot().get("input")).get("consent")),"LAND leftpilotauthority");}finally{f.close();}});
+  test("N02_NO_CONSENT_OR_LAND_BEFORE_OBSERVED_BRAKE",()->{SessionQA.F f=new SessionQA.F("wait-hold",20000000000L);try{forward(f);up(f);f.c.n+=10000000;f.input(0,0,false);int n=f.sent.size();denied(()->f.action("CONSENT",null));denied(()->f.action("LAND",null));check(f.sent.size()==n,"wire whileWAIT_HOLD");}finally{f.close();}});
+  test("N03_NEW_NEUTRAL_SAMPLE_NEVER_AUTO_RESTORES_AUTHORITY",()->{SessionQA.F f=new SessionQA.F("no-restore",20000000000L);try{forward(f);up(f);f.c.n+=10000000;f.hb(true,17);int n=f.sent.size();for(int i=0;i<5;i++){f.c.n+=50000000;f.input(0,0,false);}check(f.sent.size()==n,"normalwirewithoutnewconsent");check(Boolean.FALSE.equals(((Map<?,?>)f.s.snapshot().get("input")).get("consent")),"implicitgrant");}finally{f.close();}});
+  test("N04_UNOBSERVED_BRAKE_TIMEOUT_NO_NEUTRAL_RELEASE_OR_LAND",()->{SessionQA.F f=new SessionQA.F("brake-timeout",20000000000L);try{forward(f);up(f);int n=f.sent.size();f.c.n+=1501000000L;denied(()->f.s.tick());check(f.sent.size()==n,"cleanupwirewithoutobservedBRAKE");}finally{f.close();}});
+  test("N05_REPLAYED_CONSENT_ACTION_CANNOT_GRANT_NEW_LEASE",()->{SessionQA.F f=new SessionQA.F("replay",20000000000L);try{forward(f);up(f);f.c.n+=10000000;f.hb(true,17);f.input(0,0,false);String id="explicit-new-grant";f.s.action("CONSENT",id,null,f.c.n);f.s.action("RELEASE","release-second",null,f.c.n);f.c.n+=10000000;f.hb(true,17);f.input(0,0,false);denied(()->f.s.action("CONSENT",id,null,f.c.n));check(Boolean.FALSE.equals(((Map<?,?>)f.s.snapshot().get("input")).get("consent")),"replaygrant");}finally{f.close();}});
+  System.out.println(Values.json(Values.map("results",results,"scope","PURE_JVM_ACTUAL_SESSION_AND_JOURNAL_MOCK_AP_SOCKET")));
+ }
+}

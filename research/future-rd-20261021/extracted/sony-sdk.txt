@@ -1,0 +1,360 @@
+Camera Remote SDK | Camera Remote Toolkit | SONY
+SDK
+PTP Command
+Camera Remote Toolkit
+SDK
+PTP Command
+日本語
+Efficiently develops camera control applications with high-level APIs
+Camera Remote SDK
+Camera Remote SDK provides software developers a way for integrating Sony cameras in their solutions and applications. With this SDK developers will be able to create customized software applications to control Sony cameras remotely from a host PC and get the image data captured with Sony cameras. This SDK allows software developers to realize a number of functions, such as changing the camera settings, shutter release and live view monitoring in their software applications.
+Software Development Kit Available
+Software module
+API Reference
+Sample Code
+Supported device
+ILX-LR1
+ILCE-1M2, ILCE-1, ILCE-9M3, ILCE-9M2, ILCE-7RM6, ILCE-7RM5, ILCE-7RM4A, ILCE-7RM4, ILCE-7CR, ILCE-7SM3, ILCE-7M5, ILCE-7M4, ILCE-7CM2, ILCE-7C, ILCE-6700
+BURANO(MPC-2610), ILME-FX6V/ILME-FX6T(Ver. 3.00 or later), ILME-FX3A, ILME-FX3(Ver. 2.00 or later), ILME-FX2, ILME-FX30, PXW-Z300, PXW-Z380, PXW-Z200, HXR-NX800
+BRC-AM7, ILME-FR7 (Ver. 3.00 or later)
+ZV-E1, ZV-E10M2
+DSC-RX1RM3, DSC-RX0M2 (Ver. 3.00 or later)
+It is necessary to update each camera to the latest System  Software (Firmware) before use.
+Supported Interface
+USB
+Wired LAN
+Wireless LAN (Wi-Fi)
+Refer to the API references for supported interface of each device.
+Supported OS
+macOS® 14.1 - / macOS® 15.1 - / macOS® 26.0 -
+Windows® 11
+*
+Linux® 64bit (ARMv8)
+Linux® 32bit (ARMv7)
+Linux® 64bit (x86)
+*
+Computers with Intel or AMD processors (does not work on ARM-processor-based computers)
+Apply for Camera Remote SDK
+For whom located in Canada or the USA
+APPLY
+For whom located in Mainland China
+APPLY
+For whom located in the EU, the UK, Norway, Switzerland, Turkey, Bosnia and Herzegovina, Macedonia, Moldova, Montenegro or Serbia
+APPLY
+For whom located in Australia and New Zealand
+APPLY
+For whom located in Central Asia, Middle East and Africa (Please note that availability depends on the country.)
+APPLY
+For whom located in India
+APPLY
+For whom located in Taiwan
+APPLY
+For whome located in Korea
+APPLY
+For whome located in Hong Kong
+APPLY
+For whom located in other countries in Asia Pacific region (Please note that availability depends on the country.)
+APPLY
+LICENSE AGREEMENT
+Notifications
+2026-Jun-10
+Camera Remote SDK Ver. 2.02.00 has been released.
+Main changes:
+Added support for ILCE-7RM6.
+2026-Feb-3
+Camera Remote SDK Ver. 2.01.00 has been released.
+Main changes:
+Added support for ILCE-7M5, PXW-Z300, PXW-Z380, and DSC-RX1RM3.
+Added the following functions.
+For details, refer to the API Reference.
+Support for “Peaking Display,” “Zebra Display,” and when recording video “Marker Display”
+*1
+*1
+Compatible model: ILX-LR1.*
+* It is necessary to update the software to the latest version.
+2025-Oct-30
+API references of Camera Remote SDK Ver. 2.00.00 has been updated.
+Main changes:
+Updated Function list and API list for ILCE-9M3.
+Updated the Special note regarding functions and APIs requiring installation of a license on the camera.
+2025-Aug-5
+API references of Camera Remote SDK Ver. 2.00.00 has been updated.
+Main changes:
+Updated Function list and API list for ILCE-1M2.
+Corrected compatible models for UploadCustomGridLineFile.
+2025-Jun-23
+Camera Remote SDK Ver. 2.00.00 has been released.
+Main changes:
+Added support for BRC-AM7, ILME-FR7 (Ver. 3.00 or later), ILME-FX3A, and ILME-FX2.
+Added the following functions.
+Support for deleting data stored on the camera: It is now possible to build more efficient workflows for environments where shooting, recording, transferring data, and deleting data stored on the camera are performed repeatedly.
+*1
+Support for pan/tilt type cameras
+*2
+*1
+ILCE-7CR*, ILCE-7SM3*, ILCE-7M4*, ILCE-7CM2*, ILCE-6700*
+*2
+BRC-AM7 and ILME-FR7 (Ver. 3.00 or later)*
+* It is necessary to update the software to the latest version.
+2025-Mar-7
+API references of Camera Remote SDK Ver. 1.14.00 has been updated.
+Main changes:
+Updated Supporting physical layer.
+2025-Jan-29
+Camera Remote SDK Ver. 1.14.00 has been released.
+Main changes:
+Added support for ILCE-1M2.
+2024-Oct-16
+Camera Remote SDK Ver. 1.13.00 has been updated
+Main changes:
+Added support for PXW-Z200, HXR-NX800 and ZV-E10M2.
+Added some functions as following.
+For details, refer to the API references.
+Absolute Position Settings for optical zoom: this makes it possible to move the zoom to a desired position with a single command prompt, for a substantive time gain.
+*1
+Remote emulation. which allows users to remotely receive display information from the camera including On-screen display. This provides the level of remote-control equivalent to a non-remote manipulation.
+*2
+Exposure Notification Timing Adjustment: This provides an exposure signal in advance of shooting still image, allowing  creators looking for advanced synchronization scenario with flash lighting.
+*3
+New features to improve the video recording workflow
+Background File Transfer: Remote control and file transfer can be performed simultaneously in order to maximise the efficiency of any remote production.
+*2
+Recorded Video Preview: Without transferring the video file to a computer, users can review any section of the video remotely.
+*4
+Remote Firmware Update: Users can now update the camera’s firmware remotely within  user application. In the future, when a new firmware for the camera is provided by Sony, it can be applied without disassembling the system.
+*5
+*1
+Compatible models: ILX-LR1*, ILCE-7M4*, ILME-FX3* and ILME-FX30*.
+*2
+Compatible models: ILX-LR1*, ILCE-7RM5*, ILCE-7M4*, ILME-FX3* and ILME-FX30*.
+*3
+Compatible models: ILX-LR1*, ILCE-7RM5* and ILCE-7M4*.
+*4
+Compatible models: ILME-FX3* and ILME-FX30*.
+*5
+Compatible models: ILX-LR1*.
+* It is necessary to update the software to the latest version.
+2024-Apr-25
+API references of Camera Remote SDK Ver. 1.12.00 has been updated
+Main changes:
+Updated Function list for ILCE-9M3.
+2024-Apr-12
+Camera Remote SDK Ver. 1.12.00 has been updated
+Main changes:
+Added support for ILCE-9M3.
+Added some functions as following.
+For details, refer to the API references.
+Added about 100 types of functions. Recording media settings which arbitrarily switch the memory card slot for recording still images and movies depending on the shooting situation, and ISO AUTO Maximum/Minimum settings according to the shooting environment are available.
+*1
+Wireless LAN (Wi-Fi) is supported.
+*2
+*1
+Compatible models: ILCE-1*, ILCE-7SM3* and ILCE-7M4*.
+*2
+Compatible models: ILCE-1*, ILCE-9M3, ILCE-7SM3* and ILCE-7M4*.
+* It is necessary to update the software to the latest version.
+2024-Feb-29
+API references of Camera Remote SDK Ver. 1.11.00 has been updated
+Main changes:
+Updated Function list.
+2023-Nov-07
+Camera Remote SDK Ver. 1.11.00  has been released.
+Main changes:
+Added support for ILX-LR1, BURANO(MPC-2610).
+Added new monitoring function for BURANO(MPC-2610).
+For details, please refer to API references.
+2023-Sep-13
+Camera Remote SDK Ver. 1.10.00  has been released.
+Main changes:
+Added support for ILCE-7CR, ILCE-7CM2.
+Support for ILX-LR1, BURANO(MPC-2610) planned from Ver.1.11.
+Added some commands as following.
+*1
+For details, please refer to API references.
+Focus Position Setting
+*2
+which enables remote acquisition of the current focus position and focus sending to an arbitrary position.
+remotely acquires focal length information
+*3
+.
+Remote menu settings for stills and videos, including interval shooting functions and AF tracking sensitivity settings.
+Event notification, such as video recording start/stop and "Focus Position Setting" completion. In addition, camera status acquisition such as during media writing.
+*1
+Compatible models: ILCE-7CR and ILCE-7CM2.
+*2
+The system needs to learn the focus position and setting values for each camera and lens in advance.
+*3
+Lens focal length in 1mm increments.
+2023-Jul-19
+Camera Remote SDK Ver. 1.09.00 has been released.
+Main changes:
+Added support for ILCE-6700.
+2023-Apr-12
+Camera Remote SDK Ver. 1.08.00  has been released.
+Main changes:
+Added support for ZV-E1.
+Added some commands as following.
+For details, please refer to API references.
+Improved processing speed: In repetitive shooting scenarios, the processing speed for setting, shooting, and transferring files is reduced by approximately 20%
+*1
+Shutter trigger by electrical signal and remote power on/off
+*2
+Remote menu settings for video
+*3
+”Overheating warning” status notification
+*1
+When compared with the combination of ILCE-1 and Camera Remote SDK Ver. 1.07.00. According to Sony measurement conditions. Compatible models:  ZV-E1, ILCE-7RM5* and ILCE-7M4*.
+*2
+Compatible model: ZV-E1. To use the extended interface function, users must configure and connect through another device. Please refer to the API reference for details.
+*3
+Picture profile settings, Timecode (TC)/User bit (UB) settings, and so on. Compatible models:  ZV-E1, ILCE-7RM5* and ILCE-7M4*.
+* Please update the software to the latest version.
+2023-Mar-06
+API references of Camera Remote SDK Ver. 1.07.00 has been updated.
+Main changes:
+Updated Function list.
+2022-Oct-27
+Camera Remote SDK Ver. 1.07.00 has been released.
+Main changes:
+Added support for ILCE-7RM5.
+2022-Oct-12
+Camera Remote SDK Ver. 1.06.00 has been released.
+Main changes:
+Added support for ILME-FX6V/ILME-FX6T(Ver. 3.00 or later), ILME-FX3(Ver. 2.00 or later) and ILME-FX30.
+Added some commands as following.
+For details, please refer to API references.
+GPS information and shooting image link by sending "ImageID
+*1
+" from SDK.
+*2
+Basic operation menu settings such as "Save/Load Settings"
+*2
+ILME-FX6 : Basic control functions
+*3
+supported by Content Browser Mobile
+*1
+Arbitrary IDs can be given to captured images, and by recording the combination of GPS location information and IDs at the time of shooting, it is possible to associate captured images with GPS location information after shooting.
+*2
+Compatible with ILCE-7M4, ILME-FX3 and ILME-FX30. Please update the software to the latest version.
+*3
+REC START/STOP, Iris, Shutter, Gain, ND, Zoom, Focus, and so on.
+2021-Dec-07
+API references of Camera Remote SDK Ver. 1.05.00 has been updated
+Main changes:
+Added support devices for some commands as following.
+Still Image Capture Complete Notification
+*
+Contents Transfer mode
+*
+*
+Compatible with ILCE-7RM4A, ILCE-7C. Please update the software to the latest version.
+2021-Nov-09
+Camera Remote SDK Ver. 1.05.00 has been released.
+Main changes:
+Added support for ILCE-7M4.
+Added some commands as following.
+For details, please refer to API references.
+Still Image Capture Complete Notification
+*1 *2
+Preset Focus and Zoom
+*1
+Contents Transfer mode
+*2
+Zoom Speed – high speed and variable support
+*1
+*1:
+Compatible with ILCE-7M4.
+*2:
+Compatible with DSC-RX0M2. Please update the software to the latest version.
+2021-May-11
+Camera Remote SDK Ver. 1.04.00 has been released.
+Main changes:
+Added support for ILCE-1, ILCE-7RM4A and DSC-RX0M2(Ver. 3.00 or later).
+Wired LAN is supported.
+Linux® 64bit (x86) is available.
+Added some commands for Windows®, MacOS and Linux®.
+2020-Dec-08
+Camera Remote SDK Ver. 1.03.00 has been released.
+Main changes:
+MacOS is available.
+Multi-camera control is supported.
+2020-Oct-15
+Camera Remote SDK Ver. 1.02.01 has been released (for Windows only).
+Main changes:
+Fixed a stability issue occasionally happens when connect/disconnect the camera via USB.
+Please refer to CrSDK_Readme_v1.02.01.pdf.
+2020-Sep-15
+API references of Camera Remote SDK Ver. 1.02.00 has been updated
+Main changes:
+Added support for ILCE-7C.
+2020-Aug-03
+Camera Remote SDK Ver. 1.02.00 for Linux® 32bit (ARMv7) has been released.
+Following 3 documents of Camera Remote SDK Ver. 1.02.00 for Windows® and Linux® 64bit (ARMv8) have been updated.
+Sony_CameraRemoteSDK_API-Reference_v1.02.00.pdf
+CrSDK_Readme_v1.02.00.pdf
+RemoteSampleApp_IM_v1.02.00.pdf
+2020-Jul-28
+Camera Remote SDK Ver. 1.02.00 has been released.
+Main changes:
+Added support for ILCE-7SM3.
+2020-Jul-16
+Camera Remote SDK Ver. 1.01.00 has been released.
+Main changes:
+Linux® 64bit (ARMv8) is available.
+Added commands as following for both Windows® and Linux®.
+For details, please refer to API references.
+Video shooting
+Focus Magnifier Setting
+Focus Area setting
+Zoom status indication (Zoom Type Status, Zoom Scale, Zoom Bar Information functions)
+White Balance settings (Custom WB, AutoWB (AWB) Lock, Biaxial Fine Tuning, Picture Effect)
+Control Media Format
+2020-Jun-18
+Camera Remote SDK Ver. 1.00.01 has been released.
+Main changes:
+Fixes an application crash when Debug build and CrError GetLiveViewImage() are used.
+Fixes a rare issue that no output is available when command line output is used.
+What to update:
+Please replace following 2 dll files to update from Ver. 1.00.00 to Ver. 1.00.01.
+Cr_Core.dll
+CrAdapter/Cr_PTP_USB.dll
+If you are using LiveView function, please refer to the Sample Application code and update your Application code, as the memory new/delete codes are updated.
+"void CameraDevice::get_live_view()" of the "CameraDevice.cpp"
+If you are using command line output, please refer to the Sample Application code and update your Application code, as the locale setting codes are added.
+"int main()" of the "RemoteSampleApp.cpp"
+Related Websites
+Camera Remote Command
+Develop environment-independent camera control applications with PTP
+Camera Remote Command
+More information
+Digital Imaging Solutions
+Featuring a wide range of solutions and case studies utilizing the Camera Remote SDK
+FAQ
+Is Camera Remote SDK charged? Do I need to pay for Remote SDK?
+It is free of charge. Please let us know your request.
+Is it possible for developers to sell APPs developed based on this SDK?
+Yes, developers are free to sell their APPs for legitimate purposes.
+What is the difference between Camera Remote SDK and Camera Remote Command?
+Camera Remote SDK
+Camera Remote SDK is a high-level command system designed for development efficiency that enables operation and control of Sony digital cameras using dedicated API provided by Sony. This is ideal for use with high-level APIs to efficiently develop programs.
+Camera Remote Command
+Camera Remote Command enables remote control of cameras using a communication protocol that is Sony's proprietary extension of the ISO standard PTP (Picture Transfer Protocol). This increases convenience when operating camera products from different brands with a single software, or when applying existing software to Sony’s digital cameras.
+Customers using ILX-LR1 Ver. 2.00 or later, ILCE-7CM2 Ver. 2.00 or later, ILCE-7CR Ver. 2.00 or later, or ILCE-9M3 Ver. 4.00 or later
+The setting value assigned to CrDeviceProperty_FocusPositionSetting is no longer compatible after updating the camera’s system software. After updating the system software, measure the CrDeviceProperty_FocusPositionSetting setting value once again.
+Customers using Camera Remote SDK Ver. 1.10.00
+Camera Remote SDK may stop working after updating the camera’s system software. Update Camera Remote SDK to the latest version.
+Customers using ILCE-7SM3 Ver. 4.00 or later
+The settings have been optimized, and as a result CrDeviceProperty_Movie_HDMIOutputColorGamutForRAWOut has been integrated into CrDeviceProperty_MovieShootingModeColorGamut. Consider using CrDeviceProperty_MovieShootingModeColorGamut to change the color gamut.
+Trademarks
+Mac and macOS are registered trademarks of Apple Inc. in the U.S and other countries.
+Microsoft and Windows are either registered trademarks or trademarks of Microsoft Corporation in the U.S. and other countries.
+Linux® is the registered trademark of Linus Torvalds in the U.S. and other countries.
+Other system names, product names, and service names are registered trademarks or trademarks of each company.
+PAGE TOP
+Terms of Use
+About this Site
+Privacy Policy
+CA Privacy Notice
+Cookie Policy
+Copyright
+Sony Corporation

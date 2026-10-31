@@ -1,0 +1,7 @@
+# ADR037 · Route payload frames through actual ArduPilot serial channels
+
+Accepted within owner13/10 scope. T26 had real heartbeat but independent synthetic responder socket; that could not establish AP payload routing. A28 attaches two synthetic payload buses directly to dedicated AP SERIAL1/2 and sends GCS commands only on SERIAL0. Four-point raw receipts distinguish router forwarding from peer simulation. Existing pinned firmware/image are reused read-only; no flight/parameter/mission command, candidate/Fly/signing change.
+
+Keep T25 MockTransport contract immutable. Its state remains synthetic; A28 outer envelope proves actual observed routing with synthetic peers, not aircraft execution. Learn routes through observed component heartbeats/information, send local GCS heartbeat for return routing. Direct component100/102/101 and shared manager154 only; do not impersonate autopilot component1. Exact target+reviewed context and one attempt; manual reconnect creates new epoch/discovery. Pending uncertainty persists in history, no automatic resend.
+
+Conservative isolation: disarmed heartbeat required; fixed loopback-only endpoints, resource bounds, peer process/closure/liveness and AP heartbeat loss invalidate session. Bounded raw evidence exhaustion freezes links. Unsigned wire carries no authenticated remote freshness or transaction UUID; no causal execution or real-media inference. Same-agent verify not independent audit. A28 completion does not change ENDURE27 admission or24h gate.

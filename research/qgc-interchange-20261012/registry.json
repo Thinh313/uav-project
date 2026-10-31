@@ -1,0 +1,145 @@
+{
+  "aggregates": {
+    "cells_by_state": {
+      "sourced": 6
+    },
+    "coverage_pct": null,
+    "n_entities": 1,
+    "rollup": {},
+    "rollup_field": null,
+    "universe_estimate": null
+  },
+  "registry": {
+    "QGC v5.1.5 reference": {
+      "entity_type": null,
+      "fields": {
+        "altitude_enum": {
+          "claims": [
+            {
+              "capture": {
+                "fetched_at": "2026-10-12T07:01:36.150044+00:00",
+                "origin_id": "qgc-upstream",
+                "sha256": "ce055ba5c38af4089785cb4c3371c5366830c30ead7a2a4d4fcad87189359738",
+                "snapshot": "altitude-enum.txt",
+                "source": "altitude-enum",
+                "url": "https://raw.githubusercontent.com/mavlink/qgroundcontrol/3a67d31f0c36bf3fe38ec52970d250a89d0aaf67/src/QmlControls/QGroundControlQmlGlobal.h"
+              },
+              "evidence_span": "AltitudeFrameRelative,           // MAV_FRAME_GLOBAL_RELATIVE_ALT",
+              "extraction": "normalized",
+              "source": "altitude-enum",
+              "tier": "A",
+              "value": "AltitudeFrameRelative enum is 1, corresponding to relative-home global frame"
+            }
+          ],
+          "state": "sourced",
+          "value": "AltitudeFrameRelative enum is 1, corresponding to relative-home global frame"
+        },
+        "cached_items": {
+          "claims": [
+            {
+              "capture": {
+                "fetched_at": "2026-10-12T07:00:48.036794+00:00",
+                "origin_id": "qgc-upstream",
+                "sha256": "1e28541b3a3d97deca632aefd0e48c5646565641f358a31313114165d6dc2ccc",
+                "snapshot": "transect.txt",
+                "source": "transect",
+                "url": "https://raw.githubusercontent.com/mavlink/qgroundcontrol/3a67d31f0c36bf3fe38ec52970d250a89d0aaf67/src/MissionManager/TransectStyleComplexItem.cc"
+              },
+              "evidence_span": "// Load generated mission items",
+              "extraction": "normalized",
+              "source": "transect",
+              "tier": "A",
+              "value": "Transect-style stores generated mission items and loads cached Items"
+            }
+          ],
+          "state": "sourced",
+          "value": "Transect-style stores generated mission items and loads cached Items"
+        },
+        "legacy_fixture": {
+          "claims": [
+            {
+              "capture": {
+                "fetched_at": "2026-10-12T07:00:48.126012+00:00",
+                "origin_id": "qgc-upstream",
+                "sha256": "9384d034adb292da7245f1223b11c6d872d1422a424a9eb116395b7d3e3a97de",
+                "snapshot": "qgc-fixture.txt",
+                "source": "qgc-fixture",
+                "url": "https://raw.githubusercontent.com/mavlink/qgroundcontrol/3a67d31f0c36bf3fe38ec52970d250a89d0aaf67/test/MissionManager/SectionTest.plan"
+              },
+              "evidence_span": "\"coordinate\": [",
+              "extraction": "normalized",
+              "source": "qgc-fixture",
+              "tier": "A",
+              "value": "Tagged SectionTest fixture retains legacy coordinate plus four params"
+            }
+          ],
+          "state": "sourced",
+          "value": "Tagged SectionTest fixture retains legacy coordinate plus four params"
+        },
+        "license": {
+          "claims": [
+            {
+              "capture": {
+                "fetched_at": "2026-10-12T07:01:36.149433+00:00",
+                "origin_id": "qgc-upstream",
+                "sha256": "ce1da9307ecc6de480be4fea94419e5b0efcde03ee5b81b8df6a7d7329d4ad75",
+                "snapshot": "license.txt",
+                "source": "license",
+                "url": "https://raw.githubusercontent.com/mavlink/qgroundcontrol/3a67d31f0c36bf3fe38ec52970d250a89d0aaf67/.github/COPYING.md"
+              },
+              "evidence_span": "QGroundControl is dual-licensed under **Apache 2.0** and **GPL v3**.",
+              "extraction": "normalized",
+              "source": "license",
+              "tier": "A",
+              "value": "Upstream states Apache 2.0 or GPL v3 dual licensing, Qt licensing separate"
+            }
+          ],
+          "state": "sourced",
+          "value": "Upstream states Apache 2.0 or GPL v3 dual licensing, Qt licensing separate"
+        },
+        "parameters": {
+          "claims": [
+            {
+              "capture": {
+                "fetched_at": "2026-10-12T07:00:47.582340+00:00",
+                "origin_id": "qgc-upstream",
+                "sha256": "7ed218fd97bf4894c422fdec8a22b8cf5041b4d3c8649bdf6311c8593ac702c2",
+                "snapshot": "mission-item.txt",
+                "source": "mission-item",
+                "url": "https://raw.githubusercontent.com/mavlink/qgroundcontrol/3a67d31f0c36bf3fe38ec52970d250a89d0aaf67/src/MissionManager/MissionItem.cc"
+              },
+              "evidence_span": "param1(), param2(), param3(), param4(), param5(), param6(), param7()",
+              "extraction": "normalized",
+              "source": "mission-item",
+              "tier": "A",
+              "value": "SimpleItem serializes seven params and accepts first four as numeric or null"
+            }
+          ],
+          "state": "sourced",
+          "value": "SimpleItem serializes seven params and accepts first four as numeric or null"
+        },
+        "survey_version": {
+          "claims": [
+            {
+              "capture": {
+                "fetched_at": "2026-10-12T07:00:47.583258+00:00",
+                "origin_id": "qgc-upstream",
+                "sha256": "d2222f4539984d843c4fc296812c08240808c146b49cc710c48c991eafd0b85b",
+                "snapshot": "survey.txt",
+                "source": "survey",
+                "url": "https://raw.githubusercontent.com/mavlink/qgroundcontrol/3a67d31f0c36bf3fe38ec52970d250a89d0aaf67/src/MissionManager/SurveyComplexItem.cc"
+              },
+              "evidence_span": "saveObject[JsonParsing::jsonVersionKey] =                    5;",
+              "extraction": "normalized",
+              "source": "survey",
+              "tier": "A",
+              "value": "Survey serializer writes version 5"
+            }
+          ],
+          "state": "sourced",
+          "value": "Survey serializer writes version 5"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,383 @@
+VIO - Gremsy EO/IR Payload
+PRODUCTS
+Payloads
+Flagship
+Flagship
+Ultra compact EO/IR payload
+Kestrel
+Discover
+Zoom
+ZIO
+Dual Use
+VIO
+ORUS L
+LYNX
+ISR Missions
+KESTREL
+N1 (Coming soon)
+N2 (Coming soon)
+All payloads
+Gimbals
+View all
+Aerial Gimbals
+Stabilization for every platform
+Explore
+Tiny
+G-Hadron
+Light
+Pixy MR
+Pixy LR
+Pixy LR S-Port
+Pixy LR S-Port V2
+Pixy U
+Mio
+Mid-size
+Gremsy T3V3
+Gremsy T7
+Heavy
+AEVO
+Applications
+Distributors
+News
+Contact
+Get in Touch
+Products
+Applications
+Distributors
+News
+Contact
+Get in Touch
+Close
+Contacts
+Gremsy JSC
+Ho Chi Minh City, Vietnam
+Email
+[email protected]
+Global support
+Authorized distributors worldwide
+Get in Touch
+VIO
+Order Now
+View Specs
+Order Now
+View Specs
+Watch Video
+Specs
+FAQ
+Manual
+VIO F1, among VIO Series, a NDAA compliant payload featuring a 4K zoom EO sensor, a 640 x 512
+                        radiometric thermal camera from Teledyne FLIR and an integrated 2400m laser rangefinder. Gremsy's
+                        VIO F1
+                        is proudly included as part of the Thermal by FLIR program which allows users to benefit from
+                        reliable
+                        thermal imaging solutions for various applications such as inspection, industrial diagnostics,
+                        public
+                        safety.
+Electronic Image Stabiliation (EIS)
+Plug-and-play Industry-leading size, only 854g
+MAVLink Drone Support
+4K Resolution Zoom sensor
+640x512 Radiometric Thermal sensor 8x digital zoom
+Laser Rangefinder up to 2400m
+Videos
+Versatile Lightweight EO/IR Payload
+Powerful Zoom Camera
+30x Super Resolution Zoom, 240x Max Zoom
+8.51 MP 1/2.5" CMOS
+Focal Length: 4.4mm to 88.4mm
+Resolution: 4K@30fps
+Radiometric Thermal Camera
+1x to 8x Zoom
+Fixed Focus, 32° HFOV, 14 mm EFL
+Resolution: 640×512@60Hz
+Thermal Sensitivity: ≤ 50mk
+Laser Rangefinder
+0 - 2400m (1Hz)
+0 - 1200m (10Hz)
+Precision: 0.1m-0.5m
+Powerful Zoom Capability
+Vio offers the capability to zoom in
+                        both
+                        thermal and optical modes, catering to various applications such as mapping, inspection, surveying,
+                        and
+                        public safety tasks.
+Thermal Zoom
+Visible Optical Zoom
+Radiometric Thermal
+                        Imaging
+Vio offers two versions with advanced
+                        640x512 radiometric thermal sensors, featuring a remarkable sensitivity of <=50 mK, delivering
+                        precise
+                        temperature detection. Well-suited for any demanding industrial applications: assets &
+                        infrastructure inspection, disaster relief, firefighting, search & rescue, urban safety and
+                        more.
+EO Object Tracking
+Easily auto-tracks and auto-centers
+                        your
+                        selected object, ensuring it remains perfectly framed even while zooming or adjusting the gimbal
+                        position.
+Laser Rangefinder &
+                        Pinpoint
+Vio features a highly precise
+                        (0.1-0.5m)
+                        laser rangefinder, recommended for optimal object detection at 1200m at 10Hz, but capable of
+                        reaching up
+                        to 2400m at 1Hz. Combine the aircraft's GPS to detect the exact position of the targets for rescue
+                        missions.
+AI-Driven
+                        Features
+                        Unleashed
+AI Detection
+Identify objects such as cars, humans during tracking, ensuring accurate performance.
+AI Auto Zoom
+Automatically zoom in on the selected object for the best view. It adjusts the zoom level as the object moves closer or farther away.
+*For users who desire to further expand the range of
+                        detectable objects, please contact us for additional software updates and options.
+User Interface
+Payload Assistant App
+Gremsy introduces Payload Assistant
+                        app, an
+                        overlay software that facilitates user operation of Vio with ease, such as zoom in, select tracked
+                        objects by touching the remote screen, alter gimbal modes, take images, view videos, and more.
+Camera View Mode
+Equipped with two integrated sensors,
+                        you
+                        can seamlessly engage the advanced functionalities of the camera, facilitated by a diverse and
+                        intuitive
+                        viewing mode.
+EO
+IR
+EO/IR
+IR/EO
+SYNC
+More
+                        Functionalities
+Geotagging
+Enable data embedding into your images
+Video Stream
+Support stream video via HDMI/Ethernet RTSP
+Payload SDK
+Access payload info and control it using available libraries for specific applications
+Direct Media Retrieval
+Easily access and retrieve media files from a device using Ethernet
+Advanced
+                        Chip
+                        Empowering
+Feature Expansion
+Our high-performance Vio processor,
+                        NVIDIA® Jetson Xavier™ NX, seamlessly executes the functionalities of Vio and also empowers to
+                        engineer
+                        extensions for a diverse array of features. For inquiries regarding bespoke projects harnessing
+                        these
+                        capabilities, please feel free to reach out to us.
+Contact
+                        Us
+Choose from two models of
+                        Vio
+                        series, Vio F1 and Vio G1, for unmatched performance and precision
+VIO F1
+Sony 4K Block Zoom Camera
+Flir Boson 640 Radiometric Thermal Core, 14 mm (EFL)
+*Included as part of the Thermal by FLIR program
+Up to 2400m LRF
+VIO G1
+Sony 4K Block Zoom Camera
+640 Radiometric Thermal Core, 19mm (EFL)
+Up to 2400m LRF
+View
+                        Specs
+Assembly &
+                    Distribution
+VIO F1
+Vio F1 is assembled in the US and distributed by Gremsy US
+ORDER
+                                NOW
+VIO G1
+VIO G1 is assembled in Vietnam and available to order directly
+                                from Gremsy.
+ORDER
+                                NOW
+Next step
+Ready to build with
+VIO
+?
+Talk to our team to configure your system, or review the full technical specifications.
+Order Now
+View Specs
+Request received
+Thank you. Our team will review your request and get back to you shortly.
+Close
+Leave this field empty
+Full name
+*
+Job title
+Work email
+*
+Company
+*
+Phone
+Your address
+Country / Region
+*
+Please select
+United States
+Europe
+Asia-Pacific
+India
+Others
+Your business
+*
+Please select
+Integrators / Developers
+Drone Manufacturers
+Solution & Service Providers
+Resellers
+Others
+Product line
+*
+Please select
+ZIO
+VIO
+ORUS L
+LYNX
+KESTREL
+G-Hadron
+Pixy MR
+Pixy LR
+Pixy LR S-Port
+Pixy LR S-Port V2
+Pixy U
+Mio
+Gremsy T3V3
+Gremsy T7
+AEVO
+Other
+Order quantity
+*
+Additional comments
+How did you hear about Gremsy?
+*
+Search Engine
+Social Media
+Email Marketing
+Event / Trade Show
+Unmanned Systems Technology
+Technology Partner
+Referral
+Others
+I agree to receive product news, event invitations and marketing updates from Gremsy by email. I can unsubscribe at any time.
+Cancel
+// Trusted
+                & Certified
+NDAA
+Blue UAS
+RoHS
+CE
+FCC
+Sony Green Partner
+Gremsy manufactures high-precision gimbals and camera payloads for unmanned systems and robotics. Engineered for dual-use versatility and reliability, our technology powers industrial, public safety, and government missions worldwide.
+Gremsy JSC · Headquarters
+7th Floor, SCS Building, D1 St., Saigon Hi-Tech Park, Tang Nhon Phu Ward, Ho Chi Minh City, Viet Nam
+Products
+Payloads
+Gimbals
+Applications
+Company
+News
+Distributors
+Contact
+Support
+Support Center
+Repair Center
+Helpdesk
+Product Support
+Terms & Conditions
+Privacy Policy
+Stay in the loop
+Product releases, field stories and press - straight
+                        to your inbox.
+Leave this field empty
+Subscribe
+Get in touch
+Request a Quote
+[email protected]
+© 2026 Gremsy JSC ·
+                All rights reserved
+CAMERA PAYLOADS FOR
+                UNMANNED SYSTEMS
+Request received
+Thank you. Our sales team will review your request and get back to you shortly.
+Close
+Leave this field empty
+Talk to our sales team
+Our experts are here to help you explore the best Gremsy solutions for your application.
+Full Name
+*
+Work Email
+*
+Country/Region
+*
+Select Country/Region
+United States
+Europe
+Asia-Pacific
+India
+Other
+Your Industry
+*
+Select your industry
+Search & Rescue
+Inspection
+Mapping & Surveying
+Public Safety & Surveillance
+Defense & Government
+Agriculture
+Wildfire Management
+Law Enforcement
+Other
+Product of Interest
+VIO
+ORUS L
+LYNX
+KESTREL
+Gimbals
+Others
+Please briefly describe your needs
+I agree to receive product news, event invitations and marketing updates from Gremsy by email. I can unsubscribe at any time.
+Application received
+Thank you for your interest in partnering with Gremsy. Our team will review your application and get back to you shortly.
+Close
+Leave this field empty
+Apply to become a partner
+Join our global network to deliver mission-grade stabilization systems worldwide. Please fill out the form below to apply.
+Personal Contact Information
+Full Name
+*
+Email
+*
+Phone Number
+*
+Company Name
+*
+Company Information
+Company Website
+*
+Country/Region
+*
+Select Country/Region
+United States
+Europe
+Asia-Pacific
+India
+Other
+Partnership Opportunity Details
+Type of Partnership You're Interested In
+Technology Partner
+Social Media
+Event/Trade Show
+Existing Partner
+Referral
+Other
+Your Message
+I agree to
+Gremsy's Privacy Policy
