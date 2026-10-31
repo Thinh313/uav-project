@@ -54,7 +54,35 @@
     "scope": "acceptance.test.mjs + geo14.test.mjs after explicit original synthetic fixture reconstruction; no claim that full387test suite passed"
   },
   "hostGeneratedExecutablesRetainedPrivately": 9,
-  "PDFPages": 13,
-  "PDFSHA256": "ff20632812ce1c1dc997787bb74a8f8a97c652f417d6f353efe2b6447d1ba36f",
-  "broadHistoricalNpmTestAfterFixtureRepair": "NOT_RERUN_FULL_SUITE; affected27/27passed;40legacyfloorblockedcasesand1timingfailurefromfirstfullrunremainunresolved"
+  "PDFPages": 16,
+  "PDFSHA256": "e0ff5bb6a1f0f8ae570172a30ca4edb01c687a4b33e508ba1bd2f57ba25a6c04",
+  "broadHistoricalNpmTestAfterFixtureRepair": "NOT_RERUN_FULL_SUITE; affected27/27passed;40legacyfloorblockedcasesand1timingfailurefromfirstfullrunremainunresolved",
+  "intake01": {
+    "tag": "research-intake-2026-10-31-r1",
+    "baselinePublicCommit": "94c3ef8d740c5ebdb3b6fff900e4efa93f822be0",
+    "cleanNetworkCloneExactREADME": "PASS_SIX_COMMANDS",
+    "host": "macOS arm64, Node24.14.1, Python3.14.6",
+    "sameHostNotIndependentPhysicalMachine": true,
+    "historicalWebHttpSmoke": "PASS_ROOT_SITL_LEGACY_FONT_API_DISABLED",
+    "UIVisualAcceptance": "NOT_RUN",
+    "helperAdversarialCases": {
+      "private": 36,
+      "source": 8,
+      "unittestMethods": 2,
+      "status": "PASS"
+    },
+    "originalPrivateBundleSHA256": "52fd3330c64c327cc5827be61ff4f9cda20dd1a5bede1d20c08ee4dd0a92fd28",
+    "privateBundleNestedVerification": "PASS_SOURCE_CONTEXT_ENGINEERING_IMAGE_CHAIN_NOT_LOADED",
+    "privateDerivedFilesVerified": 15838,
+    "privateOriginalOverlays": 9,
+    "preservedEngineeringHardlinks": 2037,
+    "privateDerivedFourCoreMocks": "PASS",
+    "independentReceiverShaSizeModeHardlinkCheck": "PASS",
+    "privateSourceMetadataAuthoringProofs": 3,
+    "allBaselineProductEntriesUnchanged": 8315,
+    "oldTagAndBundleUnchanged": true,
+    "AndroidSITLOrSDKStarted": false,
+    "initialVerifierFailure": "EXPORT_PUBLIC_MANIFEST_BINDING; diagnosed authoring provenance, retained failure receipt; narrow three-entry proof implemented",
+    "productBetaQualified": false
+  }
 }

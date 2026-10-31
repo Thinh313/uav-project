@@ -1,0 +1,9 @@
+/** One portable public-source/mock path. No install, SDK or runtime actor. */
+import{spawnSync}from'node:child_process';import{fileURLToPath}from'node:url';import path from'node:path';
+const cwd=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'../..');
+const python=spawnSync('python3',['--version'],{cwd,encoding:'utf8',timeout:10000,maxBuffer:4096});
+const git=args=>{const r=spawnSync('git',args,{cwd,encoding:'utf8',timeout:10000,maxBuffer:65536});return r.status===0?r.stdout.trim():null;};
+console.log(JSON.stringify({format:'uav-public-source-mock-intake',node:process.version,pythonVersion:python.status===0?python.stdout.trim():null,publicGitHEAD:git(['rev-parse','HEAD']),publicTagsAtHEAD:git(['tag','--points-at','HEAD'])?.split('\n').filter(Boolean)??[],upstreamPrivateSourceCommit:'6ea4f5027bc93d4f67e10da53c098391d9553f2f',upstreamCommitIsNotPublicGitHEAD:true,scope:'PUBLIC_SOURCE_AND_MOCK_ONLY_NO_RUNTIME_ADMISSION'}));
+const commands=[[process.execPath,['tools/handoff/verify.mjs']],[process.platform==='win32'?'npm.cmd':'npm',['run','check']],[process.execPath,['planning/vidlife12/runtime/tests/mock.mjs']],[process.execPath,['planning/vidlife12/runtime/tests/lifecycle-trace.mjs']],[process.execPath,['planning/vidlife12/runtime/tests/cold-navigation-r02.mjs']],['python3',['tools/handoff/mock_wait.py']]];
+for(const[exe,args]of commands){const r=spawnSync(exe,args,{cwd,stdio:'inherit',timeout:300000,maxBuffer:8*2**20});if(r.status!==0){console.log(JSON.stringify({status:'FAILED_SOURCE_OR_MOCK_CHECK',command:args.join(' '),exitCode:r.status,error:r.error?.code??null,betaOrFlightAccepted:false}));process.exit(1);}}
+console.log(JSON.stringify({status:'PASS_PUBLIC_SOURCE_AND_SIX_CHECKS',commands:commands.length,betaOrFlightAccepted:false,privateDerivedWorkspaceIsNotPublicSnapshot:true}));

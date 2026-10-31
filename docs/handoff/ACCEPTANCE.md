@@ -13,7 +13,8 @@ Anh đề nghị các em đánh dấu theo kết quả đã kiểm, không ký m
 
 ## Tiếp nhận artifact
 
-- Đã đối chiếu checksum của cả ba archive trước giải nén.
+- Đã pin SHA gói ngoài bằng kênh tin cậy, kiểm 24 thành phần và các manifest trước giải nén.
+- Đã tạo workspace private ngoài Git, giữ receipt và phân biệt 9 overlay gốc với public snapshot.
 - Đã kiểm manifest từng file và preserved hardlinks/modes trong engineering tar.
 - Đã xác định SDK/AVD, image architecture, AP executable, APK/certificate và profile.
 - Đã ghi rõ artifact/log nào chưa có; không tạo dữ liệu giả thay thế.

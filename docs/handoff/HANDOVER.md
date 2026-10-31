@@ -53,3 +53,11 @@ HIL, hiệu chuẩn và field qualification theo đúng cấu hình thực tế.
 PDF trình bày chi tiết nằm tại `output/pdf/UAV-PROJECT-HANDOVER.pdf`.
 README là lối vào nhanh; các file dưới `docs/handoff/` là tài liệu có thể chỉnh
 sửa; manifest và validation dưới `handoff/` dùng để kiểm máy.
+
+## Công cụ tiếp nhận r1
+
+Anh đã kiểm lại bằng một clone sạch từ GitHub và bổ sung đường bắt đầu một lệnh:
+`node tools/handoff/intake.mjs`. Các em đọc `INTAKE01.md` để thấy phần đã chạy,
+phần đã sửa và phạm vi chưa nghiệm thu. Gói private gốc vẫn nguyên byte ở mốc
+handoff ban đầu; dùng helper r1 từ clone public để kiểm và dựng workspace riêng,
+không ghép dữ liệu private vào clone sẽ push.

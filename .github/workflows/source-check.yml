@@ -14,9 +14,5 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - run: node tools/handoff/verify.mjs
-      - run: npm run check
-      - run: node planning/vidlife12/runtime/tests/mock.mjs
-      - run: node planning/vidlife12/runtime/tests/lifecycle-trace.mjs
-      - run: node planning/vidlife12/runtime/tests/cold-navigation-r02.mjs
-      - run: python3 tools/handoff/mock_wait.py
+      - run: node tools/handoff/intake.mjs
+      - run: python3 -m unittest discover -s tools/handoff/tests -v

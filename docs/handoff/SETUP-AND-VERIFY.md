@@ -42,20 +42,57 @@ Các công cụ và receipt phụ thuộc riêng host cũ không tự trở thà
 
 ## 4. Workspace riêng cho dữ liệu private
 
-Tạo một clone riêng trong thư mục làm việc lâu dài; không giải nén context vào
-working copy sẽ push public. Gỡ public remote trước khi nạp dữ liệu private:
+Giữ clone public ở tag intake r1. Dùng công cụ từ clone này để kiểm gói gốc
+rồi dựng một thư mục mới **ngoài mọi Git checkout**. Công cụ không cần package cài
+thêm, không load Docker image, không mở SDK/emulator hoặc cấp quyền operator.
+
+Nhận `UAV-PROJECT-PRIVATE-HANDOFF.tar` và SHA256 từ người giao qua kênh tin cậy.
+Một checksum ở ngay trong archive chỉ phát hiện hỏng, không xác thực người gửi.
+SHA gói gốc đã bàn giao:
+`52fd3330c64c327cc5827be61ff4f9cda20dd1a5bede1d20c08ee4dd0a92fd28`.
+Các tên/path bên dưới là ví dụ; thay `/path` và `/work` bằng nơi nhận thực tế:
 
 ```sh
-git clone https://github.com/nclamvn/uav-project.git uav-project-private-workspace
-cd uav-project-private-workspace
-git checkout research-handoff-2026-10-31
-git remote remove origin
+python3 tools/handoff/private_bundle.py verify \
+  /path/UAV-PROJECT-PRIVATE-HANDOFF.tar \
+  --sha-file /path/UAV-PROJECT-PRIVATE-HANDOFF.tar.sha256 \
+  --report /work/private-verify.json
+python3 tools/handoff/private_bundle.py prepare \
+  /path/UAV-PROJECT-PRIVATE-HANDOFF.tar \
+  --sha-file /path/UAV-PROJECT-PRIVATE-HANDOFF.tar.sha256 \
+  --destination /work/uav-project-private \
+  --report /work/private-prepare.json
 ```
 
-Kiểm SHA của archive theo `SHA256SUMS.txt`, kiểm danh sách bên trong rồi mới giải nén.
-Tar engineering giữ hardlinks/modes. ZIP hoặc thao tác copy phẳng có thể làm
-artifact union tăng và khiến guard 8 MiB từ chối, dù nội dung file có cùng SHA.
-Không ghi đè vào máy đang có writer/phiên runtime hoạt động.
+Report và destination phải chưa tồn tại, ngoài Git. `verify` kiểm toàn gói,
+manifest source, context, hardlink/mode engineering và chuỗi định danh image.
+`prepare` kiểm lại rồi mới admission theo allocation dương cộng floor 10 GiB và
+reserve 256 MiB. Khi bị từ chối, không bỏ guard hoặc tái dùng thư mục dở dang.
+Công cụ không ghi đè, tự xóa hay tiếp tục một preparation cũ.
+
+Gói gốc giữ source public ở commit `94c3ef8...`, không tự chứa công cụ intake r1.
+Hai README/Git-guide trước biên tập được chứng minh bằng file HISTORY tương ứng;
+`.gitignore` giữ đúng prefix gốc và phần append đã biết. Các khác biệt biên tập
+này được ghi riêng, không bỏ kiểm byte của source sản phẩm. Chín file public ẩn
+nhãn khách hàng được overlay về bản gốc; workspace kết quả là
+`PRIVATE_DERIVED_NOT_PUBLIC_SNAPSHOT`, không phải public tree nguyên byte.
+Manifest public nằm trong cây đó sẽ khác đúng các overlay đã khai báo. Các em
+chạy bốn mock core dưới đây từ workspace private, không dùng manifest public
+để chứng nhận cây đã overlay:
+
+```sh
+cd /work/uav-project-private
+node planning/vidlife12/runtime/tests/mock.mjs
+node planning/vidlife12/runtime/tests/lifecycle-trace.mjs
+node planning/vidlife12/runtime/tests/cold-navigation-r02.mjs
+python3 tools/handoff/mock_wait.py
+```
+
+Giữ `private-handoff-artifacts/PREPARATION-RECEIPT.json` cùng report bên ngoài.
+Kiểm hash, mode và hardlink đã được hoàn tất trước receipt. Không thêm remote public
+hoặc đẩy workspace này lên mạng. Kit chứa file readonly có chủ đích; tạo phiên R&D
+mới theo contract, không sửa raw/candidate cũ. SDK/AVD và launch profile trên máy
+nhận vẫn cần intake riêng trước chạy thật.
 
 Chỉ import image sau khi có đủ dung lượng và chấp thuận môi trường:
 
@@ -67,6 +104,18 @@ docker image inspect sha256:e27f0236daf88218a8a76a2c58c4c185e36fbc0c67e05d12ca5a
 Kiểm image ID, OS/architecture và executable SHA, không chỉ tag.
 Image này là Linux ARM64. Windows/Linux x86_64 hoặc Mac khác cấu hình cần một
 baseline build/SDK phù hợp, không thay binary âm thầm rồi giữ nhãn nghiệm thu cũ.
+
+## Baseline Android đã ghi nhận trên host gốc
+
+Spec cũ dùng API 33, system image `default/arm64-v8a` revision 2,
+Android Emulator 37.2.12 và platform-tools 37.0.1. AVD cấp 2 GiB RAM, 4 cores,
+không snapshot, tắt camera giả lập. Đây là cấu hình đã quan sát, không phải
+khuyến nghị cấu hình tối thiểu hoặc cam kết SDK manager còn cấp đúng revision.
+
+Spec trong kit giữ nguyên các đường dẫn tuyệt đối của máy tác giả. Nhóm cần lập
+spec/intake mới cho máy nhận và kiểm executable/image/config SHA; không sửa tay
+spec cũ hoặc đổi binary rồi coi lại là cùng evidence. Bản kiểm tiếp nhận này không
+cài SDK, không mở emulator và không kiểm controller thực.
 
 ## 5. Android và APK
 

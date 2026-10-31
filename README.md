@@ -25,17 +25,29 @@ phải được chứng minh theo từng workflow, không suy ra từ số modul
 ```sh
 git clone https://github.com/nclamvn/uav-project.git
 cd uav-project
-git checkout research-handoff-2026-10-31
+git checkout research-intake-2026-10-31-r1
 git switch -c research/my-work
 ```
 
+Tag gốc `research-handoff-2026-10-31` được giữ nguyên. Tag intake r1 bổ sung
+công cụ tiếp nhận và hướng dẫn; xem [biên bản INTAKE01](docs/handoff/INTAKE01.md).
 Tag là mốc source bất biến để trao đổi kết quả. Không coi một nhãn READY trong
 milestone lịch sử là nghiệm thu cho toàn bộ bản tích hợp hiện tại.
 
 ## Kiểm nhanh, không cần SDK, Android hay drone
 
-Cần **Node.js 22+** và **Python 3.12+** trên PATH. Không cần `npm install` cho
+Cần **Node.js 22+** và **Python 3.12+** trên PATH. Các lệnh đã được kiểm trên
+macOS và CI Linux. Với Windows, nên dùng WSL/Git có symlink thật; bản clone
+materialize symlink thành file văn bản không được xem là cùng cây source. Không cần `npm install` cho
 các lệnh dưới đây. Chạy từ root repo:
+
+Cách gọn, chạy tuần tự đúng sáu kiểm bên dưới và ghi public HEAD/version:
+
+```sh
+node tools/handoff/intake.mjs
+```
+
+Hoặc chạy từng lệnh để chẩn đoán:
 
 ```sh
 node tools/handoff/verify.mjs
@@ -49,6 +61,10 @@ python3 tools/handoff/mock_wait.py
 Đây là kiểm source/mock. Clock và telemetry của mock là dữ liệu kiểm tổng hợp,
 không phải chuyến bay, đo FPS hay bằng chứng hội tụ EKF trên thiết bị thật.
 Các suite gốc vẫn có trong source; đọc phạm vi và yêu cầu runtime trước khi chạy.
+Bộ kiểm công cụ tiếp nhận: `python3 -m unittest discover -s tools/handoff/tests -v`.
+
+Đã nhận gói private? Làm theo [kiểm và dựng workspace riêng](docs/handoff/SETUP-AND-VERIFY.md#4-workspace-riêng-cho-dữ-liệu-private).
+Không giải nén vào clone public hoặc dùng manifest public để kết luận cây đã overlay private giống nguyên bản.
 
 ## Xem workbench web lịch sử
 
@@ -71,7 +87,7 @@ liệt kê SHA, cổng, điều kiện admission và các giới hạn máy/ki�
 Lượt S01 đã xác nhận 9 ACK cadence và các mẫu telemetry sau ACK. Lượt này dừng
 trước video vì EKF chưa có vị trí ngang tuyệt đối. Bản R02 chỉ tăng thời gian chờ
 khởi tạo navigation 30 lên 60 giây host, đã qua mock nhưng **chưa chạy lại SITL**:
-dự toán artifact vượt trần 8 MiB đúng77.824B. Không bỏ guard để đổi trạng thái này.
+dự toán artifact vượt trần 8 MiB đúng 77.824 B. Không bỏ guard để đổi trạng thái này.
 
 ## Bản đồ repo
 
