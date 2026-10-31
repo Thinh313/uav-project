@@ -25,12 +25,12 @@ phải được chứng minh theo từng workflow, không suy ra từ số modul
 ```sh
 git clone https://github.com/nclamvn/uav-project.git
 cd uav-project
-git checkout research-intake-2026-10-31-r1
+git checkout research-runtime-2026-10-31-r2
 git switch -c research/my-work
 ```
 
 Tag gốc `research-handoff-2026-10-31` được giữ nguyên. Tag intake r1 bổ sung
-công cụ tiếp nhận và hướng dẫn; xem [biên bản INTAKE01](docs/handoff/INTAKE01.md).
+công cụ tiếp nhận và hướng dẫn; R2 thêm capsule runtime máy nhận và kết quả SITL; xem [biên bản INTAKE01](docs/handoff/INTAKE01.md).
 Tag là mốc source bất biến để trao đổi kết quả. Không coi một nhãn READY trong
 milestone lịch sử là nghiệm thu cho toàn bộ bản tích hợp hiện tại.
 
@@ -131,3 +131,10 @@ Giữ các giấy phép và attribution của thành phần bên thứ ba.
 Lịch sử README trước chuyển giao nằm tại
 [docs/HISTORY-README-2026-10-31.md](docs/HISTORY-README-2026-10-31.md).
 Các đường dẫn máy cũ và hướng dẫn cũ trong tài liệu đó chỉ là hồ sơ lịch sử.
+
+## Milestone runtime máy nhận R2
+
+Xem [hai bản phát triển/nghiên cứu và kết quả thực](docs/handoff/MILESTONE05.md),
+[capsule chuẩn bị runtime](handoff/receiver-runtime03/README.md) và
+[tin nhắn tiếp nhận](docs/handoff/MESSAGE-TO-TEAM.md). Android–SITL đã khởi động,
+đọc đủ 39/39 tham số, rồi dừng đúng guard ở EKF/navigation; chưa là beta đạt.

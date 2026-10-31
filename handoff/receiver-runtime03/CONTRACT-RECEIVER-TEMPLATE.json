@@ -1,0 +1,21 @@
+{
+  "format": "receiver-runtime03-contractor-contract",
+  "status": "TEMPLATE_NOT_ADMITTED",
+  "sourceWorkspace": "/ABSOLUTE/PATH/TO/PRIVATE-RECEIVER",
+  "managedRuntimeDestination": "/ABSOLUTE/PATH/TO/NEW-MANAGED-RUNTIME",
+  "selectedCandidate": "afe0878d1b98751f66c657c8eed6653d28d59778c46de012b2a16e8a8ef43395",
+  "scenario": "planning/vidlife12/runtime/scenario-app09.py",
+  "scenarioR02Substitution": false,
+  "runtimeCodeChanged": false,
+  "futureNewCampaignSlot": "s02",
+  "originalFailedS01RetainedAt": "/ABSOLUTE/PATH/TO/PRIVATE-RECEIVER/evidence/vidlife12/s01",
+  "historyR08Supplement": "/ABSOLUTE/PATH/TO/CAPSULE/reference/R08-avd-baseline.json",
+  "historyR08SHA256": "90d42c8165eec20365495d71bbff92857e4a8a443e3dc7bfd80114e148f81ce8",
+  "specEffectiveRuntimePath": "evidence/runtime-observe04/emulator-spec.json",
+  "copiedAVDOrSDK": false,
+  "signingOrBuild": false,
+  "guardPolicy": "EXACT_HELD_SOURCE_ALL_ORIGINAL_LIMITS",
+  "maxActualSlotsThisTask": 1,
+  "maxActualSeconds": 180,
+  "launchAuthority": "ORIGINAL_OWNER_ONLY_AFTER_ALL_GATES"
+}

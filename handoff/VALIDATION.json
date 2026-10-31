@@ -54,8 +54,8 @@
     "scope": "acceptance.test.mjs + geo14.test.mjs after explicit original synthetic fixture reconstruction; no claim that full387test suite passed"
   },
   "hostGeneratedExecutablesRetainedPrivately": 9,
-  "PDFPages": 16,
-  "PDFSHA256": "e0ff5bb6a1f0f8ae570172a30ca4edb01c687a4b33e508ba1bd2f57ba25a6c04",
+  "PDFPages": 18,
+  "PDFSHA256": "e6eca9c01b7eb1ecf1182dd605c375f4313e44d3f45df1851b707c0022f2021d",
   "broadHistoricalNpmTestAfterFixtureRepair": "NOT_RERUN_FULL_SUITE; affected27/27passed;40legacyfloorblockedcasesand1timingfailurefromfirstfullrunremainunresolved",
   "intake01": {
     "tag": "research-intake-2026-10-31-r1",
@@ -84,5 +84,23 @@
     "AndroidSITLOrSDKStarted": false,
     "initialVerifierFailure": "EXPORT_PUBLIC_MANIFEST_BINDING; diagnosed authoring provenance, retained failure receipt; narrow three-entry proof implemented",
     "productBetaQualified": false
+  },
+  "runtime05": {
+    "status": "ACTUAL_SHORT_FAILED_NAVIGATION_READINESS_NOT_ACCEPTED",
+    "AndroidSITLLaunched": true,
+    "plannedSeconds": 180,
+    "elapsedHostSeconds": 129.5707980409934,
+    "discoveryAndTypedParameters": "39/39",
+    "frameGroupsMatched": 37279,
+    "unknownSends": 0,
+    "fullRecording": "INCOMPLETE_RECORDING",
+    "EKFflags": 167,
+    "ARMAUTORCOrVideoAccepted": false,
+    "capsuleMockTests": 15,
+    "productCoreSourceChanged": false,
+    "oldTagsOrPackagesChanged": false,
+    "privateDevelopmentTrack": "nclamvn/aeris",
+    "publicResearchTag": "research-runtime-2026-10-31-r2",
+    "productBetaReady": false
   }
 }

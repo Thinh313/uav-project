@@ -1,0 +1,39 @@
+{
+  "format": "aeris-receiver-runtime05-public-summary",
+  "researchTag": "research-runtime-2026-10-31-r2",
+  "privateDevelopmentTag": "development-handoff-2026-10-31-r2",
+  "sourceBase": "6ea4f5027bc93d4f67e10da53c098391d9553f2f",
+  "runtimeCodeOrCandidateChanged": false,
+  "productionSigning": false,
+  "metadataArtifactDiskAdmission": "PASS",
+  "runtimeRuns": 1,
+  "plannedSeconds": 180,
+  "ownerHostElapsedSeconds": 129.5707980409934,
+  "AndroidAndSITLStarted": true,
+  "typedParametersRead": 39,
+  "typedParametersRequired": 39,
+  "primaryFailure": "PUBLIC_UI_WAIT_DISARMED_READ_ONLY_NAVIGATION_READINESS",
+  "EKFFlags": 167,
+  "EKFSamples": 93,
+  "batteryMilliVRange": [
+    25149,
+    25151
+  ],
+  "frameGroupsMatched": 37279,
+  "unknownSends": 0,
+  "recording": "INCOMPLETE_RECORDING",
+  "ARM_AUTO_RC_VIDEOAccepted": false,
+  "encodedOrPublishedFrames": 0,
+  "ownerSecondaryErrors": [],
+  "ownedProcessesClosed": true,
+  "sourceCandidateENDUREAndGuardsPreserved": true,
+  "betaReady": false,
+  "sameAuthorHostNotSecondPhysicalMachine": true,
+  "rawEvidencePrivate": true,
+  "evidenceDigests": {
+    "COMPLETION-RECEIVER-RUNTIME05.json": "39d2218d291a045869f40cc46a89090d51c1d51561200284af5251d203d39a7c",
+    "COLD-REVIEW01.json": "ffd55ba3ed9e7001e8873c8590b667c3d344622c9347a3e12116c855ea530a7c",
+    "CLOSURE-PRESERVATION01.json": "dad6b6ad6f1bdb78b16057d111b1d5f56ca33965c5ac68cf358054e9586b76bf",
+    "CLOSED-CASE-BASELINE01.json": "04112e840cb2abbcbc69feeac5f35c3bcc5895ab00db8ed7245a4f5d3c11236f"
+  }
+}

@@ -81,3 +81,15 @@ runtime/test-executions/
 
 !/evidence/handoff09/
 !/evidence/handoff09/completed.aeris-handoff.json
+
+# Receiver capsule machine-specific outputs stay outside Git (defense in depth).
+/handoff/receiver-runtime03/CONTRACT.json
+/handoff/receiver-runtime03/CONTRACT.local*.json
+/handoff/receiver-runtime03/PROFILE*.json
+/handoff/receiver-runtime03/PLAN*.json
+/handoff/receiver-runtime03/PREPARED*.json
+/handoff/receiver-runtime03/CHECK*.json
+/handoff/receiver-runtime03/ADMISSION*.json
+/handoff/receiver-runtime03/*.log
+/handoff/receiver-runtime03/local/
+/handoff/receiver-runtime03/reports/

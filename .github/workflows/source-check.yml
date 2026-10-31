@@ -16,3 +16,4 @@ jobs:
           python-version: '3.12'
       - run: node tools/handoff/intake.mjs
       - run: python3 -m unittest discover -s tools/handoff/tests -v
+      - run: python3 -B -m unittest discover -s handoff/receiver-runtime03/tests -v
