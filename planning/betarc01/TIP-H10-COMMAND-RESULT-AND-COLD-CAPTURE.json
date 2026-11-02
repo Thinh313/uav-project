@@ -1,0 +1,33 @@
+{
+  "allNumericGuardsUnchanged": true,
+  "artifactMiB": 20,
+  "evidence": {
+    "actualCompanionREADY": true,
+    "actualNativeRollover": true,
+    "coldFinalNativeTAR": "MISSING",
+    "failureAction": "SEAL_PRODUCT",
+    "fullResultExactByteCount": "NOT_RETAINED_DO_NOT_INVENT",
+    "primaryOwner": "PRODUCT_WRITER_UNEXPECTED_CLIENT_EOF",
+    "rootClosedBaseline": "evidence/betarc01/G105-CLOSED-BASELINE01.json.gz",
+    "slot": "g105",
+    "sourceCause": "Full COMMAND_COMPLETE includes complete seal; report4KiB refused after host seal suboperations had side effects"
+  },
+  "format": "aeris-contractor-tip",
+  "hostNs": 33514008216625,
+  "metadataMiB": 100,
+  "nextAfterCapture": "Rootindependentlyjoins fullcurrentprivate with originalG103 and G105bothpublicclosedgenerations/workspace. No archival/reset/retry until verified. Then sourceheld freshqualification/G1route as needed.",
+  "requirements": [
+    "newisolatedruntime-h10 preservesH9/H8/H7/candidates/raw bytes, nooldsourcewrite",
+    "generic fullcommandresult durability: existingowner/quota bounded artifact written before smallprogress ACK, referencebound run/epoch/candidate/sequence/action/SHA/bytes; Rootchecks and reconstructs exactdata, nevertruncates fields",
+    "retain progress4KiB,16commands,1MiBprogressfile,existingwriter64KiB request/200ms/100ms/freshness250/native/export/all20-100caps and owner14future60686336; ifusingseparate resultfile allowedmax must fit existing writerpayload/domain or finite4KiBchunks, no hiddencapraise",
+    "one result transport used by ALLactualG1/G2/G3/G4 companioncallers, notjustSEALspecialcase; preserveactualargv selectionloaderH9",
+    "refusals: malformedref/path/symlink/crosscase/candidate/command/SHA/size/truncated/pending/duplicate; no automatic resubmit unknown action",
+    "actualNodefunction+Rootreadermock large seal over4KiB preservesallfields/bytes/control<=4096; failure beforedurable ACK neverclaimscommandnotexecuted",
+    "finite readonly coldcapture entry freshslot (choose unused) pinned source/closed budget BEFOREcapture, exactsameAPK UID/root/noActivity,noinstall/APPLY/admin/archive/flight; currentG105state cannot pass old initial75-file8archive decoder",
+    "readonlycapture disposition explicitly FORENSIC_NOT_QUALIFICATION_NOT_G1, successfulcompleteoriginalTAR+ref beforesemanticvalidation; no inventedprivate-conservation/pending0/normalflight claims; genuine SDKclosure must be captured, do not fake pass fromintentionalexception",
+    "do not implement unsafe automatic resume/archive. Root+QA need freshcapture todesign exactchanged-state conservation anchor; retainG10375-file baseline +G105firstfulltar/public6requests/coldlastcommands67originals",
+    "sourceHOLD/maps/mock thenQA before Rootfreeze and single forensiccapture. No runtimeactor byBuilder"
+  ],
+  "status": "L2_AUTHORIZED_RC_BUGFIX_NOT_G1_ACCEPTANCE",
+  "task": "Separate control progress from complete command results; preserve G105 changed native state and enable finite read-only coldcapture"
+}

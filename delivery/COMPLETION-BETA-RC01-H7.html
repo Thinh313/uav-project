@@ -1,0 +1,52 @@
+<!doctype html><html lang="vi"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>BETA-RC01 H7</title><style>body{max-width:960px;margin:48px auto;padding:0 24px;font:16px/1.65 system-ui;color:#181818;background:#fff}pre{white-space:pre-wrap;font:inherit}a{color:inherit}</style><pre># BETA-RC01: H7 source hoàn tất, runtime chưa được admission
+
+**Trạng thái: NOT READY.** G1–G4 chưa được nghiệm thu; chưa có chuyến bay Android–SITL của milestone này và chưa chạy lượt tích hợp 600 giây.
+
+## Kết quả đã chứng minh
+
+- Hai lượt H5 thực tế m401/m402 khởi động SDK lạnh độc lập, đọc đúng APK/private data và đóng bình thường. Đây là kiểm lifecycle SDK, chưa phải kiểm hành trình ứng dụng hay bay.
+- G103 đã gửi APPLY đúng một lần. Ứng dụng trả ACK nhưng host từ chối thao tác đọc receipt do thiếu capability trong allowlist. Không gửi lại APPLY. Log gốc và ca lỗi được giữ.
+- M501 thu được archive gốc đầy đủ (225.280 byte). Bộ đọc strict cũ từ chối metadata GNU longname; ca thực tế vẫn FAIL.
+- H7 chọn rõ profile chỉ đọc SAFE_GNU_LONGNAME_L_V1: hỗ trợ metadata tên dài, vẫn chặn symlink, hardlink, PAX, traversal, dữ liệu thừa và cấu trúc sai; không giải nén ra ổ đĩa, không sinh archive thay thế trong runtime. Replay byte gốc M501 đối chiếu được 8 journal đã lưu trữ và receipt tương ứng; không đổi kết luận runtime M501.
+- Root chạy lại 13 phương thức mock/replay tập trung, gồm đường SDK/domain thực, Python/Node dùng chung corpus sai định dạng và fault injection atomic writer: PASS. QA độc lập source PASS, không có P1 source còn mở trong phạm vi đã đọc. Các số kiểm không phải chứng nhận chất lượng toàn sản phẩm.
+- H7 gồm 137 file source được chọn, 197 product pins; contract 254 writer sites, 14 owner, dự phòng ghi tương lai 60.686.336 byte. Không đổi producer, sáu tên export, quota native/export hay guard thời gian.
+
+## Admission và điểm dừng
+
+Quyền hiện có: artifact 13 MiB, metadata 68 MiB. Forecast freeze thuần đọc tính đủ 11 pool cũ:
+
+| Khoản | Dự toán | Trần | Kết quả |
+|---|---:|---:|---|
+| Artifact sau freeze H7 | 13.684.736 B | 13.631.488 B | Thiếu 53.248 B (52 KiB) |
+| Metadata hiện có + dự phòng tại preview12 | 71.655.424 B | 71.303.168 B | Thiếu 352.256 B (344 KiB) |
+
+Metadata tiếp tục tính thêm báo cáo/receipt cuối theo allocator. Hai số trên là snapshot có receipt, không phải giới hạn mới được cấp. Nguồn AC đã quan sát, disk preview đạt cho lượt ngắn; nguồn/disk phải kiểm mới trước launch. Không tạo candidate H7, không tạo slot m601/m602/g104 và không mở actor để vượt guard.
+
+Đề xuất cấp một lần headroom tổng của phần campaign còn lại: artifact 16 MiB, metadata 96 MiB. So với snapshot trên, dư khoảng 2,95 MiB artifact và 27,66 MiB metadata. Đây là đề xuất ngân sách tổng để giữ lịch sử và bằng chứng các cổng tiếp theo, không tăng trần từng owner, không cam kết mọi lượt tương lai sẽ fit. Trước mỗi lượt vẫn phải tính đúng và từ chối nếu vượt. Chưa có quyền thay hai trần này.
+
+## Toàn vẹn và sự cố được giữ lại
+
+Root kiểm 10.158 đường dẫn từ baseline đầu vào và 12 lượt đã đóng: không thiếu, không sai SHA/size/mode, không xung đột. Hai checkout bàn giao public giữ nguyên HEAD và sạch. Cổng 5582/5583 đóng tại thời điểm kiểm. Kiểm này chứng minh hiện trạng, không chứng minh mọi đường dẫn tồn tại liên tục.
+
+Trong chuẩn bị H7, helper ghi qua hardlink đã tạm đổi hai generated asset của working H6. Đã giữ byte lỗi, tách inode H7 và phục hồi H6 đúng byte/mode/inode/device; candidate H6 đóng băng và raw không đổi. Thời điểm bắt đầu/kết thúc lỗi chính xác chưa được lưu. Không khẳng định SHA source liên tục nguyên vẹn. Atomic copy-on-write chỉ cho hai asset được thêm cùng ca hardlink/fsync-failure để ngăn tái diễn. Hồ sơ sự cố và kiểm phục hồi độc lập được lưu; không viết lại lịch sử ENDURE.
+
+## Thứ tự tiếp theo sau khi được cấp ngân sách
+
+1. Ghi quyền mới và cập nhật riêng policy tổng trong bản cô lập; Builder/QA/mock rồi forecast freeze lại.
+2. Khi source/nguồn/disk/admission đạt: tạo candidate mới, kiểm hai SDK cold boot m601/m602 cùng candidate, đối chiếu raw/receipt và đóng sạch.
+3. Tiếp tục G1 ở g104 bằng đọc trạng thái đã lưu trữ, không lặp APPLY/install; sau đó G2 polygon/corridor, G3 mất link/AP reboot/native restart và SAF/persistence.
+4. Chỉ sau các cổng thực tế đạt mới chạy G4 600 giây bay tích hợp liên tục cùng video/mock payload. Không cộng các lượt gián đoạn hoặc lấy thời gian idle thay thời gian bay.
+
+## Evidence chính
+
+- `evidence/betarc01/qa/ROOT-H7-COUPLED-MOCK28.json.gz`
+- `evidence/betarc01/qa/INDEPENDENT-H7-READONLY-HOLD01-REVIEW.json`
+- `evidence/betarc01/ROOT-H7-CANDIDATE-SOURCE-QA-GATE09.json`
+- `evidence/betarc01/ROOT-H7-PURE-ALLOCATION11.json.gz`
+- `evidence/betarc01/ROOT-H7-READONLY-ADMISSION12.json.gz`
+- `evidence/betarc01/qa/ROOT-H7-FINAL-PRESERVATION29.json`
+- `planning/betarc01/runtime-h7/GENERATED-ASSET-RESTORATION-INCIDENT01.json.gz`
+- `evidence/betarc01/qa/ROOT-H6-RESTORATION-INCIDENT27.json`
+
+Không build/ký APK mới, không ký production, không sửa hai bản bàn giao, không commit/push. Prototype paired-view đã bỏ khỏi runtime; source thử được giữ trong archive nhỏ H7-PAIRED-SPIKE01.tar.gz. Fixture tạm của các kiểm tự dọn trong repo, không tạo bản sao project ngoài repo.
+</pre></html>

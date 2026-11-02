@@ -1,0 +1,36 @@
+{
+  "authorizationRef": "evidence/betarc01/AUTHORIZATION-CAPS03.json",
+  "authorizationSHA256": "7fc88c9fe888966411e10bb4042c0324d862928a1819dbf9edd0902b4854b639",
+  "format": "aeris-contractor-tip",
+  "guardsUnchanged": {
+    "HostHealthMs": 100,
+    "allOtherGuards": true,
+    "catchupCapMs": 500,
+    "diskFloorGiB": 10,
+    "freshnessMs": 250,
+    "inputLeaseMs": 200,
+    "ownerEnvelopeFutureBytes": 60686336,
+    "speedup": 1,
+    "writerMs": 200
+  },
+  "ownerFutureBytesUnchanged": 60686336,
+  "required": [
+    "full heldsource map, product graph map, external/root entrypins",
+    "oldH7 source SHA/mode/inode/device before+after, no write-through hardlinks",
+    "new immutable HOLD, tests, no source edits afterHOLD"
+  ],
+  "roles": {
+    "Builder": "production changes/mock only",
+    "QA": "source/adversarial review only",
+    "Root": "independent verification, freeze, actual single-use actors"
+  },
+  "scope": [
+    "derive runtime-h8 from held H7, preserve all old source, raw, candidates and H7 HOLD",
+    "change only authorized aggregate artifact13to20 and metadata68to100 incl contracts, guard labels, resource assets, fresh disk budgets +39MiB",
+    "same H7 functional paths/sdk slotsm601,m602/G1g104 with selected H8 source identities bound; do not resend APPLY or reinstall",
+    "regenerate selected closure and writer pins only via atomic COW helper",
+    "mock cap boundaries and resource delta; existing 13 focused methods without weakening old H7 tests",
+    "no actors/freeze/APK signing by Builder"
+  ],
+  "task": "H8 caps03 isolated reuse H7 safe readonly native TAR profile"
+}

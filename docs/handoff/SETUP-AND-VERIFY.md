@@ -1,163 +1,57 @@
-# Tiếp nhận, chạy và kiểm lại
+# Cài đặt và kiểm lại bản bàn giao H10
 
-## 1. Source/mock không cần hardware
+## 1. Chốt đúng snapshot
 
-Dùng Node.js 22+ và Python 3.12+ trên PATH. Các lệnh ở README không cài package,
-không mở Android, không kết nối autopilot và không cấp quyền operator.
+Clone tag `research-handoff-2026-11-02-h10` theo README. Ghi commit thực nhận bằng `git rev-parse HEAD`, tạo branch nghiên cứu riêng và giữ source manifest. Không lấy source mới nhất của nhiều revision ghép thành một candidate.
 
-`tools/handoff/verify.mjs` đối chiếu SHA256 của cây bàn giao, bao gồm symlink tương đối.
-Sau khi chủ động sửa source, manifest phải thay theo review; mismatch không được bỏ qua.
+Cấu hình tác giả đã kiểm là macOS ARM64, Node 24.14.1, CPython 3.14.6. Đường public H10 dùng Node 24 và Python hiện có, không cần package install, Android hay drone. Chỉ ghi kết quả của phiên bản thực sự chạy trên máy nhận; không suy ra mọi Node/Python/OS đều được hỗ trợ.
 
-Bốn suite mock tách biệt được chạy trên bản source public: base 36 checks,
-lifecycle 18 checks, health 4 checks và portable wait 3 cases. Không cộng các suite
-thành tỷ lệ trưởng thành; một số yêu cầu được kiểm lại ở nhiều lớp.
+Windows nên dùng WSL/Git có symlink thật. Một clone chuyển symlink thành file văn bản không được coi là cùng cây source. Không dùng runtime APK/image ARM64 trên nền khác rồi giữ nguyên nhãn nghiệm thu.
 
-`npm run check` kiểm cú pháp workbench gốc. `npm test` là bộ lịch sử rộng hơn,
-có ca tạo fixture/localhost server, có điều kiện dung lượng và timing. Lượt đầu
-trên host bàn giao ghi 331/387 pass, 56 fail: thiếu fixture synthetic ở 15 ca,
-40 ca bị guard free-space cũ chặn và 1 ca timing chưa ổn định. Fixture đã được bổ sung
-đúng byte và có lệnh `node tools/handoff/prepare_legacy_fixture.mjs` để tái dựng
-record synthetic trong runtime bị ignore; các ca bị ảnh hưởng được kiểm riêng lại. Lượt kiểm riêng acceptance/geo14 sau bổ sung đạt 27/27; không công bố toàn suite xanh.
-Log đầy đủ được chuyển trong gói private, kết quả cuối nằm tại `handoff/VALIDATION.json`.
+## 2. Verify và mock public
 
-## 2. Workbench lịch sử
+Chạy `node tools/handoff/verify.mjs` từ root để kiểm danh sách SHA/kind. Manifest chỉ chứng minh các entry được liệt kê, không kiểm mọi file lạ. `npm run check` kiểm cú pháp workbench lịch sử, không chạy toàn bộ sản phẩm.
 
-`npm start` dùng loopback 8788, `AERIS_ENABLE_SITL` không bật mặc định.
-Đây là đường cũ để đọc UI/workflow. Không lấy hình ảnh workbench này thay cho
-cockpit Android mới nhất hoặc một lần kiểm simulator thành công.
+Chạy `python3 -B tools/handoff/h10_intake.py` để kiểm H10 portable. Wrapper chọn 13 phương thức kiểm từ source hiện tại; dùng Node 24+ và Python 3.12+, đã kiểm với Node24.14.1/Python3.14.6. Path adaptation chỉ cho test và fixture media synthetic/derived thay input private g105 được khai báo rõ. Nó kiểm codec, Root reconstruction, Node-Python writer IPC/fsync, managed close và biên cap20/100MiB; không mở Android/SITL, không cấp quyền hoặc tạo flight acceptance. Các kiểm gốc trong `planning/betarc01/runtime-h10/test-*.py` vẫn giữ source đã HOLD nhưng có dependency private và đường dẫn tác giả; không chạy mù toàn bộ rồi tạo file giả cho đủ pin.
 
-## 3. Bộ engineering private
+`node tools/handoff/intake.mjs` và bộ receiver-runtime03 là lối tiếp nhận lịch sử của VIDLIFE12/R2. Chúng vẫn dùng để xem lại phạm vi cũ, không tự chọn H10, không áp trần H10 cho một candidate cũ và không là một lệnh chạy Android-SITL mới nhất.
 
-Các em nhận riêng ba phần, kèm manifest và checksum:
+## 3. Nhận bộ riêng
 
-- `PRIVATE-CONTEXT.zip`: BOM/context nội bộ, tài liệu khách hàng, raw web inputs,
-  các bản gốc trước ẩn danh và một số artifact host-specific. Không đưa lên Git public.
-- `ENGINEERING-REPLAY-KIT.tar.gz`: evidence các lượt chẩn đoán gần nhất,
-  candidate pools, APK development/input archive và AP executables được giữ lại.
-- `SITL-LINUX-ARM64-IMAGE.tar.gz`: Docker image Linux ARM64 đã dùng,
-  image ID `sha256:e27f0236daf88218a8a76a2c58c4c185e36fbc0c67e05d12ca5af9292f442f84`.
+Nhận gói và checksum qua kênh tin cậy, giữ ngoài mọi clone dùng để push public:
 
-Không có Android SDK/AVD, toàn bộ runtime cache hoặc mọi raw log lịch sử.
-Các công cụ và receipt phụ thuộc riêng host cũ không tự trở thành hợp lệ trên máy mới.
+- Gói gốc `UAV-PROJECT-PRIVATE-HANDOFF.tar`, SHA bắt đầu `52fd3330`, giữ nguyên byte ở mốc ban đầu.
+- Supplement MILESTONE05 đã kê khai, dùng khi nghiên cứu đường runtime máy nhận R2.
+- `UAV-PROJECT-H10-SUPPLEMENT-2026-11-02.tar.gz` cùng `.manifest.json` và `.sha256`, bổ sung source/raw/artifact đã kê khai của H10.
 
-## 4. Workspace riêng cho dữ liệu private
+Checksum nằm trong archive không tự xác thực người gửi. Kiểm toàn gói và manifest trước giải nén, dùng đích mới ngoài Git, không ghi đè hoặc tự tiếp tục một preparation dở dang. Công cụ `python3 tools/handoff/verify_h10_supplement.py --help` mô tả cách nhận các tham số `--archive`, `--sha256` và `--manifest`. Đây là kiểm stream chỉ đọc, không giải nén. SHA kỳ vọng phải nhận từ kênh tin cậy, không lấy digest trong chính archive làm thẩm quyền. Công cụ của supplement phải đọc manifest của đúng mốc; helper gói gốc không chứng nhận supplement mới.
 
-Giữ clone public ở tag intake r1. Dùng công cụ từ clone này để kiểm gói gốc
-rồi dựng một thư mục mới **ngoài mọi Git checkout**. Công cụ không cần package cài
-thêm, không load Docker image, không mở SDK/emulator hoặc cấp quyền operator.
+Gói gốc có context/BOM/overlay private, engineering replay kit và image đã kê khai. Supplement mới không nhân bản SDK/AVD/cache hoặc Docker image. Đối chiếu đầy đủ danh mục phần đã có và phần thiếu; “toàn vẹn” là các byte/phạm vi được kê khai, không phải bản sao toàn ổ đĩa.
 
-Nhận `UAV-PROJECT-PRIVATE-HANDOFF.tar` và SHA256 từ người giao qua kênh tin cậy.
-Một checksum ở ngay trong archive chỉ phát hiện hỏng, không xác thực người gửi.
-SHA gói gốc đã bàn giao:
-`52fd3330c64c327cc5827be61ff4f9cda20dd1a5bede1d20c08ee4dd0a92fd28`.
-Các tên/path bên dưới là ví dụ; thay `/path` và `/work` bằng nơi nhận thực tế:
+## 4. Replay và provenance
 
-```sh
-python3 tools/handoff/private_bundle.py verify \
-  /path/UAV-PROJECT-PRIVATE-HANDOFF.tar \
-  --sha-file /path/UAV-PROJECT-PRIVATE-HANDOFF.tar.sha256 \
-  --report /work/private-verify.json
-python3 tools/handoff/private_bundle.py prepare \
-  /path/UAV-PROJECT-PRIVATE-HANDOFF.tar \
-  --sha-file /path/UAV-PROJECT-PRIVATE-HANDOFF.tar.sha256 \
-  --destination /work/uav-project-private \
-  --report /work/private-prepare.json
-```
+Giữ raw và candidate nguyên byte. Đường dẫn tuyệt đối trong log/spec là dữ liệu máy tác giả; không thực thi argv hay sửa trực tiếp các file đó để vừa máy mới. Nếu tạo view/path map phục vụ replay, công bố nó là bản suy ra chỉ đọc và giữ SHA nguồn.
 
-Report và destination phải chưa tồn tại, ngoài Git. `verify` kiểm toàn gói,
-manifest source, context, hardlink/mode engineering và chuỗi định danh image.
-`prepare` kiểm lại rồi mới admission theo allocation dương cộng floor 10 GiB và
-reserve 256 MiB. Khi bị từ chối, không bỏ guard hoặc tái dùng thư mục dở dang.
-Công cụ không ghi đè, tự xóa hay tiếp tục một preparation cũ.
+m801 forensic-only không cấp quyền resume/archive hoặc qualification. Root/QA đã đối chiếu current data, nhưng một người nhận mới cần tái lập phạm vi byte/replay bằng công cụ và nguyên bản được giao. Không dùng decoder 75 file cho trạng thái 83 file và không gửi lại g103 APPLY.
 
-Gói gốc giữ source public ở commit `94c3ef8...`, không tự chứa công cụ intake r1.
-Hai README/Git-guide trước biên tập được chứng minh bằng file HISTORY tương ứng;
-`.gitignore` giữ đúng prefix gốc và phần append đã biết. Các khác biệt biên tập
-này được ghi riêng, không bỏ kiểm byte của source sản phẩm. Chín file public ẩn
-nhãn khách hàng được overlay về bản gốc; workspace kết quả là
-`PRIVATE_DERIVED_NOT_PUBLIC_SNAPSHOT`, không phải public tree nguyên byte.
-Manifest public nằm trong cây đó sẽ khác đúng các overlay đã khai báo. Các em
-chạy bốn mock core dưới đây từ workspace private, không dùng manifest public
-để chứng nhận cây đã overlay:
+## 5. Môi trường Android-SITL
 
-```sh
-cd /work/uav-project-private
-node planning/vidlife12/runtime/tests/mock.mjs
-node planning/vidlife12/runtime/tests/lifecycle-trace.mjs
-node planning/vidlife12/runtime/tests/cold-navigation-r02.mjs
-python3 tools/handoff/mock_wait.py
-```
+Baseline đã ghi nhận gồm Android API 33/default/arm64-v8a rev2, emulator 37.2.12, platform-tools 37.0.1, AVD 2 GiB RAM/4 cores, không snapshot. Android SDK/system image/AVD userdata không được cung cấp trong Git hoặc supplement H10. Đó là cấu hình quan sát, chưa là cấu hình tối thiểu hay cam kết vendor còn phân phối đúng revision.
 
-Giữ `private-handoff-artifacts/PREPARATION-RECEIPT.json` cùng report bên ngoài.
-Kiểm hash, mode và hardlink đã được hoàn tất trước receipt. Không thêm remote public
-hoặc đẩy workspace này lên mạng. Kit chứa file readonly có chủ đích; tạo phiên R&D
-mới theo contract, không sửa raw/candidate cũ. SDK/AVD và launch profile trên máy
-nhận vẫn cần intake riêng trước chạy thật.
+APK development được giữ có SHA đầy đủ trong MILESTONE06-H10. Nó không phải signature production. Kiểm package, activity, certificate, Android/WebView/codec/input và serial thực. Quyền `adb root` của emulator cũ không là quyền áp lên điện thoại hoặc HeraHub thật.
 
-Chỉ import image sau khi có đủ dung lượng và chấp thuận môi trường:
+Image Linux ARM64, AP executable, source/candidate, profile và descriptor phải đúng các hash đã kê khai. Không tự cài phần thiếu hoặc thay binary trong pin. Các port 8895/8896 là loopback media/companion của profile, không phải một cấu hình mạng phổ quát cho mọi thiết bị.
 
-```sh
-gzip -dc /path/SITL-LINUX-ARM64-IMAGE.tar.gz | docker load
-docker image inspect sha256:e27f0236daf88218a8a76a2c58c4c185e36fbc0c67e05d12ca5af9292f442f84
-```
+## 6. Admission mới trước lượt thực
 
-Kiểm image ID, OS/architecture và executable SHA, không chỉ tag.
-Image này là Linux ARM64. Windows/Linux x86_64 hoặc Mac khác cấu hình cần một
-baseline build/SDK phù hợp, không thay binary âm thầm rồi giữ nhãn nghiệm thu cũ.
+Mock -> source/fixture closure -> pure resource preview -> current native-state contract -> live admission -> lượt ngắn -> review raw -> mới xét 600 giây. Trước launch kiểm nguồn pin/AC, sàn 10 GiB cộng reserve/forecast, cap artifact20/metadata100 MiB, quota native/export, source/image/SDK/pin, cổng/PID và shutdown reserve.
 
-## Baseline Android đã ghi nhận trên host gốc
+Trên host cũ, entry pin 30% và dừng 20% là guard đang giữ; máy nhận phải dùng policy đã được review và quan sát nguồn thật. Trần MiB không phải ngưỡng free-space GiB. Một số service lịch sử có cap/floor khác và vẫn giữ policy riêng.
 
-Spec cũ dùng API 33, system image `default/arm64-v8a` revision 2,
-Android Emulator 37.2.12 và platform-tools 37.0.1. AVD cấp 2 GiB RAM, 4 cores,
-không snapshot, tắt camera giả lập. Đây là cấu hình đã quan sát, không phải
-khuyến nghị cấu hình tối thiểu hoặc cam kết SDK manager còn cấp đúng revision.
+Không tự clear/wipe app, reset counter/quota, xóa lock, retry POST hoặc khôi phục authority. Nếu thiếu prerequisite hoặc admission từ chối, ghi NOT CHECKED/NOT READY và lý do, giữ các kết quả đã có.
 
-Spec trong kit giữ nguyên các đường dẫn tuyệt đối của máy tác giả. Nhóm cần lập
-spec/intake mới cho máy nhận và kiểm executable/image/config SHA; không sửa tay
-spec cũ hoặc đổi binary rồi coi lại là cùng evidence. Bản kiểm tiếp nhận này không
-cài SDK, không mở emulator và không kiểm controller thực.
+## 7. Hồ sơ sau mỗi lượt
 
-## 5. Android và APK
+Lưu argv, stdout/stderr, host/AP elapsed và clock domain, boot/session/frame, input/quyền, raw TX/RX, readback/mode, media proof, closure và SAF receiver. Tách primary cause với cleanup secondary. Xác nhận actor thuộc lượt đã dừng; không dọn phiên của người khác.
 
-Package retained là `vn.rtr.aeris.betasim09`, activity
-`vn.rtr.aeris.mission.ProductActivity`. APK SHA256:
-`8bc0a7c612c010f77e3e8c66fa6126d1d6992821eafa4f88c31a598bc188b1e1`.
-Đây là APK development, không phải production signature.
-
-Đầu tiên kiểm Android version, WebView, codec, màn hình/input và ADB serial.
-Chỉ định serial rõ khi install hoặc reverse cổng. Khi companion đã được khởi tạo
-đúng profile, Android cần đường loopback 8896 và media 8895 qua adapter đã kiểm.
-Một thao tác `adb install` thành công chỉ chứng minh cài được, không chứng minh
-navigation, video, persistence hay tương thích HeraHub.
-
-Đối với điện thoại thật, chưa có kết quả nghiệm thu Xiaomi trong snapshot này.
-Không dùng quyền `adb root` đã cấp riêng emulator cũ làm quyền áp lên thiết bị thật.
-SDK/MCU/radio, payload/gimbal và thermal còn gate bench riêng.
-
-## 6. Admission và lượt thực
-
-Dùng descriptor/spec/candidate cùng revision và chạy kiểm chỉ đọc trước.
-Quy trình hiện tại: mock -> pure allocation/admission -> lượt Android-SITL ngắn
--> review raw -> mới xét lượt 10 phút. R02 chưa qua bước allocation vì vượt 76 KiB.
-
-Giữ floor 10 GiB cộng reserve/forecast và ngân sách case thực. Một số service
-lịch sử có floor 20 GiB riêng; không diễn giải policy mới là quyền sửa hằng số
-cũ. Cần AC/battery/lid, cổng rảnh, native lifetime counters, writer/owner,
-source/SDK/image pins và shutdown reserve đúng profile. Không tự clear app,
-xóa lock, reset quota hoặc retry POST để vượt admission.
-
-## 7. Kiểm sau mỗi lượt
-
-Lưu argv, stdout/stderr, boot/session/frame, request/ACK, timing domains và SHA
-artifact. Đối chiếu raw TX/RX, accepted frame groups, mission readback/mode,
-video source/receiver/warm proof và closure. Đọc lại SAF ở receiver độc lập.
-
-Khi lỗi, giữ primary cause trước cleanup và ghi secondary errors riêng.
-Kiểm PID/port/container sở hữu đã dừng, ghi nguồn có được đóng đủ hay incomplete.
-Không báo PASS chỉ vì hết thời gian, có ACK, screenshot hoặc tên file acceptance.
-
-## 8. Khi thiếu prerequisite
-
-Ghi `NOT_CHECKED` hoặc `NOT_READY`, giữ kết quả đã có và nêu đúng phần chặn.
-Không suy ra máy mới có lỗi giống máy cũ chỉ từ một timeout. Baseline raw và
-thiết bị/SDK khác nhau phải được ghi vào báo cáo; ưu tiên ca nhỏ phân biệt nguyên nhân.
+Không báo PASS chỉ từ elapsed time, một ACK, ảnh chụp giao diện hay tên file acceptance. Các em nhận source để bắt đầu R&D ngay; phần Android-SITL, hardware bench/HIL và bay thật vẫn có gate riêng.

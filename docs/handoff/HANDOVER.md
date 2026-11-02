@@ -1,63 +1,19 @@
-# Anh gửi các em: tiếp nhận AERIS / UAV Project
+# Anh gửi các em: bản bàn giao H10
 
-Anh gửi các em bản source và bộ hồ sơ ở đúng trạng thái nghiên cứu hiện tại.
-Mục tiêu là để các em hiểu hệ thống, tái lập phần đã có chứng cứ, rồi tiếp tục
-hoàn thiện một sản phẩm điều khiển UAV cao cấp. Anh muốn các em giữ hai việc
-song song: phát triển nhanh, và biết chắc điều mình đang báo cáo đã được kiểm đến đâu.
+Anh gửi các em mã nguồn AERIS ở mốc H10 ngày 02/11/2026 để tiếp nhận và tiếp tục nghiên cứu. Anh giữ bản phát triển riêng tại repo private `nclamvn/aeris`; các em làm việc tại repo public `nclamvn/uav-project`. Hai repo có lịch sử độc lập và các tag cũ được giữ nguyên.
 
-Bản này có nhiều năng lực và nhiều revision thử nghiệm, nhưng beta tích hợp vẫn
-chưa đạt. Các em không cần bảo vệ những lựa chọn cũ chỉ vì đã tốn công; hãy sửa
-đúng pipeline và vòng đời nhiệm vụ khi có bằng chứng. Đừng đổi guard, bỏ frame
-hay lấy UI đẹp để thay cho một hành trình vận hành đầy đủ.
+Mốc các em nhận là `research-handoff-2026-11-02-h10`. Bản gốc tương ứng dùng tag `development-handoff-2026-11-02-h10`. Đây là bàn giao nghiên cứu, **beta tích hợp NOT READY**. Anh không muốn các em hiểu một bộ mock xanh là một bản cài đã đủ điều kiện vận hành drone thật.
 
-## Các em bắt đầu như sau
+## Điều anh muốn nhóm làm được ngay
 
-1. Clone repo public theo tag bàn giao, chạy verify source và bộ mock ở README.
-2. Đọc `STATUS.md` và `ARCHITECTURE.md`, vẽ lại được ba đường web, native/control
-   và media. Chỉ rõ nguồn nào là mock, replay, SITL và nguồn nào chưa có thiết bị thật.
-3. Nhận gói private từ anh, kiểm checksum trước khi giải nén. Giữ BOM và tài liệu
-   khách hàng ngoài working copy public. Không gửi nguyên raw/log lên issue public.
-4. Chọn một cấu hình máy để tái lập; ghi Node/Python/SDK/WebView/image/AP/profile.
-   Không thay cấu hình rồi dùng lại kết luận của máy cũ.
-5. Khi mock đã đạt và admission cho phép, kiểm một lượt thực ngắn. Chưa đạt
-   video-measure hoặc closure thì ghi đúng NOT READY và giữ primary evidence.
+Các em clone đúng tag, kiểm manifest, chạy đường mock public được nêu trong README và ghi môi trường thực tế. Sau đó đọc trạng thái H10, phân biệt source/mock, replay, SDK/emulator thực và bay SITL. Bộ private nhận riêng giúp đọc lại raw và artifact; nó không thay việc intake máy nhận.
 
-## Việc ưu tiên đầu tiên
+Nhóm ưu tiên một hành trình sản phẩm: lập nhiệm vụ -> preflight -> Fly cùng video/payload -> mất link/reboot -> review -> SAF/receiver. Trước mắt phải nối lại đúng trạng thái dữ liệu sau g105. Không dùng lại decoder 75 file khi native đã có 83 file và lifetime generation 10.
 
-Anh đề nghị nhóm tập trung một hành trình duy nhất: khảo sát -> preflight -> Fly
-manual/assisted/AUTO cùng payload/video -> mất link/reboot -> review -> SAF/receiver.
-Mỗi lần chạy phải giữ source, APK, profile và artifact rõ ràng. Mốc beta simulator
-là cùng một release đi hết hành trình, chạy 10 phút không can thiệp, không mất frame,
-không phục hồi quyền ngầm và có receiver kiểm lại bằng chứng.
+## Cách anh muốn các em phát triển
 
-Điểm chặn hiện tại không phải thiếu một nút UI. Cadence đã được chứng minh,
-nhưng navigation/EKF cold-start và video-measure chưa đi hết. R02 đã qua mock;
-ngân sách artifact phải được quyết định minh bạch trước lượt mới. Các em đọc
-raw trước, tránh tiếp tục một chuỗi vá chỉ dựa vào lỗi timeout sau cùng.
+Giữ một cấu hình source/APK/profile có định danh rõ. Khi lỗi, đọc raw và kiểm giả thuyết bằng ca nhỏ trước khi sửa. Với lỗi lặp lại, sửa ranh giới pipeline và vòng đời thay vì chỉ tăng timeout. Không bỏ frame, reset counter, xóa evidence hay đổi guard để đạt một nhãn PASS.
 
-## Cách anh muốn nhận báo cáo
+Anh muốn nhận báo cáo ngắn theo kết quả: tag/commit nào, máy nào, lệnh nào, phần pass/fail/chưa chạy, raw và SHA ở đâu, điều gì đã chứng minh và điều gì còn là giả thuyết. Một kết quả NOT READY có bằng chứng vẫn hữu ích; một chữ DONE thiếu bằng chứng thì không.
 
-Các em gửi một kết quả theo outcome: source/tag nào, máy/profile nào, lệnh nào,
-ca nào pass/fail/chưa chạy, raw và SHA ở đâu, nguyên nhân nào đã chứng minh,
-nguyên nhân nào mới là giả thuyết, và bước nhỏ tiếp theo sẽ phân biệt điều gì.
-Một báo cáo tốt có thể ghi NOT READY. Một báo cáo thiếu bằng chứng không được
-đổi thành DONE bằng cách cộng số test xanh hoặc số tính năng đã có trong code.
-
-Anh mong các em tiếp nhận chủ động. Phần nào đơn giản hóa được thì đề xuất
-thẳng; phần liên quan quyền, dữ liệu, an toàn, ngân sách hay phát hành thì chốt
-contract trước. Trước khi đưa lên tay cầm và bay thật, nhóm còn cần bench,
-HIL, hiệu chuẩn và field qualification theo đúng cấu hình thực tế.
-
-## Hồ sơ đi kèm
-
-PDF trình bày chi tiết nằm tại `output/pdf/UAV-PROJECT-HANDOVER.pdf`.
-README là lối vào nhanh; các file dưới `docs/handoff/` là tài liệu có thể chỉnh
-sửa; manifest và validation dưới `handoff/` dùng để kiểm máy.
-
-## Công cụ tiếp nhận r1
-
-Anh đã kiểm lại bằng một clone sạch từ GitHub và bổ sung đường bắt đầu một lệnh:
-`node tools/handoff/intake.mjs`. Các em đọc `INTAKE01.md` để thấy phần đã chạy,
-phần đã sửa và phạm vi chưa nghiệm thu. Gói private gốc vẫn nguyên byte ở mốc
-handoff ban đầu; dùng helper r1 từ clone public để kiểm và dựng workspace riêng,
-không ghép dữ liệu private vào clone sẽ push.
+BOM, tài liệu khách hàng, khóa và raw không đưa vào issue/PR public. Bản gốc của dữ liệu riêng được giữ trong gói kiểm soát truy cập. Các em chủ động đề xuất đơn giản hóa, nhưng chốt thay đổi về quyền, dữ liệu, an toàn, ngân sách hoặc phát hành trước khi áp dụng.

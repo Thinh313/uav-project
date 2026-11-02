@@ -1,0 +1,37 @@
+{
+  "format": "aeris-contractor-h6-debug-tip",
+  "version": 1,
+  "status": "DESIGN_AUTHORIZED_SOURCE_ONLY_ACTORS_REQUIRE_QA_AND_ADMISSION",
+  "hostNs": 9966901928875,
+  "cause": "G103 source AndroidDomain17 permits APPLY broadcast but omitted its own following receipt cat. Rejected before receipt-read dispatch; APPLY was already sent.",
+  "observed": "Original nonce ACK claims durable committed; current receipt and cold registry have not been independently read. SDKclosed0 butexceptionalG1failure. No Activity/AP.",
+  "requiredOutcome": "Reconcile one possibly committed admin operation from actual cold bytes, fix exact receipt read capability, then resume G1 without resending APPLY. Preserve original failedG103.",
+  "scope": "One small new selected H6 variant, exact H5/candidate/ENDURE preserved; m501 and m502 new finite180s SDK-only cold boots + normal close; g104 native-only resumed gate after Rootverifiedenrolledstate. No reinstall/no PREVIEW/no APPLY in recovery.",
+  "proofRules": [
+    "Read actual APK/PM/UID/boot and full current private TAR",
+    "Join stored original receipt nonce/path/size/SHA to G103 externally captured ACK/plan/receiver/prebackup",
+    "Use existing full archive/index verifier and byte-conservation for all eight old originals and workspace; unknown refuses",
+    "m502 fresh kernel, same candidate and cold table after m501 managed close; no fake pristine70table",
+    "Root source-bound pair proof before native Activity; genuine pending state must be measured",
+    "New admin read capability exact just-qualified ACK, one shot, bounded4096, finallyclear; failure never auto-resends mutation"
+  ],
+  "budget": {
+    "artifactMiB": 13,
+    "metadataMiB": 68,
+    "all11Pools": true,
+    "futureEnvelopeBytes": 60686336,
+    "owners": 14
+  },
+  "guardsUnchanged": {
+    "freshnessMs": 250,
+    "HostHealthMs": 100,
+    "writerMs": 200,
+    "diskFloorGiB": 10,
+    "inputLeaseMs": 200,
+    "speedup": 1,
+    "catchupCapMs": 500
+  },
+  "noFlightAcceptance": true,
+  "productionSigning": false,
+  "sourceAuthority": "Original full BETA-RC01 implementation request and explicit authorized13/68caps; routine source repair/reconciliation within that scope."
+}

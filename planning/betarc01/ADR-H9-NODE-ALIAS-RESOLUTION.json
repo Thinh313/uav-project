@@ -1,0 +1,27 @@
+{
+  "budget": "same authorized20MiB artifact/100MiB metadata,14owners/60686336future, all timing/native/export/disk guards unchanged",
+  "decision": "One selected manifest alias semantics for graph discovery and actual Node module resolve/load, all companionlaunches bind explicitly selected loader",
+  "format": "aeris-architecture-decision",
+  "hostNs": 32542854756958,
+  "qualityFloor": [
+    "only exact manifest-declared logical\u2192heldtarget mapping",
+    "no fallback retries",
+    "postresolve finaltargetsourceSHA/no symlink/reporoot mandatory",
+    "all old evidence and failedG104 retained",
+    "new source requires fresh actual qualification beforeG1; never repeatAPPLY"
+  ],
+  "scope": "engineering mock/SITL only, no new APK build/sign/production/realhardware",
+  "simplerAlternativeRejected": {
+    "NODE_OPTIONS": "Implicit external preload avoided; child argv must show selected loader",
+    "addOldColdToPins": "Would resolve old strict parser behind explicitly selected GNUprofile; hides incompatible selection, not accepted",
+    "disableSourceChecks": "Violates source-integrity contract"
+  },
+  "status": "L2_AUTHORIZED_BUGFIX_WITHIN_RC_SCOPE",
+  "trigger": "Original G104 actual loader refused unaliased native-cold17 path before Activity; H8 SDK actual two boots normal",
+  "verification": [
+    "actual Node loader transitive imports before actors",
+    "wrong target/hash/missing alias/unheld import refused",
+    "Root+independentQA then frozenload",
+    "m701,m702 cold SDK then g105 nativeonly; original gated actual mission afterG1"
+  ]
+}

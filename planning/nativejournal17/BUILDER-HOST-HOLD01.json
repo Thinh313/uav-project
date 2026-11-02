@@ -1,0 +1,45 @@
+{
+  "format": "aeris-native17-host-helper-source-hold",
+  "version": 1,
+  "status": "SOURCE_AND_MOCK_READY_NOT_ANDROID_ACCEPTANCE",
+  "sourcePins": {
+    "planning/nativejournal17/receiver17.py": "7849b9d0f235fbca0177c59861df4217ba75e0179077260a2d7a5936be206c6c",
+    "planning/nativejournal17/archive_verifier17.py": "2fa9ff1faa05a276d0d9651c073c8c1001b5d10f75e33bfc5f3804065f6cc7e8",
+    "planning/nativejournal17/native-cold17.mjs": "ac039cf750d668364dc4380fd5fa2b1922078fe6a77e1f8b75fc7ed1bcc05ee2",
+    "planning/nativejournal17/native-unused17.mjs": "28957936b3445208ffd0df600a08e8d7676fa84b78a789727fb0b1528f19a859",
+    "planning/nativejournal17/native-tar17.mjs": "c575566498b561134f734b9911a24a0ed9b5b66cd05820634e3fb4a78402805f",
+    "planning/nativejournal17/scenario-native17.py": "d2c54f839f2472bf435538c160fdebb7038116946d87992868b9979e2c9b7275",
+    "planning/nativejournal17/verify-signatures17.mjs": "a586e15e0e9b212b3223fb920caa2770cfb79552689a739cac8651596cfb0308"
+  },
+  "nativeSourceHoldSHA256": "81e2a99702c03779310e2bd938962842e518e0976855586b80cf59af98ca999f",
+  "nativeSourceSHA256": "c4e122d55248d59d2d606046557bfc47e3c58911da5f8bd314f8c1a7ae987af1",
+  "testReferences": {
+    "planning/nativejournal17/qa/host-mocks08.stdout.txt": "9e4341a9866df90325382c7f586150ee91d6ed8b87554cec3f519e81bc1cf1cf",
+    "planning/nativejournal17/qa/host-mocks08.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "planning/nativejournal17/qa/unused-helper04.stdout.txt": "92e81b4d07845ba445a16ecc5944053d68ca923ac02fe90aad048061be56a555",
+    "planning/nativejournal17/qa/unused-helper04.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "planning/nativejournal17/qa/mirror-independent04.stdout.txt": "9910ebbaabe98d1ac16dcdda4383f93f60f7ea86ee17d452bff0af1469a2b33d",
+    "planning/nativejournal17/qa/mirror-independent04.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "coupledMock": {
+    "coreFaultCutpoints": 72,
+    "coreAssertions": 1229,
+    "receiverCases": 10,
+    "archiveCases": 17,
+    "scope": "HOST_FILESYSTEM_AND_SYNTHETIC_MODELS_NOT_ANDROID"
+  },
+  "additionalMocks": {
+    "unusedSyntheticRootReferenceCases": 10,
+    "independentMirrorCases": 6
+  },
+  "independentMirrorReviewRef": "evidence/nativejournal17/qa/REGISTRY-MIRROR-INDEPENDENT-REVIEW01.json",
+  "independentMirrorReviewSHA256": "e30682b3e08ee8061841d53344b1ecb71656bc6eb86945d1719ac7f8ba3faef8",
+  "scope": "INITIAL_8_UNUSED_ARCHIVE_THEN_2_ORIGINAL_ZERO_RECORD_CLOSED_PRODUCERS",
+  "archivedUsedHistoricalCryptoAcceptance": "REFUSED_UNTIL_RAW_ORIGINAL_STATUS_P256_API_VERIFIED",
+  "requiresIndependentOriginalADBReplayBeforeAcceptance": true,
+  "actualAndroidAcceptance": false,
+  "flightAcceptance": false,
+  "authorityRestorable": false,
+  "temporaryClassesAndFixturesRemoved": true,
+  "sourceCandidateAndEndureModified": false
+}

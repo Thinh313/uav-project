@@ -1,0 +1,16 @@
+{
+  "decision": "close_native_only beginswriter intentionalclosure AFTER all fullsource/nativecold/crypto proofsverified and BEFORE stoppingownedcompanion, usingexistingclose_case ordering.",
+  "discovery": "RealNodeProductWriterClient over actualPython ProductWriter mockwire completedwrites then unexpectedEOF at normalclose; native-only path lacksbegin_close alreadypresent in normalclose_case.",
+  "format": "aeris-architecture-decision",
+  "historicalG105CauseUnchanged": "SEAL_PRODUCT result>4KiB progress, thenfailedcompanionEOF; thisnewlatentcloseorder defect notprovenasG105primary.",
+  "hostNs": 33981813790458,
+  "numericGuardsUnchanged": true,
+  "status": "L2_APPROVED_WITHIN_RC_LIFECYCLE_FIX",
+  "strictness": [
+    "keepEOFfailurestrict beforeintentionalclosing",
+    "no queued/uncommitteddata disappears",
+    "denynewmutations afterbegin_close",
+    "writer.close muststillproveactualdrain/failure",
+    "no frame/input countdiscount orauthorityrestore"
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "format": "aeris-native17-selected-runtime-isolation",
+  "baseCandidateSHA256": "9e01e2dc55f4c1545388204674b236bb1babf1a6da97fcbc57d383ffaac0190c",
+  "selectedSourceFiles": 120,
+  "wholeProjectCopied": false,
+  "independentWritableSourceInodes": true,
+  "oldFilesChanged": false,
+  "sourceOnlyNoActors": true
+}

@@ -1,0 +1,14 @@
+/** Full generic management results stay in existing reports quota. Control ACK
+ * is small and is never emitted until all original writer commits have returned. */
+import{createHash}from'node:crypto';
+const ACTIONS=new Set(['NATIVE_READY','NATIVE_ROLLOVER','SEAL_PRODUCT','VERIFY_NATIVE_INPUTS','VERIFY_NATIVE_UNUSED17','PREPARE_RAW_EXPORT','STATUS']),hash=b=>createHash('sha256').update(b).digest('hex'),need=(v,n)=>{if(!v)throw Error('COMMAND_RESULT_H10_'+n);};
+function jsonValue(v,stack=new Set(),depth=0){need(depth<=64,'JSON_DEPTH');if(v===null||typeof v==='boolean'||typeof v==='string')return;if(typeof v==='number'){need(Number.isFinite(v),'JSON_NUMBER');return;}need(v&&typeof v==='object'&&!stack.has(v)&&(Array.isArray(v)||Object.getPrototypeOf(v)===Object.prototype||Object.getPrototypeOf(v)===null),'LOSSLESS_JSON_VALUE');stack.add(v);if(Array.isArray(v)){for(let i=0;i<v.length;i++){need(Object.hasOwn(v,i),'NO_ARRAY_HOLES');jsonValue(v[i],stack,depth+1);}}else for(const k of Object.keys(v)){const d=Object.getOwnPropertyDescriptor(v,k);need(d&&Object.hasOwn(d,'value'),'NO_GETTER');jsonValue(d.value,stack,depth+1);}stack.delete(v);}
+export async function completeCommandResult({writer,report,descriptor,ownerPID,companionPID,sequence,action,result}){
+ try{
+  const context=descriptor.runtimeContext;need(context&&context.run===descriptor.context.run&&typeof descriptor.candidateSHA256==='string'&&/^[a-f0-9]{64}$/.test(descriptor.candidateSHA256)&&Number.isSafeInteger(ownerPID)&&ownerPID>0&&Number.isSafeInteger(companionPID)&&companionPID>0&&Number.isInteger(sequence)&&sequence>=1&&sequence<=16&&ACTIONS.has(action),'BINDING');jsonValue(result);
+  const envelope={format:'aeris-command-result-h10',version:1,context,run:context.run,candidateSHA256:descriptor.candidateSHA256,ownerPID,companionPID,sequence,action,result,authorityRestorable:false,flightAcceptance:false},bytes=Buffer.from(JSON.stringify(envelope)+'\n');need(bytes.length>0&&bytes.length<=2**20,'EXISTING_REPORT_FILE1MiB');
+  const name='reports/command-result-'+String(sequence).padStart(2,'0')+'-'+action+'.json',relative='sessions/'+context.run+'/product/'+name;let last=null;
+  for(let offset=0;offset<bytes.length;offset+=65536){const part=bytes.subarray(offset,Math.min(bytes.length,offset+65536));last=await writer.write(name,part,{append:offset>0});need(last&&last.path===relative&&last.offset===offset&&last.bytes===part.length&&last.sha256===hash(part)&&Number.isSafeInteger(last.writeSequence)&&last.writeSequence>0,'ORIGINAL_DURABLE_CHUNK_REF');}
+  const resultRef={format:'aeris-command-result-original-ref',version:1,path:relative,bytes:bytes.length,sha256:hash(bytes),finalWriteRef:last};await report('COMMAND_COMPLETE',{sequence,action,resultRef});return resultRef;
+ }catch(e){throw Error('COMMAND_RESULT_H10_DURABILITY_UNPROVEN_ACTION_MAY_HAVE_EXECUTED:'+String(e.message??e).slice(0,256),{cause:e});}
+}

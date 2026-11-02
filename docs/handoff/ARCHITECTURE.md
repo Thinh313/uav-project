@@ -1,63 +1,31 @@
-# Bản đồ kiến trúc và trách nhiệm
+# Kiến trúc và ranh giới H10
 
-## Ba đường không được trộn
+## Đường vận hành
 
-1. **Workbench web lịch sử**: `npm start`, loopback 8788, planner/Plan-Fly-Review.
-2. **Đường native tích hợp hiện tại**: Android WebView/Java bridge, Node companion
-   trên 8896, RootWire MAVLink, ArduPilot SITL và physics backend.
-3. **Viewer/nguồn media**: publisher trên 8895, canvas/WebCodecs, qualified receiver
-   và review. Nguồn tổng hợp không phải camera gắn trên UAV.
+Android cockpit/Java-WebView bridge nối Node companion trên loopback 8896. Companion phối hợp mission, payload/operator và hồ sơ; Root quản lý runtime, transport và writer. ArduPilot SITL cùng physics/sensor backend là đường mô phỏng bay. Host publisher trên 8895 tạo media tổng hợp để Android giải mã/hiển thị và lưu bằng chứng.
 
-```text
-Android cockpit / native bridge
-          | public UI + lifecycle + storage
-          v
-Node companion (8896) ---- payload/operator authority
-          | RootWire, durable intent, actual RX
-          v
-MAVLink routing ---- ArduPilot SITL 4.7.1 ---- physics/sensor backend
-                                                |
-                                      qualified scene/clock
-                                                v
-Host publisher (8895) ---- decoder/warm-frame proof ---- Android viewer
-          |
-     journal / review / export / independent receiver
-```
+Workbench web `npm start` trên 8788 là đường lịch sử. Nó không tự chọn cockpit Android/candidate H10, không là bằng chứng một lần bay thành công. ACK, mission readback, mode transition, camera command và ảnh gốc là các loại bằng chứng riêng.
 
-Trong lượt kiểm này, TCP native/direct thuộc Node RootWire. APK thực hiện UI,
-HTTP bridge, input và lưu trữ; không suy ra APK đã có driver radio/MCU thực.
-MAVLink ACK, mission readback, mode transition và ảnh camera là các bằng chứng khác nhau.
+## Source được chọn
 
-## Entry hiện tại
+`planning/betarc01/runtime-h10/source/aeris_runtime/` có 140 file source được chọn. Product graph có 198 pin; writer contract có 257 sites, 14 owner và dự phòng 60.686.336 B. Candidate H10 và APK giữ trong gói private; file tên mới nhất không tự là release được chọn.
 
-- `planning/vidlife12/runtime/root-owner-vidlife12.py`: owner cho candidate S01.
-- `scenario-app09.py`: driver public Android UI, wait navigation 30 giây của S01.
-- `root-owner-vidlife12-r02.py`, `scenario-app09-r02.py`: revision thử tiếp,
-  wait navigation 60 giây; chưa có candidate/lượt SITL R02 được chấp nhận.
-- `runtime/source/aeris_runtime/`: package 117 file của source hiện tại.
-- `product/`, `product-companion-codec09.mjs`, `root-wire-media09c.mjs`:
-  client/server lifecycle, media và routing.
-- `assets/product-input-closure.json`: 154 input pins; mã/asset và fixture cần đúng byte.
-- `assets/pipeline-writer-pins.json`: 200 writer sites, 14 owners,
-  future reserve 60.686.336 B; không thêm writer ngoài contract.
+Loader H9 giải logical import theo alias đã khai báo, rồi kiểm target path/SHA/symlink và graph. H10 dùng đường chọn này trước spawn và giữ argv thực. Không đưa module cũ không được chọn vào graph để lách lỗi compatibility.
 
-## Guard và clock
+## Control và kết quả đầy đủ
 
-Freshness clock/input/scene 250 ms; HostHealth 100 ms; UI/lease 200 ms;
-client lifecycle deadline 1000 ms; flight freshness 1500 ms; hard heartbeat 3000 ms.
-Speedup 1, catch-up cap 500 ms; fsync trước sensor/TX, không bỏ frame để đạt pacing.
-Wait startup 60 giây là ngân sách chờ khởi tạo, không kéo dài tuổi hợp lệ của telemetry.
+Progress/ACK vẫn tối đa 4 KiB và 16 management command. Kết quả đầy đủ được lưu dưới một JSON envelope có run, runtimeContext, candidate, PID, sequence và action. Mỗi payload ghi tối đa 64 KiB, tối đa 16 đoạn; file và tổng owner vẫn chịu quota cũ. Root kiểm đúng byte, SHA, path/context và commit cuối trước khi đọc kết quả.
 
-Node hrtime, Python monotonic, Android elapsed time và browser performance không
-được so trực tiếp. Cần context/session/boot/frame và clock mapping đã đủ điều kiện.
-Wall time, AP boot time và elapsed của test phải được báo riêng.
+Một action có thể đã có tác động trước khi ACK lỗi. Thiếu ACK không đồng nghĩa chưa thực thi. Không tự gửi lại lệnh không biết kết quả; giữ prefix và raw để kiểm. H10 không cắt dữ liệu hay tăng progress cap.
 
-## Vòng đời quyền và hồ sơ
+## Đóng và khôi phục
 
-Cấp quyền cần nguồn/session đúng, input tươi và review/preflight hợp lệ. Mất link,
-background, reboot hoặc quyền hết hạn phải thu hồi, không tự khôi phục quyền sau restart.
-Khôi phục workspace và đọc hồ sơ cũ không cấp lại flight/payload authority.
+Hai luồng đóng bình thường dùng chung boundary: kiểm writer/observer, ngừng admission ghi mới, chờ RPC đã nhận hoàn tất reply và trace theo deadline first-byte + 200 ms gốc, sau đó dừng companion. Kiểm lại lỗi và thread drain sau đóng. Không gia hạn deadline bằng một mốc 200 ms mới, không đợi client idle như RPC và không dùng trạng thái đang đóng để che lỗi cũ. Emergency disposal giữ riêng.
 
-Journal cần causal intent, durability, TX/sensor boundary, closure và receiver
-verification. Raw prefix có CRC/SHA đúng vẫn có thể incomplete; không chèn footer
-để biến prefix thành một recording được nghiệm thu.
+Khôi phục workspace/hồ sơ không khôi phục flight hoặc payload authority. Mất link, background, reboot hay input stale phải thu hồi quyền. Một raw prefix có CRC/SHA đúng vẫn có thể incomplete; không chèn footer để biến nó thành hồ sơ hoàn tất.
+
+## Clock và môi trường
+
+Freshness 250 ms, HostHealth 100 ms, writer/RPC 200 ms, input lease 200 ms; speedup 1, cap bù nhịp 500 ms. Không bỏ frame, đổi clock hoặc đổi speedup để đạt pacing. Node hrtime, Python monotonic, Android elapsed và browser performance cần mapping đã kiểm; không so trực tiếp các số từ hai domain.
+
+Artifact tổng 20 MiB và metadata tổng 100 MiB chỉ áp dụng bản cô lập H10 theo quyền đã cấp. Sàn đĩa vẫn 10 GiB cộng reserve/forecast, không phải hạ toàn bộ service lịch sử. Native/export quota và 14 owner giữ nguyên. Source/mock không thay live admission, native-state proof, SDK/image/AVD intake hay gate phần cứng.

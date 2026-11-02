@@ -1,0 +1,96 @@
+# BETA-RC01 · CAPS03 / H10
+
+Ngày 02/11/2026. **Cấu hình ngân sách đã áp dụng; Beta vẫn NOT READY.** G1, G2, G3, G4 chưa được nghiệm thu. Chưa chạy nhiệm vụ Android–SITL hoặc lượt bay tích hợp 600 giây trong đợt này.
+
+## Kết quả cho người dùng
+
+Quyền nâng trần đã được thực thi trên bản runtime cô lập, giữ đầy đủ lịch sử và 11 pool artifact. Có thêm bằng chứng khởi động Android thực, hai lỗi pipeline được sửa bằng kiểm tại đúng ranh giới Node/Python, và trạng thái native sau ca lỗi được thu lại nguyên vẹn để tiếp tục an toàn.
+
+| Khoản | Quyền trước | Quyền hiện tại | Đã kiểm |
+|---|---:|---:|---|
+| Artifact tổng | 13 MiB | 20 MiB | 14.528.512 B, đạt |
+| Metadata tổng | 68 MiB | 100 MiB | 12.951.552 B hiện có + 60.686.336 B dự phòng, đạt |
+| Dự phòng đĩa tương ứng | Theo caps cũ | Tăng 39 MiB | Cập nhật đủ peak/required-free từng case và campaign |
+
+Snapshot resource cuối: metadata còn dư 31.219.712 B trước các báo cáo cuối; disk preview lượt ngắn đạt. Đây là kiểm tài nguyên, không phải quyền bỏ qua G1 hay launch G2. Guard nguồn, sàn đĩa 10 GiB và dự toán thực tế vẫn kiểm mới ở mỗi lượt. Trần artifact/metadata là MiB, không phải ngưỡng dung lượng đĩa trống.
+
+Freshness 250 ms, HostHealth 100 ms, writer/RPC 200 ms, input lease 200 ms, speedup 1, bù nhịp 500 ms, quota native/export và 14 owner với dự phòng 60.686.336 B giữ nguyên. Không bỏ frame, sửa số đếm hay cộng các interval ENDURE.
+
+## Các lượt thực tế và ý nghĩa bằng chứng
+
+| Lượt | Kết quả | Giới hạn kết luận |
+|---|---|---|
+| H8 m601/m602 | Hai SDK cold boot, đọc đúng APK/private data, SDK đóng bình thường; QA độc lập đạt | Qualification SDK của H8, chưa phải G1 hay bay |
+| H8 g104 | FAIL trước Activity: Node loader không phân giải alias giống graph source | Giữ nguyên ca lỗi, không gửi lại APPLY |
+| H9 m701/m702 | Hai SDK cold boot và private-state persistence đạt, đóng bình thường | Qualification SDK của H9 |
+| H9 g105 | Companion READY, NATIVE_READY, rollover và hai STATUS đóng/rỗng đã được đối chiếu. FAIL tại SEAL_PRODUCT do toàn bộ COMMAND_COMPLETE vượt progress 4 KiB | G105 vẫn FAIL. Không có bản TAR cuối trong ca g105; không suy ra thao tác seal chưa xảy ra |
+| H10 m801 | Thu raw 250.880 B đầy đủ, SDK đóng bình thường, QA raw/closure đạt | Forensic only, không phải SDK qualification, G1 hay bay |
+
+Không lặp lại lệnh APPLY của g103, không install lại APK, không archive hay reset journal trong các lượt trên. Không gửi lệnh AP/ARM/flight; chưa mở ArduPilot/SITL trong đợt này.
+
+## Pipeline đã thay đổi
+
+**H9: graph và Node dùng cùng alias đã pin.** Loader thực phân giải logical import tới đúng module được chọn, kiểm SHA, đường dẫn, symlink và graph. Có kiểm import Node thực với server và các alias; companion g105 đã đạt READY qua chính loader này. Không thêm bộ đọc strict cũ phía sau profile GNU hay bỏ kiểm source.
+
+**H10: tách kết quả đầy đủ khỏi progress.** Tất cả management action lưu JSON envelope đầy đủ, gắn run/runtimeContext/candidate/PID/sequence/action, trước khi phát ACK nhỏ. Dùng domain file báo cáo 1 MiB và owner aggregate cũ; mỗi lần ghi tối đa 64 KiB, tối đa 16 đoạn. Root kiểm byte/SHA/ngữ cảnh/commit cuối rồi khôi phục nguyên kết quả. Progress vẫn tối đa 4 KiB, tối đa 16 command. Không truncate, bỏ trường hay tự gửi lại action khi ACK không xác nhận được. Prefix được giữ khi lỗi. Kết quả SEAL_PRODUCT quá lớn của g105 không được lưu đủ tại thời điểm lỗi, nên không khẳng định độ dài hay nội dung chính xác của kết quả cũ.
+
+**H10: đóng bình thường dùng một boundary chung.** Cả native-only và luồng nhiệm vụ kiểm sức khỏe writer/observer, đóng admission ghi mới, chờ đúng RPC đã nhận hoàn tất reply và trace theo deadline first-byte + 200 ms gốc, rồi mới dừng companion. Kiểm lại lỗi và thread drain sau đóng. Không chờ client idle như một RPC; không reset deadline; emergency disposal giữ riêng. Lỗi thứ tự đóng này được phát hiện trong kiểm wire thật, được ghi riêng với lỗi progress4KiB của g105.
+
+Root chạy lại **34 phương thức kiểm tập trung đạt**. QA độc lập chạy 13 phương thức tập trung và kiểm source/closure. Đây là các kiểm có chồng lặp, không cộng thành 47 tình huống sản phẩm. Có actual Node ProductWriterClient → Python ProductWriter Unix RPC/fsync → Root reader với metadata budget mock, payload hơn 64 KiB qua hai đoạn kết quả và một ACK. Có ép ACK đã ghi nhưng response còn pending, quá deadline, EOF trước đóng, lỗi writer/observer, tham chiếu sai/thiếu/trùng và partial commit. Các kiểm này không thay nghiệm thu Android–SITL.
+
+H10 gồm 140 source được chọn, 198 product pins, 257 writer sites và 14 owner. Candidate hiện tại:
+
+`5e3c5d69967e415867848208f76e8a9a5b5877a24f36497d2b825d3e64159810`
+
+APK development cũ được giữ đúng byte; không build/ký APK mới hoặc ký production.
+
+## Đối chiếu dữ liệu m801
+
+Raw gốc: `evidence/betarc01/m801/sessions/beta-rc01-forensic-capture01/native-restart-metadata.tar`.
+
+SHA-256: `3e08bb8f8c23296c5ef6f6f576523b5b293f9d857478c3463cf1fdcfe7adfceb`.
+
+Root và QA độc lập xác nhận 83 file/9 thư mục so với baseline 75/9: thêm đúng hai AJ02 và sáu STATUS DTO của g105. Các file STATUS khớp đúng byte với sáu snapshot gốc. Chỉ registry cũ thay đổi bằng append; các file cũ khác, mode/UID/GID và workspace được giữ.
+
+Registry có 12 dòng hash-chain, lifetime generation 10, record 0, archive/request/receipt mỗi loại 1 và không pending. Hai journal mới đang lưu trực tiếp nhưng đã CLOSED/UNUSED, mỗi file 23 B, sequence 0, khớp STATUS g105; tám journal trước vẫn trong archive. Prefix registry g103 và bản sau phiên đầu g105 được giữ nguyên byte.
+
+Terminal head hiện tại `24ea17accae28334715d452d025ec7dbac51f7bf426de69ea1d549fe310b9588` được quan sát từ raw m801 mới. Nó không phải head cuối đã được ACK độc lập trước lỗi g105. Kiểm archive có đối chiếu anchor g103 ở prefix; không coi anchor tổ tiên là chứng minh head cuối từng hiện diện liên tục hoặc chống rollback toàn filesystem. Raw m801 là một observation anchor mới cho bước tiếp theo.
+
+Những bằng chứng này không đổi g105 thành PASS, không khôi phục quyền hay tự cho phép archive.
+
+## Cổng nghiệm thu còn mở
+
+| Cổng | Trạng thái | Việc còn cần |
+|---|---|---|
+| G1 | NOT ACCEPTED | Contract tiếp tục từ trạng thái 83 file/10 generation; qualification đúng candidate rồi chạy mới hai phiên native, xác nhận full cold export, lossless seal/ref và normal closure |
+| G2 | NOT RUN | Polygon và corridor Android–SITL cùng video/mock payload, upload/readback, manual/AUTO, review và SAF |
+| G3 | NOT RUN | Mất link, AP reboot, native restart, thu hồi quyền và persistence; không tự khôi phục quyền |
+| G4 | NOT RUN | 600 giây bay tích hợp liên tục, chỉ sau các lượt ngắn và cổng thực tế trước đạt |
+
+Bước tiếp theo là contract trạng thái đã thay đổi, dùng SHA raw m801, toàn bộ index 83 file và đối chiếu sáu STATUS làm đầu vào có provenance. Phải bác bỏ snapshot cũ 75 file, thiếu journal/STATUS, sai counter/head/mode/UID/GID và workspace bị thay. Không dùng lại decoder trạng thái ban đầu cho dữ liệu đã tiến tới generation 10. Nguồn H10 mới chưa được kiểm lại seal/normal close trên hành trình G1 Android thực; m801 chỉ xác nhận việc thu thập chỉ đọc và đóng SDK.
+
+## Toàn vẹn, bàn giao và giới hạn
+
+Kiểm cuối 10.526 đường dẫn từ baseline đầu vào và các case đã đóng: không thiếu, không sai size/mode/SHA, không xung đột. Kiểm đủ pin source/product/dependency/retained object của H8/H9/H10 và hash source/HOLD bổ sung H7–H10 đạt. Cổng 5582/5583/8895/8896 đã đóng; các PID thuộc lượt kiểm đã dừng.
+
+Hai checkout bàn giao giữ HEAD `b2789a94681dad92bf39868ba3d069f842607a23` và sạch. Bản gốc giữ HEAD `656d694ebf3bb02d13ef9eae956e0eeb8ea2374f`; 98 tracked deletion có trước được giữ nguyên, không stage/restore. Không commit/push hay công bố ra ngoài trong đợt này.
+
+Sự cố H7 từng ghi qua hardlink vào hai generated asset working H6 vẫn có hồ sơ và byte lỗi; đã phục hồi đúng SHA/mode/inode/device từ candidate không đổi, có kiểm độc lập và atomic COW ngăn tái diễn. Không khẳng định source/path được bảo toàn liên tục. Các kiểm cuối chứng minh hiện trạng và giữ lịch sử; không viết lại ENDURE hay canonical SOT.
+
+Không tạo bản sao project ngoài repo, cài dependency, tạo APK/build cache, chạy Docker hoặc tạo Next.js distDir. Fixture tạm của kiểm mock được tự dọn trong repo; raw, candidate, baseline, incident và kết quả lỗi được giữ. Không có thao tác với HeraHub, drone hoặc camera thật. So sánh trực tiếp LLM/agent không áp dụng cho sửa deterministic runtime này; chưa có bằng chứng để kết luận vượt DJI hay sẵn sàng bay thật.
+
+## Evidence chính
+
+- `evidence/betarc01/AUTHORIZATION-CAPS03.json`
+- `planning/betarc01/runtime-h10/BUILDER-RUNTIME-H10-HOLD01.json`
+- `evidence/betarc01/qa/ROOT-H10-COUPLED-MOCK38.json.gz`
+- `evidence/betarc01/qa/INDEPENDENT-H10-COMMAND-FORENSIC-HOLD01-REVIEW.json`
+- `evidence/betarc01/ROOT-H9-TWO-RECONCILED-SDK-ACCEPTANCE01.json`
+- `evidence/betarc01/qa/INDEPENDENT-G105-H9-FAILURE-COLD01.json`
+- `evidence/betarc01/qa/INDEPENDENT-M801-H10-RAW-CAPTURE-CLOSE01.json`
+- `evidence/betarc01/qa/INDEPENDENT-M801-H10-CURRENT-DATA-SEMANTICS01.json`
+- `evidence/betarc01/qa/ROOT-M801-FORENSIC-REVIEW39.json.gz`
+- `evidence/betarc01/qa/ROOT-CAPS03-FINAL-PRESERVATION40.json`
+- `evidence/betarc01/ROOT-H10-CAPS03-FINAL-RESOURCE23.json.gz`
+
+**Disposition:** cấu hình/ngân sách đạt; các sửa pipeline đạt source/mock; dữ liệu hiện tại đã được kiểm; Beta-RC01 còn NOT READY và tiếp tục từ contract trạng thái mới.

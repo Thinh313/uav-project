@@ -1,0 +1,32 @@
+{
+  "format": "aeris-contractor-h7-bound-domain-clarification",
+  "version": 1,
+  "hostNs": 13130636429250,
+  "clarifies": "planning/betarc01/ADR-H7-SAFE-GNU-READONLY.json",
+  "profile": "SAFE_GNU_LONGNAME_L_V1",
+  "bounds": {
+    "currentSDKRootAndNativeMetadataProducerMaxBytes": 67108864,
+    "legacyFullOriginalProducerMaxBytes": 176160768,
+    "existingWholeNativeTARReceiverMaxBytes": 201326592,
+    "sharedPhysicalExportAggregateMaxBytes": 201326592,
+    "logicalUncompressedMaxBytes": 536870912,
+    "maximumLogicalEntries": 8192,
+    "maximumSafePathUTF8Bytes": 240
+  },
+  "interpretation": "These are distinct existing layer limits. NewreadonlywholeTARreceiver192 is not an increase of the currentmetadata producer64 cap. Currentconsumers must still verify actualoriginalcapture complete and its source-owned producerbound, not infer producerpermissionfromparsermaximum.",
+  "oldSourceReceiverReference": "planning/nativejournal17/receiver17.py native_tar FULL_TAR192M; existing Node native raw192.",
+  "noNumericalOrAuthorityRelaxation": true,
+  "otherGuardsUnchanged": {
+    "artifactMiB": 13,
+    "hostMetadataMiB": 68,
+    "HostHealthMs": 100,
+    "writerMs": 200,
+    "freshnessMs": 250,
+    "diskFloorGiB": 10,
+    "inputLeaseMs": 200,
+    "speedup": 1,
+    "catchupCapMs": 500,
+    "owners": 14,
+    "futureEnvelopeBytes": 60686336
+  }
+}

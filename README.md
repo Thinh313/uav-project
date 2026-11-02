@@ -1,140 +1,131 @@
-# UAV Project - AERIS research handoff
+# UAV Project / AERIS - H10 research handoff
 
-Bản chuyển giao nghiên cứu ngày **31/10/2026**, từ source commit
-`6ea4f5027bc93d4f67e10da53c098391d9553f2f` và các file source chưa commit tại thời điểm bàn giao.
+Bản bàn giao nghiên cứu ngày **02/11/2026**. Tag bất biến:
+[`research-handoff-2026-11-02-h10`](https://github.com/nclamvn/uav-project/tree/research-handoff-2026-11-02-h10).
+Bản gốc private của anh tiếp tục tại `nclamvn/aeris`, tag
+`development-handoff-2026-11-02-h10`. Hai repo có lịch sử riêng; các tag cũ giữ nguyên.
 
-**Trạng thái: engineering alpha; beta tích hợp NOT READY.** Repo này là mã nguồn
-và bộ hướng dẫn nghiên cứu, chưa phải bộ cài đã nghiệm thu để vận hành Hera thật.
+**Engineering alpha. Beta tích hợp NOT READY; G1-G4 chưa được nghiệm thu.**
+Đây là mã nguồn, công cụ và hồ sơ để tiếp tục R&D. Chưa phải bản cài đã nghiệm thu
+để vận hành Hera thật và chưa có bằng chứng so sánh vượt DJI.
 
-AERIS hướng tới một hệ thống điều khiển UAV đa năng: khảo sát/inspection,
-preflight, điều khiển manual/assisted/AUTO, camera/gimbal nhiều payload,
-phân quyền operator, video, lưu hồ sơ và review. Chất lượng so với các GCS cao cấp
-phải được chứng minh theo từng workflow, không suy ra từ số module hoặc giao diện.
+## Các em đọc trước
 
-## Đọc trước
+1. [Anh gửi các em: tiếp nhận H10](docs/handoff/HANDOVER.md).
+2. [PDF chuyển giao hiện tại](output/pdf/UAV-PROJECT-HANDOVER.pdf).
+3. [Hiện trạng, bằng chứng và giới hạn](docs/handoff/STATUS.md).
+4. [Kiến trúc và ranh giới pipeline](docs/handoff/ARCHITECTURE.md).
+5. [Cài đặt và kiểm lại](docs/handoff/SETUP-AND-VERIFY.md).
+6. [Public/private, manifest và phần không được đóng gói](docs/handoff/CONTENTS.md).
+7. [Hai repo và định danh H10](docs/handoff/MILESTONE06-H10.md).
+8. [Milestone tiếp theo](docs/handoff/NEXT-MILESTONE.md) và [biên bản tiếp nhận](docs/handoff/ACCEPTANCE.md).
 
-1. [Anh gửi các em: hướng dẫn tiếp nhận](docs/handoff/HANDOVER.md).
-2. [PDF chuyển giao chi tiết](output/pdf/UAV-PROJECT-HANDOVER.pdf).
-3. [Hiện trạng và phần còn thiếu](docs/handoff/STATUS.md).
-4. [Cấu trúc và đường chạy](docs/handoff/ARCHITECTURE.md).
-5. [Cài đặt, kiểm thử và tái lập](docs/handoff/SETUP-AND-VERIFY.md).
-6. [Phạm vi public/private và tính toàn vẹn](docs/handoff/CONTENTS.md).
-
-## Clone đúng bản bàn giao
+## Clone đúng mốc
 
 ```sh
 git clone https://github.com/nclamvn/uav-project.git
 cd uav-project
-git checkout research-runtime-2026-10-31-r2
-git switch -c research/my-work
+git checkout research-handoff-2026-11-02-h10
+git switch -c research/team-work
+git rev-parse HEAD
 ```
 
-Tag gốc `research-handoff-2026-10-31` được giữ nguyên. Tag intake r1 bổ sung
-công cụ tiếp nhận và hướng dẫn; R2 thêm capsule runtime máy nhận và kết quả SITL; xem [biên bản INTAKE01](docs/handoff/INTAKE01.md).
-Tag là mốc source bất biến để trao đổi kết quả. Không coi một nhãn READY trong
-milestone lịch sử là nghiệm thu cho toàn bộ bản tích hợp hiện tại.
+Ghi commit thực nhận, không dùng source baseline private làm public HEAD.
+Manifest `handoff/SOURCE-MANIFEST.json` đối chiếu các file public được liệt kê;
+không coi một workspace có overlay private là cùng cây public nguyên byte.
 
-## Kiểm nhanh, không cần SDK, Android hay drone
+## Bắt đầu không cần Android hoặc drone
 
-Cần **Node.js 22+** và **Python 3.12+** trên PATH. Các lệnh đã được kiểm trên
-macOS và CI Linux. Với Windows, nên dùng WSL/Git có symlink thật; bản clone
-materialize symlink thành file văn bản không được xem là cùng cây source. Không cần `npm install` cho
-các lệnh dưới đây. Chạy từ root repo:
-
-Cách gọn, chạy tuần tự đúng sáu kiểm bên dưới và ghi public HEAD/version:
-
-```sh
-node tools/handoff/intake.mjs
-```
-
-Hoặc chạy từng lệnh để chẩn đoán:
+Cấu hình mới đã kiểm trên máy tác giả: Node **24.14.1**, CPython **3.14.6**,
+macOS ARM64. Với hệ khác, ghi đúng phiên bản và kết quả của máy nhận.
+Không cần `npm install` cho các kiểm source/mock được nêu. Windows nên dùng WSL
+và Git có symlink thật.
 
 ```sh
 node tools/handoff/verify.mjs
 npm run check
-node planning/vidlife12/runtime/tests/mock.mjs
-node planning/vidlife12/runtime/tests/lifecycle-trace.mjs
-node planning/vidlife12/runtime/tests/cold-navigation-r02.mjs
-python3 tools/handoff/mock_wait.py
+python3 -B tools/handoff/h10_intake.py
 ```
 
-Đây là kiểm source/mock. Clock và telemetry của mock là dữ liệu kiểm tổng hợp,
-không phải chuyến bay, đo FPS hay bằng chứng hội tụ EKF trên thiết bị thật.
-Các suite gốc vẫn có trong source; đọc phạm vi và yêu cầu runtime trước khi chạy.
-Bộ kiểm công cụ tiếp nhận: `python3 -m unittest discover -s tools/handoff/tests -v`.
+H10 portable chọn 13 phương thức kiểm từ source hiện tại, dùng Node 24+ và Python
+3.12+; version đã kiểm thực là Node24.14.1/Python3.14.6. Wrapper có path adaptation
+chỉ cho test và media fixture synthetic/derived thay input private g105, giữ code
+sản phẩm nguyên bản. Có codec/Root reconstruction, Node-Python writer IPC/fsync,
+managed close và biên cap20/100MiB. Đây không phải toàn bộ 34 kiểm gốc hoặc nghiệm
+thu runtime. Fixture và mock RPC không là dữ liệu bay hay qualification thiết bị. Các `test-*.py` gốc trong runtime H10 còn cần fixture
+private/đường dẫn đã kê khai; public clone không tự tái lập 34 kiểm host-coupled.
 
-Đã nhận gói private? Làm theo [kiểm và dựng workspace riêng](docs/handoff/SETUP-AND-VERIFY.md#4-workspace-riêng-cho-dữ-liệu-private).
-Không giải nén vào clone public hoặc dùng manifest public để kết luận cây đã overlay private giống nguyên bản.
-
-## Xem workbench web lịch sử
+Bộ intake lịch sử vẫn có:
 
 ```sh
-npm start
+node tools/handoff/intake.mjs
+python3 -B -m unittest discover -s handoff/receiver-runtime03/tests -v
 ```
 
-Mở `http://127.0.0.1:8788/`. Đây là workbench Plan/Fly/Review đời đầu; API SITL
-tắt mặc định. Nó **không** tự khởi động cockpit Android mới nhất hoặc simulator 3D.
-Nếu cổng đã được một phiên khác sử dụng, không tự dừng phiên đó.
+Hai lệnh này kiểm đường VIDLIFE12/R2 và capsule cũ theo contract của chúng.
+Chúng không tự chọn H10, không sửa cap của candidate cũ và không chạy simulator mới.
+`npm test` là suite lịch sử rộng hơn, có các điều kiện fixture/timing/dung lượng;
+không công bố toàn suite xanh chỉ từ các kiểm source ở trên.
 
-## Android và SITL mới nhất
+## H10 đã đạt gì
 
-Đường mới nhất nằm tại `planning/vidlife12/`, sử dụng APK development được giữ
-nguyên, companion Node, ArduPilot 4.7.1 và backend physics. Các artifact này cùng
-log chẩn đoán được bàn giao bằng **gói private**, không nằm trong Git public.
-SDK/AVD Android không được đóng gói. [Hướng dẫn](docs/handoff/SETUP-AND-VERIFY.md)
-liệt kê SHA, cổng, điều kiện admission và các giới hạn máy/kiến trúc.
+- H8 và H9 có bốn lượt SDK cold boot thực đã kiểm APK/private state và đóng bình thường.
+- H9 sửa alias giữa graph source và Node loader. g105 đã qua companion READY,
+  đăng ký native và rollover, rồi FAIL tại kết quả SEAL_PRODUCT vượt progress4KiB.
+- H10 tách full result thành dữ liệu bền vững có tham chiếu SHA/context; progress
+  giữ 4 KiB. Normal writer closure dùng chung deadline RPC200ms, không che EOF/lỗi.
+- 34 phương thức source/mock trên máy tác giả đạt, gồm Node client -> Python writer
+  Unix RPC/fsync -> Root reader với metadata budget mock. Chưa thay G1 Android thực.
+- m801 forensic thực thu raw 250.880 B, SDK đóng bình thường. Đối chiếu riêng có
+  83 file/9 thư mục, lifetime generation10, hai journal đóng/rỗng, tám archive,
+  không pending. Đây không phải SDK qualification, G1 hoặc một chuyến bay.
 
-Lượt S01 đã xác nhận 9 ACK cadence và các mẫu telemetry sau ACK. Lượt này dừng
-trước video vì EKF chưa có vị trí ngang tuyệt đối. Bản R02 chỉ tăng thời gian chờ
-khởi tạo navigation 30 lên 60 giây host, đã qua mock nhưng **chưa chạy lại SITL**:
-dự toán artifact vượt trần 8 MiB đúng 77.824 B. Không bỏ guard để đổi trạng thái này.
+Artifact tổng **20 MiB**, metadata tổng **100 MiB** đã được chấp thuận cho bản cô lập.
+Freshness250ms, HostHealth100ms, writer200ms, native/export quota, speedup1/cap500ms
+và sàn đĩa10GiB cộng reserve/forecast giữ nguyên. Mỗi lượt vẫn phải admission mới.
 
-## Bản đồ repo
+Điểm tiếp tục là contract cho trạng thái83file. Không dùng decoder75file, không
+retry g103 APPLY, tự archive hoặc khôi phục quyền từ một receipt forensic.
+Sau G1 mới là polygon/corridor Android-SITL cùng video/payload, mất link/reboot,
+persistence/SAF và 600 giây bay tích hợp liên tục.
+
+## Runtime, APK và dữ liệu riêng
+
+Git public chứa source, hướng dẫn và công cụ portable. Raw, candidate pool,
+engineering APK, AP binary và image đã kê khai được giao riêng; SDK/AVD/cache
+không được đóng gói. Cần supplement H10 và manifest/checksum tương ứng, không coi
+gói private cũ tự có dữ liệu mới. [Hướng dẫn tiếp nhận](docs/handoff/SETUP-AND-VERIFY.md)
+phân biệt kiểm byte, replay, admission và runtime thực.
+
+Không overlay BOM, tài liệu khách hàng, credential hoặc raw vào clone dùng để push.
+Không tự sửa raw/candidate lịch sử, reset app/counter/quota hoặc cài binary thay pin.
+HeraHub, Xiaomi, radio/MCU, Phase One/RGB/thermal và gimbal thật còn gate riêng.
+
+## Bản đồ source
 
 | Đường dẫn | Vai trò |
 |---|---|
-| `app/`, `services/`, `tools/` | Workbench web, compiler, API, truyền và lưu dữ liệu |
-| `native/` | Source Android/WebView/bridge và các revision cô lập |
-| `pilot/` | Adapter, payload, mô phỏng, viewer và các milestone R&D |
-| `planning/vidlife12/` | Entry hiện tại, runtime source 117 file, mock, QA và contract |
-| `planning/betasim-integrated01/` | Companion/product/video và nền tích hợp trước đó |
-| `aeris_runtime/` | Namespace runtime lịch sử, không thay cho bản selected |
-| `docs/`, `delivery/`, `research/` | ADR, roadmap, báo cáo và thông tin truy nguồn |
-| `handoff/` | Manifest SHA của cây public và khai báo phạm vi |
+| `app/`, `services/`, `tools/` | Workbench lịch sử, compiler, storage/API và kiểm |
+| `native/` | Source Android/cockpit/bridge, các revision và journal native |
+| `planning/betarc01/runtime-h10/` | Source H10 được chọn, test/contract và các entry đã pin |
+| `planning/betarc01/command_h10/` | Companion và đường kết quả lossless |
+| `planning/betarc01/node_alias_h9/` | Loader source-bound dùng chung |
+| `planning/nativejournal17/` | Native journal, archive/receiver và kiểm nguyên bản |
+| `pilot/` | Mission, payload/operator, MAVLink, physics/3D và corpus |
+| `docs/handoff/`, `handoff/` | Hồ sơ chuyển giao, manifest và công cụ tiếp nhận |
 | `output/pdf/` | PDF chuyển giao đã kiểm render |
 
-Repo giữ nhiều revision có chủ đích. Entry point, source, APK, profile và chứng cứ
-phải cùng một cấu hình; không ghép tùy ý các file có tên mới nhất.
+`npm start` mở workbench đời đầu trên `http://127.0.0.1:8788/`, API bay tắt mặc định.
+Nó không khởi động cockpit Android H10 hoặc simulator 3D mới nhất. Không dừng một
+phiên khác để giải phóng cổng. Các revision giữ có chủ đích; đọc contract trước launch.
 
-## Phạm vi bàn giao
+## Đóng góp, lịch sử và giấy phép
 
-- Source public gồm snapshot Git hiện tại và source chưa commit được kiểm kê.
-  Các file thiếu ở checkout cũ được xuất từ Git vào bản mới, không phục hồi/ghi lại
-  dự án gốc. Năm symlink source tương đối được giữ và kiểm đích.
-- BOM, context nội bộ, tài liệu khách hàng và raw web inputs nằm trong gói private.
-  Chín file public chỉ được ẩn danh nhãn khách hàng; bản gốc đi kèm overlay riêng.
-  Không chỉnh các source của đường VIDLIFE12 154 pins để làm đẹp kết quả.
-- Raw của các lượt chẩn đoán gần nhất, candidate pools, APK và image SITL ARM64
-  đi trong bộ engineering private. Đây không phải toàn bộ ổ đĩa hay mọi raw log
-  lịch sử; [danh mục](docs/handoff/CONTENTS.md) ghi rõ phần chưa đóng gói.
-- Clone public đủ để review và chạy mock đã nêu. Chạy lại Android-SITL cần thêm
-  bộ private, SDK/AVD đúng cấu hình và admission mới. Đối chiếu checksum không
-  biến kết quả cũ thành một chuyến bay đã nghiệm thu trên máy mới.
+Xem [CONTRIBUTING.md](CONTRIBUTING.md), [NOTICE.md](NOTICE.md) và
+[phạm vi nội dung](docs/handoff/CONTENTS.md). Public repository không tự cấp license
+open-source mới cho code RtR; giữ attribution/giấy phép của thành phần bên thứ ba.
 
-## Đóng góp và giấy phép
-
-Xem [CONTRIBUTING.md](CONTRIBUTING.md) và [NOTICE.md](NOTICE.md). Không thêm
-credential, BOM, hồ sơ khách hàng hay artifact private vào pull request.
-Public repository không tự tạo giấy phép open-source mới cho code RtR.
-Giữ các giấy phép và attribution của thành phần bên thứ ba.
-
-Lịch sử README trước chuyển giao nằm tại
-[docs/HISTORY-README-2026-10-31.md](docs/HISTORY-README-2026-10-31.md).
-Các đường dẫn máy cũ và hướng dẫn cũ trong tài liệu đó chỉ là hồ sơ lịch sử.
-
-## Milestone runtime máy nhận R2
-
-Xem [hai bản phát triển/nghiên cứu và kết quả thực](docs/handoff/MILESTONE05.md),
-[capsule chuẩn bị runtime](handoff/receiver-runtime03/README.md) và
-[tin nhắn tiếp nhận](docs/handoff/MESSAGE-TO-TEAM.md). Android–SITL đã khởi động,
-đọc đủ 39/39 tham số, rồi dừng đúng guard ở EKF/navigation; chưa là beta đạt.
+[INTAKE01](docs/handoff/INTAKE01.md), [MILESTONE05](docs/handoff/MILESTONE05.md) và
+README lịch sử là hồ sơ mốc31/10. Các kết luận EKF/cap/entry trong đó không là
+kết luận mới của H10. [Tin nhắn bàn giao](docs/handoff/MESSAGE-TO-TEAM.md) dùng để
+anh gửi các em cùng đúng tag và bộ dữ liệu riêng.

@@ -1,0 +1,42 @@
+{
+  "format": "aeris-contractor-h5-controlled-debug-tip",
+  "version": 1,
+  "authorizedAtHostNs": 8751684217916,
+  "scope": "Positive SDK-only administrative closure, then independently qualify two new cold boots before G1. No install/Activity/AP in m401/m402. No reclassification of m302.",
+  "hypotheses": [
+    {
+      "claim": "ADB binary mismatch caused SDK shutdown failure",
+      "status": "REFUTED_SAME_RESOLVED_PATH_AND_SHA"
+    },
+    {
+      "claim": "successful cold diagnostic incorrectly uses exceptional fail_case branch",
+      "status": "SOURCE_CONFIRMED_NOT_SIGABRT_CAUSAL_PROOF"
+    },
+    {
+      "claim": "normal administrative SDK closure avoids observed abort",
+      "status": "UNTESTED_REQUIRE_TWO_NEW_REAL_BOOT_EXIT0"
+    }
+  ],
+  "implementation": "Small new isolated H5 selected-source derivative. Reuse immutable H4 files by hardlink and detach before changed writes. Derive cold evidence from actual commands and exact original private table. Close no-actor monitor honestly and normal guardian; existing captured guest sync, health inventory quiesce and SDK25/10s unchanged. New Root qualified proof for m401/m402, never rewrite m301/m302.",
+  "failureRule": "Any unknown, crash, forced kill, missing raw or guard failure refuses new acceptance. No automatic retry. G1/G2/G3/G4 remain blocked until each independent actual prerequisite.",
+  "budgets": {
+    "artifactBytes": 12582912,
+    "metadataBytes": 69206016,
+    "allArtifactPools": 11,
+    "futureOwnerEnvelopeBytes": 60686336,
+    "sourceWritesPermittedWithinActualCap": "Preview reservation may refuse actors but does not forbid small bounded source work below real cap.",
+    "candidateRule": "Pure original-domain forecast before freeze; all actors only after final real admission."
+  },
+  "guards": {
+    "freshnessMs": 250,
+    "hostHealthMs": 100,
+    "writerMs": 200,
+    "diskFloorGiB": 10,
+    "speedup": 1,
+    "catchupCapMs": 500
+  },
+  "noNewSigning": true,
+  "oldSourceCandidateENDUREPreserved": true,
+  "SDKActualAcceptance": false,
+  "flightAcceptance": false
+}

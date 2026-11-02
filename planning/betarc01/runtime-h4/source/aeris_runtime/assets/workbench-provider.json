@@ -1,0 +1,200 @@
+{
+  "APArtifactName": "arducopter-m1-stagepipe-03",
+  "APObserverSourceSHA256": "2ee91b8df32c8084971dc56ac8f579bfaacde0a42dd2441103865d13856bd855",
+  "APSHA256": "77344f3c6f715cb326b99356815e8315769e9331dcb1e4c88bc4076804cb0d53",
+  "GCSFailsafeAction": "LAND5",
+  "GCSFailsafeSeconds": 5,
+  "RCOverrideTimeoutSeconds": 0.5,
+  "authorityOwner": "WORKBENCH_SIM_SINGLE_FLIGHT_OWNER",
+  "capMs": 500,
+  "capabilityProfileId": "WORKBENCH_SIM_SINGLE_FLIGHT_OWNER_V1",
+  "clockCadenceMs": 100,
+  "clockFreshnessMs": 250,
+  "clockprobeSHA256": "d4217b8f8098abe7b1a503f8ad7d747d1b85af2c3523c1e54db3ed5248b3b0fc",
+  "controlEnvelope": {
+    "inputFreshnessNs": 250000000,
+    "inputLeaseNs": 200000000,
+    "maximumAltitudeM": 30,
+    "maximumRadiusM": 150,
+    "minimumAltitudeM": 10,
+    "referenceNotHeraCalibrated": true
+  },
+  "controlScenario": "nominal",
+  "endpoint": {
+    "containerClockUDP": 9004,
+    "containerTCP": 5760,
+    "hostClock": [
+      "127.0.0.1",
+      9014
+    ],
+    "hostJSON": [
+      "127.0.0.1",
+      9012
+    ],
+    "hostTCP": "127.0.0.1:5961",
+    "hostUpstreamTCP": "127.0.0.1:5963",
+    "native": "10.0.2.2:5961",
+    "passiveTCP": "127.0.0.1:5962"
+  },
+  "format": "aeris-workbench-sim-provider-profile",
+  "hostApplicationMAVLinkTransmitters": "ONE_INJECTED_WORKBENCH_FLIGHT_OWNER;rootProxyUnmodified;passiveObserver0TX",
+  "hostCaptureSecondsAllowed": [
+    60,
+    90,
+    1960
+  ],
+  "hostDiskGuardPolicy": {
+    "entryBytes": 21474836480,
+    "floorBytes": 10737418240,
+    "horizonNs": 15000000000,
+    "maximumCheckGapNs": 2000000000,
+    "maximumSamples": 192,
+    "perWriteFloorAndForecast": true,
+    "requiresRealPriming": true,
+    "reserveBytes": 268435456,
+    "samplePeriodNs": 100000000,
+    "sampling": "CADENCE_CAPPED_KEEP_WINDOW_BOUNDARY_PREDECESSOR",
+    "version": 2
+  },
+  "hostDiskGuardSourceSHA256": "01844818082d7863ec29a66bc53e427f66134769d675cd47e2342f057c0ce0f7",
+  "hostJournalEncodingVersion": 2,
+  "hostPrimingRequirement": "ACTUAL_HOST15S_BEFORE_JOURNAL_OR_BACKEND_IDENTITY_NO_RESET_AFTER_MKDIR",
+  "hostRuntimeVersion": 4,
+  "id": "WORKBENCH_SIM_V1",
+  "load": "empty",
+  "manualMode": "BRAKE_HOLD_THEN_COMMITTED_NEUTRAL_RC_AND_EXPLICIT_OBSERVED_LOITER_ASSISTED",
+  "modelCalibration": "PROVISIONAL_SYNTHETIC_NOT_HERA",
+  "modelKernelSHA256": "3db9ac03292378fa51aa269561befa87c6cd6a7a60e8c176b85d7abc26c84247",
+  "modelSHA256": "4975959c968582cabd0057d9166601919c31968d69cc92fde303c1f66c7b4808",
+  "nativeControlEnabled": false,
+  "nativeLifetimeSeconds": 2000,
+  "nativeStorageDomains": {
+    "checkpointArchiveCapBytes": 524288,
+    "checkpointArchiveCountCap": 8,
+    "checkpointNamespace": "files/checkpoint14/terminal-<64hex>.json",
+    "historicalCompact10": "NOT_REMEASURED_UNCHANGED_HISTORICAL_EVIDENCE",
+    "logical": "ACTIVE_NEW_PROVIDER_PLAINTEXT_LOGICAL_UPPER_BOUND_NOT_LEGACY_DECODED",
+    "logicalCapBytes": 536870912,
+    "physical": "PRIVATE_FILES_ALLOCATED_SUPERSET_NOT_WHOLE_APP",
+    "physicalCapBytes": 167772160
+  },
+  "parameterSHA256": {
+    "control.parm": "4ea8a33ad4ccf95fbe3f4125bd6ef22c7d663111f2102a1076b2b90887ce47c0",
+    "copter.parm": "5e01345b45d1c6190b28bece5638bbdd4cf1cce35e05bbbf480ab24d2b51aa0e"
+  },
+  "passiveIntervalsFilename": "message-intervals-chan1.txt",
+  "passiveIntervalsMilliseconds": {
+    "242": 1000,
+    "245": 250
+  },
+  "passiveIntervalsSHA256": "be172b0e4fa600fdb8e8cab409d9004717db8acc3036536b17edef1672b0c4c4",
+  "passiveIntervalsSource": {
+    "path": "runtime/sim32-instrument01-build/ardupilot/libraries/GCS_MAVLink/GCS_Common.cpp",
+    "sha256": "a940c630d50ff2bf2339ebff21fae998445ae8c52cb74091ed6b40cc1142a48e"
+  },
+  "passiveZeroApplicationTX": true,
+  "payloadOrMediaEnabled": true,
+  "physicalProviderEnabled": false,
+  "providerKind": "WORKBENCH_SIM_V1",
+  "rateHz": 1200,
+  "recordingCapacity": {
+    "1960": {
+      "hostJournal": {
+        "max_record_bytes": 2048,
+        "max_segments": 448,
+        "quota_bytes": 6442450944,
+        "segment_bytes": 16777216,
+        "termination_reserve_bytes": 16384
+      },
+      "transport": {
+        "max_record_bytes": 16384,
+        "max_segments": 320,
+        "quota_bytes": 268435456,
+        "segment_bytes": 1048576,
+        "termination_reserve_bytes": 32768
+      }
+    },
+    "60": {
+      "hostJournal": {
+        "max_record_bytes": 2048,
+        "max_segments": 64,
+        "quota_bytes": 402653184,
+        "segment_bytes": 8388608,
+        "termination_reserve_bytes": 16384
+      },
+      "transport": {
+        "max_record_bytes": 16384,
+        "max_segments": 40,
+        "quota_bytes": 33554432,
+        "segment_bytes": 1048576,
+        "termination_reserve_bytes": 32768
+      }
+    },
+    "90": {
+      "hostJournal": {
+        "max_record_bytes": 2048,
+        "max_segments": 64,
+        "quota_bytes": 402653184,
+        "segment_bytes": 8388608,
+        "termination_reserve_bytes": 16384
+      },
+      "transport": {
+        "max_record_bytes": 16384,
+        "max_segments": 40,
+        "quota_bytes": 33554432,
+        "segment_bytes": 1048576,
+        "termination_reserve_bytes": 32768
+      }
+    }
+  },
+  "recordingWorkflow": "ONE_ORIGINAL_HOST_RAW_COLD_IN_PLACE_NO_DUPLICATE_EXPORT",
+  "referenceModelSHA256": "6e2c77cc1202a83e5b009b1a06393057546a120ef20d9a8062a5f0bfc98d40c1",
+  "requestedSpeedup": 1,
+  "seed": 32,
+  "sharedTypedParametersUnchanged": true,
+  "taskBudget": {
+    "admitted": null,
+    "categories": {
+      "APHeadersSealsTermination": 16777216,
+      "APRawAllCases": 1643521920,
+      "hostMainJournalQuota": 6442450944,
+      "hostSmokeLossJournalQuotas": 805306368,
+      "metadataCheckpointsLogsAPK": 67108864,
+      "nativeAVDAllocatedGrowth": 536870912,
+      "nativeExportsAllCases": 201326592,
+      "retainedUnit": 134217728,
+      "transportAllCases": 335544320
+    },
+    "coldVerification": "READ_ONLY_IN_PLACE",
+    "entryBytes": 21474836480,
+    "externalEnforcementRequired": [
+      "Root totalallocateddelta/caseledger",
+      "Nativeexportcumulative192MiB",
+      "AVDpositiveallocatedgrowth512MiB",
+      "metadata64MiB/unit128MiB"
+    ],
+    "floorBytes": 10737418240,
+    "format": "aeris-cockpit04-single-original-capacity",
+    "hostRawCopies": 1,
+    "hostRawDuplicateOrExport": false,
+    "maximumFormatDurationGuaranteed": false,
+    "nativeExportCapsBytes": {
+      "long": 142606336,
+      "loss": 29360128,
+      "smoke": 29360128
+    },
+    "planningEstimateOnly": "73s~2.96MB/s hostjournal implies~5.40GiB at1960s; not a hard bound or acceptance",
+    "quotaMayFailPreservingPrefix": true,
+    "requiredFreeBytes": 21474836480,
+    "reserveBytes": 268435456,
+    "taskHardCeilingBytes": 10737418240,
+    "taskHardPeakBytes": 10183124864,
+    "version": 1
+  },
+  "typedMetadataIDUpdatedPhysicalParametersExact": true,
+  "typedParameterProfileFilename": "typed-profile.json",
+  "typedParameterProfileSHA256": "b512d14f741505fa0f203fb5d8bc98c9ed4d36b7616f208e4525605d13d610f3",
+  "version": 1,
+  "wind": "calm",
+  "workbenchControlEnabled": true
+}

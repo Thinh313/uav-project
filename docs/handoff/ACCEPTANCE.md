@@ -1,44 +1,33 @@
-# Biên bản tiếp nhận và giao việc
+# Biên bản tiếp nhận tại mốc H10
 
-Anh đề nghị các em đánh dấu theo kết quả đã kiểm, không ký một nhãn tổng quát
-“clone thành công, nhận đủ, chạy được” khi còn thiếu bộ private hoặc runtime.
+Anh đề nghị các em ghi kết quả theo từng mục. Nhận source đầy đủ và chạy được một mock không đồng nghĩa đã nhận một beta đủ điều kiện bay.
 
-## Tiếp nhận source
+## Source và tài liệu
 
-- Đã ghi URL repo, tag và commit thực nhận.
-- Đã chạy verify SHA; số file khớp với manifest của bản đó.
-- Đã kiểm source links, giấy phép và các mục public/private.
-- Đã nhận đúng BOM/context qua kênh riêng; không có chúng trong public working copy.
-- Đã ghi các file được phục dựng từ Git và các nhãn được ẩn danh.
+- Ghi repo, tag và commit thực nhận; giữ tag H10 và các tag lịch sử.
+- Verify danh sách source SHA/kind; ghi rõ kiểm không bao trùm file lạ ngoài manifest.
+- Chạy mock public đúng README, lưu version Node/Python, command và stdout/stderr.
+- Đọc trạng thái G1-G4 và các giới hạn source/mock, replay, SDK, SITL, hardware.
+- Đối chiếu license, attribution, symlink và các nhãn đã ẩn danh.
 
-## Tiếp nhận artifact
+## Gói private
 
-- Đã pin SHA gói ngoài bằng kênh tin cậy, kiểm 24 thành phần và các manifest trước giải nén.
-- Đã tạo workspace private ngoài Git, giữ receipt và phân biệt 9 overlay gốc với public snapshot.
-- Đã kiểm manifest từng file và preserved hardlinks/modes trong engineering tar.
-- Đã xác định SDK/AVD, image architecture, AP executable, APK/certificate và profile.
-- Đã ghi rõ artifact/log nào chưa có; không tạo dữ liệu giả thay thế.
-- Đã phân biệt kiểm byte với kiểm chữ ký/trust, clock/PID và runtime thực.
+- Nhận checksum ngoài gói qua kênh tin cậy; kiểm gói gốc và supplement H10 theo manifest.
+- Giữ BOM/context/raw ngoài clone public; không thêm remote public vào workspace private.
+- Ghi artifact, raw, image, APK, SDK/AVD nào đã nhận hoặc còn thiếu.
+- Đối chiếu SHA byte, mode/hardlink và declared archive members theo công cụ được cung cấp.
+- Không coi checksum ở trong chính archive là xác thực người gửi.
 
-## Kiểm môi trường mới
+## Trạng thái hiện tại
 
-- Đã ghi OS/CPU/RAM, Node/Python, Docker, Android/WebView và nguồn input.
-- Đã chạy mock không nối thiết bị; giữ log stdout/stderr và source SHA.
-- Đã ghi admission, quota, nguồn điện và cổng/actor sở hữu trước lượt thực.
-- Đã đóng đúng actor thử nghiệm; không dừng hoặc dọn phiên của người khác.
+- Đã đọc m801 forensic-only và không đổi nó thành SDK qualification/G1.
+- Phân biệt head registry mới quan sát với anchor tổ tiên và antirollback toàn filesystem.
+- Không dùng decoder 75 file cho trạng thái 83 file/lifetime generation 10.
+- Giữ g103 APPLY, g104 và g105 cùng kết luận lịch sử, không tự retry hoặc reset.
+- Ghi rõ G1-G4 chưa được nghiệm thu, không ký nhãn beta simulator hay hardware release.
 
 ## Mẫu báo cáo một lượt
 
-Các em dùng các trường sau: mục tiêu; source/tag; APK/AP/profile SHA;
-platform; command; started/ended; host elapsed; AP elapsed; pass/fail/not-checked;
-primary cause; secondary cleanup errors; raw/manifest SHA; receiver result;
-frame/clock continuity; quyền sau mất link/restart; phần chưa chứng minh;
-quyết định tiếp theo. Tên người review và phạm vi review cần ghi rõ.
+Mục tiêu; source/tag/commit; APK/AP/profile SHA; OS/CPU/RAM/Node/Python/Android/WebView; lệnh và argv; thời gian host/AP/clock domain; pass/fail/chưa kiểm; primary cause; secondary cleanup; raw/manifest SHA; frame continuity; authority sau mất link/restart; SAF/receiver; reviewer và quyết định tiếp theo.
 
-## Chấp nhận có điều kiện
-
-Một nhóm có thể nhận source đầy đủ nhưng chưa chạy được Android-SITL vì thiếu
-SDK hoặc artifact. Khi đó ghi đúng “đã nhận source, runtime chưa kiểm”.
-Tương tự, có thể chấp nhận bộ byte của một hồ sơ lỗi mà không chấp nhận nhiệm vụ
-bay hoặc chất lượng khảo sát. Người tiếp nhận, người kiểm thử và người chốt
-release là các vai trò khác nhau; ghi đúng ai chịu trách nhiệm phần nào.
+Nếu thiếu SDK/artifact hoặc admission từ chối, ghi “đã nhận source, runtime chưa kiểm” cùng nguyên nhân. Khi lỗi, giữ bằng chứng, không dừng phiên khác hay xóa lock để chạy lại. Người tiếp nhận, người kiểm kỹ thuật và người quyết định release là các vai trò riêng.

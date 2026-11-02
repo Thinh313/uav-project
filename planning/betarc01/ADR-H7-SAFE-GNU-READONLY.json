@@ -1,0 +1,36 @@
+{
+  "format": "aeris-contractor-h7-superseding-wire-profile-decision",
+  "version": 1,
+  "status": "READONLY_COMPATIBILITY_PROFILE_SOURCE_AUTHORIZED_ACTORS_REQUIRE_QA_AND_ADMISSION",
+  "hostNs": 12765070278625,
+  "supersedesRuntimePlan": "planning/betarc01/ADR-H7-RAW-LOSSLESS-VIEW.json",
+  "prototypePreserved": "planning/betarc01/codec_h7/BUILDER-CODEC-H7-HOLD01.json",
+  "selectedProfile": "SAFE_GNU_LONGNAME_L_V1",
+  "reason": "GNU L is bounded pathname metadata for the next regular file, not a filesystem link. A selected readonly wire-profile adapter preserves logical file and integrity floors while avoiding paired-export ledger/capture/receiver churn and double storage. Original raw remains the only runtime export.",
+  "measuredPrototypeBytes": {
+    "originalRaw": 225280,
+    "pairedView": 215040,
+    "pairedTotal": 440320,
+    "singleRaw": 225280,
+    "scope": "Oneactualm501fixture, not product latency/performance benchmark"
+  },
+  "requirements": [
+    "No changes to oldfrozenstrictreader implementations or oldm501FAIL outcome",
+    "Explicit selected profile/source ID in candidate sourceasset and captureprofileobservation; no fallback based on parse failure",
+    "Only single exact GNU L immediately followed by matching regular truncated100byte name; validate each checksum,padding,exactNUL,pathroot/components,duplicates,bounds",
+    "All logical members remain regularfiles/directories only; hardlinks/symlinks/K/PAX/sparse/devices/fifo/orphan/chains remain forbidden",
+    "Python and Node current readonly adapters use same boundedphysicalgrammar and then unchanged logical+archiveindex/signedjournal/workspace semantics",
+    "Existing deviceproducer commands,captureV1rows,exact6exportfilenames,shared192MiB,64MiBraw/512MiBlogical/8192entries/path240/14owners/future60686336/caps13and68/timeguards unchanged",
+    "Preserve all raw; no derivedview runtimeobjects, no newpairedreservations, no originaldatarewrites",
+    "Source-only preparation can proceed; Root will freeze/activate only after completeheldsource/mock/independentQA and currentforecast. Newresourcecaps requireexplicituserauthorization ifneeded."
+  ],
+  "newFiniteCases": [
+    "m601",
+    "m602",
+    "g104"
+  ],
+  "noAPPLYOrReinstallInRecovery": true,
+  "authorityRestorable": false,
+  "productionSigning": false,
+  "authorityRationale": "Routine protocol interoperability within full BETA-RC01 implementation scope; old NO_EXTENSION wire grammar remains historicallyunchanged, newselectedprofile preserves underlying safety/integrityfloors. No numerical or authorityguard waived."
+}

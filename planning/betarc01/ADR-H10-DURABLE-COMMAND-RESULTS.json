@@ -1,0 +1,29 @@
+{
+  "decision": "Separate durable fullcommandresult evidence from boundedprogress/control ACK. One strict resultref decoder for allactualcallers, with immutable originalcontext/hash/length binding and no automaticresubmit.",
+  "format": "aeris-architecture-decision",
+  "hostNs": 33566402621583,
+  "nextEvidence": "NewsourceheldforensicreadOnlycoldfullTAR, noActivity/admin/install/archive/AP. Root+independentQA compare evolvedstate beforequalification or archival.",
+  "rejected": [
+    "increaseprogresslimittohidepayloadgrowth",
+    "truncate/dropsealfields",
+    "treatmissingACKasoperationnotexecuted",
+    "blindinitial75file8archivequalificationafter2newgenerations",
+    "delete/resetnativejournals"
+  ],
+  "scope": "Engineeringmock/SITL, notproduction/hardware qualification",
+  "status": "L2_BUGFIX_WITHIN_AUTHORIZED_RC",
+  "trigger": "G105 hostseal suboperations completed before fullCOMMAND_COMPLETE exceeded4KiBprogress. Completeoversizedbytesnotretained, no no-effect inference.",
+  "unchanged": [
+    "progress4KiB",
+    "command16",
+    "progressaggregate1MiB",
+    "writerpayload64KiB",
+    "writer200ms",
+    "HostHealth100ms",
+    "freshness250ms",
+    "all14ownerquotas+future60686336",
+    "artifact20MiB",
+    "metadata100MiB",
+    "source/candidates/ENDURE immutable"
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "format": "aeris-contractor-h7-wire-codec-decision",
+  "version": 1,
+  "status": "SOURCE_PREPARATION_AUTHORIZED_LIVE_ACTIVATION_NOT_YET_APPROVED",
+  "hostNs": 11729925873500,
+  "problem": "Actualm501complete deviceTAR has10validGNUlongname L headers for archivedpathsover100bytes; unchangedstrictTARreaders correctlyrefuse beforesemanticreconciliation. Data hasnotbeenlost; oldm501remainsFAIL.",
+  "primarySource": "evidence/betarc01/qa/AOSP-ANDROID13-TAR-FACT01.json",
+  "noSpeculativeFormatFlag": true,
+  "alternatives": {
+    "blindUSTARflag": "Rejected: officialAndroid13source optiontabledoesnotdeclare --format; actualselecteddevicebinaryhelpnotverified.",
+    "loosenExistingStrictParser": "Rejected for this work: preserve existing strictreader/oldfailure meaning.",
+    "freshADBPerFileExporter": "Deferred: manycommands,newmanifest/TOCTOU protocol and largercapture surface.",
+    "selected": "A single source-held boundedGNUtransport decoder yields separatelyidentifiedlosslessUSTARview. Retainexactraw; validateviewonlyafterfullraw\u2194view replay. No extraction or authority."
+  },
+  "prototype": {
+    "hold": "planning/betarc01/codec_h7/BUILDER-CODEC-H7-HOLD01.json",
+    "independentQA": "evidence/betarc01/qa/INDEPENDENT-H7-CODEC-PROTOTYPE01.json",
+    "rawSHA256": "1963cd4a2cf2658bd9f55384c1a6bca54f6bbe77e62955e19d02a82d08a911e1",
+    "viewSHA256": "006a629a86a59b8fcfc0a61b30a8e640ff92349a42abdffc1dc92f238b6f74d0",
+    "offlineSemanticReplay": "PASS_DERIVED_VIEW_ONLY_NOT_M501_ACCEPTANCE"
+  },
+  "integrationContract": [
+    "CurrentV2capture identifies raw deviceTAR and HOST_DERIVED_LOSSLESS_USTAR_VIEW separately; never relabelviewasdeviceoriginal",
+    "Compactsourceboundbinding<=4096bytes; independentreceivers recompute fullraw/header/member/view equality and codecSHA before originalstrictreaders",
+    "Preserve all six exactlogicalexport names; fourcurrentnativeTar names map1:1 to finitepairedraw/viewphysical names; legacy+fullrawV1 unchanged",
+    "Allraw/view/proofallocation charged honestly, shared192MiB physicalexport cap and unique logicalslot semantics; no failedrefund",
+    "Raw64MiB, view<=raw, logical512MiB,8192entry,path240bytebounds; rejectlinks/K/PAX/sparse/devices/duplicates/traversal/chains/truncation/badpadding/checksum",
+    "NoAPPLY/PREVIEW/reinstall/Activity during newm601/m602 SDKreconciliation; g104 only after samecandidateRootpairproof",
+    "Allnumericguards/caps13/68/owner14/future60686336 unchanged; Rootfreeze/actorrequiresfullQAandactualforecast. Sourcework maycomplete while forecastrefuses; no automaticcapincrease."
+  ],
+  "noOldSourceCandidateOrENDUREChange": true,
+  "noProductionSigning": true,
+  "m501Reclassification": false
+}

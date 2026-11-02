@@ -1,7 +1,7 @@
 {
   "format": "uav-project-public-validation",
   "status": "SOURCE_HANDOFF_READY_PRODUCT_BETA_NOT_READY",
-  "sourceCommit": "6ea4f5027bc93d4f67e10da53c098391d9553f2f",
+  "sourceCommit": "43ee1c0c49604b20e1c421c9dabc1f0ee925a4c4",
   "originalSourceEntriesAccounted": 12834,
   "publicExportEntriesBeforeNewDocs": 12511,
   "privateEntries": 325,
@@ -54,8 +54,8 @@
     "scope": "acceptance.test.mjs + geo14.test.mjs after explicit original synthetic fixture reconstruction; no claim that full387test suite passed"
   },
   "hostGeneratedExecutablesRetainedPrivately": 9,
-  "PDFPages": 18,
-  "PDFSHA256": "e6eca9c01b7eb1ecf1182dd605c375f4313e44d3f45df1851b707c0022f2021d",
+  "PDFPages": 12,
+  "PDFSHA256": "4cb17cec2f1d7856ff7da61cb6f29c7aa11f9a00b84e27dbfbc8c9786d682e64",
   "broadHistoricalNpmTestAfterFixtureRepair": "NOT_RERUN_FULL_SUITE; affected27/27passed;40legacyfloorblockedcasesand1timingfailurefromfirstfullrunremainunresolved",
   "intake01": {
     "tag": "research-intake-2026-10-31-r1",
@@ -102,5 +102,25 @@
     "privateDevelopmentTrack": "nclamvn/aeris",
     "publicResearchTag": "research-runtime-2026-10-31-r2",
     "productBetaReady": false
+  },
+  "historicalSourceCommit": "6ea4f5027bc93d4f67e10da53c098391d9553f2f",
+  "h10": {
+    "privateSourceCommit": "43ee1c0c49604b20e1c421c9dabc1f0ee925a4c4",
+    "privateTag": "development-handoff-2026-11-02-h10",
+    "publicTag": "research-handoff-2026-11-02-h10",
+    "candidateSHA256": "5e3c5d69967e415867848208f76e8a9a5b5877a24f36497d2b825d3e64159810",
+    "privateHostMockMethods": 34,
+    "publicDerivedSyntheticMethods": 13,
+    "supplementVerifierMethods": 6,
+    "rawM801": "FORENSIC_ONLY_NOT_G1_OR_SDK_QUALIFICATION",
+    "G1G2G3G4": "NOT_ACCEPTED",
+    "source140": "EXACT_BYTES",
+    "artifactCapMiB": 20,
+    "metadataCapMiB": 100,
+    "SDKOrSITLOrAPKBuildStartedInHandoff": false,
+    "privateDataPublished": false,
+    "rawWebCaptureFilesPrivate": 229,
+    "historicalRecordsRetained": true,
+    "whitespace": "Inherited whitespace in pinned runtime source retained to preserve exact bytes; not a newly claimed lint PASS"
   }
 }

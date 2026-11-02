@@ -1,0 +1,39 @@
+{
+  "evidence": {
+    "originalStderr": "evidence/betarc01/g104/diagnostics/product-beta-rc01-native01/stderr",
+    "primary": "PRODUCT_RUNTIME_PRODUCT_COMPANION_EXIT",
+    "reason": "Python closure maps logical imports to H7 selected profile aliases, Node load-only hook verifies unresolved physical old import instead; actual resolver and held graph disagree",
+    "slot": "g104",
+    "specific": "PRODUCT_MODULE_OUTSIDE_HELD_GRAPH:planning/nativejournal17/native-cold17.mjs"
+  },
+  "format": "aeris-contractor-tip",
+  "required": [
+    "preserve H8/H7/all old candidates/cases point-in-time SHA/mode/inode/device, no write-through hardlinks",
+    "one manifest-bound finite alias interpretation shared by actual Node resolver and graph; verify final target SHA/path/no symlinks/root and refuse undeclared/dynamic targets",
+    "select new isolated verified loader and bind it into every actual companion launch (G1/G2/G3/G4), not only test import; no uncontrolled NODE_OPTIONS preload",
+    "real Node transitive import smoke using actual selected server and root companion path boundary before any runtime actors; forged/missing alias,target,hash,scope tests; keep exact H7 GNU-profile readers",
+    "finite fresh SDKm701/m702 then native-onlyg105 same futurecandidate before originalG2/G3/G4; never reuse consumeds slots or APPLY/install; preserve originalG103 conservation anchor",
+    "minimal centralized solution; no broad adding old strict parser behind selected GNU profile, no pin bypass or automatic fallback",
+    "old source17focused tests as applicable, new seam tests based actual Node hook; regenerate graph/writerpins with atomic COW; HOLD beforeQA; no freeze/actors byBuilder"
+  ],
+  "roles": {
+    "Builder": "implement/mock and deliver sourceHOLD",
+    "QA": "independent source and cold raw review",
+    "Root": "choose/check solution, freeze and actual single-use launches"
+  },
+  "scope": "BETA-RC01 engineering isolated runtime-h9 only; existing caps20/100 and all guards retained",
+  "task": "Fix selected module alias resolution end-to-end after original g104 loader failure",
+  "unchanged": {
+    "HostHealthMs": 100,
+    "artifactMiB": 20,
+    "catchupCapMs": 500,
+    "diskFloorGiB": 10,
+    "freshnessMs": 250,
+    "metadataMiB": 100,
+    "nativeAndExportQuotas": true,
+    "ownerFutureBytes": 60686336,
+    "owners": 14,
+    "speedup": 1,
+    "writerMs": 200
+  }
+}

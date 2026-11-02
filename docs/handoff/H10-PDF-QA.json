@@ -1,0 +1,41 @@
+{
+  "schemaVersion": 1,
+  "scope": "Documentation/PDF author QA only; not flight or beta acceptance",
+  "date": "2026-11-02",
+  "pdf": "output/pdf/UAV-PROJECT-HANDOVER.pdf",
+  "pdfSha256": "4cb17cec2f1d7856ff7da61cb6f29c7aa11f9a00b84e27dbfbc8c9786d682e64",
+  "bytes": 88110,
+  "pages": 12,
+  "pageSize": "A4",
+  "chapters": 9,
+  "render": "Poppler pdftoppm, all 12 final pages, visual author inspection",
+  "visualResult": "PASS: no clipping, overlap, single prose-word lines or unbalanced table cells observed",
+  "extractedTextChecks": {
+    "outOfBoundsCharacters": 0,
+    "nonNeutralColors": 0,
+    "emDashes": 0,
+    "replacementGlyphs": 0,
+    "proseSingleWordLines": 0,
+    "chapterOrderPreserved": true
+  },
+  "technicalWrappingExceptions": [
+    {
+      "page": 8,
+      "text": "52fd3330c64c327cc5827be61ff4f9cda20dd1a5bede1d20c08ee4dd0a92fd28",
+      "classification": "technical SHA identifier"
+    },
+    {
+      "page": 12,
+      "text": "eed4ba7851897af3fb57cd29005a84df41e39a5d97b5ae510baf02321ddc5c17",
+      "classification": "technical SHA identifier"
+    },
+    {
+      "page": 12,
+      "text": "3e08bb8f8c23296c5ef6f6f576523b5b293f9d857478c3463cf1fdcfe7adfceb",
+      "classification": "technical SHA identifier"
+    }
+  ],
+  "historicalDocuments": "INTAKE01 and MILESTONE05 remain separate historical records; not reprinted as current guidance",
+  "temporaryRenders": "Task-owned tmp/pdfs/h10-docs removed after review; no raster QA images delivered",
+  "runtimeClaim": "No Android/SITL/SDK build, signing or production acceptance performed by this documentation task"
+}

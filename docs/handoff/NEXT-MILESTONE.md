@@ -1,54 +1,33 @@
-# Chiến dịch tiếp theo: beta simulator tích hợp
+# Milestone tiếp theo: tiếp tục đúng trạng thái, đóng G1 rồi mới vào SITL
 
-Anh đề nghị nhóm gom việc thành một milestone sản phẩm, không tiếp tục báo DONE
-cho từng bản vá mà chưa đi hết hành trình. Tên làm việc: BETA-SIM-STABLE.
-Mục tiêu là một cấu hình source/APK/profile xác định chạy đủ nhiệm vụ và đóng
-bằng chứng, trước khi nối tới phần cứng thật.
+## Một mục tiêu có thể nghiệm thu
 
-## Giai đoạn A: tiếp nhận và khoanh đường chạy
+Nhóm cần một release chạy trọn khảo sát -> preflight -> Fly manual/assisted/AUTO cùng video/payload -> review -> SAF/receiver, có mất link/reboot và persistence. Điều kiện beta simulator là cùng cấu hình source/APK/profile, đủ raw và frame, không tự phục hồi quyền, không còn lỗi chặn P0/P1 trong phạm vi công bố.
 
-Các em chốt source/tag và machine profile, xác minh mọi input cần cho đường selected,
-đọc primary/secondary causes trong kit, tái lập mock và ghi thiếu prerequisite.
-Đầu ra là sơ đồ luồng, danh mục dependency có SHA, quyết định ngân sách artifact
-và một lệnh kiểm chỉ đọc có log. Không thêm tính năng mới trong giai đoạn này.
+## Bước 1: tiếp nhận và nguồn dữ liệu
 
-## Giai đoạn B: cold-start và media
+Clone đúng tag H10, verify source và chạy mock public. Nhận gói private, kiểm SHA qua kênh tin cậy và dựng workspace ngoài Git. Ghi cấu hình máy, source/pins và các prerequisite thiếu. Không sửa candidate/raw lịch sử hoặc ghép ngầm các revision.
 
-Kiểm R02 trên lượt ngắn sau gate. Đo AP boot time và host wait riêng, chỉ đi tiếp
-khi health thực đạt và dữ liệu đủ tươi. Theo dõi source/viewer/collection riêng;
-đo encode, gửi, nhận, decode, warm frame và display. Khi sourceAGE250 từ chối,
-ghi đúng substage và qualified clock interval, không suy ra do UI hoặc onPause.
+## Bước 2: contract trạng thái đã thay đổi
 
-Đầu ra phải có video-measure dispatch/ack và frame proof thực. Một nút hết disabled
-hoặc một timeout được đổi thành lỗi nhanh chưa là kết quả chức năng.
+Dùng raw m801 và các STATUS gốc để ràng buộc index 83 file/9 thư mục, lifetime generation 10, hai journal mới đóng/rỗng và tám archive. Chứng minh bảo toàn dữ liệu cũ, mode/UID/GID, workspace, counter và registry prefix. Kiểm âm với snapshot 75 file, thiếu journal/STATUS, sai SHA/head/counter, thêm file hoặc thay mode/UID/GID.
 
-## Giai đoạn C: hành trình 10 phút
+Không dùng decoder trạng thái ban đầu và không gửi lại APPLY của g103. m801 chỉ là observation anchor mới, không tự cấp quyền archive hoặc resume. Tạo contract tiếp tục có source pin, receiver đối chiếu độc lập và admission mới trước chạy G1.
 
-Dùng cùng release đi từ lập nhiệm vụ tới preflight, upload/readback,
-AUTO, HOLD/manual/assisted, chủ động LAND và review. Chạy đồng thời payload/video,
-kiểm quyền hai operator và phản hồi sai target. Thử mất link, AP reboot,
-app restart và nhận gói SAF ở receiver độc lập.
+## Bước 3: G1 thực bằng bản sửa
 
-Mỗi lần gián đoạn phải giữ hồ sơ và thu hồi quyền. Khôi phục record không tự
-cấp lại authority. Không cộng hai khoảng chạy bị ngắt thành một lượt liên tục.
-Không giữ joystick cuối khi input mất freshness.
+Dùng candidate xác định kiểm qualification, hai phiên native, full cold export và lossless seal/ref. Phải kiểm normal closure thực sau ACK cuối, lỗi writer/observer/thread và restart/persistence. Kết quả mock của H10 chưa thay bước này. g105 giữ FAIL dù dữ liệu còn bảo toàn.
 
-## Giai đoạn D: lặp và chốt beta
+## Bước 4: G2 và G3
 
-Lặp ít nhất 3 polygon và 3 corridor, gồm hình nhỏ/lớn, trường hợp góc hẹp,
-Home/cao độ khác nhau và tải host được công bố. Giữ các ca âm: stale input,
-sai receiver, sai payload target, thiếu/méo gói, quota và closure không đủ.
-Dùng tiêu chí đã chốt trước lượt; không đổi ngưỡng sau khi biết kết quả.
+Chạy ngắn polygon rồi corridor Android-SITL, kiểm KML/mission model, preflight, upload/readback, manual/AUTO, video/payload và SAF receiver. Ghi từng chặng encode/gửi/nhận/decode/display và clock qualified; không lấy nút hết disabled hoặc ACK làm bằng chứng execution/ảnh thật.
 
-Chỉ chốt beta simulator khi không còn lỗi chặn P0/P1 trong profile đã công bố,
-đủ frame, không journal gap chưa giải thích, video/payload đạt tiêu chí được đo,
-quyền thu hồi đúng, restart/receiver không kết luận sai và shutdown sạch.
-Các em phải công bố cả cấu hình, số lượt, denominator, percentile và failure.
+Sau đó thử mất link, AP reboot và app restart. Quyền phải bị thu hồi, hồ sơ được giữ và record khôi phục không tự cấp lại authority. Mỗi ca âm có primary cause, cleanup/disposal và byte inventory riêng.
 
-## Giai đoạn E: phần cứng
+## Bước 5: G4 và mở rộng corpus
 
-Sau beta simulator mới chốt SDK/transport/input của controller, thông số aircraft
-và payload thật. Bench trước, tiếp theo HIL, rồi flight test được phê duyệt riêng.
-Mô hình Hera cần dữ liệu khối lượng/quán tính, thrust/RPM, pin, tải và gió thực;
-không hiệu chỉnh bằng cảm giác hoặc dùng hình 3D đẹp làm bằng chứng vật lý đúng.
-Phase One, RGB, thermal, gimbal và media gốc có contract/qualification riêng.
+Chỉ khi các cổng thực tế trước đạt mới chạy 600 giây bay tích hợp liên tục. Không cộng các interval gián đoạn hoặc thời gian idle. Tiếp tục corpus rộng hơn gồm ít nhất ba polygon và ba corridor, trường hợp Home/cao độ, hình nhỏ/lớn/góc hẹp và tải host được khai báo.
+
+## Sau beta simulator
+
+Controller/input/video, SDK/MCU/radio, Phase One/RGB/thermal/gimbal thật cần bench riêng, sau đó HIL và field qualification. Mô hình Hera cần số đo mass/inertia/thrust/RPM/pin/payload/gió; hình 3D hoặc cảm giác điều khiển không thay dữ liệu hiệu chuẩn. Đây là gate riêng, không được suy ra từ simulator.

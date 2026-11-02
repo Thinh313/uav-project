@@ -1,45 +1,38 @@
-# Hiện trạng tại ngày bàn giao
+# Hiện trạng H10 tại ngày 02/11/2026
 
-## Kết luận
+**Engineering alpha; beta tích hợp NOT READY.** Cả G1, G2, G3, G4 của BETA-RC01 đều chưa được nghiệm thu. Nguồn H10 đã qua source/mock và QA độc lập; chưa chạy lại seal/normal-close của hành trình G1 Android bằng H10.
 
-**Engineering alpha; beta tích hợp NOT READY.** Đã có nhiều năng lực source và
-bằng chứng theo từng lát cắt. Chưa có một bản phát hành duy nhất được nghiệm thu
-trọn AUTO/manual + video/payload + mất link/reboot + persistence/SAF.
-Không quy đổi số milestone hoặc LOC thành phần trăm trưởng thành.
+## Năng lực sản phẩm đã có trong source
 
-| Nhóm | Hiện có | Mức chứng minh cần phân biệt |
+| Nhóm | Phạm vi hiện có | Giới hạn |
 |---|---|---|
-| Khảo sát và nhiệm vụ | KML/polygon/corridor, compiler, Home/cao độ, QGC semantic | Nhiều corpus và lượt SITL riêng; chưa tự suy ra chất lượng ảnh khảo sát thực |
-| Điều khiển | Preflight, geofence/failsafe, AUTO, manual/assisted, thu hồi quyền | Có kết quả theo revision; beta tích hợp hiện tại vẫn chưa đạt |
-| Payload/operator | Discovery/routing, camera/gimbal contract, dual-operator | Mock/replay và SITL; chưa nghiệm thu camera/gimbal Hera thực |
-| Video/media | Host source, WebCodecs, qualification, geotag/review pipeline | Chưa chốt cold-start/FPS và hành trình tích hợp cuối; ảnh thật chưa được xác nhận |
-| Hồ sơ | Journal, checkpoint, restart, SAF, receiver/integrity | Các lớp đã được kiểm từng phần; không suy ra toàn bộ release đã ổn định |
-| Giả lập | SITL vòng kín, physics, viewer 3D, replay, âm thanh tổng hợp | Chưa hiệu chuẩn mô hình Hera bằng số đo thực; rain/wind/payload không là digital twin đã xác thực |
-| Android | Source shell/cockpit, APK development, emulator workflow | Có kết quả emulator theo cấu hình; chưa nghiệm thu HeraHub hay Xiaomi thực trong mốc này |
+| Khảo sát | KML, polygon/corridor, compiler, Home/cao độ và QGC semantic | Corpus/SITL theo revision, chưa chứng minh chất lượng ảnh thực |
+| Điều khiển | Preflight, geofence/failsafe, manual/assisted/AUTO, thu hồi quyền | Nghiệm thu beta cùng một release còn mở |
+| Payload | Discovery/routing camera/gimbal, nhiều payload, dual-operator | Contract/mock/replay; Hera, Phase One, RGB/thermal thực còn gate riêng |
+| Video/media | Host source, decoder/clock/FPS, geotag/review, xuất/nhận gói | H10 chưa nghiệm thu nhiệm vụ đồng thời video/payload |
+| Hồ sơ | Journal, checkpoint, restart, quota, SAF và receiver | Byte hợp lệ không tự chứng minh recording hoàn chỉnh hoặc nhiệm vụ thành công |
+| Giả lập | SITL vòng kín, physics, viewer 3D và âm thanh tổng hợp | Chưa hiệu chuẩn Hera bằng số đo thực, chưa phải digital twin xác thực |
+| Android | Native shell/cockpit, bridge/input/storage, APK development và emulator | Chưa nghiệm thu Xiaomi/HeraHub hay radio/MCU/payload thực |
 
-## Kết quả VIDLIFE12 mới nhất
+## Bằng chứng mới nhất
 
-- Target ArduPilot 42/1, firmware 4.7.1; GCS 255/190. Chín yêu cầu cadence được ACK
-  chấp nhận; quan sát gap sau ACK: heartbeat 271 ms, id 30/id 33 là 64 ms.
-- Discovery 39/39 tham số. Client giữ 42 heartbeat khỏe, không có first fault lifecycle.
-- Pin 25,148 đến 25,150 V đạt, nhưng cả 95 bản tin EKF có flags 167 (0xA7), thiếu bit 16
-  định vị ngang tuyệt đối. AP báo `Fence enabled, need position estimate`.
-- Lượt dừng trước video-start/ARM/RC; không có ảnh thực. Root chạy 129,515 giây host,
-  AP boot ở 32,59 giây khi kết thúc. Yêu cầu profile 180 giây không phải thời gian đã đạt.
-- 39.239 nhóm RX/INTENT/localSEND/STAGE giữ lại khớp nhau; unknown sends 0,
-  max atomic 191,990 ms. Hồ sơ incomplete, không được nghiệm thu bay/media.
-- R02 chỉ đổi wait khởi tạo navigation 30 lên 60 giây host.11 mock đạt; chưa kiểm thực.
-  Candidate mới bị pure gate từ chối: 8.466.432 B dự toán > 8.388.608 B, vượt 77.824 B.
+H8 m601/m602 và H9 m701/m702 là bốn lượt SDK cold boot đã kiểm thực, dữ liệu private được đối chiếu và SDK đóng bình thường. Chúng là qualification SDK của từng candidate, không phải G1 hoặc chuyến bay.
 
-## Thứ tự nghiên cứu tiếp
+g104 FAIL trước Activity vì Node không phân giải alias theo graph source. H9 đã sửa loader; g105 đã qua companion READY, đăng ký native và rollover. g105 vẫn FAIL: SEAL_PRODUCT đã có tác động nhưng toàn bộ kết quả COMMAND_COMPLETE vượt progress 4 KiB. Kết quả quá lớn không được lưu đủ, nên không biết chính xác số byte của payload cũ.
 
-1. Xác minh cây source và đọc bộ evidence private, tái lập mock trên máy nhận.
-2. Chốt ngân sách artifact cho campaign mới theo review; không xóa evidence để vừa cap.
-3. Kiểm navigation/EKF cold-start và viewer/video-measure trên lượt ngắn, giữ guard.
-4. Chạy 10 phút Android-SITL không can thiệp, đủ AUTO/manual, video/payload,
-   mất link, AP reboot, app restart, persistence và receiver SAF.
-5. Lặp polygon/corridor và tải host; chỉ chốt beta simulator khi cùng release đạt.
-6. Sau đó mới bench controller/input/video và payload thật, HIL rồi flight test.
+H10 sửa chung đường kết quả và đóng writer. **34 phương thức kiểm tập trung đạt trên máy tác giả**, gồm Node client -> Python writer Unix RPC/fsync -> Root reader với metadata budget mock. QA độc lập kiểm source và các ca tập trung. Không cộng các lượt kiểm trùng nhau thành tỷ lệ trưởng thành.
 
-Mục tiêu GCS cao cấp là hướng sản phẩm. Chưa có benchmark chứng minh vượt DJI,
-chưa có chứng nhận tuân thủ hoặc quyền vận hành thực tế từ các test tổng hợp này.
+m801 là một lượt emulator thực chỉ đọc. Đã thu đủ raw 250.880 B và SDK đóng bình thường. Đây là forensic capture, không phải SDK qualification hay G1. Root và QA đối chiếu được 83 file/9 thư mục: thêm đúng hai AJ02 và sáu STATUS DTO; các dữ liệu cũ khác giữ nguyên, registry chỉ append.
+
+Registry hiện tại có lifetime generation 10, record 0, hai journal mới đóng/rỗng lưu trực tiếp, tám journal trong archive và không pending. Head cuối được quan sát từ raw m801 mới, không phải ACK cuối đã giữ trước lỗi g105. Không suy ra tính liên tục đường dẫn hoặc chống rollback toàn filesystem.
+
+## Trạng thái bốn cổng
+
+| Cổng | Trạng thái | Cần hoàn tất |
+|---|---|---|
+| G1 | NOT ACCEPTED | Contract tiếp tục từ 83 file, qualification đúng candidate, hai phiên native và full cold export, seal/ref/normal close |
+| G2 | NOT RUN với H10 | Polygon/corridor Android-SITL, upload/readback, manual/AUTO, video/mock payload, review và SAF |
+| G3 | NOT RUN với H10 | Mất link, AP reboot, app restart, thu hồi quyền và persistence |
+| G4 | NOT RUN | 600 giây bay tích hợp liên tục, chỉ sau các cổng và lượt ngắn đạt |
+
+Raw về GPS/EKF/clock của VIDLIFE12 và runtime máy nhận R2 là lịch sử được giữ riêng. Không dùng kết luận của revision cũ làm kết luận navigation hoặc video của candidate H10. Chưa có benchmark chứng minh vượt DJI, chứng nhận compliance hoặc qualification bay thật.
