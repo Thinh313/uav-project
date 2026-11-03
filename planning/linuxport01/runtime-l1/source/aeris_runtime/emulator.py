@@ -46,7 +46,9 @@ def _query_reserved(argv,budget,root,*,maximum=256):
  if err:raise RuntimeError('GUARDIAN_QUERY_STDERR')
  return out.decode()
 
-ADB_EXECUTABLE_SHA256='1811e253b21b12cbfda7201ebaf86c10e7ddcb5c606a7a81f7c82b4c429c2d3b'
+# LINUXPORT01: the pinned adb is a host binary. darwin keeps the owner's macOS platform-tools 37.0.1 build;
+# linux pins the team's Linux build of the same 37.0.1 release (evidence/linuxport01/emulator-spec.json).
+ADB_EXECUTABLE_SHA256={'darwin':'1811e253b21b12cbfda7201ebaf86c10e7ddcb5c606a7a81f7c82b4c429c2d3b','linux':'a902be8f45c6c62e76c9efaf6947a0fa747c9cabd89a2ac8e0d16ecb30b3ed01'}.get(__import__('sys').platform)
 ADB_STARTUP_STDERR=b'* daemon not running; starting now at tcp:5037\n* daemon started successfully\n'
 def prepare_adb_server(adb,budget,root,campaign):
  """One exact source-admitted daemon preparation; ordinary queries stay strict."""
