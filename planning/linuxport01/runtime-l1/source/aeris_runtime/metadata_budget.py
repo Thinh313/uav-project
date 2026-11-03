@@ -8,7 +8,10 @@ from .cleanup import cleanup,finish_cleanup,close_fd
 from .stage_trace import span as trace_span
 from contextlib import contextmanager
 import errno,fcntl,hashlib,json,os,re,selectors,shutil,stat,subprocess,threading,time,secrets,traceback
-MIB=2**20;CAP=68*MIB;CLOSURE=MIB;LEDGER=128*1024;BLOCK=4096
+# LINUXPORT01: 68 -> 100 MiB, the host metadata cap the owner authorized for the isolated H10 runtime
+# (evidence/betarc01/AUTHORIZATION-CAPS03.json, README.md:83, docs/handoff/ARCHITECTURE.md:31).
+# Applying it to runtime-l1 is a team decision recorded in planning/linuxport01/README.md.
+MIB=2**20;CAP=100*MIB;CLOSURE=MIB;LEDGER=128*1024;BLOCK=4096
 CLOSING_OWNERS={'lifecycle':192*1024,'guardian':136*1024,'monitor':128*1024,'stream':256*1024,'commands':32*1024,'command_receipts':32*1024,'closure':224*1024}
 LIMITS={'requests':900,'commands':3700,'dtoSnapshots':900,'preparationCommands':24,'bootstraps':2,'observerEpochs':4,'cases':2,'children':4,'diagnosticChildren':4,'queries':32,'monitorRows':4200,'guardianRows':4200,'campaignRecords':32,'auditRecords':4}
 OWNERS={'dto':15*MIB,'stream':4*MIB,'commands':9*MIB,'command_receipts':5*MIB,'requests':2*MIB,'barriers':512*1024,'lifecycle':8*MIB,'host_queries':MIB,'child_output':4*MIB,'monitor':3*MIB,'guardian':3*MIB,'campaign':MIB,'audit':256*1024,'external_task':MIB}

@@ -95,7 +95,7 @@ def metadata_cap_contract():
  import importlib
  from . import metadata_budget,policy
  cap=metadata_budget.CAP
- if type(cap)is not int or cap!=68*2**20:raise ValueError('HOST_METADATA_AUTHORIZED_CAP')
+ if type(cap)is not int or cap!=100*2**20:raise ValueError('HOST_METADATA_AUTHORIZED_CAP')
  rows=[]
  for name,method in [('host_health','_inventory_counters'),('monitor','_caps'),('emulator','_caps'),('lifecycle','_proof_capacity')]:
   module=importlib.import_module('aeris_runtime.'+name);path=PACKAGE_ROOT/(name+'.py');raw=path.read_bytes();tree=ast.parse(raw);fn=next(n for n in ast.walk(tree)if isinstance(n,ast.FunctionDef)and n.name==method)

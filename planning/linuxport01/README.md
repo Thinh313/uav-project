@@ -46,16 +46,16 @@ freshness and output limits, the artifact cap, and `darwin_disk11.py`.
   used. The owner's n02 data is now loaded on our AVD, and the app was given
   UID 10141 by filling lower UIDs with empty placeholder apps, so no check in
   the code changed.
-- Port done; `test-linuxport01.py` passes 19/19 on Linux (one check is
+- Port done; `test-linuxport01.py` passes 20/20 on Linux (one check is
   skipped where the private authorization record is absent).
 - Team QA gate written, scoped as source/mock only (not independent QA).
-- Artifact cap raised from 13 to 20 MiB (see below).
+- Artifact cap raised from 13 to 20 MiB and host metadata cap from 68 to
+  100 MiB, both as the owner authorized for H10 (see below).
 - Install and cold-boot entries added (see below); install-stage candidate
   frozen in a separate private work tree.
-- **Next blocker:** `root-install-l1.py --inspect` passes every entry check
-  but the metadata admission refuses: 73,465,856 B needed vs the H5 cap of
-  71,303,168 B (68 MiB). The owner authorized 100 MiB for H10; that is
-  pending a decision.
+- `root-install-l1.py --inspect` for `m301` passes: metadata, artifact and
+  disk all admitted. No emulator actor was started.
+- **Next:** the real `m301` install run on the team AVD.
 
 ## Install and cold-boot entries
 
@@ -105,9 +105,24 @@ artifact cap:
 | `assets/resource-policy.json` | `newIsolatedAPKAndArchiveReserve` 20 MiB for the campaign and all 3 cases; `requiredFreeBytes` and `taskHardPeakBytes` +7,340,032 B each (more disk reserved, not less); amendment block points at `AUTHORIZATION-CAPS03.json` |
 | `test-cap03.py` | One line: expects `c.CAP==20*2**20` |
 
-The metadata cap stays at 68 MiB (H10's 100 MiB is not applied).
-`test-linuxport01.py` checks that the policy differs from H5 only in these
-keys and matches H10 minus its metadata increase.
+## Host metadata cap: 68 -> 100 MiB (team decision)
+
+The `m301` admission preview refused at 68 MiB: 73,465,856 B needed
+(12.8 MB current metadata, mostly the owner's later H6-H10 records, plus the
+unchanged 60,686,336 B writer reserve) vs 71,303,168 B. The same owner
+authorization (`AUTHORIZATION-CAPS03.json`, `metadataCapBytes: 104857600`)
+set 100 MiB for H10. Applied exactly as H10 did:
+
+| File | Change |
+|---|---|
+| `metadata_budget.py` | `CAP=100*MIB`, comment citing the sources above |
+| `pipeline_contract.py` | Authorized cap check `100*2**20` |
+| `lifecycle.py` | Error name `GLOBAL_HOST_METADATA100MiB_PROOF_ADMISSION` |
+| `assets/resource-policy.json` | Now byte-identical to H10's: metadata 100 MiB for the campaign and all 3 cases, `requiredFreeBytes`/`taskHardPeakBytes` +7 MiB +32 MiB each (more disk reserved) |
+| `test-cap03.py` | Two lines: expects `m.CAP==100*2**20` and the 100 MiB error name |
+
+`test-linuxport01.py` checks that the policy equals H10's byte for byte and
+differs from H5 only by the two cap increases.
 
 Run the port tests (Python 3.14):
 
@@ -126,10 +141,9 @@ BOM, customer data and test evidence stay private.
 
 ## Next steps
 
-1. Owner confirms the 20 MiB artifact cap for `runtime-l1`, and decides on
-   the metadata cap (100 MiB as in H10, or trim H6-H10 records from the
-   team tree).
-2. `--inspect`, then the real install (`m301`) and cold boot (`m302`).
+1. Owner confirms the 20 MiB artifact and 100 MiB metadata caps for
+   `runtime-l1`.
+2. The real install (`m301`), then a proof file and the cold boot (`m302`).
 3. Freeze the default-stage candidate, then `m401`/`m402` and `g103`.
 4. Compare the resulting state's structure with m801 (83 files, 9 directories).
 5. Then the owner's main priority: an end-to-end Android–SITL flow.
@@ -144,5 +158,6 @@ phần đọc pin/nguồn và dung lượng đĩa của máy chủ), giữ nguy�
 toàn. Nhóm áp trần artifact 20 MiB anh đã duyệt cho H10 (chờ anh xác nhận cho
 `runtime-l1`). Đã nạp dữ liệu n02 của anh vào AVD nhóm với UID 10141, thêm
 entry cài đặt/cold boot từ H4, freeze candidate giai đoạn cài đặt, test 19/19
-đạt. Đang chờ quyết định trần metadata (thiếu khoảng 2 MiB so với 68 MiB).
+đạt. Áp thêm trần metadata 100 MiB anh đã duyệt cho H10; `--inspect` của m301
+đạt. Bước tiếp: chạy cài đặt m301 thật trên AVD nhóm.
 Bằng chứng thử nghiệm để trong repo riêng của nhóm.

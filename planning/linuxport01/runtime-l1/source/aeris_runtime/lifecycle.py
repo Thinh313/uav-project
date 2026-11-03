@@ -100,7 +100,7 @@ class Lifecycle:
    closing=type(self.journal.io)is BudgetFileIO and self.journal.io.closing is True
    v=self.budget.snapshot_inventory(inventory,closing=closing)
    from .metadata_budget import CAP as METADATA_CAP
-   if v['metadataBytes']+required>METADATA_CAP:raise RuntimeError('GLOBAL_HOST_METADATA68MiB_PROOF_ADMISSION')
+   if v['metadataBytes']+required>METADATA_CAP:raise RuntimeError('GLOBAL_HOST_METADATA100MiB_PROOF_ADMISSION')
   if hasattr(self.journal,'guard'):
    with self.journal.lock:self.journal.guard.check(required)
  def _store_proof(self,row):

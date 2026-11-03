@@ -21,7 +21,7 @@ class Caps(unittest.TestCase):
      v=self.values();v[k]=val
      with self.subTest(fn=str(fn),key=k,value=val),self.assertRaises((ValueError,RuntimeError)):fn(v)
  def test_actual_ledger_current_plus_unchanged_future_boundary(self):
-  self.assertEqual(m.CAP,68*2**20);future=m.observer_envelope()['totalFutureBytes'];self.assertEqual(future,60686336)
+  self.assertEqual(m.CAP,100*2**20);future=m.observer_envelope()['totalFutureBytes'];self.assertEqual(future,60686336)
   for n in[m.CAP-future,m.CAP-future+1,True,-1]:
    with tempfile.TemporaryDirectory(prefix='caps-ledger-',dir=B)as tmp:
     b=m.MetadataBudget(Path(tmp)/'metadata-budget',lambda:{'metadataBytes':n},free=lambda:100*2**30,mock=True)
@@ -36,7 +36,7 @@ class Caps(unittest.TestCase):
     with patch('aeris_runtime.audit.lifecycle.allocated',return_value=0):
      if n==m.CAP-required:o._proof_capacity(1)
      else:
-      with self.assertRaisesRegex(RuntimeError,'GLOBAL_HOST_METADATA68MiB'):o._proof_capacity(1)
+      with self.assertRaisesRegex(RuntimeError,'GLOBAL_HOST_METADATA100MiB'):o._proof_capacity(1)
  def test_central_actor_and_policy_mismatch_refuses(self):
   self.assertEqual(pc.metadata_cap_contract()['capBytes'],m.CAP)
   with patch.object(h,'METADATA_CAP',64*2**20),self.assertRaisesRegex(ValueError,'ACTOR_CAP_BINDING'):pc.metadata_cap_contract()
