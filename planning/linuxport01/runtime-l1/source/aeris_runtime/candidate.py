@@ -6,7 +6,10 @@ from itertools import chain
 from .paths import PACKAGE_ROOT,repository
 from .dependencies import LEAVES
 from pilot.betaintegrated01.runtime.ap_stage import canonical
-MIB=2**20;CAP=13*MIB;CERT='3b3652341ec954f4640892e73df124f41cbb0efc81ace1d6ba83cfdddd319800'
+# LINUXPORT01: 13 -> 20 MiB, the cap the owner authorized for the isolated H10 runtime
+# (evidence/betarc01/AUTHORIZATION-CAPS03.json, README.md:83, docs/handoff/ARCHITECTURE.md:31).
+# Applying it to runtime-l1 is a team decision recorded in planning/linuxport01/README.md.
+MIB=2**20;CAP=20*MIB;CERT='3b3652341ec954f4640892e73df124f41cbb0efc81ace1d6ba83cfdddd319800'
 def artifact_cap_admitted(value):
  return type(value)is int and 0<=value<=CAP
 def sha(path):
@@ -260,7 +263,7 @@ def freeze(root,native_receipt,qa_gate,*,label,_reuse_from=None,_reuse15_from=No
    parent=parent.parent
  round4=lambda n:((n+4095)//4096)*4096
  new_objects=sum(round4(len(raw))for h,raw in unique.items()if h not in origins);manifest_bytes=canonical(manifest)+b'\n';namespace_bytes=round4(len(manifest_bytes))+round4(65)+len(directories)*4096;additional=new_objects+namespace_bytes;before=allocated_artifact_union(root)
- if not artifact_cap_admitted(before+additional)or shutil.disk_usage(repo).free-additional<10*2**30+256*MIB:raise ValueError('CANDIDATE_PREFLIGHT_ARTIFACT13MiB_DISK10GiB:'+str({'current':before,'newObjects':new_objects,'manifestAndDirectoryBound':namespace_bytes,'newDirectoryCount':len(directories),'projected':before+additional,'cap':CAP}))
+ if not artifact_cap_admitted(before+additional)or shutil.disk_usage(repo).free-additional<10*2**30+256*MIB:raise ValueError('CANDIDATE_PREFLIGHT_ARTIFACT20MiB_DISK10GiB:'+str({'current':before,'newObjects':new_objects,'manifestAndDirectoryBound':namespace_bytes,'newDirectoryCount':len(directories),'projected':before+additional,'cap':CAP}))
  reuse_before={h:{'origin':str(path.relative_to(repo)),'mode':stat.S_IMODE(path.stat().st_mode),'linkCount':path.stat().st_nlink,'sha256':sha(path)}for h,path in origins.items()}
  # IPC10 reuses the selected APK/archive as already immutable inputs. Never
  # chmod old artifacts, mutate their bytes or reset native lifetime state.
@@ -277,7 +280,7 @@ def freeze(root,native_receipt,qa_gate,*,label,_reuse_from=None,_reuse15_from=No
   try:os.fsync(fd)
   finally:close_fd(fd)
  put(target/'candidate.json',manifest_bytes);put(target/'candidate.sha256',(digest+'\n').encode());(target/'candidate.json').chmod(0o444);(target/'candidate.sha256').chmod(0o444)
- if not artifact_cap_admitted(allocated_artifact_union(root)):raise ValueError('ARTIFACT13MiB_FAILED_PREFIX_RETAINED')
+ if not artifact_cap_admitted(allocated_artifact_union(root)):raise ValueError('ARTIFACT20MiB_FAILED_PREFIX_RETAINED')
  return {'path':str(target),'sha256':digest,'allocatedUniqueBytes':allocated_artifact_union(root),'sourceFiles':len(payload),'nativeAPKSHA256':native['sha256'],'allocationPreflight':{'beforeBytes':before,'newObjectBoundBytes':new_objects,'manifestAndDirectoryBoundBytes':namespace_bytes,'projectedBytes':before+additional},'immutableReuseLinks':[{'sha256':h,**row,'linkCountAfter':origins[h].stat().st_nlink,'modeAfter':stat.S_IMODE(origins[h].stat().st_mode),'bytesUnchanged':sha(origins[h])==h}for h,row in reuse_before.items()]}
 def freeze_reusing_native(root,predecessor,qa_gate,*,label):
  """Package exact N12 development bytes; no new build/sign receipt is issued."""

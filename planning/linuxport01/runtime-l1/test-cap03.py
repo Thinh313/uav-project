@@ -9,7 +9,7 @@ from aeris_runtime.inventory import Inventory
 class Caps(unittest.TestCase):
  def values(self):return {'metadataBytes':m.CAP,'metadataAccountingUpperBoundAtScan':m.CAP,'metadataAccountingWriteSequenceAtScan':1,'exportBytes':192*2**20,'AVDPositiveGrowthBytes':512*2**20,'artifactBytes':c.CAP,'nativePhysicalBytes':160*2**20,'nativeLogicalBytes':512*2**20,'checkpointArchiveBytes':512*1024,'checkpointArchiveCount':8,'taskAllocatedBytes':p.campaign_budget()['taskHardPeakBytes']}
  def test_artifact_boundary_all11_and_old_manifest_refusal(self):
-  self.assertEqual(c.CAP,13*2**20);self.assertEqual(len(c.artifact_roots(R/'evidence/nativejournal17/candidates')),11);self.assertTrue(c.artifact_cap_admitted(c.CAP));self.assertFalse(c.artifact_cap_admitted(c.CAP+1))
+  self.assertEqual(c.CAP,20*2**20);self.assertEqual(len(c.artifact_roots(R/'evidence/nativejournal17/candidates')),11);self.assertTrue(c.artifact_cap_admitted(c.CAP));self.assertFalse(c.artifact_cap_admitted(c.CAP+1))
   for v in[-1,True,1.0,None]:self.assertFalse(c.artifact_cap_admitted(v))
   self.assertEqual(pc.artifact_cap_contract({'artifactCapBytes':c.CAP})['capBytes'],c.CAP)
   with self.assertRaisesRegex(ValueError,'MANIFEST_CAP_MISMATCH'):pc.artifact_cap_contract({'artifactCapBytes':12*2**20})

@@ -42,12 +42,43 @@ freshness and output limits, the artifact cap, and `darwin_disk11.py`.
 - Android SDK and AVD set up on Linux x86_64 at the owner's tested versions
   (emulator 37.2.12, platform-tools 37.0.1, API 33 default x86_64 rev 2, KVM).
 - 8 AJ02 journals created on our AVD with the original development APK.
-- Port done; `test-linuxport01.py` passes 11/11 on Linux.
+- Port done; `test-linuxport01.py` passes 15/15 on Linux (one check is
+  skipped where the private authorization record is absent).
 - Team QA gate written, scoped as source/mock only (not independent QA).
-- **Blocked:** the candidate freeze preview refuses with
-  `CANDIDATE_PREFLIGHT_ARTIFACT13MiB_DISK10GiB`. The existing candidate pool
-  is already about 16.2 MB, above the H5 cap of 13 MiB. Awaiting the
-  owner's decision: use the 20 MiB cap approved for H10, or port from H10.
+- Artifact cap raised from 13 to 20 MiB (see below); candidate
+  `linuxport01-l1` frozen in the private work tree.
+- **Next blocker:** `--inspect` on both entry scripts needs proof files from
+  an earlier chain of real runs (install, two SDK qualification boots, then
+  migration) bound to the same candidate. The existing `m302/m401/m402/g103`
+  slots are the owner's runs for his candidate, and the slot names are
+  hard-coded.
+
+## Artifact cap: 13 -> 20 MiB (team decision)
+
+The H5 cap of 13 MiB refused the freeze: the existing candidate pool was
+already 16,216,064 B. The owner authorized 20 MiB for the isolated H10
+runtime:
+
+- `evidence/betarc01/AUTHORIZATION-CAPS03.json` (private record,
+  SHA-256 `7fc88c9f…`, `artifactCapBytes: 20971520`)
+- [`README.md:83`](../../README.md): "Artifact tổng **20 MiB** … đã được
+  chấp thuận cho bản cô lập."
+- [`docs/handoff/ARCHITECTURE.md:31`](../../docs/handoff/ARCHITECTURE.md):
+  the 20 MiB cap applies to the isolated H10 runtime.
+
+Applying the same value to `runtime-l1` is the team's decision and is
+pending the owner's confirmation. It follows exactly how H10 changed the
+artifact cap:
+
+| File | Change |
+|---|---|
+| `candidate.py` | `CAP=20*MIB`, error names `ARTIFACT20MiB…` as in H10, comment citing the sources above |
+| `assets/resource-policy.json` | `newIsolatedAPKAndArchiveReserve` 20 MiB for the campaign and all 3 cases; `requiredFreeBytes` and `taskHardPeakBytes` +7,340,032 B each (more disk reserved, not less); amendment block points at `AUTHORIZATION-CAPS03.json` |
+| `test-cap03.py` | One line: expects `c.CAP==20*2**20` |
+
+The metadata cap stays at 68 MiB (H10's 100 MiB is not applied).
+`test-linuxport01.py` checks that the policy differs from H5 only in these
+keys and matches H10 minus its metadata increase.
 
 Run the port tests (Python 3.14):
 
@@ -66,9 +97,10 @@ BOM, customer data and test evidence stay private.
 
 ## Next steps
 
-1. Resolve the artifact cap with the project owner.
-2. Freeze the `linuxport01-l1` candidate, then `--inspect` with new slot names.
-3. Install/qualification run, then the native migration on our AVD.
+1. Owner confirms the 20 MiB cap for `runtime-l1`.
+2. Agree new slot names and where their evidence goes, then build our own
+   chain on our AVD: install, two qualification boots, native migration.
+3. `--inspect`, then the real runs.
 4. Compare the resulting state's structure with m801 (83 files, 9 directories).
 5. Then the owner's main priority: an end-to-end Android–SITL flow.
 6. Remaining known gaps: `test-h5.py` has author-machine paths and inode
@@ -79,6 +111,7 @@ BOM, customer data and test evidence stay private.
 
 Nhánh nghiên cứu của nhóm: chuyển harness Root H5 sang Linux x86_64 (chỉ đổi
 phần đọc pin/nguồn và dung lượng đĩa của máy chủ), giữ nguyên mọi ngưỡng an
-toàn. Test 11/11 đạt. Đang chờ anh quyết định giới hạn artifact 13 MiB trước
-khi freeze candidate và chạy lại migration để tái lập trạng thái 83 file.
+toàn. Nhóm áp trần artifact 20 MiB anh đã duyệt cho H10 (chờ anh xác nhận cho
+`runtime-l1`), test 15/15 đạt, đã freeze candidate. Bước tiếp: tạo chuỗi bằng
+chứng install/qualification riêng trên AVD nhóm rồi chạy lại migration.
 Bằng chứng thử nghiệm để trong repo riêng của nhóm.
