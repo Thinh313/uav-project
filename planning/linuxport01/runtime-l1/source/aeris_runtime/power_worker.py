@@ -83,7 +83,8 @@ class PowerWorker:
  def start(self):
   if self.attempted:raise RuntimeError('POWER_WORKER_ONE_START')
   self.attempted=True;self.budget.require_real_actor();self.budget.tick('diagnosticChildren');self.lease=self.budget.reserve_lease({self.owner:LIFETIME_LEASE});self.started=self.now()
-  argv=[sys.executable,'-B',str(Path(__file__).resolve()),'--power-child',self.instance.hex(),str(self.parent),self.source_sha]
+  # LINUXPORT01: -P keeps aeris_runtime/ off sys.path; its operator.py would shadow the stdlib module.
+  argv=[sys.executable,'-P','-B',str(Path(__file__).resolve()),'--power-child',self.instance.hex(),str(self.parent),self.source_sha]
   try:
    self.process=self.spawn(argv,stdin=subprocess.PIPE,stdout=subprocess.PIPE,stderr=subprocess.PIPE,start_new_session=True)
    self.budget.bind_lease_child(self.lease,self.process.pid)
