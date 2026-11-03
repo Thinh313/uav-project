@@ -133,6 +133,28 @@ python3.14 planning/linuxport01/runtime-l1/test-linuxport01.py
 `test-cap03.py`'s pin check compares against the owner's runtime-h5 record,
 so it reports the ported files as different. That is expected.
 
+## runtime-l9: H9 port for the g105 replay
+
+`runtime-l9/` is the owner's `runtime-h9` with the same Linux host fixes as
+`runtime-l1`. Only g105 changed the app data after g103, and the H9 chain
+anchors directly on g103 (m701 → m702 → g105), so H6–H8 are not ported.
+
+| File | Change |
+|---|---|
+| `host_health.py`, `monitor.py`, `power_worker.py`, `emulator.py` | Byte-identical to the `runtime-l1` fixes (these files are the same in H5 and H9) |
+| `host_power_platform.py`, `linux_disk11.py` | Added, identical to `runtime-l1` |
+| `product_runtime.py` | The same Linux disk-probe change as `runtime-l1` |
+| `assets/reconcile-g103-originals.json` | Regenerated from the g103 evidence of the tree it runs in (same format and paths; 3 of 8 files are byte-identical to the owner's g103) |
+| `assets/product-input-closure.json`, `assets/pipeline-writer-pins.json` | Regenerated; writer contract identical to the owner's H9 (254 sites, 14 owners, 60,686,336 B) |
+| `prepare-source-gate.py` | Entries point at `runtime-l9` |
+
+H9 already has the 20 MiB artifact and 100 MiB metadata caps, so no cap
+change. `test-linuxport09.py` checks all of the above.
+
+```bash
+python3.14 planning/linuxport01/runtime-l9/test-linuxport09.py
+```
+
 ## Not in this repo
 
 Test evidence, the emulator spec, run logs and the owner's private bundles
