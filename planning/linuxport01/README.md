@@ -41,17 +41,46 @@ freshness and output limits, the artifact cap, and `darwin_disk11.py`.
 
 - Android SDK and AVD set up on Linux x86_64 at the owner's tested versions
   (emulator 37.2.12, platform-tools 37.0.1, API 33 default x86_64 rev 2, KVM).
-- 8 AJ02 journals created on our AVD with the original development APK.
-- Port done; `test-linuxport01.py` passes 15/15 on Linux (one check is
+- The harness only accepts the owner's exact pre-migration app data (70 files
+  from his `n02` run, owned by app UID 10141). Our own 8 journals could not be
+  used. The owner's n02 data is now loaded on our AVD, and the app was given
+  UID 10141 by filling lower UIDs with empty placeholder apps, so no check in
+  the code changed.
+- Port done; `test-linuxport01.py` passes 19/19 on Linux (one check is
   skipped where the private authorization record is absent).
 - Team QA gate written, scoped as source/mock only (not independent QA).
-- Artifact cap raised from 13 to 20 MiB (see below); candidate
-  `linuxport01-l1` frozen in the private work tree.
-- **Next blocker:** `--inspect` on both entry scripts needs proof files from
-  an earlier chain of real runs (install, two SDK qualification boots, then
-  migration) bound to the same candidate. The existing `m302/m401/m402/g103`
-  slots are the owner's runs for his candidate, and the slot names are
-  hard-coded.
+- Artifact cap raised from 13 to 20 MiB (see below).
+- Install and cold-boot entries added (see below); install-stage candidate
+  frozen in a separate private work tree.
+- **Next blocker:** `root-install-l1.py --inspect` passes every entry check
+  but the metadata admission refuses: 73,465,856 B needed vs the H5 cap of
+  71,303,168 B (68 MiB). The owner authorized 100 MiB for H10; that is
+  pending a decision.
+
+## Install and cold-boot entries
+
+The owner ran two candidates: an H4 one for install and cold boot
+(`m301`/`m302`) and an H5 one, frozen after `m302` existed, for
+`m401`/`m402`/`g103`. The port does the same:
+
+- `prepare-source-gate.py --stage install` pins `root-install-l1.py` and
+  `root-qualify-l1.py` plus the team's loaded-state record. The default
+  stage is unchanged and pins `m302` evidence, so it runs after `m302`.
+- Runs keep the owner's slot names. They happen in a separate private work
+  tree without his `m301/m302/m401/m402/g103` folders (and without his later
+  H6-H10 slots, which the H5 inventory does not accept), so every slot folder
+  there is the team's.
+
+| File | Change |
+|---|---|
+| `root-qualify-l1.py` | Byte-identical copy of `runtime-h4/root-qualify-h4.py` |
+| `root-install-l1.py` | `runtime-h4/root-install-h4.py` plus the 7 patches in `l1_patches.py`: the prior state comes from the team's loaded-n02 record instead of the owner's `m201` repair, and the package is expected healthy instead of broken (`pkg=null`) |
+| `source/aeris_runtime/installclosure_h4.py` | One line: `validate_precheck` takes the expected package state from the precheck record; the default stays broken, as in the original |
+| `prepare-source-gate.py` | `--stage install` |
+
+The 70-file table, UID 10141, no clear/uninstall/wipe and no Activity/AP
+checks are unchanged. Tests re-derive each entry from the original plus the
+declared patches.
 
 ## Artifact cap: 13 -> 20 MiB (team decision)
 
@@ -97,10 +126,11 @@ BOM, customer data and test evidence stay private.
 
 ## Next steps
 
-1. Owner confirms the 20 MiB cap for `runtime-l1`.
-2. Agree new slot names and where their evidence goes, then build our own
-   chain on our AVD: install, two qualification boots, native migration.
-3. `--inspect`, then the real runs.
+1. Owner confirms the 20 MiB artifact cap for `runtime-l1`, and decides on
+   the metadata cap (100 MiB as in H10, or trim H6-H10 records from the
+   team tree).
+2. `--inspect`, then the real install (`m301`) and cold boot (`m302`).
+3. Freeze the default-stage candidate, then `m401`/`m402` and `g103`.
 4. Compare the resulting state's structure with m801 (83 files, 9 directories).
 5. Then the owner's main priority: an end-to-end Android–SITL flow.
 6. Remaining known gaps: `test-h5.py` has author-machine paths and inode
@@ -112,6 +142,7 @@ BOM, customer data and test evidence stay private.
 Nhánh nghiên cứu của nhóm: chuyển harness Root H5 sang Linux x86_64 (chỉ đổi
 phần đọc pin/nguồn và dung lượng đĩa của máy chủ), giữ nguyên mọi ngưỡng an
 toàn. Nhóm áp trần artifact 20 MiB anh đã duyệt cho H10 (chờ anh xác nhận cho
-`runtime-l1`), test 15/15 đạt, đã freeze candidate. Bước tiếp: tạo chuỗi bằng
-chứng install/qualification riêng trên AVD nhóm rồi chạy lại migration.
+`runtime-l1`). Đã nạp dữ liệu n02 của anh vào AVD nhóm với UID 10141, thêm
+entry cài đặt/cold boot từ H4, freeze candidate giai đoạn cài đặt, test 19/19
+đạt. Đang chờ quyết định trần metadata (thiếu khoảng 2 MiB so với 68 MiB).
 Bằng chứng thử nghiệm để trong repo riêng của nhóm.
