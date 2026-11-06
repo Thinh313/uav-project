@@ -202,6 +202,37 @@ data stays in the private repository.
 python3.14 -B planning/linuxport01/contract-l10/test-continuation-l10.py
 ```
 
+## runtime-l11: G1 from the continuation contract (team decision)
+
+`runtime-l11/` is `runtime-l10` plus the owner's step 3 (a new G1). The owner's
+G1 chain is two SDK cold boots of one candidate and then the G1 slot on the same
+candidate (H8: m601/m602 then g104; H9: m701/m702 then g105). Those entries admit
+the app data with `reconcile_h7.reconcile`, the post-g103 75-file decoder the
+owner forbids for the 83-file state. runtime-l11 keeps the same entries and
+checks but admits the data with `contract-l10` instead, for new slots only:
+`m901`/`m902` (qualification) and `g106` (G1). This is a team decision, not the
+owner's. A separate folder keeps `runtime-l10` equal to the m801 candidate.
+
+Every changed file is its original plus the exact replacements in
+`l11_patches.py`; `test-linuxport11.py` re-derives each one.
+
+| File | Change |
+|---|---|
+| `mission16.py`, `rc01.py` | Slots m901, m902, g106; g106 is a `native` case like g105 |
+| `product_runtime.py` | `close_maintenance` accepts m901/m902 and checks them with `continuation_l11.verify_sdk` |
+| `product_native09.py` | One branch for the new app-record type `nativeLifecycleContinuationL11` |
+| `continuation_l11.py` (new) | Team code: qualification-proof check, SDK boot check, G1 start (`resume_continuation`) and cold domain check, each a copy of the owner's with the contract as the data admission. It does not import `reconcile_h7` |
+| `root-qualify-l11.py` (new) | Owner `runtime-h9/root-reconcile-h9.py` plus 9 patches |
+| `root-native-l11.py` (new) | Owner `root-native-h10.py` plus 4 patches |
+| `prepare-source-gate.py` | Entries point at runtime-l11; the two new entries replace `root-native-h10.py` (it only accepts the used slot g105, and the owner's graph allows at most 8 entries); `contract-l10/continuation_l10.py` and its pin are pinned read inputs |
+| `assets/product-input-closure.json`, `assets/pipeline-writer-pins.json` | Regenerated. Writer sites 257 -> 261, all four in `continuation_l11.py`; owners, reserve and leaves unchanged |
+
+No cap, guard or other module changes. Nothing here is G1 acceptance.
+
+```bash
+python3.14 -B planning/linuxport01/runtime-l11/test-linuxport11.py
+```
+
 ## Not in this repo
 
 Test evidence, the emulator spec, run logs and the owner's private bundles
