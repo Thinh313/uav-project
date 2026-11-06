@@ -233,6 +233,47 @@ No cap, guard or other module changes. Nothing here is G1 acceptance.
 python3.14 -B planning/linuxport01/runtime-l11/test-linuxport11.py
 ```
 
+Known bug (found by the team's first g106 run, fixed in a later folder):
+`continuation_l11.resume_continuation` passes the current 83-file capture as
+`case['backup17']`, the snapshot whose files `native17.archive_check` requires to be
+byte-identical after every stage. The owner's `resume_existing` passes the g103
+pre-APPLY original (`adoption17.retained_originals17`). The 83-file capture contains
+the append-only registry, so the check refuses the registry's normal growth after the
+first native session.
+
+## runtime-l12: capture of the post-g106 state, artifact cap 40 MiB (team decisions)
+
+`runtime-l12/` is `runtime-l11` plus two changes, each declared in `l12_patches.py`
+and re-derived by `test-linuxport12.py`:
+
+1. **Slot m802**: a read-only forensic capture of the app state left by the first g106
+   run (87 files). This follows the owner's handling of g105: keep the changed state as
+   history, capture it, then write a new contract for it. The capture code is unchanged.
+2. **Artifact cap 20 -> 40 MiB.** The team researcher authorized this, not the owner
+   (private record `evidence/linuxport01/AUTHORIZATION-L12-ARTIFACT40.json`). It is
+   needed because the remaining steps take two more candidate freezes and only one fit
+   under 20 MiB. The cap is applied the same way the owner's H10 raised it from 13 to
+   20 MiB: `candidate.CAP`, the error names, and +20 MiB in the reserve category, hard
+   peak and required free disk of every case and the campaign (more disk reserved, not
+   less). The owner's amendment block in `resource-policy.json` is unchanged; a team
+   block sits next to it. Earlier folders and candidates keep their caps.
+
+| File | Change |
+|---|---|
+| `mission16.py` | Slot m802 (180 s) |
+| `product_runtime.py`, `forensic_h10.py` | The forensic close path accepts m802 as well as m801 |
+| `candidate.py`, `assets/resource-policy.json` | Artifact cap 40 MiB, as above |
+| `root-capture-l12.py` (new) | Owner `runtime-h10/root-capture-h10.py` plus 7 patches: slot m802, prior slot g106, run `beta-rc01-forensic-capture02`, team prerequisite/intent formats |
+| `prepare-source-gate.py` | Entries point at runtime-l12; `root-capture-l12.py` replaces `root-capture-h10.py` (it only accepts the used slot m801) |
+| `test-caps03.py` | Owner test copy; only the three cap numbers change |
+| `assets/product-input-closure.json`, `assets/pipeline-writer-pins.json` | Regenerated. Writer sites stay 261; the health contract differs only in the cap and the `candidate.py` SHA |
+
+The bug above is not fixed here; runtime-l12 is only for the m802 capture.
+
+```bash
+python3.14 -B planning/linuxport01/runtime-l12/test-linuxport12.py
+```
+
 ## Not in this repo
 
 Test evidence, the emulator spec, run logs and the owner's private bundles
