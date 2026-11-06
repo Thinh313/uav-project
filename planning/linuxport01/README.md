@@ -155,6 +155,34 @@ change. `test-linuxport09.py` checks all of the above.
 python3.14 planning/linuxport01/runtime-l9/test-linuxport09.py
 ```
 
+## runtime-l10: H10 port for the read-only m801 capture
+
+`runtime-l10/` is the owner's `runtime-h10` with the same Linux host fixes as
+`runtime-l9`. It is used for the team's own read-only forensic capture
+(`root-capture-h10.py --slot m801`) of the replayed state, and later for the
+continuation contract and a new G1.
+
+| File | Change |
+|---|---|
+| `host_health.py`, `monitor.py`, `power_worker.py`, `emulator.py`, `host_power_platform.py`, `linux_disk11.py` | Byte-identical to `runtime-l1`/`runtime-l9` (the first four are unchanged from H9 to H10) |
+| `product_runtime.py` | H10 changed this file; the same one-place Linux disk-probe change as `runtime-l9` is applied |
+| `assets/reconcile-g103-originals.json` | Byte-identical to `runtime-l9` |
+| `assets/product-input-closure.json`, `assets/pipeline-writer-pins.json` | Regenerated; writer contract identical to the owner's H10 (257 sites in the same order, 14 owners, 60,686,336 B) |
+| `prepare-source-gate.py` | The three H10 entries point at `runtime-l10`; the H9 maintenance entry stays as in H10 |
+
+The H10 entries (`root-capture-h10.py`, `root-native-h10.py`,
+`root-owner-h10.py`) and the new H10 modules (`command_results_h10.py`,
+`forensic_h10.py`) are unchanged. `test-linuxport10.py` checks all of the above.
+
+The owner's tests hard-code `/usr/local/bin/node`, and the three
+`test-command-*.mjs` helpers import `../command_h10/` relative to their own
+folder, so as shipped they do not run from `runtime-l10`. They are left
+unchanged.
+
+```bash
+python3.14 planning/linuxport01/runtime-l10/test-linuxport10.py
+```
+
 ## Not in this repo
 
 Test evidence, the emulator spec, run logs and the owner's private bundles
