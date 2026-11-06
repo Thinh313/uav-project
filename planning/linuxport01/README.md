@@ -183,6 +183,25 @@ unchanged.
 python3.14 planning/linuxport01/runtime-l10/test-linuxport10.py
 ```
 
+## contract-l10: continuation contract for the m801 state (team decision)
+
+`contract-l10/` is new team code for the owner's step 2 in
+`docs/handoff/NEXT-MILESTONE.md`. It pins the exact 83-file / 9-directory state a
+new G1 may start from. It keeps the owner's strictness but pins the team's own
+values, taken from the team's read-only m801 capture. A TAR passes only if:
+- all 92 entries match exactly (type, mode, UID/GID, size, SHA-256, mtime);
+- content checks pass: registry replay, lifetime generation 10, the two new journals empty and closed, the eight archived journals, append-only registry prefixes, the conserved 75-file baseline including the workspace, and the six new status files;
+- the owner's `archive_verifier17` agrees on head and counters.
+
+It grants no authority and is not G1. See `contract-l10/CONTRACT-L10.md`,
+including the table of the 10 entries that differ from the owner's m801 (82 of 92
+are byte-identical). The pin holds only paths, sizes and SHA-256 values; the raw
+data stays in the private repository.
+
+```bash
+python3.14 -B planning/linuxport01/contract-l10/test-continuation-l10.py
+```
+
 ## Not in this repo
 
 Test evidence, the emulator spec, run logs and the owner's private bundles
