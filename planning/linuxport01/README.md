@@ -308,10 +308,32 @@ passes, and a changed original file is still refused.
 256 KiB bound for evidence references (`rc01.ref_file`). The two-boot proof that
 `require_qualification` expects names each boot's TAR as its `Private` reference, so the
 frozen runtime-l13 candidate would refuse its own two-boot proof before g107. Not fixed
-here; it needs a team decision.
+here; it needs a team decision. Fixed in `runtime-l14` (below); the runtime-l13 candidate
+is kept as history and was never run.
 
 ```bash
 python3.14 -B planning/linuxport01/runtime-l13/test-linuxport13.py
+```
+
+## runtime-l14: bounded Private references of the two-boot proof (team decision)
+
+`runtime-l14/` is `runtime-l13` with one change, in the team function
+`continuation_l13.require_qualification` (the check of the m903/m904 two-boot proof that
+g107 requires). The owner's `rc01.ref_file` is unchanged and still checks every reference.
+Only the two `Private` references (each boot's private-files TAR) are checked with
+`maximum` 64 MiB, the bound the harness itself uses for this root TAR capture, and only
+when each one is that boot's own capture,
+`evidence/betarc01/<slot>/sessions/<run>/native-restart-metadata.tar`, with the SHA-256 and
+size of the pinned m802 TAR (both boots are read-only). Every other reference keeps the
+owner's 256 KiB bound. Entries, slots, formats and all other files are runtime-l13's; the
+graph only moves the entry paths, and the writer sites are the same. All changes are
+declared in `l14_patches.py` and re-derived by `test-linuxport14.py`, which also accepts
+copies of the real m802 TAR as both Private references, refuses them at another path, for
+another state, changed, linked or symlinked, keeps 256 KiB for the other roles, and repeats
+the runtime-l13 behaviour tests.
+
+```bash
+python3.14 -B planning/linuxport01/runtime-l14/test-linuxport14.py
 ```
 
 ## Not in this repo
