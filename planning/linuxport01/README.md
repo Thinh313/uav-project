@@ -364,6 +364,26 @@ part of this folder.
 python3.14 -B planning/linuxport01/runtime-l15/test-linuxport15.py
 ```
 
+## contract-l16: continuation contract for the post-g107 state (team decision)
+
+`contract-l16/` pins the 89-file / 9-directory state left by the team's g107 run, taken
+from the read-only capture m803 (attempt 6, normal SDK close; attempts 1-4 had the same
+TAR bytes but the emulator 37.2.12 shutdown crash). It is `contract-l12` with the state
+shape moved on by one journal that the app committed and never closed (g107 was disposed
+before the close): 98 entries, 17 registry rows (the last two `GEN_BEGIN`, `GEN_COMMIT`,
+no `CLOSE`), lifetime generation 12, 4 new header-only journals (3 closed `UNUSED`, 1
+open), 10 new status files (one for the open journal, nothing closed). The whole m802
+state except the registry must be unchanged, including mtimes, and the 6-, 9-, 12- and
+15-row registries must be exact byte prefixes. The owner's `archive_verifier17` must agree
+(4 active, 8 archived, 0 pending). The open journal is observed and pinned, never closed
+or repaired. It refuses the m802 state and every earlier one, and contract-l12 refuses
+this state. It grants no authority and is not G1. See `contract-l16/CONTRACT-L16.md`.
+The pin holds only paths, sizes and SHA-256 values.
+
+```bash
+python3.14 -B planning/linuxport01/contract-l16/test-continuation-l16.py
+```
+
 ## Not in this repo
 
 Test evidence, the emulator spec, run logs and the owner's private bundles
