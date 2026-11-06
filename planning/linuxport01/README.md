@@ -274,6 +274,22 @@ The bug above is not fixed here; runtime-l12 is only for the m802 capture.
 python3.14 -B planning/linuxport01/runtime-l12/test-linuxport12.py
 ```
 
+## contract-l12: continuation contract for the post-g106 state (team decision)
+
+`contract-l12/` pins the 87-file / 9-directory state left by the team's first g106 run,
+taken from the read-only capture m802 (normal SDK close). It is `contract-l10` with the
+state shape moved on by one closed, unused native session: 96 entries, 15 registry rows,
+lifetime generation 11, 3 new empty journals, 9 new status files. The whole m801 state
+except the registry must be unchanged, including mtimes, and the 6-, 9- and 12-row
+registries must be exact byte prefixes. The owner's `archive_verifier17` must agree
+(3 active, 8 archived, 0 pending). It refuses the m801 state and every earlier one, and
+contract-l10 refuses this state. It grants no authority and is not G1. See
+`contract-l12/CONTRACT-L12.md`. The pin holds only paths, sizes and SHA-256 values.
+
+```bash
+python3.14 -B planning/linuxport01/contract-l12/test-continuation-l12.py
+```
+
 ## Not in this repo
 
 Test evidence, the emulator spec, run logs and the owner's private bundles
