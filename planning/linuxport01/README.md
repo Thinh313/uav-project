@@ -384,6 +384,34 @@ The pin holds only paths, sizes and SHA-256 values.
 python3.14 -B planning/linuxport01/contract-l16/test-continuation-l16.py
 ```
 
+## runtime-l16: G1 chain from contract-l16, and the continuation shape of VERIFY_NATIVE_UNUSED17 (team decisions)
+
+`runtime-l16/` is `runtime-l15` plus the next team G1 chain from the m803 state: qualification
+boots m905 and m906 and the G1 slot g108 on one candidate, as runtime-l13 did for
+m903/m904/g107. Every change is declared in `l16_patches.py` and re-derived by
+`test-linuxport16.py`:
+
+| File | Change |
+|---|---|
+| `mission16.py`, `rc01.py` | Slots m905, m906, g108 (g108 is `native`, no remaining generations, same archive boundary as g107) |
+| `product_runtime.py`, `product_native09.py` | m905/m906 SDK boot check and the continuation domain check go to `continuation_l16` |
+| `continuation_l16.py` (new) | `continuation_l13.py` moved to contract-l16 (pin `15039006…`), the m803 capture as prior state, slots m905/m906/g108. Keeps the backup17 fix and the 64 MiB Private bound, now bound to the 268,800 B m803 TAR |
+| `root-qualify-l16.py`, `root-native-l16.py` (new) | The l13 entries plus 8 and 3 patches (slots, prior state, run names, formats) |
+| `product_inputs.py` | One more alias through the owner's own alias map: `planning/betarc01/tar_profile_h7/native-unused-h7.mjs` -> `runtime-l16/native-unused-l16.mjs` |
+| `native-unused-l16.mjs` (new) | The owner's VERIFY_NATIVE_UNUSED17 module ("strict initial UNUSED lifecycle/restart proof") with its three shape checks moved from the first G1 after the g103 migration (10 generations, 2 active journals, 10 journals) to the pinned continuation: 14 generations, exactly the 2 new journals plus exactly the 4 earlier journals pinned by contract-l16 active (each still exactly the AJ02 header), 14 journals, 6 active, 8 archived. No G1 from a continued state could pass the original. All other checks are unchanged; the owner's file is not modified |
+| `prepare-source-gate.py` | Entries point at runtime-l16, the two new entries replace `root-native-l13.py` and `root-qualify-l13.py`, contract-l16 is pinned, and `native-unused-h7.mjs` is no longer a read input (the owner's loader refuses an alias whose key is held) |
+| `assets/product-input-closure.json`, `assets/pipeline-writer-pins.json` | Regenerated: entries move, one module is replaced, 3 pins are added; writer sites 265 -> 269 (the 4 of the new module) |
+
+`test-linuxport16.py` also runs the owner's Node loader for real on the generated graph (it must
+link the team copy through the alias) and repeats the runtime-l14/l13 behaviour tests on the m803
+state. Of the owner's tests, only `test-node-alias-h9.py` changes result: it expects exactly 7
+aliases and now sees 8. The 40 MiB artifact cap, the owner's 200 ms writer limit and every
+other guard are unchanged.
+
+```bash
+python3.14 -B planning/linuxport01/runtime-l16/test-linuxport16.py
+```
+
 ## Not in this repo
 
 Test evidence, the emulator spec, run logs and the owner's private bundles
