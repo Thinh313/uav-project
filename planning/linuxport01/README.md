@@ -290,6 +290,30 @@ contract-l10 refuses this state. It grants no authority and is not G1. See
 python3.14 -B planning/linuxport01/contract-l12/test-continuation-l12.py
 ```
 
+## runtime-l13: the next G1 chain from contract-l12, with the backup17 fix (team decision)
+
+`runtime-l13/` is `runtime-l12` plus the chain m903, m904 (qualification) and g107 (G1) on
+one candidate, admitted by `contract-l12` instead of `contract-l10`. The new team module
+`continuation_l13.py` is `continuation_l11.py` with the names moved on and one fix:
+`resume_continuation` sets `case['backup17']` (and `coldProof17`, `workspaceBefore17`) from
+the owner's n02 pre-migration original (`adoption17.retained_originals17`), as the owner's
+`resume_existing` does, and checks that this original's receiver is the pinned one before
+any write. All changes are declared in `l13_patches.py` and re-derived by
+`test-linuxport13.py`. That test also re-runs the owner's unchanged
+`native17.archive_check`, with his real registry verifier, on the real g106 export after its
+first session: the continuation_l11 snapshot fails exactly as g106 did, the l13 snapshot
+passes, and a changed original file is still refused.
+
+**Known limit, found before any run:** the 87-file TAR is 263,680 B, above the owner's
+256 KiB bound for evidence references (`rc01.ref_file`). The two-boot proof that
+`require_qualification` expects names each boot's TAR as its `Private` reference, so the
+frozen runtime-l13 candidate would refuse its own two-boot proof before g107. Not fixed
+here; it needs a team decision.
+
+```bash
+python3.14 -B planning/linuxport01/runtime-l13/test-linuxport13.py
+```
+
 ## Not in this repo
 
 Test evidence, the emulator spec, run logs and the owner's private bundles
