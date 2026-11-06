@@ -336,6 +336,34 @@ the runtime-l13 behaviour tests.
 python3.14 -B planning/linuxport01/runtime-l14/test-linuxport14.py
 ```
 
+## runtime-l15: capture of the post-g107 state (team decision)
+
+The first G1 run of the runtime-l14 chain (g107) failed at the start of its first native
+session: one of the owner's host writes committed after more than 200 ms
+(`PRODUCT_WRITER_COMMITTED_AFTER200MS_NO_RETRY`). The AERIS app had started, and its own
+status reply showed a new journal left open, so the app data no longer matches the
+contract-l12 pin. As after g106, the team keeps that state as history and first captures
+it read-only. `runtime-l15/` is `runtime-l14` with one change, declared in
+`l15_patches.py` and re-derived by `test-linuxport15.py`:
+
+| File | Change |
+|---|---|
+| `mission16.py` | Slot m803 (180 s) |
+| `product_runtime.py`, `forensic_h10.py` | The forensic close path accepts m803 as well as m801 and m802 |
+| `root-capture-l15.py` (new) | `runtime-l14/root-capture-l12.py` plus 7 patches: slot m803, prior slot g107, run `beta-rc01-forensic-capture03`, team prerequisite/intent formats. The capture code is unchanged |
+| `prepare-source-gate.py` | Entries point at runtime-l15; `root-capture-l15.py` replaces `root-capture-l12.py` (it only accepts the used slot m802); still 8 entries |
+| `assets/product-input-closure.json`, `assets/pipeline-writer-pins.json` | Regenerated. Only the entry paths and the capture entry pin change; writer sites stay 265 |
+
+The team module `continuation_l13.py`, contract-l12, the 40 MiB artifact cap, the owner's
+200 ms writer limit and every other guard are unchanged; runtime-l15 is only for the
+m803 capture. `test-linuxport15.py` also repeats the runtime-l14 behaviour tests on the
+runtime-l15 source. A contract for the captured state, which has an open journal, is not
+part of this folder.
+
+```bash
+python3.14 -B planning/linuxport01/runtime-l15/test-linuxport15.py
+```
+
 ## Not in this repo
 
 Test evidence, the emulator spec, run logs and the owner's private bundles
