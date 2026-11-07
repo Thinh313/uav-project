@@ -412,6 +412,36 @@ other guard are unchanged.
 python3.14 -B planning/linuxport01/runtime-l16/test-linuxport16.py
 ```
 
+## runtime-l17: a new G1 chain from the same contract-l16 state, for a new emulator spec (team decisions)
+
+g108 attempt 1 failed after its first native session (the emulator most likely crashed when the
+app was force-stopped) and changed the app data. The user chose to restore the AVD to the backup
+taken right after m906 (the contract-l16 state) and to move the team chain to emulator 37.3.8
+(a new team emulator spec). Because every intent binds the spec, the used slots m905, m906 and
+g108 cannot be reused. `runtime-l17/` is `runtime-l16` plus qualification boots m907 and m908 and
+the G1 slot g109 on one candidate. contract-l16, the alias and the team verifier
+`runtime-l16/native-unused-l16.mjs` are unchanged. Every change is declared in `l17_patches.py`
+and re-derived by `test-linuxport17.py`:
+
+| File | Change |
+|---|---|
+| `mission16.py`, `rc01.py` | Slots m907, m908, g109 (g109 is `native`, no remaining generations, same archive boundary as g108) |
+| `product_runtime.py`, `product_native09.py` | m907/m908 SDK boot check and the continuation domain check go to `continuation_l17` |
+| `continuation_l17.py` (new) | `continuation_l16.py` with the new slots, run names and format names. The prior boot of m907 is the clean m906 boot of runtime-l16, read back from its own raw records (same candidate, normal SDK closure, its TAR is the pinned state TAR, same boot in both samples) |
+| `root-qualify-l17.py`, `root-native-l17.py` (new) | The l16 entries plus 8 and 3 patches (slots, prior boot, run names, formats) |
+| `prepare-source-gate.py` | Entries point at runtime-l17, and the two new entries replace `root-native-l16.py` and `root-qualify-l16.py`; reads unchanged |
+| `assets/product-input-closure.json`, `assets/pipeline-writer-pins.json` | Regenerated: only the two entries move; writer sites 269 -> 273 (the 4 of the new module) |
+
+`test-linuxport17.py` (43 tests) also runs the owner's Node loader for real on the generated graph
+(it must still link the team verifier through the alias), reads the m906 prior back from the real
+raw records and refuses changed copies of them, and repeats the runtime-l16 behaviour tests for the
+new slots. The owner's tests give the same results as on runtime-l16. The 40 MiB artifact cap, the
+64 MiB Private bound, the owner's 200 ms writer limit and every other guard are unchanged.
+
+```bash
+python3.14 -B planning/linuxport01/runtime-l17/test-linuxport17.py
+```
+
 ## Not in this repo
 
 Test evidence, the emulator spec, run logs and the owner's private bundles
