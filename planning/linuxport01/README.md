@@ -442,6 +442,116 @@ new slots. The owner's tests give the same results as on runtime-l16. The 40 MiB
 python3.14 -B planning/linuxport01/runtime-l17/test-linuxport17.py
 ```
 
+## runtime-l18: one candidate for a new G1 chain and for G2/G3 on this Linux PC (team decisions)
+
+G2/G3 must run on the candidate of the accepted G1, so `runtime-l18/` is `runtime-l17` plus (A) the Linux
+port of the G2/G3 path (the owner's ARM64 SITL autopilot, "AP", in a container under qemu-user; the
+physics backend on the host) and (B) a new G1 chain m909, m910, g110. The chain starts from the same
+pinned contract-l16 state as runtime-l17; contract-l16, the alias and the team verifier
+`runtime-l16/native-unused-l16.mjs` are unchanged. Every item was decided by the user in chat, not by the
+owner. Every change is declared, with the user's words, in `l18_patches.py` and re-derived by
+`test-linuxport18.py`:
+
+| File | Change |
+|---|---|
+| `launch.py`, `commands.py` | AP identity under qemu-user: `/proc/<pid>/exe` is the emulator there, so the owner's check is replaced by `ap_identity_l18` (the pinned host emulator, the exact command line, the AP file's hash and its `maps` lines; refusal `ACTUAL_AP_MAPPED_ARTIFACT_L18`). The receipt key `actualAPExecutableSHA256` is kept, so `supervisor.py` is unchanged. Exact allowlist entries for the four new host queries. `launch.py` also checks that `172.17.0.1:9012` can be bound and starts the forwarder after the backend and before the AP |
+| `ap_supervisor.py` | AP argument `--model JSON:192.168.65.254` (Docker Desktop's host address on macOS) becomes `JSON:172.17.0.1` (the Docker bridge on Linux); no `--platform` |
+| `json_forwarder.py`, `sitl_json_udp_forwarder.py` (new) | UDP forwarder from `172.17.0.1:9012` to the backend, which keeps listening only on `127.0.0.1:9012`. The module is the forwarding function of the tested team tool; the tool is copied unchanged and pinned by SHA-256 |
+| `resources.py`, `disposal.py`, `raw_export.py`, `metadata_budget.py`, `pipeline_contract.py`, `entry.py` | The forwarder is a third owned child: the fixed child set ap, backend becomes ap, forwarder, backend (start, stop order, disposal, output drain); children 4 -> 6. The owner's 4 MiB child-output cap is unchanged (the forwarder leases fit exactly) |
+| `dependencies.py`, `entry.py`, `assets/workbench-provider.json` | The Linux build of the owner's `pilot/sim32/kernel.c` is a pinned leaf (the darwin entry stays); the backend always requires the loaded kernel to be that file. Only the workbench provider's `modelKernelSHA256` changes; the owner's run profiles are not copied or changed |
+| `mission16.py`, `rc01.py`, `product_runtime.py`, `product_native09.py`, `continuation_l18.py`, `root-qualify-l18.py`, `root-native-l18.py` (the last three new) | Slots m909, m910, g110, as runtime-l17 did for m907, m908, g109. The prior boot of m909 is the clean m908 boot of runtime-l17, read back from its own raw records |
+| `prepare-source-gate.py`, `assets/product-input-closure.json`, `assets/pipeline-writer-pins.json` | The two new entries replace the l17 ones; regenerated: 148 source files, writer sites 273 -> 282 |
+
+The Linux kernel binary is not in this repo. It is built from the owner's `pilot/sim32/kernel.c` with
+Ubuntu clang 18.1.3 and has SHA-256 `a0dbf90dd96ba72e37bca85ba955c84b5bc0ef9c8c1f4ca92605ceb46cf616c4`;
+it matched the owner's pure-Python physics reference frame for frame:
+
+```bash
+clang -O2 -fPIC -shared -fno-fast-math -ffp-contract=off -I<CPython 3.14.6 include dir> kernel.c -lm -o _sim32_kernel.cpython-314-x86_64-linux-gnu.so
+```
+
+`test-linuxport18.py` (78 tests) re-derives every file, runs the owner's Node loader for real on the
+generated graph, repeats the runtime-l17 behaviour tests for the new slots, and tests the AP identity
+check and its refusals, the host-query allowlist, the forwarder, the kernel check, the AP argument and
+the third-child budget. The owner's tests give the same results as on runtime-l17. The owner's 200 ms
+writer limit, the 40 MiB artifact cap, the 64 MiB Private bound and every guard not named above are
+unchanged; `root-owner-h10.py` (the G2/G3 entry) stays byte-identical to the owner's. Open point: the
+owner's container image runs as root, so on Linux the files it writes into the run's folders are
+root-owned; whether the harness must later change them is not checked yet.
+
+```bash
+python3.14 -B planning/linuxport01/runtime-l18/test-linuxport18.py
+```
+
+## runtime-l19: the VERIFY_NATIVE_UNUSED17 path fix and a new G1 chain (team decisions)
+
+The G1 run g110 on runtime-l18 ran both native sessions, SEAL_PRODUCT and the final-close export, then
+stopped at VERIFY_NATIVE_UNUSED17 on a defect in team code: the team verifier
+`runtime-l16/native-unused-l16.mjs` (the alias target of the owner's
+`planning/betarc01/tar_profile_h7/native-unused-h7.mjs` since runtime-l16) read `native-tar.mjs` at run
+time from its own folder, where that file does not exist. runtime-l16 had rewritten the static import of
+`native-tar.mjs` but not this read; the code had never run before. The owner's 200 ms guards held in
+that run. `runtime-l19/` is `runtime-l18` plus that one fix and a new G1 chain m911, m912, g111, nothing
+else. Every item was decided by the user in chat, not by the owner. Every change is declared, with the
+user's words, in `l19_patches.py` and re-derived by `test-linuxport19.py`:
+
+| File | Change |
+|---|---|
+| `native-unused-l19.mjs` (new), `product_inputs.py` | The runtime-l16 verifier with exactly one replacement: the run-time read of `native-tar.mjs` uses the path the static import already used, `../../betarc01/tar_profile_h7/native-tar.mjs`; it still checks that file's SHA-256 against the descriptor. The alias of the owner's `native-unused-h7.mjs` now points at this file; the runtime-l16 file is no longer referenced |
+| `mission16.py`, `rc01.py`, `product_runtime.py`, `product_native09.py`, `continuation_l19.py`, `root-qualify-l19.py`, `root-native-l19.py` (the last three new) | Slots m911, m912, g111, as runtime-l18 did for m909, m910, g110. The chain starts again from the pinned contract-l16 state; the prior boot of m911 is the clean m910 boot of runtime-l18, read back from its own raw records |
+| `prepare-source-gate.py`, `assets/product-input-closure.json`, `assets/pipeline-writer-pins.json` | The two new entries replace the l18 ones and the alias moves to the l19 verifier; regenerated: 149 source files, writer sites 282 -> 286 |
+
+`test-linuxport19.py` (80 tests) re-derives every file, runs the owner's Node loader on the generated
+graph (the alias resolves to the l19 verifier), repeats the runtime-l18 tests for the new slots, and
+asserts that `close_native_only` and `close_guardian` are byte-identical to the owner's. The fixed verifier
+was also run offline on the inputs that g110 recorded and accepted them; the unchanged one failed there
+as g110 did. The owner's tests give the same results as on runtime-l18. Everything of runtime-l18 (the
+G2/G3 port, the forwarder, the AP identity check, the Linux kernel), the 200 ms writer limit, the 40 MiB
+artifact cap, the 64 MiB Private bound and every guard not named above are unchanged;
+`root-owner-h10.py` stays byte-identical to the owner's. The test loads `runtime-l18/l18_patches.py`.
+Later, the G1 run g111 on runtime-l19 ran the code after VERIFY_NATIVE_UNUSED17 (the owner's native and
+guardian close) and closed normally for the first time on this PC; G1 is not accepted.
+
+```bash
+python3.14 -B planning/linuxport01/runtime-l19/test-linuxport19.py
+```
+
+## runtime-l20: back to the state before g107, and a team maintenance entry (team decisions)
+
+On runtime-l19 the G1 run g111 passed by its script's rule (not a G1 acceptance), but the owner's archive
+maintenance m303 (`planning/betarc01/runtime-h9/root-maintenance-h9.py`) failed: the app refused to
+archive journal `4ac33ff2…`, which the failed G1 run g107 had opened on 2026-11-06 and never closed. The
+pinned app has no path that closes a generation left open by a dead process, so no archive, and no
+G2/G3, is possible from any app state since g107. The owner's own decoder showed that in the state from
+before g107 (the contract-l12 state) all 3 active journals are closed. `runtime-l20/` is `runtime-l19`
+moved back to that state, with a new G1 chain m913, m914, g112 and a maintenance slot m304, nothing else.
+Every item was decided by the user in chat, not by the owner. Every change is declared, with the user's
+words, in `l20_patches.py` and re-derived by `test-linuxport20-2.py`:
+
+| File | Change |
+|---|---|
+| `continuation_l20.py` (new) | The G1 chain admits the contract-l12 state (`contract-l12`, pin `m802-continuation-pin.json`) instead of contract-l16; the prior boot of m913 is the clean m904 boot of runtime-l14, read back from its own raw records; the 64 MiB Private rule binds each boot's TAR to the pinned m802 TAR |
+| `native-unused-l20.mjs` (new), `product_inputs.py` | The runtime-l19 verifier (with its path fix) set to the contract-l12 shape: 3 closed earlier journals and 11 earlier generations instead of 4 (with g107's open one) and 12, and a corrected header comment. The alias of the owner's `native-unused-h7.mjs` now points at this file |
+| `mission16.py`, `rc01.py`, `product_runtime.py`, `product_native09.py`, `root-qualify-l20.py`, `root-native-l20.py` (the last two new) | Slots m913, m914 (qualification), g112 (G1) and m304 (maintenance), as earlier runtimes did for their slots |
+| `root-maintenance-l20.py` (new) | The owner's `root-maintenance-h9.py` with a team docstring line and the only slot m304 (m303 is used); `maintenance.perform` and every owner check stay the owner's |
+| `prepare-source-gate.py`, `assets/product-input-closure.json`, `assets/pipeline-writer-pins.json` | The new entries replace the l19 ones and the owner's maintenance entry; regenerated: 150 source files, writer sites 286 -> 290 |
+
+`test-linuxport20-2.py` (84 tests) re-derives every file, runs the owner's Node loader on the generated
+graph (the alias resolves to the l20 verifier, which refuses the l16-shaped inputs g110 recorded), repeats
+the runtime-l19 tests for the new slots and the contract-l12 state, and checks that the maintenance entry
+is the owner's plus the two declared changes. `test-linuxport20.py` is its first version, kept as history:
+it failed on one wrong expectation in the test (the owner's entry holds its status text twice). The
+owner's tests give the same results as on runtime-l19. Everything of runtime-l19 and runtime-l18 (the
+verifier path fix, the G2/G3 port, the forwarder, the AP identity check, the Linux kernel), the 200 ms
+writer limit, the 40 MiB artifact cap, the 64 MiB Private bound and every guard not named above are
+unchanged; `root-owner-h10.py` stays byte-identical to the owner's. The test loads
+`runtime-l18/l18_patches.py` and compares with `runtime-l19`. Open points: the l20 verifier shape and the
+team maintenance entry have not yet run on real data.
+
+```bash
+python3.14 -B planning/linuxport01/runtime-l20/test-linuxport20-2.py
+```
+
 ## Not in this repo
 
 Test evidence, the emulator spec, run logs and the owner's private bundles
